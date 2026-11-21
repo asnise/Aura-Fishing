@@ -89,12 +89,12 @@ body {
 }
 
 .brand-badge {
-  background: linear-gradient(135deg, var(--teal), #1f7a83);
-  color: #fff;
+  background-color: var(--teal);
+  color: #0b181d;
   padding: 4px 8px;
   border-radius: var(--radius-sm);
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.5px;
 }
@@ -266,11 +266,11 @@ body {
   font-family: var(--font-mono);
 }
 
-.kpi-box.teal { border-left: 4px solid var(--teal); }
-.kpi-box.gold { border-left: 4px solid var(--gold); }
-.kpi-box.good { border-left: 4px solid var(--good); }
-.kpi-box.warn { border-left: 4px solid var(--warn); }
-.kpi-box.purple { border-left: 4px solid var(--purple); }
+.kpi-box.teal { border-color: var(--teal-border); background-color: var(--teal-soft); }
+.kpi-box.gold { border-color: rgba(227, 188, 82, 0.4); background-color: var(--gold-soft); }
+.kpi-box.good { border-color: rgba(92, 201, 138, 0.4); background-color: var(--good-soft); }
+.kpi-box.warn { border-color: rgba(240, 138, 110, 0.4); background-color: var(--warn-soft); }
+.kpi-box.purple { border-color: rgba(182, 146, 246, 0.4); background-color: var(--purple-soft); }
 
 /* Table Container & Controls */
 .table-toolbar {
@@ -333,6 +333,7 @@ body {
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   background-color: var(--surface);
+  padding: 8px;
 }
 
 table {
