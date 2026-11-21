@@ -1,0 +1,1077 @@
+{
+ "pageId": "3465:14993",
+ "replaceName": "E0 · Events hub",
+ "tree": {
+  "type": "SECTION",
+  "name": "E0 · Events hub",
+  "fill": "FBF7EF",
+  "w": 1400,
+  "h": 980,
+  "x": 13740,
+  "y": 7400,
+  "children": [
+   {
+    "type": "TEXT",
+    "text": "E0 · Events hub",
+    "textStyle": "Aura Fishing/Display",
+    "color": {
+     "var": "cozy/text"
+    },
+    "name": "Title",
+    "x": 60,
+    "y": 30
+   },
+   {
+    "name": "Events Hub",
+    "w": 1280,
+    "h": 720,
+    "radius": 0,
+    "clip": true,
+    "children": [
+     {
+      "name": "World [skip]",
+      "w": 1280,
+      "h": 720,
+      "x": 0,
+      "y": 0,
+      "fill": {
+       "grad": [
+        "DDF5EE",
+        "A8DCD8"
+       ],
+       "angle": 90
+      },
+      "children": [
+       {
+        "type": "RECT",
+        "name": "Water",
+        "w": 1280,
+        "h": 300,
+        "x": 0,
+        "y": 420,
+        "fill": {
+         "hex": "9AD4F5",
+         "opacity": 0.35
+        }
+       },
+       {
+        "type": "ELLIPSE",
+        "name": "Island",
+        "w": 560,
+        "h": 130,
+        "x": 360,
+        "y": 370,
+        "fill": {
+         "hex": "7FD3B0",
+         "opacity": 0.55
+        }
+       },
+       {
+        "type": "ELLIPSE",
+        "name": "Island Top",
+        "w": 360,
+        "h": 70,
+        "x": 460,
+        "y": 372,
+        "fill": {
+         "hex": "4FAF8A",
+         "opacity": 0.35
+        }
+       }
+      ]
+     },
+     {
+      "type": "RECT",
+      "name": "Dim",
+      "w": 1280,
+      "h": 720,
+      "x": 0,
+      "y": 0,
+      "fill": {
+       "hex": "1A2140",
+       "opacity": 0.35
+      }
+     },
+     {
+      "name": "Events Window",
+      "w": 920,
+      "h": 540,
+      "x": 100,
+      "y": 90,
+      "radius": 32,
+      "fill": {
+       "grad": [
+        "FBF7EF",
+        "EFE6F8"
+       ],
+       "angle": 90
+      },
+      "stroke": {
+       "var": "cozy/track"
+      },
+      "strokeW": 2,
+      "effects": [
+       {
+        "color": "3D4B5C",
+        "a": 0.1,
+        "y": 6,
+        "blur": 18
+       }
+      ],
+      "clip": true,
+      "children": [
+       {
+        "name": "Header",
+        "layout": "H",
+        "w": 872,
+        "x": 24,
+        "y": 20,
+        "main": "SPACE_BETWEEN",
+        "cross": "CENTER",
+        "children": [
+         {
+          "name": "Title",
+          "layout": "H",
+          "gap": 10,
+          "cross": "CENTER",
+          "children": [
+           {
+            "type": "RECT",
+            "name": "Img ui/icons/events",
+            "w": 44,
+            "h": 44
+           },
+           {
+            "type": "TEXT",
+            "text": "Events",
+            "textStyle": "Aura Fishing/Display",
+            "color": {
+             "var": "cozy/text"
+            },
+            "name": "Title"
+           }
+          ]
+         },
+         {
+          "name": "Right",
+          "layout": "H",
+          "gap": 10,
+          "cross": "CENTER",
+          "children": [
+           {
+            "type": "INSTANCE",
+            "ref": "3487:4313",
+            "variant": "Type=Gems",
+            "texts": {
+             "Value": "320"
+            },
+            "name": "Gems"
+           },
+           {
+            "type": "INSTANCE",
+            "ref": "3487:4298",
+            "variant": "Style=Danger",
+            "texts": {
+             "Label": "X"
+            },
+            "name": "Btn Close"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Card Grid",
+        "w": 872,
+        "h": 368,
+        "x": 24,
+        "y": 96,
+        "clip": false,
+        "children": [
+         {
+          "name": "Event Card NeonTide",
+          "w": 430,
+          "h": 176,
+          "x": 0,
+          "y": 0,
+          "radius": 24,
+          "clip": false,
+          "fill": {
+           "grad": [
+            "FFFDF7",
+            "F6F0FB"
+           ],
+           "angle": 90
+          },
+          "stroke": {
+           "var": "cozy/track"
+          },
+          "strokeW": 2,
+          "effects": [
+           {
+            "color": "3D4B5C",
+            "a": 0.06,
+            "y": 4,
+            "blur": 12
+           }
+          ],
+          "children": [
+           {
+            "name": "Art",
+            "w": 140,
+            "h": 140,
+            "x": 14,
+            "y": 18,
+            "radius": 18,
+            "clip": true,
+            "fill": {
+             "grad": [
+              "E5DBFA",
+              "D3ECFA"
+             ],
+             "angle": 90
+            },
+            "stroke": {
+             "var": "cozy/track"
+            },
+            "strokeW": 2,
+            "children": [
+             {
+              "type": "SVG",
+              "name": "Rays",
+              "w": 320,
+              "h": 320,
+              "svg": "<svg width=\"320\" height=\"320\" viewBox=\"0 0 320 320\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M160 160 L320 160 L318 183Z\" fill=\"#F2A93B\" fill-opacity=\"0.16\"/><path d=\"M160 160 L299 240 L286 259Z\" fill=\"#F2A93B\" fill-opacity=\"0.16\"/><path d=\"M160 160 L240 299 L219 309Z\" fill=\"#F2A93B\" fill-opacity=\"0.16\"/><path d=\"M160 160 L160 320 L137 318Z\" fill=\"#F2A93B\" fill-opacity=\"0.16\"/><path d=\"M160 160 L80 299 L61 286Z\" fill=\"#F2A93B\" fill-opacity=\"0.16\"/><path d=\"M160 160 L21 240 L11 219Z\" fill=\"#F2A93B\" fill-opacity=\"0.16\"/><path d=\"M160 160 L0 160 L2 137Z\" fill=\"#F2A93B\" fill-opacity=\"0.16\"/><path d=\"M160 160 L21 80 L34 61Z\" fill=\"#F2A93B\" fill-opacity=\"0.16\"/><path d=\"M160 160 L80 21 L101 11Z\" fill=\"#F2A93B\" fill-opacity=\"0.16\"/><path d=\"M160 160 L160 0 L183 2Z\" fill=\"#F2A93B\" fill-opacity=\"0.16\"/><path d=\"M160 160 L240 21 L259 34Z\" fill=\"#F2A93B\" fill-opacity=\"0.16\"/><path d=\"M160 160 L299 80 L309 101Z\" fill=\"#F2A93B\" fill-opacity=\"0.16\"/></svg>",
+              "x": -90,
+              "y": -90
+             },
+             {
+              "type": "ELLIPSE",
+              "name": "Glow",
+              "w": 96,
+              "h": 96,
+              "x": 22,
+              "y": 22,
+              "fill": {
+               "hex": "F2A93B",
+               "opacity": 0.35
+              },
+              "effects": [
+               {
+                "color": "F2A93B",
+                "a": 0.5,
+                "blur": 40,
+                "spread": 4
+               }
+              ]
+             },
+             {
+              "type": "RECT",
+              "name": "Img auras/AbyssalShadow",
+              "w": 118,
+              "h": 118,
+              "x": 11,
+              "y": 11
+             }
+            ]
+           },
+           {
+            "name": "Tag",
+            "layout": "H",
+            "pad": [
+             3,
+             10,
+             3,
+             10
+            ],
+            "radius": 999,
+            "fill": {
+             "var": "cozy/coral"
+            },
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "LIMITED",
+              "textStyle": "Aura Fishing/Caption",
+              "color": {
+               "var": "cozy/on-accent"
+              },
+              "name": "Label"
+             }
+            ],
+            "x": 22,
+            "y": 26
+           },
+           {
+            "type": "TEXT",
+            "text": "Neon Tide Banner",
+            "font": {
+             "family": "Fredoka One",
+             "style": "Regular"
+            },
+            "size": 22,
+            "color": "3D4B5C",
+            "name": "Title",
+            "x": 168,
+            "y": 20
+           },
+           {
+            "type": "TEXT",
+            "text": "Neon Wave x2\nFeatured: Abyssal Shadow",
+            "textStyle": "Aura Fishing/Small",
+            "color": {
+             "var": "cozy/subtext"
+            },
+            "name": "Subtitle",
+            "w": 248,
+            "x": 168,
+            "y": 52
+           },
+           {
+            "name": "Bottom",
+            "layout": "H",
+            "w": 248,
+            "h": 56,
+            "x": 168,
+            "y": 106,
+            "main": "SPACE_BETWEEN",
+            "cross": "CENTER",
+            "clip": false,
+            "children": [
+             {
+              "name": "Timer",
+              "layout": "H",
+              "gap": 5,
+              "pad": [
+               5,
+               10,
+               5,
+               6
+              ],
+              "radius": 999,
+              "cross": "CENTER",
+              "fill": "FFFFFF",
+              "stroke": {
+               "var": "cozy/track"
+              },
+              "strokeW": 2,
+              "children": [
+               {
+                "type": "RECT",
+                "name": "Img ui/status/auto_timer",
+                "w": 18,
+                "h": 18
+               },
+               {
+                "type": "TEXT",
+                "text": "13d 05h left",
+                "font": {
+                 "family": "Fredoka One",
+                 "style": "Regular"
+                },
+                "size": 14,
+                "color": "E07A5C",
+                "name": "Value"
+               }
+              ]
+             },
+             {
+              "type": "INSTANCE",
+              "ref": "3487:4298",
+              "variant": "Style=Primary",
+              "texts": {
+               "Label": "OPEN"
+              },
+              "name": "Btn Open"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Event Card AuraAltar",
+          "w": 430,
+          "h": 176,
+          "x": 442,
+          "y": 0,
+          "radius": 24,
+          "clip": false,
+          "fill": {
+           "grad": [
+            "FFFDF7",
+            "F6F0FB"
+           ],
+           "angle": 90
+          },
+          "stroke": {
+           "var": "cozy/track"
+          },
+          "strokeW": 2,
+          "effects": [
+           {
+            "color": "3D4B5C",
+            "a": 0.06,
+            "y": 4,
+            "blur": 12
+           }
+          ],
+          "children": [
+           {
+            "name": "Art",
+            "w": 140,
+            "h": 140,
+            "x": 14,
+            "y": 18,
+            "radius": 18,
+            "clip": true,
+            "fill": {
+             "grad": [
+              "E5DBFA",
+              "FBD8E2"
+             ],
+             "angle": 90
+            },
+            "stroke": {
+             "var": "cozy/track"
+            },
+            "strokeW": 2,
+            "children": [
+             {
+              "type": "SVG",
+              "name": "Rays",
+              "w": 320,
+              "h": 320,
+              "svg": "<svg width=\"320\" height=\"320\" viewBox=\"0 0 320 320\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M160 160 L320 160 L318 183Z\" fill=\"#B07CF0\" fill-opacity=\"0.16\"/><path d=\"M160 160 L299 240 L286 259Z\" fill=\"#B07CF0\" fill-opacity=\"0.16\"/><path d=\"M160 160 L240 299 L219 309Z\" fill=\"#B07CF0\" fill-opacity=\"0.16\"/><path d=\"M160 160 L160 320 L137 318Z\" fill=\"#B07CF0\" fill-opacity=\"0.16\"/><path d=\"M160 160 L80 299 L61 286Z\" fill=\"#B07CF0\" fill-opacity=\"0.16\"/><path d=\"M160 160 L21 240 L11 219Z\" fill=\"#B07CF0\" fill-opacity=\"0.16\"/><path d=\"M160 160 L0 160 L2 137Z\" fill=\"#B07CF0\" fill-opacity=\"0.16\"/><path d=\"M160 160 L21 80 L34 61Z\" fill=\"#B07CF0\" fill-opacity=\"0.16\"/><path d=\"M160 160 L80 21 L101 11Z\" fill=\"#B07CF0\" fill-opacity=\"0.16\"/><path d=\"M160 160 L160 0 L183 2Z\" fill=\"#B07CF0\" fill-opacity=\"0.16\"/><path d=\"M160 160 L240 21 L259 34Z\" fill=\"#B07CF0\" fill-opacity=\"0.16\"/><path d=\"M160 160 L299 80 L309 101Z\" fill=\"#B07CF0\" fill-opacity=\"0.16\"/></svg>",
+              "x": -90,
+              "y": -90
+             },
+             {
+              "type": "ELLIPSE",
+              "name": "Glow",
+              "w": 96,
+              "h": 96,
+              "x": 22,
+              "y": 22,
+              "fill": {
+               "hex": "B07CF0",
+               "opacity": 0.35
+              },
+              "effects": [
+               {
+                "color": "B07CF0",
+                "a": 0.5,
+                "blur": 40,
+                "spread": 4
+               }
+              ]
+             },
+             {
+              "type": "RECT",
+              "name": "Img ui/icons/auras",
+              "w": 104,
+              "h": 104,
+              "x": 18,
+              "y": 18
+             }
+            ]
+           },
+           {
+            "type": "TEXT",
+            "text": "Aura Altar",
+            "font": {
+             "family": "Fredoka One",
+             "style": "Regular"
+            },
+            "size": 22,
+            "color": "3D4B5C",
+            "name": "Title",
+            "x": 168,
+            "y": 20
+           },
+           {
+            "type": "TEXT",
+            "text": "Standard aura roll\nMythic guaranteed every 100",
+            "textStyle": "Aura Fishing/Small",
+            "color": {
+             "var": "cozy/subtext"
+            },
+            "name": "Subtitle",
+            "w": 248,
+            "x": 168,
+            "y": 52
+           },
+           {
+            "name": "Bottom",
+            "layout": "H",
+            "w": 248,
+            "h": 56,
+            "x": 168,
+            "y": 106,
+            "main": "SPACE_BETWEEN",
+            "cross": "CENTER",
+            "clip": false,
+            "children": [
+             {
+              "name": "Spacer",
+              "w": 1,
+              "h": 1
+             },
+             {
+              "type": "INSTANCE",
+              "ref": "3487:4298",
+              "variant": "Style=Primary",
+              "texts": {
+               "Label": "OPEN"
+              },
+              "name": "Btn Open"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Event Card NagaBoss",
+          "w": 430,
+          "h": 176,
+          "x": 0,
+          "y": 192,
+          "radius": 24,
+          "clip": false,
+          "fill": {
+           "grad": [
+            "FFFDF7",
+            "F6F0FB"
+           ],
+           "angle": 90
+          },
+          "stroke": {
+           "var": "cozy/track"
+          },
+          "strokeW": 2,
+          "effects": [
+           {
+            "color": "3D4B5C",
+            "a": 0.06,
+            "y": 4,
+            "blur": 12
+           }
+          ],
+          "children": [
+           {
+            "name": "Art",
+            "w": 140,
+            "h": 140,
+            "x": 14,
+            "y": 18,
+            "radius": 18,
+            "clip": true,
+            "fill": {
+             "grad": [
+              "D2F0E2",
+              "D3ECFA"
+             ],
+             "angle": 90
+            },
+            "stroke": {
+             "var": "cozy/track"
+            },
+            "strokeW": 2,
+            "children": [
+             {
+              "type": "SVG",
+              "name": "Rays",
+              "w": 320,
+              "h": 320,
+              "svg": "<svg width=\"320\" height=\"320\" viewBox=\"0 0 320 320\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M160 160 L320 160 L318 183Z\" fill=\"#5CC98A\" fill-opacity=\"0.16\"/><path d=\"M160 160 L299 240 L286 259Z\" fill=\"#5CC98A\" fill-opacity=\"0.16\"/><path d=\"M160 160 L240 299 L219 309Z\" fill=\"#5CC98A\" fill-opacity=\"0.16\"/><path d=\"M160 160 L160 320 L137 318Z\" fill=\"#5CC98A\" fill-opacity=\"0.16\"/><path d=\"M160 160 L80 299 L61 286Z\" fill=\"#5CC98A\" fill-opacity=\"0.16\"/><path d=\"M160 160 L21 240 L11 219Z\" fill=\"#5CC98A\" fill-opacity=\"0.16\"/><path d=\"M160 160 L0 160 L2 137Z\" fill=\"#5CC98A\" fill-opacity=\"0.16\"/><path d=\"M160 160 L21 80 L34 61Z\" fill=\"#5CC98A\" fill-opacity=\"0.16\"/><path d=\"M160 160 L80 21 L101 11Z\" fill=\"#5CC98A\" fill-opacity=\"0.16\"/><path d=\"M160 160 L160 0 L183 2Z\" fill=\"#5CC98A\" fill-opacity=\"0.16\"/><path d=\"M160 160 L240 21 L259 34Z\" fill=\"#5CC98A\" fill-opacity=\"0.16\"/><path d=\"M160 160 L299 80 L309 101Z\" fill=\"#5CC98A\" fill-opacity=\"0.16\"/></svg>",
+              "x": -90,
+              "y": -90
+             },
+             {
+              "type": "ELLIPSE",
+              "name": "Glow",
+              "w": 96,
+              "h": 96,
+              "x": 22,
+              "y": 22,
+              "fill": {
+               "hex": "5CC98A",
+               "opacity": 0.35
+              },
+              "effects": [
+               {
+                "color": "5CC98A",
+                "a": 0.5,
+                "blur": 40,
+                "spread": 4
+               }
+              ]
+             },
+             {
+              "type": "RECT",
+              "name": "Img fish/NagaHatchling",
+              "w": 112,
+              "h": 112,
+              "x": 14,
+              "y": 14
+             }
+            ]
+           },
+           {
+            "name": "Tag",
+            "layout": "H",
+            "pad": [
+             3,
+             10,
+             3,
+             10
+            ],
+            "radius": 999,
+            "fill": {
+             "var": "cozy/subtext"
+            },
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "SOON",
+              "textStyle": "Aura Fishing/Caption",
+              "color": {
+               "var": "cozy/on-accent"
+              },
+              "name": "Label"
+             }
+            ],
+            "x": 22,
+            "y": 26
+           },
+           {
+            "type": "TEXT",
+            "text": "Naga Boss",
+            "font": {
+             "family": "Fredoka One",
+             "style": "Regular"
+            },
+            "size": 22,
+            "color": "3D4B5C",
+            "name": "Title",
+            "x": 168,
+            "y": 20
+           },
+           {
+            "type": "TEXT",
+            "text": "Every 30 minutes\nTeam up to reel it in",
+            "textStyle": "Aura Fishing/Small",
+            "color": {
+             "var": "cozy/subtext"
+            },
+            "name": "Subtitle",
+            "w": 248,
+            "x": 168,
+            "y": 52
+           },
+           {
+            "name": "Bottom",
+            "layout": "H",
+            "w": 248,
+            "h": 56,
+            "x": 168,
+            "y": 106,
+            "main": "SPACE_BETWEEN",
+            "cross": "CENTER",
+            "clip": false,
+            "children": [
+             {
+              "name": "Spacer",
+              "w": 1,
+              "h": 1
+             },
+             {
+              "type": "INSTANCE",
+              "ref": "3487:4298",
+              "variant": "Style=Ghost",
+              "texts": {
+               "Label": "SOON"
+              },
+              "name": "Btn Open"
+             }
+            ]
+           }
+          ],
+          "opacity": 0.55
+         },
+         {
+          "name": "Event Card DailyLogin",
+          "w": 430,
+          "h": 176,
+          "x": 442,
+          "y": 192,
+          "radius": 24,
+          "clip": false,
+          "fill": {
+           "grad": [
+            "FFFDF7",
+            "F6F0FB"
+           ],
+           "angle": 90
+          },
+          "stroke": {
+           "var": "cozy/track"
+          },
+          "strokeW": 2,
+          "effects": [
+           {
+            "color": "3D4B5C",
+            "a": 0.06,
+            "y": 4,
+            "blur": 12
+           }
+          ],
+          "children": [
+           {
+            "name": "Art",
+            "w": 140,
+            "h": 140,
+            "x": 14,
+            "y": 18,
+            "radius": 18,
+            "clip": true,
+            "fill": {
+             "grad": [
+              "FBEAB8",
+              "FFDCCF"
+             ],
+             "angle": 90
+            },
+            "stroke": {
+             "var": "cozy/track"
+            },
+            "strokeW": 2,
+            "children": [
+             {
+              "type": "SVG",
+              "name": "Rays",
+              "w": 320,
+              "h": 320,
+              "svg": "<svg width=\"320\" height=\"320\" viewBox=\"0 0 320 320\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M160 160 L320 160 L318 183Z\" fill=\"#F2B544\" fill-opacity=\"0.16\"/><path d=\"M160 160 L299 240 L286 259Z\" fill=\"#F2B544\" fill-opacity=\"0.16\"/><path d=\"M160 160 L240 299 L219 309Z\" fill=\"#F2B544\" fill-opacity=\"0.16\"/><path d=\"M160 160 L160 320 L137 318Z\" fill=\"#F2B544\" fill-opacity=\"0.16\"/><path d=\"M160 160 L80 299 L61 286Z\" fill=\"#F2B544\" fill-opacity=\"0.16\"/><path d=\"M160 160 L21 240 L11 219Z\" fill=\"#F2B544\" fill-opacity=\"0.16\"/><path d=\"M160 160 L0 160 L2 137Z\" fill=\"#F2B544\" fill-opacity=\"0.16\"/><path d=\"M160 160 L21 80 L34 61Z\" fill=\"#F2B544\" fill-opacity=\"0.16\"/><path d=\"M160 160 L80 21 L101 11Z\" fill=\"#F2B544\" fill-opacity=\"0.16\"/><path d=\"M160 160 L160 0 L183 2Z\" fill=\"#F2B544\" fill-opacity=\"0.16\"/><path d=\"M160 160 L240 21 L259 34Z\" fill=\"#F2B544\" fill-opacity=\"0.16\"/><path d=\"M160 160 L299 80 L309 101Z\" fill=\"#F2B544\" fill-opacity=\"0.16\"/></svg>",
+              "x": -90,
+              "y": -90
+             },
+             {
+              "type": "ELLIPSE",
+              "name": "Glow",
+              "w": 96,
+              "h": 96,
+              "x": 22,
+              "y": 22,
+              "fill": {
+               "hex": "F2B544",
+               "opacity": 0.35
+              },
+              "effects": [
+               {
+                "color": "F2B544",
+                "a": 0.5,
+                "blur": 40,
+                "spread": 4
+               }
+              ]
+             },
+             {
+              "type": "RECT",
+              "name": "Img ui/icons/quests",
+              "w": 100,
+              "h": 100,
+              "x": 20,
+              "y": 20
+             }
+            ]
+           },
+           {
+            "name": "Tag",
+            "layout": "H",
+            "pad": [
+             3,
+             10,
+             3,
+             10
+            ],
+            "radius": 999,
+            "fill": {
+             "var": "cozy/subtext"
+            },
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "SOON",
+              "textStyle": "Aura Fishing/Caption",
+              "color": {
+               "var": "cozy/on-accent"
+              },
+              "name": "Label"
+             }
+            ],
+            "x": 22,
+            "y": 26
+           },
+           {
+            "type": "TEXT",
+            "text": "Daily Login",
+            "font": {
+             "family": "Fredoka One",
+             "style": "Regular"
+            },
+            "size": 22,
+            "color": "3D4B5C",
+            "name": "Title",
+            "x": 168,
+            "y": 20
+           },
+           {
+            "type": "TEXT",
+            "text": "Gems and bait every day",
+            "textStyle": "Aura Fishing/Small",
+            "color": {
+             "var": "cozy/subtext"
+            },
+            "name": "Subtitle",
+            "w": 248,
+            "x": 168,
+            "y": 52
+           },
+           {
+            "name": "Bottom",
+            "layout": "H",
+            "w": 248,
+            "h": 56,
+            "x": 168,
+            "y": 106,
+            "main": "SPACE_BETWEEN",
+            "cross": "CENTER",
+            "clip": false,
+            "children": [
+             {
+              "name": "Spacer",
+              "w": 1,
+              "h": 1
+             },
+             {
+              "type": "INSTANCE",
+              "ref": "3487:4298",
+              "variant": "Style=Ghost",
+              "texts": {
+               "Label": "SOON"
+              },
+              "name": "Btn Open"
+             }
+            ]
+           }
+          ],
+          "opacity": 0.55
+         }
+        ]
+       },
+       {
+        "type": "TEXT",
+        "text": "New events every week",
+        "textStyle": "Aura Fishing/Caption",
+        "color": {
+         "var": "cozy/subtext"
+        },
+        "name": "Footer Hint",
+        "w": 872,
+        "align": "CENTER",
+        "x": 24,
+        "y": 486
+       }
+      ]
+     },
+     {
+      "name": "[skip] Roblox CoreGui (guide)",
+      "w": 1280,
+      "h": 720,
+      "x": 0,
+      "y": 0,
+      "children": [
+       {
+        "type": "RECT",
+        "name": "Top Bar",
+        "w": 1280,
+        "h": 58,
+        "x": 0,
+        "y": 0,
+        "fill": {
+         "hex": "3D4B5C",
+         "opacity": 0.07
+        }
+       },
+       {
+        "type": "RECT",
+        "name": "Roblox Menu Btn",
+        "w": 44,
+        "h": 44,
+        "x": 12,
+        "y": 7,
+        "radius": 12,
+        "fill": {
+         "hex": "3D4B5C",
+         "opacity": 0.28
+        }
+       },
+       {
+        "type": "RECT",
+        "name": "Chat Btn",
+        "w": 44,
+        "h": 44,
+        "x": 64,
+        "y": 7,
+        "radius": 12,
+        "fill": {
+         "hex": "3D4B5C",
+         "opacity": 0.28
+        }
+       },
+       {
+        "type": "TEXT",
+        "text": "ROBLOX TOP BAR (58px)  —  keep clear",
+        "textStyle": "Aura Fishing/Caption",
+        "color": {
+         "var": "cozy/subtext"
+        },
+        "name": "Label",
+        "x": 124,
+        "y": 22
+       },
+       {
+        "type": "RECT",
+        "name": "Chat Window (when open)",
+        "w": 380,
+        "h": 210,
+        "x": 8,
+        "y": 64,
+        "radius": 12,
+        "fill": {
+         "hex": "3D4B5C",
+         "opacity": 0.04
+        },
+        "stroke": {
+         "hex": "3D4B5C",
+         "opacity": 0.25
+        },
+        "strokeW": 1.5
+       },
+       {
+        "type": "TEXT",
+        "text": "CHAT WINDOW (desktop, when open)",
+        "textStyle": "Aura Fishing/Caption",
+        "color": {
+         "var": "cozy/subtext"
+        },
+        "name": "Label",
+        "x": 20,
+        "y": 248
+       },
+       {
+        "type": "RECT",
+        "name": "Leaderboard",
+        "w": 236,
+        "h": 170,
+        "x": 1032,
+        "y": 64,
+        "radius": 12,
+        "fill": {
+         "hex": "3D4B5C",
+         "opacity": 0.06
+        },
+        "stroke": {
+         "hex": "3D4B5C",
+         "opacity": 0.25
+        },
+        "strokeW": 1.5
+       },
+       {
+        "type": "TEXT",
+        "text": "LEADERBOARD (leaderstats)",
+        "textStyle": "Aura Fishing/Caption",
+        "color": {
+         "var": "cozy/subtext"
+        },
+        "name": "Label",
+        "x": 1044,
+        "y": 210
+       },
+       {
+        "type": "ELLIPSE",
+        "name": "Mobile Thumbstick",
+        "w": 150,
+        "h": 150,
+        "x": 50,
+        "y": 510,
+        "fill": {
+         "hex": "3D4B5C",
+         "opacity": 0.07
+        },
+        "stroke": {
+         "hex": "3D4B5C",
+         "opacity": 0.25
+        },
+        "strokeW": 1.5
+       },
+       {
+        "type": "TEXT",
+        "text": "MOBILE THUMBSTICK",
+        "textStyle": "Aura Fishing/Caption",
+        "color": {
+         "var": "cozy/subtext"
+        },
+        "name": "Label",
+        "x": 62,
+        "y": 668
+       },
+       {
+        "type": "ELLIPSE",
+        "name": "Mobile Jump",
+        "w": 96,
+        "h": 96,
+        "x": 1120,
+        "y": 550,
+        "fill": {
+         "hex": "3D4B5C",
+         "opacity": 0.07
+        },
+        "stroke": {
+         "hex": "3D4B5C",
+         "opacity": 0.25
+        },
+        "strokeW": 1.5
+       },
+       {
+        "type": "TEXT",
+        "text": "MOBILE JUMP",
+        "textStyle": "Aura Fishing/Caption",
+        "color": {
+         "var": "cozy/subtext"
+        },
+        "name": "Label",
+        "x": 1122,
+        "y": 660
+       }
+      ]
+     }
+    ],
+    "x": 60,
+    "y": 110
+   },
+   {
+    "type": "TEXT",
+    "text": "Hub only: each card's OPEN runs its action (gacha page / teleport / menu). Cards come from Config/Events.luau — add an entry to add a card. Neon Tide Banner opens the E1 gacha page; Aura Altar opens the standard gacha (G1). SOON cards are greyed (55%) with a disabled SOON button. LIMITED cards show a countdown and disappear when it ends.",
+    "textStyle": "Aura Fishing/Body",
+    "color": {
+     "var": "cozy/subtext"
+    },
+    "name": "Note",
+    "w": 1280,
+    "x": 60,
+    "y": 860
+   }
+  ]
+ }
+}

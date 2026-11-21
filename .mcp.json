@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "Roblox_Studio": {
+      "command": "cmd.exe",
+      "args": ["/c", "C:\\Users\\User\\AppData\\Local\\Roblox\\mcp.bat"]
+    },
+    "FigmaRoblox": {
+      "command": "node",
+      "args": [
+        "D:\\Roblox Project\\Aura Fishing\\Figma For Roblox\\cursor-talk-to-figma-mcp\\scripts\\mcp-live.mjs",
+        "--roblox-project=D:\\Roblox Project\\Aura Fishing"
+      ]
+    },
+    "StudioBridge": {
+      "command": "node",
+      "args": [
+        "D:\\Roblox Project\\Aura Fishing\\tools\\studio-mcp\\dist\\server.js",
+        "--port=3060"
+      ]
+    }
+  }
+}

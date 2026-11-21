@@ -1,0 +1,582 @@
+{
+ "pageId": "3465:14993",
+ "replaceName": "HUD Stats · 6 options",
+ "tree": {
+  "type": "SECTION",
+  "name": "HUD Stats · 6 options",
+  "fill": "F3E9D8",
+  "x": 8900,
+  "y": 3300,
+  "children": [
+   {
+    "type": "TEXT",
+    "text": "HUD Stats — 6 options (one component set)",
+    "textStyle": "Aura Fishing/Display",
+    "color": {
+     "var": "cozy/text"
+    },
+    "name": "Title",
+    "x": 60,
+    "y": 40
+   },
+   {
+    "type": "TEXT",
+    "text": "All screens (HUD, Reel, Main Menu, Inventory) now use an instance of 'HUD Stats'. Pick a Style and every screen updates.",
+    "textStyle": "Aura Fishing/Body",
+    "color": {
+     "var": "cozy/subtext"
+    },
+    "name": "Sub",
+    "x": 60,
+    "y": 96,
+    "w": 1800
+   },
+   {
+    "name": "Option A Classic Card",
+    "layout": "V",
+    "gap": 12,
+    "pad": 24,
+    "w": 600,
+    "radius": 24,
+    "fill": {
+     "var": "cozy/panel"
+    },
+    "stroke": {
+     "var": "cozy/track"
+    },
+    "strokeW": 2,
+    "effects": [
+     {
+      "color": "3D4B5C",
+      "a": 0.1,
+      "y": 6,
+      "blur": 18
+     }
+    ],
+    "x": 60,
+    "y": 150,
+    "children": [
+     {
+      "type": "TEXT",
+      "text": "A Classic Card",
+      "textStyle": "Aura Fishing/Title",
+      "color": {
+       "var": "cozy/text"
+      },
+      "name": "Title"
+     },
+     {
+      "type": "TEXT",
+      "text": "Current card, tidied: small avatar, level + XP, coins and gems. Safe default.",
+      "textStyle": "Aura Fishing/Small",
+      "color": {
+       "var": "cozy/subtext"
+      },
+      "name": "Desc",
+      "w": 552
+     },
+     {
+      "name": "Scene",
+      "w": 552,
+      "h": 230,
+      "radius": 16,
+      "clip": true,
+      "fill": {
+       "grad": [
+        "DDF5EE",
+        "A8DCD8"
+       ],
+       "angle": 90
+      },
+      "children": [
+       {
+        "name": "World [skip]",
+        "w": 552,
+        "h": 230,
+        "x": 0,
+        "y": 0,
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Water",
+          "w": 552,
+          "h": 90,
+          "x": 0,
+          "y": 140,
+          "fill": {
+           "hex": "9AD4F5",
+           "opacity": 0.35
+          }
+         }
+        ]
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3491:14275",
+        "variant": "Style=A Classic Card",
+        "name": "Stats",
+        "x": 16,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Option B Level Badge",
+    "layout": "V",
+    "gap": 12,
+    "pad": 24,
+    "w": 600,
+    "radius": 24,
+    "fill": {
+     "var": "cozy/panel"
+    },
+    "stroke": {
+     "var": "cozy/track"
+    },
+    "strokeW": 2,
+    "effects": [
+     {
+      "color": "3D4B5C",
+      "a": 0.1,
+      "y": 6,
+      "blur": 18
+     }
+    ],
+    "x": 720,
+    "y": 150,
+    "children": [
+     {
+      "type": "TEXT",
+      "text": "B Level Badge",
+      "textStyle": "Aura Fishing/Title",
+      "color": {
+       "var": "cozy/text"
+      },
+      "name": "Title"
+     },
+     {
+      "type": "TEXT",
+      "text": "Gold level coin with a circular XP ring, currency pills stacked beside it, aura luck pill. No background card.",
+      "textStyle": "Aura Fishing/Small",
+      "color": {
+       "var": "cozy/subtext"
+      },
+      "name": "Desc",
+      "w": 552
+     },
+     {
+      "name": "Scene",
+      "w": 552,
+      "h": 230,
+      "radius": 16,
+      "clip": true,
+      "fill": {
+       "grad": [
+        "DDF5EE",
+        "A8DCD8"
+       ],
+       "angle": 90
+      },
+      "children": [
+       {
+        "name": "World [skip]",
+        "w": 552,
+        "h": 230,
+        "x": 0,
+        "y": 0,
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Water",
+          "w": 552,
+          "h": 90,
+          "x": 0,
+          "y": 140,
+          "fill": {
+           "hex": "9AD4F5",
+           "opacity": 0.35
+          }
+         }
+        ]
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3491:14275",
+        "variant": "Style=B Level Badge",
+        "name": "Stats",
+        "x": 16,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Option C Top Bar Strip",
+    "layout": "V",
+    "gap": 12,
+    "pad": 24,
+    "w": 600,
+    "radius": 24,
+    "fill": {
+     "var": "cozy/panel"
+    },
+    "stroke": {
+     "var": "cozy/track"
+    },
+    "strokeW": 2,
+    "effects": [
+     {
+      "color": "3D4B5C",
+      "a": 0.1,
+      "y": 6,
+      "blur": 18
+     }
+    ],
+    "x": 1380,
+    "y": 150,
+    "children": [
+     {
+      "type": "TEXT",
+      "text": "C Top Bar Strip",
+      "textStyle": "Aura Fishing/Title",
+      "color": {
+       "var": "cozy/text"
+      },
+      "name": "Title"
+     },
+     {
+      "type": "TEXT",
+      "text": "One slim pill across the top: level, coins (+), gems (+), aura. Thinnest; '+' opens the shop.",
+      "textStyle": "Aura Fishing/Small",
+      "color": {
+       "var": "cozy/subtext"
+      },
+      "name": "Desc",
+      "w": 552
+     },
+     {
+      "name": "Scene",
+      "w": 552,
+      "h": 230,
+      "radius": 16,
+      "clip": true,
+      "fill": {
+       "grad": [
+        "DDF5EE",
+        "A8DCD8"
+       ],
+       "angle": 90
+      },
+      "children": [
+       {
+        "name": "World [skip]",
+        "w": 552,
+        "h": 230,
+        "x": 0,
+        "y": 0,
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Water",
+          "w": 552,
+          "h": 90,
+          "x": 0,
+          "y": 140,
+          "fill": {
+           "hex": "9AD4F5",
+           "opacity": 0.35
+          }
+         }
+        ]
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3491:14275",
+        "variant": "Style=C Top Bar Strip",
+        "name": "Stats",
+        "x": 16,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Option D Avatar Card",
+    "layout": "V",
+    "gap": 12,
+    "pad": 24,
+    "w": 600,
+    "radius": 24,
+    "fill": {
+     "var": "cozy/panel"
+    },
+    "stroke": {
+     "var": "cozy/track"
+    },
+    "strokeW": 2,
+    "effects": [
+     {
+      "color": "3D4B5C",
+      "a": 0.1,
+      "y": 6,
+      "blur": 18
+     }
+    ],
+    "x": 60,
+    "y": 620,
+    "children": [
+     {
+      "type": "TEXT",
+      "text": "D Avatar Card",
+      "textStyle": "Aura Fishing/Title",
+      "color": {
+       "var": "cozy/text"
+      },
+      "name": "Title"
+     },
+     {
+      "type": "TEXT",
+      "text": "Player avatar with a level pill, player name, XP and currencies. Most personal (like the Main Menu header).",
+      "textStyle": "Aura Fishing/Small",
+      "color": {
+       "var": "cozy/subtext"
+      },
+      "name": "Desc",
+      "w": 552
+     },
+     {
+      "name": "Scene",
+      "w": 552,
+      "h": 230,
+      "radius": 16,
+      "clip": true,
+      "fill": {
+       "grad": [
+        "DDF5EE",
+        "A8DCD8"
+       ],
+       "angle": 90
+      },
+      "children": [
+       {
+        "name": "World [skip]",
+        "w": 552,
+        "h": 230,
+        "x": 0,
+        "y": 0,
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Water",
+          "w": 552,
+          "h": 90,
+          "x": 0,
+          "y": 140,
+          "fill": {
+           "hex": "9AD4F5",
+           "opacity": 0.35
+          }
+         }
+        ]
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3491:14275",
+        "variant": "Style=D Avatar Card",
+        "name": "Stats",
+        "x": 16,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Option E Minimal Floating",
+    "layout": "V",
+    "gap": 12,
+    "pad": 24,
+    "w": 600,
+    "radius": 24,
+    "fill": {
+     "var": "cozy/panel"
+    },
+    "stroke": {
+     "var": "cozy/track"
+    },
+    "strokeW": 2,
+    "effects": [
+     {
+      "color": "3D4B5C",
+      "a": 0.1,
+      "y": 6,
+      "blur": 18
+     }
+    ],
+    "x": 720,
+    "y": 620,
+    "children": [
+     {
+      "type": "TEXT",
+      "text": "E Minimal Floating",
+      "textStyle": "Aura Fishing/Title",
+      "color": {
+       "var": "cozy/text"
+      },
+      "name": "Title"
+     },
+     {
+      "type": "TEXT",
+      "text": "CHOSEN. No panel: outlined level + XP as text (340 / 900 XP), coin and gem chips. No aura. Shows the most of the world.",
+      "textStyle": "Aura Fishing/Small",
+      "color": {
+       "var": "cozy/subtext"
+      },
+      "name": "Desc",
+      "w": 552
+     },
+     {
+      "name": "Scene",
+      "w": 552,
+      "h": 230,
+      "radius": 16,
+      "clip": true,
+      "fill": {
+       "grad": [
+        "DDF5EE",
+        "A8DCD8"
+       ],
+       "angle": 90
+      },
+      "children": [
+       {
+        "name": "World [skip]",
+        "w": 552,
+        "h": 230,
+        "x": 0,
+        "y": 0,
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Water",
+          "w": 552,
+          "h": 90,
+          "x": 0,
+          "y": 140,
+          "fill": {
+           "hex": "9AD4F5",
+           "opacity": 0.35
+          }
+         }
+        ]
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3491:14275",
+        "variant": "Style=E Minimal Floating",
+        "name": "Stats",
+        "x": 16,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Option F Aura Spotlight",
+    "layout": "V",
+    "gap": 12,
+    "pad": 24,
+    "w": 600,
+    "radius": 24,
+    "fill": {
+     "var": "cozy/panel"
+    },
+    "stroke": {
+     "var": "cozy/track"
+    },
+    "strokeW": 2,
+    "effects": [
+     {
+      "color": "3D4B5C",
+      "a": 0.1,
+      "y": 6,
+      "blur": 18
+     }
+    ],
+    "x": 1380,
+    "y": 620,
+    "children": [
+     {
+      "type": "TEXT",
+      "text": "F Aura Spotlight",
+      "textStyle": "Aura Fishing/Title",
+      "color": {
+       "var": "cozy/text"
+      },
+      "name": "Title"
+     },
+     {
+      "type": "TEXT",
+      "text": "Big equipped-aura orb with its luck bonus next to level + currencies. Pushes the game's core USP.",
+      "textStyle": "Aura Fishing/Small",
+      "color": {
+       "var": "cozy/subtext"
+      },
+      "name": "Desc",
+      "w": 552
+     },
+     {
+      "name": "Scene",
+      "w": 552,
+      "h": 230,
+      "radius": 16,
+      "clip": true,
+      "fill": {
+       "grad": [
+        "DDF5EE",
+        "A8DCD8"
+       ],
+       "angle": 90
+      },
+      "children": [
+       {
+        "name": "World [skip]",
+        "w": 552,
+        "h": 230,
+        "x": 0,
+        "y": 0,
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Water",
+          "w": 552,
+          "h": 90,
+          "x": 0,
+          "y": 140,
+          "fill": {
+           "hex": "9AD4F5",
+           "opacity": 0.35
+          }
+         }
+        ]
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3491:14275",
+        "variant": "Style=F Aura Spotlight",
+        "name": "Stats",
+        "x": 16,
+        "y": 16
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

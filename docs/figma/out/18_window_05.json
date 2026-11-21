@@ -1,0 +1,412 @@
+{
+ "parentId": "3492:16887",
+ "replaceName": "Window Shop",
+ "tree": {
+  "name": "Window Shop",
+  "layout": "V",
+  "pad": 20,
+  "gap": 14,
+  "w": 760,
+  "h": 610,
+  "x": 260,
+  "y": 70,
+  "radius": 24,
+  "fill": {
+   "var": "cozy/panel"
+  },
+  "stroke": {
+   "var": "cozy/track"
+  },
+  "strokeW": 2,
+  "effects": [
+   {
+    "color": "3D4B5C",
+    "a": 0.1,
+    "y": 6,
+    "blur": 18
+   }
+  ],
+  "children": [
+   {
+    "name": "Header",
+    "layout": "H",
+    "fillW": true,
+    "main": "SPACE_BETWEEN",
+    "cross": "CENTER",
+    "children": [
+     {
+      "type": "TEXT",
+      "text": "Shop",
+      "textStyle": "Aura Fishing/Title",
+      "color": {
+       "var": "cozy/text"
+      },
+      "name": "Title"
+     },
+     {
+      "type": "INSTANCE",
+      "ref": "3487:4298",
+      "variant": "Style=Danger",
+      "texts": {
+       "Label": "X"
+      },
+      "name": "Btn Close"
+     }
+    ]
+   },
+   {
+    "name": "Tabs",
+    "layout": "H",
+    "gap": 8,
+    "fillW": true,
+    "children": [
+     {
+      "type": "INSTANCE",
+      "ref": "3487:4298",
+      "variant": "Style=Ghost",
+      "texts": {
+       "Label": "Bags"
+      },
+      "name": "Btn Tab Bags",
+      "fillW": true
+     },
+     {
+      "type": "INSTANCE",
+      "ref": "3487:4298",
+      "variant": "Style=Ghost",
+      "texts": {
+       "Label": "Baits"
+      },
+      "name": "Btn Tab Baits",
+      "fillW": true
+     },
+     {
+      "type": "INSTANCE",
+      "ref": "3487:4298",
+      "variant": "Style=Ghost",
+      "texts": {
+       "Label": "Lines"
+      },
+      "name": "Btn Tab Lines",
+      "fillW": true
+     },
+     {
+      "type": "INSTANCE",
+      "ref": "3487:4298",
+      "variant": "Style=Primary",
+      "texts": {
+       "Label": "Rods"
+      },
+      "name": "Btn Tab Rods",
+      "fillW": true
+     }
+    ]
+   },
+   {
+    "name": "List (max 4)",
+    "layout": "V",
+    "gap": 10,
+    "fillW": true,
+    "h": 350,
+    "children": [
+     {
+      "name": "Row Driftwood Rod",
+      "layout": "H",
+      "pad": 12,
+      "gap": 12,
+      "cross": "CENTER",
+      "radius": 16,
+      "h": 80,
+      "fill": {
+       "var": "cozy/sand"
+      },
+      "fillW": true,
+      "children": [
+       {
+        "type": "RECT",
+        "name": "Img equipment/DriftwoodRod",
+        "w": 56,
+        "h": 56
+       },
+       {
+        "name": "Text",
+        "layout": "V",
+        "gap": 2,
+        "fillW": true,
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "Driftwood Rod",
+          "textStyle": "Aura Fishing/Heading",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Title"
+         },
+         {
+          "type": "TEXT",
+          "text": "Starter rod",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Sub"
+         }
+        ]
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4298",
+        "variant": "Style=Success",
+        "texts": {
+         "Label": "Equipped"
+        },
+        "name": "Btn Action"
+       }
+      ]
+     },
+     {
+      "name": "Row Bamboo Rod",
+      "layout": "H",
+      "pad": 12,
+      "gap": 12,
+      "cross": "CENTER",
+      "radius": 16,
+      "h": 80,
+      "fill": {
+       "var": "cozy/sand"
+      },
+      "fillW": true,
+      "children": [
+       {
+        "type": "RECT",
+        "name": "Img equipment/BambooRod",
+        "w": 56,
+        "h": 56
+       },
+       {
+        "name": "Text",
+        "layout": "V",
+        "gap": 2,
+        "fillW": true,
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "Bamboo Rod",
+          "textStyle": "Aura Fishing/Heading",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Title"
+         },
+         {
+          "type": "TEXT",
+          "text": "+3% Catch Bar, +0.15 Reel Power, +5% Luck",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Sub"
+         }
+        ]
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4298",
+        "variant": "Style=Secondary",
+        "texts": {
+         "Label": "Equip"
+        },
+        "name": "Btn Action"
+       }
+      ]
+     },
+     {
+      "name": "Row Coral Rod",
+      "layout": "H",
+      "pad": 12,
+      "gap": 12,
+      "cross": "CENTER",
+      "radius": 16,
+      "h": 80,
+      "fill": {
+       "var": "cozy/sand"
+      },
+      "fillW": true,
+      "children": [
+       {
+        "type": "RECT",
+        "name": "Img equipment/CoralRod",
+        "w": 56,
+        "h": 56
+       },
+       {
+        "name": "Text",
+        "layout": "V",
+        "gap": 2,
+        "fillW": true,
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "Coral Rod",
+          "textStyle": "Aura Fishing/Heading",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Title"
+         },
+         {
+          "type": "TEXT",
+          "text": "+5% Catch Bar, +0.30 Reel Power, +15% Resilience, +15% Luck  |  2,500 Coins",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Sub"
+         }
+        ]
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4298",
+        "variant": "Style=Gold",
+        "texts": {
+         "Label": "Buy"
+        },
+        "name": "Btn Action"
+       }
+      ]
+     },
+     {
+      "name": "Row Moonsilver Rod",
+      "layout": "H",
+      "pad": 12,
+      "gap": 12,
+      "cross": "CENTER",
+      "radius": 16,
+      "h": 80,
+      "fill": {
+       "var": "cozy/sand"
+      },
+      "fillW": true,
+      "children": [
+       {
+        "type": "RECT",
+        "name": "Img equipment/MoonsilverRod",
+        "w": 56,
+        "h": 56
+       },
+       {
+        "name": "Text",
+        "layout": "V",
+        "gap": 2,
+        "fillW": true,
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "Moonsilver Rod",
+          "textStyle": "Aura Fishing/Heading",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Title"
+         },
+         {
+          "type": "TEXT",
+          "text": "+35% Luck, +0.50 Reel Power, +10% Fish Stability  |  15,000 Coins",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Sub"
+         }
+        ]
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4298",
+        "variant": "Style=Ghost",
+        "texts": {
+         "Label": "Lv. 10"
+        },
+        "name": "Btn Action"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Footer",
+    "layout": "H",
+    "gap": 10,
+    "fillW": true,
+    "main": "SPACE_BETWEEN",
+    "cross": "CENTER",
+    "children": [
+     {
+      "name": "Pager",
+      "layout": "H",
+      "gap": 10,
+      "cross": "CENTER",
+      "children": [
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4298",
+        "variant": "Style=Ghost",
+        "texts": {
+         "Label": "<"
+        },
+        "name": "Btn Page Prev"
+       },
+       {
+        "type": "TEXT",
+        "text": "1 / 2",
+        "font": {
+         "family": "Fredoka One",
+         "style": "Regular"
+        },
+        "size": 18,
+        "color": "7A8A99",
+        "name": "Page"
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4298",
+        "variant": "Style=Ghost",
+        "texts": {
+         "Label": ">"
+        },
+        "name": "Btn Page Next"
+       }
+      ]
+     },
+     {
+      "name": "Wallet",
+      "layout": "H",
+      "gap": 10,
+      "children": [
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4313",
+        "variant": "Type=Coins",
+        "texts": {
+         "Value": "12,450"
+        },
+        "name": "Coins"
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4313",
+        "variant": "Type=Gems",
+        "texts": {
+         "Value": "320"
+        },
+        "name": "Gems"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

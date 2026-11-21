@@ -1,0 +1,2267 @@
+[
+ {
+  "pageId": "3465:14993",
+  "replaceName": "Economy · 6 Store (C6/C19)",
+  "tree": {
+   "type": "SECTION",
+   "name": "Economy · 6 Store (C6/C19)",
+   "fill": "F3E9D8",
+   "x": 17000,
+   "y": 10100,
+   "children": [
+    {
+     "type": "TEXT",
+     "text": "Economy UI · 6 — Robux Store + Starter Pack",
+     "textStyle": "Aura Fishing/Display",
+     "color": {
+      "var": "cozy/text"
+     },
+     "name": "Title",
+     "x": 60,
+     "y": 40
+    },
+    {
+     "type": "TEXT",
+     "text": "Passes, Gems, Boosts, Packs. Rates link required.",
+     "textStyle": "Aura Fishing/Body",
+     "color": {
+      "var": "cozy/subtext"
+     },
+     "name": "Sub",
+     "x": 60,
+     "y": 96,
+     "w": 2200
+    },
+    {
+     "name": "Screen C6 · Store (Passes tab)",
+     "layout": "V",
+     "gap": 12,
+     "x": 60,
+     "y": 160,
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "C6 · Store (Passes tab)",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "name": "Store",
+       "w": 1280,
+       "h": 720,
+       "radius": 0,
+       "clip": true,
+       "children": [
+        {
+         "name": "World [skip]",
+         "w": 1280,
+         "h": 720,
+         "x": 0,
+         "y": 0,
+         "fill": {
+          "grad": [
+           "DDF5EE",
+           "A8DCD8"
+          ],
+          "angle": 90
+         },
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Water",
+           "w": 1280,
+           "h": 300,
+           "x": 0,
+           "y": 420,
+           "fill": {
+            "hex": "9AD4F5",
+            "opacity": 0.35
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Island",
+           "w": 560,
+           "h": 130,
+           "x": 360,
+           "y": 370,
+           "fill": {
+            "hex": "7FD3B0",
+            "opacity": 0.55
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Island Top",
+           "w": 360,
+           "h": 70,
+           "x": 460,
+           "y": 372,
+           "fill": {
+            "hex": "4FAF8A",
+            "opacity": 0.35
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Dim",
+           "w": 1280,
+           "h": 720,
+           "x": 0,
+           "y": 0,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          }
+         ]
+        },
+        {
+         "name": "Window Store",
+         "layout": "V",
+         "pad": 20,
+         "gap": 14,
+         "w": 760,
+         "h": 610,
+         "x": 260,
+         "y": 70,
+         "radius": 24,
+         "fill": {
+          "var": "cozy/panel"
+         },
+         "stroke": {
+          "var": "cozy/track"
+         },
+         "strokeW": 2,
+         "effects": [
+          {
+           "color": "3D4B5C",
+           "a": 0.1,
+           "y": 6,
+           "blur": 18
+          }
+         ],
+         "children": [
+          {
+           "name": "Header",
+           "layout": "H",
+           "fillW": true,
+           "main": "SPACE_BETWEEN",
+           "cross": "CENTER",
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "Store",
+             "textStyle": "Aura Fishing/Title",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Title"
+            },
+            {
+             "type": "INSTANCE",
+             "ref": "3487:4298",
+             "variant": "Style=Danger",
+             "texts": {
+              "Label": "X"
+             },
+             "name": "Btn Close"
+            }
+           ]
+          },
+          {
+           "name": "Tabs",
+           "layout": "H",
+           "gap": 8,
+           "fillW": true,
+           "children": [
+            {
+             "type": "INSTANCE",
+             "ref": "3487:4298",
+             "variant": "Style=Primary",
+             "texts": {
+              "Label": "Passes"
+             },
+             "name": "Btn Tab Passes",
+             "fillW": true
+            },
+            {
+             "type": "INSTANCE",
+             "ref": "3487:4298",
+             "variant": "Style=Ghost",
+             "texts": {
+              "Label": "Gems"
+             },
+             "name": "Btn Tab Gems",
+             "fillW": true
+            },
+            {
+             "type": "INSTANCE",
+             "ref": "3487:4298",
+             "variant": "Style=Ghost",
+             "texts": {
+              "Label": "Boosts"
+             },
+             "name": "Btn Tab Boosts",
+             "fillW": true
+            },
+            {
+             "type": "INSTANCE",
+             "ref": "3487:4298",
+             "variant": "Style=Ghost",
+             "texts": {
+              "Label": "Packs"
+             },
+             "name": "Btn Tab Packs",
+             "fillW": true
+            }
+           ]
+          },
+          {
+           "name": "Grid",
+           "layout": "V",
+           "gap": 16,
+           "children": [
+            {
+             "name": "Row 1",
+             "layout": "H",
+             "gap": 16,
+             "children": [
+              {
+               "name": "Pass Infinite Bag",
+               "layout": "H",
+               "gap": 14,
+               "pad": 14,
+               "w": 352,
+               "h": 196,
+               "radius": 20,
+               "fill": {
+                "var": "cozy/sand"
+               },
+               "cross": "CENTER",
+               "opacity": 1,
+               "children": [
+                {
+                 "name": "Art",
+                 "w": 96,
+                 "h": 96,
+                 "radius": 20,
+                 "fill": "FFFFFF",
+                 "stroke": {
+                  "var": "cozy/track"
+                 },
+                 "strokeW": 2,
+                 "layout": "H",
+                 "main": "CENTER",
+                 "cross": "CENTER",
+                 "children": [
+                  {
+                   "type": "RECT",
+                   "name": "Img ui/icons/infinite_bag",
+                   "w": 84,
+                   "h": 84
+                  }
+                 ]
+                },
+                {
+                 "name": "Text",
+                 "layout": "V",
+                 "gap": 6,
+                 "fillW": true,
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "Infinite Bag",
+                   "textStyle": "Aura Fishing/Title",
+                   "color": {
+                    "var": "cozy/text"
+                   },
+                   "name": "Name"
+                  },
+                  {
+                   "type": "TEXT",
+                   "text": "Your bag never fills up.",
+                   "textStyle": "Aura Fishing/Small",
+                   "color": {
+                    "var": "cozy/subtext"
+                   },
+                   "name": "Benefit"
+                  },
+                  {
+                   "type": "TEXT",
+                   "text": "Fish forever, sell when you like.",
+                   "textStyle": "Aura Fishing/Small",
+                   "color": {
+                    "var": "cozy/subtext"
+                   },
+                   "name": "Benefit"
+                  },
+                  {
+                   "name": "Btn Buy",
+                   "layout": "H",
+                   "gap": 6,
+                   "pad": [
+                    8,
+                    14,
+                    11,
+                    14
+                   ],
+                   "radius": 16,
+                   "cross": "CENTER",
+                   "main": "CENTER",
+                   "fill": {
+                    "var": "cozy/mint"
+                   },
+                   "stroke": {
+                    "var": "cozy/mint-lip"
+                   },
+                   "strokeSides": {
+                    "b": 5
+                   },
+                   "children": [
+                    {
+                     "type": "SVG",
+                     "svg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4 41.3 14v20L24 44 6.7 34V14z\" stroke=\"#FFFFFF\" stroke-width=\"5\" stroke-linejoin=\"round\"/><rect x=\"18\" y=\"18\" width=\"12\" height=\"12\" rx=\"2\" fill=\"#FFFFFF\"/></svg>",
+                     "w": 18,
+                     "h": 18,
+                     "name": "icon_robux"
+                    },
+                    {
+                     "type": "TEXT",
+                     "text": "349",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 18,
+                     "color": "FFFFFF",
+                     "name": "Price"
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Pass Auto-Fish Pro",
+               "layout": "H",
+               "gap": 14,
+               "pad": 14,
+               "w": 352,
+               "h": 196,
+               "radius": 20,
+               "fill": {
+                "var": "cozy/sand"
+               },
+               "cross": "CENTER",
+               "opacity": 1,
+               "children": [
+                {
+                 "name": "Art",
+                 "w": 96,
+                 "h": 96,
+                 "radius": 20,
+                 "fill": "FFFFFF",
+                 "stroke": {
+                  "var": "cozy/track"
+                 },
+                 "strokeW": 2,
+                 "layout": "H",
+                 "main": "CENTER",
+                 "cross": "CENTER",
+                 "children": [
+                  {
+                   "type": "RECT",
+                   "name": "Img ui/icons/auto_pro",
+                   "w": 84,
+                   "h": 84
+                  }
+                 ]
+                },
+                {
+                 "name": "Text",
+                 "layout": "V",
+                 "gap": 6,
+                 "fillW": true,
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "Auto-Fish Pro",
+                   "textStyle": "Aura Fishing/Title",
+                   "color": {
+                    "var": "cozy/text"
+                   },
+                   "name": "Name"
+                  },
+                  {
+                   "type": "TEXT",
+                   "text": "Auto wait -25%",
+                   "textStyle": "Aura Fishing/Small",
+                   "color": {
+                    "var": "cozy/subtext"
+                   },
+                   "name": "Benefit"
+                  },
+                  {
+                   "type": "TEXT",
+                   "text": "Auto rewards x1.25",
+                   "textStyle": "Aura Fishing/Small",
+                   "color": {
+                    "var": "cozy/subtext"
+                   },
+                   "name": "Benefit"
+                  },
+                  {
+                   "name": "Btn Buy",
+                   "layout": "H",
+                   "gap": 6,
+                   "pad": [
+                    8,
+                    14,
+                    11,
+                    14
+                   ],
+                   "radius": 16,
+                   "cross": "CENTER",
+                   "main": "CENTER",
+                   "fill": {
+                    "var": "cozy/mint"
+                   },
+                   "stroke": {
+                    "var": "cozy/mint-lip"
+                   },
+                   "strokeSides": {
+                    "b": 5
+                   },
+                   "children": [
+                    {
+                     "type": "SVG",
+                     "svg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4 41.3 14v20L24 44 6.7 34V14z\" stroke=\"#FFFFFF\" stroke-width=\"5\" stroke-linejoin=\"round\"/><rect x=\"18\" y=\"18\" width=\"12\" height=\"12\" rx=\"2\" fill=\"#FFFFFF\"/></svg>",
+                     "w": 18,
+                     "h": 18,
+                     "name": "icon_robux"
+                    },
+                    {
+                     "type": "TEXT",
+                     "text": "249",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 18,
+                     "color": "FFFFFF",
+                     "name": "Price"
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Row 2",
+             "layout": "H",
+             "gap": 16,
+             "children": [
+              {
+               "name": "Pass VIP",
+               "layout": "H",
+               "gap": 14,
+               "pad": 14,
+               "w": 352,
+               "h": 196,
+               "radius": 20,
+               "fill": {
+                "var": "cozy/sand"
+               },
+               "cross": "CENTER",
+               "opacity": 1,
+               "children": [
+                {
+                 "name": "Art",
+                 "w": 96,
+                 "h": 96,
+                 "radius": 20,
+                 "fill": "FFFFFF",
+                 "stroke": {
+                  "var": "cozy/track"
+                 },
+                 "strokeW": 2,
+                 "layout": "H",
+                 "main": "CENTER",
+                 "cross": "CENTER",
+                 "children": [
+                  {
+                   "type": "RECT",
+                   "name": "Img ui/icons/vip",
+                   "w": 84,
+                   "h": 84
+                  }
+                 ]
+                },
+                {
+                 "name": "Text",
+                 "layout": "V",
+                 "gap": 6,
+                 "fillW": true,
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "VIP",
+                   "textStyle": "Aura Fishing/Title",
+                   "color": {
+                    "var": "cozy/text"
+                   },
+                   "name": "Name"
+                  },
+                  {
+                   "type": "TEXT",
+                   "text": "+15% Luck • gold name",
+                   "textStyle": "Aura Fishing/Small",
+                   "color": {
+                    "var": "cozy/subtext"
+                   },
+                   "name": "Benefit"
+                  },
+                  {
+                   "type": "TEXT",
+                   "text": "Offline Pearls up to 12h",
+                   "textStyle": "Aura Fishing/Small",
+                   "color": {
+                    "var": "cozy/subtext"
+                   },
+                   "name": "Benefit"
+                  },
+                  {
+                   "name": "Pill OWNED",
+                   "layout": "H",
+                   "gap": 5,
+                   "pad": [
+                    5,
+                    12,
+                    5,
+                    10
+                   ],
+                   "radius": 999,
+                   "cross": "CENTER",
+                   "fill": {
+                    "var": "cozy/mint-lip"
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "OWNED",
+                     "textStyle": "Aura Fishing/Caption",
+                     "color": {
+                      "var": "cozy/on-accent"
+                     },
+                     "name": "Label"
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Pass Extra Cast",
+               "layout": "H",
+               "gap": 14,
+               "pad": 14,
+               "w": 352,
+               "h": 196,
+               "radius": 20,
+               "fill": {
+                "var": "cozy/sand"
+               },
+               "cross": "CENTER",
+               "opacity": 0.75,
+               "children": [
+                {
+                 "name": "Art",
+                 "w": 96,
+                 "h": 96,
+                 "radius": 20,
+                 "fill": "FFFFFF",
+                 "stroke": {
+                  "var": "cozy/track"
+                 },
+                 "strokeW": 2,
+                 "layout": "H",
+                 "main": "CENTER",
+                 "cross": "CENTER",
+                 "children": [
+                  {
+                   "type": "RECT",
+                   "name": "Img ui/icons/extra_cast",
+                   "w": 84,
+                   "h": 84
+                  }
+                 ]
+                },
+                {
+                 "name": "Text",
+                 "layout": "V",
+                 "gap": 6,
+                 "fillW": true,
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "Extra Cast",
+                   "textStyle": "Aura Fishing/Title",
+                   "color": {
+                    "var": "cozy/text"
+                   },
+                   "name": "Name"
+                  },
+                  {
+                   "type": "TEXT",
+                   "text": "Fish with two lines at once.",
+                   "textStyle": "Aura Fishing/Small",
+                   "color": {
+                    "var": "cozy/subtext"
+                   },
+                   "name": "Benefit"
+                  },
+                  {
+                   "name": "Pill COMING SOON",
+                   "layout": "H",
+                   "gap": 5,
+                   "pad": [
+                    5,
+                    12,
+                    5,
+                    10
+                   ],
+                   "radius": 999,
+                   "cross": "CENTER",
+                   "fill": {
+                    "var": "cozy/sand"
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "COMING SOON",
+                     "textStyle": "Aura Fishing/Caption",
+                     "color": {
+                      "var": "cozy/subtext"
+                     },
+                     "name": "Label"
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "[skip] Roblox CoreGui (guide)",
+         "w": 1280,
+         "h": 720,
+         "x": 0,
+         "y": 0,
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Top Bar",
+           "w": 1280,
+           "h": 58,
+           "x": 0,
+           "y": 0,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Roblox Menu Btn",
+           "w": 44,
+           "h": 44,
+           "x": 12,
+           "y": 7,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Chat Btn",
+           "w": 44,
+           "h": 44,
+           "x": 64,
+           "y": 7,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          },
+          {
+           "type": "TEXT",
+           "text": "ROBLOX TOP BAR (58px)  —  keep clear",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 124,
+           "y": 22
+          },
+          {
+           "type": "RECT",
+           "name": "Chat Window (when open)",
+           "w": 380,
+           "h": 210,
+           "x": 8,
+           "y": 64,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.04
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "CHAT WINDOW (desktop, when open)",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 20,
+           "y": 248
+          },
+          {
+           "type": "RECT",
+           "name": "Leaderboard",
+           "w": 236,
+           "h": 170,
+           "x": 1032,
+           "y": 64,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.06
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "LEADERBOARD (leaderstats)",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 1044,
+           "y": 210
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Mobile Thumbstick",
+           "w": 150,
+           "h": 150,
+           "x": 50,
+           "y": 510,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "MOBILE THUMBSTICK",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 62,
+           "y": 668
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Mobile Jump",
+           "w": 96,
+           "h": 96,
+           "x": 1120,
+           "y": 550,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "MOBILE JUMP",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 1122,
+           "y": 660
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Screen C19 · Starter Pack offer",
+     "layout": "V",
+     "gap": 12,
+     "x": 1400,
+     "y": 160,
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "C19 · Starter Pack offer",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "name": "Starter",
+       "w": 1280,
+       "h": 720,
+       "radius": 0,
+       "clip": true,
+       "children": [
+        {
+         "name": "World [skip]",
+         "w": 1280,
+         "h": 720,
+         "x": 0,
+         "y": 0,
+         "fill": {
+          "grad": [
+           "DDF5EE",
+           "A8DCD8"
+          ],
+          "angle": 90
+         },
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Water",
+           "w": 1280,
+           "h": 300,
+           "x": 0,
+           "y": 420,
+           "fill": {
+            "hex": "9AD4F5",
+            "opacity": 0.35
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Island",
+           "w": 560,
+           "h": 130,
+           "x": 360,
+           "y": 370,
+           "fill": {
+            "hex": "7FD3B0",
+            "opacity": 0.55
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Island Top",
+           "w": 360,
+           "h": 70,
+           "x": 460,
+           "y": 372,
+           "fill": {
+            "hex": "4FAF8A",
+            "opacity": 0.35
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Dim",
+           "w": 1280,
+           "h": 720,
+           "x": 0,
+           "y": 0,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          }
+         ]
+        },
+        {
+         "name": "Starter Pack",
+         "layout": "V",
+         "w": 520,
+         "radius": 36,
+         "clip": true,
+         "fill": {
+          "var": "cozy/panel"
+         },
+         "stroke": {
+          "var": "cozy/track"
+         },
+         "strokeW": 2,
+         "effects": [
+          {
+           "color": "3D4B5C",
+           "a": 0.1,
+           "y": 6,
+           "blur": 18
+          }
+         ],
+         "children": [
+          {
+           "name": "Body",
+           "layout": "V",
+           "gap": 10,
+           "pad": [
+            34,
+            40,
+            26,
+            40
+           ],
+           "fillW": true,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Ribbon",
+             "layout": "H",
+             "pad": [
+              3,
+              10,
+              3,
+              10
+             ],
+             "radius": 999,
+             "fill": {
+              "var": "cozy/coral"
+             },
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "ONE-TIME OFFER",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/on-accent"
+               },
+               "name": "Label"
+              }
+             ]
+            },
+            {
+             "type": "RECT",
+             "name": "Img ui/shop/starter_bundle",
+             "w": 150,
+             "h": 150
+            },
+            {
+             "type": "TEXT",
+             "text": "Starter Pack",
+             "textStyle": "Aura Fishing/Display",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Title",
+             "align": "CENTER",
+             "w": 460
+            },
+            {
+             "name": "Items",
+             "layout": "V",
+             "gap": 6,
+             "children": [
+              {
+               "name": "Item 100 Gems",
+               "layout": "H",
+               "gap": 10,
+               "pad": [
+                6,
+                12,
+                6,
+                6
+               ],
+               "radius": 14,
+               "fill": {
+                "var": "cozy/sand"
+               },
+               "w": 400,
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/status/gem",
+                 "w": 36,
+                 "h": 36
+                },
+                {
+                 "type": "TEXT",
+                 "text": "100 Gems",
+                 "textStyle": "Aura Fishing/Body",
+                 "color": {
+                  "var": "cozy/text"
+                 },
+                 "name": "Label"
+                }
+               ]
+              },
+              {
+               "name": "Item Shrimp bait x50",
+               "layout": "H",
+               "gap": 10,
+               "pad": [
+                6,
+                12,
+                6,
+                6
+               ],
+               "radius": 14,
+               "fill": {
+                "var": "cozy/sand"
+               },
+               "w": 400,
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img equipment/Shrimp",
+                 "w": 36,
+                 "h": 36
+                },
+                {
+                 "type": "TEXT",
+                 "text": "Shrimp bait x50",
+                 "textStyle": "Aura Fishing/Body",
+                 "color": {
+                  "var": "cozy/text"
+                 },
+                 "name": "Label"
+                }
+               ]
+              },
+              {
+               "name": "Item Sweetheart Rod (cosmetic + light stats)",
+               "layout": "H",
+               "gap": 10,
+               "pad": [
+                6,
+                12,
+                6,
+                6
+               ],
+               "radius": 14,
+               "fill": {
+                "var": "cozy/sand"
+               },
+               "w": 400,
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img equipment/SweetheartRod",
+                 "w": 36,
+                 "h": 36
+                },
+                {
+                 "type": "TEXT",
+                 "text": "Sweetheart Rod (cosmetic + light stats)",
+                 "textStyle": "Aura Fishing/Body",
+                 "color": {
+                  "var": "cozy/text"
+                 },
+                 "name": "Label"
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Footer",
+           "layout": "H",
+           "gap": 16,
+           "pad": [
+            16,
+            32,
+            20,
+            32
+           ],
+           "fillW": true,
+           "main": "CENTER",
+           "fill": {
+            "var": "cozy/sand"
+           },
+           "children": [
+            {
+             "type": "INSTANCE",
+             "ref": "3487:4298",
+             "variant": "Style=Ghost",
+             "texts": {
+              "Label": "Later"
+             },
+             "name": "Btn Later",
+             "fillW": true
+            },
+            {
+             "name": "Btn Buy",
+             "layout": "H",
+             "gap": 6,
+             "pad": [
+              8,
+              14,
+              11,
+              14
+             ],
+             "radius": 16,
+             "cross": "CENTER",
+             "main": "CENTER",
+             "fill": {
+              "var": "cozy/mint"
+             },
+             "stroke": {
+              "var": "cozy/mint-lip"
+             },
+             "strokeSides": {
+              "b": 5
+             },
+             "children": [
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4 41.3 14v20L24 44 6.7 34V14z\" stroke=\"#FFFFFF\" stroke-width=\"5\" stroke-linejoin=\"round\"/><rect x=\"18\" y=\"18\" width=\"12\" height=\"12\" rx=\"2\" fill=\"#FFFFFF\"/></svg>",
+               "w": 18,
+               "h": 18,
+               "name": "icon_robux"
+              },
+              {
+               "type": "TEXT",
+               "text": "49",
+               "font": {
+                "family": "Fredoka One",
+                "style": "Regular"
+               },
+               "size": 18,
+               "color": "FFFFFF",
+               "name": "Price"
+              }
+             ]
+            }
+           ]
+          }
+         ],
+         "x": 380,
+         "y": 20
+        },
+        {
+         "name": "[skip] Roblox CoreGui (guide)",
+         "w": 1280,
+         "h": 720,
+         "x": 0,
+         "y": 0,
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Top Bar",
+           "w": 1280,
+           "h": 58,
+           "x": 0,
+           "y": 0,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Roblox Menu Btn",
+           "w": 44,
+           "h": 44,
+           "x": 12,
+           "y": 7,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Chat Btn",
+           "w": 44,
+           "h": 44,
+           "x": 64,
+           "y": 7,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          },
+          {
+           "type": "TEXT",
+           "text": "ROBLOX TOP BAR (58px)  —  keep clear",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 124,
+           "y": 22
+          },
+          {
+           "type": "RECT",
+           "name": "Chat Window (when open)",
+           "w": 380,
+           "h": 210,
+           "x": 8,
+           "y": 64,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.04
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "CHAT WINDOW (desktop, when open)",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 20,
+           "y": 248
+          },
+          {
+           "type": "RECT",
+           "name": "Leaderboard",
+           "w": 236,
+           "h": 170,
+           "x": 1032,
+           "y": 64,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.06
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "LEADERBOARD (leaderstats)",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 1044,
+           "y": 210
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Mobile Thumbstick",
+           "w": 150,
+           "h": 150,
+           "x": 50,
+           "y": 510,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "MOBILE THUMBSTICK",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 62,
+           "y": 668
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Mobile Jump",
+           "w": 96,
+           "h": 96,
+           "x": 1120,
+           "y": 550,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "MOBILE JUMP",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 1122,
+           "y": 660
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Tabs",
+     "layout": "H",
+     "gap": 30,
+     "children": [
+      {
+       "name": "Gems tab",
+       "layout": "V",
+       "gap": 10,
+       "pad": 24,
+       "radius": 24,
+       "fill": {
+        "var": "cozy/panel"
+       },
+       "stroke": {
+        "var": "cozy/track"
+       },
+       "strokeW": 2,
+       "effects": [
+        {
+         "color": "3D4B5C",
+         "a": 0.1,
+         "y": 6,
+         "blur": 18
+        }
+       ],
+       "children": [
+        {
+         "type": "TEXT",
+         "text": "Gems tab",
+         "textStyle": "Aura Fishing/Title",
+         "color": {
+          "var": "cozy/text"
+         },
+         "name": "Title"
+        },
+        {
+         "name": "Body",
+         "layout": "V",
+         "gap": 14,
+         "children": [
+          {
+           "name": "Row",
+           "layout": "H",
+           "gap": 12,
+           "children": [
+            {
+             "name": "Product 25 Gems",
+             "layout": "V",
+             "gap": 6,
+             "pad": 14,
+             "w": 210,
+             "cross": "CENTER",
+             "radius": 20,
+             "fill": {
+              "var": "cozy/sand"
+             },
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/shop/gems_s",
+               "w": 96,
+               "h": 96
+              },
+              {
+               "type": "TEXT",
+               "text": "25 Gems",
+               "textStyle": "Aura Fishing/Heading",
+               "color": {
+                "var": "cozy/text"
+               },
+               "name": "Name",
+               "align": "CENTER",
+               "w": 180
+              },
+              {
+               "type": "TEXT",
+               "text": "5 aura rolls",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Sub",
+               "align": "CENTER",
+               "w": 180
+              },
+              {
+               "name": "Btn Buy",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                8,
+                14,
+                11,
+                14
+               ],
+               "radius": 16,
+               "cross": "CENTER",
+               "main": "CENTER",
+               "fill": {
+                "var": "cozy/mint"
+               },
+               "stroke": {
+                "var": "cozy/mint-lip"
+               },
+               "strokeSides": {
+                "b": 5
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "svg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4 41.3 14v20L24 44 6.7 34V14z\" stroke=\"#FFFFFF\" stroke-width=\"5\" stroke-linejoin=\"round\"/><rect x=\"18\" y=\"18\" width=\"12\" height=\"12\" rx=\"2\" fill=\"#FFFFFF\"/></svg>",
+                 "w": 18,
+                 "h": 18,
+                 "name": "icon_robux"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "25",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 18,
+                 "color": "FFFFFF",
+                 "name": "Price"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Product 110 Gems",
+             "layout": "V",
+             "gap": 6,
+             "pad": 14,
+             "w": 210,
+             "cross": "CENTER",
+             "radius": 20,
+             "fill": {
+              "var": "cozy/sand"
+             },
+             "children": [
+              {
+               "name": "Badge",
+               "layout": "H",
+               "pad": [
+                3,
+                10,
+                3,
+                10
+               ],
+               "radius": 999,
+               "fill": {
+                "var": "cozy/coral"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "POPULAR",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/on-accent"
+                 },
+                 "name": "Label"
+                }
+               ]
+              },
+              {
+               "type": "RECT",
+               "name": "Img ui/shop/gems_m",
+               "w": 96,
+               "h": 96
+              },
+              {
+               "type": "TEXT",
+               "text": "110 Gems",
+               "textStyle": "Aura Fishing/Heading",
+               "color": {
+                "var": "cozy/text"
+               },
+               "name": "Name",
+               "align": "CENTER",
+               "w": 180
+              },
+              {
+               "type": "TEXT",
+               "text": "22 rolls • +11% bonus",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Sub",
+               "align": "CENTER",
+               "w": 180
+              },
+              {
+               "name": "Btn Buy",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                8,
+                14,
+                11,
+                14
+               ],
+               "radius": 16,
+               "cross": "CENTER",
+               "main": "CENTER",
+               "fill": {
+                "var": "cozy/mint"
+               },
+               "stroke": {
+                "var": "cozy/mint-lip"
+               },
+               "strokeSides": {
+                "b": 5
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "svg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4 41.3 14v20L24 44 6.7 34V14z\" stroke=\"#FFFFFF\" stroke-width=\"5\" stroke-linejoin=\"round\"/><rect x=\"18\" y=\"18\" width=\"12\" height=\"12\" rx=\"2\" fill=\"#FFFFFF\"/></svg>",
+                 "w": 18,
+                 "h": 18,
+                 "name": "icon_robux"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "99",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 18,
+                 "color": "FFFFFF",
+                 "name": "Price"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Product 300 Gems",
+             "layout": "V",
+             "gap": 6,
+             "pad": 14,
+             "w": 210,
+             "cross": "CENTER",
+             "radius": 20,
+             "fill": {
+              "var": "cozy/sand"
+             },
+             "children": [
+              {
+               "name": "Badge",
+               "layout": "H",
+               "pad": [
+                3,
+                10,
+                3,
+                10
+               ],
+               "radius": 999,
+               "fill": {
+                "var": "cozy/coral"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "BEST VALUE",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/on-accent"
+                 },
+                 "name": "Label"
+                }
+               ]
+              },
+              {
+               "type": "RECT",
+               "name": "Img ui/shop/gems_l",
+               "w": 96,
+               "h": 96
+              },
+              {
+               "type": "TEXT",
+               "text": "300 Gems",
+               "textStyle": "Aura Fishing/Heading",
+               "color": {
+                "var": "cozy/text"
+               },
+               "name": "Name",
+               "align": "CENTER",
+               "w": 180
+              },
+              {
+               "type": "TEXT",
+               "text": "60 rolls • +20% bonus",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Sub",
+               "align": "CENTER",
+               "w": 180
+              },
+              {
+               "name": "Btn Buy",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                8,
+                14,
+                11,
+                14
+               ],
+               "radius": 16,
+               "cross": "CENTER",
+               "main": "CENTER",
+               "fill": {
+                "var": "cozy/mint"
+               },
+               "stroke": {
+                "var": "cozy/mint-lip"
+               },
+               "strokeSides": {
+                "b": 5
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "svg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4 41.3 14v20L24 44 6.7 34V14z\" stroke=\"#FFFFFF\" stroke-width=\"5\" stroke-linejoin=\"round\"/><rect x=\"18\" y=\"18\" width=\"12\" height=\"12\" rx=\"2\" fill=\"#FFFFFF\"/></svg>",
+                 "w": 18,
+                 "h": 18,
+                 "name": "icon_robux"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "249",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 18,
+                 "color": "FFFFFF",
+                 "name": "Price"
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Rates Link",
+           "layout": "H",
+           "gap": 8,
+           "cross": "CENTER",
+           "children": [
+            {
+             "type": "SVG",
+             "svg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"24\" cy=\"24\" r=\"19\" fill=\"#7A8A99\"/><rect x=\"21\" y=\"21\" width=\"6\" height=\"15\" rx=\"3\" fill=\"#3D4B5C\"/><circle cx=\"24\" cy=\"14.5\" r=\"3.5\" fill=\"#3D4B5C\"/></svg>",
+             "w": 18,
+             "h": 18,
+             "name": "icon_info"
+            },
+            {
+             "type": "TEXT",
+             "text": "Gems are used for random aura rolls — tap to see drop rates",
+             "textStyle": "Aura Fishing/Small",
+             "color": {
+              "var": "cozy/sky-lip"
+             },
+             "name": "Label"
+            }
+           ]
+          }
+         ]
+        }
+       ],
+       "w": 720
+      },
+      {
+       "name": "Boosts tab",
+       "layout": "V",
+       "gap": 10,
+       "pad": 24,
+       "radius": 24,
+       "fill": {
+        "var": "cozy/panel"
+       },
+       "stroke": {
+        "var": "cozy/track"
+       },
+       "strokeW": 2,
+       "effects": [
+        {
+         "color": "3D4B5C",
+         "a": 0.1,
+         "y": 6,
+         "blur": 18
+        }
+       ],
+       "children": [
+        {
+         "type": "TEXT",
+         "text": "Boosts tab",
+         "textStyle": "Aura Fishing/Title",
+         "color": {
+          "var": "cozy/text"
+         },
+         "name": "Title"
+        },
+        {
+         "name": "Body",
+         "layout": "V",
+         "gap": 14,
+         "children": [
+          {
+           "name": "Row",
+           "layout": "H",
+           "gap": 12,
+           "children": [
+            {
+             "name": "Product 2x Coins",
+             "layout": "V",
+             "gap": 6,
+             "pad": 14,
+             "w": 210,
+             "cross": "CENTER",
+             "radius": 20,
+             "fill": {
+              "var": "cozy/sand"
+             },
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/shop/boost_coins",
+               "w": 96,
+               "h": 96
+              },
+              {
+               "type": "TEXT",
+               "text": "2x Coins",
+               "textStyle": "Aura Fishing/Heading",
+               "color": {
+                "var": "cozy/text"
+               },
+               "name": "Name",
+               "align": "CENTER",
+               "w": 180
+              },
+              {
+               "type": "TEXT",
+               "text": "2 hours • stacks time",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Sub",
+               "align": "CENTER",
+               "w": 180
+              },
+              {
+               "name": "Btn Buy",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                8,
+                14,
+                11,
+                14
+               ],
+               "radius": 16,
+               "cross": "CENTER",
+               "main": "CENTER",
+               "fill": {
+                "var": "cozy/mint"
+               },
+               "stroke": {
+                "var": "cozy/mint-lip"
+               },
+               "strokeSides": {
+                "b": 5
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "svg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4 41.3 14v20L24 44 6.7 34V14z\" stroke=\"#FFFFFF\" stroke-width=\"5\" stroke-linejoin=\"round\"/><rect x=\"18\" y=\"18\" width=\"12\" height=\"12\" rx=\"2\" fill=\"#FFFFFF\"/></svg>",
+                 "w": 18,
+                 "h": 18,
+                 "name": "icon_robux"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "39",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 18,
+                 "color": "FFFFFF",
+                 "name": "Price"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Product 2x Pearls",
+             "layout": "V",
+             "gap": 6,
+             "pad": 14,
+             "w": 210,
+             "cross": "CENTER",
+             "radius": 20,
+             "fill": {
+              "var": "cozy/sand"
+             },
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/shop/boost_pearls",
+               "w": 96,
+               "h": 96
+              },
+              {
+               "type": "TEXT",
+               "text": "2x Pearls",
+               "textStyle": "Aura Fishing/Heading",
+               "color": {
+                "var": "cozy/text"
+               },
+               "name": "Name",
+               "align": "CENTER",
+               "w": 180
+              },
+              {
+               "type": "TEXT",
+               "text": "2 hours • works offline",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Sub",
+               "align": "CENTER",
+               "w": 180
+              },
+              {
+               "name": "Btn Buy",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                8,
+                14,
+                11,
+                14
+               ],
+               "radius": 16,
+               "cross": "CENTER",
+               "main": "CENTER",
+               "fill": {
+                "var": "cozy/mint"
+               },
+               "stroke": {
+                "var": "cozy/mint-lip"
+               },
+               "strokeSides": {
+                "b": 5
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "svg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4 41.3 14v20L24 44 6.7 34V14z\" stroke=\"#FFFFFF\" stroke-width=\"5\" stroke-linejoin=\"round\"/><rect x=\"18\" y=\"18\" width=\"12\" height=\"12\" rx=\"2\" fill=\"#FFFFFF\"/></svg>",
+                 "w": 18,
+                 "h": 18,
+                 "name": "icon_robux"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "39",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 18,
+                 "color": "FFFFFF",
+                 "name": "Price"
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ],
+       "w": 480
+      },
+      {
+       "name": "Packs tab",
+       "layout": "V",
+       "gap": 10,
+       "pad": 24,
+       "radius": 24,
+       "fill": {
+        "var": "cozy/panel"
+       },
+       "stroke": {
+        "var": "cozy/track"
+       },
+       "strokeW": 2,
+       "effects": [
+        {
+         "color": "3D4B5C",
+         "a": 0.1,
+         "y": 6,
+         "blur": 18
+        }
+       ],
+       "children": [
+        {
+         "type": "TEXT",
+         "text": "Packs tab",
+         "textStyle": "Aura Fishing/Title",
+         "color": {
+          "var": "cozy/text"
+         },
+         "name": "Title"
+        },
+        {
+         "name": "Body",
+         "layout": "V",
+         "gap": 14,
+         "children": [
+          {
+           "name": "Row",
+           "layout": "H",
+           "gap": 12,
+           "children": [
+            {
+             "name": "Product Starter Pack",
+             "layout": "V",
+             "gap": 6,
+             "pad": 14,
+             "w": 210,
+             "cross": "CENTER",
+             "radius": 20,
+             "fill": {
+              "var": "cozy/sand"
+             },
+             "children": [
+              {
+               "name": "Badge",
+               "layout": "H",
+               "pad": [
+                3,
+                10,
+                3,
+                10
+               ],
+               "radius": 999,
+               "fill": {
+                "var": "cozy/coral"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "x1",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/on-accent"
+                 },
+                 "name": "Label"
+                }
+               ]
+              },
+              {
+               "type": "RECT",
+               "name": "Img ui/shop/starter_bundle",
+               "w": 96,
+               "h": 96
+              },
+              {
+               "type": "TEXT",
+               "text": "Starter Pack",
+               "textStyle": "Aura Fishing/Heading",
+               "color": {
+                "var": "cozy/text"
+               },
+               "name": "Name",
+               "align": "CENTER",
+               "w": 180
+              },
+              {
+               "type": "TEXT",
+               "text": "one time only",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Sub",
+               "align": "CENTER",
+               "w": 180
+              },
+              {
+               "name": "Btn Buy",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                8,
+                14,
+                11,
+                14
+               ],
+               "radius": 16,
+               "cross": "CENTER",
+               "main": "CENTER",
+               "fill": {
+                "var": "cozy/mint"
+               },
+               "stroke": {
+                "var": "cozy/mint-lip"
+               },
+               "strokeSides": {
+                "b": 5
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "svg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4 41.3 14v20L24 44 6.7 34V14z\" stroke=\"#FFFFFF\" stroke-width=\"5\" stroke-linejoin=\"round\"/><rect x=\"18\" y=\"18\" width=\"12\" height=\"12\" rx=\"2\" fill=\"#FFFFFF\"/></svg>",
+                 "w": 18,
+                 "h": 18,
+                 "name": "icon_robux"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "49",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 18,
+                 "color": "FFFFFF",
+                 "name": "Price"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Product Coin Chest",
+             "layout": "V",
+             "gap": 6,
+             "pad": 14,
+             "w": 210,
+             "cross": "CENTER",
+             "radius": 20,
+             "fill": {
+              "var": "cozy/sand"
+             },
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/shop/coins_l",
+               "w": 96,
+               "h": 96
+              },
+              {
+               "type": "TEXT",
+               "text": "Coin Chest",
+               "textStyle": "Aura Fishing/Heading",
+               "color": {
+                "var": "cozy/text"
+               },
+               "name": "Name",
+               "align": "CENTER",
+               "w": 180
+              },
+              {
+               "type": "TEXT",
+               "text": "coming later",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Sub",
+               "align": "CENTER",
+               "w": 180
+              },
+              {
+               "name": "Btn Buy",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                8,
+                14,
+                11,
+                14
+               ],
+               "radius": 16,
+               "cross": "CENTER",
+               "main": "CENTER",
+               "fill": {
+                "var": "cozy/mint"
+               },
+               "stroke": {
+                "var": "cozy/mint-lip"
+               },
+               "strokeSides": {
+                "b": 5
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "svg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4 41.3 14v20L24 44 6.7 34V14z\" stroke=\"#FFFFFF\" stroke-width=\"5\" stroke-linejoin=\"round\"/><rect x=\"18\" y=\"18\" width=\"12\" height=\"12\" rx=\"2\" fill=\"#FFFFFF\"/></svg>",
+                 "w": 18,
+                 "h": 18,
+                 "name": "icon_robux"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "—",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 18,
+                 "color": "FFFFFF",
+                 "name": "Price"
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ],
+       "w": 480
+      }
+     ],
+     "x": 60,
+     "y": 960
+    },
+    {
+     "name": "Rules",
+     "layout": "V",
+     "gap": 10,
+     "pad": 24,
+     "radius": 24,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 2,
+     "effects": [
+      {
+       "color": "3D4B5C",
+       "a": 0.1,
+       "y": 6,
+       "blur": 18
+      }
+     ],
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "Rules",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "type": "TEXT",
+       "text": "Robux prices on mint buttons with the Robux mark. Final prices (user, 2026-11-17): Gems 25 / 99 / 249 R$ = 25 / 110 / 300 Gems (1 roll = 5 Gems), Starter Pack = 100 Gems + bait + rod, Boosts 39 each, Starter Pack 49, VIP 149, Auto-Fish Pro 249, Infinite Bag 349, Extra Cast ≤299 (waits on C4). Starter Pack shows once after the first purchase or Lv.3, closes right away, no countdown. Store opens from the hub tile; a Rates link is required because Gems buy random rolls.",
+       "textStyle": "Aura Fishing/Small",
+       "color": {
+        "var": "cozy/subtext"
+       },
+       "name": "Desc",
+       "w": 672
+      }
+     ],
+     "w": 720,
+     "x": 60,
+     "y": 1420
+    }
+   ]
+  }
+ }
+]

@@ -1,0 +1,282 @@
+[
+ {
+  "replaceId": "3492:21121",
+  "tree": {
+   "name": "Btn Action",
+   "layout": "H",
+   "pad": [
+    12,
+    22,
+    16,
+    16
+   ],
+   "gap": 8,
+   "main": "CENTER",
+   "cross": "CENTER",
+   "radiusVar": "cozy/radius/button",
+   "fill": {
+    "var": "cozy/gold"
+   },
+   "stroke": {
+    "var": "cozy/gold-lip"
+   },
+   "strokeSides": {
+    "b": 5
+   },
+   "strokeAlign": "INSIDE",
+   "children": [
+    {
+     "name": "Icon",
+     "layout": "H",
+     "w": 30,
+     "h": 30,
+     "radius": 999,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "main": "CENTER",
+     "cross": "CENTER",
+     "children": [
+      {
+       "type": "RECT",
+       "name": "Img ui/status/coin",
+       "w": 22,
+       "h": 22
+      }
+     ]
+    },
+    {
+     "type": "TEXT",
+     "text": "2,500",
+     "textStyle": "Aura Fishing/Button",
+     "color": {
+      "var": "cozy/on-accent"
+     },
+     "name": "Label"
+    }
+   ]
+  }
+ },
+ {
+  "replaceId": "3492:21120",
+  "tree": {
+   "type": "TEXT",
+   "text": "+5% Catch Bar, +0.30 Reel Power, +15% Resilience, +15% Luck",
+   "textStyle": "Aura Fishing/Small",
+   "color": {
+    "var": "cozy/subtext"
+   },
+   "name": "Sub"
+  }
+ },
+ {
+  "replaceId": "3492:21164",
+  "tree": {
+   "name": "Btn Buy",
+   "layout": "H",
+   "pad": [
+    12,
+    22,
+    16,
+    16
+   ],
+   "gap": 8,
+   "main": "CENTER",
+   "cross": "CENTER",
+   "radiusVar": "cozy/radius/button",
+   "fill": {
+    "var": "cozy/gold"
+   },
+   "stroke": {
+    "var": "cozy/gold-lip"
+   },
+   "strokeSides": {
+    "b": 5
+   },
+   "strokeAlign": "INSIDE",
+   "children": [
+    {
+     "name": "Icon",
+     "layout": "H",
+     "w": 30,
+     "h": 30,
+     "radius": 999,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "main": "CENTER",
+     "cross": "CENTER",
+     "children": [
+      {
+       "type": "RECT",
+       "name": "Img ui/status/coin",
+       "w": 22,
+       "h": 22
+      }
+     ]
+    },
+    {
+     "type": "TEXT",
+     "text": "20",
+     "textStyle": "Aura Fishing/Button",
+     "color": {
+      "var": "cozy/on-accent"
+     },
+     "name": "Label"
+    }
+   ]
+  }
+ },
+ {
+  "replaceId": "3492:21163",
+  "tree": {
+   "type": "TEXT",
+   "text": "+10% Luck  |  pack of 10",
+   "textStyle": "Aura Fishing/Small",
+   "color": {
+    "var": "cozy/subtext"
+   },
+   "name": "Sub"
+  }
+ },
+ {
+  "replaceId": "3492:21171",
+  "tree": {
+   "name": "Btn Buy",
+   "layout": "H",
+   "pad": [
+    12,
+    22,
+    16,
+    16
+   ],
+   "gap": 8,
+   "main": "CENTER",
+   "cross": "CENTER",
+   "radiusVar": "cozy/radius/button",
+   "fill": {
+    "var": "cozy/gold"
+   },
+   "stroke": {
+    "var": "cozy/gold-lip"
+   },
+   "strokeSides": {
+    "b": 5
+   },
+   "strokeAlign": "INSIDE",
+   "children": [
+    {
+     "name": "Icon",
+     "layout": "H",
+     "w": 30,
+     "h": 30,
+     "radius": 999,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "main": "CENTER",
+     "cross": "CENTER",
+     "children": [
+      {
+       "type": "RECT",
+       "name": "Img ui/status/coin",
+       "w": 22,
+       "h": 22
+      }
+     ]
+    },
+    {
+     "type": "TEXT",
+     "text": "150",
+     "textStyle": "Aura Fishing/Button",
+     "color": {
+      "var": "cozy/on-accent"
+     },
+     "name": "Label"
+    }
+   ]
+  }
+ },
+ {
+  "replaceId": "3492:21170",
+  "tree": {
+   "type": "TEXT",
+   "text": "+30% Luck, +10% Bite Speed  |  pack of 10",
+   "textStyle": "Aura Fishing/Small",
+   "color": {
+    "var": "cozy/subtext"
+   },
+   "name": "Sub"
+  }
+ },
+ {
+  "replaceId": "3492:21180",
+  "tree": {
+   "name": "Btn Buy",
+   "layout": "H",
+   "pad": [
+    12,
+    22,
+    16,
+    16
+   ],
+   "gap": 8,
+   "main": "CENTER",
+   "cross": "CENTER",
+   "radiusVar": "cozy/radius/button",
+   "fill": {
+    "var": "cozy/gold"
+   },
+   "stroke": {
+    "var": "cozy/gold-lip"
+   },
+   "strokeSides": {
+    "b": 5
+   },
+   "strokeAlign": "INSIDE",
+   "children": [
+    {
+     "name": "Icon",
+     "layout": "H",
+     "w": 30,
+     "h": 30,
+     "radius": 999,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "main": "CENTER",
+     "cross": "CENTER",
+     "children": [
+      {
+       "type": "RECT",
+       "name": "Img ui/status/coin",
+       "w": 22,
+       "h": 22
+      }
+     ]
+    },
+    {
+     "type": "TEXT",
+     "text": "900",
+     "textStyle": "Aura Fishing/Button",
+     "color": {
+      "var": "cozy/on-accent"
+     },
+     "name": "Label"
+    }
+   ]
+  }
+ },
+ {
+  "replaceId": "3492:21177",
+  "tree": {
+   "type": "TEXT",
+   "text": "+75% Luck, +1% Mutation  |  pack of 10",
+   "textStyle": "Aura Fishing/Small",
+   "color": {
+    "var": "cozy/subtext"
+   },
+   "name": "Sub"
+  }
+ }
+]

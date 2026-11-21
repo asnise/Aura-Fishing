@@ -1,0 +1,174 @@
+[
+ {
+  "replaceId": "3492:21670",
+  "tree": {
+   "name": "Meta",
+   "layout": "H",
+   "gap": 6,
+   "cross": "CENTER",
+   "main": "CENTER",
+   "children": [
+    {
+     "name": "Badge",
+     "layout": "H",
+     "pad": [
+      3,
+      10,
+      4,
+      10
+     ],
+     "radius": 999,
+     "fill": {
+      "var": "cozy/sand"
+     },
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "4.2 kg",
+       "textStyle": "Aura Fishing/Caption",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Label"
+      }
+     ]
+    },
+    {
+     "name": "Badge",
+     "layout": "H",
+     "pad": [
+      3,
+      10,
+      4,
+      10
+     ],
+     "radius": 999,
+     "fill": {
+      "var": "cozy/sky"
+     },
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "Manual",
+       "textStyle": "Aura Fishing/Caption",
+       "color": {
+        "var": "cozy/on-accent"
+       },
+       "name": "Label"
+      }
+     ]
+    },
+    {
+     "name": "Badge",
+     "layout": "H",
+     "pad": [
+      3,
+      10,
+      4,
+      10
+     ],
+     "radius": 999,
+     "fill": {
+      "var": "cozy/gold"
+     },
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "PERFECT",
+       "textStyle": "Aura Fishing/Caption",
+       "color": {
+        "var": "cozy/on-accent"
+       },
+       "name": "Label"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "replaceId": "3492:21679",
+  "tree": {
+   "name": "Breakdown",
+   "layout": "H",
+   "gap": 6,
+   "cross": "CENTER",
+   "main": "CENTER",
+   "children": [
+    {
+     "name": "Badge",
+     "layout": "H",
+     "pad": [
+      3,
+      10,
+      4,
+      10
+     ],
+     "radius": 999,
+     "fill": "3CC4B0",
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "Glowing x1.8",
+       "textStyle": "Aura Fishing/Caption",
+       "color": {
+        "var": "cozy/on-accent"
+       },
+       "name": "Label"
+      }
+     ]
+    },
+    {
+     "name": "Badge",
+     "layout": "H",
+     "pad": [
+      3,
+      10,
+      4,
+      10
+     ],
+     "radius": 999,
+     "fill": {
+      "var": "cozy/sky"
+     },
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "Manual x1.5",
+       "textStyle": "Aura Fishing/Caption",
+       "color": {
+        "var": "cozy/on-accent"
+       },
+       "name": "Label"
+      }
+     ]
+    },
+    {
+     "name": "Badge",
+     "layout": "H",
+     "pad": [
+      3,
+      10,
+      4,
+      10
+     ],
+     "radius": 999,
+     "fill": {
+      "var": "cozy/gold"
+     },
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "Perfect +0.25",
+       "textStyle": "Aura Fishing/Caption",
+       "color": {
+        "var": "cozy/on-accent"
+       },
+       "name": "Label"
+      }
+     ]
+    }
+   ]
+  }
+ }
+]

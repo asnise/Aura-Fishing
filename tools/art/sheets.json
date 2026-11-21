@@ -1,0 +1,842 @@
+{
+  "style": "Game asset sprite sheet for a cozy pastel fishing game (Cozy Lake style). Square 1:1 image split into a perfect 3x3 grid of 9 equal square cells, separated by clean, straight, evenly spaced pure white gutters. Every cell has a flat solid pure white (#FFFFFF) background and contains exactly ONE centered object that fills about 70% of the cell and never touches or crosses the cell edges. Art style: soft cel-shaded 3D cartoon, chunky rounded friendly shapes, gentle top-left lighting with one soft highlight, outlines in a slightly darker shade of each object's own color (never black), soft pastel palette (mint #7FD3B0, coral #FF9E80, sky blue #9AD4F5, warm gold #F2B544, lavender #B79CF2, cream #FFF8EC, slate #3D4B5C for small details). Same camera angle, scale and lighting in all 9 cells so they look like one matching set. No text, no letters, no numbers, no watermark, no frames, no cell borders, no background scenery, no cast shadow on the white background.",
+  "negative": "text, letters, numbers, watermark, signature, black outline, photorealistic, noisy texture, gradient background, colored background, scenery, multiple objects in one cell, objects crossing cell borders, uneven grid, 4x4 grid, 2x2 grid, cropped objects",
+  "sheets": [
+    {
+      "id": "01_menu_icons",
+      "title": "UI menu icons (Main Menu tiles / HUD buttons)",
+      "folder": "ui/icons",
+      "note": "Simple bold glyph-like objects that read clearly at 48px.",
+      "items": [
+        [
+          "shop",
+          "a small market stall with a coral and cream striped awning"
+        ],
+        [
+          "auras",
+          "a glowing lavender magic orb with a sparkle star inside"
+        ],
+        [
+          "fishdex",
+          "a thick sky-blue book with a small fish emblem on the cover"
+        ],
+        [
+          "bag",
+          "a plump gold fishing satchel with a buckle strap"
+        ],
+        [
+          "quests",
+          "a mint green scroll with a small gold ribbon tied around it"
+        ],
+        [
+          "rebirth",
+          "a pink circular arrow loop around a tiny glowing star"
+        ],
+        [
+          "events",
+          "a coral gift box with a cream ribbon bow"
+        ],
+        [
+          "friends",
+          "two cute round fish-shaped badges side by side, sky blue and mint"
+        ],
+        [
+          "settings",
+          "a soft slate-grey rounded gear cog"
+        ]
+      ]
+    },
+    {
+      "id": "02_currency_status",
+      "title": "Currency & status icons",
+      "folder": "ui/status",
+      "note": "Small iconic objects used inside chips and toasts.",
+      "items": [
+        [
+          "coin",
+          "a shiny round gold coin with a small fish symbol embossed in the middle"
+        ],
+        [
+          "gem",
+          "a faceted lavender crystal gem"
+        ],
+        [
+          "xp_star",
+          "a chubby mint green star with a soft glow"
+        ],
+        [
+          "bobber",
+          "a classic round fishing bobber, coral red top and cream bottom, floating"
+        ],
+        [
+          "bite_alert",
+          "a round cream speech bubble containing a bold coral exclamation mark shape (a symbol, not a letter)"
+        ],
+        [
+          "lock",
+          "a cute rounded gold padlock"
+        ],
+        [
+          "treasure_chest",
+          "a small wooden treasure chest with gold trim, slightly open, glowing"
+        ],
+        [
+          "auto_timer",
+          "a mint green hourglass with sand flowing"
+        ],
+        [
+          "sell_bag",
+          "a small cream coin pouch tied with a string, with two gold coins peeking out"
+        ]
+      ]
+    },
+    {
+      "id": "03_fish_shallow",
+      "title": "Fish icons - Shallow water (0-50m)",
+      "folder": "fish",
+      "note": "Every fish in full side view facing LEFT, whole body visible, same size relationship (bigger fish fill the cell more).",
+      "items": [
+        [
+          "PebbleMinnow",
+          "a tiny grey-blue minnow with pebble-like speckles"
+        ],
+        [
+          "BubbleCarp",
+          "a round chubby orange-cream carp with little bubbles near its mouth"
+        ],
+        [
+          "ReedPerch",
+          "a green and gold striped perch with a spiky dorsal fin"
+        ],
+        [
+          "SunscaleSardine",
+          "a slim silver sardine with warm yellow sun-shine scales"
+        ],
+        [
+          "PearlClam",
+          "a pastel pink clam shell slightly open showing a glossy pearl"
+        ],
+        [
+          "LilyTrout",
+          "a pink-spotted trout with a tiny lily pad stuck on its back"
+        ],
+        [
+          "DewdropKoi",
+          "a white and sky-blue koi with water droplet patterns"
+        ],
+        [
+          "CrystalGuppy",
+          "a small translucent lavender guppy with a crystal-like fan tail"
+        ],
+        [
+          "MysteryFish",
+          "a plain soft slate-grey fish silhouette with a lighter question-mark-free belly, used for undiscovered fish"
+        ]
+      ]
+    },
+    {
+      "id": "04_fish_mid",
+      "title": "Fish icons - Mid water (50-200m)",
+      "folder": "fish",
+      "note": "Every fish in full side view facing LEFT, whole body visible.",
+      "items": [
+        [
+          "StripeBass",
+          "a sturdy olive bass with dark horizontal stripes"
+        ],
+        [
+          "TideSnapper",
+          "a coral red snapper with wave-shaped fin edges"
+        ],
+        [
+          "ArmoredCrab",
+          "a chunky steel-blue crab with rounded armored shell plates, front view"
+        ],
+        [
+          "SilverRay",
+          "a silver manta ray seen from above, wings spread"
+        ],
+        [
+          "RazorPike",
+          "a long sleek pike with a pointed snout and teal back"
+        ],
+        [
+          "MoonJelly",
+          "a glowing pale lavender jellyfish with a moon-shaped bell"
+        ],
+        [
+          "EmberTuna",
+          "a big tuna with orange ember-like glowing scales"
+        ],
+        [
+          "CoralSeahorse",
+          "a pink and gold seahorse decorated with tiny coral branches, side view"
+        ],
+        [
+          "LanternAngler",
+          "a cute dark-teal anglerfish with a warm glowing lantern lure"
+        ]
+      ]
+    },
+    {
+      "id": "05_fish_deep_mutations",
+      "title": "Deep fish + mutation badges",
+      "folder": "fish",
+      "note": "Cells 1-3 are fish in side view facing LEFT. Cells 4-7 are round emblem badges. Cells 8-9 are decorations.",
+      "items": [
+        [
+          "GlowEel",
+          "a long curvy eel with glowing cyan spots"
+        ],
+        [
+          "AncientCoelacanth",
+          "a big ancient lobe-finned fish, deep blue with pale spots"
+        ],
+        [
+          "NagaHatchling",
+          "a baby emerald-green sea serpent (naga) with a tiny gold crest, curled S-shape"
+        ],
+        [
+          "mut_glowing",
+          "a round mint badge with a glowing teal water drop symbol"
+        ],
+        [
+          "mut_sunforged",
+          "a round orange badge with a stylised sun symbol"
+        ],
+        [
+          "mut_golden",
+          "a round gold badge with a shining gold fish scale symbol"
+        ],
+        [
+          "mut_voidtouched",
+          "a round deep purple badge with a swirling dark mist symbol"
+        ],
+        [
+          "deco_seaweed",
+          "a cute bundle of mint green seaweed"
+        ],
+        [
+          "deco_bubbles",
+          "a cluster of shiny pastel blue bubbles"
+        ]
+      ]
+    },
+    {
+      "id": "06_rods_lines",
+      "title": "Rods (5) + fishing line spools (4)",
+      "folder": "equipment",
+      "note": "Rods drawn diagonally from bottom-left to top-right with a reel; spools drawn front view.",
+      "items": [
+        [
+          "DriftwoodRod",
+          "a simple fishing rod made of pale driftwood with a small wooden reel"
+        ],
+        [
+          "BambooRod",
+          "a green bamboo fishing rod with knotted joints"
+        ],
+        [
+          "CoralRod",
+          "a pink coral fishing rod with little shell decorations"
+        ],
+        [
+          "MoonsilverRod",
+          "a silver fishing rod with a crescent moon charm and soft blue glow"
+        ],
+        [
+          "NagaScaleRod",
+          "an emerald fishing rod covered in gold-edged scales, serpent head tip"
+        ],
+        [
+          "CottonLine",
+          "a spool of soft white cotton fishing line"
+        ],
+        [
+          "HempLine",
+          "a spool of tan hemp rope line"
+        ],
+        [
+          "NylonLine",
+          "a spool of shiny sky-blue nylon line"
+        ],
+        [
+          "SilkLine",
+          "a spool of glittering lavender spider-silk line with a tiny web pattern"
+        ]
+      ]
+    },
+    {
+      "id": "07_bags_baits",
+      "title": "Bags (5) + baits (4)",
+      "folder": "equipment",
+      "note": "Bags in 3/4 front view, baits as small cute objects.",
+      "items": [
+        [
+          "StarterPouch",
+          "a small cream cloth pouch with a drawstring"
+        ],
+        [
+          "WovenBasket",
+          "a woven straw fishing basket with a lid"
+        ],
+        [
+          "Crate",
+          "a wooden fish crate with rope handles"
+        ],
+        [
+          "Coolbox",
+          "a sky-blue ice cooler box with a white lid and ice cubes"
+        ],
+        [
+          "Hold",
+          "a sturdy ship's barrel with gold metal bands"
+        ],
+        [
+          "Worm",
+          "a cute pink earthworm wiggling"
+        ],
+        [
+          "Shrimp",
+          "a curled coral shrimp"
+        ],
+        [
+          "GlowGrub",
+          "a chubby glowing mint grub with soft light"
+        ],
+        [
+          "SummonBait",
+          "a mystical bait: a glowing purple orb wrapped in seaweed (for boss summoning)"
+        ]
+      ]
+    },
+    {
+      "id": "08_aura_orbs",
+      "title": "Aura orbs (Auras menu + roll reveal)",
+      "folder": "auras",
+      "note": "Each cell is a round glowing orb with a different magical element inside; same orb size in every cell.",
+      "items": [
+        [
+          "SparklingDew",
+          "a clear orb filled with sparkling water droplets, pale cyan"
+        ],
+        [
+          "NeonWave",
+          "an orb with a glowing neon blue ocean wave inside"
+        ],
+        [
+          "SolarFlare",
+          "an orb with a swirling orange-gold sun flame inside"
+        ],
+        [
+          "AbyssalShadow",
+          "an orb with dark purple mist and shadow tentacles inside"
+        ],
+        [
+          "DragonEmperor",
+          "an orb with a tiny golden eastern dragon coiled inside"
+        ],
+        [
+          "SerpentOfTheVoid",
+          "an orb with an iridescent rainbow crystal serpent (naga) coiled inside"
+        ],
+        [
+          "UnknownAura",
+          "an empty frosted glass orb with a faint grey swirl, mysterious"
+        ],
+        [
+          "fx_sparkle",
+          "a single four-pointed white-gold sparkle shape"
+        ],
+        [
+          "fx_glow",
+          "a soft round radial glow blob, pale cyan fading to white"
+        ]
+      ]
+    },
+    {
+      "id": "09_npc_portraits",
+      "title": "NPC portraits for the Dialogue box (bust, 3 NPCs x 3 expressions)",
+      "folder": "npc",
+      "note": "Chest-up bust portraits, front 3/4 view, blocky toy-like characters with rounded edges (Roblox-friendly proportions), same framing in every cell. Row 1 = Old Marlin, Row 2 = Sela, Row 3 = Pip; columns = neutral, happy, surprised.",
+      "items": [
+        [
+          "Marlin_neutral",
+          "Old Marlin, a kind old fish merchant with a white beard, cream fisherman hat and mint scarf, calm expression"
+        ],
+        [
+          "Marlin_happy",
+          "the same Old Marlin, big warm smile, eyes closed happily"
+        ],
+        [
+          "Marlin_surprised",
+          "the same Old Marlin, eyebrows raised, mouth open in surprise"
+        ],
+        [
+          "Sela_neutral",
+          "Sela, a young aura altar keeper with lavender hair, star hairpin and flowing lavender robe, calm expression"
+        ],
+        [
+          "Sela_happy",
+          "the same Sela, cheerful smile"
+        ],
+        [
+          "Sela_surprised",
+          "the same Sela, amazed wide eyes, hands near cheeks"
+        ],
+        [
+          "Pip_neutral",
+          "Pip, a small dock kid with a coral beanie, sky-blue raincoat and a tiny fishing net, curious expression"
+        ],
+        [
+          "Pip_happy",
+          "the same Pip, grinning with a thumbs up"
+        ],
+        [
+          "Pip_surprised",
+          "the same Pip, shocked open mouth, beanie popping up"
+        ]
+      ]
+    },
+    {
+      "id": "10_economy_status",
+      "title": "[P1] Economy currency & status icons (Pearls, Star Token, Streak, Boost...)",
+      "folder": "ui/status",
+      "note": "Small iconic objects used inside HUD chips, toasts and badges. Must read clearly at 32-48px.",
+      "items": [
+        [
+          "pearl",
+          "a single lustrous round pearl with a soft pink-lavender sheen, resting in a small open cream clam shell"
+        ],
+        [
+          "star_token",
+          "a chunky warm gold coin shaped like a five-pointed star with a small lavender gem in the centre"
+        ],
+        [
+          "hot_streak",
+          "a lively coral flame with a tiny cream fish silhouette inside it"
+        ],
+        [
+          "hot_price",
+          "a coral price tag with a gold string and a small sparkle on its corner"
+        ],
+        [
+          "boost",
+          "a warm gold lightning bolt inside a round mint badge"
+        ],
+        [
+          "offline_reward",
+          "a sleepy cream cloud with a small crescent moon and three tiny pearls floating under it"
+        ],
+        [
+          "enhance",
+          "a small slate-grey anvil with a gold sparkle burst on top"
+        ],
+        [
+          "mastery_up",
+          "a round mint badge with a bold chunky upward arrow shape and a tiny star"
+        ],
+        [
+          "pearl_pile",
+          "a small heap of lustrous pink-lavender pearls in a cream clam shell"
+        ]
+      ]
+    },
+    {
+      "id": "11_menu_icons_2",
+      "title": "[P1] New menu / hub tile icons (Aquarium, Mastery, Store, passes)",
+      "folder": "ui/icons",
+      "note": "Simple bold glyph-like objects that read clearly at 48px. Same style as sheet 01_menu_icons.",
+      "items": [
+        [
+          "aquarium",
+          "a small round glass fish tank with sky-blue water, one coral fish and a few bubbles"
+        ],
+        [
+          "mastery",
+          "a sky-blue open book with a glowing mint star rising from its pages"
+        ],
+        [
+          "store",
+          "a lavender shopping bag with a gold sparkle star on the front"
+        ],
+        [
+          "vip",
+          "a shiny warm gold crown with three round lavender gems"
+        ],
+        [
+          "infinite_bag",
+          "a plump gold fishing satchel with a mint infinity-loop charm hanging from the strap (a loop shape, not a letter)"
+        ],
+        [
+          "auto_pro",
+          "a mint green fishing reel with a small gold gear and soft speed lines"
+        ],
+        [
+          "extra_cast",
+          "three small fishing rods fanned out like a hand of cards, coral, mint and sky blue"
+        ],
+        [
+          "starter_pack",
+          "a coral gift box with a cream bow and a small fishing rod sticking out of the top"
+        ],
+        [
+          "daily_login",
+          "a cream tear-off calendar page with a gold star sticker"
+        ]
+      ]
+    },
+    {
+      "id": "12_shop_packs",
+      "title": "[P1] Robux store pack art (gems, coins, boosts, starter)",
+      "folder": "ui/shop",
+      "note": "Store product pictures. Bigger tiers look visibly bigger and richer than smaller tiers, same camera angle.",
+      "items": [
+        [
+          "gems_s",
+          "a small cluster of three faceted lavender gems"
+        ],
+        [
+          "gems_m",
+          "a cream pouch overflowing with faceted lavender gems"
+        ],
+        [
+          "gems_l",
+          "an open wooden treasure chest overflowing with faceted lavender gems, soft glow"
+        ],
+        [
+          "coins_s",
+          "a small stack of shiny gold fish coins"
+        ],
+        [
+          "coins_m",
+          "a cream sack overflowing with shiny gold fish coins"
+        ],
+        [
+          "coins_l",
+          "a big wooden crate overflowing with shiny gold fish coins, soft glow"
+        ],
+        [
+          "boost_coins",
+          "a shiny gold fish coin with a warm gold lightning bolt in front of it"
+        ],
+        [
+          "boost_pearls",
+          "a lustrous pink-lavender pearl with a mint lightning bolt in front of it"
+        ],
+        [
+          "starter_bundle",
+          "a coral gift box with the lid open showing a small fishing rod, two lavender gems and a worm bait tin"
+        ]
+      ]
+    },
+    {
+      "id": "13_fish_deep_2",
+      "title": "[P2] Deep & abyssal fish (cell 1 GloomSprat needed for C12; rest = future zones)",
+      "folder": "fish",
+      "note": "Fish seen from the side facing right, cute rounded shapes, same scale. Deep-sea fish have soft bioluminescent dots.",
+      "items": [
+        [
+          "GloomSprat",
+          "a small slim navy-blue fish with a single tiny glowing mint dot on its head, plain and common"
+        ],
+        [
+          "InkletSquid",
+          "a small round slate-blue squid with short curly tentacles and big friendly eyes"
+        ],
+        [
+          "PearlNautilus",
+          "a cream and coral striped nautilus shell with a lavender pearl glinting in its opening"
+        ],
+        [
+          "FrostRay",
+          "a pale sky-blue manta ray with frosty white wing tips"
+        ],
+        [
+          "LanternJellyfish",
+          "a round lavender jellyfish with a soft glowing gold core and short ribbon tentacles"
+        ],
+        [
+          "BoneCarp",
+          "a pale cream carp with a gentle skeleton pattern on its side, cute not scary"
+        ],
+        [
+          "StarlightEel",
+          "a long deep-purple eel speckled with tiny gold star dots"
+        ],
+        [
+          "AbyssLeviathan",
+          "a chunky dark teal sea serpent head and coil with glowing mint eyes, majestic"
+        ],
+        [
+          "VoidKoi",
+          "an elegant black and lavender koi with wisps of purple smoke trailing from its fins"
+        ]
+      ]
+    },
+    {
+      "id": "14_materials",
+      "title": "[P2] Enhance materials (Gear Enhance phase 2)",
+      "folder": "materials",
+      "note": "Crafting materials dropped from deep fishing. Small, gem-like, readable at 40px.",
+      "items": [
+        [
+          "abyss_scale",
+          "a single dark teal fish scale with a faint glowing mint edge"
+        ],
+        [
+          "glow_ink",
+          "a small round glass vial of glowing cyan ink with a cork"
+        ],
+        [
+          "coral_shard",
+          "a pink crystal coral shard"
+        ],
+        [
+          "naga_scale",
+          "an emerald green serpent scale with a gold rim"
+        ],
+        [
+          "void_essence",
+          "a swirl of purple and black mist inside a tiny teardrop bottle"
+        ],
+        [
+          "enhance_stone",
+          "a smooth round mint whetstone with a white sparkle"
+        ],
+        [
+          "moon_pearl",
+          "a large silver-blue pearl with a crescent moon reflection"
+        ],
+        [
+          "kelp_fiber",
+          "a neat coiled bundle of green kelp rope"
+        ],
+        [
+          "star_shard",
+          "a small jagged warm gold crystal shard shaped like a broken star"
+        ]
+      ]
+    },
+    {
+      "id": "15_aura_orbs_2",
+      "title": "[P2] New aura orbs for future banners (gacha content)",
+      "folder": "auras",
+      "note": "Same orb style as sheet 08_aura_orbs: a glowing orb with the aura motif swirling inside, no character.",
+      "items": [
+        [
+          "TidalBloom",
+          "a mint orb with a small water flower blooming inside"
+        ],
+        [
+          "CoralHeart",
+          "a coral pink orb with a heart-shaped coral branch glowing inside"
+        ],
+        [
+          "MoonlitRipple",
+          "a deep blue orb with a crescent moon over gentle silver ripples inside"
+        ],
+        [
+          "KelpWhisper",
+          "a green orb with swaying kelp strands and tiny bubbles inside"
+        ],
+        [
+          "StormCurrent",
+          "a sky-blue orb with a swirling whirlpool and small gold lightning sparks inside"
+        ],
+        [
+          "FrostPearl",
+          "a pale icy orb with a single white pearl surrounded by snowflake sparkles"
+        ],
+        [
+          "NebulaKoi",
+          "a lavender and pink galaxy orb with a small glowing koi swimming inside"
+        ],
+        [
+          "LotusNaga",
+          "an emerald orb with a coiled naga serpent around a pink lotus inside, majestic"
+        ],
+        [
+          "CelestialLeviathan",
+          "a rainbow prismatic orb with a crystal sea serpent coiling inside, the most dazzling of the set"
+        ]
+      ]
+    },
+    {
+      "id": "16_equipment_2",
+      "title": "[P3] Equipment for later tiers + Starter Pack rod",
+      "folder": "equipment",
+      "note": "Same look as sheets 06_rods_lines and 07_bags_baits: item shown diagonally, same scale.",
+      "items": [
+        [
+          "SweetheartRod",
+          "a cute coral and cream candy-striped fishing rod with a small heart-shaped bobber"
+        ],
+        [
+          "AbyssRod",
+          "a dark teal fishing rod with glowing mint runes along the handle"
+        ],
+        [
+          "CelestialRod",
+          "an elegant white and gold fishing rod with a small star at the tip"
+        ],
+        [
+          "AbyssLine",
+          "a spool of dark teal glowing fishing line"
+        ],
+        [
+          "StarLine",
+          "a spool of shimmering gold fishing line with tiny stars"
+        ],
+        [
+          "BottomlessBag",
+          "a lavender satchel with a swirling galaxy pattern inside its open flap"
+        ],
+        [
+          "PearlBait",
+          "a small tin of lustrous pearl beads used as bait"
+        ],
+        [
+          "SquidBait",
+          "a small jar of slate-blue squid bait pieces"
+        ],
+        [
+          "StormBait",
+          "a small glass jar with a tiny glowing storm cloud inside"
+        ]
+      ]
+    },
+    {
+      "id": "17_inventory_tabs",
+      "title": "Inventory side-tab icons (+ Bag Upgrade)",
+      "folder": "ui/tabs",
+      "note": "Inventory v2 icon rail. Must read clearly at 36px: one bold simple object each, strong silhouette, very little detail.",
+      "items": [
+        [
+          "all",
+          "a small cozy wooden treasure crate overflowing with a fish, a coin and a little orb, all four items tiny and simple"
+        ],
+        [
+          "fish",
+          "a single plump sky-blue cartoon fish facing left with a tiny coral fin"
+        ],
+        [
+          "rods",
+          "a short chunky fishing rod drawn diagonally with a gold reel and a curled line"
+        ],
+        [
+          "lines",
+          "a round spool of mint fishing line with the loose end curling out"
+        ],
+        [
+          "auras",
+          "a glowing lavender magic orb with a small sparkle star inside"
+        ],
+        [
+          "baits",
+          "a small cream tin of bait with a pink worm peeking over the rim"
+        ],
+        [
+          "treasure",
+          "a small coral treasure chest with gold trim, lid slightly open with a soft glow"
+        ],
+        [
+          "materials",
+          "three stacked crafting materials: a sky-blue crystal shard, a mint fish scale and a small pearl"
+        ],
+        [
+          "bag_upgrade",
+          "a plump gold fishing satchel with a big mint up-arrow badge on its front"
+        ]
+      ]
+    },
+    {
+      "id": "18_mastery_icons",
+      "title": "Mastery track icons (full-colour set)",
+      "folder": "ui/mastery",
+      "note": "Replaces the white vector icons on Mastery cards. One matching set; must read clearly at 46px.",
+      "items": [
+        [
+          "luck",
+          "a lucky mint four-leaf clover with a tiny gold sparkle"
+        ],
+        [
+          "catch_bar",
+          "a short vertical glass tube gauge with a glowing mint bar segment inside and a tiny fish silhouette"
+        ],
+        [
+          "reel_power",
+          "a chunky gold fishing reel with a small coral handle and motion swoosh"
+        ],
+        [
+          "auto_wait",
+          "a round sky-blue stopwatch with a small fish-shaped hand and a mint fast-forward arrow"
+        ],
+        [
+          "pearl_rate",
+          "a pink-white glossy pearl resting in a small open lavender clam with an up sparkle"
+        ],
+        [
+          "offline_cap",
+          "a cozy crescent moon with a small sleeping fishing bobber hanging from it"
+        ],
+        [
+          "sell_mult",
+          "a small cream coin pouch with a gold coin and a coral x2 shaped ribbon tag (no readable text, just a ribbon)"
+        ],
+        [
+          "locked",
+          "a soft slate-grey rounded padlock with a small mint keyhole glow"
+        ],
+        [
+          "total_level",
+          "a gold star medal with a lavender ribbon and a small up-arrow on the star"
+        ]
+      ]
+    },
+    {
+      "id": "19_shop_packs_2",
+      "title": "[P2] Robux bundle pack art (starter-style offers, 9 new packs)",
+      "folder": "ui/shop",
+      "note": "Bundle pictures for store offers. Each is a small themed bundle that reads as a gift pack at 150px; richer packs look bigger and glow slightly more. Same camera angle as the starter bundle.",
+      "items": [
+        [
+          "pack_angler",
+          "a cream tackle satchel with a gold buckle, a mint fishing rod poking out and a small coral worm bait tin beside it"
+        ],
+        [
+          "pack_aura_roller",
+          "a lavender glowing magic orb on a small gold stand with three faceted gems floating around it and a soft sparkle"
+        ],
+        [
+          "pack_lucky",
+          "a mint four-leaf clover charm on a gold chain lying on top of a small cream coin pouch"
+        ],
+        [
+          "pack_deep_sea",
+          "a navy-blue diving helmet with a round glass window, a coral lantern fish charm and two lavender pearls beside it"
+        ],
+        [
+          "pack_pearl_boost",
+          "a lustrous pink-lavender pearl in an open cream clam, with a mint lightning bolt and a tiny gold up arrow"
+        ],
+        [
+          "pack_aquarium",
+          "a small round glass fish bowl with a cute sky-blue fish, a mint seaweed sprig and a few gold pebbles"
+        ],
+        [
+          "pack_naga_tide",
+          "a coiled teal sea dragon figurine with a gold crest curled around a lavender wave crystal"
+        ],
+        [
+          "pack_mastery",
+          "a gold star medal with a mint ribbon on top of a stack of three small coral books"
+        ],
+        [
+          "pack_legend_chest",
+          "a big gold-trimmed wooden treasure chest with a lavender gem on the lid, slightly open with a warm glow and two sparkles"
+        ]
+      ]
+    }
+  ]
+}

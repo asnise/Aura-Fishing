@@ -1,0 +1,51 @@
+﻿"Live Content - daily login, quests, hot fish, events",,,,,
+Time-based content tables. Rewards and weights are inputs; expected values are formulas.,,,,,
+Daily Login (7 days),,,,,
+Day,Reward kind,Item id,Amount,,
+1,Coins,,1000,,
+2,Bait,Worm,15,,
+3,Gems,,15,,
+4,Bait,GlowGrub,10,,
+5,Pearls,,500,,
+6,Bait,SquidBait,10,,
+7,Gems,,50,,
+Weekly totals by kind,,,,,
+Coins,1000,,,,
+Gems,65,,,,
+Pearls,500,,,,
+Bait,35,,,,
+,,,,,
+,,,,,
+"Quests (3 random per day, weighted)",,,,,
+Quest,Kind,Target,Min level,Weight,Pick chance (all levels)
+Catch25,Catch,25,1,10,0.147059
+Catch60,Catch,60,10,5,0.073529
+Epic1,CatchRarity,1,8,4,0.058824
+Manual15,CatchManual,15,1,10,0.147059
+Mutated2,CatchMutated,2,5,5,0.073529
+Pull3,PullAura,3,1,6,0.088235
+Rare3,CatchRarity,3,1,8,0.117647
+Sell30,SellFish,30,1,8,0.117647
+Streak10,Streak,10,8,4,0.058824
+Streak5,Streak,5,1,8,0.117647
+,,,,,
+Hot fish (Merchant),,,,,
+Rotation every (min),60,,,,
+Species per rotation,1-2,,,,
+Multipliers,2 / 2.5 / 3,,,,
+Eligible rarities,"Common, Uncommon, Rare, Epic",,,,
+,,,,,
+Naga Tide event,,,,,
+Duration (sec) / Luck bonus / crowd bonus per extra angler / crowd cap,300,0.5,0.25,1,
+,,,,,
+Other anglers,Crowd factor,NagaHatchling chance,CoralSeahorse chance,,
+0,1,0.004,0.015,,
+1,1.25,0.005,0.01875,,
+2,1.5,0.006,0.0225,,
+3,1.75,0.007,0.02625,,
+4,2,0.008,0.03,,
+5,2,0.008,0.03,,
+6,2,0.008,0.03,,
+7,2,0.008,0.03,,
+,,,,,
+Hotspot: Luck bonus 0.5 for a manual cast inside; each spot allows 2 casts; up to 4 per server (see Constants).,,,,,

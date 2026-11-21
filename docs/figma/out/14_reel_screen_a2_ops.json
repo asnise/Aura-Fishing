@@ -1,0 +1,220 @@
+[
+ {
+  "replaceId": "3493:22389",
+  "tree": {
+   "name": "Reel Minigame",
+   "w": 140,
+   "h": 394,
+   "x": 570,
+   "y": 110,
+   "radius": 20,
+   "fill": {
+    "var": "cozy/panel"
+   },
+   "stroke": {
+    "var": "cozy/track"
+   },
+   "strokeW": 2,
+   "effects": [
+    {
+     "color": "3D4B5C",
+     "a": 0.1,
+     "y": 6,
+     "blur": 18
+    }
+   ],
+   "children": [
+    {
+     "name": "Header",
+     "layout": "H",
+     "gap": 8,
+     "cross": "CENTER",
+     "x": 18,
+     "y": 18,
+     "w": 104,
+     "children": [
+      {
+       "type": "INSTANCE",
+       "ref": "3487:4328",
+       "variant": "Rarity=Epic",
+       "name": "Tag Epic"
+      },
+      {
+       "type": "TEXT",
+       "text": "0:12",
+       "textStyle": "Aura Fishing/Heading",
+       "color": {
+        "var": "cozy/subtext"
+       },
+       "name": "Timer"
+      }
+     ]
+    },
+    {
+     "name": "Water Tube",
+     "w": 25,
+     "h": 300,
+     "x": 30,
+     "y": 52,
+     "radius": 10,
+     "clip": true,
+     "fill": {
+      "grad": [
+       "BEE6FA",
+       "4C8FC7"
+      ],
+      "angle": 90
+     },
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 3,
+     "children": [
+      {
+       "type": "ELLIPSE",
+       "name": "Bubble",
+       "w": 10,
+       "h": 10,
+       "x": 5,
+       "y": 45,
+       "fill": {
+        "hex": "FFFFFF",
+        "opacity": 0.5
+       }
+      },
+      {
+       "type": "ELLIPSE",
+       "name": "Bubble",
+       "w": 7,
+       "h": 7,
+       "x": 18,
+       "y": 90,
+       "fill": {
+        "hex": "FFFFFF",
+        "opacity": 0.5
+       }
+      },
+      {
+       "type": "ELLIPSE",
+       "name": "Bubble",
+       "w": 12,
+       "h": 12,
+       "x": 9,
+       "y": 165,
+       "fill": {
+        "hex": "FFFFFF",
+        "opacity": 0.5
+       }
+      },
+      {
+       "type": "ELLIPSE",
+       "name": "Bubble",
+       "w": 8,
+       "h": 8,
+       "x": 19,
+       "y": 225,
+       "fill": {
+        "hex": "FFFFFF",
+        "opacity": 0.5
+       }
+      },
+      {
+       "type": "ELLIPSE",
+       "name": "Bubble",
+       "w": 6,
+       "h": 6,
+       "x": 6,
+       "y": 264,
+       "fill": {
+        "hex": "FFFFFF",
+        "opacity": 0.5
+       }
+      }
+     ]
+    },
+    {
+     "name": "Catch Bar",
+     "w": 31,
+     "h": 84,
+     "x": 27,
+     "y": 202,
+     "radius": 9,
+     "fill": {
+      "hex": "7FD3B0",
+      "opacity": 0.85
+     },
+     "stroke": "FFFFFF",
+     "strokeW": 3
+    },
+    {
+     "type": "RECT",
+     "name": "Img fish/MysteryFish",
+     "w": 39,
+     "h": 39,
+     "x": 23,
+     "y": 224
+    },
+    {
+     "name": "Reel Tube",
+     "w": 25,
+     "h": 300,
+     "x": 86,
+     "y": 52,
+     "radius": 10,
+     "clip": true,
+     "fill": {
+      "var": "cozy/track"
+     },
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 3,
+     "children": [
+      {
+       "type": "RECT",
+       "name": "Fill",
+       "w": 25,
+       "h": 180,
+       "x": 0,
+       "y": 120,
+       "fill": {
+        "grad": [
+         "FFD45C",
+         "F2B544"
+        ],
+        "angle": 90
+       }
+      }
+     ]
+    },
+    {
+     "type": "RECT",
+     "name": "Img ui/status/bobber",
+     "w": 24,
+     "h": 24,
+     "x": 86,
+     "y": 160
+    },
+    {
+     "name": "Hint",
+     "layout": "H",
+     "main": "CENTER",
+     "x": 0,
+     "y": 362,
+     "w": 140,
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "HOLD TO REEL",
+       "textStyle": "Aura Fishing/Caption",
+       "color": {
+        "var": "cozy/subtext"
+       },
+       "name": "Label"
+      }
+     ]
+    }
+   ]
+  }
+ }
+]

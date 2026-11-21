@@ -1,0 +1,884 @@
+{
+ "parentId": "3491:8201",
+ "replaceName": "Main Menu",
+ "tree": {
+  "name": "Main Menu",
+  "w": 440,
+  "h": 614,
+  "x": 790,
+  "y": 40,
+  "children": [
+   {
+    "name": "Btn Close",
+    "w": 66,
+    "h": 74,
+    "x": 362,
+    "y": 104,
+    "radius": 20,
+    "fill": {
+     "hex": "FFFFFF",
+     "opacity": 0.6
+    },
+    "stroke": "FFFFFF",
+    "strokeW": 1.5,
+    "layout": "H",
+    "pad": [
+     0,
+     0,
+     0,
+     22
+    ],
+    "main": "CENTER",
+    "cross": "CENTER",
+    "children": [
+     {
+      "type": "SVG",
+      "svg": "<svg width=\"30\" height=\"30\" viewBox=\"0 0 30 30\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 8l14 14M22 8 8 22\" stroke=\"#7A8A99\" stroke-width=\"5\" stroke-linecap=\"round\"/></svg>",
+      "w": 26,
+      "h": 26,
+      "name": "Icon"
+     }
+    ]
+   },
+   {
+    "name": "Glass Frame",
+    "w": 392,
+    "h": 612,
+    "x": 0,
+    "y": 0,
+    "radius": 48,
+    "fill": {
+     "hex": "FFFFFF",
+     "opacity": 0.55
+    },
+    "stroke": "FFFFFF",
+    "strokeW": 1.5,
+    "effects": [
+     {
+      "color": "3D4B5C",
+      "a": 0.16,
+      "y": 10,
+      "blur": 30
+     }
+    ],
+    "children": [
+     {
+      "name": "Phone",
+      "w": 364,
+      "h": 584,
+      "x": 14,
+      "y": 14,
+      "radius": 36,
+      "clip": true,
+      "fill": {
+       "var": "cozy/panel"
+      },
+      "children": [
+       {
+        "name": "Header",
+        "w": 364,
+        "h": 160,
+        "x": 0,
+        "y": 0,
+        "fill": {
+         "grad": [
+          "A9DCF7",
+          "7FC3EE"
+         ],
+         "angle": 90
+        },
+        "children": [
+         {
+          "type": "ELLIPSE",
+          "name": "Bubble",
+          "w": 10,
+          "h": 10,
+          "x": 118,
+          "y": 18,
+          "fill": {
+           "hex": "FFFFFF",
+           "opacity": 0.35
+          }
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Bubble",
+          "w": 6,
+          "h": 6,
+          "x": 250,
+          "y": 14,
+          "fill": {
+           "hex": "FFFFFF",
+           "opacity": 0.35
+          }
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Bubble",
+          "w": 14,
+          "h": 14,
+          "x": 330,
+          "y": 110,
+          "fill": {
+           "hex": "FFFFFF",
+           "opacity": 0.35
+          }
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Bubble",
+          "w": 8,
+          "h": 8,
+          "x": 22,
+          "y": 124,
+          "fill": {
+           "hex": "FFFFFF",
+           "opacity": 0.35
+          }
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Bubble",
+          "w": 5,
+          "h": 5,
+          "x": 300,
+          "y": 84,
+          "fill": {
+           "hex": "FFFFFF",
+           "opacity": 0.35
+          }
+         },
+         {
+          "name": "Avatar",
+          "w": 84,
+          "h": 84,
+          "x": 22,
+          "y": 28,
+          "radius": 999,
+          "fill": "FFF8EC",
+          "clip": true,
+          "stroke": "FFFFFF",
+          "strokeW": 4,
+          "children": [
+           {
+            "type": "RECT",
+            "name": "Img npc/Pip_happy",
+            "w": 100,
+            "h": 100,
+            "x": -8,
+            "y": -2
+           }
+          ]
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Avatar Dot",
+          "w": 16,
+          "h": 16,
+          "x": 90,
+          "y": 30,
+          "fill": {
+           "var": "cozy/danger"
+          },
+          "stroke": "FFFFFF",
+          "strokeW": 3
+         },
+         {
+          "type": "TEXT",
+          "name": "Clock",
+          "text": "16:07",
+          "font": {
+           "family": "Fredoka One",
+           "style": "Regular"
+          },
+          "size": 58,
+          "color": "FFFFFF",
+          "x": 130,
+          "y": 22
+         },
+         {
+          "name": "Day Phase",
+          "layout": "H",
+          "gap": 8,
+          "cross": "CENTER",
+          "x": 138,
+          "y": 96,
+          "children": [
+           {
+            "type": "SVG",
+            "svg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 18 18\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M12 2a7 7 0 1 0 4 12A6 6 0 0 1 12 2z\" fill=\"#FFFFFF\"/></svg>",
+            "w": 16,
+            "h": 16,
+            "name": "Phase Night"
+           },
+           {
+            "type": "SVG",
+            "svg": "<svg width=\"20\" height=\"18\" viewBox=\"0 0 20 18\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M4 14a6 6 0 0 1 12 0z\" fill=\"#FFFFFF\"/><rect x=\"1\" y=\"14\" width=\"18\" height=\"2.4\" rx=\"1.2\" fill=\"#FFFFFF\"/><rect x=\"9\" y=\"1\" width=\"2.4\" height=\"4\" rx=\"1.2\" fill=\"#FFFFFF\"/><rect x=\"2\" y=\"6\" width=\"2.4\" height=\"4\" rx=\"1.2\" fill=\"#FFFFFF\" transform=\"rotate(-45 3 8)\"/><rect x=\"16\" y=\"6\" width=\"2.4\" height=\"4\" rx=\"1.2\" fill=\"#FFFFFF\" transform=\"rotate(45 17 8)\"/></svg>",
+            "w": 18,
+            "h": 16,
+            "name": "Phase Dawn"
+           },
+           {
+            "name": "Phase Day (now)",
+            "layout": "H",
+            "pad": [
+             3,
+             10,
+             3,
+             10
+            ],
+            "radius": 999,
+            "fill": "FFFFFF",
+            "children": [
+             {
+              "type": "SVG",
+              "svg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 18 18\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"9\" cy=\"9\" r=\"5\" fill=\"#6BB3DE\"/><circle cx=\"9\" cy=\"9\" r=\"8\" stroke=\"#6BB3DE\" stroke-width=\"1.6\" fill=\"none\"/></svg>",
+              "w": 16,
+              "h": 16,
+              "name": "Icon"
+             }
+            ]
+           },
+           {
+            "type": "SVG",
+            "svg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 18 18\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M12 2a7 7 0 1 0 4 12A6 6 0 0 1 12 2z\" fill=\"#FFFFFF\"/></svg>",
+            "w": 16,
+            "h": 16,
+            "name": "Phase Dusk",
+            "opacity": 0.75
+           }
+          ]
+         },
+         {
+          "type": "SVG",
+          "svg": "<svg width=\"64\" height=\"64\" viewBox=\"0 0 64 64\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"29\" y=\"2\" width=\"6\" height=\"12\" rx=\"3\" fill=\"#FFD45C\" transform=\"rotate(0 32 32)\"/><rect x=\"29\" y=\"2\" width=\"6\" height=\"12\" rx=\"3\" fill=\"#FFD45C\" transform=\"rotate(45 32 32)\"/><rect x=\"29\" y=\"2\" width=\"6\" height=\"12\" rx=\"3\" fill=\"#FFD45C\" transform=\"rotate(90 32 32)\"/><rect x=\"29\" y=\"2\" width=\"6\" height=\"12\" rx=\"3\" fill=\"#FFD45C\" transform=\"rotate(135 32 32)\"/><rect x=\"29\" y=\"2\" width=\"6\" height=\"12\" rx=\"3\" fill=\"#FFD45C\" transform=\"rotate(180 32 32)\"/><rect x=\"29\" y=\"2\" width=\"6\" height=\"12\" rx=\"3\" fill=\"#FFD45C\" transform=\"rotate(225 32 32)\"/><rect x=\"29\" y=\"2\" width=\"6\" height=\"12\" rx=\"3\" fill=\"#FFD45C\" transform=\"rotate(270 32 32)\"/><rect x=\"29\" y=\"2\" width=\"6\" height=\"12\" rx=\"3\" fill=\"#FFD45C\" transform=\"rotate(315 32 32)\"/><circle cx=\"32\" cy=\"32\" r=\"15\" fill=\"#FFC93D\"/><circle cx=\"27\" cy=\"27\" r=\"5\" fill=\"#FFE59A\"/></svg>",
+          "w": 66,
+          "h": 66,
+          "name": "Weather Sun",
+          "x": 278,
+          "y": 26
+         },
+         {
+          "type": "SVG",
+          "svg": "<svg width=\"364\" height=\"26\" viewBox=\"0 0 364 26\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 12 Q13 0 26 12 Q39 22 52 12 Q65 0 78 12 Q91 22 104 12 Q117 0 130 12 Q143 22 156 12 Q169 0 182 12 Q195 22 208 12 Q221 0 234 12 Q247 22 260 12 Q273 0 286 12 Q299 22 312 12 Q325 0 338 12 Q351 22 364 12 V26 H0 Z\" fill=\"#FFF8EC\"/></svg>",
+          "w": 364,
+          "h": 26,
+          "name": "Wave",
+          "x": 0,
+          "y": 140
+         }
+        ]
+       },
+       {
+        "name": "Grid",
+        "layout": "H",
+        "wrap": true,
+        "gap": 4,
+        "rowGap": 14,
+        "w": 336,
+        "x": 14,
+        "y": 178,
+        "main": "CENTER",
+        "children": [
+         {
+          "name": "Btn Shop",
+          "layout": "V",
+          "gap": 2,
+          "w": 108,
+          "cross": "CENTER",
+          "children": [
+           {
+            "name": "Holder",
+            "w": 108,
+            "h": 96,
+            "children": [
+             {
+              "name": "Circle",
+              "w": 86,
+              "h": 86,
+              "x": 11,
+              "y": 6,
+              "radius": 999,
+              "fill": "FFDCCF",
+              "layout": "H",
+              "main": "CENTER",
+              "cross": "CENTER",
+              "stroke": "FFFFFF",
+              "strokeW": 4,
+              "effects": [
+               {
+                "color": "3D4B5C",
+                "a": 0.1,
+                "y": 3,
+                "blur": 6
+               }
+              ],
+              "children": [
+               {
+                "type": "RECT",
+                "name": "Img ui/icons/shop",
+                "w": 64,
+                "h": 64
+               }
+              ]
+             },
+             {
+              "name": "Badge",
+              "layout": "H",
+              "pad": [
+               3,
+               10,
+               3,
+               10
+              ],
+              "radius": 999,
+              "fill": {
+               "var": "cozy/danger"
+              },
+              "children": [
+               {
+                "type": "TEXT",
+                "text": "SALE",
+                "textStyle": "Aura Fishing/Caption",
+                "color": {
+                 "var": "cozy/on-accent"
+                },
+                "name": "Label"
+               }
+              ],
+              "x": 24,
+              "y": 0
+             }
+            ]
+           },
+           {
+            "type": "TEXT",
+            "text": "Shop",
+            "textStyle": "Aura Fishing/Small",
+            "color": {
+             "var": "cozy/text"
+            },
+            "name": "Label",
+            "align": "CENTER",
+            "w": 108
+           }
+          ]
+         },
+         {
+          "name": "Btn Auras",
+          "layout": "V",
+          "gap": 2,
+          "w": 108,
+          "cross": "CENTER",
+          "children": [
+           {
+            "name": "Holder",
+            "w": 108,
+            "h": 96,
+            "children": [
+             {
+              "name": "Circle",
+              "w": 86,
+              "h": 86,
+              "x": 11,
+              "y": 6,
+              "radius": 999,
+              "fill": "E5DBFA",
+              "layout": "H",
+              "main": "CENTER",
+              "cross": "CENTER",
+              "stroke": "FFFFFF",
+              "strokeW": 4,
+              "effects": [
+               {
+                "color": "3D4B5C",
+                "a": 0.1,
+                "y": 3,
+                "blur": 6
+               }
+              ],
+              "children": [
+               {
+                "type": "RECT",
+                "name": "Img ui/icons/auras",
+                "w": 64,
+                "h": 64
+               }
+              ]
+             },
+             {
+              "type": "ELLIPSE",
+              "name": "Dot",
+              "w": 16,
+              "h": 16,
+              "x": 84,
+              "y": 6,
+              "fill": {
+               "var": "cozy/danger"
+              },
+              "stroke": "FFFFFF",
+              "strokeW": 3
+             }
+            ]
+           },
+           {
+            "type": "TEXT",
+            "text": "Auras",
+            "textStyle": "Aura Fishing/Small",
+            "color": {
+             "var": "cozy/text"
+            },
+            "name": "Label",
+            "align": "CENTER",
+            "w": 108
+           }
+          ]
+         },
+         {
+          "name": "Btn Fishdex",
+          "layout": "V",
+          "gap": 2,
+          "w": 108,
+          "cross": "CENTER",
+          "children": [
+           {
+            "name": "Holder",
+            "w": 108,
+            "h": 96,
+            "children": [
+             {
+              "name": "Circle",
+              "w": 86,
+              "h": 86,
+              "x": 11,
+              "y": 6,
+              "radius": 999,
+              "fill": "D3ECFA",
+              "layout": "H",
+              "main": "CENTER",
+              "cross": "CENTER",
+              "stroke": "FFFFFF",
+              "strokeW": 4,
+              "effects": [
+               {
+                "color": "3D4B5C",
+                "a": 0.1,
+                "y": 3,
+                "blur": 6
+               }
+              ],
+              "children": [
+               {
+                "type": "RECT",
+                "name": "Img ui/icons/fishdex",
+                "w": 64,
+                "h": 64
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "type": "TEXT",
+            "text": "Fishdex",
+            "textStyle": "Aura Fishing/Small",
+            "color": {
+             "var": "cozy/text"
+            },
+            "name": "Label",
+            "align": "CENTER",
+            "w": 108
+           }
+          ]
+         },
+         {
+          "name": "Btn Bag",
+          "layout": "V",
+          "gap": 2,
+          "w": 108,
+          "cross": "CENTER",
+          "children": [
+           {
+            "name": "Holder",
+            "w": 108,
+            "h": 96,
+            "children": [
+             {
+              "name": "Circle",
+              "w": 86,
+              "h": 86,
+              "x": 11,
+              "y": 6,
+              "radius": 999,
+              "fill": "FBEAB8",
+              "layout": "H",
+              "main": "CENTER",
+              "cross": "CENTER",
+              "stroke": "FFFFFF",
+              "strokeW": 4,
+              "effects": [
+               {
+                "color": "3D4B5C",
+                "a": 0.1,
+                "y": 3,
+                "blur": 6
+               }
+              ],
+              "children": [
+               {
+                "type": "RECT",
+                "name": "Img ui/icons/bag",
+                "w": 64,
+                "h": 64
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "type": "TEXT",
+            "text": "Bag",
+            "textStyle": "Aura Fishing/Small",
+            "color": {
+             "var": "cozy/text"
+            },
+            "name": "Label",
+            "align": "CENTER",
+            "w": 108
+           }
+          ]
+         },
+         {
+          "name": "Btn Quests",
+          "layout": "V",
+          "gap": 2,
+          "w": 108,
+          "cross": "CENTER",
+          "children": [
+           {
+            "name": "Holder",
+            "w": 108,
+            "h": 96,
+            "children": [
+             {
+              "name": "Circle",
+              "w": 86,
+              "h": 86,
+              "x": 11,
+              "y": 6,
+              "radius": 999,
+              "fill": "D2F0E2",
+              "layout": "H",
+              "main": "CENTER",
+              "cross": "CENTER",
+              "stroke": "FFFFFF",
+              "strokeW": 4,
+              "effects": [
+               {
+                "color": "3D4B5C",
+                "a": 0.1,
+                "y": 3,
+                "blur": 6
+               }
+              ],
+              "children": [
+               {
+                "type": "RECT",
+                "name": "Img ui/icons/quests",
+                "w": 64,
+                "h": 64
+               }
+              ]
+             },
+             {
+              "type": "ELLIPSE",
+              "name": "Dot",
+              "w": 16,
+              "h": 16,
+              "x": 84,
+              "y": 6,
+              "fill": {
+               "var": "cozy/danger"
+              },
+              "stroke": "FFFFFF",
+              "strokeW": 3
+             }
+            ]
+           },
+           {
+            "type": "TEXT",
+            "text": "Quests",
+            "textStyle": "Aura Fishing/Small",
+            "color": {
+             "var": "cozy/text"
+            },
+            "name": "Label",
+            "align": "CENTER",
+            "w": 108
+           }
+          ]
+         },
+         {
+          "name": "Btn Rebirth",
+          "layout": "V",
+          "gap": 2,
+          "w": 108,
+          "cross": "CENTER",
+          "children": [
+           {
+            "name": "Holder",
+            "w": 108,
+            "h": 96,
+            "children": [
+             {
+              "name": "Circle",
+              "w": 86,
+              "h": 86,
+              "x": 11,
+              "y": 6,
+              "radius": 999,
+              "fill": "FBD8E2",
+              "layout": "H",
+              "main": "CENTER",
+              "cross": "CENTER",
+              "stroke": "FFFFFF",
+              "strokeW": 4,
+              "effects": [
+               {
+                "color": "3D4B5C",
+                "a": 0.1,
+                "y": 3,
+                "blur": 6
+               }
+              ],
+              "children": [
+               {
+                "type": "RECT",
+                "name": "Img ui/icons/rebirth",
+                "w": 64,
+                "h": 64
+               }
+              ]
+             },
+             {
+              "name": "Badge",
+              "layout": "H",
+              "pad": [
+               3,
+               10,
+               3,
+               10
+              ],
+              "radius": 999,
+              "fill": {
+               "var": "cozy/danger"
+              },
+              "children": [
+               {
+                "type": "TEXT",
+                "text": "Lv.100",
+                "textStyle": "Aura Fishing/Caption",
+                "color": {
+                 "var": "cozy/on-accent"
+                },
+                "name": "Label"
+               }
+              ],
+              "x": 24,
+              "y": 0
+             }
+            ]
+           },
+           {
+            "type": "TEXT",
+            "text": "Rebirth",
+            "textStyle": "Aura Fishing/Small",
+            "color": {
+             "var": "cozy/text"
+            },
+            "name": "Label",
+            "align": "CENTER",
+            "w": 108
+           }
+          ]
+         },
+         {
+          "name": "Btn Events",
+          "layout": "V",
+          "gap": 2,
+          "w": 108,
+          "cross": "CENTER",
+          "children": [
+           {
+            "name": "Holder",
+            "w": 108,
+            "h": 96,
+            "children": [
+             {
+              "name": "Circle",
+              "w": 86,
+              "h": 86,
+              "x": 11,
+              "y": 6,
+              "radius": 999,
+              "fill": "FFDCCF",
+              "layout": "H",
+              "main": "CENTER",
+              "cross": "CENTER",
+              "stroke": "FFFFFF",
+              "strokeW": 4,
+              "effects": [
+               {
+                "color": "3D4B5C",
+                "a": 0.1,
+                "y": 3,
+                "blur": 6
+               }
+              ],
+              "children": [
+               {
+                "type": "RECT",
+                "name": "Img ui/icons/events",
+                "w": 64,
+                "h": 64
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "type": "TEXT",
+            "text": "Events",
+            "textStyle": "Aura Fishing/Small",
+            "color": {
+             "var": "cozy/text"
+            },
+            "name": "Label",
+            "align": "CENTER",
+            "w": 108
+           }
+          ]
+         },
+         {
+          "name": "Btn Friends",
+          "layout": "V",
+          "gap": 2,
+          "w": 108,
+          "cross": "CENTER",
+          "children": [
+           {
+            "name": "Holder",
+            "w": 108,
+            "h": 96,
+            "children": [
+             {
+              "name": "Circle",
+              "w": 86,
+              "h": 86,
+              "x": 11,
+              "y": 6,
+              "radius": 999,
+              "fill": "D3ECFA",
+              "layout": "H",
+              "main": "CENTER",
+              "cross": "CENTER",
+              "stroke": "FFFFFF",
+              "strokeW": 4,
+              "effects": [
+               {
+                "color": "3D4B5C",
+                "a": 0.1,
+                "y": 3,
+                "blur": 6
+               }
+              ],
+              "children": [
+               {
+                "type": "RECT",
+                "name": "Img ui/icons/friends",
+                "w": 64,
+                "h": 64
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "type": "TEXT",
+            "text": "Friends",
+            "textStyle": "Aura Fishing/Small",
+            "color": {
+             "var": "cozy/text"
+            },
+            "name": "Label",
+            "align": "CENTER",
+            "w": 108
+           }
+          ]
+         },
+         {
+          "name": "Btn Settings",
+          "layout": "V",
+          "gap": 2,
+          "w": 108,
+          "cross": "CENTER",
+          "children": [
+           {
+            "name": "Holder",
+            "w": 108,
+            "h": 96,
+            "children": [
+             {
+              "name": "Circle",
+              "w": 86,
+              "h": 86,
+              "x": 11,
+              "y": 6,
+              "radius": 999,
+              "fill": "F3E3C8",
+              "layout": "H",
+              "main": "CENTER",
+              "cross": "CENTER",
+              "stroke": "FFFFFF",
+              "strokeW": 4,
+              "effects": [
+               {
+                "color": "3D4B5C",
+                "a": 0.1,
+                "y": 3,
+                "blur": 6
+               }
+              ],
+              "children": [
+               {
+                "type": "RECT",
+                "name": "Img ui/icons/settings",
+                "w": 64,
+                "h": 64
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "type": "TEXT",
+            "text": "Settings",
+            "textStyle": "Aura Fishing/Small",
+            "color": {
+             "var": "cozy/text"
+            },
+            "name": "Label",
+            "align": "CENTER",
+            "w": 108
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

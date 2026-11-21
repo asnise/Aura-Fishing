@@ -1,0 +1,26 @@
+[
+ {
+  "replaceId": "3492:17113",
+  "tree": {
+   "type": "INSTANCE",
+   "ref": "3492:21453",
+   "variant": "Size=Large, Rarity=Rare",
+   "name": "Aura Card {img:auras/NeonWave}",
+   "texts": {
+    "Name": "Neon Wave",
+    "Chance": "1/100",
+    "Stat 1": "+15% Luck",
+    "Stat 2": "+2% Catch Bar",
+    "Stat 3": "+3% Glowing"
+   },
+   "hide": []
+  }
+ },
+ {
+  "remove": [
+   "3492:17114",
+   "3492:17115",
+   "3492:17119"
+  ]
+ }
+]

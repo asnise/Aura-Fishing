@@ -1,0 +1,2213 @@
+{
+ "parentId": "3487:4280",
+ "replaceName": "Aura Card Group",
+ "tree": {
+  "name": "Aura Card Group",
+  "layout": "V",
+  "gap": 12,
+  "children": [
+   {
+    "type": "TEXT",
+    "text": "Aura Card — Size (Large / Row / Compact) × Rarity. Use instances everywhere an aura is shown.",
+    "textStyle": "Aura Fishing/Heading",
+    "color": {
+     "var": "cozy/subtext"
+    },
+    "name": "Aura Card Label"
+   },
+   {
+    "type": "VARIANTS",
+    "key": "auracard",
+    "name": "Aura Card",
+    "layout": "H",
+    "gap": 28,
+    "pad": 24,
+    "setRadius": 16,
+    "w": 2400,
+    "setFill": "FBF7EF",
+    "description": "Standard aura display. Overrides: Name, Chance, Stat 1-3, Status, New; hide unused Stat slots / New Badge. Orb image: name the instance '... {img:auras/<Id>}' and run tools/art/figma_images.py.",
+    "children": [
+     {
+      "type": "COMPONENT",
+      "name": "Size=Large, Rarity=Common",
+      "layout": "V",
+      "gap": 8,
+      "w": 336,
+      "cross": "CENTER",
+      "clip": false,
+      "children": [
+       {
+        "name": "Orb",
+        "w": 150,
+        "h": 150,
+        "clip": false,
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Img auras/SparklingDew",
+          "w": 140,
+          "h": 140,
+          "x": 5,
+          "y": 5
+         },
+         {
+          "name": "New Badge",
+          "layout": "H",
+          "pad": [
+           3,
+           10,
+           4,
+           10
+          ],
+          "radius": 999,
+          "fill": {
+           "var": "cozy/coral"
+          },
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "NEW!",
+            "textStyle": "Aura Fishing/Caption",
+            "color": {
+             "var": "cozy/on-accent"
+            },
+            "name": "New"
+           }
+          ],
+          "x": 100,
+          "y": 2
+         }
+        ]
+       },
+       {
+        "type": "TEXT",
+        "text": "Sparkling Dew",
+        "font": {
+         "family": "Fredoka One",
+         "style": "Regular"
+        },
+        "size": 32,
+        "color": "9AA5B1",
+        "name": "Name"
+       },
+       {
+        "name": "Tags",
+        "layout": "H",
+        "gap": 6,
+        "cross": "CENTER",
+        "main": "CENTER",
+        "children": [
+         {
+          "type": "INSTANCE",
+          "ref": "3487:4328",
+          "variant": "Rarity=Common",
+          "name": "Tag Common"
+         },
+         {
+          "name": "Chance",
+          "layout": "H",
+          "pad": [
+           3,
+           10,
+           4,
+           10
+          ],
+          "radius": 999,
+          "fill": {
+           "var": "cozy/subtext"
+          },
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "1/10",
+            "textStyle": "Aura Fishing/Caption",
+            "color": {
+             "var": "cozy/on-accent"
+            },
+            "name": "Chance"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Stats",
+        "layout": "H",
+        "gap": 6,
+        "cross": "CENTER",
+        "main": "CENTER",
+        "children": [
+         {
+          "name": "Stat 1",
+          "layout": "H",
+          "pad": [
+           3,
+           10,
+           4,
+           10
+          ],
+          "radius": 999,
+          "fill": {
+           "var": "cozy/sand"
+          },
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "+5% Luck",
+            "textStyle": "Aura Fishing/Caption",
+            "color": {
+             "var": "cozy/text"
+            },
+            "name": "Stat 1"
+           }
+          ]
+         },
+         {
+          "name": "Stat 2",
+          "layout": "H",
+          "pad": [
+           3,
+           10,
+           4,
+           10
+          ],
+          "radius": 999,
+          "fill": {
+           "var": "cozy/sand"
+          },
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "+0% Stat",
+            "textStyle": "Aura Fishing/Caption",
+            "color": {
+             "var": "cozy/text"
+            },
+            "name": "Stat 2"
+           }
+          ]
+         },
+         {
+          "name": "Stat 3",
+          "layout": "H",
+          "pad": [
+           3,
+           10,
+           4,
+           10
+          ],
+          "radius": 999,
+          "fill": {
+           "var": "cozy/sand"
+          },
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "+0% Stat",
+            "textStyle": "Aura Fishing/Caption",
+            "color": {
+             "var": "cozy/text"
+            },
+            "name": "Stat 3"
+           }
+          ]
+         }
+        ],
+        "w": 336,
+        "wrap": true,
+        "rowGap": 6
+       }
+      ]
+     },
+     {
+      "type": "COMPONENT",
+      "name": "Size=Large, Rarity=Rare",
+      "layout": "V",
+      "gap": 8,
+      "w": 336,
+      "cross": "CENTER",
+      "clip": false,
+      "children": [
+       {
+        "name": "Orb",
+        "w": 150,
+        "h": 150,
+        "clip": false,
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Img auras/NeonWave",
+          "w": 140,
+          "h": 140,
+          "x": 5,
+          "y": 5
+         },
+         {
+          "name": "New Badge",
+          "layout": "H",
+          "pad": [
+           3,
+           10,
+           4,
+           10
+          ],
+          "radius": 999,
+          "fill": {
+           "var": "cozy/coral"
+          },
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "NEW!",
+            "textStyle": "Aura Fishing/Caption",
+            "color": {
+             "var": "cozy/on-accent"
+            },
+            "name": "New"
+           }
+          ],
+          "x": 100,
+          "y": 2
+         }
+        ]
+       },
+       {
+        "type": "TEXT",
+        "text": "Neon Wave",
+        "font": {
+         "family": "Fredoka One",
+         "style": "Regular"
+        },
+        "size": 32,
+        "color": "5AA9F0",
+        "name": "Name"
+       },
+       {
+        "name": "Tags",
+        "layout": "H",
+        "gap": 6,
+        "cross": "CENTER",
+        "main": "CENTER",
+        "children": [
+         {
+          "type": "INSTANCE",
+          "ref": "3487:4328",
+          "variant": "Rarity=Rare",
+          "name": "Tag Rare"
+         },
+         {
+          "name": "Chance",
+          "layout": "H",
+          "pad": [
+           3,
+           10,
+           4,
+           10
+          ],
+          "radius": 999,
+          "fill": {
+           "var": "cozy/subtext"
+          },
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "1/100",
+            "textStyle": "Aura Fishing/Caption",
+            "color": {
+             "var": "cozy/on-accent"
+            },
+            "name": "Chance"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Stats",
+        "layout": "H",
+        "gap": 6,
+        "cross": "CENTER",
+        "main": "CENTER",
+        "children": [
+         {
+          "name": "Stat 1",
+          "layout": "H",
+          "pad": [
+           3,
+           10,
+           4,
+           10
+          ],
+          "radius": 999,
+          "fill": {
+           "var": "cozy/sand"
+          },
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "+15% Luck",
+            "textStyle": "Aura Fishing/Caption",
+            "color": {
+             "var": "cozy/text"
+            },
+            "name": "Stat 1"
+           }
+          ]
+         },
+         {
+          "name": "Stat 2",
+          "layout": "H",
+          "pad": [
+           3,
+           10,
+           4,
+           10
+          ],
+          "radius": 999,
+          "fill": {
+           "var": "cozy/sand"
+          },
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "+2% Catch Bar",
+            "textStyle": "Aura Fishing/Caption",
+            "color": {
+             "var": "cozy/text"
+            },
+            "name": "Stat 2"
+           }
+          ]
+         },
+         {
+          "name": "Stat 3",
+          "layout": "H",
+          "pad": [
+           3,
+           10,
+           4,
+           10
+          ],
+          "radius": 999,
+          "fill": "3CC4B0",
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "+3% Glowing",
+            "textStyle": "Aura Fishing/Caption",
+            "color": {
+             "var": "cozy/on-accent"
+            },
+            "name": "Stat 3"
+           }
+          ]
+         }
+        ],
+        "w": 336,
+        "wrap": true,
+        "rowGap": 6
+       }
+      ]
+     },
+     {
+      "type": "COMPONENT",
+      "name": "Size=Large, Rarity=Epic",
+      "layout": "V",
+      "gap": 8,
+      "w": 336,
+      "cross": "CENTER",
+      "clip": false,
+      "children": [
+       {
+        "name": "Orb",
+        "w": 150,
+        "h": 150,
+        "clip": false,
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Img auras/SolarFlare",
+          "w": 140,
+          "h": 140,
+          "x": 5,
+          "y": 5
+         },
+         {
+          "name": "New Badge",
+          "layout": "H",
+          "pad": [
+           3,
+           10,
+           4,
+           10
+          ],
+          "radius": 999,
+          "fill": {
+           "var": "cozy/coral"
+          },
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "NEW!",
+            "textStyle": "Aura Fishing/Caption",
+            "color": {
+             "var": "cozy/on-accent"
+            },
+            "name": "New"
+           }
+          ],
+          "x": 100,
+          "y": 2
+         }
+        ]
+       },
+       {
+        "type": "TEXT",
+        "text": "Solar Flare",
+        "font": {
+         "family": "Fredoka One",
+         "style": "Regular"
+        },
+        "size": 32,
+        "color": "B07CF0",
+        "name": "Name"
+       },
+       {
+        "name": "Tags",
+        "layout": "H",
+        "gap": 6,
+        "cross": "CENTER",
+        "main": "CENTER",
+        "children": [
+         {
+          "type": "INSTANCE",
+          "ref": "3487:4328",
+          "variant": "Rarity=Epic",
+          "name": "Tag Epic"
+         },
+         {
+          "name": "Chance",
+          "layout": "H",
+          "pad": [
+           3,
+           10,
+           4,
+           10
+          ],
+          "radius": 999,
+          "fill": {
+           "var": "cozy/subtext"
+          },
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "1/750",
+            "textStyle": "Aura Fishing/Caption",
+            "color": {
+             "var": "cozy/on-accent"
+            },
+            "name": "Chance"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Stats",
+        "layout": "H",
+        "gap": 6,
+        "cross": "CENTER",
+        "main": "CENTER",
+        "children": [
+         {
+          "name": "Stat 1",
+          "layout": "H",
+          "pad": [
+           3,
+           10,
+           4,
+           10
+          ],
+          "radius": 999,
+          "fill": {
+           "var": "cozy/sand"
+          },
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "+35% Luck",
+            "textStyle": "Aura Fishing/Caption",
+            "color": {
+             "var": "cozy/text"
+            },
+            "name": "Stat 1"
+           }
+          ]
+         },
+         {
+          "name": "Stat 2",
+          "layout": "H",
+          "pad": [
+           3,
+           10,
+           4,
+           10
+          ],
+          "radius": 999,
+          "fill": "F28C38",
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "+10% Sun-Forged",
+            "textStyle": "Aura Fishing/Caption",
+            "color": {
+             "var": "cozy/on-accent"
+            },
+            "name": "Stat 2"
+           }
+          ]
+         },
+         {
+          "name": "Stat 3",
+          "layout": "H",
+          "pad": [
+           3,
+           10,
+           4,
+           10
+          ],
+          "radius": 999,
+          "fill": {
+           "var": "cozy/sand"
+          },
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "+0% Stat",
+            "textStyle": "Aura Fishing/Caption",
+            "color": {
+             "var": "cozy/text"
+            },
+            "name": "Stat 3"
+           }
+          ]
+         }
+        ],
+        "w": 336,
+        "wrap": true,
+        "rowGap": 6
+       }
+      ]
+     },
+     {
+      "type": "COMPONENT",
+      "name": "Size=Large, Rarity=Legendary",
+      "layout": "V",
+      "gap": 8,
+      "w": 336,
+      "cross": "CENTER",
+      "clip": false,
+      "children": [
+       {
+        "name": "Orb",
+        "w": 150,
+        "h": 150,
+        "clip": false,
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Img auras/AbyssalShadow",
+          "w": 140,
+          "h": 140,
+          "x": 5,
+          "y": 5
+         },
+         {
+          "name": "New Badge",
+          "layout": "H",
+          "pad": [
+           3,
+           10,
+           4,
+           10
+          ],
+          "radius": 999,
+          "fill": {
+           "var": "cozy/coral"
+          },
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "NEW!",
+            "textStyle": "Aura Fishing/Caption",
+            "color": {
+             "var": "cozy/on-accent"
+            },
+            "name": "New"
+           }
+          ],
+          "x": 100,
+          "y": 2
+         }
+        ]
+       },
+       {
+        "type": "TEXT",
+        "text": "Abyssal Shadow",
+        "font": {
+         "family": "Fredoka One",
+         "style": "Regular"
+        },
+        "size": 32,
+        "color": "F2A93B",
+        "name": "Name"
+       },
+       {
+        "name": "Tags",
+        "layout": "H",
+        "gap": 6,
+        "cross": "CENTER",
+        "main": "CENTER",
+        "children": [
+         {
+          "type": "INSTANCE",
+          "ref": "3487:4328",
+          "variant": "Rarity=Legendary",
+          "name": "Tag Legendary"
+         },
+         {
+          "name": "Chance",
+          "layout": "H",
+          "pad": [
+           3,
+           10,
+           4,
+           10
+          ],
+          "radius": 999,
+          "fill": {
+           "var": "cozy/subtext"
+          },
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "1/5,000",
+            "textStyle": "Aura Fishing/Caption",
+            "color": {
+             "var": "cozy/on-accent"
+            },
+            "name": "Chance"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Stats",
+        "layout": "H",
+        "gap": 6,
+        "cross": "CENTER",
+        "main": "CENTER",
+        "children": [
+         {
+          "name": "Stat 1",
+          "layout": "H",
+          "pad": [
+           3,
+           10,
+           4,
+           10
+          ],
+          "radius": 999,
+          "fill": {
+           "var": "cozy/sand"
+          },
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "+50% Luck",
+            "textStyle": "Aura Fishing/Caption",
+            "color": {
+             "var": "cozy/text"
+            },
+            "name": "Stat 1"
+           }
+          ]
+         },
+         {
+          "name": "Stat 2",
+          "layout": "H",
+          "pad": [
+           3,
+           10,
+           4,
+           10
+          ],
+          "radius": 999,
+          "fill": {
+           "var": "cozy/sand"
+          },
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "+0.2 Auto Mult",
+            "textStyle": "Aura Fishing/Caption",
+            "color": {
+             "var": "cozy/text"
+            },
+            "name": "Stat 2"
+           }
+          ]
+         },
+         {
+          "name": "Stat 3",
+          "layout": "H",
+          "pad": [
+           3,
+           10,
+           4,
+           10
+          ],
+          "radius": 999,
+          "fill": "8A5CC8",
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "+3% Void-Touched",
+            "textStyle": "Aura Fishing/Caption",
+            "color": {
+             "var": "cozy/on-accent"
+            },
+            "name": "Stat 3"
+           }
+          ]
+         }
+        ],
+        "w": 336,
+        "wrap": true,
+        "rowGap": 6
+       }
+      ]
+     },
+     {
+      "type": "COMPONENT",
+      "name": "Size=Large, Rarity=Mythic",
+      "layout": "V",
+      "gap": 8,
+      "w": 336,
+      "cross": "CENTER",
+      "clip": false,
+      "children": [
+       {
+        "name": "Orb",
+        "w": 150,
+        "h": 150,
+        "clip": false,
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Img auras/DragonEmperor",
+          "w": 140,
+          "h": 140,
+          "x": 5,
+          "y": 5
+         },
+         {
+          "name": "New Badge",
+          "layout": "H",
+          "pad": [
+           3,
+           10,
+           4,
+           10
+          ],
+          "radius": 999,
+          "fill": {
+           "var": "cozy/coral"
+          },
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "NEW!",
+            "textStyle": "Aura Fishing/Caption",
+            "color": {
+             "var": "cozy/on-accent"
+            },
+            "name": "New"
+           }
+          ],
+          "x": 100,
+          "y": 2
+         }
+        ]
+       },
+       {
+        "type": "TEXT",
+        "text": "Dragon Emperor",
+        "font": {
+         "family": "Fredoka One",
+         "style": "Regular"
+        },
+        "size": 32,
+        "color": "F2668B",
+        "name": "Name"
+       },
+       {
+        "name": "Tags",
+        "layout": "H",
+        "gap": 6,
+        "cross": "CENTER",
+        "main": "CENTER",
+        "children": [
+         {
+          "type": "INSTANCE",
+          "ref": "3487:4328",
+          "variant": "Rarity=Mythic",
+          "name": "Tag Mythic"
+         },
+         {
+          "name": "Chance",
+          "layout": "H",
+          "pad": [
+           3,
+           10,
+           4,
+           10
+          ],
+          "radius": 999,
+          "fill": {
+           "var": "cozy/subtext"
+          },
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "1/50,000",
+            "textStyle": "Aura Fishing/Caption",
+            "color": {
+             "var": "cozy/on-accent"
+            },
+            "name": "Chance"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Stats",
+        "layout": "H",
+        "gap": 6,
+        "cross": "CENTER",
+        "main": "CENTER",
+        "children": [
+         {
+          "name": "Stat 1",
+          "layout": "H",
+          "pad": [
+           3,
+           10,
+           4,
+           10
+          ],
+          "radius": 999,
+          "fill": {
+           "var": "cozy/sand"
+          },
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "+100% Luck",
+            "textStyle": "Aura Fishing/Caption",
+            "color": {
+             "var": "cozy/text"
+            },
+            "name": "Stat 1"
+           }
+          ]
+         },
+         {
+          "name": "Stat 2",
+          "layout": "H",
+          "pad": [
+           3,
+           10,
+           4,
+           10
+          ],
+          "radius": 999,
+          "fill": {
+           "var": "cozy/sand"
+          },
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "+30% Stability",
+            "textStyle": "Aura Fishing/Caption",
+            "color": {
+             "var": "cozy/text"
+            },
+            "name": "Stat 2"
+           }
+          ]
+         },
+         {
+          "name": "Stat 3",
+          "layout": "H",
+          "pad": [
+           3,
+           10,
+           4,
+           10
+          ],
+          "radius": 999,
+          "fill": "E0A82E",
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "+25% Golden",
+            "textStyle": "Aura Fishing/Caption",
+            "color": {
+             "var": "cozy/on-accent"
+            },
+            "name": "Stat 3"
+           }
+          ]
+         }
+        ],
+        "w": 336,
+        "wrap": true,
+        "rowGap": 6
+       }
+      ]
+     },
+     {
+      "type": "COMPONENT",
+      "name": "Size=Row, Rarity=Common",
+      "layout": "H",
+      "gap": 12,
+      "pad": 12,
+      "w": 680,
+      "h": 80,
+      "radius": 16,
+      "cross": "CENTER",
+      "fill": {
+       "var": "cozy/sand"
+      },
+      "children": [
+       {
+        "type": "RECT",
+        "name": "Img auras/SparklingDew",
+        "w": 56,
+        "h": 56
+       },
+       {
+        "name": "Info",
+        "layout": "V",
+        "gap": 4,
+        "fillW": true,
+        "children": [
+         {
+          "name": "Top",
+          "layout": "H",
+          "gap": 8,
+          "cross": "CENTER",
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "Sparkling Dew",
+            "font": {
+             "family": "Fredoka One",
+             "style": "Regular"
+            },
+            "size": 20,
+            "color": "9AA5B1",
+            "name": "Name"
+           },
+           {
+            "type": "INSTANCE",
+            "ref": "3487:4328",
+            "variant": "Rarity=Common",
+            "name": "Tag Common"
+           },
+           {
+            "name": "Chance",
+            "layout": "H",
+            "pad": [
+             3,
+             10,
+             4,
+             10
+            ],
+            "radius": 999,
+            "fill": {
+             "var": "cozy/subtext"
+            },
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "1/10",
+              "textStyle": "Aura Fishing/Caption",
+              "color": {
+               "var": "cozy/on-accent"
+              },
+              "name": "Chance"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Stats",
+          "layout": "H",
+          "gap": 6,
+          "cross": "CENTER",
+          "main": "MIN",
+          "children": [
+           {
+            "name": "Stat 1",
+            "layout": "H",
+            "pad": [
+             3,
+             10,
+             4,
+             10
+            ],
+            "radius": 999,
+            "fill": {
+             "var": "cozy/sand"
+            },
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "+5% Luck",
+              "textStyle": "Aura Fishing/Caption",
+              "color": {
+               "var": "cozy/text"
+              },
+              "name": "Stat 1"
+             }
+            ]
+           },
+           {
+            "name": "Stat 2",
+            "layout": "H",
+            "pad": [
+             3,
+             10,
+             4,
+             10
+            ],
+            "radius": 999,
+            "fill": {
+             "var": "cozy/sand"
+            },
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "+0% Stat",
+              "textStyle": "Aura Fishing/Caption",
+              "color": {
+               "var": "cozy/text"
+              },
+              "name": "Stat 2"
+             }
+            ]
+           },
+           {
+            "name": "Stat 3",
+            "layout": "H",
+            "pad": [
+             3,
+             10,
+             4,
+             10
+            ],
+            "radius": 999,
+            "fill": {
+             "var": "cozy/sand"
+            },
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "+0% Stat",
+              "textStyle": "Aura Fishing/Caption",
+              "color": {
+               "var": "cozy/text"
+              },
+              "name": "Stat 3"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Status",
+        "layout": "H",
+        "pad": [
+         3,
+         10,
+         4,
+         10
+        ],
+        "radius": 999,
+        "fill": {
+         "var": "cozy/sand"
+        },
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "x1",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Status"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "COMPONENT",
+      "name": "Size=Row, Rarity=Rare",
+      "layout": "H",
+      "gap": 12,
+      "pad": 12,
+      "w": 680,
+      "h": 80,
+      "radius": 16,
+      "cross": "CENTER",
+      "fill": {
+       "var": "cozy/sand"
+      },
+      "children": [
+       {
+        "type": "RECT",
+        "name": "Img auras/NeonWave",
+        "w": 56,
+        "h": 56
+       },
+       {
+        "name": "Info",
+        "layout": "V",
+        "gap": 4,
+        "fillW": true,
+        "children": [
+         {
+          "name": "Top",
+          "layout": "H",
+          "gap": 8,
+          "cross": "CENTER",
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "Neon Wave",
+            "font": {
+             "family": "Fredoka One",
+             "style": "Regular"
+            },
+            "size": 20,
+            "color": "5AA9F0",
+            "name": "Name"
+           },
+           {
+            "type": "INSTANCE",
+            "ref": "3487:4328",
+            "variant": "Rarity=Rare",
+            "name": "Tag Rare"
+           },
+           {
+            "name": "Chance",
+            "layout": "H",
+            "pad": [
+             3,
+             10,
+             4,
+             10
+            ],
+            "radius": 999,
+            "fill": {
+             "var": "cozy/subtext"
+            },
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "1/100",
+              "textStyle": "Aura Fishing/Caption",
+              "color": {
+               "var": "cozy/on-accent"
+              },
+              "name": "Chance"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Stats",
+          "layout": "H",
+          "gap": 6,
+          "cross": "CENTER",
+          "main": "MIN",
+          "children": [
+           {
+            "name": "Stat 1",
+            "layout": "H",
+            "pad": [
+             3,
+             10,
+             4,
+             10
+            ],
+            "radius": 999,
+            "fill": {
+             "var": "cozy/sand"
+            },
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "+15% Luck",
+              "textStyle": "Aura Fishing/Caption",
+              "color": {
+               "var": "cozy/text"
+              },
+              "name": "Stat 1"
+             }
+            ]
+           },
+           {
+            "name": "Stat 2",
+            "layout": "H",
+            "pad": [
+             3,
+             10,
+             4,
+             10
+            ],
+            "radius": 999,
+            "fill": {
+             "var": "cozy/sand"
+            },
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "+2% Catch Bar",
+              "textStyle": "Aura Fishing/Caption",
+              "color": {
+               "var": "cozy/text"
+              },
+              "name": "Stat 2"
+             }
+            ]
+           },
+           {
+            "name": "Stat 3",
+            "layout": "H",
+            "pad": [
+             3,
+             10,
+             4,
+             10
+            ],
+            "radius": 999,
+            "fill": "3CC4B0",
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "+3% Glowing",
+              "textStyle": "Aura Fishing/Caption",
+              "color": {
+               "var": "cozy/on-accent"
+              },
+              "name": "Stat 3"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Status",
+        "layout": "H",
+        "pad": [
+         3,
+         10,
+         4,
+         10
+        ],
+        "radius": 999,
+        "fill": {
+         "var": "cozy/sand"
+        },
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "x1",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Status"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "COMPONENT",
+      "name": "Size=Row, Rarity=Epic",
+      "layout": "H",
+      "gap": 12,
+      "pad": 12,
+      "w": 680,
+      "h": 80,
+      "radius": 16,
+      "cross": "CENTER",
+      "fill": {
+       "var": "cozy/sand"
+      },
+      "children": [
+       {
+        "type": "RECT",
+        "name": "Img auras/SolarFlare",
+        "w": 56,
+        "h": 56
+       },
+       {
+        "name": "Info",
+        "layout": "V",
+        "gap": 4,
+        "fillW": true,
+        "children": [
+         {
+          "name": "Top",
+          "layout": "H",
+          "gap": 8,
+          "cross": "CENTER",
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "Solar Flare",
+            "font": {
+             "family": "Fredoka One",
+             "style": "Regular"
+            },
+            "size": 20,
+            "color": "B07CF0",
+            "name": "Name"
+           },
+           {
+            "type": "INSTANCE",
+            "ref": "3487:4328",
+            "variant": "Rarity=Epic",
+            "name": "Tag Epic"
+           },
+           {
+            "name": "Chance",
+            "layout": "H",
+            "pad": [
+             3,
+             10,
+             4,
+             10
+            ],
+            "radius": 999,
+            "fill": {
+             "var": "cozy/subtext"
+            },
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "1/750",
+              "textStyle": "Aura Fishing/Caption",
+              "color": {
+               "var": "cozy/on-accent"
+              },
+              "name": "Chance"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Stats",
+          "layout": "H",
+          "gap": 6,
+          "cross": "CENTER",
+          "main": "MIN",
+          "children": [
+           {
+            "name": "Stat 1",
+            "layout": "H",
+            "pad": [
+             3,
+             10,
+             4,
+             10
+            ],
+            "radius": 999,
+            "fill": {
+             "var": "cozy/sand"
+            },
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "+35% Luck",
+              "textStyle": "Aura Fishing/Caption",
+              "color": {
+               "var": "cozy/text"
+              },
+              "name": "Stat 1"
+             }
+            ]
+           },
+           {
+            "name": "Stat 2",
+            "layout": "H",
+            "pad": [
+             3,
+             10,
+             4,
+             10
+            ],
+            "radius": 999,
+            "fill": "F28C38",
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "+10% Sun-Forged",
+              "textStyle": "Aura Fishing/Caption",
+              "color": {
+               "var": "cozy/on-accent"
+              },
+              "name": "Stat 2"
+             }
+            ]
+           },
+           {
+            "name": "Stat 3",
+            "layout": "H",
+            "pad": [
+             3,
+             10,
+             4,
+             10
+            ],
+            "radius": 999,
+            "fill": {
+             "var": "cozy/sand"
+            },
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "+0% Stat",
+              "textStyle": "Aura Fishing/Caption",
+              "color": {
+               "var": "cozy/text"
+              },
+              "name": "Stat 3"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Status",
+        "layout": "H",
+        "pad": [
+         3,
+         10,
+         4,
+         10
+        ],
+        "radius": 999,
+        "fill": {
+         "var": "cozy/sand"
+        },
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "x1",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Status"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "COMPONENT",
+      "name": "Size=Row, Rarity=Legendary",
+      "layout": "H",
+      "gap": 12,
+      "pad": 12,
+      "w": 680,
+      "h": 80,
+      "radius": 16,
+      "cross": "CENTER",
+      "fill": {
+       "var": "cozy/sand"
+      },
+      "children": [
+       {
+        "type": "RECT",
+        "name": "Img auras/AbyssalShadow",
+        "w": 56,
+        "h": 56
+       },
+       {
+        "name": "Info",
+        "layout": "V",
+        "gap": 4,
+        "fillW": true,
+        "children": [
+         {
+          "name": "Top",
+          "layout": "H",
+          "gap": 8,
+          "cross": "CENTER",
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "Abyssal Shadow",
+            "font": {
+             "family": "Fredoka One",
+             "style": "Regular"
+            },
+            "size": 20,
+            "color": "F2A93B",
+            "name": "Name"
+           },
+           {
+            "type": "INSTANCE",
+            "ref": "3487:4328",
+            "variant": "Rarity=Legendary",
+            "name": "Tag Legendary"
+           },
+           {
+            "name": "Chance",
+            "layout": "H",
+            "pad": [
+             3,
+             10,
+             4,
+             10
+            ],
+            "radius": 999,
+            "fill": {
+             "var": "cozy/subtext"
+            },
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "1/5,000",
+              "textStyle": "Aura Fishing/Caption",
+              "color": {
+               "var": "cozy/on-accent"
+              },
+              "name": "Chance"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Stats",
+          "layout": "H",
+          "gap": 6,
+          "cross": "CENTER",
+          "main": "MIN",
+          "children": [
+           {
+            "name": "Stat 1",
+            "layout": "H",
+            "pad": [
+             3,
+             10,
+             4,
+             10
+            ],
+            "radius": 999,
+            "fill": {
+             "var": "cozy/sand"
+            },
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "+50% Luck",
+              "textStyle": "Aura Fishing/Caption",
+              "color": {
+               "var": "cozy/text"
+              },
+              "name": "Stat 1"
+             }
+            ]
+           },
+           {
+            "name": "Stat 2",
+            "layout": "H",
+            "pad": [
+             3,
+             10,
+             4,
+             10
+            ],
+            "radius": 999,
+            "fill": {
+             "var": "cozy/sand"
+            },
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "+0.2 Auto Mult",
+              "textStyle": "Aura Fishing/Caption",
+              "color": {
+               "var": "cozy/text"
+              },
+              "name": "Stat 2"
+             }
+            ]
+           },
+           {
+            "name": "Stat 3",
+            "layout": "H",
+            "pad": [
+             3,
+             10,
+             4,
+             10
+            ],
+            "radius": 999,
+            "fill": "8A5CC8",
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "+3% Void-Touched",
+              "textStyle": "Aura Fishing/Caption",
+              "color": {
+               "var": "cozy/on-accent"
+              },
+              "name": "Stat 3"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Status",
+        "layout": "H",
+        "pad": [
+         3,
+         10,
+         4,
+         10
+        ],
+        "radius": 999,
+        "fill": {
+         "var": "cozy/sand"
+        },
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "x1",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Status"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "COMPONENT",
+      "name": "Size=Row, Rarity=Mythic",
+      "layout": "H",
+      "gap": 12,
+      "pad": 12,
+      "w": 680,
+      "h": 80,
+      "radius": 16,
+      "cross": "CENTER",
+      "fill": {
+       "var": "cozy/sand"
+      },
+      "children": [
+       {
+        "type": "RECT",
+        "name": "Img auras/DragonEmperor",
+        "w": 56,
+        "h": 56
+       },
+       {
+        "name": "Info",
+        "layout": "V",
+        "gap": 4,
+        "fillW": true,
+        "children": [
+         {
+          "name": "Top",
+          "layout": "H",
+          "gap": 8,
+          "cross": "CENTER",
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "Dragon Emperor",
+            "font": {
+             "family": "Fredoka One",
+             "style": "Regular"
+            },
+            "size": 20,
+            "color": "F2668B",
+            "name": "Name"
+           },
+           {
+            "type": "INSTANCE",
+            "ref": "3487:4328",
+            "variant": "Rarity=Mythic",
+            "name": "Tag Mythic"
+           },
+           {
+            "name": "Chance",
+            "layout": "H",
+            "pad": [
+             3,
+             10,
+             4,
+             10
+            ],
+            "radius": 999,
+            "fill": {
+             "var": "cozy/subtext"
+            },
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "1/50,000",
+              "textStyle": "Aura Fishing/Caption",
+              "color": {
+               "var": "cozy/on-accent"
+              },
+              "name": "Chance"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Stats",
+          "layout": "H",
+          "gap": 6,
+          "cross": "CENTER",
+          "main": "MIN",
+          "children": [
+           {
+            "name": "Stat 1",
+            "layout": "H",
+            "pad": [
+             3,
+             10,
+             4,
+             10
+            ],
+            "radius": 999,
+            "fill": {
+             "var": "cozy/sand"
+            },
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "+100% Luck",
+              "textStyle": "Aura Fishing/Caption",
+              "color": {
+               "var": "cozy/text"
+              },
+              "name": "Stat 1"
+             }
+            ]
+           },
+           {
+            "name": "Stat 2",
+            "layout": "H",
+            "pad": [
+             3,
+             10,
+             4,
+             10
+            ],
+            "radius": 999,
+            "fill": {
+             "var": "cozy/sand"
+            },
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "+30% Stability",
+              "textStyle": "Aura Fishing/Caption",
+              "color": {
+               "var": "cozy/text"
+              },
+              "name": "Stat 2"
+             }
+            ]
+           },
+           {
+            "name": "Stat 3",
+            "layout": "H",
+            "pad": [
+             3,
+             10,
+             4,
+             10
+            ],
+            "radius": 999,
+            "fill": "E0A82E",
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "+25% Golden",
+              "textStyle": "Aura Fishing/Caption",
+              "color": {
+               "var": "cozy/on-accent"
+              },
+              "name": "Stat 3"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Status",
+        "layout": "H",
+        "pad": [
+         3,
+         10,
+         4,
+         10
+        ],
+        "radius": 999,
+        "fill": {
+         "var": "cozy/sand"
+        },
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "x1",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Status"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "COMPONENT",
+      "name": "Size=Compact, Rarity=Common",
+      "layout": "V",
+      "gap": 4,
+      "pad": 10,
+      "w": 120,
+      "cross": "CENTER",
+      "radius": 20,
+      "fill": "FFFFFF",
+      "stroke": {
+       "var": "cozy/track"
+      },
+      "strokeW": 2,
+      "clip": false,
+      "children": [
+       {
+        "type": "RECT",
+        "name": "Img auras/SparklingDew",
+        "w": 72,
+        "h": 72
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4328",
+        "variant": "Rarity=Common",
+        "name": "Tag Common"
+       },
+       {
+        "name": "New Badge",
+        "layout": "H",
+        "pad": [
+         3,
+         10,
+         4,
+         10
+        ],
+        "radius": 999,
+        "fill": {
+         "var": "cozy/coral"
+        },
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "NEW!",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/on-accent"
+          },
+          "name": "New"
+         }
+        ],
+        "absolute": true,
+        "x": 66,
+        "y": -8
+       }
+      ]
+     },
+     {
+      "type": "COMPONENT",
+      "name": "Size=Compact, Rarity=Rare",
+      "layout": "V",
+      "gap": 4,
+      "pad": 10,
+      "w": 120,
+      "cross": "CENTER",
+      "radius": 20,
+      "fill": "FFFFFF",
+      "stroke": {
+       "var": "cozy/track"
+      },
+      "strokeW": 2,
+      "clip": false,
+      "children": [
+       {
+        "type": "RECT",
+        "name": "Img auras/NeonWave",
+        "w": 72,
+        "h": 72
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4328",
+        "variant": "Rarity=Rare",
+        "name": "Tag Rare"
+       },
+       {
+        "name": "New Badge",
+        "layout": "H",
+        "pad": [
+         3,
+         10,
+         4,
+         10
+        ],
+        "radius": 999,
+        "fill": {
+         "var": "cozy/coral"
+        },
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "NEW!",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/on-accent"
+          },
+          "name": "New"
+         }
+        ],
+        "absolute": true,
+        "x": 66,
+        "y": -8
+       }
+      ]
+     },
+     {
+      "type": "COMPONENT",
+      "name": "Size=Compact, Rarity=Epic",
+      "layout": "V",
+      "gap": 4,
+      "pad": 10,
+      "w": 120,
+      "cross": "CENTER",
+      "radius": 20,
+      "fill": "FFFFFF",
+      "stroke": {
+       "var": "cozy/track"
+      },
+      "strokeW": 2,
+      "clip": false,
+      "children": [
+       {
+        "type": "RECT",
+        "name": "Img auras/SolarFlare",
+        "w": 72,
+        "h": 72
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4328",
+        "variant": "Rarity=Epic",
+        "name": "Tag Epic"
+       },
+       {
+        "name": "New Badge",
+        "layout": "H",
+        "pad": [
+         3,
+         10,
+         4,
+         10
+        ],
+        "radius": 999,
+        "fill": {
+         "var": "cozy/coral"
+        },
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "NEW!",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/on-accent"
+          },
+          "name": "New"
+         }
+        ],
+        "absolute": true,
+        "x": 66,
+        "y": -8
+       }
+      ]
+     },
+     {
+      "type": "COMPONENT",
+      "name": "Size=Compact, Rarity=Legendary",
+      "layout": "V",
+      "gap": 4,
+      "pad": 10,
+      "w": 120,
+      "cross": "CENTER",
+      "radius": 20,
+      "fill": "FFFFFF",
+      "stroke": {
+       "var": "cozy/track"
+      },
+      "strokeW": 2,
+      "clip": false,
+      "children": [
+       {
+        "type": "RECT",
+        "name": "Img auras/AbyssalShadow",
+        "w": 72,
+        "h": 72
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4328",
+        "variant": "Rarity=Legendary",
+        "name": "Tag Legendary"
+       },
+       {
+        "name": "New Badge",
+        "layout": "H",
+        "pad": [
+         3,
+         10,
+         4,
+         10
+        ],
+        "radius": 999,
+        "fill": {
+         "var": "cozy/coral"
+        },
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "NEW!",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/on-accent"
+          },
+          "name": "New"
+         }
+        ],
+        "absolute": true,
+        "x": 66,
+        "y": -8
+       }
+      ]
+     },
+     {
+      "type": "COMPONENT",
+      "name": "Size=Compact, Rarity=Mythic",
+      "layout": "V",
+      "gap": 4,
+      "pad": 10,
+      "w": 120,
+      "cross": "CENTER",
+      "radius": 20,
+      "fill": "FFFFFF",
+      "stroke": {
+       "var": "cozy/track"
+      },
+      "strokeW": 2,
+      "clip": false,
+      "children": [
+       {
+        "type": "RECT",
+        "name": "Img auras/DragonEmperor",
+        "w": 72,
+        "h": 72
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4328",
+        "variant": "Rarity=Mythic",
+        "name": "Tag Mythic"
+       },
+       {
+        "name": "New Badge",
+        "layout": "H",
+        "pad": [
+         3,
+         10,
+         4,
+         10
+        ],
+        "radius": 999,
+        "fill": {
+         "var": "cozy/coral"
+        },
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "NEW!",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/on-accent"
+          },
+          "name": "New"
+         }
+        ],
+        "absolute": true,
+        "x": 66,
+        "y": -8
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,200 @@
+[
+ {
+  "replaceId": "3492:16723",
+  "tree": {
+   "type": "TEXT",
+   "text": "Main fishing screen. Top-left stats, left menu, bottom-right bag / DEPTH stepper / auto / sell. No CAST in the middle (C25): PC clicks the world, touch uses the round CAST button left of jump. Hold = power bar + aim marker, gold zone = PERFECT. Code: HUDController + FishingController.",
+   "textStyle": "Aura Fishing/Body",
+   "color": {
+    "var": "cozy/subtext"
+   },
+   "name": "Note",
+   "w": 1280,
+   "x": 60,
+   "y": 860
+  }
+ },
+ {
+  "replaceId": "3492:16762",
+  "tree": {
+   "type": "TEXT",
+   "text": "Round CAST button (touch) per fishing phase; PC shows the same text in the status pill only. Code: FishingController FishingState.",
+   "textStyle": "Aura Fishing/Body",
+   "color": {
+    "var": "cozy/subtext"
+   },
+   "name": "Note",
+   "w": 1280,
+   "x": 60,
+   "y": 500
+  }
+ },
+ {
+  "replaceId": "3492:16734",
+  "tree": {
+   "name": "Btn Cast Mobile",
+   "w": 88,
+   "h": 88,
+   "radius": 999,
+   "fill": {
+    "var": "cozy/coral"
+   },
+   "stroke": {
+    "var": "cozy/coral-lip"
+   },
+   "strokeW": 2,
+   "strokeSides": {
+    "b": 5
+   },
+   "layout": "H",
+   "main": "CENTER",
+   "cross": "CENTER",
+   "children": [
+    {
+     "type": "TEXT",
+     "text": "CAST",
+     "font": {
+      "family": "Fredoka One",
+      "style": "Regular"
+     },
+     "size": 20,
+     "color": "FFFFFF",
+     "name": "Label"
+    }
+   ]
+  }
+ },
+ {
+  "replaceId": "3492:16740",
+  "tree": {
+   "name": "Btn Cast Mobile",
+   "w": 88,
+   "h": 88,
+   "radius": 999,
+   "fill": {
+    "var": "cozy/sand"
+   },
+   "stroke": {
+    "var": "cozy/track"
+   },
+   "strokeW": 2,
+   "strokeSides": {
+    "b": 5
+   },
+   "layout": "H",
+   "main": "CENTER",
+   "cross": "CENTER",
+   "children": [
+    {
+     "type": "TEXT",
+     "text": "REEL IN",
+     "font": {
+      "family": "Fredoka One",
+      "style": "Regular"
+     },
+     "size": 18,
+     "color": "3D4B5C",
+     "name": "Label"
+    }
+   ]
+  }
+ },
+ {
+  "replaceId": "3492:16745",
+  "tree": {
+   "name": "Btn Cast Mobile",
+   "w": 88,
+   "h": 88,
+   "radius": 999,
+   "fill": {
+    "var": "cozy/gold"
+   },
+   "stroke": {
+    "var": "cozy/gold-lip"
+   },
+   "strokeW": 2,
+   "strokeSides": {
+    "b": 5
+   },
+   "layout": "H",
+   "main": "CENTER",
+   "cross": "CENTER",
+   "children": [
+    {
+     "type": "TEXT",
+     "text": "HOOK!",
+     "font": {
+      "family": "Fredoka One",
+      "style": "Regular"
+     },
+     "size": 20,
+     "color": "FFFFFF",
+     "name": "Label"
+    }
+   ]
+  }
+ },
+ {
+  "replaceId": "3492:16751",
+  "tree": {
+   "name": "Btn Cast Mobile",
+   "w": 88,
+   "h": 88,
+   "radius": 999,
+   "fill": {
+    "var": "cozy/sand"
+   },
+   "stroke": {
+    "var": "cozy/track"
+   },
+   "strokeW": 2,
+   "strokeSides": {
+    "b": 5
+   },
+   "layout": "H",
+   "main": "CENTER",
+   "cross": "CENTER",
+   "children": [
+    {
+     "type": "TEXT",
+     "text": "AUTO",
+     "font": {
+      "family": "Fredoka One",
+      "style": "Regular"
+     },
+     "size": 20,
+     "color": "3D4B5C",
+     "name": "Label"
+    }
+   ]
+  }
+ },
+ {
+  "replaceId": "3492:17646",
+  "tree": {
+   "type": "TEXT",
+   "text": "15 · Cast Popup (removed in C25)",
+   "textStyle": "Aura Fishing/Display",
+   "color": {
+    "var": "cozy/text"
+   },
+   "name": "Title",
+   "x": 60,
+   "y": 30
+  }
+ },
+ {
+  "replaceId": "3492:17741",
+  "tree": {
+   "type": "TEXT",
+   "text": "16 · Cast Popup · Auto depth (removed in C25)",
+   "textStyle": "Aura Fishing/Display",
+   "color": {
+    "var": "cozy/text"
+   },
+   "name": "Title",
+   "x": 60,
+   "y": 30
+  }
+ }
+]

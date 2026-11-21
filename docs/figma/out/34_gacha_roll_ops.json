@@ -1,0 +1,4436 @@
+[
+ {
+  "pageId": "3465:14993",
+  "replaceName": "Gacha Roll Animation — 4 options",
+  "tree": {
+   "type": "SECTION",
+   "name": "Gacha Roll Animation — 4 options",
+   "fill": "F3E9D8",
+   "x": 33000,
+   "y": 6200,
+   "children": [
+    {
+     "type": "TEXT",
+     "text": "Gacha Roll Animation — 4 options (pick one)",
+     "textStyle": "Aura Fishing/Display",
+     "color": {
+      "var": "cozy/text"
+     },
+     "name": "Title",
+     "x": 60,
+     "y": 40
+    },
+    {
+     "type": "TEXT",
+     "text": "The Gacha page stays a shop front; ROLL opens this roll window on top (the page is hidden behind it), then the reveal card. Tap = skip to the reveal. Higher rarity = longer build-up. Same reveal card for every option.",
+     "textStyle": "Aura Fishing/Body",
+     "color": {
+      "var": "cozy/subtext"
+     },
+     "name": "Sub",
+     "x": 60,
+     "y": 100,
+     "w": 2300
+    },
+    {
+     "name": "Option 1",
+     "layout": "V",
+     "gap": 10,
+     "x": 60,
+     "y": 200,
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "1 · Altar Charge",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "type": "TEXT",
+       "text": "Mystery orb charges on an altar, colour tease, burst. Simple and dramatic; works for x1 and x10 (best of 10).",
+       "textStyle": "Aura Fishing/Small",
+       "color": {
+        "var": "cozy/subtext"
+       },
+       "name": "Desc",
+       "w": 2300
+      },
+      {
+       "name": "Keys",
+       "layout": "H",
+       "gap": 24,
+       "children": [
+        {
+         "name": "Key Drop on the altar",
+         "layout": "V",
+         "gap": 6,
+         "w": 560,
+         "children": [
+          {
+           "name": "Head",
+           "layout": "H",
+           "gap": 8,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Time",
+             "layout": "H",
+             "pad": [
+              3,
+              10,
+              4,
+              10
+             ],
+             "radius": 999,
+             "fill": {
+              "hex": "3D4B5C"
+             },
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "0.0s",
+               "textStyle": "Aura Fishing/Caption",
+               "color": "FFFFFF",
+               "name": "T"
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "Drop on the altar",
+             "textStyle": "Aura Fishing/Heading",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Label"
+            }
+           ]
+          },
+          {
+           "name": "Frame",
+           "w": 560,
+           "h": 315,
+           "radius": 16,
+           "clip": true,
+           "children": [
+            {
+             "type": "RECT",
+             "name": "Bg ui/gacha_bg_cosmic",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "hex": "1B2440"
+             }
+            },
+            {
+             "type": "RECT",
+             "name": "Dim",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "hex": "0B1226",
+              "opacity": 0.55
+             }
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Altar",
+             "w": 220,
+             "h": 220,
+             "x": 170.0,
+             "y": 140,
+             "fill": {
+              "hex": "B79CF2",
+              "opacity": 0.25
+             }
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Altar Top",
+             "w": 160,
+             "h": 160,
+             "x": 200.0,
+             "y": 168,
+             "fill": {
+              "hex": "FFFFFF",
+              "opacity": 0.18
+             }
+            },
+            {
+             "type": "RECT",
+             "name": "Img auras/UnknownAura",
+             "w": 110,
+             "h": 110,
+             "x": 225.0,
+             "y": 115.0
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Shadow",
+             "w": 80,
+             "h": 80,
+             "x": 240.0,
+             "y": 200,
+             "fill": {
+              "hex": "000000",
+              "opacity": 0.25
+             }
+            }
+           ]
+          },
+          {
+           "type": "TEXT",
+           "text": "ROLL dims the shop and drops a mystery orb onto the altar.",
+           "textStyle": "Aura Fishing/Small",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Desc",
+           "w": 560
+          }
+         ]
+        },
+        {
+         "name": "Key Charge",
+         "layout": "V",
+         "gap": 6,
+         "w": 560,
+         "children": [
+          {
+           "name": "Head",
+           "layout": "H",
+           "gap": 8,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Time",
+             "layout": "H",
+             "pad": [
+              3,
+              10,
+              4,
+              10
+             ],
+             "radius": 999,
+             "fill": {
+              "hex": "3D4B5C"
+             },
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "0.6s",
+               "textStyle": "Aura Fishing/Caption",
+               "color": "FFFFFF",
+               "name": "T"
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "Charge",
+             "textStyle": "Aura Fishing/Heading",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Label"
+            }
+           ]
+          },
+          {
+           "name": "Frame",
+           "w": 560,
+           "h": 315,
+           "radius": 16,
+           "clip": true,
+           "children": [
+            {
+             "type": "RECT",
+             "name": "Bg ui/gacha_bg_cosmic",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "hex": "1B2440"
+             }
+            },
+            {
+             "type": "RECT",
+             "name": "Dim",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "hex": "0B1226",
+              "opacity": 0.65
+             }
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Ring 0",
+             "w": 140,
+             "h": 140,
+             "x": 210.0,
+             "y": 90,
+             "fill": {
+              "hex": "FFFFFF",
+              "opacity": 0
+             },
+             "stroke": {
+              "hex": "FFFFFF",
+              "opacity": 0.8
+             },
+             "strokeW": 2
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Ring 1",
+             "w": 200,
+             "h": 200,
+             "x": 180.0,
+             "y": 60,
+             "fill": {
+              "hex": "FFFFFF",
+              "opacity": 0
+             },
+             "stroke": {
+              "hex": "B79CF2",
+              "opacity": 0.8
+             },
+             "strokeW": 2
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Ring 2",
+             "w": 260,
+             "h": 260,
+             "x": 150.0,
+             "y": 30,
+             "fill": {
+              "hex": "FFFFFF",
+              "opacity": 0
+             },
+             "stroke": {
+              "hex": "F2A93B",
+              "opacity": 0.8
+             },
+             "strokeW": 2
+            },
+            {
+             "type": "RECT",
+             "name": "Img auras/UnknownAura",
+             "w": 120,
+             "h": 120,
+             "x": 220.0,
+             "y": 100.0
+            },
+            {
+             "type": "RECT",
+             "name": "Img auras/fx_sparkle",
+             "w": 70,
+             "h": 70,
+             "x": 130,
+             "y": 60
+            },
+            {
+             "type": "RECT",
+             "name": "Img auras/fx_sparkle",
+             "w": 50,
+             "h": 50,
+             "x": 380,
+             "y": 200
+            },
+            {
+             "type": "RECT",
+             "name": "Img auras/fx_sparkle",
+             "w": 40,
+             "h": 40,
+             "x": 360,
+             "y": 50
+            }
+           ]
+          },
+          {
+           "type": "TEXT",
+           "text": "Rings pulse; their colour climbs white -> lilac -> gold toward the real rarity (the tease).",
+           "textStyle": "Aura Fishing/Small",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Desc",
+           "w": 560
+          }
+         ]
+        },
+        {
+         "name": "Key Burst",
+         "layout": "V",
+         "gap": 6,
+         "w": 560,
+         "children": [
+          {
+           "name": "Head",
+           "layout": "H",
+           "gap": 8,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Time",
+             "layout": "H",
+             "pad": [
+              3,
+              10,
+              4,
+              10
+             ],
+             "radius": 999,
+             "fill": {
+              "hex": "3D4B5C"
+             },
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "1.6s",
+               "textStyle": "Aura Fishing/Caption",
+               "color": "FFFFFF",
+               "name": "T"
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "Burst",
+             "textStyle": "Aura Fishing/Heading",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Label"
+            }
+           ]
+          },
+          {
+           "name": "Frame",
+           "w": 560,
+           "h": 315,
+           "radius": 16,
+           "clip": true,
+           "children": [
+            {
+             "type": "RECT",
+             "name": "Bg ui/gacha_bg_cosmic",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "hex": "1B2440"
+             }
+            },
+            {
+             "type": "RECT",
+             "name": "Dim",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "hex": "0B1226",
+              "opacity": 0.4
+             }
+            },
+            {
+             "type": "SVG",
+             "name": "Rays",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "svg": "<svg width=\"560\" height=\"315\" viewBox=\"0 0 560 315\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M280.0 160L610.0 160.0\" stroke=\"#F2A93B\" stroke-opacity=\"0.55\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 160L584.9 286.3\" stroke=\"#F2A93B\" stroke-opacity=\"0.55\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 160L513.3 393.3\" stroke=\"#F2A93B\" stroke-opacity=\"0.55\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 160L406.3 464.9\" stroke=\"#F2A93B\" stroke-opacity=\"0.55\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 160L280.0 490.0\" stroke=\"#F2A93B\" stroke-opacity=\"0.55\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 160L153.7 464.9\" stroke=\"#F2A93B\" stroke-opacity=\"0.55\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 160L46.7 393.3\" stroke=\"#F2A93B\" stroke-opacity=\"0.55\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 160L-24.9 286.3\" stroke=\"#F2A93B\" stroke-opacity=\"0.55\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 160L-50.0 160.0\" stroke=\"#F2A93B\" stroke-opacity=\"0.55\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 160L-24.9 33.7\" stroke=\"#F2A93B\" stroke-opacity=\"0.55\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 160L46.7 -73.3\" stroke=\"#F2A93B\" stroke-opacity=\"0.55\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 160L153.7 -144.9\" stroke=\"#F2A93B\" stroke-opacity=\"0.55\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 160L280.0 -170.0\" stroke=\"#F2A93B\" stroke-opacity=\"0.55\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 160L406.3 -144.9\" stroke=\"#F2A93B\" stroke-opacity=\"0.55\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 160L513.3 -73.3\" stroke=\"#F2A93B\" stroke-opacity=\"0.55\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 160L584.9 33.7\" stroke=\"#F2A93B\" stroke-opacity=\"0.55\" stroke-width=\"10\" stroke-linecap=\"round\"/></svg>"
+            },
+            {
+             "type": "RECT",
+             "name": "Img auras/fx_glow",
+             "w": 300,
+             "h": 300,
+             "x": 130.0,
+             "y": 10
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Flash",
+             "w": 160,
+             "h": 160,
+             "x": 200.0,
+             "y": 80,
+             "fill": {
+              "hex": "FFFFFF",
+              "opacity": 0.85
+             }
+            },
+            {
+             "type": "TEXT",
+             "text": "!",
+             "font": {
+              "family": "Fredoka One",
+              "style": "Regular"
+             },
+             "size": 46,
+             "color": "FFFFFF",
+             "name": "Bang",
+             "x": 272.0,
+             "y": 128,
+             "textStroke": "F2A93B",
+             "textStrokeW": 3
+            }
+           ]
+          },
+          {
+           "type": "TEXT",
+           "text": "Orb cracks: flash + rays in the rarity colour. Legendary+ holds 0.5s and shakes.",
+           "textStyle": "Aura Fishing/Small",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Desc",
+           "w": 560
+          }
+         ]
+        },
+        {
+         "name": "Key Reveal",
+         "layout": "V",
+         "gap": 6,
+         "w": 560,
+         "children": [
+          {
+           "name": "Head",
+           "layout": "H",
+           "gap": 8,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Time",
+             "layout": "H",
+             "pad": [
+              3,
+              10,
+              4,
+              10
+             ],
+             "radius": 999,
+             "fill": {
+              "hex": "3D4B5C"
+             },
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "2.2s",
+               "textStyle": "Aura Fishing/Caption",
+               "color": "FFFFFF",
+               "name": "T"
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "Reveal",
+             "textStyle": "Aura Fishing/Heading",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Label"
+            }
+           ]
+          },
+          {
+           "name": "Frame",
+           "w": 560,
+           "h": 315,
+           "radius": 16,
+           "clip": true,
+           "children": [
+            {
+             "type": "RECT",
+             "name": "Bg ui/gacha_bg_cosmic",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "hex": "1B2440"
+             }
+            },
+            {
+             "type": "RECT",
+             "name": "Dim",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "hex": "0B1226",
+              "opacity": 0.55
+             }
+            },
+            {
+             "type": "SVG",
+             "name": "Rays",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "svg": "<svg width=\"560\" height=\"315\" viewBox=\"0 0 560 315\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M280.0 120L540.0 120.0\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L514.3 232.8\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L442.1 323.3\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L337.9 373.5\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L222.1 373.5\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L117.9 323.3\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L45.7 232.8\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L20.0 120.0\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L45.7 7.2\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L117.9 -83.3\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L222.1 -133.5\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L337.9 -133.5\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L442.1 -83.3\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L514.3 7.2\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/></svg>"
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Glow 0",
+             "w": 240,
+             "h": 240,
+             "x": 160.0,
+             "y": 0,
+             "fill": {
+              "hex": "F2A93B",
+              "opacity": 0.18
+             }
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Glow 1",
+             "w": 180,
+             "h": 180,
+             "x": 190.0,
+             "y": 30,
+             "fill": {
+              "hex": "F2A93B",
+              "opacity": 0.25
+             }
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Glow 2",
+             "w": 120,
+             "h": 120,
+             "x": 220.0,
+             "y": 60,
+             "fill": {
+              "hex": "F2A93B",
+              "opacity": 0.35
+             }
+            },
+            {
+             "type": "RECT",
+             "name": "Img auras_Art/AbyssalShadow",
+             "w": 190,
+             "h": 190,
+             "x": 185.0,
+             "y": 22
+            },
+            {
+             "name": "Card",
+             "layout": "V",
+             "gap": 5,
+             "pad": [
+              8,
+              14,
+              10,
+              14
+             ],
+             "w": 300,
+             "x": 130.0,
+             "y": 196,
+             "radius": 16,
+             "cross": "CENTER",
+             "fill": {
+              "hex": "FFF8EC",
+              "opacity": 0.96
+             },
+             "children": [
+              {
+               "name": "Row",
+               "layout": "H",
+               "gap": 6,
+               "cross": "CENTER",
+               "children": [
+                {
+                 "name": "Pill",
+                 "layout": "H",
+                 "pad": [
+                  2,
+                  8,
+                  3,
+                  8
+                 ],
+                 "radius": 999,
+                 "fill": {
+                  "hex": "F2A93B"
+                 },
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "LEGENDARY",
+                   "textStyle": "Aura Fishing/Caption",
+                   "color": "FFFFFF",
+                   "name": "R"
+                  }
+                 ]
+                },
+                {
+                 "type": "TEXT",
+                 "text": "Abyssal Shadow",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 18,
+                 "color": "3D4B5C",
+                 "name": "N"
+                },
+                {
+                 "name": "New",
+                 "layout": "H",
+                 "pad": [
+                  2,
+                  7,
+                  3,
+                  7
+                 ],
+                 "radius": 999,
+                 "fill": {
+                  "hex": "FF9E80"
+                 },
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "NEW!",
+                   "textStyle": "Aura Fishing/Caption",
+                   "color": "FFFFFF",
+                   "name": "N"
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "1 in 5,000  |  +50% Luck  |  +3% Void-Touched",
+               "textStyle": "Aura Fishing/Caption",
+               "color": "7A8A99",
+               "name": "Stats"
+              },
+              {
+               "name": "Buttons",
+               "layout": "H",
+               "gap": 6,
+               "children": [
+                {
+                 "name": "Btn EQUIP",
+                 "layout": "H",
+                 "w": 80,
+                 "h": 26,
+                 "radius": 9,
+                 "main": "CENTER",
+                 "cross": "CENTER",
+                 "fill": {
+                  "hex": "7FD3B0"
+                 },
+                 "stroke": {
+                  "hex": "4FB58C"
+                 },
+                 "strokeSides": {
+                  "b": 3
+                 },
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "EQUIP",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 11,
+                   "color": "FFFFFF",
+                   "name": "L"
+                  }
+                 ]
+                },
+                {
+                 "name": "Btn ROLL AGAIN",
+                 "layout": "H",
+                 "w": 100,
+                 "h": 26,
+                 "radius": 9,
+                 "main": "CENTER",
+                 "cross": "CENTER",
+                 "fill": {
+                  "hex": "B79CF2"
+                 },
+                 "stroke": {
+                  "hex": "8C6FD6"
+                 },
+                 "strokeSides": {
+                  "b": 3
+                 },
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "ROLL AGAIN",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 11,
+                   "color": "FFFFFF",
+                   "name": "L"
+                  }
+                 ]
+                },
+                {
+                 "name": "Btn CLOSE",
+                 "layout": "H",
+                 "w": 70,
+                 "h": 26,
+                 "radius": 9,
+                 "main": "CENTER",
+                 "cross": "CENTER",
+                 "fill": {
+                  "hex": "C9BBA3"
+                 },
+                 "stroke": {
+                  "hex": "9AA5B1"
+                 },
+                 "strokeSides": {
+                  "b": 3
+                 },
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "CLOSE",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 11,
+                   "color": "FFFFFF",
+                   "name": "L"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "TEXT",
+           "text": "Result card. Tap anywhere during 0-1.6s to skip straight here.",
+           "textStyle": "Aura Fishing/Small",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Desc",
+           "w": 560
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Option 2",
+     "layout": "V",
+     "gap": 10,
+     "x": 60,
+     "y": 720,
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "2 · Reel Slot v2",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "type": "TEXT",
+       "text": "Today's reel made cleaner: glass window, near-miss tease, rarity lock. Least new work (AuraReel exists).",
+       "textStyle": "Aura Fishing/Small",
+       "color": {
+        "var": "cozy/subtext"
+       },
+       "name": "Desc",
+       "w": 2300
+      },
+      {
+       "name": "Keys",
+       "layout": "H",
+       "gap": 24,
+       "children": [
+        {
+         "name": "Key Spin",
+         "layout": "V",
+         "gap": 6,
+         "w": 560,
+         "children": [
+          {
+           "name": "Head",
+           "layout": "H",
+           "gap": 8,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Time",
+             "layout": "H",
+             "pad": [
+              3,
+              10,
+              4,
+              10
+             ],
+             "radius": 999,
+             "fill": {
+              "hex": "3D4B5C"
+             },
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "0.0s",
+               "textStyle": "Aura Fishing/Caption",
+               "color": "FFFFFF",
+               "name": "T"
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "Spin",
+             "textStyle": "Aura Fishing/Heading",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Label"
+            }
+           ]
+          },
+          {
+           "name": "Frame",
+           "w": 560,
+           "h": 315,
+           "radius": 16,
+           "clip": true,
+           "children": [
+            {
+             "type": "RECT",
+             "name": "Bg ui/gacha_bg_celestial",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "hex": "1B2440"
+             }
+            },
+            {
+             "type": "RECT",
+             "name": "Dim",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "hex": "E5DBFA",
+              "opacity": 0.2
+             }
+            },
+            {
+             "name": "Reel",
+             "w": 150,
+             "h": 250,
+             "x": 205.0,
+             "y": 32,
+             "radius": 26,
+             "clip": true,
+             "fill": {
+              "hex": "FFFFFF",
+              "opacity": 0.85
+             },
+             "stroke": {
+              "hex": "F2B544"
+             },
+             "strokeW": 4,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img auras/SparklingDew",
+               "w": 70,
+               "h": 70,
+               "x": 40.0,
+               "y": -5.0,
+               "opacity": 0.55
+              },
+              {
+               "type": "RECT",
+               "name": "Img auras/NeonWave",
+               "w": 70,
+               "h": 70,
+               "x": 40.0,
+               "y": 90.0,
+               "opacity": 0.55
+              },
+              {
+               "type": "RECT",
+               "name": "Img auras/SolarFlare",
+               "w": 70,
+               "h": 70,
+               "x": 40.0,
+               "y": 185.0,
+               "opacity": 0.55
+              },
+              {
+               "type": "RECT",
+               "name": "Streak 0",
+               "w": 6,
+               "h": 200,
+               "x": 40,
+               "y": 25,
+               "fill": {
+                "hex": "FFFFFF",
+                "opacity": 0.5
+               }
+              },
+              {
+               "type": "RECT",
+               "name": "Streak 1",
+               "w": 6,
+               "h": 200,
+               "x": 70,
+               "y": 25,
+               "fill": {
+                "hex": "FFFFFF",
+                "opacity": 0.5
+               }
+              },
+              {
+               "type": "RECT",
+               "name": "Streak 2",
+               "w": 6,
+               "h": 200,
+               "x": 100,
+               "y": 25,
+               "fill": {
+                "hex": "FFFFFF",
+                "opacity": 0.5
+               }
+              },
+              {
+               "type": "RECT",
+               "name": "Centre",
+               "w": 150,
+               "h": 3,
+               "x": 0,
+               "y": 124,
+               "fill": {
+                "hex": "FFFFFF",
+                "opacity": 0.8
+               }
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "TEXT",
+           "text": "Today's reel, cleaner: glass window, motion streaks, no cabinet.",
+           "textStyle": "Aura Fishing/Small",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Desc",
+           "w": 560
+          }
+         ]
+        },
+        {
+         "name": "Key Slow + near miss",
+         "layout": "V",
+         "gap": 6,
+         "w": 560,
+         "children": [
+          {
+           "name": "Head",
+           "layout": "H",
+           "gap": 8,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Time",
+             "layout": "H",
+             "pad": [
+              3,
+              10,
+              4,
+              10
+             ],
+             "radius": 999,
+             "fill": {
+              "hex": "3D4B5C"
+             },
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "1.2s",
+               "textStyle": "Aura Fishing/Caption",
+               "color": "FFFFFF",
+               "name": "T"
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "Slow + near miss",
+             "textStyle": "Aura Fishing/Heading",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Label"
+            }
+           ]
+          },
+          {
+           "name": "Frame",
+           "w": 560,
+           "h": 315,
+           "radius": 16,
+           "clip": true,
+           "children": [
+            {
+             "type": "RECT",
+             "name": "Bg ui/gacha_bg_celestial",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "hex": "1B2440"
+             }
+            },
+            {
+             "type": "RECT",
+             "name": "Dim",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "hex": "E5DBFA",
+              "opacity": 0.2
+             }
+            },
+            {
+             "name": "Reel",
+             "w": 150,
+             "h": 250,
+             "x": 205.0,
+             "y": 32,
+             "radius": 26,
+             "clip": true,
+             "fill": {
+              "hex": "FFFFFF",
+              "opacity": 0.85
+             },
+             "stroke": {
+              "hex": "F2B544"
+             },
+             "strokeW": 4,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img auras/DragonEmperor",
+               "w": 74,
+               "h": 74,
+               "x": 38.0,
+               "y": -5.0
+              },
+              {
+               "type": "RECT",
+               "name": "Img auras/AbyssalShadow",
+               "w": 80,
+               "h": 80,
+               "x": 35.0,
+               "y": 85.0
+              },
+              {
+               "type": "RECT",
+               "name": "Img auras/SolarFlare",
+               "w": 74,
+               "h": 74,
+               "x": 38.0,
+               "y": 181.0
+              },
+              {
+               "type": "RECT",
+               "name": "Centre",
+               "w": 150,
+               "h": 3,
+               "x": 0,
+               "y": 124,
+               "fill": {
+                "hex": "FFFFFF",
+                "opacity": 0.8
+               }
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "near miss!",
+             "textStyle": "Aura Fishing/Small",
+             "color": "F2668B",
+             "name": "Hint",
+             "x": 372,
+             "y": 40
+            }
+           ]
+          },
+          {
+           "type": "TEXT",
+           "text": "Slows down; a rarer orb passes the line first (Dragon Emperor) to tease.",
+           "textStyle": "Aura Fishing/Small",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Desc",
+           "w": 560
+          }
+         ]
+        },
+        {
+         "name": "Key Lock",
+         "layout": "V",
+         "gap": 6,
+         "w": 560,
+         "children": [
+          {
+           "name": "Head",
+           "layout": "H",
+           "gap": 8,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Time",
+             "layout": "H",
+             "pad": [
+              3,
+              10,
+              4,
+              10
+             ],
+             "radius": 999,
+             "fill": {
+              "hex": "3D4B5C"
+             },
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "2.0s",
+               "textStyle": "Aura Fishing/Caption",
+               "color": "FFFFFF",
+               "name": "T"
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "Lock",
+             "textStyle": "Aura Fishing/Heading",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Label"
+            }
+           ]
+          },
+          {
+           "name": "Frame",
+           "w": 560,
+           "h": 315,
+           "radius": 16,
+           "clip": true,
+           "children": [
+            {
+             "type": "RECT",
+             "name": "Bg ui/gacha_bg_celestial",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "hex": "1B2440"
+             }
+            },
+            {
+             "type": "RECT",
+             "name": "Dim",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "hex": "E5DBFA",
+              "opacity": 0.3
+             }
+            },
+            {
+             "type": "SVG",
+             "name": "Rays",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "svg": "<svg width=\"560\" height=\"315\" viewBox=\"0 0 560 315\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M280.0 157L580.0 157.0\" stroke=\"#F2A93B\" stroke-opacity=\"0.45\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 157L550.3 287.2\" stroke=\"#F2A93B\" stroke-opacity=\"0.45\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 157L467.0 391.5\" stroke=\"#F2A93B\" stroke-opacity=\"0.45\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 157L346.8 449.5\" stroke=\"#F2A93B\" stroke-opacity=\"0.45\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 157L213.2 449.5\" stroke=\"#F2A93B\" stroke-opacity=\"0.45\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 157L93.0 391.5\" stroke=\"#F2A93B\" stroke-opacity=\"0.45\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 157L9.7 287.2\" stroke=\"#F2A93B\" stroke-opacity=\"0.45\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 157L-20.0 157.0\" stroke=\"#F2A93B\" stroke-opacity=\"0.45\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 157L9.7 26.8\" stroke=\"#F2A93B\" stroke-opacity=\"0.45\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 157L93.0 -77.5\" stroke=\"#F2A93B\" stroke-opacity=\"0.45\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 157L213.2 -135.5\" stroke=\"#F2A93B\" stroke-opacity=\"0.45\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 157L346.8 -135.5\" stroke=\"#F2A93B\" stroke-opacity=\"0.45\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 157L467.0 -77.5\" stroke=\"#F2A93B\" stroke-opacity=\"0.45\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 157L550.3 26.8\" stroke=\"#F2A93B\" stroke-opacity=\"0.45\" stroke-width=\"10\" stroke-linecap=\"round\"/></svg>"
+            },
+            {
+             "name": "Reel",
+             "w": 150,
+             "h": 250,
+             "x": 205.0,
+             "y": 32,
+             "radius": 26,
+             "clip": true,
+             "fill": {
+              "hex": "FFFFFF",
+              "opacity": 0.85
+             },
+             "stroke": {
+              "hex": "F2A93B"
+             },
+             "strokeW": 4,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img auras/AbyssalShadow",
+               "w": 96,
+               "h": 96,
+               "x": 27.0,
+               "y": 77.0
+              },
+              {
+               "type": "RECT",
+               "name": "Centre",
+               "w": 150,
+               "h": 3,
+               "x": 0,
+               "y": 124,
+               "fill": {
+                "hex": "FFFFFF",
+                "opacity": 0.8
+               }
+              }
+             ]
+            },
+            {
+             "type": "RECT",
+             "name": "Confetti 0",
+             "w": 8,
+             "h": 14,
+             "x": 60,
+             "y": 20,
+             "radius": 2,
+             "fill": {
+              "hex": "F2B544"
+             }
+            },
+            {
+             "type": "RECT",
+             "name": "Confetti 1",
+             "w": 8,
+             "h": 14,
+             "x": 107,
+             "y": 57,
+             "radius": 2,
+             "fill": {
+              "hex": "FF9E80"
+             }
+            },
+            {
+             "type": "RECT",
+             "name": "Confetti 2",
+             "w": 8,
+             "h": 14,
+             "x": 154,
+             "y": 94,
+             "radius": 2,
+             "fill": {
+              "hex": "7FD3B0"
+             }
+            },
+            {
+             "type": "RECT",
+             "name": "Confetti 3",
+             "w": 8,
+             "h": 14,
+             "x": 201,
+             "y": 131,
+             "radius": 2,
+             "fill": {
+              "hex": "9AD4F5"
+             }
+            },
+            {
+             "type": "RECT",
+             "name": "Confetti 4",
+             "w": 8,
+             "h": 14,
+             "x": 248,
+             "y": 168,
+             "radius": 2,
+             "fill": {
+              "hex": "B79CF2"
+             }
+            },
+            {
+             "type": "RECT",
+             "name": "Confetti 5",
+             "w": 8,
+             "h": 14,
+             "x": 295,
+             "y": 205,
+             "radius": 2,
+             "fill": {
+              "hex": "F2B544"
+             }
+            },
+            {
+             "type": "RECT",
+             "name": "Confetti 6",
+             "w": 8,
+             "h": 14,
+             "x": 342,
+             "y": 242,
+             "radius": 2,
+             "fill": {
+              "hex": "FF9E80"
+             }
+            },
+            {
+             "type": "RECT",
+             "name": "Confetti 7",
+             "w": 8,
+             "h": 14,
+             "x": 389,
+             "y": 279,
+             "radius": 2,
+             "fill": {
+              "hex": "7FD3B0"
+             }
+            },
+            {
+             "type": "RECT",
+             "name": "Confetti 8",
+             "w": 8,
+             "h": 14,
+             "x": 436,
+             "y": 56,
+             "radius": 2,
+             "fill": {
+              "hex": "9AD4F5"
+             }
+            },
+            {
+             "type": "RECT",
+             "name": "Confetti 9",
+             "w": 8,
+             "h": 14,
+             "x": 483,
+             "y": 93,
+             "radius": 2,
+             "fill": {
+              "hex": "B79CF2"
+             }
+            }
+           ]
+          },
+          {
+           "type": "TEXT",
+           "text": "Locks on the result: frame turns the rarity colour, rays + confetti.",
+           "textStyle": "Aura Fishing/Small",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Desc",
+           "w": 560
+          }
+         ]
+        },
+        {
+         "name": "Key Reveal",
+         "layout": "V",
+         "gap": 6,
+         "w": 560,
+         "children": [
+          {
+           "name": "Head",
+           "layout": "H",
+           "gap": 8,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Time",
+             "layout": "H",
+             "pad": [
+              3,
+              10,
+              4,
+              10
+             ],
+             "radius": 999,
+             "fill": {
+              "hex": "3D4B5C"
+             },
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "2.6s",
+               "textStyle": "Aura Fishing/Caption",
+               "color": "FFFFFF",
+               "name": "T"
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "Reveal",
+             "textStyle": "Aura Fishing/Heading",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Label"
+            }
+           ]
+          },
+          {
+           "name": "Frame",
+           "w": 560,
+           "h": 315,
+           "radius": 16,
+           "clip": true,
+           "children": [
+            {
+             "type": "RECT",
+             "name": "Bg ui/gacha_bg_celestial",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "hex": "1B2440"
+             }
+            },
+            {
+             "type": "RECT",
+             "name": "Dim",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "hex": "E5DBFA",
+              "opacity": 0.35
+             }
+            },
+            {
+             "type": "SVG",
+             "name": "Rays",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "svg": "<svg width=\"560\" height=\"315\" viewBox=\"0 0 560 315\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M280.0 120L540.0 120.0\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L514.3 232.8\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L442.1 323.3\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L337.9 373.5\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L222.1 373.5\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L117.9 323.3\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L45.7 232.8\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L20.0 120.0\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L45.7 7.2\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L117.9 -83.3\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L222.1 -133.5\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L337.9 -133.5\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L442.1 -83.3\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L514.3 7.2\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/></svg>"
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Glow 0",
+             "w": 240,
+             "h": 240,
+             "x": 160.0,
+             "y": 0,
+             "fill": {
+              "hex": "F2A93B",
+              "opacity": 0.18
+             }
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Glow 1",
+             "w": 180,
+             "h": 180,
+             "x": 190.0,
+             "y": 30,
+             "fill": {
+              "hex": "F2A93B",
+              "opacity": 0.25
+             }
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Glow 2",
+             "w": 120,
+             "h": 120,
+             "x": 220.0,
+             "y": 60,
+             "fill": {
+              "hex": "F2A93B",
+              "opacity": 0.35
+             }
+            },
+            {
+             "type": "RECT",
+             "name": "Img auras_Art/AbyssalShadow",
+             "w": 190,
+             "h": 190,
+             "x": 185.0,
+             "y": 22
+            },
+            {
+             "name": "Card",
+             "layout": "V",
+             "gap": 5,
+             "pad": [
+              8,
+              14,
+              10,
+              14
+             ],
+             "w": 300,
+             "x": 130.0,
+             "y": 196,
+             "radius": 16,
+             "cross": "CENTER",
+             "fill": {
+              "hex": "FFF8EC",
+              "opacity": 0.96
+             },
+             "children": [
+              {
+               "name": "Row",
+               "layout": "H",
+               "gap": 6,
+               "cross": "CENTER",
+               "children": [
+                {
+                 "name": "Pill",
+                 "layout": "H",
+                 "pad": [
+                  2,
+                  8,
+                  3,
+                  8
+                 ],
+                 "radius": 999,
+                 "fill": {
+                  "hex": "F2A93B"
+                 },
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "LEGENDARY",
+                   "textStyle": "Aura Fishing/Caption",
+                   "color": "FFFFFF",
+                   "name": "R"
+                  }
+                 ]
+                },
+                {
+                 "type": "TEXT",
+                 "text": "Abyssal Shadow",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 18,
+                 "color": "3D4B5C",
+                 "name": "N"
+                },
+                {
+                 "name": "New",
+                 "layout": "H",
+                 "pad": [
+                  2,
+                  7,
+                  3,
+                  7
+                 ],
+                 "radius": 999,
+                 "fill": {
+                  "hex": "FF9E80"
+                 },
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "NEW!",
+                   "textStyle": "Aura Fishing/Caption",
+                   "color": "FFFFFF",
+                   "name": "N"
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "1 in 5,000  |  +50% Luck  |  +3% Void-Touched",
+               "textStyle": "Aura Fishing/Caption",
+               "color": "7A8A99",
+               "name": "Stats"
+              },
+              {
+               "name": "Buttons",
+               "layout": "H",
+               "gap": 6,
+               "children": [
+                {
+                 "name": "Btn EQUIP",
+                 "layout": "H",
+                 "w": 80,
+                 "h": 26,
+                 "radius": 9,
+                 "main": "CENTER",
+                 "cross": "CENTER",
+                 "fill": {
+                  "hex": "7FD3B0"
+                 },
+                 "stroke": {
+                  "hex": "4FB58C"
+                 },
+                 "strokeSides": {
+                  "b": 3
+                 },
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "EQUIP",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 11,
+                   "color": "FFFFFF",
+                   "name": "L"
+                  }
+                 ]
+                },
+                {
+                 "name": "Btn ROLL AGAIN",
+                 "layout": "H",
+                 "w": 100,
+                 "h": 26,
+                 "radius": 9,
+                 "main": "CENTER",
+                 "cross": "CENTER",
+                 "fill": {
+                  "hex": "B79CF2"
+                 },
+                 "stroke": {
+                  "hex": "8C6FD6"
+                 },
+                 "strokeSides": {
+                  "b": 3
+                 },
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "ROLL AGAIN",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 11,
+                   "color": "FFFFFF",
+                   "name": "L"
+                  }
+                 ]
+                },
+                {
+                 "name": "Btn CLOSE",
+                 "layout": "H",
+                 "w": 70,
+                 "h": 26,
+                 "radius": 9,
+                 "main": "CENTER",
+                 "cross": "CENTER",
+                 "fill": {
+                  "hex": "C9BBA3"
+                 },
+                 "stroke": {
+                  "hex": "9AA5B1"
+                 },
+                 "strokeSides": {
+                  "b": 3
+                 },
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "CLOSE",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 11,
+                   "color": "FFFFFF",
+                   "name": "L"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "TEXT",
+           "text": "Same reveal card as option 1.",
+           "textStyle": "Aura Fishing/Small",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Desc",
+           "w": 560
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Option 3",
+     "layout": "V",
+     "gap": 10,
+     "x": 60,
+     "y": 1240,
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "3 · Deep Cast",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "type": "TEXT",
+       "text": "Fishing theme: cast, bite \"!\", the water glows the rarity colour, the aura splashes out. Most on-brand.",
+       "textStyle": "Aura Fishing/Small",
+       "color": {
+        "var": "cozy/subtext"
+       },
+       "name": "Desc",
+       "w": 2300
+      },
+      {
+       "name": "Keys",
+       "layout": "H",
+       "gap": 24,
+       "children": [
+        {
+         "name": "Key Cast",
+         "layout": "V",
+         "gap": 6,
+         "w": 560,
+         "children": [
+          {
+           "name": "Head",
+           "layout": "H",
+           "gap": 8,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Time",
+             "layout": "H",
+             "pad": [
+              3,
+              10,
+              4,
+              10
+             ],
+             "radius": 999,
+             "fill": {
+              "hex": "3D4B5C"
+             },
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "0.0s",
+               "textStyle": "Aura Fishing/Caption",
+               "color": "FFFFFF",
+               "name": "T"
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "Cast",
+             "textStyle": "Aura Fishing/Heading",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Label"
+            }
+           ]
+          },
+          {
+           "name": "Frame",
+           "w": 560,
+           "h": 315,
+           "radius": 16,
+           "clip": true,
+           "children": [
+            {
+             "type": "RECT",
+             "name": "Bg ui/gacha_bg_cozy",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "hex": "1B2440"
+             }
+            },
+            {
+             "type": "RECT",
+             "name": "Dim",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "hex": "FFF8EC",
+              "opacity": 0.15
+             }
+            },
+            {
+             "type": "RECT",
+             "name": "Water",
+             "w": 560,
+             "h": 140,
+             "x": 0,
+             "y": 175,
+             "fill": {
+              "grad": [
+               "9AD4F5",
+               "3A7FB8"
+              ],
+              "angle": 90
+             },
+             "opacity": 0.9
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Ripple 0",
+             "w": 60,
+             "h": 60,
+             "x": 250.0,
+             "y": 160,
+             "fill": {
+              "hex": "FFFFFF",
+              "opacity": 0
+             },
+             "stroke": {
+              "hex": "FFFFFF",
+              "opacity": 0.6
+             },
+             "strokeW": 2
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Ripple 1",
+             "w": 104,
+             "h": 104,
+             "x": 228.0,
+             "y": 138,
+             "fill": {
+              "hex": "FFFFFF",
+              "opacity": 0
+             },
+             "stroke": {
+              "hex": "FFFFFF",
+              "opacity": 0.44999999999999996
+             },
+             "strokeW": 2
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Ripple 2",
+             "w": 148,
+             "h": 148,
+             "x": 206.0,
+             "y": 116,
+             "fill": {
+              "hex": "FFFFFF",
+              "opacity": 0
+             },
+             "stroke": {
+              "hex": "FFFFFF",
+              "opacity": 0.3
+             },
+             "strokeW": 2
+            },
+            {
+             "type": "RECT",
+             "name": "Img ui/status/bobber",
+             "w": 60,
+             "h": 60,
+             "x": 250.0,
+             "y": 150
+            }
+           ]
+          },
+          {
+           "type": "TEXT",
+           "text": "On-theme: the line lands, the bobber floats in the shop's pond.",
+           "textStyle": "Aura Fishing/Small",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Desc",
+           "w": 560
+          }
+         ]
+        },
+        {
+         "name": "Key Bite!",
+         "layout": "V",
+         "gap": 6,
+         "w": 560,
+         "children": [
+          {
+           "name": "Head",
+           "layout": "H",
+           "gap": 8,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Time",
+             "layout": "H",
+             "pad": [
+              3,
+              10,
+              4,
+              10
+             ],
+             "radius": 999,
+             "fill": {
+              "hex": "3D4B5C"
+             },
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "0.9s",
+               "textStyle": "Aura Fishing/Caption",
+               "color": "FFFFFF",
+               "name": "T"
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "Bite!",
+             "textStyle": "Aura Fishing/Heading",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Label"
+            }
+           ]
+          },
+          {
+           "name": "Frame",
+           "w": 560,
+           "h": 315,
+           "radius": 16,
+           "clip": true,
+           "children": [
+            {
+             "type": "RECT",
+             "name": "Bg ui/gacha_bg_cozy",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "hex": "1B2440"
+             }
+            },
+            {
+             "type": "RECT",
+             "name": "Dim",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "hex": "FFF8EC",
+              "opacity": 0.15
+             }
+            },
+            {
+             "type": "RECT",
+             "name": "Water",
+             "w": 560,
+             "h": 140,
+             "x": 0,
+             "y": 175,
+             "fill": {
+              "grad": [
+               "9AD4F5",
+               "3A7FB8"
+              ],
+              "angle": 90
+             },
+             "opacity": 0.9
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Under Glow",
+             "w": 180,
+             "h": 180,
+             "x": 190.0,
+             "y": 140,
+             "fill": {
+              "hex": "F2A93B",
+              "opacity": 0.45
+             }
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Under Glow 2",
+             "w": 110,
+             "h": 110,
+             "x": 225.0,
+             "y": 175,
+             "fill": {
+              "hex": "F2A93B",
+              "opacity": 0.6
+             }
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Ripple 0",
+             "w": 60,
+             "h": 60,
+             "x": 250.0,
+             "y": 160,
+             "fill": {
+              "hex": "FFFFFF",
+              "opacity": 0
+             },
+             "stroke": {
+              "hex": "FFFFFF",
+              "opacity": 0.6
+             },
+             "strokeW": 2
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Ripple 1",
+             "w": 104,
+             "h": 104,
+             "x": 228.0,
+             "y": 138,
+             "fill": {
+              "hex": "FFFFFF",
+              "opacity": 0
+             },
+             "stroke": {
+              "hex": "FFFFFF",
+              "opacity": 0.44999999999999996
+             },
+             "strokeW": 2
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Ripple 2",
+             "w": 148,
+             "h": 148,
+             "x": 206.0,
+             "y": 116,
+             "fill": {
+              "hex": "FFFFFF",
+              "opacity": 0
+             },
+             "stroke": {
+              "hex": "FFFFFF",
+              "opacity": 0.3
+             },
+             "strokeW": 2
+            },
+            {
+             "type": "RECT",
+             "name": "Img ui/status/bobber",
+             "w": 60,
+             "h": 60,
+             "x": 250.0,
+             "y": 160
+            },
+            {
+             "type": "RECT",
+             "name": "Img ui/status/bite_alert",
+             "w": 70,
+             "h": 70,
+             "x": 290.0,
+             "y": 80
+            }
+           ]
+          },
+          {
+           "type": "TEXT",
+           "text": "\"!\" pops; the water glows the rarity colour from below (the tease).",
+           "textStyle": "Aura Fishing/Small",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Desc",
+           "w": 560
+          }
+         ]
+        },
+        {
+         "name": "Key Splash up",
+         "layout": "V",
+         "gap": 6,
+         "w": 560,
+         "children": [
+          {
+           "name": "Head",
+           "layout": "H",
+           "gap": 8,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Time",
+             "layout": "H",
+             "pad": [
+              3,
+              10,
+              4,
+              10
+             ],
+             "radius": 999,
+             "fill": {
+              "hex": "3D4B5C"
+             },
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "1.6s",
+               "textStyle": "Aura Fishing/Caption",
+               "color": "FFFFFF",
+               "name": "T"
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "Splash up",
+             "textStyle": "Aura Fishing/Heading",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Label"
+            }
+           ]
+          },
+          {
+           "name": "Frame",
+           "w": 560,
+           "h": 315,
+           "radius": 16,
+           "clip": true,
+           "children": [
+            {
+             "type": "RECT",
+             "name": "Bg ui/gacha_bg_cozy",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "hex": "1B2440"
+             }
+            },
+            {
+             "type": "RECT",
+             "name": "Dim",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "hex": "FFF8EC",
+              "opacity": 0.2
+             }
+            },
+            {
+             "type": "RECT",
+             "name": "Water",
+             "w": 560,
+             "h": 140,
+             "x": 0,
+             "y": 175,
+             "fill": {
+              "grad": [
+               "9AD4F5",
+               "3A7FB8"
+              ],
+              "angle": 90
+             },
+             "opacity": 0.9
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Under Glow",
+             "w": 180,
+             "h": 180,
+             "x": 190.0,
+             "y": 140,
+             "fill": {
+              "hex": "F2A93B",
+              "opacity": 0.45
+             }
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Under Glow 2",
+             "w": 110,
+             "h": 110,
+             "x": 225.0,
+             "y": 175,
+             "fill": {
+              "hex": "F2A93B",
+              "opacity": 0.6
+             }
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Ripple 0",
+             "w": 60,
+             "h": 60,
+             "x": 250.0,
+             "y": 160,
+             "fill": {
+              "hex": "FFFFFF",
+              "opacity": 0
+             },
+             "stroke": {
+              "hex": "FFFFFF",
+              "opacity": 0.6
+             },
+             "strokeW": 2
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Ripple 1",
+             "w": 104,
+             "h": 104,
+             "x": 228.0,
+             "y": 138,
+             "fill": {
+              "hex": "FFFFFF",
+              "opacity": 0
+             },
+             "stroke": {
+              "hex": "FFFFFF",
+              "opacity": 0.44999999999999996
+             },
+             "strokeW": 2
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Ripple 2",
+             "w": 148,
+             "h": 148,
+             "x": 206.0,
+             "y": 116,
+             "fill": {
+              "hex": "FFFFFF",
+              "opacity": 0
+             },
+             "stroke": {
+              "hex": "FFFFFF",
+              "opacity": 0.3
+             },
+             "strokeW": 2
+            },
+            {
+             "type": "SVG",
+             "name": "Rays",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "svg": "<svg width=\"560\" height=\"315\" viewBox=\"0 0 560 315\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M280.0 150L560.0 150.0\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 150L522.5 290.0\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 150L420.0 392.5\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 150L280.0 430.0\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 150L140.0 392.5\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 150L37.5 290.0\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 150L0.0 150.0\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 150L37.5 10.0\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 150L140.0 -92.5\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 150L280.0 -130.0\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 150L420.0 -92.5\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 150L522.5 10.0\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/></svg>"
+            },
+            {
+             "type": "RECT",
+             "name": "Img auras/AbyssalShadow",
+             "w": 140,
+             "h": 140,
+             "x": 210.0,
+             "y": 70.0
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Drop 0",
+             "w": 12,
+             "h": 12,
+             "x": 194,
+             "y": 114,
+             "fill": {
+              "hex": "FFFFFF",
+              "opacity": 0.85
+             }
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Drop 1",
+             "w": 12,
+             "h": 12,
+             "x": 234,
+             "y": 144,
+             "fill": {
+              "hex": "FFFFFF",
+              "opacity": 0.85
+             }
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Drop 2",
+             "w": 12,
+             "h": 12,
+             "x": 274,
+             "y": 174,
+             "fill": {
+              "hex": "FFFFFF",
+              "opacity": 0.85
+             }
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Drop 3",
+             "w": 12,
+             "h": 12,
+             "x": 314,
+             "y": 114,
+             "fill": {
+              "hex": "FFFFFF",
+              "opacity": 0.85
+             }
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Drop 4",
+             "w": 12,
+             "h": 12,
+             "x": 354,
+             "y": 144,
+             "fill": {
+              "hex": "FFFFFF",
+              "opacity": 0.85
+             }
+            }
+           ]
+          },
+          {
+           "type": "TEXT",
+           "text": "The aura bursts out of the water with drops + rays.",
+           "textStyle": "Aura Fishing/Small",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Desc",
+           "w": 560
+          }
+         ]
+        },
+        {
+         "name": "Key Reveal",
+         "layout": "V",
+         "gap": 6,
+         "w": 560,
+         "children": [
+          {
+           "name": "Head",
+           "layout": "H",
+           "gap": 8,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Time",
+             "layout": "H",
+             "pad": [
+              3,
+              10,
+              4,
+              10
+             ],
+             "radius": 999,
+             "fill": {
+              "hex": "3D4B5C"
+             },
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "2.2s",
+               "textStyle": "Aura Fishing/Caption",
+               "color": "FFFFFF",
+               "name": "T"
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "Reveal",
+             "textStyle": "Aura Fishing/Heading",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Label"
+            }
+           ]
+          },
+          {
+           "name": "Frame",
+           "w": 560,
+           "h": 315,
+           "radius": 16,
+           "clip": true,
+           "children": [
+            {
+             "type": "RECT",
+             "name": "Bg ui/gacha_bg_cozy",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "hex": "1B2440"
+             }
+            },
+            {
+             "type": "RECT",
+             "name": "Dim",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "hex": "0B1226",
+              "opacity": 0.35
+             }
+            },
+            {
+             "type": "SVG",
+             "name": "Rays",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "svg": "<svg width=\"560\" height=\"315\" viewBox=\"0 0 560 315\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M280.0 120L540.0 120.0\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L514.3 232.8\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L442.1 323.3\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L337.9 373.5\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L222.1 373.5\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L117.9 323.3\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L45.7 232.8\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L20.0 120.0\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L45.7 7.2\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L117.9 -83.3\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L222.1 -133.5\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L337.9 -133.5\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L442.1 -83.3\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L514.3 7.2\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/></svg>"
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Glow 0",
+             "w": 240,
+             "h": 240,
+             "x": 160.0,
+             "y": 0,
+             "fill": {
+              "hex": "F2A93B",
+              "opacity": 0.18
+             }
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Glow 1",
+             "w": 180,
+             "h": 180,
+             "x": 190.0,
+             "y": 30,
+             "fill": {
+              "hex": "F2A93B",
+              "opacity": 0.25
+             }
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Glow 2",
+             "w": 120,
+             "h": 120,
+             "x": 220.0,
+             "y": 60,
+             "fill": {
+              "hex": "F2A93B",
+              "opacity": 0.35
+             }
+            },
+            {
+             "type": "RECT",
+             "name": "Img auras_Art/AbyssalShadow",
+             "w": 190,
+             "h": 190,
+             "x": 185.0,
+             "y": 22
+            },
+            {
+             "name": "Card",
+             "layout": "V",
+             "gap": 5,
+             "pad": [
+              8,
+              14,
+              10,
+              14
+             ],
+             "w": 300,
+             "x": 130.0,
+             "y": 196,
+             "radius": 16,
+             "cross": "CENTER",
+             "fill": {
+              "hex": "FFF8EC",
+              "opacity": 0.96
+             },
+             "children": [
+              {
+               "name": "Row",
+               "layout": "H",
+               "gap": 6,
+               "cross": "CENTER",
+               "children": [
+                {
+                 "name": "Pill",
+                 "layout": "H",
+                 "pad": [
+                  2,
+                  8,
+                  3,
+                  8
+                 ],
+                 "radius": 999,
+                 "fill": {
+                  "hex": "F2A93B"
+                 },
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "LEGENDARY",
+                   "textStyle": "Aura Fishing/Caption",
+                   "color": "FFFFFF",
+                   "name": "R"
+                  }
+                 ]
+                },
+                {
+                 "type": "TEXT",
+                 "text": "Abyssal Shadow",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 18,
+                 "color": "3D4B5C",
+                 "name": "N"
+                },
+                {
+                 "name": "New",
+                 "layout": "H",
+                 "pad": [
+                  2,
+                  7,
+                  3,
+                  7
+                 ],
+                 "radius": 999,
+                 "fill": {
+                  "hex": "FF9E80"
+                 },
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "NEW!",
+                   "textStyle": "Aura Fishing/Caption",
+                   "color": "FFFFFF",
+                   "name": "N"
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "1 in 5,000  |  +50% Luck  |  +3% Void-Touched",
+               "textStyle": "Aura Fishing/Caption",
+               "color": "7A8A99",
+               "name": "Stats"
+              },
+              {
+               "name": "Buttons",
+               "layout": "H",
+               "gap": 6,
+               "children": [
+                {
+                 "name": "Btn EQUIP",
+                 "layout": "H",
+                 "w": 80,
+                 "h": 26,
+                 "radius": 9,
+                 "main": "CENTER",
+                 "cross": "CENTER",
+                 "fill": {
+                  "hex": "7FD3B0"
+                 },
+                 "stroke": {
+                  "hex": "4FB58C"
+                 },
+                 "strokeSides": {
+                  "b": 3
+                 },
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "EQUIP",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 11,
+                   "color": "FFFFFF",
+                   "name": "L"
+                  }
+                 ]
+                },
+                {
+                 "name": "Btn ROLL AGAIN",
+                 "layout": "H",
+                 "w": 100,
+                 "h": 26,
+                 "radius": 9,
+                 "main": "CENTER",
+                 "cross": "CENTER",
+                 "fill": {
+                  "hex": "B79CF2"
+                 },
+                 "stroke": {
+                  "hex": "8C6FD6"
+                 },
+                 "strokeSides": {
+                  "b": 3
+                 },
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "ROLL AGAIN",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 11,
+                   "color": "FFFFFF",
+                   "name": "L"
+                  }
+                 ]
+                },
+                {
+                 "name": "Btn CLOSE",
+                 "layout": "H",
+                 "w": 70,
+                 "h": 26,
+                 "radius": 9,
+                 "main": "CENTER",
+                 "cross": "CENTER",
+                 "fill": {
+                  "hex": "C9BBA3"
+                 },
+                 "stroke": {
+                  "hex": "9AA5B1"
+                 },
+                 "strokeSides": {
+                  "b": 3
+                 },
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "CLOSE",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 11,
+                   "color": "FFFFFF",
+                   "name": "L"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "TEXT",
+           "text": "Same reveal card. x10 = ten bobbers in a row, rarest bites last.",
+           "textStyle": "Aura Fishing/Small",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Desc",
+           "w": 560
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Option 4",
+     "layout": "V",
+     "gap": 10,
+     "x": 60,
+     "y": 1760,
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "4 · Tide Cards",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "type": "TEXT",
+       "text": "Card dealing: rarity-coloured rims tease, rarest flips last. Best for x10 (ten at once).",
+       "textStyle": "Aura Fishing/Small",
+       "color": {
+        "var": "cozy/subtext"
+       },
+       "name": "Desc",
+       "w": 2300
+      },
+      {
+       "name": "Keys",
+       "layout": "H",
+       "gap": 24,
+       "children": [
+        {
+         "name": "Key Deal",
+         "layout": "V",
+         "gap": 6,
+         "w": 560,
+         "children": [
+          {
+           "name": "Head",
+           "layout": "H",
+           "gap": 8,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Time",
+             "layout": "H",
+             "pad": [
+              3,
+              10,
+              4,
+              10
+             ],
+             "radius": 999,
+             "fill": {
+              "hex": "3D4B5C"
+             },
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "0.0s",
+               "textStyle": "Aura Fishing/Caption",
+               "color": "FFFFFF",
+               "name": "T"
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "Deal",
+             "textStyle": "Aura Fishing/Heading",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Label"
+            }
+           ]
+          },
+          {
+           "name": "Frame",
+           "w": 560,
+           "h": 315,
+           "radius": 16,
+           "clip": true,
+           "children": [
+            {
+             "type": "RECT",
+             "name": "Bg ui/gacha_bg_cosmic",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "hex": "1B2440"
+             }
+            },
+            {
+             "type": "RECT",
+             "name": "Dim",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "hex": "0B1226",
+              "opacity": 0.55
+             }
+            },
+            {
+             "name": "Card Back",
+             "w": 58,
+             "h": 84,
+             "x": 50,
+             "y": 164.0,
+             "radius": 10,
+             "fill": {
+              "grad": [
+               "8C6FD6",
+               "1B2440"
+              ],
+              "angle": 90
+             },
+             "stroke": {
+              "hex": "FFFFFF",
+              "opacity": 0.5
+             },
+             "strokeW": 1.5,
+             "effects": [],
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/status/star_token",
+               "w": 24,
+               "h": 24,
+               "x": 17,
+               "y": 30,
+               "opacity": 0.6
+              }
+             ]
+            },
+            {
+             "name": "Card Back",
+             "w": 58,
+             "h": 84,
+             "x": 97,
+             "y": 172.0,
+             "radius": 10,
+             "fill": {
+              "grad": [
+               "8C6FD6",
+               "1B2440"
+              ],
+              "angle": 90
+             },
+             "stroke": {
+              "hex": "FFFFFF",
+              "opacity": 0.5
+             },
+             "strokeW": 1.5,
+             "effects": [],
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/status/star_token",
+               "w": 24,
+               "h": 24,
+               "x": 17,
+               "y": 30,
+               "opacity": 0.6
+              }
+             ]
+            },
+            {
+             "name": "Card Back",
+             "w": 58,
+             "h": 84,
+             "x": 144,
+             "y": 180.0,
+             "radius": 10,
+             "fill": {
+              "grad": [
+               "8C6FD6",
+               "1B2440"
+              ],
+              "angle": 90
+             },
+             "stroke": {
+              "hex": "FFFFFF",
+              "opacity": 0.5
+             },
+             "strokeW": 1.5,
+             "effects": [],
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/status/star_token",
+               "w": 24,
+               "h": 24,
+               "x": 17,
+               "y": 30,
+               "opacity": 0.6
+              }
+             ]
+            },
+            {
+             "name": "Card Back",
+             "w": 58,
+             "h": 84,
+             "x": 191,
+             "y": 188.0,
+             "radius": 10,
+             "fill": {
+              "grad": [
+               "8C6FD6",
+               "1B2440"
+              ],
+              "angle": 90
+             },
+             "stroke": {
+              "hex": "FFFFFF",
+              "opacity": 0.5
+             },
+             "strokeW": 1.5,
+             "effects": [],
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/status/star_token",
+               "w": 24,
+               "h": 24,
+               "x": 17,
+               "y": 30,
+               "opacity": 0.6
+              }
+             ]
+            },
+            {
+             "name": "Card Back",
+             "w": 58,
+             "h": 84,
+             "x": 238,
+             "y": 196.0,
+             "radius": 10,
+             "fill": {
+              "grad": [
+               "8C6FD6",
+               "1B2440"
+              ],
+              "angle": 90
+             },
+             "stroke": {
+              "hex": "FFFFFF",
+              "opacity": 0.5
+             },
+             "strokeW": 1.5,
+             "effects": [],
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/status/star_token",
+               "w": 24,
+               "h": 24,
+               "x": 17,
+               "y": 30,
+               "opacity": 0.6
+              }
+             ]
+            },
+            {
+             "name": "Card Back",
+             "w": 58,
+             "h": 84,
+             "x": 285,
+             "y": 196.0,
+             "radius": 10,
+             "fill": {
+              "grad": [
+               "8C6FD6",
+               "1B2440"
+              ],
+              "angle": 90
+             },
+             "stroke": {
+              "hex": "FFFFFF",
+              "opacity": 0.5
+             },
+             "strokeW": 1.5,
+             "effects": [],
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/status/star_token",
+               "w": 24,
+               "h": 24,
+               "x": 17,
+               "y": 30,
+               "opacity": 0.6
+              }
+             ]
+            },
+            {
+             "name": "Card Back",
+             "w": 58,
+             "h": 84,
+             "x": 332,
+             "y": 188.0,
+             "radius": 10,
+             "fill": {
+              "grad": [
+               "8C6FD6",
+               "1B2440"
+              ],
+              "angle": 90
+             },
+             "stroke": {
+              "hex": "FFFFFF",
+              "opacity": 0.5
+             },
+             "strokeW": 1.5,
+             "effects": [],
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/status/star_token",
+               "w": 24,
+               "h": 24,
+               "x": 17,
+               "y": 30,
+               "opacity": 0.6
+              }
+             ]
+            },
+            {
+             "name": "Card Back",
+             "w": 58,
+             "h": 84,
+             "x": 379,
+             "y": 180.0,
+             "radius": 10,
+             "fill": {
+              "grad": [
+               "8C6FD6",
+               "1B2440"
+              ],
+              "angle": 90
+             },
+             "stroke": {
+              "hex": "FFFFFF",
+              "opacity": 0.5
+             },
+             "strokeW": 1.5,
+             "effects": [],
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/status/star_token",
+               "w": 24,
+               "h": 24,
+               "x": 17,
+               "y": 30,
+               "opacity": 0.6
+              }
+             ]
+            },
+            {
+             "name": "Card Back",
+             "w": 58,
+             "h": 84,
+             "x": 426,
+             "y": 172.0,
+             "radius": 10,
+             "fill": {
+              "grad": [
+               "8C6FD6",
+               "1B2440"
+              ],
+              "angle": 90
+             },
+             "stroke": {
+              "hex": "FFFFFF",
+              "opacity": 0.5
+             },
+             "strokeW": 1.5,
+             "effects": [],
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/status/star_token",
+               "w": 24,
+               "h": 24,
+               "x": 17,
+               "y": 30,
+               "opacity": 0.6
+              }
+             ]
+            },
+            {
+             "name": "Card Back",
+             "w": 58,
+             "h": 84,
+             "x": 473,
+             "y": 164.0,
+             "radius": 10,
+             "fill": {
+              "grad": [
+               "8C6FD6",
+               "1B2440"
+              ],
+              "angle": 90
+             },
+             "stroke": {
+              "hex": "FFFFFF",
+              "opacity": 0.5
+             },
+             "strokeW": 1.5,
+             "effects": [],
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/status/star_token",
+               "w": 24,
+               "h": 24,
+               "x": 17,
+               "y": 30,
+               "opacity": 0.6
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "TEXT",
+           "text": "x10: ten cards fan in face down (x1 = one card in the middle).",
+           "textStyle": "Aura Fishing/Small",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Desc",
+           "w": 560
+          }
+         ]
+        },
+        {
+         "name": "Key Rims glow",
+         "layout": "V",
+         "gap": 6,
+         "w": 560,
+         "children": [
+          {
+           "name": "Head",
+           "layout": "H",
+           "gap": 8,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Time",
+             "layout": "H",
+             "pad": [
+              3,
+              10,
+              4,
+              10
+             ],
+             "radius": 999,
+             "fill": {
+              "hex": "3D4B5C"
+             },
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "0.7s",
+               "textStyle": "Aura Fishing/Caption",
+               "color": "FFFFFF",
+               "name": "T"
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "Rims glow",
+             "textStyle": "Aura Fishing/Heading",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Label"
+            }
+           ]
+          },
+          {
+           "name": "Frame",
+           "w": 560,
+           "h": 315,
+           "radius": 16,
+           "clip": true,
+           "children": [
+            {
+             "type": "RECT",
+             "name": "Bg ui/gacha_bg_cosmic",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "hex": "1B2440"
+             }
+            },
+            {
+             "type": "RECT",
+             "name": "Dim",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "hex": "0B1226",
+              "opacity": 0.55
+             }
+            },
+            {
+             "name": "Card Back",
+             "w": 58,
+             "h": 84,
+             "x": 30,
+             "y": 116,
+             "radius": 10,
+             "fill": {
+              "grad": [
+               "8C6FD6",
+               "1B2440"
+              ],
+              "angle": 90
+             },
+             "stroke": {
+              "hex": "9AA5B1",
+              "opacity": 1
+             },
+             "strokeW": 3,
+             "effects": [
+              {
+               "color": "9AA5B1",
+               "a": 0.9,
+               "blur": 12,
+               "spread": 1
+              }
+             ],
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/status/star_token",
+               "w": 24,
+               "h": 24,
+               "x": 17,
+               "y": 30,
+               "opacity": 0.6
+              }
+             ]
+            },
+            {
+             "name": "Card Back",
+             "w": 58,
+             "h": 84,
+             "x": 82,
+             "y": 116,
+             "radius": 10,
+             "fill": {
+              "grad": [
+               "8C6FD6",
+               "1B2440"
+              ],
+              "angle": 90
+             },
+             "stroke": {
+              "hex": "9AA5B1",
+              "opacity": 1
+             },
+             "strokeW": 3,
+             "effects": [
+              {
+               "color": "9AA5B1",
+               "a": 0.9,
+               "blur": 12,
+               "spread": 1
+              }
+             ],
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/status/star_token",
+               "w": 24,
+               "h": 24,
+               "x": 17,
+               "y": 30,
+               "opacity": 0.6
+              }
+             ]
+            },
+            {
+             "name": "Card Back",
+             "w": 58,
+             "h": 84,
+             "x": 134,
+             "y": 116,
+             "radius": 10,
+             "fill": {
+              "grad": [
+               "8C6FD6",
+               "1B2440"
+              ],
+              "angle": 90
+             },
+             "stroke": {
+              "hex": "5CC98A",
+              "opacity": 1
+             },
+             "strokeW": 3,
+             "effects": [
+              {
+               "color": "5CC98A",
+               "a": 0.9,
+               "blur": 12,
+               "spread": 1
+              }
+             ],
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/status/star_token",
+               "w": 24,
+               "h": 24,
+               "x": 17,
+               "y": 30,
+               "opacity": 0.6
+              }
+             ]
+            },
+            {
+             "name": "Card Back",
+             "w": 58,
+             "h": 84,
+             "x": 186,
+             "y": 116,
+             "radius": 10,
+             "fill": {
+              "grad": [
+               "8C6FD6",
+               "1B2440"
+              ],
+              "angle": 90
+             },
+             "stroke": {
+              "hex": "9AA5B1",
+              "opacity": 1
+             },
+             "strokeW": 3,
+             "effects": [
+              {
+               "color": "9AA5B1",
+               "a": 0.9,
+               "blur": 12,
+               "spread": 1
+              }
+             ],
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/status/star_token",
+               "w": 24,
+               "h": 24,
+               "x": 17,
+               "y": 30,
+               "opacity": 0.6
+              }
+             ]
+            },
+            {
+             "name": "Card Back",
+             "w": 58,
+             "h": 84,
+             "x": 238,
+             "y": 116,
+             "radius": 10,
+             "fill": {
+              "grad": [
+               "8C6FD6",
+               "1B2440"
+              ],
+              "angle": 90
+             },
+             "stroke": {
+              "hex": "5AA9F0",
+              "opacity": 1
+             },
+             "strokeW": 3,
+             "effects": [
+              {
+               "color": "5AA9F0",
+               "a": 0.9,
+               "blur": 12,
+               "spread": 1
+              }
+             ],
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/status/star_token",
+               "w": 24,
+               "h": 24,
+               "x": 17,
+               "y": 30,
+               "opacity": 0.6
+              }
+             ]
+            },
+            {
+             "name": "Card Back",
+             "w": 58,
+             "h": 84,
+             "x": 290,
+             "y": 116,
+             "radius": 10,
+             "fill": {
+              "grad": [
+               "8C6FD6",
+               "1B2440"
+              ],
+              "angle": 90
+             },
+             "stroke": {
+              "hex": "9AA5B1",
+              "opacity": 1
+             },
+             "strokeW": 3,
+             "effects": [
+              {
+               "color": "9AA5B1",
+               "a": 0.9,
+               "blur": 12,
+               "spread": 1
+              }
+             ],
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/status/star_token",
+               "w": 24,
+               "h": 24,
+               "x": 17,
+               "y": 30,
+               "opacity": 0.6
+              }
+             ]
+            },
+            {
+             "name": "Card Back",
+             "w": 58,
+             "h": 84,
+             "x": 342,
+             "y": 116,
+             "radius": 10,
+             "fill": {
+              "grad": [
+               "8C6FD6",
+               "1B2440"
+              ],
+              "angle": 90
+             },
+             "stroke": {
+              "hex": "B07CF0",
+              "opacity": 1
+             },
+             "strokeW": 3,
+             "effects": [
+              {
+               "color": "B07CF0",
+               "a": 0.9,
+               "blur": 12,
+               "spread": 1
+              }
+             ],
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/status/star_token",
+               "w": 24,
+               "h": 24,
+               "x": 17,
+               "y": 30,
+               "opacity": 0.6
+              }
+             ]
+            },
+            {
+             "name": "Card Back",
+             "w": 58,
+             "h": 84,
+             "x": 394,
+             "y": 116,
+             "radius": 10,
+             "fill": {
+              "grad": [
+               "8C6FD6",
+               "1B2440"
+              ],
+              "angle": 90
+             },
+             "stroke": {
+              "hex": "9AA5B1",
+              "opacity": 1
+             },
+             "strokeW": 3,
+             "effects": [
+              {
+               "color": "9AA5B1",
+               "a": 0.9,
+               "blur": 12,
+               "spread": 1
+              }
+             ],
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/status/star_token",
+               "w": 24,
+               "h": 24,
+               "x": 17,
+               "y": 30,
+               "opacity": 0.6
+              }
+             ]
+            },
+            {
+             "name": "Card Back",
+             "w": 58,
+             "h": 84,
+             "x": 446,
+             "y": 116,
+             "radius": 10,
+             "fill": {
+              "grad": [
+               "8C6FD6",
+               "1B2440"
+              ],
+              "angle": 90
+             },
+             "stroke": {
+              "hex": "5CC98A",
+              "opacity": 1
+             },
+             "strokeW": 3,
+             "effects": [
+              {
+               "color": "5CC98A",
+               "a": 0.9,
+               "blur": 12,
+               "spread": 1
+              }
+             ],
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/status/star_token",
+               "w": 24,
+               "h": 24,
+               "x": 17,
+               "y": 30,
+               "opacity": 0.6
+              }
+             ]
+            },
+            {
+             "name": "Card Back",
+             "w": 58,
+             "h": 84,
+             "x": 498,
+             "y": 116,
+             "radius": 10,
+             "fill": {
+              "grad": [
+               "8C6FD6",
+               "1B2440"
+              ],
+              "angle": 90
+             },
+             "stroke": {
+              "hex": "F2A93B",
+              "opacity": 1
+             },
+             "strokeW": 3,
+             "effects": [
+              {
+               "color": "F2A93B",
+               "a": 0.9,
+               "blur": 12,
+               "spread": 1
+              }
+             ],
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/status/star_token",
+               "w": 24,
+               "h": 24,
+               "x": 17,
+               "y": 30,
+               "opacity": 0.6
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "TEXT",
+           "text": "Card rims light up in their rarity colours: you see what's coming, not which aura.",
+           "textStyle": "Aura Fishing/Small",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Desc",
+           "w": 560
+          }
+         ]
+        },
+        {
+         "name": "Key Flip",
+         "layout": "V",
+         "gap": 6,
+         "w": 560,
+         "children": [
+          {
+           "name": "Head",
+           "layout": "H",
+           "gap": 8,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Time",
+             "layout": "H",
+             "pad": [
+              3,
+              10,
+              4,
+              10
+             ],
+             "radius": 999,
+             "fill": {
+              "hex": "3D4B5C"
+             },
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "1.4s",
+               "textStyle": "Aura Fishing/Caption",
+               "color": "FFFFFF",
+               "name": "T"
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "Flip",
+             "textStyle": "Aura Fishing/Heading",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Label"
+            }
+           ]
+          },
+          {
+           "name": "Frame",
+           "w": 560,
+           "h": 315,
+           "radius": 16,
+           "clip": true,
+           "children": [
+            {
+             "type": "RECT",
+             "name": "Bg ui/gacha_bg_cosmic",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "hex": "1B2440"
+             }
+            },
+            {
+             "type": "RECT",
+             "name": "Dim",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "hex": "0B1226",
+              "opacity": 0.55
+             }
+            },
+            {
+             "name": "Card SparklingDew",
+             "w": 58,
+             "h": 84,
+             "x": 30,
+             "y": 116,
+             "radius": 10,
+             "fill": {
+              "hex": "FFF8EC"
+             },
+             "stroke": {
+              "hex": "9AA5B1"
+             },
+             "strokeW": 3,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img auras/SparklingDew",
+               "w": 46,
+               "h": 46,
+               "x": 6,
+               "y": 18
+              }
+             ]
+            },
+            {
+             "name": "Card SparklingDew",
+             "w": 58,
+             "h": 84,
+             "x": 82,
+             "y": 116,
+             "radius": 10,
+             "fill": {
+              "hex": "FFF8EC"
+             },
+             "stroke": {
+              "hex": "9AA5B1"
+             },
+             "strokeW": 3,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img auras/SparklingDew",
+               "w": 46,
+               "h": 46,
+               "x": 6,
+               "y": 18
+              }
+             ]
+            },
+            {
+             "name": "Card NeonWave",
+             "w": 58,
+             "h": 84,
+             "x": 134,
+             "y": 116,
+             "radius": 10,
+             "fill": {
+              "hex": "FFF8EC"
+             },
+             "stroke": {
+              "hex": "5CC98A"
+             },
+             "strokeW": 3,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img auras/NeonWave",
+               "w": 46,
+               "h": 46,
+               "x": 6,
+               "y": 18
+              }
+             ]
+            },
+            {
+             "name": "Card SparklingDew",
+             "w": 58,
+             "h": 84,
+             "x": 186,
+             "y": 116,
+             "radius": 10,
+             "fill": {
+              "hex": "FFF8EC"
+             },
+             "stroke": {
+              "hex": "9AA5B1"
+             },
+             "strokeW": 3,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img auras/SparklingDew",
+               "w": 46,
+               "h": 46,
+               "x": 6,
+               "y": 18
+              }
+             ]
+            },
+            {
+             "name": "Card TidalBloom",
+             "w": 58,
+             "h": 84,
+             "x": 238,
+             "y": 116,
+             "radius": 10,
+             "fill": {
+              "hex": "FFF8EC"
+             },
+             "stroke": {
+              "hex": "5AA9F0"
+             },
+             "strokeW": 3,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img auras/TidalBloom",
+               "w": 46,
+               "h": 46,
+               "x": 6,
+               "y": 18
+              }
+             ]
+            },
+            {
+             "name": "Card SparklingDew",
+             "w": 58,
+             "h": 84,
+             "x": 290,
+             "y": 116,
+             "radius": 10,
+             "fill": {
+              "hex": "FFF8EC"
+             },
+             "stroke": {
+              "hex": "9AA5B1"
+             },
+             "strokeW": 3,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img auras/SparklingDew",
+               "w": 46,
+               "h": 46,
+               "x": 6,
+               "y": 18
+              }
+             ]
+            },
+            {
+             "name": "Card SolarFlare",
+             "w": 58,
+             "h": 84,
+             "x": 342,
+             "y": 116,
+             "radius": 10,
+             "fill": {
+              "hex": "FFF8EC"
+             },
+             "stroke": {
+              "hex": "B07CF0"
+             },
+             "strokeW": 3,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img auras/SolarFlare",
+               "w": 46,
+               "h": 46,
+               "x": 6,
+               "y": 18
+              }
+             ]
+            },
+            {
+             "name": "Card SparklingDew",
+             "w": 58,
+             "h": 84,
+             "x": 394,
+             "y": 116,
+             "radius": 10,
+             "fill": {
+              "hex": "FFF8EC"
+             },
+             "stroke": {
+              "hex": "9AA5B1"
+             },
+             "strokeW": 3,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img auras/SparklingDew",
+               "w": 46,
+               "h": 46,
+               "x": 6,
+               "y": 18
+              }
+             ]
+            },
+            {
+             "name": "Card NeonWave",
+             "w": 58,
+             "h": 84,
+             "x": 446,
+             "y": 116,
+             "radius": 10,
+             "fill": {
+              "hex": "FFF8EC"
+             },
+             "stroke": {
+              "hex": "5CC98A"
+             },
+             "strokeW": 3,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img auras/NeonWave",
+               "w": 46,
+               "h": 46,
+               "x": 6,
+               "y": 18
+              }
+             ]
+            },
+            {
+             "type": "SVG",
+             "name": "Rays",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "svg": "<svg width=\"560\" height=\"315\" viewBox=\"0 0 560 315\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M527 158L687.0 158.0\" stroke=\"#F2A93B\" stroke-opacity=\"0.45\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M527 158L665.6 238.0\" stroke=\"#F2A93B\" stroke-opacity=\"0.45\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M527 158L607.0 296.6\" stroke=\"#F2A93B\" stroke-opacity=\"0.45\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M527 158L527.0 318.0\" stroke=\"#F2A93B\" stroke-opacity=\"0.45\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M527 158L447.0 296.6\" stroke=\"#F2A93B\" stroke-opacity=\"0.45\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M527 158L388.4 238.0\" stroke=\"#F2A93B\" stroke-opacity=\"0.45\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M527 158L367.0 158.0\" stroke=\"#F2A93B\" stroke-opacity=\"0.45\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M527 158L388.4 78.0\" stroke=\"#F2A93B\" stroke-opacity=\"0.45\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M527 158L447.0 19.4\" stroke=\"#F2A93B\" stroke-opacity=\"0.45\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M527 158L527.0 -2.0\" stroke=\"#F2A93B\" stroke-opacity=\"0.45\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M527 158L607.0 19.4\" stroke=\"#F2A93B\" stroke-opacity=\"0.45\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M527 158L665.6 78.0\" stroke=\"#F2A93B\" stroke-opacity=\"0.45\" stroke-width=\"10\" stroke-linecap=\"round\"/></svg>"
+            },
+            {
+             "name": "Card Back",
+             "w": 62,
+             "h": 100,
+             "x": 498,
+             "y": 104,
+             "radius": 10,
+             "fill": {
+              "grad": [
+               "8C6FD6",
+               "1B2440"
+              ],
+              "angle": 90
+             },
+             "stroke": {
+              "hex": "F2A93B",
+              "opacity": 1
+             },
+             "strokeW": 3,
+             "effects": [
+              {
+               "color": "F2A93B",
+               "a": 0.9,
+               "blur": 12,
+               "spread": 1
+              }
+             ],
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/status/star_token",
+               "w": 24,
+               "h": 24,
+               "x": 17,
+               "y": 30,
+               "opacity": 0.6
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "TEXT",
+           "text": "Cards flip left to right; the rarest stays down, glowing, until tapped.",
+           "textStyle": "Aura Fishing/Small",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Desc",
+           "w": 560
+          }
+         ]
+        },
+        {
+         "name": "Key Reveal",
+         "layout": "V",
+         "gap": 6,
+         "w": 560,
+         "children": [
+          {
+           "name": "Head",
+           "layout": "H",
+           "gap": 8,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Time",
+             "layout": "H",
+             "pad": [
+              3,
+              10,
+              4,
+              10
+             ],
+             "radius": 999,
+             "fill": {
+              "hex": "3D4B5C"
+             },
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "2.4s",
+               "textStyle": "Aura Fishing/Caption",
+               "color": "FFFFFF",
+               "name": "T"
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "Reveal",
+             "textStyle": "Aura Fishing/Heading",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Label"
+            }
+           ]
+          },
+          {
+           "name": "Frame",
+           "w": 560,
+           "h": 315,
+           "radius": 16,
+           "clip": true,
+           "children": [
+            {
+             "type": "RECT",
+             "name": "Bg ui/gacha_bg_cosmic",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "hex": "1B2440"
+             }
+            },
+            {
+             "type": "RECT",
+             "name": "Dim",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "hex": "0B1226",
+              "opacity": 0.55
+             }
+            },
+            {
+             "type": "SVG",
+             "name": "Rays",
+             "w": 560,
+             "h": 315,
+             "x": 0,
+             "y": 0,
+             "svg": "<svg width=\"560\" height=\"315\" viewBox=\"0 0 560 315\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M280.0 120L540.0 120.0\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L514.3 232.8\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L442.1 323.3\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L337.9 373.5\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L222.1 373.5\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L117.9 323.3\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L45.7 232.8\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L20.0 120.0\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L45.7 7.2\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L117.9 -83.3\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L222.1 -133.5\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L337.9 -133.5\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L442.1 -83.3\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M280.0 120L514.3 7.2\" stroke=\"#F2A93B\" stroke-opacity=\"0.35\" stroke-width=\"10\" stroke-linecap=\"round\"/></svg>"
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Glow 0",
+             "w": 240,
+             "h": 240,
+             "x": 160.0,
+             "y": 0,
+             "fill": {
+              "hex": "F2A93B",
+              "opacity": 0.18
+             }
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Glow 1",
+             "w": 180,
+             "h": 180,
+             "x": 190.0,
+             "y": 30,
+             "fill": {
+              "hex": "F2A93B",
+              "opacity": 0.25
+             }
+            },
+            {
+             "type": "ELLIPSE",
+             "name": "Glow 2",
+             "w": 120,
+             "h": 120,
+             "x": 220.0,
+             "y": 60,
+             "fill": {
+              "hex": "F2A93B",
+              "opacity": 0.35
+             }
+            },
+            {
+             "type": "RECT",
+             "name": "Img auras_Art/AbyssalShadow",
+             "w": 190,
+             "h": 190,
+             "x": 185.0,
+             "y": 22
+            },
+            {
+             "name": "Card",
+             "layout": "V",
+             "gap": 5,
+             "pad": [
+              8,
+              14,
+              10,
+              14
+             ],
+             "w": 300,
+             "x": 130.0,
+             "y": 196,
+             "radius": 16,
+             "cross": "CENTER",
+             "fill": {
+              "hex": "FFF8EC",
+              "opacity": 0.96
+             },
+             "children": [
+              {
+               "name": "Row",
+               "layout": "H",
+               "gap": 6,
+               "cross": "CENTER",
+               "children": [
+                {
+                 "name": "Pill",
+                 "layout": "H",
+                 "pad": [
+                  2,
+                  8,
+                  3,
+                  8
+                 ],
+                 "radius": 999,
+                 "fill": {
+                  "hex": "F2A93B"
+                 },
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "LEGENDARY",
+                   "textStyle": "Aura Fishing/Caption",
+                   "color": "FFFFFF",
+                   "name": "R"
+                  }
+                 ]
+                },
+                {
+                 "type": "TEXT",
+                 "text": "Abyssal Shadow",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 18,
+                 "color": "3D4B5C",
+                 "name": "N"
+                },
+                {
+                 "name": "New",
+                 "layout": "H",
+                 "pad": [
+                  2,
+                  7,
+                  3,
+                  7
+                 ],
+                 "radius": 999,
+                 "fill": {
+                  "hex": "FF9E80"
+                 },
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "NEW!",
+                   "textStyle": "Aura Fishing/Caption",
+                   "color": "FFFFFF",
+                   "name": "N"
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "1 in 5,000  |  +50% Luck  |  +3% Void-Touched",
+               "textStyle": "Aura Fishing/Caption",
+               "color": "7A8A99",
+               "name": "Stats"
+              },
+              {
+               "name": "Buttons",
+               "layout": "H",
+               "gap": 6,
+               "children": [
+                {
+                 "name": "Btn EQUIP",
+                 "layout": "H",
+                 "w": 80,
+                 "h": 26,
+                 "radius": 9,
+                 "main": "CENTER",
+                 "cross": "CENTER",
+                 "fill": {
+                  "hex": "7FD3B0"
+                 },
+                 "stroke": {
+                  "hex": "4FB58C"
+                 },
+                 "strokeSides": {
+                  "b": 3
+                 },
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "EQUIP",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 11,
+                   "color": "FFFFFF",
+                   "name": "L"
+                  }
+                 ]
+                },
+                {
+                 "name": "Btn ROLL AGAIN",
+                 "layout": "H",
+                 "w": 100,
+                 "h": 26,
+                 "radius": 9,
+                 "main": "CENTER",
+                 "cross": "CENTER",
+                 "fill": {
+                  "hex": "B79CF2"
+                 },
+                 "stroke": {
+                  "hex": "8C6FD6"
+                 },
+                 "strokeSides": {
+                  "b": 3
+                 },
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "ROLL AGAIN",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 11,
+                   "color": "FFFFFF",
+                   "name": "L"
+                  }
+                 ]
+                },
+                {
+                 "name": "Btn CLOSE",
+                 "layout": "H",
+                 "w": 70,
+                 "h": 26,
+                 "radius": 9,
+                 "main": "CENTER",
+                 "cross": "CENTER",
+                 "fill": {
+                  "hex": "C9BBA3"
+                 },
+                 "stroke": {
+                  "hex": "9AA5B1"
+                 },
+                 "strokeSides": {
+                  "b": 3
+                 },
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "CLOSE",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 11,
+                   "color": "FFFFFF",
+                   "name": "L"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "TEXT",
+           "text": "Tapping it opens the reveal card, then the x10 summary.",
+           "textStyle": "Aura Fishing/Small",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Desc",
+           "w": 560
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+]

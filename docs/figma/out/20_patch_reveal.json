@@ -1,0 +1,27 @@
+[
+ {
+  "replaceId": "3492:20596",
+  "tree": {
+   "type": "INSTANCE",
+   "ref": "3492:21453",
+   "variant": "Size=Large, Rarity=Epic",
+   "name": "Aura Card {img:auras/SolarFlare}",
+   "texts": {
+    "Name": "Solar Flare",
+    "Chance": "1/750",
+    "Stat 1": "+35% Luck",
+    "Stat 2": "+10% Sun-Forged"
+   },
+   "hide": [
+    "Stat 3"
+   ]
+  }
+ },
+ {
+  "remove": [
+   "3492:20600",
+   "3492:20601",
+   "3492:20606"
+  ]
+ }
+]

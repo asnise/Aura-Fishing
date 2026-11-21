@@ -1,0 +1,29 @@
+﻿Aquarium - idle Pearls,,,,,
+Each fish in the tank makes Pearls/min = rarity rate x mutation multiplier x PearlRate. Offline credit is capped by OfflineCapHours. Slot prices are in Coins.,,,,,
+PearlRate stat (linked),1,,,,
+2x Pearls boost on (1 = yes),0,,,,
+"Offline cap (hours, linked)",4,,,,
+,,,,,
+Rarity,Fish in tank (input),Pearls/min per fish,Pearls/min total,Pearls / hour,Pearls / day
+Common,0,0.2,0,0,0
+Uncommon,0,0.5,0,0,0
+Rare,1,1.5,1.5,90,2160
+Epic,1,4,4,240,5760
+Legendary,1,12,12,720,17280
+Mythic,0,40,0,0,0
+Total,3,,17.5,1050,25200
+Pearls per second,,,0.291667,,
+Offline Pearls if away 8 hours (capped),,,4200,,
+,,,,,
+Tank slots,,,,,
+Slot #,Price (Coins),Total spent,,,
+4,5000,5000,,,
+5,20000,25000,,,
+6,80000,105000,,,
+7,300000,405000,,,
+8,1000000,1405000,,,
+9,3500000,4905000,,,
+10,12000000,16905000,,,
+11,40000000,56905000,,,
+12,140000000,196905000,,,
+Max slots,12,,,,

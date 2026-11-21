@@ -1,0 +1,23 @@
+﻿Monetization - Robux value,,,,,,,,
+Robux prices are display values from Products.luau (set them on the Creator Hub). Gem value uses AuraRollCost. Rewards come from the product config.,,,,,,,,
+,,,,,,,,
+Product,Type,Robux,Gems,Aura pulls,Gems per Robux,Robux per pull,Robux per expected Legendary+ (Altar),Other rewards
+25 Gems,Developer product,25,25,5,1,5,459.082187,
+110 Gems,Developer product,99,110,22,1.111111,4.5,413.173968,
+300 Gems,Developer product,249,300,60,1.204819,4.15,381.038215,
+Starter Pack,Developer product,49,100,20,2.040816,2.45,224.950272,"50 Shrimp, SweetheartRod (Rods)"
+2x Coins,Developer product,39,0,0,,,,Coins boost 2h
+2x Pearls,Developer product,39,0,0,,,,Pearls boost 2h
+,,,,,,,,
+Game passes,,,,,,,,
+Pass,Robux,What it gives,,,,,,
+VIP,149,"+15% Luck, gold name tag, 12h offline Aquarium cap",,,,,,
+Auto-Fish Pro,249,-25% Auto Wait and x1.25 Auto value (still below Manual x1.5),,,,,,
+Infinite Bag,349,Never fill your bag again,,,,,,
+Extra Cast,199,Fish with two lines at once.,,,,,,
+,,,,,,,,
+Starter Pack content value (Coins),,,,,,,,
+50 Shrimp,4000,,,,,,,
+Sweetheart Rod (shop price),1500,,,,,,,
+100 Gems = pulls,20,,,,,,,
+"Note: Gems per Robux is the effective rate (25 Robux buys 25 Gems, 99 buys 110, 249 buys 300).",,,,,,,,

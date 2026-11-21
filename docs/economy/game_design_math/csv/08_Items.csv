@@ -1,0 +1,49 @@
+﻿"Items - rods, lines, baits, bags, passes, auras",,,,,,,,,,,,,,,,,,,,,,,,,,
+"Every stat source in one table. Rods/Lines are scaled by Enhance level, auras by stars. Stat columns are additive (see Stats Calculator).",,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,
+Category,Id,Name,Order,Price,Currency,Required level,Capacity (bags),Buy amount (baits),Luck,CastRange,BiteSpeed,AutoSpeed,AutoMultiplier,CatchBarSize,ReelPower,Resilience,FishStability,MutationChance,SellMultiplier,XPMultiplier,PearlRate,OfflineCapHours,MaxDepth,ExtraLines,Rarity (aura),Aura chance: 1 in N
+Rod,DriftwoodRod,Driftwood Rod,1,0,Coins,0,,,,,,,,,,,,,,,,,,,,
+Rod,BambooRod,Bamboo Rod,2,1500,Coins,0,,,0.05,3,,,,0.03,0.15,,,,,,,,,,,
+Rod,CoralRod,Coral Rod,3,12000,Coins,0,,,0.15,5,,,,0.05,0.3,0.15,,,,,,,,,,
+Rod,MoonsilverRod,Moonsilver Rod,4,120000,Coins,10,,,0.35,8,,0.1,,0.08,0.5,0.3,0.1,,,,,,,,,
+Rod,NagaScaleRod,Naga Scale Rod,5,900000,Coins,25,,,0.75,11,,0.2,,0.12,0.8,0.45,0.2,0.02,,,,,,,,
+Rod,SweetheartRod,Sweetheart Rod,6,1500,Coins,0,,,0.03,3,,,,0.04,0.08,,,,,,,,,,,
+Rod,AbyssRod,Abyss Rod,7,4500000,Coins,35,,,1.1,14,,0.25,,0.14,1.1,0.55,0.25,0.03,,,,,,,,
+Rod,CelestialRod,Celestial Rod,8,20000000,Coins,50,,,1.6,18,,0.3,,0.16,1.5,0.65,0.3,0.05,,,,,,,,
+Line,CottonLine,Cotton Line (30m),1,0,Coins,0,,,,,,,,,,,,,,,,,30,,,
+Line,HempLine,Hemp Line (80m),2,1000,Coins,0,,,,,,,,,,,,,,,,,80,,,
+Line,NylonLine,Nylon Line (150m),3,15000,Coins,0,,,,,,,,,,0.05,,,,,,,150,,,
+Line,SilkLine,Spider-Silk Line (300m),4,150000,Coins,12,,,,,,,,,,0.1,,,,,,,300,,,
+Line,AbyssLine,Abyss Line (600m),5,1200000,Coins,30,,,,,,,,,,0.15,,,,,,,600,,,
+Line,StarLine,Star Line (1000m),6,6000000,Coins,45,,,0.1,,,,,,,0.2,,,,,,,1000,,,
+Bait,Worm,Worm,1,100,Coins,0,,10,0.1,,,,,,,,,,,,,,,,,
+Bait,Shrimp,Shrimp,2,800,Coins,0,,10,0.3,,0.1,,,,,,,,,,,,,,,
+Bait,GlowGrub,Glow Grub,3,6000,Coins,0,,10,0.75,,,0.1,,,,,,0.01,,,,,,,,
+Bait,SquidBait,Squid Bait,4,40000,Coins,20,,10,1.2,,0.15,,,,,,,,,,,,,,,
+Bait,PearlBait,Pearl Bait,5,250000,Coins,30,,10,1.8,,,0.15,,,,,,0.02,,,,,,,,
+Bait,StormBait,Storm Bait,6,1200000,Coins,40,,10,2.6,,0.3,,,,,,,0.03,,,,,,,,
+Bait,SummonBait,Summon Bait,7,60,Gems,20,,3,4,,,,,,,,0.1,0.05,,,,,,,,
+Bag,StarterPouch,Starter Pouch,1,0,Coins,0,6,,,,,,,,,,,,,,,,,,,
+Bag,WovenBasket,Woven Basket,2,800,Coins,0,10,,,,,,,,,,,,,,,,,,,
+Bag,Crate,Fish Crate,3,6000,Coins,0,15,,,,,,,,,,,,,,,,,,,
+Bag,Coolbox,Ice Coolbox,4,40000,Coins,0,20,,,,,,,,,,,,,,,,,,,
+Bag,Hold,Ship's Hold,5,250000,Coins,0,30,,,,,,,,,,,,,,,,,,,
+Pass,VIP,VIP,1,149,Robux,0,,,0.15,,,,,,,,,,,,,8,,,,
+Pass,AutoFishPro,Auto-Fish Pro,2,249,Robux,0,,,,,,0.25,0.25,,,,,,,,,,,,,
+Pass,InfiniteBag,Infinite Bag,3,349,Robux,0,,,,,,,,,,,,,,,,,,,,
+Pass,ExtraCast,Extra Cast,4,199,Robux,0,,,,,,,,,,,,,,,,,,,,
+Aura,SparklingDew,Sparkling Dew,1,0,Gacha,0,,,0.05,,,,,,,,,,,,,,,,Common,10
+Aura,TidalBloom,Tidal Bloom,2,0,Gacha,0,,,0.06,,0.02,,,,,,,,,,,,,,Common,15
+Aura,KelpWhisper,Kelp Whisper,3,0,Gacha,0,,,0.1,,,,,,,,0.05,,,,,,,,Uncommon,40
+Aura,CoralHeart,Coral Heart,4,0,Gacha,0,,,0.1,,,,,,,,,,0.05,,,,,,Uncommon,60
+Aura,NeonWave,Neon Wave,5,0,Gacha,0,,,0.15,,,,,0.022,,,,,,,,,,,Rare,100
+Aura,MoonlitRipple,Moonlit Ripple,6,0,Gacha,0,,,0.2,,,0.05,,,,,,,,,,,,,Rare,250
+Aura,StormCurrent,Storm Current,7,0,Gacha,0,,,0.25,,0.08,,,,,,,,,,,,,,Rare,400
+Aura,SolarFlare,Solar Flare,8,0,Gacha,0,,,0.35,,,,,,,,,,,,,,,,Epic,750
+Aura,FrostPearl,Frost Pearl,9,0,Gacha,0,,,0.4,,,,,,,0.1,,,,,,,,,Epic,1500
+Aura,NebulaKoi,Nebula Koi,10,0,Gacha,0,,,0.45,,,,,,,,,,,0.1,,,,,Epic,3000
+Aura,AbyssalShadow,Abyssal Shadow,11,0,Gacha,0,,,0.5,,,,0.2,,,,,,,,,,,,Legendary,5000
+Aura,LotusNaga,Lotus Naga,12,0,Gacha,0,,,0.6,,,,0.1,,,,0.15,,,,,,,,Legendary,12000
+Aura,SerpentOfTheVoid,Serpent of the Void,13,0,Gacha,0,,,0.75,,,,,,,,,0.03,,,,,,,Legendary,25000
+Aura,DragonEmperor,Dragon Emperor,14,0,Gacha,0,,,1,,,,,,,,0.3,,,,,,,,Mythic,50000
+Aura,CelestialLeviathan,Celestial Leviathan,15,0,Gacha,0,,,1.4,,,,,,,,0.35,0.05,,,,,,,Mythic,150000

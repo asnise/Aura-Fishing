@@ -1,0 +1,812 @@
+{
+  "schema": 1,
+  "kind": "plugin-commands",
+  "updatedAt": "2026-11-20T22:03:32.559Z",
+  "totals": {
+    "calls": 3318,
+    "ok": 3278,
+    "errors": 40
+  },
+  "byAgent": {
+    "unknown": 62,
+    "claude-check": 7,
+    "perf": 3,
+    "figma-run": 471,
+    "py:figma_images": 144,
+    "phase1-test": 12,
+    "claude-quest": 1,
+    "ui-session": 1452,
+    "codex": 703,
+    "claude": 449,
+    "mcp:codex-motion-verification": 1,
+    "mcp:codex-live-figma": 2,
+    "codex-eclipse": 11
+  },
+  "items": {
+    "get_document_info": {
+      "calls": 24,
+      "ok": 23,
+      "errors": 1,
+      "totalMs": 655355,
+      "avgMs": 28494,
+      "maxMs": 654935,
+      "firstUsed": "2026-11-17T19:22:18.628Z",
+      "lastUsed": "2026-11-20T18:56:08.652Z",
+      "byAgent": {
+        "unknown": 7,
+        "figma-run": 9,
+        "codex": 7,
+        "claude": 1
+      },
+      "lastError": "timeout (no response)",
+      "sized": 18,
+      "totalKB": 47.1,
+      "maxKB": 3.3,
+      "avgKB": 2.6
+    },
+    "get_node_info": {
+      "calls": 233,
+      "ok": 227,
+      "errors": 6,
+      "totalMs": 682543,
+      "avgMs": 3007,
+      "maxMs": 649316,
+      "firstUsed": "2026-11-17T19:22:22.968Z",
+      "lastUsed": "2026-11-20T22:03:32.559Z",
+      "byAgent": {
+        "unknown": 44,
+        "perf": 1,
+        "phase1-test": 7,
+        "claude-quest": 1,
+        "ui-session": 7,
+        "figma-run": 23,
+        "codex": 78,
+        "claude": 72
+      },
+      "lastError": "Error executing command",
+      "sized": 166,
+      "totalKB": 7121.4,
+      "maxKB": 2005.8,
+      "avgKB": 42.9
+    },
+    "get_selection": {
+      "calls": 10,
+      "ok": 9,
+      "errors": 1,
+      "totalMs": 643441,
+      "avgMs": 71493,
+      "maxMs": 643385,
+      "firstUsed": "2026-11-18T05:14:56.218Z",
+      "lastUsed": "2026-11-20T18:56:08.650Z",
+      "byAgent": {
+        "claude-check": 2,
+        "codex": 8
+      },
+      "lastError": "timeout (no response)",
+      "sized": 5,
+      "totalKB": 2.1,
+      "maxKB": 0.5,
+      "avgKB": 0.4
+    },
+    "batch": {
+      "calls": 42,
+      "ok": 41,
+      "errors": 1,
+      "totalMs": 113328,
+      "avgMs": 2764,
+      "maxMs": 47939,
+      "firstUsed": "2026-11-18T05:15:05.554Z",
+      "lastUsed": "2026-11-20T18:56:08.649Z",
+      "byAgent": {
+        "claude-check": 1,
+        "phase1-test": 2,
+        "codex": 39
+      },
+      "sized": 38,
+      "totalKB": 217.6,
+      "maxKB": 32.1,
+      "avgKB": 5.7,
+      "lastError": "timeout (no response)"
+    },
+    "set_node_note": {
+      "calls": 3,
+      "ok": 3,
+      "errors": 0,
+      "totalMs": 11,
+      "avgMs": 4,
+      "maxMs": 6,
+      "firstUsed": "2026-11-18T05:15:05.556Z",
+      "lastUsed": "2026-11-20T17:44:12.106Z",
+      "byAgent": {
+        "claude-check": 2,
+        "codex": 1
+      }
+    },
+    "get_node_note": {
+      "calls": 2,
+      "ok": 2,
+      "errors": 0,
+      "totalMs": 1,
+      "avgMs": 1,
+      "maxMs": 1,
+      "firstUsed": "2026-11-18T05:15:05.557Z",
+      "lastUsed": "2026-11-18T05:15:05.559Z",
+      "byAgent": {
+        "claude-check": 2
+      }
+    },
+    "get_roblox_tree": {
+      "calls": 125,
+      "ok": 122,
+      "errors": 3,
+      "totalMs": 39045,
+      "avgMs": 320,
+      "maxMs": 1674,
+      "firstUsed": "2026-11-18T05:15:06.662Z",
+      "lastUsed": "2026-11-20T19:41:41.221Z",
+      "byAgent": {
+        "perf": 1,
+        "py:figma_images": 11,
+        "ui-session": 29,
+        "figma-run": 82,
+        "codex-eclipse": 2
+      },
+      "sized": 120,
+      "totalKB": 18416.9,
+      "maxKB": 655.1,
+      "avgKB": 153.5,
+      "lastError": "Error executing command"
+    },
+    "export_node_as_image": {
+      "calls": 93,
+      "ok": 81,
+      "errors": 12,
+      "totalMs": 805502,
+      "avgMs": 9944,
+      "maxMs": 567677,
+      "firstUsed": "2026-11-18T05:15:08.375Z",
+      "lastUsed": "2026-11-20T22:02:23.956Z",
+      "byAgent": {
+        "perf": 1,
+        "unknown": 3,
+        "ui-session": 20,
+        "figma-run": 39,
+        "codex": 6,
+        "claude": 23,
+        "codex-eclipse": 1
+      },
+      "sized": 77,
+      "totalKB": 48037.6,
+      "maxKB": 10248.2,
+      "avgKB": 623.9,
+      "lastError": "timeout (no response)"
+    },
+    "build_tree": {
+      "calls": 210,
+      "ok": 203,
+      "errors": 7,
+      "totalMs": 196721,
+      "avgMs": 969,
+      "maxMs": 94859,
+      "firstUsed": "2026-11-18T06:31:23.223Z",
+      "lastUsed": "2026-11-20T21:26:38.798Z",
+      "byAgent": {
+        "figma-run": 35,
+        "ui-session": 144,
+        "codex": 22,
+        "claude": 9
+      },
+      "lastError": "in remove: Removing this node is not allowed",
+      "sized": 181,
+      "totalKB": 39.7,
+      "maxKB": 0.7,
+      "avgKB": 0.2
+    },
+    "set_image_fill": {
+      "calls": 1397,
+      "ok": 1397,
+      "errors": 0,
+      "totalMs": 74054,
+      "avgMs": 53,
+      "maxMs": 2678,
+      "firstUsed": "2026-11-18T06:31:29.197Z",
+      "lastUsed": "2026-11-20T14:08:23.689Z",
+      "byAgent": {
+        "py:figma_images": 127,
+        "ui-session": 1237,
+        "figma-run": 33
+      },
+      "sized": 1377,
+      "totalKB": 413.1,
+      "maxKB": 0.3,
+      "avgKB": 0.3
+    },
+    "set_text_content": {
+      "calls": 18,
+      "ok": 17,
+      "errors": 1,
+      "totalMs": 13710,
+      "avgMs": 806,
+      "maxMs": 13488,
+      "firstUsed": "2026-11-18T06:44:37.980Z",
+      "lastUsed": "2026-11-19T19:59:09.169Z",
+      "byAgent": {
+        "unknown": 1,
+        "codex": 17
+      },
+      "lastError": "Unable to establish connection to Figma after 10 seconds. Please check your internet connection."
+    },
+    "set_stroke_color": {
+      "calls": 1,
+      "ok": 1,
+      "errors": 0,
+      "totalMs": 8,
+      "avgMs": 8,
+      "maxMs": 8,
+      "firstUsed": "2026-11-18T06:44:44.459Z",
+      "lastUsed": "2026-11-18T06:44:44.459Z",
+      "byAgent": {
+        "unknown": 1
+      }
+    },
+    "find_nodes": {
+      "calls": 73,
+      "ok": 71,
+      "errors": 2,
+      "totalMs": 22774,
+      "avgMs": 321,
+      "maxMs": 2897,
+      "firstUsed": "2026-11-18T07:53:14.611Z",
+      "lastUsed": "2026-11-20T21:58:41.192Z",
+      "byAgent": {
+        "phase1-test": 2,
+        "codex": 35,
+        "claude": 36
+      },
+      "sized": 42,
+      "totalKB": 64,
+      "maxKB": 7.2,
+      "avgKB": 1.5,
+      "lastError": "find_nodes needs at least one of: name, type, text"
+    },
+    "get_node_inf": {
+      "calls": 1,
+      "ok": 0,
+      "errors": 1,
+      "totalMs": 1,
+      "avgMs": 1,
+      "maxMs": 1,
+      "firstUsed": "2026-11-18T07:53:34.801Z",
+      "lastUsed": "2026-11-18T07:53:34.801Z",
+      "byAgent": {
+        "phase1-test": 1
+      },
+      "lastError": "Unknown command: get_node_inf. Did you mean: get_node_info, get_nodes_info, get_document_info, get_node_note, get_selection? list_commands shows all."
+    },
+    "patch_nodes": {
+      "calls": 59,
+      "ok": 59,
+      "errors": 0,
+      "totalMs": 9972,
+      "avgMs": 169,
+      "maxMs": 3848,
+      "firstUsed": "2026-11-18T12:10:51.848Z",
+      "lastUsed": "2026-11-20T22:02:23.593Z",
+      "byAgent": {
+        "ui-session": 15,
+        "figma-run": 11,
+        "codex": 29,
+        "claude": 4
+      },
+      "sized": 31,
+      "totalKB": 9.8,
+      "maxKB": 3.5,
+      "avgKB": 0.3
+    },
+    "set_focus": {
+      "calls": 12,
+      "ok": 12,
+      "errors": 0,
+      "totalMs": 1243,
+      "avgMs": 104,
+      "maxMs": 430,
+      "firstUsed": "2026-11-18T17:04:57.257Z",
+      "lastUsed": "2026-11-20T17:49:16.114Z",
+      "byAgent": {
+        "codex": 12
+      },
+      "sized": 9,
+      "totalKB": 2.6,
+      "maxKB": 0.3,
+      "avgKB": 0.3
+    },
+    "clone_node": {
+      "calls": 140,
+      "ok": 140,
+      "errors": 0,
+      "totalMs": 1297,
+      "avgMs": 9,
+      "maxMs": 356,
+      "firstUsed": "2026-11-18T17:09:53.187Z",
+      "lastUsed": "2026-11-20T22:02:23.580Z",
+      "byAgent": {
+        "codex": 81,
+        "claude": 59
+      },
+      "sized": 59,
+      "totalKB": 11.8,
+      "maxKB": 0.2,
+      "avgKB": 0.2
+    },
+    "set_parent": {
+      "calls": 190,
+      "ok": 189,
+      "errors": 1,
+      "totalMs": 804,
+      "avgMs": 4,
+      "maxMs": 54,
+      "firstUsed": "2026-11-18T17:09:53.189Z",
+      "lastUsed": "2026-11-20T21:26:39.582Z",
+      "byAgent": {
+        "codex": 134,
+        "claude": 56
+      },
+      "lastError": "Parent node not found with ID: [object Object] (get a valid id from get_selection or find_nodes)",
+      "sized": 56,
+      "totalKB": 16.8,
+      "maxKB": 0.3,
+      "avgKB": 0.3
+    },
+    "resize_node": {
+      "calls": 175,
+      "ok": 175,
+      "errors": 0,
+      "totalMs": 1022,
+      "avgMs": 6,
+      "maxMs": 339,
+      "firstUsed": "2026-11-18T17:09:53.190Z",
+      "lastUsed": "2026-11-20T21:26:39.576Z",
+      "byAgent": {
+        "codex": 86,
+        "claude": 89
+      },
+      "sized": 89,
+      "totalKB": 17.9,
+      "maxKB": 0.3,
+      "avgKB": 0.2
+    },
+    "create_section": {
+      "calls": 2,
+      "ok": 2,
+      "errors": 0,
+      "totalMs": 29,
+      "avgMs": 15,
+      "maxMs": 17,
+      "firstUsed": "2026-11-18T17:22:51.817Z",
+      "lastUsed": "2026-11-19T07:02:51.155Z",
+      "byAgent": {
+        "codex": 1,
+        "figma-run": 1
+      },
+      "sized": 1,
+      "totalKB": 0.3,
+      "maxKB": 0.3,
+      "avgKB": 0.3
+    },
+    "rename_node": {
+      "calls": 38,
+      "ok": 38,
+      "errors": 0,
+      "totalMs": 135,
+      "avgMs": 4,
+      "maxMs": 34,
+      "firstUsed": "2026-11-18T17:22:51.820Z",
+      "lastUsed": "2026-11-20T20:56:12.256Z",
+      "byAgent": {
+        "codex": 10,
+        "figma-run": 1,
+        "py:figma_images": 6,
+        "claude": 21
+      },
+      "sized": 28,
+      "totalKB": 5.9,
+      "maxKB": 0.3,
+      "avgKB": 0.2
+    },
+    "move_node": {
+      "calls": 86,
+      "ok": 86,
+      "errors": 0,
+      "totalMs": 731,
+      "avgMs": 9,
+      "maxMs": 120,
+      "firstUsed": "2026-11-18T17:22:51.821Z",
+      "lastUsed": "2026-11-20T20:28:54.091Z",
+      "byAgent": {
+        "codex": 7,
+        "figma-run": 22,
+        "claude": 57
+      },
+      "sized": 80,
+      "totalKB": 16,
+      "maxKB": 0.2,
+      "avgKB": 0.2
+    },
+    "get_reactions": {
+      "calls": 2,
+      "ok": 2,
+      "errors": 0,
+      "totalMs": 80,
+      "avgMs": 40,
+      "maxMs": 54,
+      "firstUsed": "2026-11-18T17:29:06.376Z",
+      "lastUsed": "2026-11-18T17:32:11.012Z",
+      "byAgent": {
+        "codex": 2
+      },
+      "sized": 2,
+      "totalKB": 1.9,
+      "maxKB": 1.7,
+      "avgKB": 1
+    },
+    "delete_node": {
+      "calls": 14,
+      "ok": 14,
+      "errors": 0,
+      "totalMs": 487,
+      "avgMs": 35,
+      "maxMs": 189,
+      "firstUsed": "2026-11-19T06:59:18.739Z",
+      "lastUsed": "2026-11-20T22:02:23.986Z",
+      "byAgent": {
+        "unknown": 4,
+        "claude": 10
+      },
+      "sized": 14,
+      "totalKB": 2.8,
+      "maxKB": 0.2,
+      "avgKB": 0.2
+    },
+    "delete_multiple_nodes": {
+      "calls": 2,
+      "ok": 2,
+      "errors": 0,
+      "totalMs": 674,
+      "avgMs": 337,
+      "maxMs": 606,
+      "firstUsed": "2026-11-19T06:59:33.289Z",
+      "lastUsed": "2026-11-19T08:40:28.916Z",
+      "byAgent": {
+        "unknown": 1,
+        "figma-run": 1
+      },
+      "sized": 2,
+      "totalKB": 4.1,
+      "maxKB": 2.6,
+      "avgKB": 2.1
+    },
+    "create_rectangle": {
+      "calls": 33,
+      "ok": 33,
+      "errors": 0,
+      "totalMs": 198,
+      "avgMs": 6,
+      "maxMs": 46,
+      "firstUsed": "2026-11-19T07:01:51.623Z",
+      "lastUsed": "2026-11-19T08:41:37.021Z",
+      "byAgent": {
+        "unknown": 1,
+        "figma-run": 32
+      },
+      "sized": 33,
+      "totalKB": 9.9,
+      "maxKB": 0.3,
+      "avgKB": 0.3
+    },
+    "create_text": {
+      "calls": 80,
+      "ok": 80,
+      "errors": 0,
+      "totalMs": 928,
+      "avgMs": 12,
+      "maxMs": 64,
+      "firstUsed": "2026-11-19T07:07:44.880Z",
+      "lastUsed": "2026-11-19T09:32:24.301Z",
+      "byAgent": {
+        "figma-run": 80
+      },
+      "sized": 80,
+      "totalKB": 49.4,
+      "maxKB": 0.7,
+      "avgKB": 0.6
+    },
+    "create_frame": {
+      "calls": 32,
+      "ok": 32,
+      "errors": 0,
+      "totalMs": 269,
+      "avgMs": 8,
+      "maxMs": 13,
+      "firstUsed": "2026-11-19T07:07:45.227Z",
+      "lastUsed": "2026-11-19T08:41:36.416Z",
+      "byAgent": {
+        "figma-run": 32
+      },
+      "sized": 32,
+      "totalKB": 21.8,
+      "maxKB": 0.7,
+      "avgKB": 0.7
+    },
+    "set_corner_radius": {
+      "calls": 64,
+      "ok": 64,
+      "errors": 0,
+      "totalMs": 177,
+      "avgMs": 3,
+      "maxMs": 5,
+      "firstUsed": "2026-11-19T07:07:45.373Z",
+      "lastUsed": "2026-11-19T08:41:37.161Z",
+      "byAgent": {
+        "figma-run": 64
+      },
+      "sized": 64,
+      "totalKB": 19.2,
+      "maxKB": 0.3,
+      "avgKB": 0.3
+    },
+    "get_nodes_info": {
+      "calls": 21,
+      "ok": 21,
+      "errors": 0,
+      "totalMs": 7596,
+      "avgMs": 362,
+      "maxMs": 2636,
+      "firstUsed": "2026-11-19T08:10:23.895Z",
+      "lastUsed": "2026-11-20T18:56:41.698Z",
+      "byAgent": {
+        "figma-run": 5,
+        "codex": 16
+      },
+      "sized": 19,
+      "totalKB": 7682.7,
+      "maxKB": 1892.4,
+      "avgKB": 404.4
+    },
+    "list_commands": {
+      "calls": 7,
+      "ok": 7,
+      "errors": 0,
+      "totalMs": 27,
+      "avgMs": 4,
+      "maxMs": 14,
+      "firstUsed": "2026-11-19T19:58:47.598Z",
+      "lastUsed": "2026-11-20T20:02:58.399Z",
+      "byAgent": {
+        "codex": 5,
+        "claude": 2
+      },
+      "sized": 7,
+      "totalKB": 9.6,
+      "maxKB": 1.4,
+      "avgKB": 1.4
+    },
+    "set_layout_mode": {
+      "calls": 13,
+      "ok": 13,
+      "errors": 0,
+      "totalMs": 229,
+      "avgMs": 18,
+      "maxMs": 94,
+      "firstUsed": "2026-11-19T19:59:09.068Z",
+      "lastUsed": "2026-11-20T20:28:53.799Z",
+      "byAgent": {
+        "codex": 10,
+        "claude": 3
+      },
+      "sized": 3,
+      "totalKB": 0.6,
+      "maxKB": 0.2,
+      "avgKB": 0.2
+    },
+    "set_item_spacing": {
+      "calls": 10,
+      "ok": 10,
+      "errors": 0,
+      "totalMs": 23,
+      "avgMs": 2,
+      "maxMs": 9,
+      "firstUsed": "2026-11-19T19:59:09.069Z",
+      "lastUsed": "2026-11-19T19:59:09.176Z",
+      "byAgent": {
+        "codex": 10
+      }
+    },
+    "set_layout_sizing": {
+      "calls": 7,
+      "ok": 7,
+      "errors": 0,
+      "totalMs": 7,
+      "avgMs": 1,
+      "maxMs": 3,
+      "firstUsed": "2026-11-19T19:59:09.076Z",
+      "lastUsed": "2026-11-19T19:59:09.172Z",
+      "byAgent": {
+        "codex": 7
+      }
+    },
+    "set_padding": {
+      "calls": 13,
+      "ok": 13,
+      "errors": 0,
+      "totalMs": 43,
+      "avgMs": 3,
+      "maxMs": 7,
+      "firstUsed": "2026-11-19T19:59:09.080Z",
+      "lastUsed": "2026-11-20T20:17:50.708Z",
+      "byAgent": {
+        "codex": 7,
+        "claude": 6
+      },
+      "sized": 6,
+      "totalKB": 1.8,
+      "maxKB": 0.3,
+      "avgKB": 0.3
+    },
+    "set_selections": {
+      "calls": 2,
+      "ok": 2,
+      "errors": 0,
+      "totalMs": 440,
+      "avgMs": 220,
+      "maxMs": 416,
+      "firstUsed": "2026-11-19T19:59:15.135Z",
+      "lastUsed": "2026-11-19T20:00:02.774Z",
+      "byAgent": {
+        "codex": 2
+      },
+      "sized": 2,
+      "totalKB": 1.4,
+      "maxKB": 0.7,
+      "avgKB": 0.7
+    },
+    "execute_code": {
+      "calls": 2,
+      "ok": 0,
+      "errors": 2,
+      "totalMs": 0,
+      "avgMs": 0,
+      "maxMs": 0,
+      "firstUsed": "2026-11-20T17:20:55.980Z",
+      "lastUsed": "2026-11-20T19:22:00.092Z",
+      "byAgent": {
+        "claude": 1,
+        "figma-run": 1
+      },
+      "lastError": "Unknown command: execute_code. list_commands shows all."
+    },
+    "motion_keyframes": {
+      "calls": 41,
+      "ok": 41,
+      "errors": 0,
+      "totalMs": 536,
+      "avgMs": 13,
+      "maxMs": 132,
+      "firstUsed": "2026-11-20T17:43:17.334Z",
+      "lastUsed": "2026-11-20T19:41:40.916Z",
+      "byAgent": {
+        "codex": 30,
+        "mcp:codex-motion-verification": 1,
+        "mcp:codex-live-figma": 2,
+        "codex-eclipse": 8
+      },
+      "sized": 14,
+      "totalKB": 13.8,
+      "maxKB": 2.3,
+      "avgKB": 1
+    },
+    "export_motion_video": {
+      "calls": 33,
+      "ok": 33,
+      "errors": 0,
+      "totalMs": 1314645,
+      "avgMs": 39838,
+      "maxMs": 69815,
+      "firstUsed": "2026-11-20T17:47:23.307Z",
+      "lastUsed": "2026-11-20T18:47:10.534Z",
+      "byAgent": {
+        "codex": 33
+      },
+      "sized": 33,
+      "totalKB": 50645.7,
+      "maxKB": 3165.5,
+      "avgKB": 1534.7
+    },
+    "build_aura_motion_studies": {
+      "calls": 2,
+      "ok": 1,
+      "errors": 1,
+      "totalMs": 9142,
+      "avgMs": 9142,
+      "maxMs": 9142,
+      "firstUsed": "2026-11-20T18:30:10.917Z",
+      "lastUsed": "2026-11-20T18:32:14.057Z",
+      "byAgent": {
+        "codex": 2
+      },
+      "lastError": "in createPage: The Starter plan only comes with 3 pages. Upgrade to Professional for unlimited pages: https://www.figma.com/pricing",
+      "sized": 1,
+      "totalKB": 1,
+      "maxKB": 1,
+      "avgKB": 1
+    },
+    "restore_aura_study_backgrounds": {
+      "calls": 1,
+      "ok": 1,
+      "errors": 0,
+      "totalMs": 48,
+      "avgMs": 48,
+      "maxMs": 48,
+      "firstUsed": "2026-11-20T18:35:42.598Z",
+      "lastUsed": "2026-11-20T18:35:42.598Z",
+      "byAgent": {
+        "codex": 1
+      },
+      "sized": 1,
+      "totalKB": 1.7,
+      "maxKB": 1.7,
+      "avgKB": 1.7
+    },
+    "revise_aura_motion_board": {
+      "calls": 2,
+      "ok": 1,
+      "errors": 1,
+      "totalMs": 290,
+      "avgMs": 290,
+      "maxMs": 290,
+      "firstUsed": "2026-11-20T18:41:15.313Z",
+      "lastUsed": "2026-11-20T18:41:40.165Z",
+      "byAgent": {
+        "codex": 2
+      },
+      "lastError": "in applyManualKeyframeTrack: Unsupported base value type: 0",
+      "sized": 1,
+      "totalKB": 0.4,
+      "maxKB": 0.4,
+      "avgKB": 0.4
+    },
+    "organize_game_menus": {
+      "calls": 2,
+      "ok": 2,
+      "errors": 0,
+      "totalMs": 1503,
+      "avgMs": 752,
+      "maxMs": 1001,
+      "firstUsed": "2026-11-20T18:59:30.277Z",
+      "lastUsed": "2026-11-20T18:59:39.375Z",
+      "byAgent": {
+        "codex": 2
+      },
+      "sized": 2,
+      "totalKB": 0.8,
+      "maxKB": 0.5,
+      "avgKB": 0.4
+    },
+    "compact_organized_menus": {
+      "calls": 1,
+      "ok": 1,
+      "errors": 0,
+      "totalMs": 168,
+      "avgMs": 168,
+      "maxMs": 168,
+      "firstUsed": "2026-11-20T19:01:40.648Z",
+      "lastUsed": "2026-11-20T19:01:40.648Z",
+      "byAgent": {
+        "codex": 1
+      },
+      "sized": 1,
+      "totalKB": 0.2,
+      "maxKB": 0.2,
+      "avgKB": 0.2
+    }
+  }
+}

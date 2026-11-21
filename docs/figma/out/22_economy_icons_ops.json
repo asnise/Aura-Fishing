@@ -1,0 +1,4001 @@
+[
+ {
+  "pageId": "3465:14993",
+  "replaceName": "Economy · 0 Icons (art + vectors)",
+  "tree": {
+   "type": "SECTION",
+   "name": "Economy · 0 Icons (art + vectors)",
+   "fill": "F3E9D8",
+   "x": 17000,
+   "y": 0,
+   "children": [
+    {
+     "type": "TEXT",
+     "text": "Economy UI · 0 — Icons",
+     "textStyle": "Aura Fishing/Display",
+     "color": {
+      "var": "cozy/text"
+     },
+     "name": "Title",
+     "x": 60,
+     "y": 40
+    },
+    {
+     "type": "TEXT",
+     "text": "All new art from ART_PROMPTS sheets 10–16 plus the global vector icons. Keys = assets/art/<folder>/<name>.png.",
+     "textStyle": "Aura Fishing/Body",
+     "color": {
+      "var": "cozy/subtext"
+     },
+     "name": "Sub",
+     "x": 60,
+     "y": 96,
+     "w": 2200
+    },
+    {
+     "name": "Art",
+     "layout": "V",
+     "gap": 20,
+     "x": 60,
+     "y": 160,
+     "children": [
+      {
+       "name": "ui/status/",
+       "layout": "V",
+       "gap": 10,
+       "pad": 24,
+       "radius": 24,
+       "fill": {
+        "var": "cozy/panel"
+       },
+       "stroke": {
+        "var": "cozy/track"
+       },
+       "strokeW": 2,
+       "effects": [
+        {
+         "color": "3D4B5C",
+         "a": 0.1,
+         "y": 6,
+         "blur": 18
+        }
+       ],
+       "children": [
+        {
+         "type": "TEXT",
+         "text": "ui/status/",
+         "textStyle": "Aura Fishing/Title",
+         "color": {
+          "var": "cozy/text"
+         },
+         "name": "Title"
+        },
+        {
+         "name": "Body",
+         "layout": "V",
+         "gap": 14,
+         "children": [
+          {
+           "name": "Row",
+           "layout": "H",
+           "gap": 8,
+           "children": [
+            {
+             "name": "Art pearl",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/status/pearl",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "pearl",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art star_token",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/status/star_token",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "star_token",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art hot_streak",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/status/hot_streak",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "hot_streak",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art hot_price",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/status/hot_price",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "hot_price",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art boost",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/status/boost",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "boost",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art offline_reward",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/status/offline_reward",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "offline_reward",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art enhance",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/status/enhance",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "enhance",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art mastery_up",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/status/mastery_up",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "mastery_up",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art pearl_pile",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/status/pearl_pile",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "pearl_pile",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "ui/icons/",
+       "layout": "V",
+       "gap": 10,
+       "pad": 24,
+       "radius": 24,
+       "fill": {
+        "var": "cozy/panel"
+       },
+       "stroke": {
+        "var": "cozy/track"
+       },
+       "strokeW": 2,
+       "effects": [
+        {
+         "color": "3D4B5C",
+         "a": 0.1,
+         "y": 6,
+         "blur": 18
+        }
+       ],
+       "children": [
+        {
+         "type": "TEXT",
+         "text": "ui/icons/",
+         "textStyle": "Aura Fishing/Title",
+         "color": {
+          "var": "cozy/text"
+         },
+         "name": "Title"
+        },
+        {
+         "name": "Body",
+         "layout": "V",
+         "gap": 14,
+         "children": [
+          {
+           "name": "Row",
+           "layout": "H",
+           "gap": 8,
+           "children": [
+            {
+             "name": "Art aquarium",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/icons/aquarium",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "aquarium",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art mastery",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/icons/mastery",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "mastery",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art store",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/icons/store",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "store",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art vip",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/icons/vip",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "vip",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art infinite_bag",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/icons/infinite_bag",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "infinite_bag",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art auto_pro",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/icons/auto_pro",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "auto_pro",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art extra_cast",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/icons/extra_cast",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "extra_cast",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art starter_pack",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/icons/starter_pack",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "starter_pack",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art daily_login",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/icons/daily_login",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "daily_login",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "ui/shop/",
+       "layout": "V",
+       "gap": 10,
+       "pad": 24,
+       "radius": 24,
+       "fill": {
+        "var": "cozy/panel"
+       },
+       "stroke": {
+        "var": "cozy/track"
+       },
+       "strokeW": 2,
+       "effects": [
+        {
+         "color": "3D4B5C",
+         "a": 0.1,
+         "y": 6,
+         "blur": 18
+        }
+       ],
+       "children": [
+        {
+         "type": "TEXT",
+         "text": "ui/shop/",
+         "textStyle": "Aura Fishing/Title",
+         "color": {
+          "var": "cozy/text"
+         },
+         "name": "Title"
+        },
+        {
+         "name": "Body",
+         "layout": "V",
+         "gap": 14,
+         "children": [
+          {
+           "name": "Row",
+           "layout": "H",
+           "gap": 8,
+           "children": [
+            {
+             "name": "Art gems_s",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/shop/gems_s",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "gems_s",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art gems_m",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/shop/gems_m",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "gems_m",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art gems_l",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/shop/gems_l",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "gems_l",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art coins_s",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/shop/coins_s",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "coins_s",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art coins_m",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/shop/coins_m",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "coins_m",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art coins_l",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/shop/coins_l",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "coins_l",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art boost_coins",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/shop/boost_coins",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "boost_coins",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art boost_pearls",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/shop/boost_pearls",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "boost_pearls",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art starter_bundle",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/shop/starter_bundle",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "starter_bundle",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "materials/",
+       "layout": "V",
+       "gap": 10,
+       "pad": 24,
+       "radius": 24,
+       "fill": {
+        "var": "cozy/panel"
+       },
+       "stroke": {
+        "var": "cozy/track"
+       },
+       "strokeW": 2,
+       "effects": [
+        {
+         "color": "3D4B5C",
+         "a": 0.1,
+         "y": 6,
+         "blur": 18
+        }
+       ],
+       "children": [
+        {
+         "type": "TEXT",
+         "text": "materials/",
+         "textStyle": "Aura Fishing/Title",
+         "color": {
+          "var": "cozy/text"
+         },
+         "name": "Title"
+        },
+        {
+         "name": "Body",
+         "layout": "V",
+         "gap": 14,
+         "children": [
+          {
+           "name": "Row",
+           "layout": "H",
+           "gap": 8,
+           "children": [
+            {
+             "name": "Art abyss_scale",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img materials/abyss_scale",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "abyss_scale",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art glow_ink",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img materials/glow_ink",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "glow_ink",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art coral_shard",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img materials/coral_shard",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "coral_shard",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art naga_scale",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img materials/naga_scale",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "naga_scale",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art void_essence",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img materials/void_essence",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "void_essence",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art enhance_stone",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img materials/enhance_stone",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "enhance_stone",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art moon_pearl",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img materials/moon_pearl",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "moon_pearl",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art kelp_fiber",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img materials/kelp_fiber",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "kelp_fiber",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art star_shard",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img materials/star_shard",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "star_shard",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "fish/",
+       "layout": "V",
+       "gap": 10,
+       "pad": 24,
+       "radius": 24,
+       "fill": {
+        "var": "cozy/panel"
+       },
+       "stroke": {
+        "var": "cozy/track"
+       },
+       "strokeW": 2,
+       "effects": [
+        {
+         "color": "3D4B5C",
+         "a": 0.1,
+         "y": 6,
+         "blur": 18
+        }
+       ],
+       "children": [
+        {
+         "type": "TEXT",
+         "text": "fish/",
+         "textStyle": "Aura Fishing/Title",
+         "color": {
+          "var": "cozy/text"
+         },
+         "name": "Title"
+        },
+        {
+         "name": "Body",
+         "layout": "V",
+         "gap": 14,
+         "children": [
+          {
+           "name": "Row",
+           "layout": "H",
+           "gap": 8,
+           "children": [
+            {
+             "name": "Art GloomSprat",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/GloomSprat",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "GloomSprat",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art InkletSquid",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/InkletSquid",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "InkletSquid",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art PearlNautilus",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/PearlNautilus",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "PearlNautilus",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art FrostRay",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/FrostRay",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "FrostRay",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art LanternJellyfish",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/LanternJellyfish",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "LanternJellyfish",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art BoneCarp",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/BoneCarp",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "BoneCarp",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art StarlightEel",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/StarlightEel",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "StarlightEel",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art AbyssLeviathan",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/AbyssLeviathan",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "AbyssLeviathan",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art VoidKoi",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/VoidKoi",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "VoidKoi",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "auras/",
+       "layout": "V",
+       "gap": 10,
+       "pad": 24,
+       "radius": 24,
+       "fill": {
+        "var": "cozy/panel"
+       },
+       "stroke": {
+        "var": "cozy/track"
+       },
+       "strokeW": 2,
+       "effects": [
+        {
+         "color": "3D4B5C",
+         "a": 0.1,
+         "y": 6,
+         "blur": 18
+        }
+       ],
+       "children": [
+        {
+         "type": "TEXT",
+         "text": "auras/",
+         "textStyle": "Aura Fishing/Title",
+         "color": {
+          "var": "cozy/text"
+         },
+         "name": "Title"
+        },
+        {
+         "name": "Body",
+         "layout": "V",
+         "gap": 14,
+         "children": [
+          {
+           "name": "Row",
+           "layout": "H",
+           "gap": 8,
+           "children": [
+            {
+             "name": "Art TidalBloom",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img auras/TidalBloom",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "TidalBloom",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art CoralHeart",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img auras/CoralHeart",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "CoralHeart",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art MoonlitRipple",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img auras/MoonlitRipple",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "MoonlitRipple",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art KelpWhisper",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img auras/KelpWhisper",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "KelpWhisper",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art StormCurrent",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img auras/StormCurrent",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "StormCurrent",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art FrostPearl",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img auras/FrostPearl",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "FrostPearl",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art NebulaKoi",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img auras/NebulaKoi",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "NebulaKoi",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art LotusNaga",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img auras/LotusNaga",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "LotusNaga",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art CelestialLeviathan",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img auras/CelestialLeviathan",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "CelestialLeviathan",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "equipment/",
+       "layout": "V",
+       "gap": 10,
+       "pad": 24,
+       "radius": 24,
+       "fill": {
+        "var": "cozy/panel"
+       },
+       "stroke": {
+        "var": "cozy/track"
+       },
+       "strokeW": 2,
+       "effects": [
+        {
+         "color": "3D4B5C",
+         "a": 0.1,
+         "y": 6,
+         "blur": 18
+        }
+       ],
+       "children": [
+        {
+         "type": "TEXT",
+         "text": "equipment/",
+         "textStyle": "Aura Fishing/Title",
+         "color": {
+          "var": "cozy/text"
+         },
+         "name": "Title"
+        },
+        {
+         "name": "Body",
+         "layout": "V",
+         "gap": 14,
+         "children": [
+          {
+           "name": "Row",
+           "layout": "H",
+           "gap": 8,
+           "children": [
+            {
+             "name": "Art SweetheartRod",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img equipment/SweetheartRod",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "SweetheartRod",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art AbyssRod",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img equipment/AbyssRod",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "AbyssRod",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art CelestialRod",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img equipment/CelestialRod",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "CelestialRod",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art AbyssLine",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img equipment/AbyssLine",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "AbyssLine",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art StarLine",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img equipment/StarLine",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "StarLine",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art BottomlessBag",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img equipment/BottomlessBag",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "BottomlessBag",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art PearlBait",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img equipment/PearlBait",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "PearlBait",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art SquidBait",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img equipment/SquidBait",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "SquidBait",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            },
+            {
+             "name": "Art StormBait",
+             "layout": "V",
+             "gap": 4,
+             "w": 104,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Tile",
+               "w": 88,
+               "h": 88,
+               "radius": 18,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "layout": "H",
+               "main": "CENTER",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img equipment/StormBait",
+                 "w": 76,
+                 "h": 76
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "StormBait",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Key",
+               "align": "CENTER",
+               "w": 104
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Global vector icons (§5)",
+     "layout": "V",
+     "gap": 10,
+     "pad": 24,
+     "radius": 24,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 2,
+     "effects": [
+      {
+       "color": "3D4B5C",
+       "a": 0.1,
+       "y": 6,
+       "blur": 18
+      }
+     ],
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "Global vector icons (§5)",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "type": "TEXT",
+       "text": "White SVG so code tints them (ImageColor3). Export from here as 64px PNG for Roblox.",
+       "textStyle": "Aura Fishing/Small",
+       "color": {
+        "var": "cozy/subtext"
+       },
+       "name": "Desc",
+       "w": 752
+      },
+      {
+       "name": "Body",
+       "layout": "V",
+       "gap": 14,
+       "children": [
+        {
+         "name": "Row 1",
+         "layout": "H",
+         "gap": 10,
+         "children": [
+          {
+           "name": "Vec icon_star",
+           "layout": "V",
+           "gap": 6,
+           "w": 112,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Tile",
+             "w": 64,
+             "h": 64,
+             "radius": 18,
+             "fill": {
+              "var": "cozy/text"
+             },
+             "layout": "H",
+             "main": "CENTER",
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#FFFFFF\"/></svg>",
+               "w": 40,
+               "h": 40,
+               "name": "icon_star"
+              }
+             ]
+            },
+            {
+             "name": "Tinted",
+             "layout": "H",
+             "gap": 6,
+             "children": [
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#F2B544\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_star"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#FF9E80\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_star"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#7FD3B0\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_star"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#B79CF2\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_star"
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "icon_star",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/subtext"
+             },
+             "name": "Key",
+             "align": "CENTER",
+             "w": 112
+            }
+           ]
+          },
+          {
+           "name": "Vec icon_star_empty",
+           "layout": "V",
+           "gap": 6,
+           "w": 112,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Tile",
+             "w": 64,
+             "h": 64,
+             "radius": 18,
+             "fill": {
+              "var": "cozy/text"
+             },
+             "layout": "H",
+             "main": "CENTER",
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 6.5l5.3 11.1 12.1 1.4-9 8.3 2.5 12L24 33.2l-10.9 6.1 2.5-12-9-8.3 12.1-1.4z\" stroke=\"#FFFFFF\" stroke-width=\"4\" stroke-linejoin=\"round\"/></svg>",
+               "w": 40,
+               "h": 40,
+               "name": "icon_star_empty"
+              }
+             ]
+            },
+            {
+             "name": "Tinted",
+             "layout": "H",
+             "gap": 6,
+             "children": [
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 6.5l5.3 11.1 12.1 1.4-9 8.3 2.5 12L24 33.2l-10.9 6.1 2.5-12-9-8.3 12.1-1.4z\" stroke=\"#F2B544\" stroke-width=\"4\" stroke-linejoin=\"round\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_star_empty"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 6.5l5.3 11.1 12.1 1.4-9 8.3 2.5 12L24 33.2l-10.9 6.1 2.5-12-9-8.3 12.1-1.4z\" stroke=\"#FF9E80\" stroke-width=\"4\" stroke-linejoin=\"round\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_star_empty"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 6.5l5.3 11.1 12.1 1.4-9 8.3 2.5 12L24 33.2l-10.9 6.1 2.5-12-9-8.3 12.1-1.4z\" stroke=\"#7FD3B0\" stroke-width=\"4\" stroke-linejoin=\"round\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_star_empty"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 6.5l5.3 11.1 12.1 1.4-9 8.3 2.5 12L24 33.2l-10.9 6.1 2.5-12-9-8.3 12.1-1.4z\" stroke=\"#B79CF2\" stroke-width=\"4\" stroke-linejoin=\"round\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_star_empty"
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "icon_star_empty",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/subtext"
+             },
+             "name": "Key",
+             "align": "CENTER",
+             "w": 112
+            }
+           ]
+          },
+          {
+           "name": "Vec icon_arrow_up",
+           "layout": "V",
+           "gap": 6,
+           "w": 112,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Tile",
+             "w": 64,
+             "h": 64,
+             "radius": 18,
+             "fill": {
+              "var": "cozy/text"
+             },
+             "layout": "H",
+             "main": "CENTER",
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 6 40 24H30v18H18V24H8z\" fill=\"#FFFFFF\" stroke=\"#FFFFFF\" stroke-width=\"2\" stroke-linejoin=\"round\"/></svg>",
+               "w": 40,
+               "h": 40,
+               "name": "icon_arrow_up"
+              }
+             ]
+            },
+            {
+             "name": "Tinted",
+             "layout": "H",
+             "gap": 6,
+             "children": [
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 6 40 24H30v18H18V24H8z\" fill=\"#F2B544\" stroke=\"#F2B544\" stroke-width=\"2\" stroke-linejoin=\"round\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_arrow_up"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 6 40 24H30v18H18V24H8z\" fill=\"#FF9E80\" stroke=\"#FF9E80\" stroke-width=\"2\" stroke-linejoin=\"round\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_arrow_up"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 6 40 24H30v18H18V24H8z\" fill=\"#7FD3B0\" stroke=\"#7FD3B0\" stroke-width=\"2\" stroke-linejoin=\"round\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_arrow_up"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 6 40 24H30v18H18V24H8z\" fill=\"#B79CF2\" stroke=\"#B79CF2\" stroke-width=\"2\" stroke-linejoin=\"round\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_arrow_up"
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "icon_arrow_up",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/subtext"
+             },
+             "name": "Key",
+             "align": "CENTER",
+             "w": 112
+            }
+           ]
+          },
+          {
+           "name": "Vec icon_flame",
+           "layout": "V",
+           "gap": 6,
+           "w": 112,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Tile",
+             "w": 64,
+             "h": 64,
+             "radius": 18,
+             "fill": {
+              "var": "cozy/text"
+             },
+             "layout": "H",
+             "main": "CENTER",
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 3c2 7.5 12.4 12.4 12.4 24A12.4 12.4 0 0 1 11.6 27c0-5.5 2.8-9 5.5-11.4 0 4.6 2 6.6 4.5 6.6 0-6.9-1-13.8 2.4-19.2z\" fill=\"#FFFFFF\"/></svg>",
+               "w": 40,
+               "h": 40,
+               "name": "icon_flame"
+              }
+             ]
+            },
+            {
+             "name": "Tinted",
+             "layout": "H",
+             "gap": 6,
+             "children": [
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 3c2 7.5 12.4 12.4 12.4 24A12.4 12.4 0 0 1 11.6 27c0-5.5 2.8-9 5.5-11.4 0 4.6 2 6.6 4.5 6.6 0-6.9-1-13.8 2.4-19.2z\" fill=\"#F2B544\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_flame"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 3c2 7.5 12.4 12.4 12.4 24A12.4 12.4 0 0 1 11.6 27c0-5.5 2.8-9 5.5-11.4 0 4.6 2 6.6 4.5 6.6 0-6.9-1-13.8 2.4-19.2z\" fill=\"#FF9E80\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_flame"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 3c2 7.5 12.4 12.4 12.4 24A12.4 12.4 0 0 1 11.6 27c0-5.5 2.8-9 5.5-11.4 0 4.6 2 6.6 4.5 6.6 0-6.9-1-13.8 2.4-19.2z\" fill=\"#7FD3B0\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_flame"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 3c2 7.5 12.4 12.4 12.4 24A12.4 12.4 0 0 1 11.6 27c0-5.5 2.8-9 5.5-11.4 0 4.6 2 6.6 4.5 6.6 0-6.9-1-13.8 2.4-19.2z\" fill=\"#B79CF2\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_flame"
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "icon_flame",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/subtext"
+             },
+             "name": "Key",
+             "align": "CENTER",
+             "w": 112
+            }
+           ]
+          },
+          {
+           "name": "Vec icon_infinity",
+           "layout": "V",
+           "gap": 6,
+           "w": 112,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Tile",
+             "w": 64,
+             "h": 64,
+             "radius": 18,
+             "fill": {
+              "var": "cozy/text"
+             },
+             "layout": "H",
+             "main": "CENTER",
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 24c-4-5-7-8-11-8a8 8 0 0 0 0 16c4 0 7-3 11-8s7-8 11-8a8 8 0 0 1 0 16c-4 0-7-3-11-8z\" stroke=\"#FFFFFF\" stroke-width=\"5\" stroke-linecap=\"round\"/></svg>",
+               "w": 40,
+               "h": 40,
+               "name": "icon_infinity"
+              }
+             ]
+            },
+            {
+             "name": "Tinted",
+             "layout": "H",
+             "gap": 6,
+             "children": [
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 24c-4-5-7-8-11-8a8 8 0 0 0 0 16c4 0 7-3 11-8s7-8 11-8a8 8 0 0 1 0 16c-4 0-7-3-11-8z\" stroke=\"#F2B544\" stroke-width=\"5\" stroke-linecap=\"round\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_infinity"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 24c-4-5-7-8-11-8a8 8 0 0 0 0 16c4 0 7-3 11-8s7-8 11-8a8 8 0 0 1 0 16c-4 0-7-3-11-8z\" stroke=\"#FF9E80\" stroke-width=\"5\" stroke-linecap=\"round\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_infinity"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 24c-4-5-7-8-11-8a8 8 0 0 0 0 16c4 0 7-3 11-8s7-8 11-8a8 8 0 0 1 0 16c-4 0-7-3-11-8z\" stroke=\"#7FD3B0\" stroke-width=\"5\" stroke-linecap=\"round\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_infinity"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 24c-4-5-7-8-11-8a8 8 0 0 0 0 16c4 0 7-3 11-8s7-8 11-8a8 8 0 0 1 0 16c-4 0-7-3-11-8z\" stroke=\"#B79CF2\" stroke-width=\"5\" stroke-linecap=\"round\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_infinity"
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "icon_infinity",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/subtext"
+             },
+             "name": "Key",
+             "align": "CENTER",
+             "w": 112
+            }
+           ]
+          },
+          {
+           "name": "Vec icon_timer",
+           "layout": "V",
+           "gap": 6,
+           "w": 112,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Tile",
+             "w": 64,
+             "h": 64,
+             "radius": 18,
+             "fill": {
+              "var": "cozy/text"
+             },
+             "layout": "H",
+             "main": "CENTER",
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"24\" cy=\"27\" r=\"16\" stroke=\"#FFFFFF\" stroke-width=\"5\"/><path d=\"M24 27V17\" stroke=\"#FFFFFF\" stroke-width=\"5\" stroke-linecap=\"round\"/><rect x=\"18\" y=\"3\" width=\"12\" height=\"5\" rx=\"2.5\" fill=\"#FFFFFF\"/></svg>",
+               "w": 40,
+               "h": 40,
+               "name": "icon_timer"
+              }
+             ]
+            },
+            {
+             "name": "Tinted",
+             "layout": "H",
+             "gap": 6,
+             "children": [
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"24\" cy=\"27\" r=\"16\" stroke=\"#F2B544\" stroke-width=\"5\"/><path d=\"M24 27V17\" stroke=\"#F2B544\" stroke-width=\"5\" stroke-linecap=\"round\"/><rect x=\"18\" y=\"3\" width=\"12\" height=\"5\" rx=\"2.5\" fill=\"#F2B544\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_timer"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"24\" cy=\"27\" r=\"16\" stroke=\"#FF9E80\" stroke-width=\"5\"/><path d=\"M24 27V17\" stroke=\"#FF9E80\" stroke-width=\"5\" stroke-linecap=\"round\"/><rect x=\"18\" y=\"3\" width=\"12\" height=\"5\" rx=\"2.5\" fill=\"#FF9E80\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_timer"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"24\" cy=\"27\" r=\"16\" stroke=\"#7FD3B0\" stroke-width=\"5\"/><path d=\"M24 27V17\" stroke=\"#7FD3B0\" stroke-width=\"5\" stroke-linecap=\"round\"/><rect x=\"18\" y=\"3\" width=\"12\" height=\"5\" rx=\"2.5\" fill=\"#7FD3B0\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_timer"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"24\" cy=\"27\" r=\"16\" stroke=\"#B79CF2\" stroke-width=\"5\"/><path d=\"M24 27V17\" stroke=\"#B79CF2\" stroke-width=\"5\" stroke-linecap=\"round\"/><rect x=\"18\" y=\"3\" width=\"12\" height=\"5\" rx=\"2.5\" fill=\"#B79CF2\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_timer"
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "icon_timer",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/subtext"
+             },
+             "name": "Key",
+             "align": "CENTER",
+             "w": 112
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Row 2",
+         "layout": "H",
+         "gap": 10,
+         "children": [
+          {
+           "name": "Vec icon_info",
+           "layout": "V",
+           "gap": 6,
+           "w": 112,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Tile",
+             "w": 64,
+             "h": 64,
+             "radius": 18,
+             "fill": {
+              "var": "cozy/text"
+             },
+             "layout": "H",
+             "main": "CENTER",
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"24\" cy=\"24\" r=\"19\" fill=\"#FFFFFF\"/><rect x=\"21\" y=\"21\" width=\"6\" height=\"15\" rx=\"3\" fill=\"#3D4B5C\"/><circle cx=\"24\" cy=\"14.5\" r=\"3.5\" fill=\"#3D4B5C\"/></svg>",
+               "w": 40,
+               "h": 40,
+               "name": "icon_info"
+              }
+             ]
+            },
+            {
+             "name": "Tinted",
+             "layout": "H",
+             "gap": 6,
+             "children": [
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"24\" cy=\"24\" r=\"19\" fill=\"#F2B544\"/><rect x=\"21\" y=\"21\" width=\"6\" height=\"15\" rx=\"3\" fill=\"#3D4B5C\"/><circle cx=\"24\" cy=\"14.5\" r=\"3.5\" fill=\"#3D4B5C\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_info"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"24\" cy=\"24\" r=\"19\" fill=\"#FF9E80\"/><rect x=\"21\" y=\"21\" width=\"6\" height=\"15\" rx=\"3\" fill=\"#3D4B5C\"/><circle cx=\"24\" cy=\"14.5\" r=\"3.5\" fill=\"#3D4B5C\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_info"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"24\" cy=\"24\" r=\"19\" fill=\"#7FD3B0\"/><rect x=\"21\" y=\"21\" width=\"6\" height=\"15\" rx=\"3\" fill=\"#3D4B5C\"/><circle cx=\"24\" cy=\"14.5\" r=\"3.5\" fill=\"#3D4B5C\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_info"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"24\" cy=\"24\" r=\"19\" fill=\"#B79CF2\"/><rect x=\"21\" y=\"21\" width=\"6\" height=\"15\" rx=\"3\" fill=\"#3D4B5C\"/><circle cx=\"24\" cy=\"14.5\" r=\"3.5\" fill=\"#3D4B5C\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_info"
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "icon_info",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/subtext"
+             },
+             "name": "Key",
+             "align": "CENTER",
+             "w": 112
+            }
+           ]
+          },
+          {
+           "name": "Vec icon_lock",
+           "layout": "V",
+           "gap": 6,
+           "w": 112,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Tile",
+             "w": 64,
+             "h": 64,
+             "radius": 18,
+             "fill": {
+              "var": "cozy/text"
+             },
+             "layout": "H",
+             "main": "CENTER",
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"9\" y=\"21\" width=\"30\" height=\"22\" rx=\"6\" fill=\"#FFFFFF\"/><path d=\"M16 21v-5a8 8 0 0 1 16 0v5\" stroke=\"#FFFFFF\" stroke-width=\"5\"/></svg>",
+               "w": 40,
+               "h": 40,
+               "name": "icon_lock"
+              }
+             ]
+            },
+            {
+             "name": "Tinted",
+             "layout": "H",
+             "gap": 6,
+             "children": [
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"9\" y=\"21\" width=\"30\" height=\"22\" rx=\"6\" fill=\"#F2B544\"/><path d=\"M16 21v-5a8 8 0 0 1 16 0v5\" stroke=\"#F2B544\" stroke-width=\"5\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_lock"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"9\" y=\"21\" width=\"30\" height=\"22\" rx=\"6\" fill=\"#FF9E80\"/><path d=\"M16 21v-5a8 8 0 0 1 16 0v5\" stroke=\"#FF9E80\" stroke-width=\"5\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_lock"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"9\" y=\"21\" width=\"30\" height=\"22\" rx=\"6\" fill=\"#7FD3B0\"/><path d=\"M16 21v-5a8 8 0 0 1 16 0v5\" stroke=\"#7FD3B0\" stroke-width=\"5\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_lock"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"9\" y=\"21\" width=\"30\" height=\"22\" rx=\"6\" fill=\"#B79CF2\"/><path d=\"M16 21v-5a8 8 0 0 1 16 0v5\" stroke=\"#B79CF2\" stroke-width=\"5\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_lock"
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "icon_lock",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/subtext"
+             },
+             "name": "Key",
+             "align": "CENTER",
+             "w": 112
+            }
+           ]
+          },
+          {
+           "name": "Vec icon_robux",
+           "layout": "V",
+           "gap": 6,
+           "w": 112,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Tile",
+             "w": 64,
+             "h": 64,
+             "radius": 18,
+             "fill": {
+              "var": "cozy/text"
+             },
+             "layout": "H",
+             "main": "CENTER",
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4 41.3 14v20L24 44 6.7 34V14z\" stroke=\"#FFFFFF\" stroke-width=\"5\" stroke-linejoin=\"round\"/><rect x=\"18\" y=\"18\" width=\"12\" height=\"12\" rx=\"2\" fill=\"#FFFFFF\"/></svg>",
+               "w": 40,
+               "h": 40,
+               "name": "icon_robux"
+              }
+             ]
+            },
+            {
+             "name": "Tinted",
+             "layout": "H",
+             "gap": 6,
+             "children": [
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4 41.3 14v20L24 44 6.7 34V14z\" stroke=\"#F2B544\" stroke-width=\"5\" stroke-linejoin=\"round\"/><rect x=\"18\" y=\"18\" width=\"12\" height=\"12\" rx=\"2\" fill=\"#F2B544\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_robux"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4 41.3 14v20L24 44 6.7 34V14z\" stroke=\"#FF9E80\" stroke-width=\"5\" stroke-linejoin=\"round\"/><rect x=\"18\" y=\"18\" width=\"12\" height=\"12\" rx=\"2\" fill=\"#FF9E80\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_robux"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4 41.3 14v20L24 44 6.7 34V14z\" stroke=\"#7FD3B0\" stroke-width=\"5\" stroke-linejoin=\"round\"/><rect x=\"18\" y=\"18\" width=\"12\" height=\"12\" rx=\"2\" fill=\"#7FD3B0\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_robux"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4 41.3 14v20L24 44 6.7 34V14z\" stroke=\"#B79CF2\" stroke-width=\"5\" stroke-linejoin=\"round\"/><rect x=\"18\" y=\"18\" width=\"12\" height=\"12\" rx=\"2\" fill=\"#B79CF2\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_robux"
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "icon_robux",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/subtext"
+             },
+             "name": "Key",
+             "align": "CENTER",
+             "w": 112
+            }
+           ]
+          },
+          {
+           "name": "Vec icon_clover",
+           "layout": "V",
+           "gap": 6,
+           "w": 112,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Tile",
+             "w": 64,
+             "h": 64,
+             "radius": 18,
+             "fill": {
+              "var": "cozy/text"
+             },
+             "layout": "H",
+             "main": "CENTER",
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"17\" cy=\"17\" r=\"8\" fill=\"#FFFFFF\"/><circle cx=\"31\" cy=\"17\" r=\"8\" fill=\"#FFFFFF\"/><circle cx=\"17\" cy=\"31\" r=\"8\" fill=\"#FFFFFF\"/><circle cx=\"31\" cy=\"31\" r=\"8\" fill=\"#FFFFFF\"/><path d=\"M30 30l10 12\" stroke=\"#FFFFFF\" stroke-width=\"4\" stroke-linecap=\"round\"/></svg>",
+               "w": 40,
+               "h": 40,
+               "name": "icon_clover"
+              }
+             ]
+            },
+            {
+             "name": "Tinted",
+             "layout": "H",
+             "gap": 6,
+             "children": [
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"17\" cy=\"17\" r=\"8\" fill=\"#F2B544\"/><circle cx=\"31\" cy=\"17\" r=\"8\" fill=\"#F2B544\"/><circle cx=\"17\" cy=\"31\" r=\"8\" fill=\"#F2B544\"/><circle cx=\"31\" cy=\"31\" r=\"8\" fill=\"#F2B544\"/><path d=\"M30 30l10 12\" stroke=\"#F2B544\" stroke-width=\"4\" stroke-linecap=\"round\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_clover"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"17\" cy=\"17\" r=\"8\" fill=\"#FF9E80\"/><circle cx=\"31\" cy=\"17\" r=\"8\" fill=\"#FF9E80\"/><circle cx=\"17\" cy=\"31\" r=\"8\" fill=\"#FF9E80\"/><circle cx=\"31\" cy=\"31\" r=\"8\" fill=\"#FF9E80\"/><path d=\"M30 30l10 12\" stroke=\"#FF9E80\" stroke-width=\"4\" stroke-linecap=\"round\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_clover"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"17\" cy=\"17\" r=\"8\" fill=\"#7FD3B0\"/><circle cx=\"31\" cy=\"17\" r=\"8\" fill=\"#7FD3B0\"/><circle cx=\"17\" cy=\"31\" r=\"8\" fill=\"#7FD3B0\"/><circle cx=\"31\" cy=\"31\" r=\"8\" fill=\"#7FD3B0\"/><path d=\"M30 30l10 12\" stroke=\"#7FD3B0\" stroke-width=\"4\" stroke-linecap=\"round\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_clover"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"17\" cy=\"17\" r=\"8\" fill=\"#B79CF2\"/><circle cx=\"31\" cy=\"17\" r=\"8\" fill=\"#B79CF2\"/><circle cx=\"17\" cy=\"31\" r=\"8\" fill=\"#B79CF2\"/><circle cx=\"31\" cy=\"31\" r=\"8\" fill=\"#B79CF2\"/><path d=\"M30 30l10 12\" stroke=\"#B79CF2\" stroke-width=\"4\" stroke-linecap=\"round\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_clover"
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "icon_clover",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/subtext"
+             },
+             "name": "Key",
+             "align": "CENTER",
+             "w": 112
+            }
+           ]
+          },
+          {
+           "name": "Vec icon_bar",
+           "layout": "V",
+           "gap": 6,
+           "w": 112,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Tile",
+             "w": 64,
+             "h": 64,
+             "radius": 18,
+             "fill": {
+              "var": "cozy/text"
+             },
+             "layout": "H",
+             "main": "CENTER",
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"19\" y=\"4\" width=\"10\" height=\"40\" rx=\"5\" stroke=\"#FFFFFF\" stroke-width=\"4\"/><rect x=\"16\" y=\"18\" width=\"16\" height=\"14\" rx=\"5\" fill=\"#FFFFFF\"/></svg>",
+               "w": 40,
+               "h": 40,
+               "name": "icon_bar"
+              }
+             ]
+            },
+            {
+             "name": "Tinted",
+             "layout": "H",
+             "gap": 6,
+             "children": [
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"19\" y=\"4\" width=\"10\" height=\"40\" rx=\"5\" stroke=\"#F2B544\" stroke-width=\"4\"/><rect x=\"16\" y=\"18\" width=\"16\" height=\"14\" rx=\"5\" fill=\"#F2B544\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_bar"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"19\" y=\"4\" width=\"10\" height=\"40\" rx=\"5\" stroke=\"#FF9E80\" stroke-width=\"4\"/><rect x=\"16\" y=\"18\" width=\"16\" height=\"14\" rx=\"5\" fill=\"#FF9E80\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_bar"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"19\" y=\"4\" width=\"10\" height=\"40\" rx=\"5\" stroke=\"#7FD3B0\" stroke-width=\"4\"/><rect x=\"16\" y=\"18\" width=\"16\" height=\"14\" rx=\"5\" fill=\"#7FD3B0\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_bar"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"19\" y=\"4\" width=\"10\" height=\"40\" rx=\"5\" stroke=\"#B79CF2\" stroke-width=\"4\"/><rect x=\"16\" y=\"18\" width=\"16\" height=\"14\" rx=\"5\" fill=\"#B79CF2\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_bar"
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "icon_bar",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/subtext"
+             },
+             "name": "Key",
+             "align": "CENTER",
+             "w": 112
+            }
+           ]
+          },
+          {
+           "name": "Vec icon_reel",
+           "layout": "V",
+           "gap": 6,
+           "w": 112,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Tile",
+             "w": 64,
+             "h": 64,
+             "radius": 18,
+             "fill": {
+              "var": "cozy/text"
+             },
+             "layout": "H",
+             "main": "CENTER",
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"24\" cy=\"24\" r=\"16\" stroke=\"#FFFFFF\" stroke-width=\"5\"/><circle cx=\"24\" cy=\"24\" r=\"5\" fill=\"#FFFFFF\"/><path d=\"M24 24 36 12\" stroke=\"#FFFFFF\" stroke-width=\"5\" stroke-linecap=\"round\"/></svg>",
+               "w": 40,
+               "h": 40,
+               "name": "icon_reel"
+              }
+             ]
+            },
+            {
+             "name": "Tinted",
+             "layout": "H",
+             "gap": 6,
+             "children": [
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"24\" cy=\"24\" r=\"16\" stroke=\"#F2B544\" stroke-width=\"5\"/><circle cx=\"24\" cy=\"24\" r=\"5\" fill=\"#F2B544\"/><path d=\"M24 24 36 12\" stroke=\"#F2B544\" stroke-width=\"5\" stroke-linecap=\"round\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_reel"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"24\" cy=\"24\" r=\"16\" stroke=\"#FF9E80\" stroke-width=\"5\"/><circle cx=\"24\" cy=\"24\" r=\"5\" fill=\"#FF9E80\"/><path d=\"M24 24 36 12\" stroke=\"#FF9E80\" stroke-width=\"5\" stroke-linecap=\"round\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_reel"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"24\" cy=\"24\" r=\"16\" stroke=\"#7FD3B0\" stroke-width=\"5\"/><circle cx=\"24\" cy=\"24\" r=\"5\" fill=\"#7FD3B0\"/><path d=\"M24 24 36 12\" stroke=\"#7FD3B0\" stroke-width=\"5\" stroke-linecap=\"round\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_reel"
+              },
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"24\" cy=\"24\" r=\"16\" stroke=\"#B79CF2\" stroke-width=\"5\"/><circle cx=\"24\" cy=\"24\" r=\"5\" fill=\"#B79CF2\"/><path d=\"M24 24 36 12\" stroke=\"#B79CF2\" stroke-width=\"5\" stroke-linecap=\"round\"/></svg>",
+               "w": 22,
+               "h": 22,
+               "name": "icon_reel"
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "icon_reel",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/subtext"
+             },
+             "name": "Key",
+             "align": "CENTER",
+             "w": 112
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "w": 800,
+     "x": 1100,
+     "y": 160
+    }
+   ]
+  }
+ }
+]

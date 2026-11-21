@@ -1,0 +1,799 @@
+{
+ "pageId": "3465:14993",
+ "replaceName": "Aura Fishing — Components",
+ "tree": {
+  "name": "Aura Fishing — Components",
+  "layout": "V",
+  "pad": 48,
+  "gap": 36,
+  "fill": "F7F1E6",
+  "radius": 32,
+  "y": 1300,
+  "x": 200,
+  "children": [
+   {
+    "type": "TEXT",
+    "text": "Components",
+    "textStyle": "Aura Fishing/Display",
+    "color": {
+     "var": "cozy/text"
+    }
+   },
+   {
+    "type": "TEXT",
+    "text": "Button",
+    "textStyle": "Aura Fishing/Heading",
+    "color": {
+     "var": "cozy/subtext"
+    }
+   },
+   {
+    "type": "VARIANTS",
+    "key": "button",
+    "name": "Button",
+    "layout": "H",
+    "gap": 16,
+    "pad": 16,
+    "setRadius": 16,
+    "description": "Cozy Lake button. Soft 5px lip at the bottom. Export name prefix 'Btn' for Roblox. Borders everywhere use cozy/track only.",
+    "children": [
+     {
+      "type": "COMPONENT",
+      "name": "Style=Primary",
+      "layout": "H",
+      "pad": [
+       12,
+       28,
+       16,
+       28
+      ],
+      "main": "CENTER",
+      "cross": "CENTER",
+      "radiusVar": "cozy/radius/button",
+      "fill": {
+       "var": "cozy/coral"
+      },
+      "stroke": {
+       "var": "cozy/coral-lip"
+      },
+      "strokeSides": {
+       "b": 5
+      },
+      "strokeAlign": "INSIDE",
+      "children": [
+       {
+        "type": "TEXT",
+        "text": "BUTTON",
+        "textStyle": "Aura Fishing/Button",
+        "color": {
+         "var": "cozy/on-accent"
+        },
+        "name": "Label"
+       }
+      ]
+     },
+     {
+      "type": "COMPONENT",
+      "name": "Style=Secondary",
+      "layout": "H",
+      "pad": [
+       12,
+       28,
+       16,
+       28
+      ],
+      "main": "CENTER",
+      "cross": "CENTER",
+      "radiusVar": "cozy/radius/button",
+      "fill": {
+       "var": "cozy/sky"
+      },
+      "stroke": {
+       "var": "cozy/sky-lip"
+      },
+      "strokeSides": {
+       "b": 5
+      },
+      "strokeAlign": "INSIDE",
+      "children": [
+       {
+        "type": "TEXT",
+        "text": "BUTTON",
+        "textStyle": "Aura Fishing/Button",
+        "color": {
+         "var": "cozy/on-accent"
+        },
+        "name": "Label"
+       }
+      ]
+     },
+     {
+      "type": "COMPONENT",
+      "name": "Style=Success",
+      "layout": "H",
+      "pad": [
+       12,
+       28,
+       16,
+       28
+      ],
+      "main": "CENTER",
+      "cross": "CENTER",
+      "radiusVar": "cozy/radius/button",
+      "fill": {
+       "var": "cozy/mint"
+      },
+      "stroke": {
+       "var": "cozy/mint-lip"
+      },
+      "strokeSides": {
+       "b": 5
+      },
+      "strokeAlign": "INSIDE",
+      "children": [
+       {
+        "type": "TEXT",
+        "text": "BUTTON",
+        "textStyle": "Aura Fishing/Button",
+        "color": {
+         "var": "cozy/on-accent"
+        },
+        "name": "Label"
+       }
+      ]
+     },
+     {
+      "type": "COMPONENT",
+      "name": "Style=Gold",
+      "layout": "H",
+      "pad": [
+       12,
+       28,
+       16,
+       28
+      ],
+      "main": "CENTER",
+      "cross": "CENTER",
+      "radiusVar": "cozy/radius/button",
+      "fill": {
+       "var": "cozy/gold"
+      },
+      "stroke": {
+       "var": "cozy/gold-lip"
+      },
+      "strokeSides": {
+       "b": 5
+      },
+      "strokeAlign": "INSIDE",
+      "children": [
+       {
+        "type": "TEXT",
+        "text": "BUTTON",
+        "textStyle": "Aura Fishing/Button",
+        "color": {
+         "var": "cozy/on-accent"
+        },
+        "name": "Label"
+       }
+      ]
+     },
+     {
+      "type": "COMPONENT",
+      "name": "Style=Gem",
+      "layout": "H",
+      "pad": [
+       12,
+       28,
+       16,
+       28
+      ],
+      "main": "CENTER",
+      "cross": "CENTER",
+      "radiusVar": "cozy/radius/button",
+      "fill": {
+       "var": "cozy/gem"
+      },
+      "stroke": {
+       "var": "cozy/gem-lip"
+      },
+      "strokeSides": {
+       "b": 5
+      },
+      "strokeAlign": "INSIDE",
+      "children": [
+       {
+        "type": "TEXT",
+        "text": "BUTTON",
+        "textStyle": "Aura Fishing/Button",
+        "color": {
+         "var": "cozy/on-accent"
+        },
+        "name": "Label"
+       }
+      ]
+     },
+     {
+      "type": "COMPONENT",
+      "name": "Style=Ghost",
+      "layout": "H",
+      "pad": [
+       12,
+       28,
+       16,
+       28
+      ],
+      "main": "CENTER",
+      "cross": "CENTER",
+      "radiusVar": "cozy/radius/button",
+      "fill": {
+       "var": "cozy/sand"
+      },
+      "stroke": {
+       "var": "cozy/track"
+      },
+      "strokeSides": {
+       "b": 5
+      },
+      "strokeAlign": "INSIDE",
+      "children": [
+       {
+        "type": "TEXT",
+        "text": "BUTTON",
+        "textStyle": "Aura Fishing/Button",
+        "color": {
+         "var": "cozy/text"
+        },
+        "name": "Label"
+       }
+      ]
+     },
+     {
+      "type": "COMPONENT",
+      "name": "Style=Danger",
+      "layout": "H",
+      "pad": [
+       12,
+       28,
+       16,
+       28
+      ],
+      "main": "CENTER",
+      "cross": "CENTER",
+      "radiusVar": "cozy/radius/button",
+      "fill": {
+       "var": "cozy/danger"
+      },
+      "stroke": {
+       "var": "cozy/danger-lip"
+      },
+      "strokeSides": {
+       "b": 5
+      },
+      "strokeAlign": "INSIDE",
+      "children": [
+       {
+        "type": "TEXT",
+        "text": "BUTTON",
+        "textStyle": "Aura Fishing/Button",
+        "color": {
+         "var": "cozy/on-accent"
+        },
+        "name": "Label"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "TEXT",
+    "text": "Chip",
+    "textStyle": "Aura Fishing/Heading",
+    "color": {
+     "var": "cozy/subtext"
+    }
+   },
+   {
+    "type": "VARIANTS",
+    "key": "chip",
+    "name": "Chip",
+    "layout": "H",
+    "gap": 16,
+    "pad": 16,
+    "setRadius": 16,
+    "children": [
+     {
+      "type": "COMPONENT",
+      "name": "Type=Coins",
+      "layout": "H",
+      "pad": [
+       6,
+       16,
+       6,
+       8
+      ],
+      "gap": 8,
+      "cross": "CENTER",
+      "radius": 999,
+      "fill": {
+       "var": "cozy/panel"
+      },
+      "stroke": {
+       "var": "cozy/track"
+      },
+      "strokeW": 2,
+      "children": [
+       {
+        "type": "ELLIPSE",
+        "name": "Icon",
+        "w": 24,
+        "h": 24,
+        "fill": {
+         "var": "cozy/gold"
+        }
+       },
+       {
+        "type": "TEXT",
+        "text": "12,450",
+        "textStyle": "Aura Fishing/Number",
+        "color": {
+         "var": "cozy/text"
+        },
+        "name": "Value"
+       }
+      ]
+     },
+     {
+      "type": "COMPONENT",
+      "name": "Type=Gems",
+      "layout": "H",
+      "pad": [
+       6,
+       16,
+       6,
+       8
+      ],
+      "gap": 8,
+      "cross": "CENTER",
+      "radius": 999,
+      "fill": {
+       "var": "cozy/panel"
+      },
+      "stroke": {
+       "var": "cozy/track"
+      },
+      "strokeW": 2,
+      "children": [
+       {
+        "type": "ELLIPSE",
+        "name": "Icon",
+        "w": 24,
+        "h": 24,
+        "fill": {
+         "var": "cozy/gem"
+        }
+       },
+       {
+        "type": "TEXT",
+        "text": "320",
+        "textStyle": "Aura Fishing/Number",
+        "color": {
+         "var": "cozy/text"
+        },
+        "name": "Value"
+       }
+      ]
+     },
+     {
+      "type": "COMPONENT",
+      "name": "Type=Level",
+      "layout": "H",
+      "pad": [
+       6,
+       16,
+       6,
+       8
+      ],
+      "gap": 8,
+      "cross": "CENTER",
+      "radius": 999,
+      "fill": {
+       "var": "cozy/panel"
+      },
+      "stroke": {
+       "var": "cozy/track"
+      },
+      "strokeW": 2,
+      "children": [
+       {
+        "type": "ELLIPSE",
+        "name": "Icon",
+        "w": 24,
+        "h": 24,
+        "fill": {
+         "var": "cozy/mint"
+        }
+       },
+       {
+        "type": "TEXT",
+        "text": "Lv. 12",
+        "textStyle": "Aura Fishing/Number",
+        "color": {
+         "var": "cozy/text"
+        },
+        "name": "Value"
+       }
+      ]
+     },
+     {
+      "type": "COMPONENT",
+      "name": "Type=Bag",
+      "layout": "H",
+      "pad": [
+       6,
+       16,
+       6,
+       8
+      ],
+      "gap": 8,
+      "cross": "CENTER",
+      "radius": 999,
+      "fill": {
+       "var": "cozy/panel"
+      },
+      "stroke": {
+       "var": "cozy/track"
+      },
+      "strokeW": 2,
+      "children": [
+       {
+        "type": "ELLIPSE",
+        "name": "Icon",
+        "w": 24,
+        "h": 24,
+        "fill": {
+         "var": "cozy/sky"
+        }
+       },
+       {
+        "type": "TEXT",
+        "text": "18 / 50",
+        "textStyle": "Aura Fishing/Number",
+        "color": {
+         "var": "cozy/text"
+        },
+        "name": "Value"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "TEXT",
+    "text": "Rarity Tag",
+    "textStyle": "Aura Fishing/Heading",
+    "color": {
+     "var": "cozy/subtext"
+    }
+   },
+   {
+    "type": "VARIANTS",
+    "key": "tag",
+    "name": "Rarity Tag",
+    "layout": "H",
+    "gap": 12,
+    "pad": 16,
+    "setRadius": 16,
+    "children": [
+     {
+      "type": "COMPONENT",
+      "name": "Rarity=Common",
+      "layout": "H",
+      "pad": [
+       3,
+       10,
+       3,
+       10
+      ],
+      "radius": 999,
+      "fill": {
+       "var": "cozy/rarity/common"
+      },
+      "children": [
+       {
+        "type": "TEXT",
+        "text": "COMMON",
+        "textStyle": "Aura Fishing/Caption",
+        "color": {
+         "var": "cozy/on-accent"
+        },
+        "name": "Label"
+       }
+      ]
+     },
+     {
+      "type": "COMPONENT",
+      "name": "Rarity=Uncommon",
+      "layout": "H",
+      "pad": [
+       3,
+       10,
+       3,
+       10
+      ],
+      "radius": 999,
+      "fill": {
+       "var": "cozy/rarity/uncommon"
+      },
+      "children": [
+       {
+        "type": "TEXT",
+        "text": "UNCOMMON",
+        "textStyle": "Aura Fishing/Caption",
+        "color": {
+         "var": "cozy/on-accent"
+        },
+        "name": "Label"
+       }
+      ]
+     },
+     {
+      "type": "COMPONENT",
+      "name": "Rarity=Rare",
+      "layout": "H",
+      "pad": [
+       3,
+       10,
+       3,
+       10
+      ],
+      "radius": 999,
+      "fill": {
+       "var": "cozy/rarity/rare"
+      },
+      "children": [
+       {
+        "type": "TEXT",
+        "text": "RARE",
+        "textStyle": "Aura Fishing/Caption",
+        "color": {
+         "var": "cozy/on-accent"
+        },
+        "name": "Label"
+       }
+      ]
+     },
+     {
+      "type": "COMPONENT",
+      "name": "Rarity=Epic",
+      "layout": "H",
+      "pad": [
+       3,
+       10,
+       3,
+       10
+      ],
+      "radius": 999,
+      "fill": {
+       "var": "cozy/rarity/epic"
+      },
+      "children": [
+       {
+        "type": "TEXT",
+        "text": "EPIC",
+        "textStyle": "Aura Fishing/Caption",
+        "color": {
+         "var": "cozy/on-accent"
+        },
+        "name": "Label"
+       }
+      ]
+     },
+     {
+      "type": "COMPONENT",
+      "name": "Rarity=Legendary",
+      "layout": "H",
+      "pad": [
+       3,
+       10,
+       3,
+       10
+      ],
+      "radius": 999,
+      "fill": {
+       "var": "cozy/rarity/legendary"
+      },
+      "children": [
+       {
+        "type": "TEXT",
+        "text": "LEGENDARY",
+        "textStyle": "Aura Fishing/Caption",
+        "color": {
+         "var": "cozy/on-accent"
+        },
+        "name": "Label"
+       }
+      ]
+     },
+     {
+      "type": "COMPONENT",
+      "name": "Rarity=Mythic",
+      "layout": "H",
+      "pad": [
+       3,
+       10,
+       3,
+       10
+      ],
+      "radius": 999,
+      "fill": {
+       "var": "cozy/rarity/mythic"
+      },
+      "children": [
+       {
+        "type": "TEXT",
+        "text": "MYTHIC",
+        "textStyle": "Aura Fishing/Caption",
+        "color": {
+         "var": "cozy/on-accent"
+        },
+        "name": "Label"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "TEXT",
+    "text": "Progress Bar / Catch Card / Window Row",
+    "textStyle": "Aura Fishing/Heading",
+    "color": {
+     "var": "cozy/subtext"
+    }
+   },
+   {
+    "layout": "H",
+    "gap": 24,
+    "cross": "MIN",
+    "name": "Row",
+    "children": [
+     {
+      "type": "COMPONENT",
+      "key": "progress",
+      "name": "Progress Bar",
+      "w": 260,
+      "h": 12,
+      "radius": 6,
+      "fill": {
+       "var": "cozy/track"
+      },
+      "children": [
+       {
+        "type": "RECT",
+        "name": "Fill",
+        "w": 170,
+        "h": 12,
+        "radius": 6,
+        "fill": {
+         "var": "cozy/mint"
+        },
+        "x": 0,
+        "y": 0
+       }
+      ]
+     },
+     {
+      "type": "COMPONENT",
+      "key": "catch",
+      "name": "Catch Card",
+      "layout": "V",
+      "pad": 16,
+      "gap": 6,
+      "w": 300,
+      "radius": 18,
+      "fill": {
+       "var": "cozy/panel"
+      },
+      "stroke": {
+       "var": "cozy/track"
+      },
+      "strokeW": 2,
+      "effects": [
+       {
+        "color": "3D4B5C",
+        "a": 0.1,
+        "y": 6,
+        "blur": 18
+       }
+      ],
+      "children": [
+       {
+        "type": "INSTANCE",
+        "ref": "tag",
+        "variant": "Rarity=Rare",
+        "name": "Rarity"
+       },
+       {
+        "type": "TEXT",
+        "text": "Glow Eel",
+        "textStyle": "Aura Fishing/Title",
+        "color": {
+         "var": "cozy/text"
+        },
+        "name": "Fish"
+       },
+       {
+        "type": "TEXT",
+        "text": "4.2 kg  •  Glowing  •  Manual",
+        "textStyle": "Aura Fishing/Small",
+        "color": {
+         "var": "cozy/subtext"
+        },
+        "name": "Meta"
+       },
+       {
+        "type": "TEXT",
+        "text": "Worth 260 coins",
+        "textStyle": "Aura Fishing/Number",
+        "color": {
+         "var": "cozy/gold-lip"
+        },
+        "name": "Value"
+       }
+      ]
+     },
+     {
+      "type": "COMPONENT",
+      "key": "row",
+      "name": "Shop Row",
+      "layout": "H",
+      "pad": 12,
+      "gap": 12,
+      "w": 460,
+      "cross": "CENTER",
+      "radiusVar": "cozy/radius/button",
+      "fill": {
+       "var": "cozy/sand"
+      },
+      "children": [
+       {
+        "layout": "V",
+        "gap": 2,
+        "name": "Text",
+        "fillW": true,
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "Coral Rod",
+          "textStyle": "Aura Fishing/Heading",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Title"
+         },
+         {
+          "type": "TEXT",
+          "text": "+15% Luck, +0.30 Reel Power  |  2,500 Coins",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Sub"
+         }
+        ]
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "button",
+        "variant": "Style=Gold",
+        "name": "Action",
+        "texts": {
+         "Label": "Buy"
+        }
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

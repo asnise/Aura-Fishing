@@ -1,0 +1,65 @@
+﻿Constants - every tuning number in one place,,,,,
+Yellow cells are inputs: change a value and every sheet that references it recalculates. Values come from GameConfig / Config files (source column).,,,,,
+,,,,,
+Group,Key,Value,Unit,What it does,Source (src/shared/...)
+Start,StartingCoins,500,coins,Coins a new player starts with,Config/GameConfig
+Start,StartingGems,15,gems,Gems a new player starts with,Config/GameConfig
+Casting,CastTapPower,0.55,0-1,Cast power of a tap / Auto cast (distance = MinDistance + (CastRange-MinDistance) x power),Config/GameConfig.Cast
+Casting,CastMinDistance,6,studs,Cast distance at power 0,Config/GameConfig.Cast
+Casting,PerfectBiteBonus,0.3,fraction,Perfect cast: bite wait x (1 - this),Config/GameConfig.Cast
+Casting,PerfectMin,0.78,0-1,Gold zone start on the power bar,Config/GameConfig.Cast
+Casting,PerfectMax,0.9,0-1,Gold zone end on the power bar,Config/GameConfig.Cast
+Casting,BiteWaitMin,2.5,sec,Shortest random bite wait (before BiteSpeed),Config/GameConfig
+Casting,BiteWaitMax,6,sec,Longest random bite wait (before BiteSpeed),Config/GameConfig
+Casting,BiteWindow,2.2,sec,Seconds to click the '!' before the fish escapes,Config/GameConfig
+Casting,CastCooldown,0.6,sec,Cooldown between casts,Config/GameConfig
+Casting,FlightTime,0.35,sec,Bobber flight time,Config/GameConfig.Cast
+Manual vs Auto,ManualMultiplier,1.5,x,Coin value and XP multiplier of a manual catch,Config/GameConfig
+Manual vs Auto,PerfectCatchBonus,0.25,x added,Added to the manual multiplier when the fish never left the catch bar,Config/GameConfig
+Manual vs Auto,AutoCycleTime,14,sec,Seconds per Auto catch (before AutoSpeed / BiteSpeed),Config/GameConfig
+Manual vs Auto,AutoGemMultiplier,0.5,share,Auto catches give this share of rarity Gems (the fraction is the chance of +1),Config/GameConfig
+Manual vs Auto,AutoTreasureMultiplier,0.5,share,Auto catches roll chests at this share of the chance,Config/GameConfig
+Hot Streak,HotStreakPerCatch,0.05,x per catch,Each manual catch in a row adds this to the coin value,Config/GameConfig.HotStreak
+Hot Streak,HotStreakMax,0.5,x max,Streak bonus cap (reached at x10),Config/GameConfig.HotStreak
+Reel minigame,ReelStartProgress,0.25,0-1,Catch progress at the start,Config/GameConfig.Minigame
+Reel minigame,ReelGainPerSecond,0.32,per sec,Progress gain while on the fish (x ReelPower),Config/GameConfig.Minigame
+Reel minigame,ReelLossPerSecond,0.22,per sec,Progress loss while off the fish (x (1 - Resilience)),Config/GameConfig.Minigame
+Reel minigame,DifficultySpeedScale,0.18,x per level,Fish speed = pattern speed x (1 + (Difficulty-1) x this),Config/GameConfig.Minigame
+Reel minigame,ReelMaxDuration,60,sec,Max reel time,Config/GameConfig.Minigame
+Reel minigame,ValidationSlack,0.8,fraction,Server accepts a finish at this share of the theoretical minimum time,Config/GameConfig.Minigame
+Inventory,FishStackMax,10,fish,Same species + mutation stack up to this,Config/GameConfig.Inventory
+Inventory,TreasureStackMax,5,chests,Chest stack size,Config/GameConfig.Inventory
+Inventory,TreasureLuckScale,0.5,x per Luck,Chest drop chance x (1 + Luck x this),Config/GameConfig.Inventory
+Inventory,InfiniteBagSlots,999,slots,Capacity with the Infinite Bag pass,Config/GameConfig.Inventory
+Boosts,BoostCoinsMult,2,x,2x Coins boost (fish sale price),Config/GameConfig.Boosts
+Boosts,BoostPearlsMult,2,x,2x Pearls boost (Aquarium),Config/GameConfig.Boosts
+Rolling,LuckTierExponent,0.6,exponent,Fish weight x (1 + Luck) ^ ((Tier - 1) x this),Config/GameConfig
+Progression,XPBase,60,xp,XP to next level = floor(XPBase x Level ^ XPExponent),Config/GameConfig
+Progression,XPExponent,1.3,exponent,XP curve steepness,Config/GameConfig
+Progression,GemsPerLevel,5,gems,Gems for each level-up,Config/GameConfig
+Progression,NewSpeciesGems,3,gems,Gems for the first catch of a species,Config/GameConfig
+Progression,SkillPointsPerLevel,1,points,Skill points per level-up,Config/Skills
+Mastery,MasteryPriceGrowth,1.15,x per level,Mastery price = floor(BasePrice x PriceGrowth ^ level) Pearls,Config/Mastery
+Enhance,EnhanceMaxLevel,10,level,Max Enhance level,Config/GameConfig.Enhance
+Enhance,EnhanceStatPerLevel,0.04,x per level,Stats x (1 + this x level); MaxDepth is excluded,Config/GameConfig.Enhance
+Enhance,EnhanceCostFraction,0.1,of price,Coins for level L->L+1 = floor(price x this x growth ^ L),Config/GameConfig.Enhance
+Enhance,EnhanceCostGrowth,1.5,x per level,Enhance cost growth,Config/GameConfig.Enhance
+Aquarium,AquariumStartSlots,3,slots,Tank slots at start,Config/GameConfig.Aquarium
+Aquarium,AquariumMinOfflineSeconds,60,sec,Shorter absences give nothing,Config/GameConfig.Aquarium
+Auras,AuraRollCost,5,gems,Default cost of one aura roll,Config/GameConfig
+Auras,AuraStarsMax,5,stars,Max aura stars,Config/AuraStars
+Auras,AuraStatPerStar,0.2,x per star,Aura stats x (1 + this x stars),Config/AuraStars
+Rebirth,RebirthRequiredLevel,50,level,Level needed for the first rebirth,Config/Features.Rebirth
+Rebirth,RebirthLevelStep,10,levels,Added to the required level per rebirth,Config/Features.Rebirth
+Rebirth,RebirthMaxLevel,100,level,Required level cap,Config/Features.Rebirth
+Rebirth,RebirthBonus,0.25,x per rebirth,Added to SellMultiplier and PearlRate per rebirth,Config/Features.Rebirth
+Skills,MultiCastChance,0.35,chance,Each extra line: chance of a bonus fish per catch,Config/Skills
+Hot fish,HotFishIntervalMin,60,min,Merchant hot list rotates this often,Config/GameConfig.HotFish
+Hot fish,HotFishCountMin,1,species,Fewest hot species,Config/GameConfig.HotFish
+Hot fish,HotFishCountMax,2,species,Most hot species,Config/GameConfig.HotFish
+Hot fish,HotFishMults,2 / 2.5 / 3,x,Possible sell multipliers (random),Config/GameConfig.HotFish
+Hotspot,HotspotLuckBonus,0.5,Luck,Luck added when a manual cast lands in a hotspot,Config/GameConfig.Hotspot
+Hotspot,HotspotUses,2,casts,Casts a hotspot allows,Config/GameConfig.Hotspot
+Hotspot,HotspotMax,4,spots,Hotspots per server,Config/GameConfig.Hotspot
+Quests,QuestsPerDay,3,quests,Daily quests,Config/Features.Quests
+Quests,QuestRewardGems,5,gems,Gems per finished quest,Config/Features.Quests

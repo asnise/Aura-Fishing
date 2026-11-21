@@ -1,0 +1,1016 @@
+[
+ {
+  "replaceId": "3492:21811",
+  "tree": {
+   "name": "Window Fishdex",
+   "layout": "V",
+   "pad": 20,
+   "gap": 14,
+   "w": 760,
+   "h": 610,
+   "x": 260,
+   "y": 70,
+   "radius": 24,
+   "fill": {
+    "var": "cozy/panel"
+   },
+   "stroke": {
+    "var": "cozy/track"
+   },
+   "strokeW": 2,
+   "effects": [
+    {
+     "color": "3D4B5C",
+     "a": 0.1,
+     "y": 6,
+     "blur": 18
+    }
+   ],
+   "children": [
+    {
+     "name": "Header",
+     "layout": "H",
+     "fillW": true,
+     "main": "SPACE_BETWEEN",
+     "cross": "CENTER",
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "Fishdex",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "type": "INSTANCE",
+       "ref": "3487:4298",
+       "variant": "Style=Danger",
+       "texts": {
+        "Label": "X"
+       },
+       "name": "Btn Close"
+      }
+     ]
+    },
+    {
+     "name": "Summary",
+     "layout": "H",
+     "gap": 14,
+     "cross": "CENTER",
+     "fillW": true,
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "Discovered 7 / 20",
+       "textStyle": "Aura Fishing/Heading",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Count"
+      },
+      {
+       "type": "INSTANCE",
+       "ref": "3487:4331",
+       "name": "Progress",
+       "fillW": true
+      }
+     ]
+    },
+    {
+     "name": "Grid (6 per page)",
+     "layout": "H",
+     "wrap": true,
+     "gap": 12,
+     "rowGap": 12,
+     "fillW": true,
+     "children": [
+      {
+       "name": "Card Pebble Minnow",
+       "layout": "V",
+       "gap": 6,
+       "pad": 12,
+       "w": 228,
+       "h": 184,
+       "radius": 18,
+       "fill": {
+        "var": "cozy/panel"
+       },
+       "stroke": {
+        "var": "cozy/track"
+       },
+       "strokeW": 2,
+       "children": [
+        {
+         "name": "Picture",
+         "w": 204,
+         "h": 70,
+         "radius": 12,
+         "fill": "F4FAFD",
+         "clip": true,
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Img fish/PebbleMinnow",
+           "w": 96,
+           "h": 64,
+           "x": 54,
+           "y": 3,
+           "opacity": 1
+          }
+         ]
+        },
+        {
+         "type": "TEXT",
+         "text": "Pebble Minnow",
+         "textStyle": "Aura Fishing/Heading",
+         "color": {
+          "var": "cozy/text"
+         },
+         "name": "Name",
+         "w": 204
+        },
+        {
+         "name": "Where",
+         "layout": "H",
+         "gap": 6,
+         "cross": "CENTER",
+         "main": "MIN",
+         "children": [
+          {
+           "type": "INSTANCE",
+           "ref": "3487:4328",
+           "variant": "Rarity=Common",
+           "name": "Tag Common"
+          },
+          {
+           "name": "Badge",
+           "layout": "H",
+           "pad": [
+            3,
+            10,
+            4,
+            10
+           ],
+           "radius": 999,
+           "fill": {
+            "var": "cozy/sky"
+           },
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "0-40m",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/on-accent"
+             },
+             "name": "Label"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Record",
+         "layout": "H",
+         "gap": 6,
+         "cross": "CENTER",
+         "main": "MIN",
+         "children": [
+          {
+           "name": "Badge",
+           "layout": "H",
+           "pad": [
+            3,
+            10,
+            4,
+            10
+           ],
+           "radius": 999,
+           "fill": {
+            "var": "cozy/sand"
+           },
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "Caught x23",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Label"
+            }
+           ]
+          },
+          {
+           "name": "Badge",
+           "layout": "H",
+           "pad": [
+            3,
+            10,
+            4,
+            10
+           ],
+           "radius": 999,
+           "fill": {
+            "var": "cozy/sand"
+           },
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "Best 0.38 kg",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Label"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Card Bubble Carp",
+       "layout": "V",
+       "gap": 6,
+       "pad": 12,
+       "w": 228,
+       "h": 184,
+       "radius": 18,
+       "fill": {
+        "var": "cozy/panel"
+       },
+       "stroke": {
+        "var": "cozy/track"
+       },
+       "strokeW": 2,
+       "children": [
+        {
+         "name": "Picture",
+         "w": 204,
+         "h": 70,
+         "radius": 12,
+         "fill": "F4FAFD",
+         "clip": true,
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Img fish/BubbleCarp",
+           "w": 96,
+           "h": 64,
+           "x": 54,
+           "y": 3,
+           "opacity": 1
+          }
+         ]
+        },
+        {
+         "type": "TEXT",
+         "text": "Bubble Carp",
+         "textStyle": "Aura Fishing/Heading",
+         "color": {
+          "var": "cozy/text"
+         },
+         "name": "Name",
+         "w": 204
+        },
+        {
+         "name": "Where",
+         "layout": "H",
+         "gap": 6,
+         "cross": "CENTER",
+         "main": "MIN",
+         "children": [
+          {
+           "type": "INSTANCE",
+           "ref": "3487:4328",
+           "variant": "Rarity=Common",
+           "name": "Tag Common"
+          },
+          {
+           "name": "Badge",
+           "layout": "H",
+           "pad": [
+            3,
+            10,
+            4,
+            10
+           ],
+           "radius": 999,
+           "fill": {
+            "var": "cozy/sky"
+           },
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "0-50m",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/on-accent"
+             },
+             "name": "Label"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Record",
+         "layout": "H",
+         "gap": 6,
+         "cross": "CENTER",
+         "main": "MIN",
+         "children": [
+          {
+           "name": "Badge",
+           "layout": "H",
+           "pad": [
+            3,
+            10,
+            4,
+            10
+           ],
+           "radius": 999,
+           "fill": {
+            "var": "cozy/sand"
+           },
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "Caught x41",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Label"
+            }
+           ]
+          },
+          {
+           "name": "Badge",
+           "layout": "H",
+           "pad": [
+            3,
+            10,
+            4,
+            10
+           ],
+           "radius": 999,
+           "fill": {
+            "var": "cozy/sand"
+           },
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "Best 2.71 kg",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Label"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Card Reed Perch",
+       "layout": "V",
+       "gap": 6,
+       "pad": 12,
+       "w": 228,
+       "h": 184,
+       "radius": 18,
+       "fill": {
+        "var": "cozy/panel"
+       },
+       "stroke": {
+        "var": "cozy/track"
+       },
+       "strokeW": 2,
+       "children": [
+        {
+         "name": "Picture",
+         "w": 204,
+         "h": 70,
+         "radius": 12,
+         "fill": "F4FAFD",
+         "clip": true,
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Img fish/ReedPerch",
+           "w": 96,
+           "h": 64,
+           "x": 54,
+           "y": 3,
+           "opacity": 1
+          }
+         ]
+        },
+        {
+         "type": "TEXT",
+         "text": "Reed Perch",
+         "textStyle": "Aura Fishing/Heading",
+         "color": {
+          "var": "cozy/text"
+         },
+         "name": "Name",
+         "w": 204
+        },
+        {
+         "name": "Where",
+         "layout": "H",
+         "gap": 6,
+         "cross": "CENTER",
+         "main": "MIN",
+         "children": [
+          {
+           "type": "INSTANCE",
+           "ref": "3487:4328",
+           "variant": "Rarity=Common",
+           "name": "Tag Common"
+          },
+          {
+           "name": "Badge",
+           "layout": "H",
+           "pad": [
+            3,
+            10,
+            4,
+            10
+           ],
+           "radius": 999,
+           "fill": {
+            "var": "cozy/sky"
+           },
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "5-60m",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/on-accent"
+             },
+             "name": "Label"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Record",
+         "layout": "H",
+         "gap": 6,
+         "cross": "CENTER",
+         "main": "MIN",
+         "children": [
+          {
+           "name": "Badge",
+           "layout": "H",
+           "pad": [
+            3,
+            10,
+            4,
+            10
+           ],
+           "radius": 999,
+           "fill": {
+            "var": "cozy/sand"
+           },
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "Caught x12",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Label"
+            }
+           ]
+          },
+          {
+           "name": "Badge",
+           "layout": "H",
+           "pad": [
+            3,
+            10,
+            4,
+            10
+           ],
+           "radius": 999,
+           "fill": {
+            "var": "cozy/sand"
+           },
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "Best 1.20 kg",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Label"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Card Sunscale Sardine",
+       "layout": "V",
+       "gap": 6,
+       "pad": 12,
+       "w": 228,
+       "h": 184,
+       "radius": 18,
+       "fill": {
+        "var": "cozy/panel"
+       },
+       "stroke": {
+        "var": "cozy/track"
+       },
+       "strokeW": 2,
+       "children": [
+        {
+         "name": "Picture",
+         "w": 204,
+         "h": 70,
+         "radius": 12,
+         "fill": "F4FAFD",
+         "clip": true,
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Img fish/SunscaleSardine",
+           "w": 96,
+           "h": 64,
+           "x": 54,
+           "y": 3,
+           "opacity": 1
+          }
+         ]
+        },
+        {
+         "type": "TEXT",
+         "text": "Sunscale Sardine",
+         "textStyle": "Aura Fishing/Heading",
+         "color": {
+          "var": "cozy/text"
+         },
+         "name": "Name",
+         "w": 204
+        },
+        {
+         "name": "Where",
+         "layout": "H",
+         "gap": 6,
+         "cross": "CENTER",
+         "main": "MIN",
+         "children": [
+          {
+           "type": "INSTANCE",
+           "ref": "3487:4328",
+           "variant": "Rarity=Common",
+           "name": "Tag Common"
+          },
+          {
+           "name": "Badge",
+           "layout": "H",
+           "pad": [
+            3,
+            10,
+            4,
+            10
+           ],
+           "radius": 999,
+           "fill": {
+            "var": "cozy/sky"
+           },
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "0-30m",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/on-accent"
+             },
+             "name": "Label"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Record",
+         "layout": "H",
+         "gap": 6,
+         "cross": "CENTER",
+         "main": "MIN",
+         "children": [
+          {
+           "name": "Badge",
+           "layout": "H",
+           "pad": [
+            3,
+            10,
+            4,
+            10
+           ],
+           "radius": 999,
+           "fill": {
+            "var": "cozy/sand"
+           },
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "Caught x30",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Label"
+            }
+           ]
+          },
+          {
+           "name": "Badge",
+           "layout": "H",
+           "pad": [
+            3,
+            10,
+            4,
+            10
+           ],
+           "radius": 999,
+           "fill": {
+            "var": "cozy/sand"
+           },
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "Best 0.29 kg",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Label"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Card Pearl Clam",
+       "layout": "V",
+       "gap": 6,
+       "pad": 12,
+       "w": 228,
+       "h": 184,
+       "radius": 18,
+       "fill": {
+        "var": "cozy/panel"
+       },
+       "stroke": {
+        "var": "cozy/track"
+       },
+       "strokeW": 2,
+       "children": [
+        {
+         "name": "Picture",
+         "w": 204,
+         "h": 70,
+         "radius": 12,
+         "fill": "F4FAFD",
+         "clip": true,
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Img fish/PearlClam",
+           "w": 96,
+           "h": 64,
+           "x": 54,
+           "y": 3,
+           "opacity": 1
+          }
+         ]
+        },
+        {
+         "type": "TEXT",
+         "text": "Pearl Clam",
+         "textStyle": "Aura Fishing/Heading",
+         "color": {
+          "var": "cozy/text"
+         },
+         "name": "Name",
+         "w": 204
+        },
+        {
+         "name": "Where",
+         "layout": "H",
+         "gap": 6,
+         "cross": "CENTER",
+         "main": "MIN",
+         "children": [
+          {
+           "type": "INSTANCE",
+           "ref": "3487:4328",
+           "variant": "Rarity=Uncommon",
+           "name": "Tag Uncommon"
+          },
+          {
+           "name": "Badge",
+           "layout": "H",
+           "pad": [
+            3,
+            10,
+            4,
+            10
+           ],
+           "radius": 999,
+           "fill": {
+            "var": "cozy/sky"
+           },
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "10-50m",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/on-accent"
+             },
+             "name": "Label"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Record",
+         "layout": "H",
+         "gap": 6,
+         "cross": "CENTER",
+         "main": "MIN",
+         "children": [
+          {
+           "name": "Badge",
+           "layout": "H",
+           "pad": [
+            3,
+            10,
+            4,
+            10
+           ],
+           "radius": 999,
+           "fill": {
+            "var": "cozy/sand"
+           },
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "Caught x6",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Label"
+            }
+           ]
+          },
+          {
+           "name": "Badge",
+           "layout": "H",
+           "pad": [
+            3,
+            10,
+            4,
+            10
+           ],
+           "radius": 999,
+           "fill": {
+            "var": "cozy/sand"
+           },
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "Best 0.66 kg",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Label"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Card Lily Trout",
+       "layout": "V",
+       "gap": 6,
+       "pad": 12,
+       "w": 228,
+       "h": 184,
+       "radius": 18,
+       "fill": {
+        "var": "cozy/panel"
+       },
+       "stroke": {
+        "var": "cozy/track"
+       },
+       "strokeW": 2,
+       "children": [
+        {
+         "name": "Picture",
+         "w": 204,
+         "h": 70,
+         "radius": 12,
+         "fill": "F4FAFD",
+         "clip": true,
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Img fish/LilyTrout",
+           "w": 96,
+           "h": 64,
+           "x": 54,
+           "y": 3,
+           "opacity": 1
+          }
+         ]
+        },
+        {
+         "type": "TEXT",
+         "text": "Lily Trout",
+         "textStyle": "Aura Fishing/Heading",
+         "color": {
+          "var": "cozy/text"
+         },
+         "name": "Name",
+         "w": 204
+        },
+        {
+         "name": "Where",
+         "layout": "H",
+         "gap": 6,
+         "cross": "CENTER",
+         "main": "MIN",
+         "children": [
+          {
+           "type": "INSTANCE",
+           "ref": "3487:4328",
+           "variant": "Rarity=Uncommon",
+           "name": "Tag Uncommon"
+          },
+          {
+           "name": "Badge",
+           "layout": "H",
+           "pad": [
+            3,
+            10,
+            4,
+            10
+           ],
+           "radius": 999,
+           "fill": {
+            "var": "cozy/sky"
+           },
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "0-45m",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/on-accent"
+             },
+             "name": "Label"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Record",
+         "layout": "H",
+         "gap": 6,
+         "cross": "CENTER",
+         "main": "MIN",
+         "children": [
+          {
+           "name": "Badge",
+           "layout": "H",
+           "pad": [
+            3,
+            10,
+            4,
+            10
+           ],
+           "radius": 999,
+           "fill": {
+            "var": "cozy/sand"
+           },
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "Caught x4",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Label"
+            }
+           ]
+          },
+          {
+           "name": "Badge",
+           "layout": "H",
+           "pad": [
+            3,
+            10,
+            4,
+            10
+           ],
+           "radius": 999,
+           "fill": {
+            "var": "cozy/sand"
+           },
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "Best 3.10 kg",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Label"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Footer",
+     "layout": "H",
+     "fillW": true,
+     "main": "CENTER",
+     "cross": "CENTER",
+     "children": [
+      {
+       "name": "Pager",
+       "layout": "H",
+       "gap": 10,
+       "cross": "CENTER",
+       "children": [
+        {
+         "type": "INSTANCE",
+         "ref": "3487:4298",
+         "variant": "Style=Ghost",
+         "texts": {
+          "Label": "<"
+         },
+         "name": "Btn Page Prev"
+        },
+        {
+         "type": "TEXT",
+         "text": "1 / 4",
+         "font": {
+          "family": "Fredoka One",
+          "style": "Regular"
+         },
+         "size": 18,
+         "color": "7A8A99",
+         "name": "Page"
+        },
+        {
+         "type": "INSTANCE",
+         "ref": "3487:4298",
+         "variant": "Style=Ghost",
+         "texts": {
+          "Label": ">"
+         },
+         "name": "Btn Page Next"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+]

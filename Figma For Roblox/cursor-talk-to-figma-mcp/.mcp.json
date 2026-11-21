@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "FigmaRoblox": {
+      "command": "node",
+      "args": ["scripts/mcp-live.mjs", "--roblox-project=D:\\Roblox Project\\Aura Fishing"]
+    }
+  }
+}

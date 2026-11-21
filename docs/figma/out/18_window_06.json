@@ -1,0 +1,333 @@
+{
+ "parentId": "3492:16966",
+ "replaceName": "Window Shop",
+ "tree": {
+  "name": "Window Shop",
+  "layout": "V",
+  "pad": 20,
+  "gap": 14,
+  "w": 760,
+  "h": 610,
+  "x": 260,
+  "y": 70,
+  "radius": 24,
+  "fill": {
+   "var": "cozy/panel"
+  },
+  "stroke": {
+   "var": "cozy/track"
+  },
+  "strokeW": 2,
+  "effects": [
+   {
+    "color": "3D4B5C",
+    "a": 0.1,
+    "y": 6,
+    "blur": 18
+   }
+  ],
+  "children": [
+   {
+    "name": "Header",
+    "layout": "H",
+    "fillW": true,
+    "main": "SPACE_BETWEEN",
+    "cross": "CENTER",
+    "children": [
+     {
+      "type": "TEXT",
+      "text": "Shop",
+      "textStyle": "Aura Fishing/Title",
+      "color": {
+       "var": "cozy/text"
+      },
+      "name": "Title"
+     },
+     {
+      "type": "INSTANCE",
+      "ref": "3487:4298",
+      "variant": "Style=Danger",
+      "texts": {
+       "Label": "X"
+      },
+      "name": "Btn Close"
+     }
+    ]
+   },
+   {
+    "name": "Tabs",
+    "layout": "H",
+    "gap": 8,
+    "fillW": true,
+    "children": [
+     {
+      "type": "INSTANCE",
+      "ref": "3487:4298",
+      "variant": "Style=Ghost",
+      "texts": {
+       "Label": "Bags"
+      },
+      "name": "Btn Tab Bags",
+      "fillW": true
+     },
+     {
+      "type": "INSTANCE",
+      "ref": "3487:4298",
+      "variant": "Style=Primary",
+      "texts": {
+       "Label": "Baits"
+      },
+      "name": "Btn Tab Baits",
+      "fillW": true
+     },
+     {
+      "type": "INSTANCE",
+      "ref": "3487:4298",
+      "variant": "Style=Ghost",
+      "texts": {
+       "Label": "Lines"
+      },
+      "name": "Btn Tab Lines",
+      "fillW": true
+     },
+     {
+      "type": "INSTANCE",
+      "ref": "3487:4298",
+      "variant": "Style=Ghost",
+      "texts": {
+       "Label": "Rods"
+      },
+      "name": "Btn Tab Rods",
+      "fillW": true
+     }
+    ]
+   },
+   {
+    "name": "List (max 4)",
+    "layout": "V",
+    "gap": 10,
+    "fillW": true,
+    "h": 350,
+    "children": [
+     {
+      "name": "Row Worm  x14  (equipped)",
+      "layout": "H",
+      "pad": 12,
+      "gap": 12,
+      "cross": "CENTER",
+      "radius": 16,
+      "h": 80,
+      "fill": {
+       "var": "cozy/sand"
+      },
+      "fillW": true,
+      "children": [
+       {
+        "type": "RECT",
+        "name": "Img equipment/Worm",
+        "w": 56,
+        "h": 56
+       },
+       {
+        "name": "Text",
+        "layout": "V",
+        "gap": 2,
+        "fillW": true,
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "Worm  x14  (equipped)",
+          "textStyle": "Aura Fishing/Heading",
+          "color": {
+           "var": "cozy/mint-lip"
+          },
+          "name": "Title"
+         },
+         {
+          "type": "TEXT",
+          "text": "+10% Luck  |  10 for 20 Coins",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Sub"
+         }
+        ]
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4298",
+        "variant": "Style=Gold",
+        "texts": {
+         "Label": "Buy x10"
+        },
+        "name": "Btn Buy"
+       }
+      ]
+     },
+     {
+      "name": "Row Shrimp  x0",
+      "layout": "H",
+      "pad": 12,
+      "gap": 12,
+      "cross": "CENTER",
+      "radius": 16,
+      "h": 80,
+      "fill": {
+       "var": "cozy/sand"
+      },
+      "fillW": true,
+      "children": [
+       {
+        "type": "RECT",
+        "name": "Img equipment/Shrimp",
+        "w": 56,
+        "h": 56
+       },
+       {
+        "name": "Text",
+        "layout": "V",
+        "gap": 2,
+        "fillW": true,
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "Shrimp  x0",
+          "textStyle": "Aura Fishing/Heading",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Title"
+         },
+         {
+          "type": "TEXT",
+          "text": "+30% Luck, +10% Bite Speed  |  10 for 150 Coins",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Sub"
+         }
+        ]
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4298",
+        "variant": "Style=Gold",
+        "texts": {
+         "Label": "Buy x10"
+        },
+        "name": "Btn Buy"
+       }
+      ]
+     },
+     {
+      "name": "Row Glow Grub  x3",
+      "layout": "H",
+      "pad": 12,
+      "gap": 12,
+      "cross": "CENTER",
+      "radius": 16,
+      "h": 80,
+      "fill": {
+       "var": "cozy/sand"
+      },
+      "fillW": true,
+      "children": [
+       {
+        "type": "RECT",
+        "name": "Img equipment/GlowGrub",
+        "w": 56,
+        "h": 56
+       },
+       {
+        "name": "Text",
+        "layout": "V",
+        "gap": 2,
+        "fillW": true,
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "Glow Grub  x3",
+          "textStyle": "Aura Fishing/Heading",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Title"
+         },
+         {
+          "type": "TEXT",
+          "text": "+75% Luck, +1% Mutation  |  10 for 900 Coins",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Sub"
+         }
+        ]
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4298",
+        "variant": "Style=Secondary",
+        "texts": {
+         "Label": "Use"
+        },
+        "name": "Btn Use"
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4298",
+        "variant": "Style=Gold",
+        "texts": {
+         "Label": "Buy x10"
+        },
+        "name": "Btn Buy"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Footer",
+    "layout": "H",
+    "gap": 10,
+    "fillW": true,
+    "main": "SPACE_BETWEEN",
+    "cross": "CENTER",
+    "children": [
+     {
+      "name": "Spacer",
+      "w": 1,
+      "h": 1
+     },
+     {
+      "name": "Wallet",
+      "layout": "H",
+      "gap": 10,
+      "children": [
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4313",
+        "variant": "Type=Coins",
+        "texts": {
+         "Value": "12,450"
+        },
+        "name": "Coins"
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4313",
+        "variant": "Type=Gems",
+        "texts": {
+         "Value": "320"
+        },
+        "name": "Gems"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

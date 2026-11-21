@@ -1,0 +1,26 @@
+﻿"Sell Value - one fish, step by step",
+"Mirrors Roll.Value + Inventory.SellValue. The game stores each catch's value at catch time, then multiplies by the Sell Multiplier x Coin boost x Hot-fish multiplier when sold.",
+Inputs,
+Fish Id,AbyssLeviathan
+Weight (kg),400
+Mutation (None or Id),None
+Catch mode (Manual / Auto),Manual
+Perfect catch (1 = yes),1
+Hot Streak count,5
+AutoMultiplier stat,1
+SellMultiplier stat,1
+2x Coins boost on (1 = yes),0
+Hot-fish multiplier at merchant (1 = none),1
+,
+Steps,
+Base value,320000
+Average weight (kg),400
+"Size factor = clamp((weight/avg)^0.7, 0.4, 3)",1
+Mutation multiplier,1
+"Catch multiplier (manual 1.5 + perfect 0.25, or Auto stat)",1.75
+Hot Streak bonus (manual only),0.25
+Value stored in the bag at catch time,700000
+Sale multiplier = Sell Multiplier x Coin boost,1
+Coins when sold = stored x sale multiplier x hot-fish,700000
+,
+"Note: the shop sums stored values per stack then multiplies, so per-fish rounding can differ by a few coins in big stacks.",

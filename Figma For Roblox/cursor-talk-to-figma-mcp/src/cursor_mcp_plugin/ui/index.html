@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Cursor MCP Plugin</title>
+    <style>/*@inline styles.css*/</style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="header-text">
+          <h1>Figma → Roblox (Aura Fishing)</h1>
+          <p>Fork with Roblox export + design-system builder</p>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <button type="button" id="tab-connection" class="tab active">Connection</button>
+        <button type="button" id="tab-workbench" class="tab">Workbench</button>
+        <button type="button" id="tab-agent-handoff" class="tab">Agent Handoff</button>
+        <button type="button" id="tab-about" class="tab">About</button>
+      </div>
+
+      <div id="content-connection" class="tab-content active">
+        <div class="section">
+          <div style="margin-bottom: 16px">
+            <button id="btn-connect" class="primary" style="width: 100%">
+              Connect
+            </button>
+          </div>
+
+          <div id="port-container">
+            <label for="port">WebSocket Server Port</label>
+            <input
+              type="number"
+              id="port"
+              placeholder="3055"
+              value="3055"
+              min="1024"
+              max="65535"
+            />
+          </div>
+        </div>
+
+        <div id="selection-panel" class="section selection">
+          <div class="sel-head">
+            <h2>Selection <span id="sel-count" class="sel-count">0</span></h2>
+            <button id="btn-copy-ids" class="secondary small" disabled>Copy all</button>
+          </div>
+          <p class="sel-hint">Select layers in Figma. Give the agent the id, and add a note to say what a layer is (agents read the note instead of analysing images).</p>
+          <div id="sel-list" class="sel-list"><div class="sel-empty">Nothing selected</div></div>
+        </div>
+
+        <div id="connection-status" class="status disconnected">
+          Not connected to Cursor MCP server
+        </div>
+
+        <div id="mcp-config" class="section hidden">
+          <h2>MCP Configuration</h2>
+          <p>
+            Copy this configuration to your <code>mcp.json</code> file in
+            Cursor:
+          </p>
+          <textarea
+            id="mcp-json"
+            rows="5"
+            readonly
+            style="
+              width: 100%;
+              background: #2d2d2d;
+              color: #e0e0e0;
+              padding: 12px;
+              border: 1px solid #444444;
+              border-radius: 4px;
+              font-family: monospace;
+              margin-bottom: 8px;
+            "
+          ></textarea>
+          <button id="btn-copy" class="secondary">Copy to Clipboard</button>
+        </div>
+
+        <!-- Add Progress Bar Section -->
+        <div id="progress-container" class="section hidden">
+          <h2>Operation Progress</h2>
+          <div id="progress-message">No operation in progress</div>
+          <div
+            style="
+              width: 100%;
+              background-color: #444;
+              border-radius: 4px;
+              margin-top: 8px;
+            "
+          >
+            <div
+              id="progress-bar"
+              style="
+                width: 0%;
+                height: 8px;
+                background-color: #18a0fb;
+                border-radius: 4px;
+                transition: width 0.3s;
+              "
+            ></div>
+          </div>
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              margin-top: 4px;
+              font-size: 12px;
+            "
+          >
+            <div id="progress-status">Not started</div>
+            <div id="progress-percentage">0%</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="content-workbench" class="tab-content">
+        <div class="section work-area">
+          <p id="work-selection">Select a layer in Figma.</p>
+          <div class="work-actions">
+            <button type="button" class="secondary" id="work-inspect" disabled>Inspect layer</button>
+            <button type="button" class="secondary" id="work-motion" disabled>Read Motion</button>
+            <button type="button" class="secondary" id="work-tools">List commands</button>
+          </div>
+          <label for="work-output">Result</label>
+          <textarea id="work-output" rows="8" readonly spellcheck="false"></textarea>
+          <button type="button" class="secondary" id="work-copy" disabled>Copy result</button>
+        </div>
+      </div>
+
+      <div id="content-agent-handoff" class="tab-content">
+        <div class="section work-area">
+          <label for="handoff-mode">Workflow</label>
+          <select id="handoff-mode">
+            <option value="inspect">Inspect</option>
+            <option value="motion">Figma Motion</option>
+            <option value="roblox">Implement in Roblox</option>
+          </select>
+          <label for="handoff-task">Task</label>
+          <textarea id="handoff-task" rows="2" placeholder="What should the agent do?"></textarea>
+          <label for="handoff-done">Constraints and success criteria</label>
+          <textarea id="handoff-done" rows="2" placeholder="What should the agent preserve or verify?"></textarea>
+          <label for="handoff-output">Agent prompt</label>
+          <textarea id="handoff-output" rows="7" readonly spellcheck="false"></textarea>
+          <button type="button" class="primary" id="handoff-copy">Copy agent prompt</button>
+        </div>
+      </div>
+
+      <div id="content-about" class="tab-content">
+        <div class="section">
+          <h2>About Talk To Figma Plugin</h2>
+          <p>
+            This plugin allows Cursor AI to communicate with Figma, enabling
+            AI-assisted design operations.
+            <a
+              class="link"
+              onclick="window.open(`https://github.com/grab/cursor-talk-to-figma-mcp`, '_blank')"
+              >Github</a
+            >
+          </p>
+          <p>Version: 1.1.0</p>
+
+          <h2>How to Use</h2>
+          <ol>
+            <li>Make sure the MCP server is running in Cursor</li>
+            <li>Connect to the server using the port number (default: 3055)</li>
+            <li>Once connected, you can interact with Figma through Cursor</li>
+          </ol>
+          <p style="font-size: 11px; color: #888; margin-top: 16px;">
+            Analytics disabled in this fork (Aura Fishing). Only talks to the local relay on localhost:3055.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>/*@inline ui.js*/</script>
+  </body>
+</html>

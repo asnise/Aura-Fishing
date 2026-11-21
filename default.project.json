@@ -1,0 +1,32 @@
+{
+  "name": "AuraFishing",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "Shared": {
+        "$path": "src/shared"
+      }
+    },
+    "ServerScriptService": {
+      "Server": {
+        "$path": "src/server"
+      }
+    },
+    "StarterPlayer": {
+      "StarterPlayerScripts": {
+        "Client": {
+          "$path": "src/client"
+        }
+      }
+    },
+    "Lighting": {
+      "$properties": {
+        "ClockTime": 16.5,
+        "Brightness": 2,
+        "GlobalShadows": true
+      }
+    },
+    "SoundService": {},
+    "HttpService": {}
+  }
+}

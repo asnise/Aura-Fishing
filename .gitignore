@@ -1,0 +1,48 @@
+# Environment variables, credentials, and API keys
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.cert
+*.pfx
+*.p12
+id_rsa*
+secrets.*
+credentials.json
+token.json
+client_secret*.json
+
+# Rojo / Roblox build and sourcemaps
+build/
+sourcemap.json
+*.rbxl.lock
+*.rbxlx.lock
+
+# Audio / Heavy media
+docs/source/*.wav
+docs/source/*.mp3
+
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# OS / Editor caches
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+.impeccable/*.cache.json
+*.log

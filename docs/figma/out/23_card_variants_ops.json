@@ -1,0 +1,1230 @@
+[
+ {
+  "pageId": "3465:14993",
+  "replaceName": "Aquarium · Card Remove Variants (6 Options)",
+  "tree": {
+   "type": "SECTION",
+   "name": "Aquarium · Card Remove Variants (6 Options)",
+   "fill": "FBF7EF",
+   "x": 23000,
+   "y": 2000,
+   "children": [
+    {
+     "type": "TEXT",
+     "text": "Aquarium — 6 Card Remove Variants to Choose",
+     "textStyle": "Aura Fishing/Display",
+     "color": {
+      "var": "cozy/text"
+     },
+     "name": "Title",
+     "x": 60,
+     "y": 40
+    },
+    {
+     "type": "TEXT",
+     "text": "Compare 6 UX variations to solve the Aquarium fish remove button. No checkmarks, bullets, or emojis used.",
+     "textStyle": "Aura Fishing/Body",
+     "color": {
+      "var": "cozy/subtext"
+     },
+     "name": "Sub",
+     "x": 60,
+     "y": 96,
+     "w": 1200
+    },
+    {
+     "name": "Variant Option 1 — Top-Right Out Button",
+     "layout": "V",
+     "gap": 14,
+     "pad": 24,
+     "w": 360,
+     "radius": 24,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 2,
+     "effects": [
+      {
+       "color": "3D4B5C",
+       "a": 0.1,
+       "y": 6,
+       "blur": 18
+      }
+     ],
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "Option 1: Top-Right Out Button",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "type": "TEXT",
+       "text": "ปุ่มลบย้ายไปมุมขวาบนในน้ำ พื้นที่ล่างโล่ง แสดงชื่อปลาได้เต็ม ไม่โดนตัด ...",
+       "textStyle": "Aura Fishing/Small",
+       "color": {
+        "var": "cozy/subtext"
+       },
+       "name": "Desc",
+       "w": 312
+      },
+      {
+       "name": "CenterHolder",
+       "layout": "H",
+       "main": "CENTER",
+       "fillW": true,
+       "children": [
+        {
+         "name": "Card Option 1",
+         "w": 162,
+         "h": 176,
+         "radius": 18,
+         "clip": true,
+         "fill": "FFFFFF",
+         "stroke": {
+          "var": "cozy/track"
+         },
+         "strokeW": 2,
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Water",
+           "w": 162,
+           "h": 118,
+           "x": 0,
+           "y": 0,
+           "fill": {
+            "grad": [
+             "D3ECFA",
+             "A9DCF7"
+            ],
+            "angle": 90
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Bubble",
+           "w": 10,
+           "h": 10,
+           "x": 18,
+           "y": 22,
+           "fill": {
+            "hex": "FFFFFF",
+            "opacity": 0.6
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Bubble",
+           "w": 6,
+           "h": 6,
+           "x": 30,
+           "y": 42,
+           "fill": {
+            "hex": "FFFFFF",
+            "opacity": 0.6
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Img fish/AncientCoelacanth",
+           "w": 96,
+           "h": 96,
+           "x": 33,
+           "y": 12
+          },
+          {
+           "type": "SVG",
+           "name": "Rarity Corner",
+           "w": 32,
+           "h": 32,
+           "x": 0,
+           "y": 0,
+           "svg": "<svg width=\"32\" height=\"32\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#FFA94D\"/></svg>"
+          },
+          {
+           "type": "RECT",
+           "name": "Img fish/mut_golden",
+           "w": 26,
+           "h": 26,
+           "x": 100,
+           "y": 6
+          },
+          {
+           "name": "Btn Remove",
+           "w": 26,
+           "h": 26,
+           "x": 130,
+           "y": 6,
+           "radius": 999,
+           "fill": "FFFFFF",
+           "stroke": {
+            "var": "cozy/track"
+           },
+           "strokeW": 2,
+           "layout": "H",
+           "main": "CENTER",
+           "cross": "CENTER",
+           "children": [
+            {
+             "type": "SVG",
+             "svg": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M12 24h24\" stroke=\"#E27D60\" stroke-width=\"6\" stroke-linecap=\"round\"/></svg>",
+             "w": 14,
+             "h": 14,
+             "name": "Minus"
+            }
+           ]
+          },
+          {
+           "type": "TEXT",
+           "text": "Ancient Coelacanth",
+           "textStyle": "Aura Fishing/Heading",
+           "color": {
+            "var": "cozy/text"
+           },
+           "name": "FishName",
+           "x": 12,
+           "y": 124
+          },
+          {
+           "name": "Rate",
+           "layout": "H",
+           "gap": 4,
+           "pad": [
+            3,
+            10,
+            3,
+            6
+           ],
+           "radius": 999,
+           "cross": "CENTER",
+           "x": 10,
+           "y": 146,
+           "fill": {
+            "var": "cozy/sand"
+           },
+           "children": [
+            {
+             "type": "RECT",
+             "name": "Img ui/status/pearl",
+             "w": 16,
+             "h": 16
+            },
+            {
+             "type": "TEXT",
+             "text": "+0.60/s",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/mint-lip"
+             },
+             "name": "Value"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "x": 60,
+     "y": 160
+    },
+    {
+     "name": "Variant Option 2 — Clean Card (Tap for Details)",
+     "layout": "V",
+     "gap": 14,
+     "pad": 24,
+     "w": 360,
+     "radius": 24,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 2,
+     "effects": [
+      {
+       "color": "3D4B5C",
+       "a": 0.1,
+       "y": 6,
+       "blur": 18
+      }
+     ],
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "Option 2: Clean Card (Tap for Details)",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "type": "TEXT",
+       "text": "ไม่มีปุ่มบนการ์ดเลย การ์ดสวยสะอาด 100% แตะการ์ดเพื่อเปิดแผงรายละเอียดแล้วกด Return to Bag ปลอดภัยจากการเผลอกดผิด",
+       "textStyle": "Aura Fishing/Small",
+       "color": {
+        "var": "cozy/subtext"
+       },
+       "name": "Desc",
+       "w": 312
+      },
+      {
+       "name": "CenterHolder",
+       "layout": "H",
+       "main": "CENTER",
+       "fillW": true,
+       "children": [
+        {
+         "name": "Card Option 2",
+         "w": 162,
+         "h": 176,
+         "radius": 18,
+         "clip": true,
+         "fill": "FFFFFF",
+         "stroke": {
+          "var": "cozy/track"
+         },
+         "strokeW": 2,
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Water",
+           "w": 162,
+           "h": 118,
+           "x": 0,
+           "y": 0,
+           "fill": {
+            "grad": [
+             "D3ECFA",
+             "A9DCF7"
+            ],
+            "angle": 90
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Bubble",
+           "w": 10,
+           "h": 10,
+           "x": 18,
+           "y": 22,
+           "fill": {
+            "hex": "FFFFFF",
+            "opacity": 0.6
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Bubble",
+           "w": 6,
+           "h": 6,
+           "x": 30,
+           "y": 42,
+           "fill": {
+            "hex": "FFFFFF",
+            "opacity": 0.6
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Img fish/AncientCoelacanth",
+           "w": 96,
+           "h": 96,
+           "x": 33,
+           "y": 12
+          },
+          {
+           "type": "SVG",
+           "name": "Rarity Corner",
+           "w": 32,
+           "h": 32,
+           "x": 0,
+           "y": 0,
+           "svg": "<svg width=\"32\" height=\"32\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#FFA94D\"/></svg>"
+          },
+          {
+           "type": "RECT",
+           "name": "Img fish/mut_golden",
+           "w": 26,
+           "h": 26,
+           "x": 130,
+           "y": 6
+          },
+          {
+           "type": "TEXT",
+           "text": "Ancient Coelacanth",
+           "textStyle": "Aura Fishing/Heading",
+           "color": {
+            "var": "cozy/text"
+           },
+           "name": "FishName",
+           "x": 12,
+           "y": 124
+          },
+          {
+           "name": "Rate",
+           "layout": "H",
+           "gap": 6,
+           "pad": [
+            3,
+            12,
+            3,
+            8
+           ],
+           "radius": 999,
+           "cross": "CENTER",
+           "x": 10,
+           "y": 146,
+           "fill": {
+            "var": "cozy/sand"
+           },
+           "children": [
+            {
+             "type": "RECT",
+             "name": "Img ui/status/pearl",
+             "w": 16,
+             "h": 16
+            },
+            {
+             "type": "TEXT",
+             "text": "+0.60/s",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/mint-lip"
+             },
+             "name": "Value"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "x": 460,
+     "y": 160
+    },
+    {
+     "name": "Variant Option 3 — Selected Action Bar",
+     "layout": "V",
+     "gap": 14,
+     "pad": 24,
+     "w": 360,
+     "radius": 24,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 2,
+     "effects": [
+      {
+       "color": "3D4B5C",
+       "a": 0.1,
+       "y": 6,
+       "blur": 18
+      }
+     ],
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "Option 3: Selected Action Bar",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "type": "TEXT",
+       "text": "แสดงปุ่มเมื่อแตะเลือกการ์ด (เส้นขอบสีเขียวมินต์) มีปุ่มคู่ INFO และ OUT ใช้งานง่าย กดแม่นยำ",
+       "textStyle": "Aura Fishing/Small",
+       "color": {
+        "var": "cozy/subtext"
+       },
+       "name": "Desc",
+       "w": 312
+      },
+      {
+       "name": "CenterHolder",
+       "layout": "H",
+       "main": "CENTER",
+       "fillW": true,
+       "children": [
+        {
+         "name": "Card Option 3",
+         "w": 162,
+         "h": 176,
+         "radius": 18,
+         "clip": true,
+         "fill": "FFFFFF",
+         "stroke": {
+          "hex": "7FD3B0"
+         },
+         "strokeW": 3,
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Water",
+           "w": 162,
+           "h": 118,
+           "x": 0,
+           "y": 0,
+           "fill": {
+            "grad": [
+             "D3ECFA",
+             "A9DCF7"
+            ],
+            "angle": 90
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Bubble",
+           "w": 10,
+           "h": 10,
+           "x": 18,
+           "y": 22,
+           "fill": {
+            "hex": "FFFFFF",
+            "opacity": 0.6
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Bubble",
+           "w": 6,
+           "h": 6,
+           "x": 30,
+           "y": 42,
+           "fill": {
+            "hex": "FFFFFF",
+            "opacity": 0.6
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Img fish/AncientCoelacanth",
+           "w": 96,
+           "h": 96,
+           "x": 33,
+           "y": 12
+          },
+          {
+           "type": "SVG",
+           "name": "Rarity Corner",
+           "w": 32,
+           "h": 32,
+           "x": 0,
+           "y": 0,
+           "svg": "<svg width=\"32\" height=\"32\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#FFA94D\"/></svg>"
+          },
+          {
+           "type": "RECT",
+           "name": "Img fish/mut_golden",
+           "w": 26,
+           "h": 26,
+           "x": 130,
+           "y": 6
+          },
+          {
+           "type": "TEXT",
+           "text": "Ancient Coelacanth",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/text"
+           },
+           "name": "FishName",
+           "x": 12,
+           "y": 124
+          },
+          {
+           "name": "Btn Info",
+           "w": 68,
+           "h": 26,
+           "x": 10,
+           "y": 144,
+           "radius": 999,
+           "fill": {
+            "var": "cozy/sand"
+           },
+           "stroke": {
+            "var": "cozy/track"
+           },
+           "strokeW": 2,
+           "layout": "H",
+           "main": "CENTER",
+           "cross": "CENTER",
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "INFO",
+             "font": {
+              "family": "Fredoka One",
+              "style": "Regular"
+             },
+             "size": 12,
+             "color": "7A8A99",
+             "name": "Label"
+            }
+           ]
+          },
+          {
+           "name": "Btn Out",
+           "w": 68,
+           "h": 26,
+           "x": 84,
+           "y": 144,
+           "radius": 999,
+           "fill": {
+            "var": "cozy/coral"
+           },
+           "layout": "H",
+           "main": "CENTER",
+           "cross": "CENTER",
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "OUT",
+             "font": {
+              "family": "Fredoka One",
+              "style": "Regular"
+             },
+             "size": 12,
+             "color": "FFFFFF",
+             "name": "Label"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "x": 860,
+     "y": 160
+    },
+    {
+     "name": "Variant Option 4 — Tank Manage Mode",
+     "layout": "V",
+     "gap": 14,
+     "pad": 24,
+     "w": 360,
+     "radius": 24,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 2,
+     "effects": [
+      {
+       "color": "3D4B5C",
+       "a": 0.1,
+       "y": 6,
+       "blur": 18
+      }
+     ],
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "Option 4: Tank Manage Mode",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "type": "TEXT",
+       "text": "โหมดจัดตู้ปลา ปกติไม่มีปุ่ม แต่เมื่อกด Manage Tank จะขึ้นป้ายสีแดงให้แตะเอาออกทีละตัวหรือหลายตัวพร้อมกัน",
+       "textStyle": "Aura Fishing/Small",
+       "color": {
+        "var": "cozy/subtext"
+       },
+       "name": "Desc",
+       "w": 312
+      },
+      {
+       "name": "CenterHolder",
+       "layout": "H",
+       "main": "CENTER",
+       "fillW": true,
+       "children": [
+        {
+         "name": "Card Option 4",
+         "w": 162,
+         "h": 176,
+         "radius": 18,
+         "clip": true,
+         "fill": "FFFFFF",
+         "stroke": {
+          "var": "cozy/track"
+         },
+         "strokeW": 2,
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Water",
+           "w": 162,
+           "h": 118,
+           "x": 0,
+           "y": 0,
+           "fill": {
+            "grad": [
+             "D3ECFA",
+             "A9DCF7"
+            ],
+            "angle": 90
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Bubble",
+           "w": 10,
+           "h": 10,
+           "x": 18,
+           "y": 22,
+           "fill": {
+            "hex": "FFFFFF",
+            "opacity": 0.6
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Bubble",
+           "w": 6,
+           "h": 6,
+           "x": 30,
+           "y": 42,
+           "fill": {
+            "hex": "FFFFFF",
+            "opacity": 0.6
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Img fish/AncientCoelacanth",
+           "w": 96,
+           "h": 96,
+           "x": 33,
+           "y": 12
+          },
+          {
+           "type": "SVG",
+           "name": "Rarity Corner",
+           "w": 32,
+           "h": 32,
+           "x": 0,
+           "y": 0,
+           "svg": "<svg width=\"32\" height=\"32\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#FFA94D\"/></svg>"
+          },
+          {
+           "type": "RECT",
+           "name": "Img fish/mut_golden",
+           "w": 26,
+           "h": 26,
+           "x": 98,
+           "y": 6
+          },
+          {
+           "name": "Badge Remove",
+           "w": 28,
+           "h": 28,
+           "x": 128,
+           "y": 6,
+           "radius": 999,
+           "fill": {
+            "hex": "E27D60"
+           },
+           "stroke": "FFFFFF",
+           "strokeW": 2,
+           "layout": "H",
+           "main": "CENTER",
+           "cross": "CENTER",
+           "children": [
+            {
+             "type": "SVG",
+             "svg": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M12 24h24\" stroke=\"#FFFFFF\" stroke-width=\"6\" stroke-linecap=\"round\"/></svg>",
+             "w": 14,
+             "h": 14,
+             "name": "Minus"
+            }
+           ]
+          },
+          {
+           "type": "TEXT",
+           "text": "Ancient Coelacanth",
+           "textStyle": "Aura Fishing/Heading",
+           "color": {
+            "var": "cozy/text"
+           },
+           "name": "FishName",
+           "x": 12,
+           "y": 124
+          },
+          {
+           "name": "Rate",
+           "layout": "H",
+           "gap": 4,
+           "pad": [
+            3,
+            10,
+            3,
+            6
+           ],
+           "radius": 999,
+           "cross": "CENTER",
+           "x": 10,
+           "y": 146,
+           "fill": {
+            "var": "cozy/sand"
+           },
+           "children": [
+            {
+             "type": "RECT",
+             "name": "Img ui/status/pearl",
+             "w": 16,
+             "h": 16
+            },
+            {
+             "type": "TEXT",
+             "text": "+0.60/s",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/mint-lip"
+             },
+             "name": "Value"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "x": 60,
+     "y": 540
+    },
+    {
+     "name": "Variant Option 5 — Split Cozy Lip Button",
+     "layout": "V",
+     "gap": 14,
+     "pad": 24,
+     "w": 360,
+     "radius": 24,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 2,
+     "effects": [
+      {
+       "color": "3D4B5C",
+       "a": 0.1,
+       "y": 6,
+       "blur": 18
+      }
+     ],
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "Option 5: Split Cozy Lip Button",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "type": "TEXT",
+       "text": "แบ่งแถบล่างเป็น 2 ฝั่งชัดเจน ซ้ายแสดงอัตรา ขวาเป็นปุ่มสี่เหลี่ยมมนสไตล์ Cozy Lake สลักคำว่า OUT ชัดเจน",
+       "textStyle": "Aura Fishing/Small",
+       "color": {
+        "var": "cozy/subtext"
+       },
+       "name": "Desc",
+       "w": 312
+      },
+      {
+       "name": "CenterHolder",
+       "layout": "H",
+       "main": "CENTER",
+       "fillW": true,
+       "children": [
+        {
+         "name": "Card Option 5",
+         "w": 162,
+         "h": 176,
+         "radius": 18,
+         "clip": true,
+         "fill": "FFFFFF",
+         "stroke": {
+          "var": "cozy/track"
+         },
+         "strokeW": 2,
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Water",
+           "w": 162,
+           "h": 118,
+           "x": 0,
+           "y": 0,
+           "fill": {
+            "grad": [
+             "D3ECFA",
+             "A9DCF7"
+            ],
+            "angle": 90
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Bubble",
+           "w": 10,
+           "h": 10,
+           "x": 18,
+           "y": 22,
+           "fill": {
+            "hex": "FFFFFF",
+            "opacity": 0.6
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Bubble",
+           "w": 6,
+           "h": 6,
+           "x": 30,
+           "y": 42,
+           "fill": {
+            "hex": "FFFFFF",
+            "opacity": 0.6
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Img fish/AncientCoelacanth",
+           "w": 96,
+           "h": 96,
+           "x": 33,
+           "y": 12
+          },
+          {
+           "type": "SVG",
+           "name": "Rarity Corner",
+           "w": 32,
+           "h": 32,
+           "x": 0,
+           "y": 0,
+           "svg": "<svg width=\"32\" height=\"32\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#FFA94D\"/></svg>"
+          },
+          {
+           "type": "RECT",
+           "name": "Img fish/mut_golden",
+           "w": 26,
+           "h": 26,
+           "x": 130,
+           "y": 6
+          },
+          {
+           "type": "TEXT",
+           "text": "Ancient Coelacanth",
+           "textStyle": "Aura Fishing/Heading",
+           "color": {
+            "var": "cozy/text"
+           },
+           "name": "FishName",
+           "x": 12,
+           "y": 124
+          },
+          {
+           "name": "Rate",
+           "layout": "H",
+           "gap": 4,
+           "pad": [
+            3,
+            8,
+            3,
+            5
+           ],
+           "radius": 999,
+           "cross": "CENTER",
+           "x": 10,
+           "y": 144,
+           "fill": {
+            "var": "cozy/sand"
+           },
+           "children": [
+            {
+             "type": "RECT",
+             "name": "Img ui/status/pearl",
+             "w": 16,
+             "h": 16
+            },
+            {
+             "type": "TEXT",
+             "text": "+0.60/s",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/mint-lip"
+             },
+             "name": "Value"
+            }
+           ]
+          },
+          {
+           "name": "Btn Out",
+           "w": 42,
+           "h": 26,
+           "x": 110,
+           "y": 144,
+           "radius": 8,
+           "fill": {
+            "hex": "E27D60"
+           },
+           "layout": "H",
+           "main": "CENTER",
+           "cross": "CENTER",
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "OUT",
+             "font": {
+              "family": "Fredoka One",
+              "style": "Regular"
+             },
+             "size": 12,
+             "color": "FFFFFF",
+             "name": "Label"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "x": 460,
+     "y": 540
+    },
+    {
+     "name": "Variant Option 6 — Bag Icon with Confirm",
+     "layout": "V",
+     "gap": 14,
+     "pad": 24,
+     "w": 360,
+     "radius": 24,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 2,
+     "effects": [
+      {
+       "color": "3D4B5C",
+       "a": 0.1,
+       "y": 6,
+       "blur": 18
+      }
+     ],
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "Option 6: Bag Icon with Confirm",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "type": "TEXT",
+       "text": "เปลี่ยนสัญลักษณ์ x เป็นไอคอนกระเป๋า สื่อว่าเป็นการเก็บกลับเข้ากระเป๋า พร้อมป๊อปอัปยืนยันสั้นๆ 1 จังหวะ",
+       "textStyle": "Aura Fishing/Small",
+       "color": {
+        "var": "cozy/subtext"
+       },
+       "name": "Desc",
+       "w": 312
+      },
+      {
+       "name": "CenterHolder",
+       "layout": "H",
+       "main": "CENTER",
+       "fillW": true,
+       "children": [
+        {
+         "name": "Card Option 6",
+         "w": 162,
+         "h": 176,
+         "radius": 18,
+         "clip": true,
+         "fill": "FFFFFF",
+         "stroke": {
+          "var": "cozy/track"
+         },
+         "strokeW": 2,
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Water",
+           "w": 162,
+           "h": 118,
+           "x": 0,
+           "y": 0,
+           "fill": {
+            "grad": [
+             "D3ECFA",
+             "A9DCF7"
+            ],
+            "angle": 90
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Bubble",
+           "w": 10,
+           "h": 10,
+           "x": 18,
+           "y": 22,
+           "fill": {
+            "hex": "FFFFFF",
+            "opacity": 0.6
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Bubble",
+           "w": 6,
+           "h": 6,
+           "x": 30,
+           "y": 42,
+           "fill": {
+            "hex": "FFFFFF",
+            "opacity": 0.6
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Img fish/AncientCoelacanth",
+           "w": 96,
+           "h": 96,
+           "x": 33,
+           "y": 12
+          },
+          {
+           "type": "SVG",
+           "name": "Rarity Corner",
+           "w": 32,
+           "h": 32,
+           "x": 0,
+           "y": 0,
+           "svg": "<svg width=\"32\" height=\"32\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#FFA94D\"/></svg>"
+          },
+          {
+           "type": "RECT",
+           "name": "Img fish/mut_golden",
+           "w": 26,
+           "h": 26,
+           "x": 130,
+           "y": 6
+          },
+          {
+           "type": "TEXT",
+           "text": "Ancient...",
+           "textStyle": "Aura Fishing/Heading",
+           "color": {
+            "var": "cozy/text"
+           },
+           "name": "FishName",
+           "x": 12,
+           "y": 124
+          },
+          {
+           "name": "Rate",
+           "layout": "H",
+           "gap": 4,
+           "pad": [
+            3,
+            8,
+            3,
+            5
+           ],
+           "radius": 999,
+           "cross": "CENTER",
+           "x": 10,
+           "y": 144,
+           "fill": "FFFFFF",
+           "children": [
+            {
+             "type": "RECT",
+             "name": "Img ui/status/pearl",
+             "w": 16,
+             "h": 16
+            },
+            {
+             "type": "TEXT",
+             "text": "+0.60/s",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/mint-lip"
+             },
+             "name": "Value"
+            }
+           ]
+          },
+          {
+           "name": "Btn Bag",
+           "w": 28,
+           "h": 28,
+           "x": 124,
+           "y": 142,
+           "radius": 999,
+           "fill": {
+            "var": "cozy/sand"
+           },
+           "stroke": {
+            "var": "cozy/track"
+           },
+           "strokeW": 2,
+           "layout": "H",
+           "main": "CENTER",
+           "cross": "CENTER",
+           "children": [
+            {
+             "type": "RECT",
+             "name": "Img ui/icons/bag",
+             "w": 18,
+             "h": 18
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "x": 860,
+     "y": 540
+    }
+   ]
+  }
+ }
+]

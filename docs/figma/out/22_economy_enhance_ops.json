@@ -1,0 +1,1887 @@
+[
+ {
+  "pageId": "3465:14993",
+  "replaceName": "Economy · 4 Enhance (C16)",
+  "tree": {
+   "type": "SECTION",
+   "name": "Economy · 4 Enhance (C16)",
+   "fill": "F3E9D8",
+   "x": 17000,
+   "y": 5800,
+   "children": [
+    {
+     "type": "TEXT",
+     "text": "Economy UI · 4 — Shop Enhance",
+     "textStyle": "Aura Fishing/Display",
+     "color": {
+      "var": "cozy/text"
+     },
+     "name": "Title",
+     "x": 60,
+     "y": 40
+    },
+    {
+     "type": "TEXT",
+     "text": "Coins sink: +1…+10 on owned rods/lines, x10 economy prices.",
+     "textStyle": "Aura Fishing/Body",
+     "color": {
+      "var": "cozy/subtext"
+     },
+     "name": "Sub",
+     "x": 60,
+     "y": 96,
+     "w": 2200
+    },
+    {
+     "name": "Screen C16 · Shop with Enhance",
+     "layout": "V",
+     "gap": 12,
+     "x": 60,
+     "y": 160,
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "C16 · Shop with Enhance",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "name": "Shop - Enhance",
+       "w": 1280,
+       "h": 720,
+       "radius": 0,
+       "clip": true,
+       "children": [
+        {
+         "name": "World [skip]",
+         "w": 1280,
+         "h": 720,
+         "x": 0,
+         "y": 0,
+         "fill": {
+          "grad": [
+           "DDF5EE",
+           "A8DCD8"
+          ],
+          "angle": 90
+         },
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Water",
+           "w": 1280,
+           "h": 300,
+           "x": 0,
+           "y": 420,
+           "fill": {
+            "hex": "9AD4F5",
+            "opacity": 0.35
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Island",
+           "w": 560,
+           "h": 130,
+           "x": 360,
+           "y": 370,
+           "fill": {
+            "hex": "7FD3B0",
+            "opacity": 0.55
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Island Top",
+           "w": 360,
+           "h": 70,
+           "x": 460,
+           "y": 372,
+           "fill": {
+            "hex": "4FAF8A",
+            "opacity": 0.35
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Dim",
+           "w": 1280,
+           "h": 720,
+           "x": 0,
+           "y": 0,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          }
+         ]
+        },
+        {
+         "name": "Window Shop",
+         "layout": "V",
+         "pad": 20,
+         "gap": 14,
+         "w": 760,
+         "h": 610,
+         "x": 260,
+         "y": 70,
+         "radius": 24,
+         "fill": {
+          "var": "cozy/panel"
+         },
+         "stroke": {
+          "var": "cozy/track"
+         },
+         "strokeW": 2,
+         "effects": [
+          {
+           "color": "3D4B5C",
+           "a": 0.1,
+           "y": 6,
+           "blur": 18
+          }
+         ],
+         "children": [
+          {
+           "name": "Header",
+           "layout": "H",
+           "fillW": true,
+           "main": "SPACE_BETWEEN",
+           "cross": "CENTER",
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "Shop",
+             "textStyle": "Aura Fishing/Title",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Title"
+            },
+            {
+             "type": "INSTANCE",
+             "ref": "3487:4298",
+             "variant": "Style=Danger",
+             "texts": {
+              "Label": "X"
+             },
+             "name": "Btn Close"
+            }
+           ]
+          },
+          {
+           "name": "Tabs",
+           "layout": "H",
+           "gap": 8,
+           "fillW": true,
+           "children": [
+            {
+             "type": "INSTANCE",
+             "ref": "3487:4298",
+             "variant": "Style=Ghost",
+             "texts": {
+              "Label": "Bags"
+             },
+             "name": "Btn Tab Bags",
+             "fillW": true
+            },
+            {
+             "type": "INSTANCE",
+             "ref": "3487:4298",
+             "variant": "Style=Ghost",
+             "texts": {
+              "Label": "Baits"
+             },
+             "name": "Btn Tab Baits",
+             "fillW": true
+            },
+            {
+             "type": "INSTANCE",
+             "ref": "3487:4298",
+             "variant": "Style=Ghost",
+             "texts": {
+              "Label": "Lines"
+             },
+             "name": "Btn Tab Lines",
+             "fillW": true
+            },
+            {
+             "type": "INSTANCE",
+             "ref": "3487:4298",
+             "variant": "Style=Primary",
+             "texts": {
+              "Label": "Rods"
+             },
+             "name": "Btn Tab Rods",
+             "fillW": true
+            }
+           ]
+          },
+          {
+           "name": "List (max 4)",
+           "layout": "V",
+           "gap": 10,
+           "fillW": true,
+           "children": [
+            {
+             "name": "Row Coral Rod",
+             "layout": "H",
+             "pad": 12,
+             "gap": 12,
+             "cross": "CENTER",
+             "radius": 16,
+             "h": 80,
+             "fill": {
+              "var": "cozy/sand"
+             },
+             "fillW": true,
+             "children": [
+              {
+               "name": "Picture",
+               "w": 56,
+               "h": 56,
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img equipment/CoralRod",
+                 "w": 56,
+                 "h": 56
+                },
+                {
+                 "name": "Plus",
+                 "layout": "H",
+                 "pad": [
+                  1,
+                  6,
+                  1,
+                  6
+                 ],
+                 "radius": 999,
+                 "x": 30,
+                 "y": 38,
+                 "fill": {
+                  "var": "cozy/sky-lip"
+                 },
+                 "stroke": "FFFFFF",
+                 "strokeW": 2,
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "+3",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 13,
+                   "color": "FFFFFF",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Text",
+               "layout": "V",
+               "gap": 2,
+               "fillW": true,
+               "children": [
+                {
+                 "name": "Line",
+                 "layout": "H",
+                 "gap": 6,
+                 "cross": "CENTER",
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "Coral Rod",
+                   "textStyle": "Aura Fishing/Heading",
+                   "color": {
+                    "var": "cozy/text"
+                   },
+                   "name": "Title"
+                  },
+                  {
+                   "name": "Pill EQUIPPED",
+                   "layout": "H",
+                   "gap": 5,
+                   "pad": [
+                    5,
+                    12,
+                    5,
+                    10
+                   ],
+                   "radius": 999,
+                   "cross": "CENTER",
+                   "fill": {
+                    "var": "cozy/mint"
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "EQUIPPED",
+                     "textStyle": "Aura Fishing/Caption",
+                     "color": {
+                      "var": "cozy/on-accent"
+                     },
+                     "name": "Label"
+                    }
+                   ]
+                  }
+                 ]
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+5.6% Catch Bar • +0.34 Reel • +17% Luck",
+                 "textStyle": "Aura Fishing/Small",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Sub"
+                }
+               ]
+              },
+              {
+               "name": "Btn Enhance",
+               "layout": "V",
+               "gap": 2,
+               "pad": [
+                7,
+                10,
+                10,
+                10
+               ],
+               "radius": 16,
+               "cross": "CENTER",
+               "main": "CENTER",
+               "fill": {
+                "var": "cozy/sky"
+               },
+               "stroke": {
+                "var": "cozy/sky-lip"
+               },
+               "strokeSides": {
+                "b": 5
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "ENHANCE",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 15,
+                 "color": "FFFFFF",
+                 "name": "Label"
+                },
+                {
+                 "name": "Cost",
+                 "layout": "H",
+                 "gap": 4,
+                 "cross": "CENTER",
+                 "children": [
+                  {
+                   "type": "RECT",
+                   "name": "Img ui/status/coin",
+                   "w": 16,
+                   "h": 16
+                  },
+                  {
+                   "type": "TEXT",
+                   "text": "1.4k",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 14,
+                   "color": "FFFFFF",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ],
+               "w": 118
+              }
+             ]
+            },
+            {
+             "name": "Row Bamboo Rod",
+             "layout": "H",
+             "pad": 12,
+             "gap": 12,
+             "cross": "CENTER",
+             "radius": 16,
+             "h": 80,
+             "fill": {
+              "var": "cozy/sand"
+             },
+             "fillW": true,
+             "children": [
+              {
+               "name": "Picture",
+               "w": 56,
+               "h": 56,
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img equipment/BambooRod",
+                 "w": 56,
+                 "h": 56
+                }
+               ]
+              },
+              {
+               "name": "Text",
+               "layout": "V",
+               "gap": 2,
+               "fillW": true,
+               "children": [
+                {
+                 "name": "Line",
+                 "layout": "H",
+                 "gap": 6,
+                 "cross": "CENTER",
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "Bamboo Rod",
+                   "textStyle": "Aura Fishing/Heading",
+                   "color": {
+                    "var": "cozy/text"
+                   },
+                   "name": "Title"
+                  },
+                  {
+                   "name": "Pill OWNED",
+                   "layout": "H",
+                   "gap": 5,
+                   "pad": [
+                    5,
+                    12,
+                    5,
+                    10
+                   ],
+                   "radius": 999,
+                   "cross": "CENTER",
+                   "fill": {
+                    "var": "cozy/panel"
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "OWNED",
+                     "textStyle": "Aura Fishing/Caption",
+                     "color": {
+                      "var": "cozy/mint-lip"
+                     },
+                     "name": "Label"
+                    }
+                   ]
+                  }
+                 ]
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+3% Catch Bar • +0.15 Reel • +5% Luck",
+                 "textStyle": "Aura Fishing/Small",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Sub"
+                }
+               ]
+              },
+              {
+               "name": "Btn Enhance",
+               "layout": "V",
+               "gap": 2,
+               "pad": [
+                7,
+                10,
+                10,
+                10
+               ],
+               "radius": 16,
+               "cross": "CENTER",
+               "main": "CENTER",
+               "fill": {
+                "var": "cozy/sky"
+               },
+               "stroke": {
+                "var": "cozy/sky-lip"
+               },
+               "strokeSides": {
+                "b": 5
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "ENHANCE",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 15,
+                 "color": "FFFFFF",
+                 "name": "Label"
+                },
+                {
+                 "name": "Cost",
+                 "layout": "H",
+                 "gap": 4,
+                 "cross": "CENTER",
+                 "children": [
+                  {
+                   "type": "RECT",
+                   "name": "Img ui/status/coin",
+                   "w": 16,
+                   "h": 16
+                  },
+                  {
+                   "type": "TEXT",
+                   "text": "600",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 14,
+                   "color": "FFFFFF",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ],
+               "w": 118
+              }
+             ]
+            },
+            {
+             "name": "Row Moonsilver Rod",
+             "layout": "H",
+             "pad": 12,
+             "gap": 12,
+             "cross": "CENTER",
+             "radius": 16,
+             "h": 80,
+             "fill": {
+              "var": "cozy/sand"
+             },
+             "fillW": true,
+             "children": [
+              {
+               "name": "Picture",
+               "w": 56,
+               "h": 56,
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img equipment/MoonsilverRod",
+                 "w": 56,
+                 "h": 56
+                }
+               ]
+              },
+              {
+               "name": "Text",
+               "layout": "V",
+               "gap": 2,
+               "fillW": true,
+               "children": [
+                {
+                 "name": "Line",
+                 "layout": "H",
+                 "gap": 6,
+                 "cross": "CENTER",
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "Moonsilver Rod",
+                   "textStyle": "Aura Fishing/Heading",
+                   "color": {
+                    "var": "cozy/rarity/epic"
+                   },
+                   "name": "Title"
+                  }
+                 ]
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+35% Luck • +0.50 Reel • +10% Stability",
+                 "textStyle": "Aura Fishing/Small",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Sub"
+                }
+               ]
+              },
+              {
+               "name": "Btn Buy",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                8,
+                14,
+                11,
+                14
+               ],
+               "radius": 16,
+               "cross": "CENTER",
+               "main": "CENTER",
+               "fill": {
+                "var": "cozy/gold"
+               },
+               "stroke": {
+                "var": "cozy/gold-lip"
+               },
+               "strokeSides": {
+                "b": 5
+               },
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/status/coin",
+                 "w": 22,
+                 "h": 22
+                },
+                {
+                 "type": "TEXT",
+                 "text": "15k",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 20,
+                 "color": "FFFFFF",
+                 "name": "Price"
+                }
+               ],
+               "w": 118
+              }
+             ]
+            },
+            {
+             "name": "Row Naga Scale Rod",
+             "layout": "H",
+             "pad": 12,
+             "gap": 12,
+             "cross": "CENTER",
+             "radius": 16,
+             "h": 80,
+             "fill": {
+              "var": "cozy/sand"
+             },
+             "fillW": true,
+             "children": [
+              {
+               "name": "Picture",
+               "w": 56,
+               "h": 56,
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img equipment/NagaScaleRod",
+                 "w": 56,
+                 "h": 56
+                }
+               ]
+              },
+              {
+               "name": "Text",
+               "layout": "V",
+               "gap": 2,
+               "fillW": true,
+               "children": [
+                {
+                 "name": "Line",
+                 "layout": "H",
+                 "gap": 6,
+                 "cross": "CENTER",
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "Naga Scale Rod",
+                   "textStyle": "Aura Fishing/Heading",
+                   "color": {
+                    "var": "cozy/subtext"
+                   },
+                   "name": "Title"
+                  },
+                  {
+                   "name": "Pill 900k",
+                   "layout": "H",
+                   "gap": 5,
+                   "pad": [
+                    5,
+                    12,
+                    5,
+                    10
+                   ],
+                   "radius": 999,
+                   "cross": "CENTER",
+                   "fill": {
+                    "var": "cozy/sand"
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "900k",
+                     "textStyle": "Aura Fishing/Caption",
+                     "color": {
+                      "var": "cozy/subtext"
+                     },
+                     "name": "Label"
+                    }
+                   ]
+                  }
+                 ]
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+75% Luck • +0.80 Reel • +2% Mutation",
+                 "textStyle": "Aura Fishing/Small",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Sub"
+                }
+               ]
+              },
+              {
+               "name": "Btn Locked",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                8,
+                14,
+                11,
+                14
+               ],
+               "radius": 16,
+               "cross": "CENTER",
+               "main": "CENTER",
+               "fill": {
+                "var": "cozy/sand"
+               },
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeSides": {
+                "b": 5
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "svg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"9\" y=\"21\" width=\"30\" height=\"22\" rx=\"6\" fill=\"#9AA5B1\"/><path d=\"M16 21v-5a8 8 0 0 1 16 0v5\" stroke=\"#9AA5B1\" stroke-width=\"5\"/></svg>",
+                 "w": 18,
+                 "h": 18,
+                 "name": "icon_lock"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "Lv.25",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 18,
+                 "color": "9AA5B1",
+                 "name": "Value"
+                }
+               ],
+               "w": 118
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Footer",
+           "layout": "H",
+           "gap": 10,
+           "fillW": true,
+           "main": "SPACE_BETWEEN",
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Pager",
+             "layout": "H",
+             "gap": 10,
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "INSTANCE",
+               "ref": "3487:4298",
+               "variant": "Style=Ghost",
+               "texts": {
+                "Label": "<"
+               },
+               "name": "Btn Page Prev"
+              },
+              {
+               "type": "TEXT",
+               "text": "1 / 2",
+               "font": {
+                "family": "Fredoka One",
+                "style": "Regular"
+               },
+               "size": 18,
+               "color": "7A8A99",
+               "name": "Page"
+              },
+              {
+               "type": "INSTANCE",
+               "ref": "3487:4298",
+               "variant": "Style=Ghost",
+               "texts": {
+                "Label": ">"
+               },
+               "name": "Btn Page Next"
+              }
+             ]
+            },
+            {
+             "name": "Wallet",
+             "layout": "H",
+             "gap": 10,
+             "children": [
+              {
+               "type": "INSTANCE",
+               "ref": "3487:4313",
+               "variant": "Type=Coins",
+               "texts": {
+                "Value": "124.5k"
+               },
+               "name": "Coins"
+              },
+              {
+               "type": "INSTANCE",
+               "ref": "3487:4313",
+               "variant": "Type=Gems",
+               "texts": {
+                "Value": "320"
+               },
+               "name": "Gems"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "[skip] Roblox CoreGui (guide)",
+         "w": 1280,
+         "h": 720,
+         "x": 0,
+         "y": 0,
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Top Bar",
+           "w": 1280,
+           "h": 58,
+           "x": 0,
+           "y": 0,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Roblox Menu Btn",
+           "w": 44,
+           "h": 44,
+           "x": 12,
+           "y": 7,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Chat Btn",
+           "w": 44,
+           "h": 44,
+           "x": 64,
+           "y": 7,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          },
+          {
+           "type": "TEXT",
+           "text": "ROBLOX TOP BAR (58px)  —  keep clear",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 124,
+           "y": 22
+          },
+          {
+           "type": "RECT",
+           "name": "Chat Window (when open)",
+           "w": 380,
+           "h": 210,
+           "x": 8,
+           "y": 64,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.04
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "CHAT WINDOW (desktop, when open)",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 20,
+           "y": 248
+          },
+          {
+           "type": "RECT",
+           "name": "Leaderboard",
+           "w": 236,
+           "h": 170,
+           "x": 1032,
+           "y": 64,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.06
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "LEADERBOARD (leaderstats)",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 1044,
+           "y": 210
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Mobile Thumbstick",
+           "w": 150,
+           "h": 150,
+           "x": 50,
+           "y": 510,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "MOBILE THUMBSTICK",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 62,
+           "y": 668
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Mobile Jump",
+           "w": 96,
+           "h": 96,
+           "x": 1120,
+           "y": 550,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "MOBILE JUMP",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 1122,
+           "y": 660
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Screen C16 · Enhance popup",
+     "layout": "V",
+     "gap": 12,
+     "x": 1400,
+     "y": 160,
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "C16 · Enhance popup",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "name": "Enhance",
+       "w": 1280,
+       "h": 720,
+       "radius": 0,
+       "clip": true,
+       "children": [
+        {
+         "name": "World [skip]",
+         "w": 1280,
+         "h": 720,
+         "x": 0,
+         "y": 0,
+         "fill": {
+          "grad": [
+           "DDF5EE",
+           "A8DCD8"
+          ],
+          "angle": 90
+         },
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Water",
+           "w": 1280,
+           "h": 300,
+           "x": 0,
+           "y": 420,
+           "fill": {
+            "hex": "9AD4F5",
+            "opacity": 0.35
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Island",
+           "w": 560,
+           "h": 130,
+           "x": 360,
+           "y": 370,
+           "fill": {
+            "hex": "7FD3B0",
+            "opacity": 0.55
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Island Top",
+           "w": 360,
+           "h": 70,
+           "x": 460,
+           "y": 372,
+           "fill": {
+            "hex": "4FAF8A",
+            "opacity": 0.35
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Dim",
+           "w": 1280,
+           "h": 720,
+           "x": 0,
+           "y": 0,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          }
+         ]
+        },
+        {
+         "name": "Enhance",
+         "layout": "V",
+         "w": 500,
+         "radius": 36,
+         "clip": true,
+         "fill": {
+          "var": "cozy/panel"
+         },
+         "stroke": {
+          "var": "cozy/track"
+         },
+         "strokeW": 2,
+         "effects": [
+          {
+           "color": "3D4B5C",
+           "a": 0.1,
+           "y": 6,
+           "blur": 18
+          }
+         ],
+         "children": [
+          {
+           "name": "Body",
+           "layout": "V",
+           "gap": 10,
+           "pad": [
+            34,
+            40,
+            26,
+            40
+           ],
+           "fillW": true,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Picture",
+             "w": 120,
+             "h": 120,
+             "radius": 24,
+             "fill": "FFFFFF",
+             "stroke": {
+              "var": "cozy/track"
+             },
+             "strokeW": 2,
+             "layout": "H",
+             "main": "CENTER",
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img equipment/CoralRod",
+               "w": 100,
+               "h": 100
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "Enhance Coral Rod",
+             "textStyle": "Aura Fishing/Title",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Title",
+             "align": "CENTER",
+             "w": 440
+            },
+            {
+             "name": "Levels",
+             "layout": "H",
+             "gap": 8,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Pill +3",
+               "layout": "H",
+               "gap": 5,
+               "pad": [
+                5,
+                12,
+                5,
+                10
+               ],
+               "radius": 999,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/sky-lip"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+3",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/on-accent"
+                 },
+                 "name": "Label"
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "→",
+               "textStyle": "Aura Fishing/Title",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Arrow"
+              },
+              {
+               "name": "Pill +4",
+               "layout": "H",
+               "gap": 5,
+               "pad": [
+                5,
+                12,
+                5,
+                10
+               ],
+               "radius": 999,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/mint-lip"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+4",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/on-accent"
+                 },
+                 "name": "Label"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Cmp Luck",
+             "layout": "H",
+             "gap": 8,
+             "w": 380,
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "Luck",
+               "textStyle": "Aura Fishing/Body",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Label",
+               "w": 130
+              },
+              {
+               "type": "TEXT",
+               "text": "+17%",
+               "textStyle": "Aura Fishing/Body",
+               "color": {
+                "var": "cozy/text"
+               },
+               "name": "From"
+              },
+              {
+               "type": "TEXT",
+               "text": "→",
+               "textStyle": "Aura Fishing/Body",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Arrow"
+              },
+              {
+               "type": "TEXT",
+               "text": "+18%",
+               "textStyle": "Aura Fishing/Body",
+               "color": {
+                "var": "cozy/mint-lip"
+               },
+               "name": "To"
+              }
+             ]
+            },
+            {
+             "name": "Cmp Reel Power",
+             "layout": "H",
+             "gap": 8,
+             "w": 380,
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "Reel Power",
+               "textStyle": "Aura Fishing/Body",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Label",
+               "w": 130
+              },
+              {
+               "type": "TEXT",
+               "text": "+0.34",
+               "textStyle": "Aura Fishing/Body",
+               "color": {
+                "var": "cozy/text"
+               },
+               "name": "From"
+              },
+              {
+               "type": "TEXT",
+               "text": "→",
+               "textStyle": "Aura Fishing/Body",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Arrow"
+              },
+              {
+               "type": "TEXT",
+               "text": "+0.35",
+               "textStyle": "Aura Fishing/Body",
+               "color": {
+                "var": "cozy/mint-lip"
+               },
+               "name": "To"
+              }
+             ]
+            },
+            {
+             "name": "Cmp Catch Bar",
+             "layout": "H",
+             "gap": 8,
+             "w": 380,
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "Catch Bar",
+               "textStyle": "Aura Fishing/Body",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Label",
+               "w": 130
+              },
+              {
+               "type": "TEXT",
+               "text": "+5.6%",
+               "textStyle": "Aura Fishing/Body",
+               "color": {
+                "var": "cozy/text"
+               },
+               "name": "From"
+              },
+              {
+               "type": "TEXT",
+               "text": "→",
+               "textStyle": "Aura Fishing/Body",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Arrow"
+              },
+              {
+               "type": "TEXT",
+               "text": "+5.8%",
+               "textStyle": "Aura Fishing/Body",
+               "color": {
+                "var": "cozy/mint-lip"
+               },
+               "name": "To"
+              }
+             ]
+            },
+            {
+             "name": "Materials",
+             "layout": "H",
+             "gap": 8,
+             "cross": "CENTER",
+             "opacity": 0.55,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img materials/enhance_stone",
+               "w": 28,
+               "h": 28
+              },
+              {
+               "type": "TEXT",
+               "text": "x2  (phase 2: +6 and up)",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Label"
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Footer",
+           "layout": "H",
+           "gap": 16,
+           "pad": [
+            16,
+            32,
+            20,
+            32
+           ],
+           "fillW": true,
+           "main": "CENTER",
+           "fill": {
+            "var": "cozy/sand"
+           },
+           "children": [
+            {
+             "type": "INSTANCE",
+             "ref": "3487:4298",
+             "variant": "Style=Ghost",
+             "texts": {
+              "Label": "Cancel"
+             },
+             "name": "Btn Cancel",
+             "fillW": true
+            },
+            {
+             "name": "Btn Buy",
+             "layout": "H",
+             "gap": 6,
+             "pad": [
+              8,
+              14,
+              11,
+              14
+             ],
+             "radius": 16,
+             "cross": "CENTER",
+             "main": "CENTER",
+             "fill": {
+              "var": "cozy/gold"
+             },
+             "stroke": {
+              "var": "cozy/gold-lip"
+             },
+             "strokeSides": {
+              "b": 5
+             },
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/status/coin",
+               "w": 22,
+               "h": 22
+              },
+              {
+               "type": "TEXT",
+               "text": "1.4k",
+               "font": {
+                "family": "Fredoka One",
+                "style": "Regular"
+               },
+               "size": 20,
+               "color": "FFFFFF",
+               "name": "Price"
+              }
+             ],
+             "w": 118
+            }
+           ]
+          }
+         ],
+         "x": 390,
+         "y": 66
+        },
+        {
+         "name": "[skip] Roblox CoreGui (guide)",
+         "w": 1280,
+         "h": 720,
+         "x": 0,
+         "y": 0,
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Top Bar",
+           "w": 1280,
+           "h": 58,
+           "x": 0,
+           "y": 0,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Roblox Menu Btn",
+           "w": 44,
+           "h": 44,
+           "x": 12,
+           "y": 7,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Chat Btn",
+           "w": 44,
+           "h": 44,
+           "x": 64,
+           "y": 7,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          },
+          {
+           "type": "TEXT",
+           "text": "ROBLOX TOP BAR (58px)  —  keep clear",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 124,
+           "y": 22
+          },
+          {
+           "type": "RECT",
+           "name": "Chat Window (when open)",
+           "w": 380,
+           "h": 210,
+           "x": 8,
+           "y": 64,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.04
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "CHAT WINDOW (desktop, when open)",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 20,
+           "y": 248
+          },
+          {
+           "type": "RECT",
+           "name": "Leaderboard",
+           "w": 236,
+           "h": 170,
+           "x": 1032,
+           "y": 64,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.06
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "LEADERBOARD (leaderstats)",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 1044,
+           "y": 210
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Mobile Thumbstick",
+           "w": 150,
+           "h": 150,
+           "x": 50,
+           "y": 510,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "MOBILE THUMBSTICK",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 62,
+           "y": 668
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Mobile Jump",
+           "w": 96,
+           "h": 96,
+           "x": 1120,
+           "y": 550,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "MOBILE JUMP",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 1122,
+           "y": 660
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Parts",
+     "layout": "H",
+     "gap": 30,
+     "x": 60,
+     "y": 960,
+     "children": [
+      {
+       "name": "Enhance · MAX",
+       "layout": "V",
+       "w": 500,
+       "radius": 36,
+       "clip": true,
+       "fill": {
+        "var": "cozy/panel"
+       },
+       "stroke": {
+        "var": "cozy/track"
+       },
+       "strokeW": 2,
+       "effects": [
+        {
+         "color": "3D4B5C",
+         "a": 0.1,
+         "y": 6,
+         "blur": 18
+        }
+       ],
+       "children": [
+        {
+         "name": "Body",
+         "layout": "V",
+         "gap": 10,
+         "pad": [
+          34,
+          40,
+          26,
+          40
+         ],
+         "fillW": true,
+         "cross": "CENTER",
+         "children": [
+          {
+           "name": "Picture",
+           "w": 120,
+           "h": 120,
+           "radius": 24,
+           "fill": "FFFFFF",
+           "stroke": {
+            "var": "cozy/track"
+           },
+           "strokeW": 2,
+           "layout": "H",
+           "main": "CENTER",
+           "cross": "CENTER",
+           "children": [
+            {
+             "type": "RECT",
+             "name": "Img equipment/CoralRod",
+             "w": 100,
+             "h": 100
+            }
+           ]
+          },
+          {
+           "type": "TEXT",
+           "text": "Enhance Coral Rod",
+           "textStyle": "Aura Fishing/Title",
+           "color": {
+            "var": "cozy/text"
+           },
+           "name": "Title",
+           "align": "CENTER",
+           "w": 440
+          },
+          {
+           "name": "Pill +10  MAX",
+           "layout": "H",
+           "gap": 5,
+           "pad": [
+            5,
+            12,
+            5,
+            10
+           ],
+           "radius": 999,
+           "cross": "CENTER",
+           "fill": {
+            "var": "cozy/gold"
+           },
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "+10  MAX",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/on-accent"
+             },
+             "name": "Label"
+            }
+           ]
+          },
+          {
+           "type": "TEXT",
+           "text": "This rod is fully enhanced.",
+           "textStyle": "Aura Fishing/Body",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Max",
+           "align": "CENTER",
+           "w": 440
+          }
+         ]
+        },
+        {
+         "name": "Footer",
+         "layout": "H",
+         "gap": 16,
+         "pad": [
+          16,
+          32,
+          20,
+          32
+         ],
+         "fillW": true,
+         "main": "CENTER",
+         "fill": {
+          "var": "cozy/sand"
+         },
+         "children": [
+          {
+           "type": "INSTANCE",
+           "ref": "3487:4298",
+           "variant": "Style=Ghost",
+           "texts": {
+            "Label": "Cancel"
+           },
+           "name": "Btn Cancel",
+           "fillW": true
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Rules",
+       "layout": "V",
+       "gap": 10,
+       "pad": 24,
+       "radius": 24,
+       "fill": {
+        "var": "cozy/panel"
+       },
+       "stroke": {
+        "var": "cozy/track"
+       },
+       "strokeW": 2,
+       "effects": [
+        {
+         "color": "3D4B5C",
+         "a": 0.1,
+         "y": 6,
+         "blur": 18
+        }
+       ],
+       "children": [
+        {
+         "type": "TEXT",
+         "text": "Rules",
+         "textStyle": "Aura Fishing/Title",
+         "color": {
+          "var": "cozy/text"
+         },
+         "name": "Title"
+        },
+        {
+         "type": "TEXT",
+         "text": "Owned rods/lines show +N on the picture and an ENHANCE button (price = 10% of item × 1.5^level). Each level +4% to the item's stats, +1…+10. Buying an item shows the coin price on the button (k / M). Level-locked items: grey lock + Lv.N, price as a pill. Equip / unequip moved to the Character window.",
+         "textStyle": "Aura Fishing/Small",
+         "color": {
+          "var": "cozy/subtext"
+         },
+         "name": "Desc",
+         "w": 472
+        }
+       ],
+       "w": 520
+      }
+     ]
+    }
+   ]
+  }
+ }
+]

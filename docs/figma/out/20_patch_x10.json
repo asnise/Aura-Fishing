@@ -1,0 +1,175 @@
+[
+ {
+  "replaceId": "3492:21015",
+  "tree": {
+   "name": "Grid",
+   "layout": "H",
+   "wrap": true,
+   "gap": 12,
+   "rowGap": 16,
+   "w": 712,
+   "main": "CENTER",
+   "clip": false,
+   "children": [
+    {
+     "type": "INSTANCE",
+     "ref": "3492:21453",
+     "variant": "Size=Compact, Rarity=Common",
+     "name": "Aura Card {img:auras/SparklingDew}",
+     "texts": {
+      "Name": "",
+      "Chance": ""
+     },
+     "hide": [
+      "Stat 1",
+      "Stat 2",
+      "Stat 3",
+      "New Badge"
+     ]
+    },
+    {
+     "type": "INSTANCE",
+     "ref": "3492:21453",
+     "variant": "Size=Compact, Rarity=Rare",
+     "name": "Aura Card {img:auras/NeonWave}",
+     "texts": {
+      "Name": "",
+      "Chance": ""
+     },
+     "hide": [
+      "Stat 1",
+      "Stat 2",
+      "Stat 3",
+      "New Badge"
+     ]
+    },
+    {
+     "type": "INSTANCE",
+     "ref": "3492:21453",
+     "variant": "Size=Compact, Rarity=Common",
+     "name": "Aura Card {img:auras/SparklingDew}",
+     "texts": {
+      "Name": "",
+      "Chance": ""
+     },
+     "hide": [
+      "Stat 1",
+      "Stat 2",
+      "Stat 3",
+      "New Badge"
+     ]
+    },
+    {
+     "type": "INSTANCE",
+     "ref": "3492:21453",
+     "variant": "Size=Compact, Rarity=Common",
+     "name": "Aura Card {img:auras/SparklingDew}",
+     "texts": {
+      "Name": "",
+      "Chance": ""
+     },
+     "hide": [
+      "Stat 1",
+      "Stat 2",
+      "Stat 3",
+      "New Badge"
+     ]
+    },
+    {
+     "type": "INSTANCE",
+     "ref": "3492:21453",
+     "variant": "Size=Compact, Rarity=Epic",
+     "name": "Aura Card {img:auras/SolarFlare}",
+     "texts": {
+      "Name": "",
+      "Chance": ""
+     },
+     "hide": [
+      "Stat 1",
+      "Stat 2",
+      "Stat 3"
+     ]
+    },
+    {
+     "type": "INSTANCE",
+     "ref": "3492:21453",
+     "variant": "Size=Compact, Rarity=Common",
+     "name": "Aura Card {img:auras/SparklingDew}",
+     "texts": {
+      "Name": "",
+      "Chance": ""
+     },
+     "hide": [
+      "Stat 1",
+      "Stat 2",
+      "Stat 3",
+      "New Badge"
+     ]
+    },
+    {
+     "type": "INSTANCE",
+     "ref": "3492:21453",
+     "variant": "Size=Compact, Rarity=Rare",
+     "name": "Aura Card {img:auras/NeonWave}",
+     "texts": {
+      "Name": "",
+      "Chance": ""
+     },
+     "hide": [
+      "Stat 1",
+      "Stat 2",
+      "Stat 3",
+      "New Badge"
+     ]
+    },
+    {
+     "type": "INSTANCE",
+     "ref": "3492:21453",
+     "variant": "Size=Compact, Rarity=Common",
+     "name": "Aura Card {img:auras/SparklingDew}",
+     "texts": {
+      "Name": "",
+      "Chance": ""
+     },
+     "hide": [
+      "Stat 1",
+      "Stat 2",
+      "Stat 3",
+      "New Badge"
+     ]
+    },
+    {
+     "type": "INSTANCE",
+     "ref": "3492:21453",
+     "variant": "Size=Compact, Rarity=Legendary",
+     "name": "Aura Card {img:auras/AbyssalShadow}",
+     "texts": {
+      "Name": "",
+      "Chance": ""
+     },
+     "hide": [
+      "Stat 1",
+      "Stat 2",
+      "Stat 3"
+     ]
+    },
+    {
+     "type": "INSTANCE",
+     "ref": "3492:21453",
+     "variant": "Size=Compact, Rarity=Common",
+     "name": "Aura Card {img:auras/SparklingDew}",
+     "texts": {
+      "Name": "",
+      "Chance": ""
+     },
+     "hide": [
+      "Stat 1",
+      "Stat 2",
+      "Stat 3",
+      "New Badge"
+     ]
+    }
+   ]
+  }
+ }
+]

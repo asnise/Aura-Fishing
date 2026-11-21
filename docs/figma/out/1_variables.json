@@ -1,0 +1,342 @@
+{
+ "collections": [
+  {
+   "name": "Aura Fishing · Cozy Lake",
+   "mode": "Default",
+   "vars": [
+    {
+     "name": "cozy/scene",
+     "type": "COLOR",
+     "value": "BFE8E0",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL"
+     ]
+    },
+    {
+     "name": "cozy/scene-deep",
+     "type": "COLOR",
+     "value": "A8DCD8",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL"
+     ]
+    },
+    {
+     "name": "cozy/panel",
+     "type": "COLOR",
+     "value": "FFF8EC",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL"
+     ]
+    },
+    {
+     "name": "cozy/sand",
+     "type": "COLOR",
+     "value": "F3E9D8",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL"
+     ]
+    },
+    {
+     "name": "cozy/track",
+     "type": "COLOR",
+     "value": "E6DCCB",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ]
+    },
+    {
+     "name": "cozy/text",
+     "type": "COLOR",
+     "value": "3D4B5C",
+     "scopes": [
+      "TEXT_FILL"
+     ]
+    },
+    {
+     "name": "cozy/subtext",
+     "type": "COLOR",
+     "value": "7A8A99",
+     "scopes": [
+      "TEXT_FILL"
+     ]
+    },
+    {
+     "name": "cozy/on-accent",
+     "type": "COLOR",
+     "value": "FFFFFF",
+     "scopes": [
+      "TEXT_FILL"
+     ]
+    },
+    {
+     "name": "cozy/coral",
+     "type": "COLOR",
+     "value": "FF9E80",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "TEXT_FILL",
+      "STROKE_COLOR"
+     ]
+    },
+    {
+     "name": "cozy/coral-lip",
+     "type": "COLOR",
+     "value": "E07A5C",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ]
+    },
+    {
+     "name": "cozy/sky",
+     "type": "COLOR",
+     "value": "9AD4F5",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "TEXT_FILL",
+      "STROKE_COLOR"
+     ]
+    },
+    {
+     "name": "cozy/sky-lip",
+     "type": "COLOR",
+     "value": "6BB3DE",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ]
+    },
+    {
+     "name": "cozy/mint",
+     "type": "COLOR",
+     "value": "7FD3B0",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "TEXT_FILL",
+      "STROKE_COLOR"
+     ]
+    },
+    {
+     "name": "cozy/mint-lip",
+     "type": "COLOR",
+     "value": "4FAF8A",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ]
+    },
+    {
+     "name": "cozy/gold",
+     "type": "COLOR",
+     "value": "F2B544",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "TEXT_FILL",
+      "STROKE_COLOR"
+     ]
+    },
+    {
+     "name": "cozy/gold-lip",
+     "type": "COLOR",
+     "value": "C98B1E",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ]
+    },
+    {
+     "name": "cozy/gem",
+     "type": "COLOR",
+     "value": "B79CF2",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "TEXT_FILL",
+      "STROKE_COLOR"
+     ]
+    },
+    {
+     "name": "cozy/gem-lip",
+     "type": "COLOR",
+     "value": "8C6FD6",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ]
+    },
+    {
+     "name": "cozy/danger",
+     "type": "COLOR",
+     "value": "F27A7A",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "TEXT_FILL",
+      "STROKE_COLOR"
+     ]
+    },
+    {
+     "name": "cozy/danger-lip",
+     "type": "COLOR",
+     "value": "CC5454",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "STROKE_COLOR"
+     ]
+    },
+    {
+     "name": "cozy/rarity/common",
+     "type": "COLOR",
+     "value": "9AA5B1",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "TEXT_FILL",
+      "STROKE_COLOR"
+     ]
+    },
+    {
+     "name": "cozy/rarity/uncommon",
+     "type": "COLOR",
+     "value": "5CC98A",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "TEXT_FILL",
+      "STROKE_COLOR"
+     ]
+    },
+    {
+     "name": "cozy/rarity/rare",
+     "type": "COLOR",
+     "value": "5AA9F0",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "TEXT_FILL",
+      "STROKE_COLOR"
+     ]
+    },
+    {
+     "name": "cozy/rarity/epic",
+     "type": "COLOR",
+     "value": "B07CF0",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "TEXT_FILL",
+      "STROKE_COLOR"
+     ]
+    },
+    {
+     "name": "cozy/rarity/legendary",
+     "type": "COLOR",
+     "value": "F2A93B",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "TEXT_FILL",
+      "STROKE_COLOR"
+     ]
+    },
+    {
+     "name": "cozy/rarity/mythic",
+     "type": "COLOR",
+     "value": "F2668B",
+     "scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL",
+      "TEXT_FILL",
+      "STROKE_COLOR"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Aura Fishing · Size",
+   "mode": "Default",
+   "vars": [
+    {
+     "name": "cozy/radius/window",
+     "type": "FLOAT",
+     "value": 24,
+     "scopes": [
+      "CORNER_RADIUS"
+     ]
+    },
+    {
+     "name": "cozy/radius/card",
+     "type": "FLOAT",
+     "value": 18,
+     "scopes": [
+      "CORNER_RADIUS"
+     ]
+    },
+    {
+     "name": "cozy/radius/button",
+     "type": "FLOAT",
+     "value": 16,
+     "scopes": [
+      "CORNER_RADIUS"
+     ]
+    },
+    {
+     "name": "cozy/space/xs",
+     "type": "FLOAT",
+     "value": 4,
+     "scopes": [
+      "GAP"
+     ]
+    },
+    {
+     "name": "cozy/space/sm",
+     "type": "FLOAT",
+     "value": 8,
+     "scopes": [
+      "GAP"
+     ]
+    },
+    {
+     "name": "cozy/space/md",
+     "type": "FLOAT",
+     "value": 12,
+     "scopes": [
+      "GAP"
+     ]
+    },
+    {
+     "name": "cozy/space/lg",
+     "type": "FLOAT",
+     "value": 20,
+     "scopes": [
+      "GAP"
+     ]
+    },
+    {
+     "name": "cozy/space/xl",
+     "type": "FLOAT",
+     "value": 32,
+     "scopes": [
+      "GAP"
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1339 @@
+{
+ "parentId": "3491:8287",
+ "replaceName": "Inventory",
+ "tree": {
+  "name": "Inventory",
+  "layout": "V",
+  "gap": 14,
+  "pad": 20,
+  "w": 500,
+  "x": 765,
+  "y": 24,
+  "radius": 32,
+  "fill": {
+   "var": "cozy/panel"
+  },
+  "stroke": {
+   "var": "cozy/track"
+  },
+  "strokeW": 2,
+  "effects": [
+   {
+    "color": "3D4B5C",
+    "a": 0.1,
+    "y": 6,
+    "blur": 18
+   }
+  ],
+  "children": [
+   {
+    "name": "Header",
+    "layout": "H",
+    "gap": 8,
+    "fillW": true,
+    "cross": "CENTER",
+    "children": [
+     {
+      "type": "INSTANCE",
+      "ref": "3487:4313",
+      "variant": "Type=Coins",
+      "texts": {
+       "Value": "387,790"
+      },
+      "name": "Coins"
+     },
+     {
+      "type": "INSTANCE",
+      "ref": "3487:4313",
+      "variant": "Type=Gems",
+      "texts": {
+       "Value": "381"
+      },
+      "name": "Gems"
+     },
+     {
+      "name": "Spacer",
+      "w": 1,
+      "h": 1,
+      "fillW": true
+     },
+     {
+      "type": "INSTANCE",
+      "ref": "3487:4298",
+      "variant": "Style=Danger",
+      "texts": {
+       "Label": "X"
+      },
+      "name": "Btn Close"
+     }
+    ]
+   },
+   {
+    "name": "Tabs",
+    "layout": "H",
+    "gap": 8,
+    "fillW": true,
+    "children": [
+     {
+      "type": "INSTANCE",
+      "ref": "3487:4298",
+      "variant": "Style=Primary",
+      "texts": {
+       "Label": "All"
+      },
+      "name": "Btn Tab All",
+      "fillW": true
+     },
+     {
+      "type": "INSTANCE",
+      "ref": "3487:4298",
+      "variant": "Style=Ghost",
+      "texts": {
+       "Label": "Fish"
+      },
+      "name": "Btn Tab Fish",
+      "fillW": true
+     },
+     {
+      "type": "INSTANCE",
+      "ref": "3487:4298",
+      "variant": "Style=Ghost",
+      "texts": {
+       "Label": "Bait"
+      },
+      "name": "Btn Tab Bait",
+      "fillW": true
+     },
+     {
+      "type": "INSTANCE",
+      "ref": "3487:4298",
+      "variant": "Style=Ghost",
+      "texts": {
+       "Label": "Treasure"
+      },
+      "name": "Btn Tab Treasure",
+      "fillW": true
+     }
+    ]
+   },
+   {
+    "name": "Capacity",
+    "layout": "H",
+    "gap": 10,
+    "fillW": true,
+    "cross": "CENTER",
+    "children": [
+     {
+      "type": "SVG",
+      "svg": "<svg width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M16 16v-3a8 8 0 0 1 16 0v3\" stroke=\"#C98B1E\" stroke-width=\"4\" stroke-linecap=\"round\"/><rect x=\"8\" y=\"16\" width=\"32\" height=\"26\" rx=\"8\" fill=\"#C98B1E\"/></svg>",
+      "w": 28,
+      "h": 28,
+      "name": "Icon bag"
+     },
+     {
+      "type": "TEXT",
+      "text": "18 / 50",
+      "textStyle": "Aura Fishing/Heading",
+      "color": {
+       "var": "cozy/text"
+      },
+      "name": "Count"
+     },
+     {
+      "type": "INSTANCE",
+      "ref": "3487:4331",
+      "name": "Fill",
+      "fillW": true
+     }
+    ]
+   },
+   {
+    "name": "Grid",
+    "layout": "H",
+    "wrap": true,
+    "gap": 10,
+    "rowGap": 12,
+    "w": 460,
+    "pad": [
+     8,
+     0,
+     4,
+     0
+    ],
+    "children": [
+     {
+      "type": "FRAME",
+      "name": "Item PebbleMinnow",
+      "w": 84,
+      "h": 84,
+      "clip": false,
+      "children": [
+       {
+        "name": "Slot",
+        "w": 84,
+        "h": 84,
+        "x": 0,
+        "y": 0,
+        "radius": 19,
+        "clip": true,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "effects": [
+         {
+          "color": "3D4B5C",
+          "a": 0.08,
+          "y": 4,
+          "blur": 10
+         },
+         {
+          "color": "FF9E80",
+          "a": 1,
+          "spread": 3,
+          "blur": 0
+         }
+        ],
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Img fish/PebbleMinnow",
+          "w": 65,
+          "h": 65,
+          "x": 10,
+          "y": 6
+         },
+         {
+          "type": "SVG",
+          "name": "Rarity Corner",
+          "w": 29,
+          "h": 29,
+          "x": 0,
+          "y": 0,
+          "svg": "<svg width=\"29\" height=\"29\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#9AA5B1\"/></svg>"
+         },
+         {
+          "name": "Count Row",
+          "layout": "H",
+          "w": 84,
+          "x": 0,
+          "y": 61,
+          "main": "MAX",
+          "pad": [
+           0,
+           8,
+           0,
+           0
+          ],
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "x23",
+            "font": {
+             "family": "Fredoka One",
+             "style": "Regular"
+            },
+            "size": 14,
+            "color": "3D4B5C",
+            "name": "Value"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Check",
+        "w": 24,
+        "h": 24,
+        "x": 66,
+        "y": -6,
+        "radius": 999,
+        "fill": {
+         "var": "cozy/coral"
+        },
+        "stroke": "FFFFFF",
+        "strokeW": 2,
+        "layout": "H",
+        "main": "CENTER",
+        "cross": "CENTER",
+        "children": [
+         {
+          "type": "SVG",
+          "w": 14,
+          "h": 14,
+          "name": "Tick",
+          "svg": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 14 14\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M2.5 7.5l3 3 6-7\" stroke=\"#FFFFFF\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "FRAME",
+      "name": "Item BubbleCarp",
+      "w": 84,
+      "h": 84,
+      "clip": false,
+      "children": [
+       {
+        "name": "Slot",
+        "w": 84,
+        "h": 84,
+        "x": 0,
+        "y": 0,
+        "radius": 19,
+        "clip": true,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "effects": [
+         {
+          "color": "3D4B5C",
+          "a": 0.08,
+          "y": 4,
+          "blur": 10
+         }
+        ],
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Img fish/BubbleCarp",
+          "w": 65,
+          "h": 65,
+          "x": 10,
+          "y": 6
+         },
+         {
+          "type": "SVG",
+          "name": "Rarity Corner",
+          "w": 29,
+          "h": 29,
+          "x": 0,
+          "y": 0,
+          "svg": "<svg width=\"29\" height=\"29\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#9AA5B1\"/></svg>"
+         },
+         {
+          "name": "Count Row",
+          "layout": "H",
+          "w": 84,
+          "x": 0,
+          "y": 61,
+          "main": "MAX",
+          "pad": [
+           0,
+           8,
+           0,
+           0
+          ],
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "x41",
+            "font": {
+             "family": "Fredoka One",
+             "style": "Regular"
+            },
+            "size": 14,
+            "color": "3D4B5C",
+            "name": "Value"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "FRAME",
+      "name": "Item PearlClam",
+      "w": 84,
+      "h": 84,
+      "clip": false,
+      "children": [
+       {
+        "name": "Slot",
+        "w": 84,
+        "h": 84,
+        "x": 0,
+        "y": 0,
+        "radius": 19,
+        "clip": true,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "effects": [
+         {
+          "color": "3D4B5C",
+          "a": 0.08,
+          "y": 4,
+          "blur": 10
+         }
+        ],
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Img fish/PearlClam",
+          "w": 65,
+          "h": 65,
+          "x": 10,
+          "y": 6
+         },
+         {
+          "type": "SVG",
+          "name": "Rarity Corner",
+          "w": 29,
+          "h": 29,
+          "x": 0,
+          "y": 0,
+          "svg": "<svg width=\"29\" height=\"29\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#5CC98A\"/></svg>"
+         },
+         {
+          "name": "Count Row",
+          "layout": "H",
+          "w": 84,
+          "x": 0,
+          "y": 61,
+          "main": "MAX",
+          "pad": [
+           0,
+           8,
+           0,
+           0
+          ],
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "x6",
+            "font": {
+             "family": "Fredoka One",
+             "style": "Regular"
+            },
+            "size": 14,
+            "color": "3D4B5C",
+            "name": "Value"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "FRAME",
+      "name": "Item DewdropKoi",
+      "w": 84,
+      "h": 84,
+      "clip": false,
+      "children": [
+       {
+        "name": "Slot",
+        "w": 84,
+        "h": 84,
+        "x": 0,
+        "y": 0,
+        "radius": 19,
+        "clip": true,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "effects": [
+         {
+          "color": "3D4B5C",
+          "a": 0.08,
+          "y": 4,
+          "blur": 10
+         }
+        ],
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Img fish/DewdropKoi",
+          "w": 65,
+          "h": 65,
+          "x": 10,
+          "y": 6
+         },
+         {
+          "type": "SVG",
+          "name": "Rarity Corner",
+          "w": 29,
+          "h": 29,
+          "x": 0,
+          "y": 0,
+          "svg": "<svg width=\"29\" height=\"29\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#5AA9F0\"/></svg>"
+         },
+         {
+          "name": "Count Row",
+          "layout": "H",
+          "w": 84,
+          "x": 0,
+          "y": 61,
+          "main": "MAX",
+          "pad": [
+           0,
+           8,
+           0,
+           0
+          ],
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "x2",
+            "font": {
+             "family": "Fredoka One",
+             "style": "Regular"
+            },
+            "size": 14,
+            "color": "3D4B5C",
+            "name": "Value"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "FRAME",
+      "name": "Item CrystalGuppy",
+      "w": 84,
+      "h": 84,
+      "clip": false,
+      "children": [
+       {
+        "name": "Slot",
+        "w": 84,
+        "h": 84,
+        "x": 0,
+        "y": 0,
+        "radius": 19,
+        "clip": true,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "effects": [
+         {
+          "color": "3D4B5C",
+          "a": 0.08,
+          "y": 4,
+          "blur": 10
+         }
+        ],
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Img fish/CrystalGuppy",
+          "w": 65,
+          "h": 65,
+          "x": 10,
+          "y": 6
+         },
+         {
+          "type": "SVG",
+          "name": "Rarity Corner",
+          "w": 29,
+          "h": 29,
+          "x": 0,
+          "y": 0,
+          "svg": "<svg width=\"29\" height=\"29\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#B07CF0\"/></svg>"
+         },
+         {
+          "name": "Count Row",
+          "layout": "H",
+          "w": 84,
+          "x": 0,
+          "y": 61,
+          "main": "MAX",
+          "pad": [
+           0,
+           8,
+           0,
+           0
+          ],
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "x1",
+            "font": {
+             "family": "Fredoka One",
+             "style": "Regular"
+            },
+            "size": 14,
+            "color": "3D4B5C",
+            "name": "Value"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "New Badge",
+        "layout": "H",
+        "pad": [
+         3,
+         10,
+         3,
+         10
+        ],
+        "radius": 999,
+        "fill": {
+         "var": "cozy/coral"
+        },
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "NEW",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/on-accent"
+          },
+          "name": "Label"
+         }
+        ],
+        "x": -6,
+        "y": -8
+       }
+      ]
+     },
+     {
+      "type": "FRAME",
+      "name": "Item ReedPerch",
+      "w": 84,
+      "h": 84,
+      "clip": false,
+      "children": [
+       {
+        "name": "Slot",
+        "w": 84,
+        "h": 84,
+        "x": 0,
+        "y": 0,
+        "radius": 19,
+        "clip": true,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "effects": [
+         {
+          "color": "3D4B5C",
+          "a": 0.08,
+          "y": 4,
+          "blur": 10
+         }
+        ],
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Img fish/ReedPerch",
+          "w": 65,
+          "h": 65,
+          "x": 10,
+          "y": 6
+         },
+         {
+          "type": "SVG",
+          "name": "Rarity Corner",
+          "w": 29,
+          "h": 29,
+          "x": 0,
+          "y": 0,
+          "svg": "<svg width=\"29\" height=\"29\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#9AA5B1\"/></svg>"
+         },
+         {
+          "name": "Count Row",
+          "layout": "H",
+          "w": 84,
+          "x": 0,
+          "y": 61,
+          "main": "MAX",
+          "pad": [
+           0,
+           8,
+           0,
+           0
+          ],
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "x12",
+            "font": {
+             "family": "Fredoka One",
+             "style": "Regular"
+            },
+            "size": 14,
+            "color": "3D4B5C",
+            "name": "Value"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "FRAME",
+      "name": "Item LilyTrout",
+      "w": 84,
+      "h": 84,
+      "clip": false,
+      "children": [
+       {
+        "name": "Slot",
+        "w": 84,
+        "h": 84,
+        "x": 0,
+        "y": 0,
+        "radius": 19,
+        "clip": true,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "effects": [
+         {
+          "color": "3D4B5C",
+          "a": 0.08,
+          "y": 4,
+          "blur": 10
+         }
+        ],
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Img fish/LilyTrout",
+          "w": 65,
+          "h": 65,
+          "x": 10,
+          "y": 6
+         },
+         {
+          "type": "SVG",
+          "name": "Rarity Corner",
+          "w": 29,
+          "h": 29,
+          "x": 0,
+          "y": 0,
+          "svg": "<svg width=\"29\" height=\"29\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#5CC98A\"/></svg>"
+         },
+         {
+          "name": "Count Row",
+          "layout": "H",
+          "w": 84,
+          "x": 0,
+          "y": 61,
+          "main": "MAX",
+          "pad": [
+           0,
+           8,
+           0,
+           0
+          ],
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "x4",
+            "font": {
+             "family": "Fredoka One",
+             "style": "Regular"
+            },
+            "size": 14,
+            "color": "3D4B5C",
+            "name": "Value"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "FRAME",
+      "name": "Item CoralSeahorse",
+      "w": 84,
+      "h": 84,
+      "clip": false,
+      "children": [
+       {
+        "name": "Slot",
+        "w": 84,
+        "h": 84,
+        "x": 0,
+        "y": 0,
+        "radius": 19,
+        "clip": true,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "effects": [
+         {
+          "color": "3D4B5C",
+          "a": 0.08,
+          "y": 4,
+          "blur": 10
+         }
+        ],
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Img fish/CoralSeahorse",
+          "w": 65,
+          "h": 65,
+          "x": 10,
+          "y": 6
+         },
+         {
+          "type": "SVG",
+          "name": "Rarity Corner",
+          "w": 29,
+          "h": 29,
+          "x": 0,
+          "y": 0,
+          "svg": "<svg width=\"29\" height=\"29\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#F2A93B\"/></svg>"
+         },
+         {
+          "name": "Count Row",
+          "layout": "H",
+          "w": 84,
+          "x": 0,
+          "y": 61,
+          "main": "MAX",
+          "pad": [
+           0,
+           8,
+           0,
+           0
+          ],
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "x1",
+            "font": {
+             "family": "Fredoka One",
+             "style": "Regular"
+            },
+            "size": 14,
+            "color": "3D4B5C",
+            "name": "Value"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "FRAME",
+      "name": "Item MoonJelly",
+      "w": 84,
+      "h": 84,
+      "clip": false,
+      "children": [
+       {
+        "name": "Slot",
+        "w": 84,
+        "h": 84,
+        "x": 0,
+        "y": 0,
+        "radius": 19,
+        "clip": true,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "effects": [
+         {
+          "color": "3D4B5C",
+          "a": 0.08,
+          "y": 4,
+          "blur": 10
+         }
+        ],
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Img fish/MoonJelly",
+          "w": 65,
+          "h": 65,
+          "x": 10,
+          "y": 6
+         },
+         {
+          "type": "SVG",
+          "name": "Rarity Corner",
+          "w": 29,
+          "h": 29,
+          "x": 0,
+          "y": 0,
+          "svg": "<svg width=\"29\" height=\"29\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#5AA9F0\"/></svg>"
+         },
+         {
+          "name": "Count Row",
+          "layout": "H",
+          "w": 84,
+          "x": 0,
+          "y": 61,
+          "main": "MAX",
+          "pad": [
+           0,
+           8,
+           0,
+           0
+          ],
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "x1",
+            "font": {
+             "family": "Fredoka One",
+             "style": "Regular"
+            },
+            "size": 14,
+            "color": "3D4B5C",
+            "name": "Value"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "RECT",
+        "name": "Img fish/mut_glowing",
+        "w": 25,
+        "h": 25,
+        "x": 65,
+        "y": -6
+       }
+      ]
+     },
+     {
+      "type": "FRAME",
+      "name": "Item NagaHatchling",
+      "w": 84,
+      "h": 84,
+      "clip": false,
+      "children": [
+       {
+        "name": "Slot",
+        "w": 84,
+        "h": 84,
+        "x": 0,
+        "y": 0,
+        "radius": 19,
+        "clip": true,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "effects": [
+         {
+          "color": "3D4B5C",
+          "a": 0.08,
+          "y": 4,
+          "blur": 10
+         }
+        ],
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Img fish/NagaHatchling",
+          "w": 65,
+          "h": 65,
+          "x": 10,
+          "y": 6
+         },
+         {
+          "type": "SVG",
+          "name": "Rarity Corner",
+          "w": 29,
+          "h": 29,
+          "x": 0,
+          "y": 0,
+          "svg": "<svg width=\"29\" height=\"29\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#F2668B\"/></svg>"
+         },
+         {
+          "name": "Count Row",
+          "layout": "H",
+          "w": 84,
+          "x": 0,
+          "y": 61,
+          "main": "MAX",
+          "pad": [
+           0,
+           8,
+           0,
+           0
+          ],
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "x1",
+            "font": {
+             "family": "Fredoka One",
+             "style": "Regular"
+            },
+            "size": 14,
+            "color": "3D4B5C",
+            "name": "Value"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "FRAME",
+      "name": "Item Worm",
+      "w": 84,
+      "h": 84,
+      "clip": false,
+      "children": [
+       {
+        "name": "Slot",
+        "w": 84,
+        "h": 84,
+        "x": 0,
+        "y": 0,
+        "radius": 19,
+        "clip": true,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "effects": [
+         {
+          "color": "3D4B5C",
+          "a": 0.08,
+          "y": 4,
+          "blur": 10
+         }
+        ],
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Img equipment/Worm",
+          "w": 65,
+          "h": 65,
+          "x": 10,
+          "y": 6
+         },
+         {
+          "type": "SVG",
+          "name": "Rarity Corner",
+          "w": 29,
+          "h": 29,
+          "x": 0,
+          "y": 0,
+          "svg": "<svg width=\"29\" height=\"29\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#F2B544\"/></svg>"
+         },
+         {
+          "name": "Count Row",
+          "layout": "H",
+          "w": 84,
+          "x": 0,
+          "y": 61,
+          "main": "MAX",
+          "pad": [
+           0,
+           8,
+           0,
+           0
+          ],
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "x14",
+            "font": {
+             "family": "Fredoka One",
+             "style": "Regular"
+            },
+            "size": 14,
+            "color": "3D4B5C",
+            "name": "Value"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "FRAME",
+      "name": "Item GlowGrub",
+      "w": 84,
+      "h": 84,
+      "clip": false,
+      "children": [
+       {
+        "name": "Slot",
+        "w": 84,
+        "h": 84,
+        "x": 0,
+        "y": 0,
+        "radius": 19,
+        "clip": true,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "effects": [
+         {
+          "color": "3D4B5C",
+          "a": 0.08,
+          "y": 4,
+          "blur": 10
+         }
+        ],
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Img equipment/GlowGrub",
+          "w": 65,
+          "h": 65,
+          "x": 10,
+          "y": 6
+         },
+         {
+          "type": "SVG",
+          "name": "Rarity Corner",
+          "w": 29,
+          "h": 29,
+          "x": 0,
+          "y": 0,
+          "svg": "<svg width=\"29\" height=\"29\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#F2B544\"/></svg>"
+         },
+         {
+          "name": "Count Row",
+          "layout": "H",
+          "w": 84,
+          "x": 0,
+          "y": 61,
+          "main": "MAX",
+          "pad": [
+           0,
+           8,
+           0,
+           0
+          ],
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "x3",
+            "font": {
+             "family": "Fredoka One",
+             "style": "Regular"
+            },
+            "size": 14,
+            "color": "3D4B5C",
+            "name": "Value"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "FRAME",
+      "name": "Item treasure_chest",
+      "w": 84,
+      "h": 84,
+      "clip": false,
+      "children": [
+       {
+        "name": "Slot",
+        "w": 84,
+        "h": 84,
+        "x": 0,
+        "y": 0,
+        "radius": 19,
+        "clip": true,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "effects": [
+         {
+          "color": "3D4B5C",
+          "a": 0.08,
+          "y": 4,
+          "blur": 10
+         }
+        ],
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Img ui/status/treasure_chest",
+          "w": 65,
+          "h": 65,
+          "x": 10,
+          "y": 6
+         },
+         {
+          "type": "SVG",
+          "name": "Rarity Corner",
+          "w": 29,
+          "h": 29,
+          "x": 0,
+          "y": 0,
+          "svg": "<svg width=\"29\" height=\"29\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#B07CF0\"/></svg>"
+         },
+         {
+          "name": "Count Row",
+          "layout": "H",
+          "w": 84,
+          "x": 0,
+          "y": 61,
+          "main": "MAX",
+          "pad": [
+           0,
+           8,
+           0,
+           0
+          ],
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "x2",
+            "font": {
+             "family": "Fredoka One",
+             "style": "Regular"
+            },
+            "size": 14,
+            "color": "3D4B5C",
+            "name": "Value"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "FRAME",
+      "name": "Item Empty",
+      "w": 84,
+      "h": 84,
+      "clip": false,
+      "children": [
+       {
+        "name": "Slot",
+        "w": 84,
+        "h": 84,
+        "x": 0,
+        "y": 0,
+        "radius": 19,
+        "clip": true,
+        "fill": "F3E9D8",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "effects": [],
+        "children": []
+       },
+       {
+        "type": "TEXT",
+        "text": "+",
+        "font": {
+         "family": "Fredoka One",
+         "style": "Regular"
+        },
+        "size": 29,
+        "color": "C9BBA3",
+        "name": "Plus",
+        "x": 34,
+        "y": 23
+       }
+      ]
+     },
+     {
+      "type": "FRAME",
+      "name": "Item Empty",
+      "w": 84,
+      "h": 84,
+      "clip": false,
+      "children": [
+       {
+        "name": "Slot",
+        "w": 84,
+        "h": 84,
+        "x": 0,
+        "y": 0,
+        "radius": 19,
+        "clip": true,
+        "fill": "F3E9D8",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "effects": [],
+        "children": []
+       },
+       {
+        "type": "TEXT",
+        "text": "+",
+        "font": {
+         "family": "Fredoka One",
+         "style": "Regular"
+        },
+        "size": 29,
+        "color": "C9BBA3",
+        "name": "Plus",
+        "x": 34,
+        "y": 23
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Footer",
+    "layout": "H",
+    "gap": 10,
+    "fillW": true,
+    "children": [
+     {
+      "type": "INSTANCE",
+      "ref": "3487:4298",
+      "variant": "Style=Ghost",
+      "texts": {
+       "Label": "Sort: Value"
+      },
+      "name": "Btn Sort",
+      "fillW": true
+     },
+     {
+      "type": "INSTANCE",
+      "ref": "3487:4298",
+      "variant": "Style=Gold",
+      "texts": {
+       "Label": "SELL ALL"
+      },
+      "name": "Btn Sell",
+      "fillW": true
+     }
+    ]
+   }
+  ]
+ }
+}

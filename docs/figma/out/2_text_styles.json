@@ -1,0 +1,61 @@
+{
+ "styles": [
+  {
+   "name": "Aura Fishing/Display",
+   "family": "Fredoka One",
+   "style": "Regular",
+   "size": 40,
+   "lineHeight": 110
+  },
+  {
+   "name": "Aura Fishing/Title",
+   "family": "Fredoka One",
+   "style": "Regular",
+   "size": 26,
+   "lineHeight": 115
+  },
+  {
+   "name": "Aura Fishing/Heading",
+   "family": "Fredoka One",
+   "style": "Regular",
+   "size": 20,
+   "lineHeight": 120
+  },
+  {
+   "name": "Aura Fishing/Number",
+   "family": "Fredoka One",
+   "style": "Regular",
+   "size": 20,
+   "lineHeight": 110
+  },
+  {
+   "name": "Aura Fishing/Button",
+   "family": "Fredoka One",
+   "style": "Regular",
+   "size": 22,
+   "lineHeight": 110
+  },
+  {
+   "name": "Aura Fishing/Body",
+   "family": "Nunito",
+   "style": "Bold",
+   "size": 16,
+   "lineHeight": 135
+  },
+  {
+   "name": "Aura Fishing/Small",
+   "family": "Nunito",
+   "style": "Bold",
+   "size": 14,
+   "lineHeight": 135
+  },
+  {
+   "name": "Aura Fishing/Caption",
+   "family": "Nunito",
+   "style": "ExtraBold",
+   "size": 12,
+   "lineHeight": 120,
+   "letterSpacing": 6
+  }
+ ]
+}

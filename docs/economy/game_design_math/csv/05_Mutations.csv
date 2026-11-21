@@ -1,0 +1,12 @@
+﻿Mutations - priority roll,,,,,,,,
+"Mutations are rolled highest priority first; the first success wins. Chance = BaseChance + aura bonus; if above 0, the global MutationChance stat is added. Edit yellow inputs.",,,,,,,,
+,,,,,,,,
+Id,Name,Priority,Base chance,Value multiplier,Aura bonus (input),Effective chance,Chance nothing rolled before,Chance this mutation is picked
+VoidTouched,Void-Touched,4,0,5,0,0,1,0
+Golden,Golden,3,0.005,3,0,0.005,1,0.005
+SunForged,Sun-Forged,2,0,2.5,0,0,0.995,0
+Glowing,Glowing,1,0.02,1.8,0,0.02,0.995,0.0199
+,No mutation,,,1,,,,0.9751
+,Expected value multiplier,,,1.02592,,,,
+,,,,,,,,
+MutationChance stat (input),0,,,,,,,

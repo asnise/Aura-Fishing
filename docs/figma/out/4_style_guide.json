@@ -1,0 +1,2158 @@
+{
+ "pageId": "3465:14993",
+ "replaceName": "Aura Fishing — Cozy Lake Style Guide",
+ "tree": {
+  "name": "Aura Fishing — Cozy Lake Style Guide",
+  "layout": "V",
+  "pad": 64,
+  "gap": 56,
+  "w": 1440,
+  "radius": 32,
+  "fill": "FBF7EF",
+  "x": 2200,
+  "y": 0,
+  "children": [
+   {
+    "layout": "V",
+    "gap": 8,
+    "name": "Cover",
+    "children": [
+     {
+      "type": "TEXT",
+      "text": "Aura Fishing — Cozy Lake",
+      "textStyle": "Aura Fishing/Display",
+      "color": {
+       "var": "cozy/text"
+      }
+     },
+     {
+      "type": "TEXT",
+      "text": "Soft pastels, cream cards, no hard outlines, rounded and friendly. Rarity colours stay saturated so rare catches still pop. Source of truth in code: src/client/UI/New.luau (New.Theme) • docs/UI_STYLE.md",
+      "textStyle": "Aura Fishing/Body",
+      "color": {
+       "var": "cozy/subtext"
+      },
+      "w": 1200
+     }
+    ]
+   },
+   {
+    "layout": "V",
+    "gap": 20,
+    "name": "Section Colours",
+    "fillW": true,
+    "children": [
+     {
+      "layout": "V",
+      "gap": 4,
+      "name": "Head",
+      "children": [
+       {
+        "type": "TEXT",
+        "text": "Colours",
+        "textStyle": "Aura Fishing/Title",
+        "color": {
+         "var": "cozy/text"
+        }
+       },
+       {
+        "type": "TEXT",
+        "text": "Surfaces, text and accents. Every accent has a darker 'lip' used for the soft 3D edge on buttons.",
+        "textStyle": "Aura Fishing/Body",
+        "color": {
+         "var": "cozy/subtext"
+        },
+        "w": 1100
+       }
+      ]
+     },
+     {
+      "layout": "H",
+      "wrap": true,
+      "gap": 16,
+      "rowGap": 16,
+      "w": 1312,
+      "name": "Swatches",
+      "children": [
+       {
+        "layout": "V",
+        "gap": 6,
+        "pad": 10,
+        "w": 176,
+        "radius": 16,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "name": "Swatch cozy/scene",
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Color",
+          "w": 156,
+          "h": 72,
+          "radius": 12,
+          "fill": {
+           "var": "cozy/scene"
+          },
+          "fillW": true
+         },
+         {
+          "type": "TEXT",
+          "text": "scene",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Name"
+         },
+         {
+          "type": "TEXT",
+          "text": "#BFE8E0",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Hex"
+         }
+        ]
+       },
+       {
+        "layout": "V",
+        "gap": 6,
+        "pad": 10,
+        "w": 176,
+        "radius": 16,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "name": "Swatch cozy/scene-deep",
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Color",
+          "w": 156,
+          "h": 72,
+          "radius": 12,
+          "fill": {
+           "var": "cozy/scene-deep"
+          },
+          "fillW": true
+         },
+         {
+          "type": "TEXT",
+          "text": "scene-deep",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Name"
+         },
+         {
+          "type": "TEXT",
+          "text": "#A8DCD8",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Hex"
+         }
+        ]
+       },
+       {
+        "layout": "V",
+        "gap": 6,
+        "pad": 10,
+        "w": 176,
+        "radius": 16,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "name": "Swatch cozy/panel",
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Color",
+          "w": 156,
+          "h": 72,
+          "radius": 12,
+          "fill": {
+           "var": "cozy/panel"
+          },
+          "fillW": true
+         },
+         {
+          "type": "TEXT",
+          "text": "panel",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Name"
+         },
+         {
+          "type": "TEXT",
+          "text": "#FFF8EC",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Hex"
+         }
+        ]
+       },
+       {
+        "layout": "V",
+        "gap": 6,
+        "pad": 10,
+        "w": 176,
+        "radius": 16,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "name": "Swatch cozy/sand",
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Color",
+          "w": 156,
+          "h": 72,
+          "radius": 12,
+          "fill": {
+           "var": "cozy/sand"
+          },
+          "fillW": true
+         },
+         {
+          "type": "TEXT",
+          "text": "sand",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Name"
+         },
+         {
+          "type": "TEXT",
+          "text": "#F3E9D8",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Hex"
+         }
+        ]
+       },
+       {
+        "layout": "V",
+        "gap": 6,
+        "pad": 10,
+        "w": 176,
+        "radius": 16,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "name": "Swatch cozy/track",
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Color",
+          "w": 156,
+          "h": 72,
+          "radius": 12,
+          "fill": {
+           "var": "cozy/track"
+          },
+          "fillW": true
+         },
+         {
+          "type": "TEXT",
+          "text": "track",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Name"
+         },
+         {
+          "type": "TEXT",
+          "text": "#E6DCCB",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Hex"
+         }
+        ]
+       },
+       {
+        "layout": "V",
+        "gap": 6,
+        "pad": 10,
+        "w": 176,
+        "radius": 16,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "name": "Swatch cozy/text",
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Color",
+          "w": 156,
+          "h": 72,
+          "radius": 12,
+          "fill": {
+           "var": "cozy/text"
+          },
+          "fillW": true
+         },
+         {
+          "type": "TEXT",
+          "text": "text",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Name"
+         },
+         {
+          "type": "TEXT",
+          "text": "#3D4B5C",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Hex"
+         }
+        ]
+       },
+       {
+        "layout": "V",
+        "gap": 6,
+        "pad": 10,
+        "w": 176,
+        "radius": 16,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "name": "Swatch cozy/subtext",
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Color",
+          "w": 156,
+          "h": 72,
+          "radius": 12,
+          "fill": {
+           "var": "cozy/subtext"
+          },
+          "fillW": true
+         },
+         {
+          "type": "TEXT",
+          "text": "subtext",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Name"
+         },
+         {
+          "type": "TEXT",
+          "text": "#7A8A99",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Hex"
+         }
+        ]
+       },
+       {
+        "layout": "V",
+        "gap": 6,
+        "pad": 10,
+        "w": 176,
+        "radius": 16,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "name": "Swatch cozy/on-accent",
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Color",
+          "w": 156,
+          "h": 72,
+          "radius": 12,
+          "fill": {
+           "var": "cozy/on-accent"
+          },
+          "fillW": true
+         },
+         {
+          "type": "TEXT",
+          "text": "on-accent",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Name"
+         },
+         {
+          "type": "TEXT",
+          "text": "#FFFFFF",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Hex"
+         }
+        ]
+       },
+       {
+        "layout": "V",
+        "gap": 6,
+        "pad": 10,
+        "w": 176,
+        "radius": 16,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "name": "Swatch cozy/coral",
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Color",
+          "w": 156,
+          "h": 72,
+          "radius": 12,
+          "fill": {
+           "var": "cozy/coral"
+          },
+          "fillW": true
+         },
+         {
+          "type": "TEXT",
+          "text": "coral",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Name"
+         },
+         {
+          "type": "TEXT",
+          "text": "#FF9E80",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Hex"
+         }
+        ]
+       },
+       {
+        "layout": "V",
+        "gap": 6,
+        "pad": 10,
+        "w": 176,
+        "radius": 16,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "name": "Swatch cozy/coral-lip",
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Color",
+          "w": 156,
+          "h": 72,
+          "radius": 12,
+          "fill": {
+           "var": "cozy/coral-lip"
+          },
+          "fillW": true
+         },
+         {
+          "type": "TEXT",
+          "text": "coral-lip",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Name"
+         },
+         {
+          "type": "TEXT",
+          "text": "#E07A5C",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Hex"
+         }
+        ]
+       },
+       {
+        "layout": "V",
+        "gap": 6,
+        "pad": 10,
+        "w": 176,
+        "radius": 16,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "name": "Swatch cozy/sky",
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Color",
+          "w": 156,
+          "h": 72,
+          "radius": 12,
+          "fill": {
+           "var": "cozy/sky"
+          },
+          "fillW": true
+         },
+         {
+          "type": "TEXT",
+          "text": "sky",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Name"
+         },
+         {
+          "type": "TEXT",
+          "text": "#9AD4F5",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Hex"
+         }
+        ]
+       },
+       {
+        "layout": "V",
+        "gap": 6,
+        "pad": 10,
+        "w": 176,
+        "radius": 16,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "name": "Swatch cozy/sky-lip",
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Color",
+          "w": 156,
+          "h": 72,
+          "radius": 12,
+          "fill": {
+           "var": "cozy/sky-lip"
+          },
+          "fillW": true
+         },
+         {
+          "type": "TEXT",
+          "text": "sky-lip",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Name"
+         },
+         {
+          "type": "TEXT",
+          "text": "#6BB3DE",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Hex"
+         }
+        ]
+       },
+       {
+        "layout": "V",
+        "gap": 6,
+        "pad": 10,
+        "w": 176,
+        "radius": 16,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "name": "Swatch cozy/mint",
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Color",
+          "w": 156,
+          "h": 72,
+          "radius": 12,
+          "fill": {
+           "var": "cozy/mint"
+          },
+          "fillW": true
+         },
+         {
+          "type": "TEXT",
+          "text": "mint",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Name"
+         },
+         {
+          "type": "TEXT",
+          "text": "#7FD3B0",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Hex"
+         }
+        ]
+       },
+       {
+        "layout": "V",
+        "gap": 6,
+        "pad": 10,
+        "w": 176,
+        "radius": 16,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "name": "Swatch cozy/mint-lip",
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Color",
+          "w": 156,
+          "h": 72,
+          "radius": 12,
+          "fill": {
+           "var": "cozy/mint-lip"
+          },
+          "fillW": true
+         },
+         {
+          "type": "TEXT",
+          "text": "mint-lip",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Name"
+         },
+         {
+          "type": "TEXT",
+          "text": "#4FAF8A",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Hex"
+         }
+        ]
+       },
+       {
+        "layout": "V",
+        "gap": 6,
+        "pad": 10,
+        "w": 176,
+        "radius": 16,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "name": "Swatch cozy/gold",
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Color",
+          "w": 156,
+          "h": 72,
+          "radius": 12,
+          "fill": {
+           "var": "cozy/gold"
+          },
+          "fillW": true
+         },
+         {
+          "type": "TEXT",
+          "text": "gold",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Name"
+         },
+         {
+          "type": "TEXT",
+          "text": "#F2B544",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Hex"
+         }
+        ]
+       },
+       {
+        "layout": "V",
+        "gap": 6,
+        "pad": 10,
+        "w": 176,
+        "radius": 16,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "name": "Swatch cozy/gold-lip",
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Color",
+          "w": 156,
+          "h": 72,
+          "radius": 12,
+          "fill": {
+           "var": "cozy/gold-lip"
+          },
+          "fillW": true
+         },
+         {
+          "type": "TEXT",
+          "text": "gold-lip",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Name"
+         },
+         {
+          "type": "TEXT",
+          "text": "#C98B1E",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Hex"
+         }
+        ]
+       },
+       {
+        "layout": "V",
+        "gap": 6,
+        "pad": 10,
+        "w": 176,
+        "radius": 16,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "name": "Swatch cozy/gem",
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Color",
+          "w": 156,
+          "h": 72,
+          "radius": 12,
+          "fill": {
+           "var": "cozy/gem"
+          },
+          "fillW": true
+         },
+         {
+          "type": "TEXT",
+          "text": "gem",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Name"
+         },
+         {
+          "type": "TEXT",
+          "text": "#B79CF2",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Hex"
+         }
+        ]
+       },
+       {
+        "layout": "V",
+        "gap": 6,
+        "pad": 10,
+        "w": 176,
+        "radius": 16,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "name": "Swatch cozy/gem-lip",
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Color",
+          "w": 156,
+          "h": 72,
+          "radius": 12,
+          "fill": {
+           "var": "cozy/gem-lip"
+          },
+          "fillW": true
+         },
+         {
+          "type": "TEXT",
+          "text": "gem-lip",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Name"
+         },
+         {
+          "type": "TEXT",
+          "text": "#8C6FD6",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Hex"
+         }
+        ]
+       },
+       {
+        "layout": "V",
+        "gap": 6,
+        "pad": 10,
+        "w": 176,
+        "radius": 16,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "name": "Swatch cozy/danger",
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Color",
+          "w": 156,
+          "h": 72,
+          "radius": 12,
+          "fill": {
+           "var": "cozy/danger"
+          },
+          "fillW": true
+         },
+         {
+          "type": "TEXT",
+          "text": "danger",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Name"
+         },
+         {
+          "type": "TEXT",
+          "text": "#F27A7A",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Hex"
+         }
+        ]
+       },
+       {
+        "layout": "V",
+        "gap": 6,
+        "pad": 10,
+        "w": 176,
+        "radius": 16,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "name": "Swatch cozy/danger-lip",
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Color",
+          "w": 156,
+          "h": 72,
+          "radius": 12,
+          "fill": {
+           "var": "cozy/danger-lip"
+          },
+          "fillW": true
+         },
+         {
+          "type": "TEXT",
+          "text": "danger-lip",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Name"
+         },
+         {
+          "type": "TEXT",
+          "text": "#CC5454",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Hex"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "layout": "V",
+    "gap": 20,
+    "name": "Section Rarity",
+    "fillW": true,
+    "children": [
+     {
+      "layout": "V",
+      "gap": 4,
+      "name": "Head",
+      "children": [
+       {
+        "type": "TEXT",
+        "text": "Rarity",
+        "textStyle": "Aura Fishing/Title",
+        "color": {
+         "var": "cozy/text"
+        }
+       },
+       {
+        "type": "TEXT",
+        "text": "Used for tags, catch-card borders, the bite '!' and minigame frames.",
+        "textStyle": "Aura Fishing/Body",
+        "color": {
+         "var": "cozy/subtext"
+        },
+        "w": 1100
+       }
+      ]
+     },
+     {
+      "layout": "H",
+      "wrap": true,
+      "gap": 16,
+      "rowGap": 16,
+      "w": 1312,
+      "name": "Rarity Swatches",
+      "children": [
+       {
+        "layout": "V",
+        "gap": 6,
+        "pad": 10,
+        "w": 176,
+        "radius": 16,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "name": "Swatch cozy/rarity/common",
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Color",
+          "w": 156,
+          "h": 72,
+          "radius": 12,
+          "fill": {
+           "var": "cozy/rarity/common"
+          },
+          "fillW": true
+         },
+         {
+          "type": "TEXT",
+          "text": "rarity/common",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Name"
+         },
+         {
+          "type": "TEXT",
+          "text": "#9AA5B1",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Hex"
+         }
+        ]
+       },
+       {
+        "layout": "V",
+        "gap": 6,
+        "pad": 10,
+        "w": 176,
+        "radius": 16,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "name": "Swatch cozy/rarity/uncommon",
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Color",
+          "w": 156,
+          "h": 72,
+          "radius": 12,
+          "fill": {
+           "var": "cozy/rarity/uncommon"
+          },
+          "fillW": true
+         },
+         {
+          "type": "TEXT",
+          "text": "rarity/uncommon",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Name"
+         },
+         {
+          "type": "TEXT",
+          "text": "#5CC98A",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Hex"
+         }
+        ]
+       },
+       {
+        "layout": "V",
+        "gap": 6,
+        "pad": 10,
+        "w": 176,
+        "radius": 16,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "name": "Swatch cozy/rarity/rare",
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Color",
+          "w": 156,
+          "h": 72,
+          "radius": 12,
+          "fill": {
+           "var": "cozy/rarity/rare"
+          },
+          "fillW": true
+         },
+         {
+          "type": "TEXT",
+          "text": "rarity/rare",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Name"
+         },
+         {
+          "type": "TEXT",
+          "text": "#5AA9F0",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Hex"
+         }
+        ]
+       },
+       {
+        "layout": "V",
+        "gap": 6,
+        "pad": 10,
+        "w": 176,
+        "radius": 16,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "name": "Swatch cozy/rarity/epic",
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Color",
+          "w": 156,
+          "h": 72,
+          "radius": 12,
+          "fill": {
+           "var": "cozy/rarity/epic"
+          },
+          "fillW": true
+         },
+         {
+          "type": "TEXT",
+          "text": "rarity/epic",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Name"
+         },
+         {
+          "type": "TEXT",
+          "text": "#B07CF0",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Hex"
+         }
+        ]
+       },
+       {
+        "layout": "V",
+        "gap": 6,
+        "pad": 10,
+        "w": 176,
+        "radius": 16,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "name": "Swatch cozy/rarity/legendary",
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Color",
+          "w": 156,
+          "h": 72,
+          "radius": 12,
+          "fill": {
+           "var": "cozy/rarity/legendary"
+          },
+          "fillW": true
+         },
+         {
+          "type": "TEXT",
+          "text": "rarity/legendary",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Name"
+         },
+         {
+          "type": "TEXT",
+          "text": "#F2A93B",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Hex"
+         }
+        ]
+       },
+       {
+        "layout": "V",
+        "gap": 6,
+        "pad": 10,
+        "w": 176,
+        "radius": 16,
+        "fill": "FFFFFF",
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "name": "Swatch cozy/rarity/mythic",
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Color",
+          "w": 156,
+          "h": 72,
+          "radius": 12,
+          "fill": {
+           "var": "cozy/rarity/mythic"
+          },
+          "fillW": true
+         },
+         {
+          "type": "TEXT",
+          "text": "rarity/mythic",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Name"
+         },
+         {
+          "type": "TEXT",
+          "text": "#F2668B",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Hex"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "layout": "V",
+    "gap": 20,
+    "name": "Section Typography",
+    "fillW": true,
+    "children": [
+     {
+      "layout": "V",
+      "gap": 4,
+      "name": "Head",
+      "children": [
+       {
+        "type": "TEXT",
+        "text": "Typography",
+        "textStyle": "Aura Fishing/Title",
+        "color": {
+         "var": "cozy/text"
+        }
+       },
+       {
+        "type": "TEXT",
+        "text": "Fredoka One for display, numbers and buttons; Nunito for body. Both exist in Roblox.",
+        "textStyle": "Aura Fishing/Body",
+        "color": {
+         "var": "cozy/subtext"
+        },
+        "w": 1100
+       }
+      ]
+     },
+     {
+      "layout": "V",
+      "gap": 14,
+      "name": "Type Scale",
+      "children": [
+       {
+        "layout": "H",
+        "gap": 24,
+        "cross": "CENTER",
+        "name": "Type Display",
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "Aura Fishing",
+          "textStyle": "Aura Fishing/Display",
+          "color": {
+           "var": "cozy/text"
+          },
+          "w": 520
+         },
+         {
+          "type": "TEXT",
+          "text": "Fredoka One 40 — screen titles",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/subtext"
+          }
+         }
+        ]
+       },
+       {
+        "layout": "H",
+        "gap": 24,
+        "cross": "CENTER",
+        "name": "Type Title",
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "Glow Eel",
+          "textStyle": "Aura Fishing/Title",
+          "color": {
+           "var": "cozy/text"
+          },
+          "w": 520
+         },
+         {
+          "type": "TEXT",
+          "text": "Fredoka One 26 — window & card titles",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/subtext"
+          }
+         }
+        ]
+       },
+       {
+        "layout": "H",
+        "gap": 24,
+        "cross": "CENTER",
+        "name": "Type Heading",
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "Coral Rod",
+          "textStyle": "Aura Fishing/Heading",
+          "color": {
+           "var": "cozy/text"
+          },
+          "w": 520
+         },
+         {
+          "type": "TEXT",
+          "text": "Fredoka One 20 — row titles",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/subtext"
+          }
+         }
+        ]
+       },
+       {
+        "layout": "H",
+        "gap": 24,
+        "cross": "CENTER",
+        "name": "Type Number",
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "12,450",
+          "textStyle": "Aura Fishing/Number",
+          "color": {
+           "var": "cozy/text"
+          },
+          "w": 520
+         },
+         {
+          "type": "TEXT",
+          "text": "Fredoka One 20 — currency, stats",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/subtext"
+          }
+         }
+        ]
+       },
+       {
+        "layout": "H",
+        "gap": 24,
+        "cross": "CENTER",
+        "name": "Type Button",
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "CAST",
+          "textStyle": "Aura Fishing/Button",
+          "color": {
+           "var": "cozy/text"
+          },
+          "w": 520
+         },
+         {
+          "type": "TEXT",
+          "text": "Fredoka One 22 — buttons",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/subtext"
+          }
+         }
+        ]
+       },
+       {
+        "layout": "H",
+        "gap": 24,
+        "cross": "CENTER",
+        "name": "Type Body",
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "Hold to reel the fish in!",
+          "textStyle": "Aura Fishing/Body",
+          "color": {
+           "var": "cozy/text"
+          },
+          "w": 520
+         },
+         {
+          "type": "TEXT",
+          "text": "Nunito Bold 16 — body text",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/subtext"
+          }
+         }
+        ]
+       },
+       {
+        "layout": "H",
+        "gap": 24,
+        "cross": "CENTER",
+        "name": "Type Small",
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "+15% Luck, +0.30 Reel Power",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/text"
+          },
+          "w": 520
+         },
+         {
+          "type": "TEXT",
+          "text": "Nunito Bold 14 — secondary text",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/subtext"
+          }
+         }
+        ]
+       },
+       {
+        "layout": "H",
+        "gap": 24,
+        "cross": "CENTER",
+        "name": "Type Caption",
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "LEGENDARY",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/text"
+          },
+          "w": 520
+         },
+         {
+          "type": "TEXT",
+          "text": "Nunito ExtraBold 12 — tags, labels",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/subtext"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "layout": "V",
+    "gap": 20,
+    "name": "Section Components",
+    "fillW": true,
+    "children": [
+     {
+      "layout": "V",
+      "gap": 4,
+      "name": "Head",
+      "children": [
+       {
+        "type": "TEXT",
+        "text": "Components",
+        "textStyle": "Aura Fishing/Title",
+        "color": {
+         "var": "cozy/text"
+        }
+       },
+       {
+        "type": "TEXT",
+        "text": "Instances of the Components board. Name buttons 'Btn …' in screens so FigmaRoblox exports them as buttons.",
+        "textStyle": "Aura Fishing/Body",
+        "color": {
+         "var": "cozy/subtext"
+        },
+        "w": 1100
+       }
+      ]
+     },
+     {
+      "layout": "H",
+      "wrap": true,
+      "gap": 16,
+      "rowGap": 16,
+      "w": 1312,
+      "name": "Buttons",
+      "children": [
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4298",
+        "variant": "Style=Primary",
+        "texts": {
+         "Label": "PRIMARY"
+        }
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4298",
+        "variant": "Style=Secondary",
+        "texts": {
+         "Label": "SECONDARY"
+        }
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4298",
+        "variant": "Style=Success",
+        "texts": {
+         "Label": "SUCCESS"
+        }
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4298",
+        "variant": "Style=Gold",
+        "texts": {
+         "Label": "GOLD"
+        }
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4298",
+        "variant": "Style=Gem",
+        "texts": {
+         "Label": "GEM"
+        }
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4298",
+        "variant": "Style=Ghost",
+        "texts": {
+         "Label": "GHOST"
+        }
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4298",
+        "variant": "Style=Danger",
+        "texts": {
+         "Label": "DANGER"
+        }
+       }
+      ]
+     },
+     {
+      "layout": "H",
+      "gap": 16,
+      "name": "Chips & Tags",
+      "cross": "CENTER",
+      "children": [
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4313",
+        "variant": "Type=Coins"
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4313",
+        "variant": "Type=Gems"
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4313",
+        "variant": "Type=Level"
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4313",
+        "variant": "Type=Bag"
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4328",
+        "variant": "Rarity=Common"
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4328",
+        "variant": "Rarity=Uncommon"
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4328",
+        "variant": "Rarity=Rare"
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4328",
+        "variant": "Rarity=Epic"
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4328",
+        "variant": "Rarity=Legendary"
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4328",
+        "variant": "Rarity=Mythic"
+       }
+      ]
+     },
+     {
+      "layout": "H",
+      "gap": 24,
+      "name": "Cards",
+      "children": [
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4333"
+       },
+       {
+        "name": "Window",
+        "layout": "V",
+        "gap": 12,
+        "pad": 20,
+        "w": 520,
+        "radiusVar": "cozy/radius/window",
+        "fill": {
+         "var": "cozy/panel"
+        },
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "effects": [
+         {
+          "color": "3D4B5C",
+          "a": 0.1,
+          "y": 6,
+          "blur": 18
+         }
+        ],
+        "children": [
+         {
+          "layout": "H",
+          "name": "Header",
+          "fillW": true,
+          "cross": "CENTER",
+          "main": "SPACE_BETWEEN",
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "Shop",
+            "textStyle": "Aura Fishing/Title",
+            "color": {
+             "var": "cozy/text"
+            }
+           },
+           {
+            "type": "INSTANCE",
+            "ref": "3487:4298",
+            "variant": "Style=Danger",
+            "texts": {
+             "Label": "X"
+            }
+           }
+          ]
+         },
+         {
+          "type": "INSTANCE",
+          "ref": "3487:4339",
+          "fillW": true
+         },
+         {
+          "type": "INSTANCE",
+          "ref": "3487:4339",
+          "fillW": true,
+          "texts": {
+           "Title": "Moonsilver Rod",
+           "Sub": "+35% Luck, +0.50 Reel Power  |  15,000 Coins"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "layout": "V",
+    "gap": 20,
+    "name": "Section Sample screen",
+    "fillW": true,
+    "children": [
+     {
+      "layout": "V",
+      "gap": 4,
+      "name": "Head",
+      "children": [
+       {
+        "type": "TEXT",
+        "text": "Sample screen",
+        "textStyle": "Aura Fishing/Title",
+        "color": {
+         "var": "cozy/text"
+        }
+       },
+       {
+        "type": "TEXT",
+        "text": "How the pieces sit over the 3D world. Panels keep a 2px sand edge so they separate from the scene.",
+        "textStyle": "Aura Fishing/Body",
+        "color": {
+         "var": "cozy/subtext"
+        },
+        "w": 1100
+       }
+      ]
+     },
+     {
+      "name": "Sample — Fishing HUD (1280×720)",
+      "w": 1280,
+      "h": 720,
+      "radius": 28,
+      "clip": true,
+      "fill": {
+       "grad": [
+        "DDF5EE",
+        "A8DCD8"
+       ],
+       "angle": 90
+      },
+      "children": [
+       {
+        "name": "Stats",
+        "layout": "V",
+        "gap": 10,
+        "pad": 16,
+        "w": 280,
+        "radius": 18,
+        "fill": {
+         "var": "cozy/panel"
+        },
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "x": 24,
+        "y": 24,
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "Lv. 12   (340 / 900 XP)",
+          "textStyle": "Aura Fishing/Heading",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Level"
+         },
+         {
+          "type": "INSTANCE",
+          "ref": "3487:4331",
+          "name": "XP",
+          "fillW": true
+         },
+         {
+          "layout": "H",
+          "gap": 8,
+          "name": "Chips",
+          "children": [
+           {
+            "type": "INSTANCE",
+            "ref": "3487:4313",
+            "variant": "Type=Coins"
+           },
+           {
+            "type": "INSTANCE",
+            "ref": "3487:4313",
+            "variant": "Type=Gems"
+           }
+          ]
+         },
+         {
+          "type": "TEXT",
+          "text": "Aura: Neon Wave  (+15% Luck)",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Aura"
+         }
+        ]
+       },
+       {
+        "name": "Toast",
+        "layout": "H",
+        "pad": [
+         8,
+         18,
+         8,
+         18
+        ],
+        "radius": 999,
+        "fill": {
+         "var": "cozy/panel"
+        },
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "x": 470,
+        "y": 24,
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "You rolled Neon Wave (1/100)!",
+          "textStyle": "Aura Fishing/Body",
+          "color": {
+           "var": "cozy/rarity/rare"
+          }
+         }
+        ]
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4333",
+        "name": "Catch Card",
+        "x": 490,
+        "y": 90
+       },
+       {
+        "name": "Bite",
+        "layout": "H",
+        "pad": [
+         4,
+         28,
+         4,
+         28
+        ],
+        "radius": 999,
+        "fill": {
+         "var": "cozy/panel"
+        },
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "x": 608,
+        "y": 520,
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "!",
+          "textStyle": "Aura Fishing/Display",
+          "color": {
+           "var": "cozy/rarity/rare"
+          }
+         }
+        ]
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4298",
+        "variant": "Style=Primary",
+        "name": "CAST",
+        "x": 555,
+        "y": 610,
+        "texts": {
+         "Label": "HOOK!"
+        }
+       },
+       {
+        "name": "Depth",
+        "layout": "V",
+        "gap": 8,
+        "pad": 16,
+        "w": 280,
+        "radius": 18,
+        "fill": {
+         "var": "cozy/panel"
+        },
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "x": 24,
+        "y": 560,
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "Depth 80m / 150m",
+          "textStyle": "Aura Fishing/Heading",
+          "color": {
+           "var": "cozy/text"
+          }
+         },
+         {
+          "type": "TEXT",
+          "text": "Mid Water  •  9 species here",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/subtext"
+          }
+         },
+         {
+          "name": "Slider",
+          "w": 248,
+          "h": 14,
+          "radius": 7,
+          "fill": {
+           "var": "cozy/track"
+          },
+          "children": [
+           {
+            "type": "RECT",
+            "w": 132,
+            "h": 14,
+            "radius": 7,
+            "fill": {
+             "var": "cozy/sky"
+            },
+            "x": 0,
+            "y": 0
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Menu",
+        "layout": "V",
+        "gap": 10,
+        "w": 150,
+        "x": 1106,
+        "y": 210,
+        "children": [
+         {
+          "type": "INSTANCE",
+          "ref": "3487:4298",
+          "variant": "Style=Ghost",
+          "texts": {
+           "Label": "Shop"
+          },
+          "fillW": true
+         },
+         {
+          "type": "INSTANCE",
+          "ref": "3487:4298",
+          "variant": "Style=Ghost",
+          "texts": {
+           "Label": "Auras"
+          },
+          "fillW": true
+         },
+         {
+          "type": "INSTANCE",
+          "ref": "3487:4298",
+          "variant": "Style=Ghost",
+          "texts": {
+           "Label": "Fishdex"
+          },
+          "fillW": true
+         }
+        ]
+       },
+       {
+        "name": "Actions",
+        "layout": "V",
+        "gap": 10,
+        "w": 190,
+        "x": 1066,
+        "y": 520,
+        "children": [
+         {
+          "type": "INSTANCE",
+          "ref": "3487:4313",
+          "variant": "Type=Bag"
+         },
+         {
+          "type": "INSTANCE",
+          "ref": "3487:4298",
+          "variant": "Style=Success",
+          "texts": {
+           "Label": "AUTO: ON"
+          },
+          "fillW": true
+         },
+         {
+          "type": "INSTANCE",
+          "ref": "3487:4298",
+          "variant": "Style=Gold",
+          "texts": {
+           "Label": "SELL ALL"
+          },
+          "fillW": true
+         }
+        ]
+       },
+       {
+        "name": "Reel Minigame",
+        "layout": "V",
+        "gap": 10,
+        "pad": 14,
+        "w": 170,
+        "radius": 24,
+        "fill": {
+         "var": "cozy/panel"
+        },
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "x": 820,
+        "y": 150,
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "Epic fish!",
+          "textStyle": "Aura Fishing/Heading",
+          "color": {
+           "var": "cozy/rarity/epic"
+          },
+          "align": "CENTER",
+          "w": 142
+         },
+         {
+          "name": "Body",
+          "layout": "H",
+          "gap": 14,
+          "main": "CENTER",
+          "fillW": true,
+          "children": [
+           {
+            "name": "Water",
+            "w": 64,
+            "h": 300,
+            "radius": 14,
+            "fill": {
+             "var": "cozy/sky"
+            },
+            "clip": true,
+            "children": [
+             {
+              "type": "RECT",
+              "name": "Catch Bar",
+              "w": 64,
+              "h": 80,
+              "radius": 12,
+              "fill": {
+               "hex": "7FD3B0",
+               "opacity": 0.9
+              },
+              "x": 0,
+              "y": 150
+             },
+             {
+              "type": "TEXT",
+              "name": "Fish",
+              "text": "><>",
+              "textStyle": "Aura Fishing/Heading",
+              "color": {
+               "var": "cozy/rarity/epic"
+              },
+              "x": 14,
+              "y": 178
+             }
+            ]
+           },
+           {
+            "name": "Progress",
+            "w": 18,
+            "h": 300,
+            "radius": 9,
+            "fill": {
+             "var": "cozy/track"
+            },
+            "children": [
+             {
+              "type": "RECT",
+              "w": 18,
+              "h": 190,
+              "radius": 9,
+              "fill": {
+               "var": "cozy/gold"
+              },
+              "x": 0,
+              "y": 110
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "TEXT",
+          "text": "Hold to reel",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "align": "CENTER",
+          "w": 142
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

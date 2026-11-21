@@ -1,0 +1,487 @@
+[
+ {
+  "remove": [
+   "3569:40738",
+   "3569:40753",
+   "3569:40767",
+   "3569:40781",
+   "3569:40796",
+   "3569:40840"
+  ]
+ },
+ {
+  "replaceId": "3569:40807",
+  "tree": {
+   "name": "Btn Expand",
+   "x": 22,
+   "y": 112,
+   "w": 118,
+   "h": 59,
+   "radius": 16,
+   "fill": {
+    "var": "cozy/gold"
+   },
+   "stroke": {
+    "var": "cozy/gold-lip"
+   },
+   "strokeW": 1,
+   "strokeSides": {
+    "b": 4
+   },
+   "layout": "H",
+   "main": "CENTER",
+   "cross": "CENTER",
+   "children": [
+    {
+     "name": "Cost",
+     "layout": "H",
+     "gap": 4,
+     "cross": "CENTER",
+     "children": [
+      {
+       "type": "RECT",
+       "name": "Img ui/status/coin",
+       "w": 18,
+       "h": 18
+      },
+      {
+       "type": "TEXT",
+       "text": "5,000",
+       "font": {
+        "family": "Fredoka One",
+        "style": "Regular"
+       },
+       "size": 17,
+       "color": "FFFFFF",
+       "name": "Value"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "replaceId": "3569:40817",
+  "tree": {
+   "name": "Btn Expand",
+   "x": 22,
+   "y": 112,
+   "w": 118,
+   "h": 59,
+   "radius": 16,
+   "fill": {
+    "var": "cozy/gold"
+   },
+   "stroke": {
+    "var": "cozy/gold-lip"
+   },
+   "strokeW": 1,
+   "strokeSides": {
+    "b": 4
+   },
+   "layout": "H",
+   "main": "CENTER",
+   "cross": "CENTER",
+   "children": [
+    {
+     "name": "Cost",
+     "layout": "H",
+     "gap": 4,
+     "cross": "CENTER",
+     "children": [
+      {
+       "type": "RECT",
+       "name": "Img ui/status/coin",
+       "w": 18,
+       "h": 18
+      },
+      {
+       "type": "TEXT",
+       "text": "20k",
+       "font": {
+        "family": "Fredoka One",
+        "style": "Regular"
+       },
+       "size": 17,
+       "color": "FFFFFF",
+       "name": "Value"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "parentId": "3569:40689",
+  "tree": {
+   "name": "Screen C14 · Tap a tank fish -> Return to Bag",
+   "layout": "V",
+   "gap": 12,
+   "x": 1400,
+   "y": 160,
+   "children": [
+    {
+     "type": "TEXT",
+     "text": "C14 · Tap a tank fish -> Return to Bag (Modal.Confirm)",
+     "textStyle": "Aura Fishing/Title",
+     "color": {
+      "var": "cozy/text"
+     },
+     "name": "Title"
+    },
+    {
+     "name": "Return to Bag",
+     "w": 1280,
+     "h": 720,
+     "radius": 0,
+     "clip": true,
+     "children": [
+      {
+       "name": "World [skip]",
+       "w": 1280,
+       "h": 720,
+       "x": 0,
+       "y": 0,
+       "fill": {
+        "grad": [
+         "DDF5EE",
+         "A8DCD8"
+        ],
+        "angle": 90
+       },
+       "children": [
+        {
+         "type": "RECT",
+         "name": "Water",
+         "w": 1280,
+         "h": 300,
+         "x": 0,
+         "y": 420,
+         "fill": {
+          "hex": "9AD4F5",
+          "opacity": 0.35
+         }
+        },
+        {
+         "type": "ELLIPSE",
+         "name": "Island",
+         "w": 560,
+         "h": 130,
+         "x": 360,
+         "y": 370,
+         "fill": {
+          "hex": "7FD3B0",
+          "opacity": 0.55
+         }
+        },
+        {
+         "type": "ELLIPSE",
+         "name": "Island Top",
+         "w": 360,
+         "h": 70,
+         "x": 460,
+         "y": 372,
+         "fill": {
+          "hex": "4FAF8A",
+          "opacity": 0.35
+         }
+        },
+        {
+         "type": "RECT",
+         "name": "Dim",
+         "w": 1280,
+         "h": 720,
+         "x": 0,
+         "y": 0,
+         "fill": {
+          "hex": "3D4B5C",
+          "opacity": 0.28
+         }
+        }
+       ]
+      },
+      {
+       "name": "Modal",
+       "layout": "V",
+       "w": 600,
+       "x": 340,
+       "y": 170,
+       "radius": 36,
+       "clip": true,
+       "fill": {
+        "var": "cozy/panel"
+       },
+       "stroke": {
+        "var": "cozy/track"
+       },
+       "strokeW": 2,
+       "effects": [
+        {
+         "color": "3D4B5C",
+         "a": 0.1,
+         "y": 6,
+         "blur": 18
+        }
+       ],
+       "children": [
+        {
+         "name": "Body",
+         "layout": "V",
+         "gap": 10,
+         "pad": [
+          44,
+          48,
+          36,
+          48
+         ],
+         "fillW": true,
+         "cross": "CENTER",
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Img fish/GlowEel",
+           "w": 96,
+           "h": 96
+          },
+          {
+           "type": "TEXT",
+           "text": "Glow Eel",
+           "textStyle": "Aura Fishing/Title",
+           "color": {
+            "var": "cozy/text"
+           },
+           "name": "Title",
+           "align": "CENTER",
+           "w": 500
+          },
+          {
+           "type": "TEXT",
+           "text": "Pearl income: +0.045/s\nDo you want to return this fish to your bag?",
+           "textStyle": "Aura Fishing/Body",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Message",
+           "align": "CENTER",
+           "w": 500
+          }
+         ]
+        },
+        {
+         "name": "Footer",
+         "layout": "H",
+         "gap": 20,
+         "pad": [
+          18,
+          40,
+          22,
+          40
+         ],
+         "fillW": true,
+         "main": "CENTER",
+         "fill": {
+          "var": "cozy/sand"
+         },
+         "children": [
+          {
+           "type": "INSTANCE",
+           "ref": "3487:4298",
+           "variant": "Style=Ghost",
+           "texts": {
+            "Label": "Keep in Tank"
+           },
+           "name": "Btn Cancel",
+           "fillW": true
+          },
+          {
+           "type": "INSTANCE",
+           "ref": "3487:4298",
+           "variant": "Style=Primary",
+           "texts": {
+            "Label": "Return to Bag"
+           },
+           "name": "Btn Confirm",
+           "fillW": true
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "[skip] Roblox CoreGui (guide)",
+       "w": 1280,
+       "h": 720,
+       "x": 0,
+       "y": 0,
+       "children": [
+        {
+         "type": "RECT",
+         "name": "Top Bar",
+         "w": 1280,
+         "h": 58,
+         "x": 0,
+         "y": 0,
+         "fill": {
+          "hex": "3D4B5C",
+          "opacity": 0.07
+         }
+        },
+        {
+         "type": "RECT",
+         "name": "Roblox Menu Btn",
+         "w": 44,
+         "h": 44,
+         "x": 12,
+         "y": 7,
+         "radius": 12,
+         "fill": {
+          "hex": "3D4B5C",
+          "opacity": 0.28
+         }
+        },
+        {
+         "type": "RECT",
+         "name": "Chat Btn",
+         "w": 44,
+         "h": 44,
+         "x": 64,
+         "y": 7,
+         "radius": 12,
+         "fill": {
+          "hex": "3D4B5C",
+          "opacity": 0.28
+         }
+        },
+        {
+         "type": "TEXT",
+         "text": "ROBLOX TOP BAR (58px)  —  keep clear",
+         "textStyle": "Aura Fishing/Caption",
+         "color": {
+          "var": "cozy/subtext"
+         },
+         "name": "Label",
+         "x": 124,
+         "y": 22
+        },
+        {
+         "type": "RECT",
+         "name": "Chat Window (when open)",
+         "w": 380,
+         "h": 210,
+         "x": 8,
+         "y": 64,
+         "radius": 12,
+         "fill": {
+          "hex": "3D4B5C",
+          "opacity": 0.04
+         },
+         "stroke": {
+          "hex": "3D4B5C",
+          "opacity": 0.25
+         },
+         "strokeW": 1.5
+        },
+        {
+         "type": "TEXT",
+         "text": "CHAT WINDOW (desktop, when open)",
+         "textStyle": "Aura Fishing/Caption",
+         "color": {
+          "var": "cozy/subtext"
+         },
+         "name": "Label",
+         "x": 20,
+         "y": 248
+        },
+        {
+         "type": "RECT",
+         "name": "Leaderboard",
+         "w": 236,
+         "h": 170,
+         "x": 1032,
+         "y": 64,
+         "radius": 12,
+         "fill": {
+          "hex": "3D4B5C",
+          "opacity": 0.06
+         },
+         "stroke": {
+          "hex": "3D4B5C",
+          "opacity": 0.25
+         },
+         "strokeW": 1.5
+        },
+        {
+         "type": "TEXT",
+         "text": "LEADERBOARD (leaderstats)",
+         "textStyle": "Aura Fishing/Caption",
+         "color": {
+          "var": "cozy/subtext"
+         },
+         "name": "Label",
+         "x": 1044,
+         "y": 210
+        },
+        {
+         "type": "ELLIPSE",
+         "name": "Mobile Thumbstick",
+         "w": 150,
+         "h": 150,
+         "x": 50,
+         "y": 510,
+         "fill": {
+          "hex": "3D4B5C",
+          "opacity": 0.07
+         },
+         "stroke": {
+          "hex": "3D4B5C",
+          "opacity": 0.25
+         },
+         "strokeW": 1.5
+        },
+        {
+         "type": "TEXT",
+         "text": "MOBILE THUMBSTICK",
+         "textStyle": "Aura Fishing/Caption",
+         "color": {
+          "var": "cozy/subtext"
+         },
+         "name": "Label",
+         "x": 62,
+         "y": 668
+        },
+        {
+         "type": "ELLIPSE",
+         "name": "Mobile Jump",
+         "w": 96,
+         "h": 96,
+         "x": 1120,
+         "y": 550,
+         "fill": {
+          "hex": "3D4B5C",
+          "opacity": 0.07
+         },
+         "stroke": {
+          "hex": "3D4B5C",
+          "opacity": 0.25
+         },
+         "strokeW": 1.5
+        },
+        {
+         "type": "TEXT",
+         "text": "MOBILE JUMP",
+         "textStyle": "Aura Fishing/Caption",
+         "color": {
+          "var": "cozy/subtext"
+         },
+         "name": "Label",
+         "x": 1122,
+         "y": 660
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+]

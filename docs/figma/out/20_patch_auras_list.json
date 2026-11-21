@@ -1,0 +1,149 @@
+[
+ {
+  "replaceId": "3492:21536",
+  "tree": {
+   "name": "List (max 3)",
+   "layout": "V",
+   "gap": 10,
+   "fillW": true,
+   "h": 260,
+   "children": [
+    {
+     "name": "Row Sparkling Dew",
+     "layout": "H",
+     "gap": 0,
+     "pad": [
+      0,
+      12,
+      0,
+      0
+     ],
+     "cross": "CENTER",
+     "fillW": true,
+     "h": 80,
+     "radius": 16,
+     "fill": {
+      "var": "cozy/sand"
+     },
+     "clip": true,
+     "children": [
+      {
+       "type": "INSTANCE",
+       "ref": "3492:21453",
+       "variant": "Size=Row, Rarity=Common",
+       "name": "Aura Card {img:auras/SparklingDew}",
+       "texts": {
+        "Name": "Sparkling Dew",
+        "Chance": "1/10",
+        "Stat 1": "+5% Luck",
+        "Status": "x3"
+       },
+       "hide": [
+        "Stat 2",
+        "Stat 3"
+       ],
+       "fillW": true,
+       "fill": null
+      },
+      {
+       "type": "INSTANCE",
+       "ref": "3487:4298",
+       "variant": "Style=Secondary",
+       "texts": {
+        "Label": "Equip"
+       },
+       "name": "Btn Equip"
+      }
+     ]
+    },
+    {
+     "name": "Row Neon Wave",
+     "layout": "H",
+     "gap": 0,
+     "pad": [
+      0,
+      12,
+      0,
+      0
+     ],
+     "cross": "CENTER",
+     "fillW": true,
+     "h": 80,
+     "radius": 16,
+     "fill": {
+      "var": "cozy/sand"
+     },
+     "clip": true,
+     "children": [
+      {
+       "type": "INSTANCE",
+       "ref": "3492:21453",
+       "variant": "Size=Row, Rarity=Rare",
+       "name": "Aura Card {img:auras/NeonWave}",
+       "texts": {
+        "Name": "Neon Wave",
+        "Chance": "1/100",
+        "Stat 1": "+15% Luck",
+        "Stat 2": "+2% Catch Bar",
+        "Status": "x1"
+       },
+       "hide": [
+        "Stat 3"
+       ],
+       "fillW": true,
+       "fill": null
+      },
+      {
+       "type": "INSTANCE",
+       "ref": "3487:4298",
+       "variant": "Style=Success",
+       "texts": {
+        "Label": "Unequip"
+       },
+       "name": "Btn Equip"
+      }
+     ]
+    },
+    {
+     "name": "Row ???",
+     "layout": "H",
+     "gap": 0,
+     "pad": [
+      0,
+      12,
+      0,
+      0
+     ],
+     "cross": "CENTER",
+     "fillW": true,
+     "h": 80,
+     "radius": 16,
+     "fill": {
+      "var": "cozy/sand"
+     },
+     "clip": true,
+     "children": [
+      {
+       "type": "INSTANCE",
+       "ref": "3492:21453",
+       "variant": "Size=Row, Rarity=Epic",
+       "name": "Aura Card {img:auras/UnknownAura}",
+       "texts": {
+        "Name": "???",
+        "Chance": "1/750",
+        "Status": "-"
+       },
+       "hide": [
+        "Stat 1",
+        "Stat 2",
+        "Stat 3"
+       ],
+       "fillW": true,
+       "fill": null
+      }
+     ]
+    }
+   ]
+  }
+ }
+]

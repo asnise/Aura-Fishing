@@ -1,0 +1,309 @@
+[
+ {
+  "replaceId": "3492:21191",
+  "tree": {
+   "name": "Window Auras",
+   "layout": "V",
+   "pad": 20,
+   "gap": 14,
+   "w": 760,
+   "h": 610,
+   "x": 260,
+   "y": 70,
+   "radius": 24,
+   "fill": {
+    "var": "cozy/panel"
+   },
+   "stroke": {
+    "var": "cozy/track"
+   },
+   "strokeW": 2,
+   "effects": [
+    {
+     "color": "3D4B5C",
+     "a": 0.1,
+     "y": 6,
+     "blur": 18
+    }
+   ],
+   "children": [
+    {
+     "name": "Header",
+     "layout": "H",
+     "fillW": true,
+     "main": "SPACE_BETWEEN",
+     "cross": "CENTER",
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "Auras",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "type": "INSTANCE",
+       "ref": "3487:4298",
+       "variant": "Style=Danger",
+       "texts": {
+        "Label": "X"
+       },
+       "name": "Btn Close"
+      }
+     ]
+    },
+    {
+     "name": "Top",
+     "layout": "H",
+     "gap": 12,
+     "fillW": true,
+     "children": [
+      {
+       "type": "INSTANCE",
+       "ref": "3487:4298",
+       "variant": "Style=Gem",
+       "texts": {
+        "Label": "ROLL AURA  (5 Gems)"
+       },
+       "name": "Btn Roll",
+       "fillW": true
+      },
+      {
+       "type": "INSTANCE",
+       "ref": "3487:4298",
+       "variant": "Style=Ghost",
+       "texts": {
+        "Label": "Low FX: OFF"
+       },
+       "name": "Btn LowFX"
+      }
+     ]
+    },
+    {
+     "type": "INSTANCE",
+     "ref": "3492:21453",
+     "variant": "Size=Row, Rarity=Rare",
+     "name": "Aura Card {img:auras/NeonWave}",
+     "texts": {
+      "Name": "Neon Wave",
+      "Chance": "1/100",
+      "Stat 1": "+15% Luck",
+      "Stat 2": "+2% Catch Bar",
+      "Stat 3": "+3% Glowing",
+      "Status": "EQUIPPED"
+     },
+     "hide": [],
+     "fillW": true
+    },
+    {
+     "name": "List (max 3)",
+     "layout": "V",
+     "gap": 10,
+     "fillW": true,
+     "h": 260,
+     "children": [
+      {
+       "name": "Row Sparkling Dew",
+       "layout": "H",
+       "gap": 0,
+       "pad": [
+        0,
+        12,
+        0,
+        0
+       ],
+       "cross": "CENTER",
+       "fillW": true,
+       "h": 80,
+       "radius": 16,
+       "fill": {
+        "var": "cozy/sand"
+       },
+       "clip": true,
+       "children": [
+        {
+         "type": "INSTANCE",
+         "ref": "3492:21453",
+         "variant": "Size=Row, Rarity=Common",
+         "name": "Aura Card {img:auras/SparklingDew}",
+         "texts": {
+          "Name": "Sparkling Dew",
+          "Chance": "1/10",
+          "Stat 1": "+5% Luck",
+          "Status": "x3"
+         },
+         "hide": [
+          "Stat 2",
+          "Stat 3"
+         ],
+         "fillW": true,
+         "fill": null
+        },
+        {
+         "type": "INSTANCE",
+         "ref": "3487:4298",
+         "variant": "Style=Secondary",
+         "texts": {
+          "Label": "Equip"
+         },
+         "name": "Btn Equip"
+        }
+       ]
+      },
+      {
+       "name": "Row Neon Wave",
+       "layout": "H",
+       "gap": 0,
+       "pad": [
+        0,
+        12,
+        0,
+        0
+       ],
+       "cross": "CENTER",
+       "fillW": true,
+       "h": 80,
+       "radius": 16,
+       "fill": {
+        "var": "cozy/sand"
+       },
+       "clip": true,
+       "children": [
+        {
+         "type": "INSTANCE",
+         "ref": "3492:21453",
+         "variant": "Size=Row, Rarity=Rare",
+         "name": "Aura Card {img:auras/NeonWave}",
+         "texts": {
+          "Name": "Neon Wave",
+          "Chance": "1/100",
+          "Stat 1": "+15% Luck",
+          "Stat 2": "+2% Catch Bar",
+          "Status": "x1"
+         },
+         "hide": [
+          "Stat 3"
+         ],
+         "fillW": true,
+         "fill": null
+        },
+        {
+         "type": "INSTANCE",
+         "ref": "3487:4298",
+         "variant": "Style=Success",
+         "texts": {
+          "Label": "Unequip"
+         },
+         "name": "Btn Equip"
+        }
+       ]
+      },
+      {
+       "name": "Row ???",
+       "layout": "H",
+       "gap": 0,
+       "pad": [
+        0,
+        12,
+        0,
+        0
+       ],
+       "cross": "CENTER",
+       "fillW": true,
+       "h": 80,
+       "radius": 16,
+       "fill": {
+        "var": "cozy/sand"
+       },
+       "clip": true,
+       "children": [
+        {
+         "type": "INSTANCE",
+         "ref": "3492:21453",
+         "variant": "Size=Row, Rarity=Epic",
+         "name": "Aura Card {img:auras/UnknownAura}",
+         "texts": {
+          "Name": "???",
+          "Chance": "1/750",
+          "Status": "-"
+         },
+         "hide": [
+          "Stat 1",
+          "Stat 2",
+          "Stat 3"
+         ],
+         "fillW": true,
+         "fill": null
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Footer",
+     "layout": "H",
+     "fillW": true,
+     "main": "SPACE_BETWEEN",
+     "cross": "CENTER",
+     "children": [
+      {
+       "name": "Pager",
+       "layout": "H",
+       "gap": 10,
+       "cross": "CENTER",
+       "children": [
+        {
+         "type": "INSTANCE",
+         "ref": "3487:4298",
+         "variant": "Style=Ghost",
+         "texts": {
+          "Label": "<"
+         },
+         "name": "Btn Page Prev"
+        },
+        {
+         "type": "TEXT",
+         "text": "1 / 2",
+         "font": {
+          "family": "Fredoka One",
+          "style": "Regular"
+         },
+         "size": 18,
+         "color": "7A8A99",
+         "name": "Page"
+        },
+        {
+         "type": "INSTANCE",
+         "ref": "3487:4298",
+         "variant": "Style=Ghost",
+         "texts": {
+          "Label": ">"
+         },
+         "name": "Btn Page Next"
+        }
+       ]
+      },
+      {
+       "name": "Wallet",
+       "layout": "H",
+       "gap": 10,
+       "children": [
+        {
+         "type": "INSTANCE",
+         "ref": "3487:4313",
+         "variant": "Type=Gems",
+         "texts": {
+          "Value": "320"
+         },
+         "name": "Gems"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+]

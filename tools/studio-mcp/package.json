@@ -1,0 +1,25 @@
+{
+  "name": "aura-studio-bridge-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local MCP server + Roblox Studio plugin bridge (Aura Fishing)",
+  "type": "module",
+  "main": "dist/server.js",
+  "scripts": {
+    "gen:classes": "node scripts/gen-classes.mjs",
+    "build": "node scripts/gen-classes.mjs && tsup",
+    "typecheck": "node node_modules/typescript/bin/tsc --noEmit",
+    "test": "bun test test/",
+    "install:plugin": "powershell -ExecutionPolicy Bypass -File install-plugin.ps1"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.13.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "bun-types": "^1.2.5",
+    "tsup": "^8.4.0",
+    "typescript": "^5.6.0"
+  }
+}

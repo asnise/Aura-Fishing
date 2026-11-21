@@ -1,0 +1,30 @@
+[
+ {
+  "parentId": "3492:21797",
+  "tree": {
+   "name": "Badge",
+   "layout": "H",
+   "pad": [
+    3,
+    10,
+    4,
+    10
+   ],
+   "radius": 999,
+   "fill": {
+    "var": "cozy/gold"
+   },
+   "children": [
+    {
+     "type": "TEXT",
+     "text": "HOTSPOT",
+     "textStyle": "Aura Fishing/Caption",
+     "color": {
+      "var": "cozy/on-accent"
+     },
+     "name": "Label"
+    }
+   ]
+  }
+ }
+]

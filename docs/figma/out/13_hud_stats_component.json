@@ -1,0 +1,908 @@
+{
+ "parentId": "3487:4280",
+ "replaceName": "HUD Stats Group",
+ "tree": {
+  "name": "HUD Stats Group",
+  "layout": "V",
+  "gap": 12,
+  "children": [
+   {
+    "type": "TEXT",
+    "text": "HUD Stats (top-left player card) — 6 styles",
+    "textStyle": "Aura Fishing/Heading",
+    "color": {
+     "var": "cozy/subtext"
+    },
+    "name": "HUD Stats Label"
+   },
+   {
+    "type": "VARIANTS",
+    "key": "hudstats",
+    "name": "HUD Stats",
+    "layout": "H",
+    "gap": 28,
+    "pad": 24,
+    "setRadius": 16,
+    "setFill": "BFE8E0",
+    "description": "Top-left HUD player card. Property Style = A..F. Every screen uses an instance, so edit here once.",
+    "children": [
+     {
+      "layout": "V",
+      "gap": 8,
+      "pad": 14,
+      "w": 270,
+      "radius": 18,
+      "fill": {
+       "var": "cozy/panel"
+      },
+      "stroke": {
+       "var": "cozy/track"
+      },
+      "strokeW": 2,
+      "children": [
+       {
+        "name": "Top",
+        "layout": "H",
+        "gap": 10,
+        "cross": "CENTER",
+        "children": [
+         {
+          "name": "Avatar",
+          "w": 40,
+          "h": 40,
+          "radius": 999,
+          "clip": true,
+          "fill": {
+           "var": "cozy/sky"
+          },
+          "stroke": "FFFFFF",
+          "strokeW": 3,
+          "children": [
+           {
+            "type": "RECT",
+            "name": "Img npc/Pip_happy",
+            "w": 48,
+            "h": 48,
+            "x": -4,
+            "y": -1
+           }
+          ]
+         },
+         {
+          "name": "Level",
+          "layout": "V",
+          "gap": 0,
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "Lv. 12",
+            "textStyle": "Aura Fishing/Heading",
+            "color": {
+             "var": "cozy/text"
+            },
+            "name": "Level"
+           },
+           {
+            "type": "TEXT",
+            "text": "340 / 900 XP",
+            "textStyle": "Aura Fishing/Caption",
+            "color": {
+             "var": "cozy/subtext"
+            },
+            "name": "XP Text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "XP Bar",
+        "w": 242,
+        "h": 10,
+        "radius": 999,
+        "clip": true,
+        "fill": {
+         "var": "cozy/track"
+        },
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Fill",
+          "w": 91,
+          "h": 10,
+          "x": 0,
+          "y": 0,
+          "radius": 999,
+          "fill": "7FD3B0"
+         }
+        ]
+       },
+       {
+        "name": "Currencies",
+        "layout": "H",
+        "gap": 8,
+        "children": [
+         {
+          "type": "INSTANCE",
+          "ref": "3487:4313",
+          "variant": "Type=Coins",
+          "texts": {
+           "Value": "12,450"
+          },
+          "name": "Coins"
+         },
+         {
+          "type": "INSTANCE",
+          "ref": "3487:4313",
+          "variant": "Type=Gems",
+          "texts": {
+           "Value": "320"
+          },
+          "name": "Gems"
+         }
+        ]
+       }
+      ],
+      "type": "COMPONENT",
+      "name": "Style=A Classic Card"
+     },
+     {
+      "layout": "H",
+      "gap": 10,
+      "cross": "CENTER",
+      "children": [
+       {
+        "name": "Level Badge",
+        "w": 84,
+        "h": 84,
+        "children": [
+         {
+          "type": "SVG",
+          "name": "XP Ring",
+          "w": 84,
+          "h": 84,
+          "svg": "<svg width=\"84\" height=\"84\" viewBox=\"0 0 84 84\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M42.0 4.0 A38 38 0 1 1 41.9 4.0\" stroke=\"#FFFFFF\" stroke-width=\"8\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M42.0 4.0 A38 38 0 0 1 68.4 69.3\" stroke=\"#7FD3B0\" stroke-width=\"8\" stroke-linecap=\"round\" fill=\"none\"/></svg>",
+          "x": 0,
+          "y": 0
+         },
+         {
+          "name": "Coin",
+          "w": 60,
+          "h": 60,
+          "x": 12,
+          "y": 12,
+          "radius": 999,
+          "fill": {
+           "grad": [
+            "FFD45C",
+            "F2B544"
+           ],
+           "angle": 90
+          },
+          "stroke": "FFFFFF",
+          "strokeW": 3,
+          "layout": "V",
+          "main": "CENTER",
+          "cross": "CENTER",
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "LV",
+            "textStyle": "Aura Fishing/Caption",
+            "color": {
+             "var": "cozy/on-accent"
+            },
+            "name": "LV"
+           },
+           {
+            "type": "TEXT",
+            "text": "12",
+            "font": {
+             "family": "Fredoka One",
+             "style": "Regular"
+            },
+            "size": 26,
+            "color": "FFFFFF",
+            "name": "Level"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Pills",
+        "layout": "V",
+        "gap": 6,
+        "children": [
+         {
+          "type": "INSTANCE",
+          "ref": "3487:4313",
+          "variant": "Type=Coins",
+          "texts": {
+           "Value": "12,450"
+          },
+          "name": "Coins"
+         },
+         {
+          "type": "INSTANCE",
+          "ref": "3487:4313",
+          "variant": "Type=Gems",
+          "texts": {
+           "Value": "320"
+          },
+          "name": "Gems"
+         },
+         {
+          "name": "Aura",
+          "layout": "H",
+          "gap": 6,
+          "pad": [
+           3,
+           10,
+           3,
+           4
+          ],
+          "radius": 999,
+          "cross": "CENTER",
+          "fill": {
+           "var": "cozy/panel"
+          },
+          "stroke": {
+           "var": "cozy/track"
+          },
+          "strokeW": 2,
+          "children": [
+           {
+            "type": "RECT",
+            "name": "Img auras/NeonWave",
+            "w": 22,
+            "h": 22
+           },
+           {
+            "type": "TEXT",
+            "text": "+15% Luck",
+            "textStyle": "Aura Fishing/Small",
+            "color": {
+             "var": "cozy/rarity/rare"
+            },
+            "name": "Luck"
+           }
+          ]
+         }
+        ]
+       }
+      ],
+      "type": "COMPONENT",
+      "name": "Style=B Level Badge"
+     },
+     {
+      "layout": "H",
+      "gap": 12,
+      "pad": [
+       6,
+       14,
+       6,
+       8
+      ],
+      "cross": "CENTER",
+      "radius": 999,
+      "fill": {
+       "var": "cozy/panel"
+      },
+      "stroke": {
+       "var": "cozy/track"
+      },
+      "strokeW": 2,
+      "children": [
+       {
+        "name": "Level",
+        "layout": "H",
+        "gap": 8,
+        "cross": "CENTER",
+        "children": [
+         {
+          "name": "Coin",
+          "w": 34,
+          "h": 34,
+          "radius": 999,
+          "fill": {
+           "grad": [
+            "FFD45C",
+            "F2B544"
+           ],
+           "angle": 90
+          },
+          "layout": "H",
+          "main": "CENTER",
+          "cross": "CENTER",
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "12",
+            "font": {
+             "family": "Fredoka One",
+             "style": "Regular"
+            },
+            "size": 16,
+            "color": "FFFFFF",
+            "name": "Level"
+           }
+          ]
+         },
+         {
+          "name": "XP",
+          "layout": "V",
+          "gap": 3,
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "LEVEL",
+            "textStyle": "Aura Fishing/Caption",
+            "color": {
+             "var": "cozy/subtext"
+            },
+            "name": "Label"
+           },
+           {
+            "name": "XP Bar",
+            "w": 90,
+            "h": 8,
+            "radius": 999,
+            "clip": true,
+            "fill": {
+             "var": "cozy/track"
+            },
+            "children": [
+             {
+              "type": "RECT",
+              "name": "Fill",
+              "w": 34,
+              "h": 8,
+              "x": 0,
+              "y": 0,
+              "radius": 999,
+              "fill": "7FD3B0"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "RECT",
+        "name": "Divider",
+        "w": 2,
+        "h": 26,
+        "fill": {
+         "var": "cozy/track"
+        }
+       },
+       {
+        "name": "Currency",
+        "layout": "H",
+        "gap": 6,
+        "cross": "CENTER",
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Img ui/status/coin",
+          "w": 26,
+          "h": 26
+         },
+         {
+          "type": "TEXT",
+          "text": "12,450",
+          "font": {
+           "family": "Fredoka One",
+           "style": "Regular"
+          },
+          "size": 18,
+          "color": "3D4B5C",
+          "name": "Value"
+         },
+         {
+          "name": "Btn Add",
+          "w": 22,
+          "h": 22,
+          "radius": 999,
+          "fill": "F2B544",
+          "layout": "H",
+          "main": "CENTER",
+          "cross": "CENTER",
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "+",
+            "font": {
+             "family": "Fredoka One",
+             "style": "Regular"
+            },
+            "size": 16,
+            "color": "FFFFFF",
+            "name": "Plus"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "RECT",
+        "name": "Divider",
+        "w": 2,
+        "h": 26,
+        "fill": {
+         "var": "cozy/track"
+        }
+       },
+       {
+        "name": "Currency",
+        "layout": "H",
+        "gap": 6,
+        "cross": "CENTER",
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Img ui/status/gem",
+          "w": 26,
+          "h": 26
+         },
+         {
+          "type": "TEXT",
+          "text": "320",
+          "font": {
+           "family": "Fredoka One",
+           "style": "Regular"
+          },
+          "size": 18,
+          "color": "3D4B5C",
+          "name": "Value"
+         },
+         {
+          "name": "Btn Add",
+          "w": 22,
+          "h": 22,
+          "radius": 999,
+          "fill": "B79CF2",
+          "layout": "H",
+          "main": "CENTER",
+          "cross": "CENTER",
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "+",
+            "font": {
+             "family": "Fredoka One",
+             "style": "Regular"
+            },
+            "size": 16,
+            "color": "FFFFFF",
+            "name": "Plus"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "RECT",
+        "name": "Divider",
+        "w": 2,
+        "h": 26,
+        "fill": {
+         "var": "cozy/track"
+        }
+       },
+       {
+        "name": "Aura",
+        "layout": "H",
+        "gap": 4,
+        "cross": "CENTER",
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Img auras/NeonWave",
+          "w": 28,
+          "h": 28
+         },
+         {
+          "type": "TEXT",
+          "text": "+15%",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/rarity/rare"
+          },
+          "name": "Luck"
+         }
+        ]
+       }
+      ],
+      "type": "COMPONENT",
+      "name": "Style=C Top Bar Strip"
+     },
+     {
+      "layout": "H",
+      "gap": 12,
+      "pad": [
+       10,
+       14,
+       10,
+       10
+      ],
+      "cross": "CENTER",
+      "radius": 24,
+      "fill": {
+       "var": "cozy/panel"
+      },
+      "stroke": {
+       "var": "cozy/track"
+      },
+      "strokeW": 2,
+      "children": [
+       {
+        "name": "Avatar Holder",
+        "w": 80,
+        "h": 88,
+        "children": [
+         {
+          "name": "Avatar",
+          "w": 74,
+          "h": 74,
+          "radius": 999,
+          "clip": true,
+          "fill": {
+           "var": "cozy/sky"
+          },
+          "stroke": "FFFFFF",
+          "strokeW": 3,
+          "children": [
+           {
+            "type": "RECT",
+            "name": "Img npc/Pip_happy",
+            "w": 89,
+            "h": 89,
+            "x": -7,
+            "y": -1
+           }
+          ],
+          "x": 3,
+          "y": 0
+         },
+         {
+          "name": "Level Row",
+          "layout": "H",
+          "w": 80,
+          "x": 0,
+          "y": 64,
+          "main": "CENTER",
+          "children": [
+           {
+            "name": "Level Pill",
+            "layout": "H",
+            "pad": [
+             2,
+             10,
+             3,
+             10
+            ],
+            "radius": 999,
+            "fill": {
+             "grad": [
+              "FFD45C",
+              "F2B544"
+             ],
+             "angle": 90
+            },
+            "stroke": "FFFFFF",
+            "strokeW": 2,
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "Lv.12",
+              "font": {
+               "family": "Fredoka One",
+               "style": "Regular"
+              },
+              "size": 14,
+              "color": "FFFFFF",
+              "name": "Level"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Info",
+        "layout": "V",
+        "gap": 5,
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "AuraAngler",
+          "textStyle": "Aura Fishing/Heading",
+          "color": {
+           "var": "cozy/text"
+          },
+          "name": "Player Name"
+         },
+         {
+          "name": "XP Row",
+          "layout": "H",
+          "gap": 6,
+          "cross": "CENTER",
+          "children": [
+           {
+            "name": "XP Bar",
+            "w": 120,
+            "h": 8,
+            "radius": 999,
+            "clip": true,
+            "fill": {
+             "var": "cozy/track"
+            },
+            "children": [
+             {
+              "type": "RECT",
+              "name": "Fill",
+              "w": 45,
+              "h": 8,
+              "x": 0,
+              "y": 0,
+              "radius": 999,
+              "fill": "7FD3B0"
+             }
+            ]
+           },
+           {
+            "type": "TEXT",
+            "text": "340/900",
+            "textStyle": "Aura Fishing/Caption",
+            "color": {
+             "var": "cozy/subtext"
+            },
+            "name": "XP Text"
+           }
+          ]
+         },
+         {
+          "name": "Currencies",
+          "layout": "H",
+          "gap": 6,
+          "children": [
+           {
+            "type": "INSTANCE",
+            "ref": "3487:4313",
+            "variant": "Type=Coins",
+            "texts": {
+             "Value": "12,450"
+            },
+            "name": "Coins"
+           },
+           {
+            "type": "INSTANCE",
+            "ref": "3487:4313",
+            "variant": "Type=Gems",
+            "texts": {
+             "Value": "320"
+            },
+            "name": "Gems"
+           }
+          ]
+         }
+        ]
+       }
+      ],
+      "type": "COMPONENT",
+      "name": "Style=D Avatar Card"
+     },
+     {
+      "layout": "V",
+      "gap": 6,
+      "children": [
+       {
+        "name": "Level Row",
+        "layout": "H",
+        "gap": 10,
+        "cross": "CENTER",
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "Lv.12",
+          "font": {
+           "family": "Fredoka One",
+           "style": "Regular"
+          },
+          "size": 30,
+          "color": "FFFFFF",
+          "name": "Level",
+          "textStroke": "3D4B5C",
+          "textStrokeW": 3
+         },
+         {
+          "type": "TEXT",
+          "text": "340 / 900 XP",
+          "font": {
+           "family": "Fredoka One",
+           "style": "Regular"
+          },
+          "size": 16,
+          "color": "FFFFFF",
+          "name": "XP Text",
+          "textStroke": "3D4B5C",
+          "textStrokeW": 2.5
+         }
+        ]
+       },
+       {
+        "name": "Currencies",
+        "layout": "H",
+        "gap": 6,
+        "cross": "CENTER",
+        "children": [
+         {
+          "type": "INSTANCE",
+          "ref": "3487:4313",
+          "variant": "Type=Coins",
+          "texts": {
+           "Value": "12,450"
+          },
+          "name": "Coins"
+         },
+         {
+          "type": "INSTANCE",
+          "ref": "3487:4313",
+          "variant": "Type=Gems",
+          "texts": {
+           "Value": "320"
+          },
+          "name": "Gems"
+         }
+        ]
+       }
+      ],
+      "type": "COMPONENT",
+      "name": "Style=E Minimal Floating"
+     },
+     {
+      "layout": "H",
+      "gap": 12,
+      "pad": 12,
+      "cross": "CENTER",
+      "radius": 22,
+      "fill": {
+       "var": "cozy/panel"
+      },
+      "stroke": {
+       "var": "cozy/track"
+      },
+      "strokeW": 2,
+      "children": [
+       {
+        "name": "Aura",
+        "layout": "V",
+        "gap": 2,
+        "cross": "CENTER",
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Img auras/NeonWave",
+          "w": 64,
+          "h": 64
+         },
+         {
+          "name": "Luck",
+          "layout": "H",
+          "pad": [
+           3,
+           10,
+           3,
+           10
+          ],
+          "radius": 999,
+          "fill": {
+           "var": "cozy/rarity/rare"
+          },
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "+15% LUCK",
+            "textStyle": "Aura Fishing/Caption",
+            "color": {
+             "var": "cozy/on-accent"
+            },
+            "name": "Label"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Info",
+        "layout": "V",
+        "gap": 6,
+        "children": [
+         {
+          "name": "Level Row",
+          "layout": "H",
+          "gap": 8,
+          "cross": "CENTER",
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "Lv. 12",
+            "textStyle": "Aura Fishing/Heading",
+            "color": {
+             "var": "cozy/text"
+            },
+            "name": "Level"
+           },
+           {
+            "type": "TEXT",
+            "text": "340 / 900 XP",
+            "textStyle": "Aura Fishing/Caption",
+            "color": {
+             "var": "cozy/subtext"
+            },
+            "name": "XP Text"
+           }
+          ]
+         },
+         {
+          "name": "XP Bar",
+          "w": 200,
+          "h": 10,
+          "radius": 999,
+          "clip": true,
+          "fill": {
+           "var": "cozy/track"
+          },
+          "children": [
+           {
+            "type": "RECT",
+            "name": "Fill",
+            "w": 76,
+            "h": 10,
+            "x": 0,
+            "y": 0,
+            "radius": 999,
+            "fill": "7FD3B0"
+           }
+          ]
+         },
+         {
+          "name": "Currencies",
+          "layout": "H",
+          "gap": 6,
+          "children": [
+           {
+            "type": "INSTANCE",
+            "ref": "3487:4313",
+            "variant": "Type=Coins",
+            "texts": {
+             "Value": "12,450"
+            },
+            "name": "Coins"
+           },
+           {
+            "type": "INSTANCE",
+            "ref": "3487:4313",
+            "variant": "Type=Gems",
+            "texts": {
+             "Value": "320"
+            },
+            "name": "Gems"
+           }
+          ]
+         }
+        ]
+       }
+      ],
+      "type": "COMPONENT",
+      "name": "Style=F Aura Spotlight"
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,210 @@
+[
+ {
+  "parentId": "3546:36700",
+  "tree": {
+   "name": "Loading states (spinner)",
+   "x": 1860,
+   "y": 960,
+   "layout": "V",
+   "gap": 12,
+   "children": [
+    {
+     "type": "TEXT",
+     "text": "Loading spinner - New.Spinner",
+     "textStyle": "Aura Fishing/Title",
+     "color": {
+      "var": "cozy/text"
+     },
+     "name": "Title"
+    },
+    {
+     "name": "Row",
+     "layout": "H",
+     "gap": 16,
+     "children": [
+      {
+       "name": "Store content loading",
+       "layout": "V",
+       "gap": 10,
+       "pad": 16,
+       "w": 250,
+       "h": 300,
+       "radius": 20,
+       "fill": {
+        "var": "cozy/panel"
+       },
+       "stroke": {
+        "var": "cozy/track"
+       },
+       "strokeW": 2,
+       "cross": "CENTER",
+       "children": [
+        {
+         "type": "TEXT",
+         "text": "Store content loading",
+         "textStyle": "Aura Fishing/Heading",
+         "color": {
+          "var": "cozy/text"
+         },
+         "name": "Title"
+        },
+        {
+         "name": "Sample",
+         "layout": "V",
+         "main": "CENTER",
+         "cross": "CENTER",
+         "w": 218,
+         "h": 200,
+         "children": [
+          {
+           "type": "SVG",
+           "svg": "<svg width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"24.0\" cy=\"24.0\" r=\"21.5\" fill=\"none\" stroke=\"#FF9E80\" stroke-opacity=\"0.15\" stroke-width=\"5\"/><path d=\"M 24.0 2.5 A 21.5 21.5 0 1 1 2.5 24.0\" fill=\"none\" stroke=\"#FF9E80\" stroke-width=\"5\" stroke-linecap=\"round\"/></svg>",
+           "w": 48,
+           "h": 48,
+           "name": "Spinner"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Buy button: price loading",
+       "layout": "V",
+       "gap": 10,
+       "pad": 16,
+       "w": 250,
+       "h": 300,
+       "radius": 20,
+       "fill": {
+        "var": "cozy/panel"
+       },
+       "stroke": {
+        "var": "cozy/track"
+       },
+       "strokeW": 2,
+       "cross": "CENTER",
+       "children": [
+        {
+         "type": "TEXT",
+         "text": "Buy button: price loading",
+         "textStyle": "Aura Fishing/Heading",
+         "color": {
+          "var": "cozy/text"
+         },
+         "name": "Title"
+        },
+        {
+         "name": "Sample",
+         "layout": "V",
+         "main": "CENTER",
+         "cross": "CENTER",
+         "w": 218,
+         "h": 200,
+         "children": [
+          {
+           "name": "Btn Buy",
+           "w": 84,
+           "h": 46,
+           "radius": 16,
+           "fill": {
+            "var": "cozy/mint"
+           },
+           "stroke": {
+            "var": "cozy/mint-lip"
+           },
+           "strokeW": 1,
+           "strokeSides": {
+            "b": 4
+           },
+           "layout": "H",
+           "main": "CENTER",
+           "cross": "CENTER",
+           "children": [
+            {
+             "type": "SVG",
+             "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"12.0\" cy=\"12.0\" r=\"10.5\" fill=\"none\" stroke=\"#FFFFFF\" stroke-opacity=\"0.15\" stroke-width=\"3\"/><path d=\"M 12.0 1.5 A 10.5 10.5 0 1 1 1.5 12.0\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"3\" stroke-linecap=\"round\"/></svg>",
+             "w": 24,
+             "h": 24,
+             "name": "Spinner"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Image still downloading",
+       "layout": "V",
+       "gap": 10,
+       "pad": 16,
+       "w": 250,
+       "h": 300,
+       "radius": 20,
+       "fill": {
+        "var": "cozy/panel"
+       },
+       "stroke": {
+        "var": "cozy/track"
+       },
+       "strokeW": 2,
+       "cross": "CENTER",
+       "children": [
+        {
+         "type": "TEXT",
+         "text": "Image still downloading",
+         "textStyle": "Aura Fishing/Heading",
+         "color": {
+          "var": "cozy/text"
+         },
+         "name": "Title"
+        },
+        {
+         "name": "Sample",
+         "layout": "V",
+         "main": "CENTER",
+         "cross": "CENTER",
+         "w": 218,
+         "h": 200,
+         "children": [
+          {
+           "name": "Skeleton",
+           "w": 96,
+           "h": 96,
+           "radius": 16,
+           "fill": {
+            "var": "cozy/sand"
+           },
+           "layout": "H",
+           "main": "CENTER",
+           "cross": "CENTER",
+           "children": [
+            {
+             "type": "SVG",
+             "svg": "<svg width=\"38\" height=\"38\" viewBox=\"0 0 38 38\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"19.0\" cy=\"19.0\" r=\"17.5\" fill=\"none\" stroke=\"#7A8A99\" stroke-opacity=\"0.15\" stroke-width=\"3\"/><path d=\"M 19.0 1.5 A 17.5 17.5 0 1 1 1.5 19.0\" fill=\"none\" stroke=\"#7A8A99\" stroke-width=\"3\" stroke-linecap=\"round\"/></svg>",
+             "w": 38,
+             "h": 38,
+             "name": "Spinner"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "TEXT",
+     "text": "Ring turns every 0.9 s with a fading tail. Shown only while waiting; removed when the data arrives. No dark overlay behind the Store.",
+     "textStyle": "Aura Fishing/Body",
+     "color": {
+      "var": "cozy/subtext"
+     },
+     "name": "Note",
+     "w": 790
+    }
+   ]
+  }
+ }
+]

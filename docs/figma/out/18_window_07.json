@@ -1,0 +1,377 @@
+{
+ "parentId": "3492:17035",
+ "replaceName": "Window Auras",
+ "tree": {
+  "name": "Window Auras",
+  "layout": "V",
+  "pad": 20,
+  "gap": 14,
+  "w": 760,
+  "h": 610,
+  "x": 260,
+  "y": 70,
+  "radius": 24,
+  "fill": {
+   "var": "cozy/panel"
+  },
+  "stroke": {
+   "var": "cozy/track"
+  },
+  "strokeW": 2,
+  "effects": [
+   {
+    "color": "3D4B5C",
+    "a": 0.1,
+    "y": 6,
+    "blur": 18
+   }
+  ],
+  "children": [
+   {
+    "name": "Header",
+    "layout": "H",
+    "fillW": true,
+    "main": "SPACE_BETWEEN",
+    "cross": "CENTER",
+    "children": [
+     {
+      "type": "TEXT",
+      "text": "Auras",
+      "textStyle": "Aura Fishing/Title",
+      "color": {
+       "var": "cozy/text"
+      },
+      "name": "Title"
+     },
+     {
+      "type": "INSTANCE",
+      "ref": "3487:4298",
+      "variant": "Style=Danger",
+      "texts": {
+       "Label": "X"
+      },
+      "name": "Btn Close"
+     }
+    ]
+   },
+   {
+    "name": "Top",
+    "layout": "H",
+    "gap": 12,
+    "fillW": true,
+    "children": [
+     {
+      "type": "INSTANCE",
+      "ref": "3487:4298",
+      "variant": "Style=Gem",
+      "texts": {
+       "Label": "ROLL AURA  (5 Gems)"
+      },
+      "name": "Btn Roll",
+      "fillW": true
+     },
+     {
+      "type": "INSTANCE",
+      "ref": "3487:4298",
+      "variant": "Style=Ghost",
+      "texts": {
+       "Label": "Low FX: OFF"
+      },
+      "name": "Btn LowFX"
+     }
+    ]
+   },
+   {
+    "name": "Equipped",
+    "layout": "H",
+    "gap": 14,
+    "pad": 14,
+    "cross": "CENTER",
+    "radius": 18,
+    "fill": {
+     "var": "cozy/sand"
+    },
+    "fillW": true,
+    "children": [
+     {
+      "type": "RECT",
+      "name": "Img auras/NeonWave",
+      "w": 56,
+      "h": 56
+     },
+     {
+      "name": "Text",
+      "layout": "V",
+      "gap": 2,
+      "fillW": true,
+      "children": [
+       {
+        "name": "Line",
+        "layout": "H",
+        "gap": 8,
+        "cross": "CENTER",
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "Neon Wave",
+          "textStyle": "Aura Fishing/Title",
+          "color": {
+           "var": "cozy/rarity/rare"
+          },
+          "name": "Name"
+         },
+         {
+          "type": "INSTANCE",
+          "ref": "3487:4328",
+          "variant": "Rarity=Rare",
+          "name": "Tag Rare"
+         }
+        ]
+       },
+       {
+        "type": "TEXT",
+        "text": "Equipped  •  +15% Luck, +2% Catch Bar, +3% Glowing",
+        "textStyle": "Aura Fishing/Small",
+        "color": {
+         "var": "cozy/subtext"
+        },
+        "name": "Stats"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "List (max 3)",
+    "layout": "V",
+    "gap": 10,
+    "fillW": true,
+    "h": 260,
+    "children": [
+     {
+      "name": "Row Sparkling Dew  (1/10)  x3",
+      "layout": "H",
+      "pad": 12,
+      "gap": 12,
+      "cross": "CENTER",
+      "radius": 16,
+      "h": 80,
+      "fill": {
+       "var": "cozy/sand"
+      },
+      "fillW": true,
+      "children": [
+       {
+        "type": "RECT",
+        "name": "Img auras/SparklingDew",
+        "w": 56,
+        "h": 56
+       },
+       {
+        "name": "Text",
+        "layout": "V",
+        "gap": 2,
+        "fillW": true,
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "Sparkling Dew  (1/10)  x3",
+          "textStyle": "Aura Fishing/Heading",
+          "color": {
+           "var": "cozy/rarity/common"
+          },
+          "name": "Title"
+         },
+         {
+          "type": "TEXT",
+          "text": "+5% Luck",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Sub"
+         }
+        ]
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4298",
+        "variant": "Style=Secondary",
+        "texts": {
+         "Label": "Equip"
+        },
+        "name": "Btn Equip"
+       }
+      ]
+     },
+     {
+      "name": "Row Neon Wave  (1/100)  x1",
+      "layout": "H",
+      "pad": 12,
+      "gap": 12,
+      "cross": "CENTER",
+      "radius": 16,
+      "h": 80,
+      "fill": {
+       "var": "cozy/sand"
+      },
+      "fillW": true,
+      "children": [
+       {
+        "type": "RECT",
+        "name": "Img auras/NeonWave",
+        "w": 56,
+        "h": 56
+       },
+       {
+        "name": "Text",
+        "layout": "V",
+        "gap": 2,
+        "fillW": true,
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "Neon Wave  (1/100)  x1",
+          "textStyle": "Aura Fishing/Heading",
+          "color": {
+           "var": "cozy/rarity/rare"
+          },
+          "name": "Title"
+         },
+         {
+          "type": "TEXT",
+          "text": "+15% Luck, +2% Catch Bar, +3% Glowing",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Sub"
+         }
+        ]
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4298",
+        "variant": "Style=Success",
+        "texts": {
+         "Label": "Unequip"
+        },
+        "name": "Btn Equip"
+       }
+      ]
+     },
+     {
+      "name": "Row ???  (1/750)",
+      "layout": "H",
+      "pad": 12,
+      "gap": 12,
+      "cross": "CENTER",
+      "radius": 16,
+      "h": 80,
+      "fill": {
+       "var": "cozy/sand"
+      },
+      "fillW": true,
+      "children": [
+       {
+        "type": "RECT",
+        "name": "Img auras/UnknownAura",
+        "w": 56,
+        "h": 56
+       },
+       {
+        "name": "Text",
+        "layout": "V",
+        "gap": 2,
+        "fillW": true,
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "???  (1/750)",
+          "textStyle": "Aura Fishing/Heading",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Title"
+         },
+         {
+          "type": "TEXT",
+          "text": "Epic",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Sub"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Footer",
+    "layout": "H",
+    "gap": 10,
+    "fillW": true,
+    "main": "SPACE_BETWEEN",
+    "cross": "CENTER",
+    "children": [
+     {
+      "name": "Pager",
+      "layout": "H",
+      "gap": 10,
+      "cross": "CENTER",
+      "children": [
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4298",
+        "variant": "Style=Ghost",
+        "texts": {
+         "Label": "<"
+        },
+        "name": "Btn Page Prev"
+       },
+       {
+        "type": "TEXT",
+        "text": "1 / 2",
+        "font": {
+         "family": "Fredoka One",
+         "style": "Regular"
+        },
+        "size": 18,
+        "color": "7A8A99",
+        "name": "Page"
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4298",
+        "variant": "Style=Ghost",
+        "texts": {
+         "Label": ">"
+        },
+        "name": "Btn Page Next"
+       }
+      ]
+     },
+     {
+      "name": "Wallet",
+      "layout": "H",
+      "gap": 10,
+      "children": [
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4313",
+        "variant": "Type=Gems",
+        "texts": {
+         "Value": "320"
+        },
+        "name": "Gems"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

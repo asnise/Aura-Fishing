@@ -1,0 +1,2459 @@
+[
+ {
+  "pageId": "3465:14993",
+  "replaceName": "C7 · Daily Quests — 3 Design Layouts (Pick One)",
+  "tree": {
+   "type": "SECTION",
+   "name": "C7 · Daily Quests — 3 Design Layouts (Pick One)",
+   "fill": "FBF7EF",
+   "x": 25000,
+   "y": 2000,
+   "children": [
+    {
+     "type": "TEXT",
+     "text": "C7 · Daily Quests — 3 UI Layout Variants to Choose",
+     "textStyle": "Aura Fishing/Display",
+     "color": {
+      "var": "cozy/text"
+     },
+     "name": "Title",
+     "x": 60,
+     "y": 40
+    },
+    {
+     "type": "TEXT",
+     "text": "Compare 3 UX layouts for the Daily Quests & Milestone Chest system (C7). Ready for player feedback. No checkmarks, bullets, or emojis used.",
+     "textStyle": "Aura Fishing/Body",
+     "color": {
+      "var": "cozy/subtext"
+     },
+     "name": "Sub",
+     "x": 60,
+     "y": 96,
+     "w": 1800
+    },
+    {
+     "name": "Option 1: Classic Cozy Deck",
+     "layout": "V",
+     "gap": 10,
+     "pad": 24,
+     "radius": 24,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 2,
+     "effects": [
+      {
+       "color": "3D4B5C",
+       "a": 0.1,
+       "y": 6,
+       "blur": 18
+      }
+     ],
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "Option 1: Classic Cozy Deck",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "type": "TEXT",
+       "text": "Standard 760x610 window with top milestone track and 3 rich quest cards. Clean, native, matches Fishdex and Shop.",
+       "textStyle": "Aura Fishing/Small",
+       "color": {
+        "var": "cozy/subtext"
+       },
+       "name": "Desc",
+       "w": 772
+      },
+      {
+       "name": "Body",
+       "layout": "V",
+       "gap": 14,
+       "children": [
+        {
+         "name": "Window Daily Quests (Option 1)",
+         "layout": "V",
+         "w": 760,
+         "h": 610,
+         "pad": 20,
+         "gap": 12,
+         "radius": 24,
+         "fill": {
+          "var": "cozy/panel"
+         },
+         "stroke": {
+          "var": "cozy/track"
+         },
+         "strokeW": 2,
+         "effects": [
+          {
+           "color": "3D4B5C",
+           "a": 0.1,
+           "y": 6,
+           "blur": 18
+          }
+         ],
+         "children": [
+          {
+           "name": "Header",
+           "layout": "H",
+           "fillW": true,
+           "main": "SPACE_BETWEEN",
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "TitleGroup",
+             "layout": "H",
+             "gap": 12,
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "Daily Quests",
+               "textStyle": "Aura Fishing/Title",
+               "color": {
+                "var": "cozy/text"
+               },
+               "name": "Title"
+              },
+              {
+               "name": "TimerPill",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                4,
+                10,
+                4,
+                8
+               ],
+               "radius": 999,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/sand"
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "svg": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"24\" cy=\"27\" r=\"16\" stroke=\"#7A8A99\" stroke-width=\"5\"/><path d=\"M24 27V17\" stroke=\"#7A8A99\" stroke-width=\"5\" stroke-linecap=\"round\"/><rect x=\"18\" y=\"3\" width=\"12\" height=\"5\" rx=\"2.5\" fill=\"#7A8A99\"/></svg>",
+                 "w": 14,
+                 "h": 14,
+                 "name": "icon_timer"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "Resets in 14h 22m",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Timer"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Right",
+             "layout": "H",
+             "gap": 10,
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "INSTANCE",
+               "ref": "3487:4313",
+               "variant": "Type=Gems",
+               "texts": {
+                "Value": "381"
+               },
+               "name": "Gems"
+              },
+              {
+               "type": "INSTANCE",
+               "ref": "3487:4298",
+               "variant": "Style=Danger",
+               "texts": {
+                "Label": "X"
+               },
+               "name": "Btn Close"
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "MilestoneTrack",
+           "layout": "H",
+           "fillW": true,
+           "pad": [
+            10,
+            16,
+            10,
+            16
+           ],
+           "gap": 16,
+           "radius": 16,
+           "cross": "CENTER",
+           "main": "SPACE_BETWEEN",
+           "fill": {
+            "var": "cozy/sand"
+           },
+           "children": [
+            {
+             "name": "LeftInfo",
+             "layout": "V",
+             "gap": 2,
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "Daily Chest Progress",
+               "textStyle": "Aura Fishing/Heading",
+               "color": {
+                "var": "cozy/text"
+               },
+               "name": "Title"
+              },
+              {
+               "type": "TEXT",
+               "text": "2 / 3 Quests Completed",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Sub"
+              }
+             ]
+            },
+            {
+             "name": "MilestoneNodes",
+             "layout": "H",
+             "gap": 12,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Node1",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                4,
+                10,
+                4,
+                8
+               ],
+               "radius": 999,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/panel"
+               },
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/status/treasure_chest",
+                 "w": 20,
+                 "h": 20
+                },
+                {
+                 "type": "TEXT",
+                 "text": "1/3",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/mint-lip"
+                 },
+                 "name": "Step"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "CLAIMED",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Tag"
+                }
+               ]
+              },
+              {
+               "name": "Node2",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                4,
+                10,
+                4,
+                8
+               ],
+               "radius": 999,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/panel"
+               },
+               "stroke": {
+                "var": "cozy/mint"
+               },
+               "strokeW": 2,
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/status/treasure_chest",
+                 "w": 20,
+                 "h": 20
+                },
+                {
+                 "type": "TEXT",
+                 "text": "2/3",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/mint-lip"
+                 },
+                 "name": "Step"
+                },
+                {
+                 "name": "BtnOpenSilver",
+                 "layout": "H",
+                 "w": 62,
+                 "h": 28,
+                 "radius": 14,
+                 "cross": "CENTER",
+                 "main": "CENTER",
+                 "fill": {
+                  "var": "cozy/mint"
+                 },
+                 "stroke": {
+                  "var": "cozy/mint-lip"
+                 },
+                 "strokeSides": {
+                  "b": 4
+                 },
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "OPEN",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "FFFFFF",
+                   "name": "Label"
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Node3",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                4,
+                10,
+                4,
+                8
+               ],
+               "radius": 999,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/track"
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "svg": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"9\" y=\"21\" width=\"30\" height=\"22\" rx=\"6\" fill=\"#7A8A99\"/><path d=\"M16 21v-5a8 8 0 0 1 16 0v5\" stroke=\"#7A8A99\" stroke-width=\"5\"/></svg>",
+                 "w": 14,
+                 "h": 14,
+                 "name": "icon_lock"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "3/3 Gold Chest",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Step"
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "QuestCard1_InProgress",
+           "layout": "H",
+           "fillW": true,
+           "pad": [
+            12,
+            16,
+            12,
+            16
+           ],
+           "gap": 16,
+           "radius": 16,
+           "cross": "CENTER",
+           "fill": {
+            "var": "cozy/panel"
+           },
+           "stroke": {
+            "var": "cozy/track"
+           },
+           "strokeW": 2,
+           "children": [
+            {
+             "type": "RECT",
+             "name": "Img ui/icons/daily_login",
+             "w": 48,
+             "h": 48
+            },
+            {
+             "name": "Info",
+             "layout": "V",
+             "gap": 4,
+             "fillW": true,
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "Catch 10 Fish in Shallows",
+               "textStyle": "Aura Fishing/Heading",
+               "color": {
+                "var": "cozy/text"
+               },
+               "name": "Title"
+              },
+              {
+               "type": "TEXT",
+               "text": "Any fish caught between 0-20m depth",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Sub"
+              },
+              {
+               "name": "ProgressRow",
+               "layout": "H",
+               "gap": 10,
+               "cross": "CENTER",
+               "children": [
+                {
+                 "name": "ProgressTrack",
+                 "w": 160,
+                 "h": 10,
+                 "radius": 999,
+                 "fill": {
+                  "var": "cozy/track"
+                 },
+                 "children": [
+                  {
+                   "name": "Fill",
+                   "w": 112,
+                   "h": 10,
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/mint"
+                   }
+                  }
+                 ]
+                },
+                {
+                 "type": "TEXT",
+                 "text": "7 / 10",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/mint-lip"
+                 },
+                 "name": "Val"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "RewardChip",
+             "layout": "H",
+             "gap": 6,
+             "pad": [
+              4,
+              12,
+              4,
+              8
+             ],
+             "radius": 999,
+             "cross": "CENTER",
+             "fill": {
+              "var": "cozy/sand"
+             },
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/status/pearl",
+               "w": 18,
+               "h": 18
+              },
+              {
+               "type": "TEXT",
+               "text": "+15 Gems",
+               "font": {
+                "family": "Fredoka One",
+                "style": "Regular"
+               },
+               "size": 13,
+               "color": "8C6FD6",
+               "name": "Amount"
+              }
+             ]
+            },
+            {
+             "name": "StatusPill",
+             "layout": "H",
+             "pad": [
+              6,
+              14,
+              6,
+              14
+             ],
+             "radius": 999,
+             "cross": "CENTER",
+             "fill": {
+              "var": "cozy/sand"
+             },
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "IN PROGRESS",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Tag"
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "QuestCard2_Claimable",
+           "layout": "H",
+           "fillW": true,
+           "pad": [
+            12,
+            16,
+            12,
+            16
+           ],
+           "gap": 16,
+           "radius": 16,
+           "cross": "CENTER",
+           "fill": {
+            "var": "cozy/panel"
+           },
+           "stroke": {
+            "var": "cozy/gold"
+           },
+           "strokeW": 2,
+           "children": [
+            {
+             "type": "RECT",
+             "name": "Img fish/AncientCoelacanth",
+             "w": 48,
+             "h": 48
+            },
+            {
+             "name": "Info",
+             "layout": "V",
+             "gap": 4,
+             "fillW": true,
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "Reel in 3 Rare+ Fish",
+               "textStyle": "Aura Fishing/Heading",
+               "color": {
+                "var": "cozy/text"
+               },
+               "name": "Title"
+              },
+              {
+               "type": "TEXT",
+               "text": "Rare, Epic, or Legendary catches count",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Sub"
+              },
+              {
+               "name": "ProgressRow",
+               "layout": "H",
+               "gap": 10,
+               "cross": "CENTER",
+               "children": [
+                {
+                 "name": "ProgressTrack",
+                 "w": 160,
+                 "h": 10,
+                 "radius": 999,
+                 "fill": {
+                  "var": "cozy/track"
+                 },
+                 "children": [
+                  {
+                   "name": "Fill",
+                   "w": 160,
+                   "h": 10,
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/gold"
+                   }
+                  }
+                 ]
+                },
+                {
+                 "type": "TEXT",
+                 "text": "3 / 3 COMPLETED",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/gold-lip"
+                 },
+                 "name": "Val"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "RewardChip",
+             "layout": "H",
+             "gap": 6,
+             "pad": [
+              4,
+              12,
+              4,
+              8
+             ],
+             "radius": 999,
+             "cross": "CENTER",
+             "fill": {
+              "var": "cozy/sand"
+             },
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/status/pearl",
+               "w": 18,
+               "h": 18
+              },
+              {
+               "type": "TEXT",
+               "text": "+25 Gems",
+               "font": {
+                "family": "Fredoka One",
+                "style": "Regular"
+               },
+               "size": 13,
+               "color": "8C6FD6",
+               "name": "Amount"
+              }
+             ]
+            },
+            {
+             "name": "BtnClaim",
+             "layout": "H",
+             "w": 110,
+             "h": 42,
+             "radius": 14,
+             "cross": "CENTER",
+             "main": "CENTER",
+             "fill": {
+              "var": "cozy/mint"
+             },
+             "stroke": {
+              "var": "cozy/mint-lip"
+             },
+             "strokeSides": {
+              "b": 4
+             },
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "CLAIM",
+               "font": {
+                "family": "Fredoka One",
+                "style": "Regular"
+               },
+               "size": 16,
+               "color": "FFFFFF",
+               "name": "Label"
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "QuestCard3_Claimed",
+           "layout": "H",
+           "fillW": true,
+           "pad": [
+            12,
+            16,
+            12,
+            16
+           ],
+           "gap": 16,
+           "radius": 16,
+           "cross": "CENTER",
+           "fill": {
+            "var": "cozy/panel"
+           },
+           "stroke": {
+            "var": "cozy/track"
+           },
+           "strokeW": 1,
+           "opacity": 0.75,
+           "children": [
+            {
+             "type": "RECT",
+             "name": "Img ui/icons/bag",
+             "w": 48,
+             "h": 48
+            },
+            {
+             "name": "Info",
+             "layout": "V",
+             "gap": 4,
+             "fillW": true,
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "Earn 5,000 Coins",
+               "textStyle": "Aura Fishing/Heading",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Title"
+              },
+              {
+               "type": "TEXT",
+               "text": "Sell any catches to Fish Merchant",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Sub"
+              },
+              {
+               "name": "ProgressRow",
+               "layout": "H",
+               "gap": 10,
+               "cross": "CENTER",
+               "children": [
+                {
+                 "name": "ProgressTrack",
+                 "w": 160,
+                 "h": 10,
+                 "radius": 999,
+                 "fill": {
+                  "var": "cozy/track"
+                 },
+                 "children": [
+                  {
+                   "name": "Fill",
+                   "w": 160,
+                   "h": 10,
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/track"
+                   }
+                  }
+                 ]
+                },
+                {
+                 "type": "TEXT",
+                 "text": "5,000 / 5,000",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Val"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "RewardChip",
+             "layout": "H",
+             "gap": 6,
+             "pad": [
+              4,
+              12,
+              4,
+              8
+             ],
+             "radius": 999,
+             "cross": "CENTER",
+             "fill": {
+              "var": "cozy/track"
+             },
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/status/pearl",
+               "w": 18,
+               "h": 18
+              },
+              {
+               "type": "TEXT",
+               "text": "+20 Gems",
+               "font": {
+                "family": "Fredoka One",
+                "style": "Regular"
+               },
+               "size": 13,
+               "color": "7A8A99",
+               "name": "Amount"
+              }
+             ]
+            },
+            {
+             "name": "StatusPill",
+             "layout": "H",
+             "pad": [
+              6,
+              16,
+              6,
+              16
+             ],
+             "radius": 999,
+             "cross": "CENTER",
+             "fill": {
+              "var": "cozy/track"
+             },
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "CLAIMED",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Tag"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "w": 820,
+     "x": 60,
+     "y": 160
+    },
+    {
+     "name": "Option 2: Adventure Journal (Split Layout)",
+     "layout": "V",
+     "gap": 10,
+     "pad": 24,
+     "radius": 24,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 2,
+     "effects": [
+      {
+       "color": "3D4B5C",
+       "a": 0.1,
+       "y": 6,
+       "blur": 18
+      }
+     ],
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "Option 2: Adventure Journal (Split Layout)",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "type": "TEXT",
+       "text": "840x610 window with quest tasks on the left and a grand daily chest showcase on the right. Highlights daily retention.",
+       "textStyle": "Aura Fishing/Small",
+       "color": {
+        "var": "cozy/subtext"
+       },
+       "name": "Desc",
+       "w": 852
+      },
+      {
+       "name": "Body",
+       "layout": "V",
+       "gap": 14,
+       "children": [
+        {
+         "name": "Window Quest Journal (Option 2)",
+         "layout": "V",
+         "w": 840,
+         "h": 610,
+         "pad": 20,
+         "gap": 14,
+         "radius": 24,
+         "fill": {
+          "var": "cozy/panel"
+         },
+         "stroke": {
+          "var": "cozy/track"
+         },
+         "strokeW": 2,
+         "effects": [
+          {
+           "color": "3D4B5C",
+           "a": 0.1,
+           "y": 6,
+           "blur": 18
+          }
+         ],
+         "children": [
+          {
+           "name": "Header",
+           "layout": "H",
+           "fillW": true,
+           "main": "SPACE_BETWEEN",
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "TitleGroup",
+             "layout": "H",
+             "gap": 12,
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "Quest Journal",
+               "textStyle": "Aura Fishing/Title",
+               "color": {
+                "var": "cozy/text"
+               },
+               "name": "Title"
+              },
+              {
+               "name": "TimerPill",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                4,
+                10,
+                4,
+                8
+               ],
+               "radius": 999,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/sand"
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "svg": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"24\" cy=\"27\" r=\"16\" stroke=\"#7A8A99\" stroke-width=\"5\"/><path d=\"M24 27V17\" stroke=\"#7A8A99\" stroke-width=\"5\" stroke-linecap=\"round\"/><rect x=\"18\" y=\"3\" width=\"12\" height=\"5\" rx=\"2.5\" fill=\"#7A8A99\"/></svg>",
+                 "w": 14,
+                 "h": 14,
+                 "name": "icon_timer"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "Resets in 14h 22m",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Timer"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Right",
+             "layout": "H",
+             "gap": 10,
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "INSTANCE",
+               "ref": "3487:4313",
+               "variant": "Type=Gems",
+               "texts": {
+                "Value": "381"
+               },
+               "name": "Gems"
+              },
+              {
+               "type": "INSTANCE",
+               "ref": "3487:4298",
+               "variant": "Style=Danger",
+               "texts": {
+                "Label": "X"
+               },
+               "name": "Btn Close"
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "SplitBody",
+           "layout": "H",
+           "fillW": true,
+           "gap": 16,
+           "children": [
+            {
+             "name": "LeftCol",
+             "layout": "V",
+             "w": 490,
+             "gap": 10,
+             "children": [
+              {
+               "name": "Row1",
+               "layout": "V",
+               "gap": 8,
+               "pad": 12,
+               "radius": 16,
+               "fill": {
+                "var": "cozy/sand"
+               },
+               "children": [
+                {
+                 "name": "Top",
+                 "layout": "H",
+                 "main": "SPACE_BETWEEN",
+                 "cross": "CENTER",
+                 "fillW": true,
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "Catch 10 Fish in Shallows",
+                   "textStyle": "Aura Fishing/Heading",
+                   "color": {
+                    "var": "cozy/text"
+                   },
+                   "name": "Title"
+                  },
+                  {
+                   "name": "RewardChip",
+                   "layout": "H",
+                   "gap": 6,
+                   "pad": [
+                    4,
+                    12,
+                    4,
+                    8
+                   ],
+                   "radius": 999,
+                   "cross": "CENTER",
+                   "fill": {
+                    "var": "cozy/sand"
+                   },
+                   "children": [
+                    {
+                     "type": "RECT",
+                     "name": "Img ui/status/pearl",
+                     "w": 18,
+                     "h": 18
+                    },
+                    {
+                     "type": "TEXT",
+                     "text": "+15 Gems",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 13,
+                     "color": "8C6FD6",
+                     "name": "Amount"
+                    }
+                   ]
+                  }
+                 ]
+                },
+                {
+                 "name": "Bottom",
+                 "layout": "H",
+                 "main": "SPACE_BETWEEN",
+                 "cross": "CENTER",
+                 "fillW": true,
+                 "children": [
+                  {
+                   "name": "ProgressTrack",
+                   "w": 240,
+                   "h": 10,
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/track"
+                   },
+                   "children": [
+                    {
+                     "name": "Fill",
+                     "w": 168,
+                     "h": 10,
+                     "radius": 999,
+                     "fill": {
+                      "var": "cozy/mint"
+                     }
+                    }
+                   ]
+                  },
+                  {
+                   "type": "TEXT",
+                   "text": "7 / 10",
+                   "textStyle": "Aura Fishing/Caption",
+                   "color": {
+                    "var": "cozy/mint-lip"
+                   },
+                   "name": "Count"
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Row2",
+               "layout": "V",
+               "gap": 8,
+               "pad": 12,
+               "radius": 16,
+               "fill": {
+                "var": "cozy/sand"
+               },
+               "stroke": {
+                "var": "cozy/gold"
+               },
+               "strokeW": 2,
+               "children": [
+                {
+                 "name": "Top",
+                 "layout": "H",
+                 "main": "SPACE_BETWEEN",
+                 "cross": "CENTER",
+                 "fillW": true,
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "Reel in 3 Rare+ Fish",
+                   "textStyle": "Aura Fishing/Heading",
+                   "color": {
+                    "var": "cozy/text"
+                   },
+                   "name": "Title"
+                  },
+                  {
+                   "name": "BtnClaimRow2",
+                   "layout": "H",
+                   "w": 88,
+                   "h": 32,
+                   "radius": 14,
+                   "cross": "CENTER",
+                   "main": "CENTER",
+                   "fill": {
+                    "var": "cozy/mint"
+                   },
+                   "stroke": {
+                    "var": "cozy/mint-lip"
+                   },
+                   "strokeSides": {
+                    "b": 4
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "CLAIM",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 13,
+                     "color": "FFFFFF",
+                     "name": "Label"
+                    }
+                   ]
+                  }
+                 ]
+                },
+                {
+                 "name": "Bottom",
+                 "layout": "H",
+                 "main": "SPACE_BETWEEN",
+                 "cross": "CENTER",
+                 "fillW": true,
+                 "children": [
+                  {
+                   "name": "ProgressTrack",
+                   "w": 240,
+                   "h": 10,
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/track"
+                   },
+                   "children": [
+                    {
+                     "name": "Fill",
+                     "w": 240,
+                     "h": 10,
+                     "radius": 999,
+                     "fill": {
+                      "var": "cozy/gold"
+                     }
+                    }
+                   ]
+                  },
+                  {
+                   "type": "TEXT",
+                   "text": "COMPLETED (+25 Gems)",
+                   "textStyle": "Aura Fishing/Caption",
+                   "color": {
+                    "var": "cozy/gold-lip"
+                   },
+                   "name": "Count"
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Row3",
+               "layout": "V",
+               "gap": 8,
+               "pad": 12,
+               "radius": 16,
+               "fill": {
+                "var": "cozy/sand"
+               },
+               "opacity": 0.7,
+               "children": [
+                {
+                 "name": "Top",
+                 "layout": "H",
+                 "main": "SPACE_BETWEEN",
+                 "cross": "CENTER",
+                 "fillW": true,
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "Earn 5,000 Coins",
+                   "textStyle": "Aura Fishing/Heading",
+                   "color": {
+                    "var": "cozy/subtext"
+                   },
+                   "name": "Title"
+                  },
+                  {
+                   "type": "TEXT",
+                   "text": "CLAIMED",
+                   "textStyle": "Aura Fishing/Caption",
+                   "color": {
+                    "var": "cozy/subtext"
+                   },
+                   "name": "Tag"
+                  }
+                 ]
+                },
+                {
+                 "name": "Bottom",
+                 "layout": "H",
+                 "main": "SPACE_BETWEEN",
+                 "cross": "CENTER",
+                 "fillW": true,
+                 "children": [
+                  {
+                   "name": "ProgressTrack",
+                   "w": 240,
+                   "h": 10,
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/track"
+                   },
+                   "children": [
+                    {
+                     "name": "Fill",
+                     "w": 240,
+                     "h": 10,
+                     "radius": 999,
+                     "fill": {
+                      "var": "cozy/track"
+                     }
+                    }
+                   ]
+                  },
+                  {
+                   "type": "TEXT",
+                   "text": "5,000 / 5,000",
+                   "textStyle": "Aura Fishing/Caption",
+                   "color": {
+                    "var": "cozy/subtext"
+                   },
+                   "name": "Count"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "RightCol_GrandChest",
+             "layout": "V",
+             "w": 290,
+             "h": 500,
+             "pad": 16,
+             "gap": 12,
+             "radius": 20,
+             "cross": "CENTER",
+             "fill": {
+              "var": "cozy/sand"
+             },
+             "stroke": {
+              "var": "cozy/track"
+             },
+             "strokeW": 2,
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "Today's Mega Chest",
+               "textStyle": "Aura Fishing/Heading",
+               "color": {
+                "var": "cozy/text"
+               },
+               "name": "Title"
+              },
+              {
+               "type": "RECT",
+               "name": "Img ui/status/treasure_chest",
+               "w": 100,
+               "h": 100
+              },
+              {
+               "name": "ProgressRing",
+               "layout": "V",
+               "gap": 4,
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "2 / 3 Quests Done",
+                 "textStyle": "Aura Fishing/Title",
+                 "color": {
+                  "var": "cozy/mint-lip"
+                 },
+                 "name": "PCount"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "1 more quest to unlock!",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Hint"
+                }
+               ]
+              },
+              {
+               "name": "RewardsPreview",
+               "layout": "V",
+               "gap": 6,
+               "pad": 10,
+               "fillW": true,
+               "radius": 12,
+               "fill": {
+                "var": "cozy/panel"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "Chest Contains:",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Lbl"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+50 Gems",
+                 "textStyle": "Aura Fishing/Heading",
+                 "color": {
+                  "var": "cozy/gem-lip"
+                 },
+                 "name": "R1"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+500 Pearls",
+                 "textStyle": "Aura Fishing/Heading",
+                 "color": {
+                  "var": "cozy/mint-lip"
+                 },
+                 "name": "R2"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "x5 Golden Bait",
+                 "textStyle": "Aura Fishing/Heading",
+                 "color": {
+                  "var": "cozy/gold-lip"
+                 },
+                 "name": "R3"
+                }
+               ]
+              },
+              {
+               "name": "BtnOpenMega",
+               "layout": "H",
+               "w": 250,
+               "h": 46,
+               "radius": 14,
+               "cross": "CENTER",
+               "main": "CENTER",
+               "fill": {
+                "var": "cozy/sand"
+               },
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeSides": {
+                "b": 4
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "1 MORE NEEDED",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 14,
+                 "color": "9AA5B1",
+                 "name": "Label"
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "w": 900,
+     "x": 920,
+     "y": 160
+    },
+    {
+     "name": "Option 3: Full Flow Preview (Deck + Celebration Modal)",
+     "layout": "V",
+     "gap": 10,
+     "pad": 24,
+     "radius": 24,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 2,
+     "effects": [
+      {
+       "color": "3D4B5C",
+       "a": 0.1,
+       "y": 6,
+       "blur": 18
+      }
+     ],
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "Option 3: Full Flow Preview (Deck + Celebration Modal)",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "type": "TEXT",
+       "text": "Shows the quest window alongside the Quest Reward Claimed celebration popup when the player presses CLAIM.",
+       "textStyle": "Aura Fishing/Small",
+       "color": {
+        "var": "cozy/subtext"
+       },
+       "name": "Desc",
+       "w": 1372
+      },
+      {
+       "name": "Body",
+       "layout": "V",
+       "gap": 14,
+       "children": [
+        {
+         "name": "Flow Preview (Option 3)",
+         "layout": "H",
+         "gap": 24,
+         "cross": "CENTER",
+         "children": [
+          {
+           "name": "Window Daily Quests (Option 1)",
+           "layout": "V",
+           "w": 760,
+           "h": 610,
+           "pad": 20,
+           "gap": 12,
+           "radius": 24,
+           "fill": {
+            "var": "cozy/panel"
+           },
+           "stroke": {
+            "var": "cozy/track"
+           },
+           "strokeW": 2,
+           "effects": [
+            {
+             "color": "3D4B5C",
+             "a": 0.1,
+             "y": 6,
+             "blur": 18
+            }
+           ],
+           "children": [
+            {
+             "name": "Header",
+             "layout": "H",
+             "fillW": true,
+             "main": "SPACE_BETWEEN",
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "TitleGroup",
+               "layout": "H",
+               "gap": 12,
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "Daily Quests",
+                 "textStyle": "Aura Fishing/Title",
+                 "color": {
+                  "var": "cozy/text"
+                 },
+                 "name": "Title"
+                },
+                {
+                 "name": "TimerPill",
+                 "layout": "H",
+                 "gap": 6,
+                 "pad": [
+                  4,
+                  10,
+                  4,
+                  8
+                 ],
+                 "radius": 999,
+                 "cross": "CENTER",
+                 "fill": {
+                  "var": "cozy/sand"
+                 },
+                 "children": [
+                  {
+                   "type": "SVG",
+                   "svg": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"24\" cy=\"27\" r=\"16\" stroke=\"#7A8A99\" stroke-width=\"5\"/><path d=\"M24 27V17\" stroke=\"#7A8A99\" stroke-width=\"5\" stroke-linecap=\"round\"/><rect x=\"18\" y=\"3\" width=\"12\" height=\"5\" rx=\"2.5\" fill=\"#7A8A99\"/></svg>",
+                   "w": 14,
+                   "h": 14,
+                   "name": "icon_timer"
+                  },
+                  {
+                   "type": "TEXT",
+                   "text": "Resets in 14h 22m",
+                   "textStyle": "Aura Fishing/Caption",
+                   "color": {
+                    "var": "cozy/subtext"
+                   },
+                   "name": "Timer"
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Right",
+               "layout": "H",
+               "gap": 10,
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "INSTANCE",
+                 "ref": "3487:4313",
+                 "variant": "Type=Gems",
+                 "texts": {
+                  "Value": "381"
+                 },
+                 "name": "Gems"
+                },
+                {
+                 "type": "INSTANCE",
+                 "ref": "3487:4298",
+                 "variant": "Style=Danger",
+                 "texts": {
+                  "Label": "X"
+                 },
+                 "name": "Btn Close"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "MilestoneTrack",
+             "layout": "H",
+             "fillW": true,
+             "pad": [
+              10,
+              16,
+              10,
+              16
+             ],
+             "gap": 16,
+             "radius": 16,
+             "cross": "CENTER",
+             "main": "SPACE_BETWEEN",
+             "fill": {
+              "var": "cozy/sand"
+             },
+             "children": [
+              {
+               "name": "LeftInfo",
+               "layout": "V",
+               "gap": 2,
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "Daily Chest Progress",
+                 "textStyle": "Aura Fishing/Heading",
+                 "color": {
+                  "var": "cozy/text"
+                 },
+                 "name": "Title"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "2 / 3 Quests Completed",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Sub"
+                }
+               ]
+              },
+              {
+               "name": "MilestoneNodes",
+               "layout": "H",
+               "gap": 12,
+               "cross": "CENTER",
+               "children": [
+                {
+                 "name": "Node1",
+                 "layout": "H",
+                 "gap": 6,
+                 "pad": [
+                  4,
+                  10,
+                  4,
+                  8
+                 ],
+                 "radius": 999,
+                 "cross": "CENTER",
+                 "fill": {
+                  "var": "cozy/panel"
+                 },
+                 "stroke": {
+                  "var": "cozy/track"
+                 },
+                 "strokeW": 2,
+                 "children": [
+                  {
+                   "type": "RECT",
+                   "name": "Img ui/status/treasure_chest",
+                   "w": 20,
+                   "h": 20
+                  },
+                  {
+                   "type": "TEXT",
+                   "text": "1/3",
+                   "textStyle": "Aura Fishing/Caption",
+                   "color": {
+                    "var": "cozy/mint-lip"
+                   },
+                   "name": "Step"
+                  },
+                  {
+                   "type": "TEXT",
+                   "text": "CLAIMED",
+                   "textStyle": "Aura Fishing/Caption",
+                   "color": {
+                    "var": "cozy/subtext"
+                   },
+                   "name": "Tag"
+                  }
+                 ]
+                },
+                {
+                 "name": "Node2",
+                 "layout": "H",
+                 "gap": 6,
+                 "pad": [
+                  4,
+                  10,
+                  4,
+                  8
+                 ],
+                 "radius": 999,
+                 "cross": "CENTER",
+                 "fill": {
+                  "var": "cozy/panel"
+                 },
+                 "stroke": {
+                  "var": "cozy/mint"
+                 },
+                 "strokeW": 2,
+                 "children": [
+                  {
+                   "type": "RECT",
+                   "name": "Img ui/status/treasure_chest",
+                   "w": 20,
+                   "h": 20
+                  },
+                  {
+                   "type": "TEXT",
+                   "text": "2/3",
+                   "textStyle": "Aura Fishing/Caption",
+                   "color": {
+                    "var": "cozy/mint-lip"
+                   },
+                   "name": "Step"
+                  },
+                  {
+                   "name": "BtnOpenSilver",
+                   "layout": "H",
+                   "w": 62,
+                   "h": 28,
+                   "radius": 14,
+                   "cross": "CENTER",
+                   "main": "CENTER",
+                   "fill": {
+                    "var": "cozy/mint"
+                   },
+                   "stroke": {
+                    "var": "cozy/mint-lip"
+                   },
+                   "strokeSides": {
+                    "b": 4
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "OPEN",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 12,
+                     "color": "FFFFFF",
+                     "name": "Label"
+                    }
+                   ]
+                  }
+                 ]
+                },
+                {
+                 "name": "Node3",
+                 "layout": "H",
+                 "gap": 6,
+                 "pad": [
+                  4,
+                  10,
+                  4,
+                  8
+                 ],
+                 "radius": 999,
+                 "cross": "CENTER",
+                 "fill": {
+                  "var": "cozy/track"
+                 },
+                 "children": [
+                  {
+                   "type": "SVG",
+                   "svg": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"9\" y=\"21\" width=\"30\" height=\"22\" rx=\"6\" fill=\"#7A8A99\"/><path d=\"M16 21v-5a8 8 0 0 1 16 0v5\" stroke=\"#7A8A99\" stroke-width=\"5\"/></svg>",
+                   "w": 14,
+                   "h": 14,
+                   "name": "icon_lock"
+                  },
+                  {
+                   "type": "TEXT",
+                   "text": "3/3 Gold Chest",
+                   "textStyle": "Aura Fishing/Caption",
+                   "color": {
+                    "var": "cozy/subtext"
+                   },
+                   "name": "Step"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "QuestCard1_InProgress",
+             "layout": "H",
+             "fillW": true,
+             "pad": [
+              12,
+              16,
+              12,
+              16
+             ],
+             "gap": 16,
+             "radius": 16,
+             "cross": "CENTER",
+             "fill": {
+              "var": "cozy/panel"
+             },
+             "stroke": {
+              "var": "cozy/track"
+             },
+             "strokeW": 2,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/icons/daily_login",
+               "w": 48,
+               "h": 48
+              },
+              {
+               "name": "Info",
+               "layout": "V",
+               "gap": 4,
+               "fillW": true,
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "Catch 10 Fish in Shallows",
+                 "textStyle": "Aura Fishing/Heading",
+                 "color": {
+                  "var": "cozy/text"
+                 },
+                 "name": "Title"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "Any fish caught between 0-20m depth",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Sub"
+                },
+                {
+                 "name": "ProgressRow",
+                 "layout": "H",
+                 "gap": 10,
+                 "cross": "CENTER",
+                 "children": [
+                  {
+                   "name": "ProgressTrack",
+                   "w": 160,
+                   "h": 10,
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/track"
+                   },
+                   "children": [
+                    {
+                     "name": "Fill",
+                     "w": 112,
+                     "h": 10,
+                     "radius": 999,
+                     "fill": {
+                      "var": "cozy/mint"
+                     }
+                    }
+                   ]
+                  },
+                  {
+                   "type": "TEXT",
+                   "text": "7 / 10",
+                   "textStyle": "Aura Fishing/Caption",
+                   "color": {
+                    "var": "cozy/mint-lip"
+                   },
+                   "name": "Val"
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "RewardChip",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                4,
+                12,
+                4,
+                8
+               ],
+               "radius": 999,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/sand"
+               },
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/status/pearl",
+                 "w": 18,
+                 "h": 18
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+15 Gems",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "8C6FD6",
+                 "name": "Amount"
+                }
+               ]
+              },
+              {
+               "name": "StatusPill",
+               "layout": "H",
+               "pad": [
+                6,
+                14,
+                6,
+                14
+               ],
+               "radius": 999,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/sand"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "IN PROGRESS",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Tag"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "QuestCard2_Claimable",
+             "layout": "H",
+             "fillW": true,
+             "pad": [
+              12,
+              16,
+              12,
+              16
+             ],
+             "gap": 16,
+             "radius": 16,
+             "cross": "CENTER",
+             "fill": {
+              "var": "cozy/panel"
+             },
+             "stroke": {
+              "var": "cozy/gold"
+             },
+             "strokeW": 2,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img fish/AncientCoelacanth",
+               "w": 48,
+               "h": 48
+              },
+              {
+               "name": "Info",
+               "layout": "V",
+               "gap": 4,
+               "fillW": true,
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "Reel in 3 Rare+ Fish",
+                 "textStyle": "Aura Fishing/Heading",
+                 "color": {
+                  "var": "cozy/text"
+                 },
+                 "name": "Title"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "Rare, Epic, or Legendary catches count",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Sub"
+                },
+                {
+                 "name": "ProgressRow",
+                 "layout": "H",
+                 "gap": 10,
+                 "cross": "CENTER",
+                 "children": [
+                  {
+                   "name": "ProgressTrack",
+                   "w": 160,
+                   "h": 10,
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/track"
+                   },
+                   "children": [
+                    {
+                     "name": "Fill",
+                     "w": 160,
+                     "h": 10,
+                     "radius": 999,
+                     "fill": {
+                      "var": "cozy/gold"
+                     }
+                    }
+                   ]
+                  },
+                  {
+                   "type": "TEXT",
+                   "text": "3 / 3 COMPLETED",
+                   "textStyle": "Aura Fishing/Caption",
+                   "color": {
+                    "var": "cozy/gold-lip"
+                   },
+                   "name": "Val"
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "RewardChip",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                4,
+                12,
+                4,
+                8
+               ],
+               "radius": 999,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/sand"
+               },
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/status/pearl",
+                 "w": 18,
+                 "h": 18
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+25 Gems",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "8C6FD6",
+                 "name": "Amount"
+                }
+               ]
+              },
+              {
+               "name": "BtnClaim",
+               "layout": "H",
+               "w": 110,
+               "h": 42,
+               "radius": 14,
+               "cross": "CENTER",
+               "main": "CENTER",
+               "fill": {
+                "var": "cozy/mint"
+               },
+               "stroke": {
+                "var": "cozy/mint-lip"
+               },
+               "strokeSides": {
+                "b": 4
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "CLAIM",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 16,
+                 "color": "FFFFFF",
+                 "name": "Label"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "QuestCard3_Claimed",
+             "layout": "H",
+             "fillW": true,
+             "pad": [
+              12,
+              16,
+              12,
+              16
+             ],
+             "gap": 16,
+             "radius": 16,
+             "cross": "CENTER",
+             "fill": {
+              "var": "cozy/panel"
+             },
+             "stroke": {
+              "var": "cozy/track"
+             },
+             "strokeW": 1,
+             "opacity": 0.75,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/icons/bag",
+               "w": 48,
+               "h": 48
+              },
+              {
+               "name": "Info",
+               "layout": "V",
+               "gap": 4,
+               "fillW": true,
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "Earn 5,000 Coins",
+                 "textStyle": "Aura Fishing/Heading",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Title"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "Sell any catches to Fish Merchant",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Sub"
+                },
+                {
+                 "name": "ProgressRow",
+                 "layout": "H",
+                 "gap": 10,
+                 "cross": "CENTER",
+                 "children": [
+                  {
+                   "name": "ProgressTrack",
+                   "w": 160,
+                   "h": 10,
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/track"
+                   },
+                   "children": [
+                    {
+                     "name": "Fill",
+                     "w": 160,
+                     "h": 10,
+                     "radius": 999,
+                     "fill": {
+                      "var": "cozy/track"
+                     }
+                    }
+                   ]
+                  },
+                  {
+                   "type": "TEXT",
+                   "text": "5,000 / 5,000",
+                   "textStyle": "Aura Fishing/Caption",
+                   "color": {
+                    "var": "cozy/subtext"
+                   },
+                   "name": "Val"
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "RewardChip",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                4,
+                12,
+                4,
+                8
+               ],
+               "radius": 999,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/track"
+               },
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/status/pearl",
+                 "w": 18,
+                 "h": 18
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+20 Gems",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "7A8A99",
+                 "name": "Amount"
+                }
+               ]
+              },
+              {
+               "name": "StatusPill",
+               "layout": "H",
+               "pad": [
+                6,
+                16,
+                6,
+                16
+               ],
+               "radius": 999,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/track"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "CLAIMED",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Tag"
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Modal Quest Reward Claimed",
+           "layout": "V",
+           "w": 520,
+           "radius": 36,
+           "clip": true,
+           "fill": {
+            "var": "cozy/panel"
+           },
+           "stroke": {
+            "var": "cozy/track"
+           },
+           "strokeW": 2,
+           "effects": [
+            {
+             "color": "3D4B5C",
+             "a": 0.1,
+             "y": 6,
+             "blur": 18
+            }
+           ],
+           "children": [
+            {
+             "name": "Body",
+             "layout": "V",
+             "gap": 10,
+             "pad": [
+              34,
+              40,
+              26,
+              40
+             ],
+             "fillW": true,
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/status/treasure_chest",
+               "w": 110,
+               "h": 110
+              },
+              {
+               "type": "TEXT",
+               "text": "Quest Completed!",
+               "textStyle": "Aura Fishing/Title",
+               "color": {
+                "var": "cozy/text"
+               },
+               "name": "Title"
+              },
+              {
+               "type": "TEXT",
+               "text": "Reel in 3 Rare+ Fish",
+               "textStyle": "Aura Fishing/Body",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Sub"
+              },
+              {
+               "name": "RewardRow",
+               "layout": "H",
+               "gap": 10,
+               "cross": "CENTER",
+               "pad": [
+                8,
+                20,
+                8,
+                20
+               ],
+               "radius": 999,
+               "fill": {
+                "var": "cozy/sand"
+               },
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/status/pearl",
+                 "w": 32,
+                 "h": 32
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+25 Gems",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 36,
+                 "color": "8C6FD6",
+                 "name": "Amount"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Footer",
+             "layout": "H",
+             "pad": [
+              16,
+              32,
+              20,
+              32
+             ],
+             "fillW": true,
+             "main": "CENTER",
+             "fill": {
+              "var": "cozy/sand"
+             },
+             "children": [
+              {
+               "name": "BtnAwesome",
+               "layout": "H",
+               "w": 354,
+               "h": 54,
+               "radius": 14,
+               "cross": "CENTER",
+               "main": "CENTER",
+               "fill": {
+                "var": "cozy/mint"
+               },
+               "stroke": {
+                "var": "cozy/mint-lip"
+               },
+               "strokeSides": {
+                "b": 4
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "AWESOME!",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 22,
+                 "color": "FFFFFF",
+                 "name": "Label"
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "w": 1420,
+     "x": 60,
+     "y": 860
+    }
+   ]
+  }
+ }
+]

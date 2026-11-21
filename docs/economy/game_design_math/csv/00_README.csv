@@ -1,0 +1,38 @@
+﻿Aura Fishing - Game Design Math workbook,
+Generated from the game's config and formula code. Every number is read from src/shared/Config; every formula mirrors the Luau code named in the Source column.,
+,
+How to use,
+1,Yellow cells are inputs/tuning numbers. Change one and the formulas recalculate. Green cells are key results. Blue-grey bars are section titles.
+2,Import into Google Sheets: File > Import > Upload > choose this .xlsx > 'Insert new sheet(s)' (or 'Replace spreadsheet'). Formulas and dropdowns are kept.
+2b,"Defaults: Stats Calculator is pre-filled with an endgame build (Celestial Rod, Star Line, Pearl Bait, Abyssal Shadow). Fishing Loop, Aquarium and Auras read their stats from it, so set the build first. Fish Odds defaults to depth 80 m, Luck 0.5."
+3,"Changing a value here does NOT change the game. To apply a balance change, edit the value in the config file named in the Source column."
+,
+Sheets,
+Constants,"All global tuning numbers (GameConfig, Rebirth, Skills, Mastery growth...). Other sheets read from here."
+Rarities,"Tier, roll weight, XP, Gems, Aquarium rate and aura-star multipliers per rarity."
+Fish,"All 30 species: depth, weight, base value, roll weight, Pearls/min, value range."
+Fish Odds,"Simulator: what bites at a depth and Luck, probabilities, a Luck sweep per rarity, expected value per catch."
+Mutations,Mutation priority roll and expected value multiplier.
+Sell Value,"One fish step by step: size factor, mutation, manual/auto/streak, sell multiplier, coin boost, hot fish."
+Progression,"XP curve, cumulative XP, Gems and skill points by level, catches per level."
+Items,"Rods, lines, baits, bags, passes and auras with every stat in one table."
+Enhance,Rod upgrade costs and stat scaling +0 to +10.
+Mastery,7 permanent Pearl upgrades: price and bonus per level to level 100.
+Skills,"Skill point costs and bonuses (Keen Eye, Quick Hands, Multi-Cast)."
+Rebirth,"Required level, bonus and title per rebirth, with total XP to get there."
+Stats Calculator,"Final stats for any build (rod, line, bait, aura, passes, mastery, skills, rebirths) with every source shown."
+Fishing Loop,"Catches and coins/Gems per hour for manual vs auto, chest income."
+Reel Minigame,"Fish speed by pattern and difficulty, time to land by ReelPower and tracking accuracy."
+Aquarium,"Idle Pearls from a tank, offline credit, slot prices."
+Auras,"Gacha pool with the real per-pull rates at your Luck, rate-up inputs, mutation bonuses."
+Gacha,"Banners, pity, expected pulls and Gems to Legendary/Mythic, event milestones, aura star costs."
+Monetization,"Robux products and passes: Gems per Robux, Robux per pull and per Legendary."
+Economy Totals,Total sinks (what players can spend) and sources (what they earn).
+Live Content,"Daily login, quests, hot fish, Naga Tide crowd bonus."
+,
+Known simplifications,
+-,"Fishing Loop and Fish Odds are expected-value estimates, not a simulation. Player behaviour (reel time, perfect rate) is an input."
+-,Hot fish and the Tide event are random/time-based in the game; here they are parameters.
+-,"Server rounding: the game stores each catch's value rounded, then sells the stack total x multipliers; very large stacks can differ by a few coins."
+-,Prices of Robux products are display values; the real price is set on the Creator Hub.
+-,Dev-only content (Dev config) and UI/Figma values are not included.

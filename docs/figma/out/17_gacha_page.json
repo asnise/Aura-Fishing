@@ -1,0 +1,4068 @@
+{
+ "pageId": "3465:14993",
+ "replaceName": "Aura Gacha — Reel Slot (FINAL)",
+ "tree": {
+  "type": "SECTION",
+  "name": "Aura Gacha — Reel Slot (FINAL)",
+  "fill": "F3E9D8",
+  "x": 8900,
+  "y": 7400,
+  "pad": 80,
+  "children": [
+   {
+    "type": "SECTION",
+    "name": "Gacha · Components (edit here)",
+    "fill": "FBF7EF",
+    "x": 80,
+    "y": 80,
+    "children": [
+     {
+      "type": "TEXT",
+      "text": "Gacha · Components (edit here — every screen uses instances)",
+      "textStyle": "Aura Fishing/Display",
+      "color": {
+       "var": "cozy/text"
+      },
+      "name": "Title",
+      "x": 60,
+      "y": 30
+     },
+     {
+      "name": "Row",
+      "layout": "H",
+      "gap": 48,
+      "x": 60,
+      "y": 110,
+      "children": [
+       {
+        "name": "Slot Reel Machine",
+        "layout": "V",
+        "gap": 10,
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "Reel Machine",
+          "textStyle": "Aura Fishing/Heading",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label"
+         },
+         {
+          "name": "Gacha / Reel Machine",
+          "w": 260,
+          "h": 380,
+          "children": [
+           {
+            "name": "Cabinet",
+            "w": 260,
+            "h": 360,
+            "x": 0,
+            "y": 10,
+            "radius": 40,
+            "fill": {
+             "grad": [
+              "FFF8EC",
+              "F3E3C8"
+             ],
+             "angle": 90
+            },
+            "stroke": {
+             "var": "cozy/track"
+            },
+            "strokeW": 2,
+            "effects": [
+             {
+              "color": "3D4B5C",
+              "a": 0.1,
+              "y": 6,
+              "blur": 18
+             }
+            ],
+            "children": [
+             {
+              "name": "Reel Window",
+              "w": 180,
+              "h": 288,
+              "x": 40,
+              "y": 36,
+              "radius": 28,
+              "clip": true,
+              "fill": {
+               "var": "cozy/panel"
+              },
+              "stroke": "F2B544",
+              "strokeW": 5,
+              "children": [
+               {
+                "type": "RECT",
+                "name": "Img auras/SparklingDew",
+                "w": 74,
+                "h": 74,
+                "x": 53,
+                "y": 11,
+                "opacity": 1
+               },
+               {
+                "type": "RECT",
+                "name": "Img auras/UnknownAura",
+                "w": 74,
+                "h": 74,
+                "x": 53,
+                "y": 107,
+                "opacity": 1
+               },
+               {
+                "type": "RECT",
+                "name": "Img auras/NeonWave",
+                "w": 74,
+                "h": 74,
+                "x": 53,
+                "y": 203,
+                "opacity": 1
+               },
+               {
+                "type": "RECT",
+                "name": "Centre Line",
+                "w": 180,
+                "h": 4,
+                "x": 0,
+                "y": 142,
+                "fill": {
+                 "hex": "FFFFFF",
+                 "opacity": 0.7
+                }
+               }
+              ]
+             },
+             {
+              "name": "Base Light",
+              "w": 180,
+              "h": 10,
+              "x": 40,
+              "y": 336,
+              "radius": 999,
+              "fill": "F2B544"
+             }
+            ]
+           }
+          ],
+          "type": "COMPONENT",
+          "key": "g_machine"
+         }
+        ]
+       },
+       {
+        "name": "Slot Pity",
+        "layout": "V",
+        "gap": 10,
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "Pity",
+          "textStyle": "Aura Fishing/Heading",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label"
+         },
+         {
+          "name": "Gacha / Pity",
+          "layout": "V",
+          "gap": 6,
+          "pad": 12,
+          "w": 260,
+          "radius": 18,
+          "fill": {
+           "var": "cozy/panel"
+          },
+          "stroke": {
+           "var": "cozy/track"
+          },
+          "strokeW": 2,
+          "children": [
+           {
+            "name": "Row",
+            "layout": "H",
+            "fillW": true,
+            "main": "SPACE_BETWEEN",
+            "cross": "CENTER",
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "Mythic guaranteed in",
+              "textStyle": "Aura Fishing/Small",
+              "color": {
+               "var": "cozy/subtext"
+              },
+              "name": "Label"
+             },
+             {
+              "type": "TEXT",
+              "text": "53 rolls",
+              "font": {
+               "family": "Fredoka One",
+               "style": "Regular"
+              },
+              "size": 16,
+              "color": "F2668B",
+              "name": "Value"
+             }
+            ]
+           },
+           {
+            "name": "Bar",
+            "w": 236,
+            "h": 10,
+            "radius": 999,
+            "fill": {
+             "var": "cozy/track"
+            },
+            "clip": true,
+            "children": [
+             {
+              "type": "RECT",
+              "name": "Fill",
+              "w": 97,
+              "h": 10,
+              "x": 0,
+              "y": 0,
+              "radius": 999,
+              "fill": {
+               "grad": [
+                "F2A93B",
+                "F2668B"
+               ]
+              }
+             }
+            ]
+           }
+          ],
+          "type": "COMPONENT",
+          "key": "g_pity"
+         }
+        ]
+       },
+       {
+        "name": "Slot Roll Bar",
+        "layout": "V",
+        "gap": 10,
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "Roll Bar",
+          "textStyle": "Aura Fishing/Heading",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label"
+         },
+         {
+          "name": "Gacha / Roll Bar",
+          "layout": "V",
+          "gap": 10,
+          "w": 480,
+          "children": [
+           {
+            "name": "Buttons",
+            "layout": "H",
+            "gap": 10,
+            "fillW": true,
+            "children": [
+             {
+              "name": "Btn Roll 1",
+              "layout": "V",
+              "gap": 0,
+              "pad": [
+               8,
+               12,
+               12,
+               12
+              ],
+              "cross": "CENTER",
+              "radius": 18,
+              "fill": {
+               "var": "cozy/gem"
+              },
+              "stroke": {
+               "var": "cozy/gem-lip"
+              },
+              "strokeSides": {
+               "b": 5
+              },
+              "fillW": true,
+              "children": [
+               {
+                "type": "TEXT",
+                "text": "ROLL x1",
+                "font": {
+                 "family": "Fredoka One",
+                 "style": "Regular"
+                },
+                "size": 20,
+                "color": "FFFFFF",
+                "name": "Label"
+               },
+               {
+                "name": "Cost",
+                "layout": "H",
+                "gap": 4,
+                "cross": "CENTER",
+                "children": [
+                 {
+                  "type": "RECT",
+                  "name": "Img ui/status/gem",
+                  "w": 18,
+                  "h": 18
+                 },
+                 {
+                  "type": "TEXT",
+                  "text": "5",
+                  "font": {
+                   "family": "Fredoka One",
+                   "style": "Regular"
+                  },
+                  "size": 14,
+                  "color": "FFFFFF",
+                  "name": "Value"
+                 }
+                ]
+               }
+              ]
+             },
+             {
+              "name": "Btn Roll 10",
+              "layout": "V",
+              "gap": 0,
+              "pad": [
+               8,
+               12,
+               12,
+               12
+              ],
+              "cross": "CENTER",
+              "radius": 18,
+              "fill": {
+               "var": "cozy/gold"
+              },
+              "stroke": {
+               "var": "cozy/gold-lip"
+              },
+              "strokeSides": {
+               "b": 5
+              },
+              "fillW": true,
+              "children": [
+               {
+                "type": "TEXT",
+                "text": "ROLL x10",
+                "font": {
+                 "family": "Fredoka One",
+                 "style": "Regular"
+                },
+                "size": 20,
+                "color": "FFFFFF",
+                "name": "Label"
+               },
+               {
+                "name": "Cost",
+                "layout": "H",
+                "gap": 4,
+                "cross": "CENTER",
+                "children": [
+                 {
+                  "type": "RECT",
+                  "name": "Img ui/status/gem",
+                  "w": 18,
+                  "h": 18
+                 },
+                 {
+                  "type": "TEXT",
+                  "text": "45",
+                  "font": {
+                   "family": "Fredoka One",
+                   "style": "Regular"
+                  },
+                  "size": 14,
+                  "color": "FFFFFF",
+                  "name": "Value"
+                 },
+                 {
+                  "name": "Discount",
+                  "layout": "H",
+                  "pad": [
+                   3,
+                   10,
+                   3,
+                   10
+                  ],
+                  "radius": 999,
+                  "fill": {
+                   "var": "cozy/coral"
+                  },
+                  "children": [
+                   {
+                    "type": "TEXT",
+                    "text": "-10%",
+                    "textStyle": "Aura Fishing/Caption",
+                    "color": {
+                     "var": "cozy/on-accent"
+                    },
+                    "name": "Label"
+                   }
+                  ]
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "name": "Options",
+            "layout": "V",
+            "gap": 6,
+            "children": [
+             {
+              "name": "Skip",
+              "layout": "H",
+              "gap": 8,
+              "cross": "CENTER",
+              "children": [
+               {
+                "name": "Checkbox",
+                "w": 30,
+                "h": 30,
+                "radius": 9,
+                "layout": "H",
+                "main": "CENTER",
+                "cross": "CENTER",
+                "fill": {
+                 "var": "cozy/panel"
+                },
+                "stroke": {
+                 "var": "cozy/track"
+                },
+                "strokeW": 2,
+                "children": []
+               },
+               {
+                "type": "TEXT",
+                "text": "Skip animation",
+                "textStyle": "Aura Fishing/Small",
+                "color": {
+                 "var": "cozy/text"
+                },
+                "name": "Label"
+               }
+              ]
+             },
+             {
+              "name": "Auto Roll",
+              "layout": "H",
+              "gap": 8,
+              "cross": "CENTER",
+              "children": [
+               {
+                "name": "Checkbox",
+                "w": 30,
+                "h": 30,
+                "radius": 9,
+                "layout": "H",
+                "main": "CENTER",
+                "cross": "CENTER",
+                "fill": {
+                 "var": "cozy/panel"
+                },
+                "stroke": {
+                 "var": "cozy/track"
+                },
+                "strokeW": 2,
+                "children": []
+               },
+               {
+                "type": "TEXT",
+                "text": "Auto-roll until Epic+",
+                "textStyle": "Aura Fishing/Small",
+                "color": {
+                 "var": "cozy/text"
+                },
+                "name": "Label"
+               }
+              ]
+             }
+            ]
+           }
+          ],
+          "type": "COMPONENT",
+          "key": "g_roll"
+         }
+        ]
+       },
+       {
+        "name": "Slot Reveal Card",
+        "layout": "V",
+        "gap": 10,
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "Reveal Card",
+          "textStyle": "Aura Fishing/Heading",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label"
+         },
+         {
+          "name": "Gacha / Reveal Card",
+          "layout": "V",
+          "gap": 10,
+          "pad": 22,
+          "w": 380,
+          "radius": 28,
+          "cross": "CENTER",
+          "fill": {
+           "var": "cozy/panel"
+          },
+          "stroke": {
+           "var": "cozy/track"
+          },
+          "strokeW": 2,
+          "effects": [
+           {
+            "color": "3D4B5C",
+            "a": 0.1,
+            "y": 6,
+            "blur": 18
+           }
+          ],
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "YOU ROLLED",
+            "textStyle": "Aura Fishing/Caption",
+            "color": {
+             "var": "cozy/subtext"
+            },
+            "name": "Caption"
+           },
+           {
+            "name": "Orb",
+            "w": 150,
+            "h": 150,
+            "children": [
+             {
+              "type": "RECT",
+              "name": "Img auras/SolarFlare",
+              "w": 140,
+              "h": 140,
+              "x": 5,
+              "y": 5
+             },
+             {
+              "name": "New Badge",
+              "layout": "H",
+              "pad": [
+               3,
+               10,
+               3,
+               10
+              ],
+              "radius": 999,
+              "fill": {
+               "var": "cozy/coral"
+              },
+              "children": [
+               {
+                "type": "TEXT",
+                "text": "NEW!",
+                "textStyle": "Aura Fishing/Caption",
+                "color": {
+                 "var": "cozy/on-accent"
+                },
+                "name": "Label"
+               }
+              ],
+              "x": 104,
+              "y": 4
+             }
+            ]
+           },
+           {
+            "type": "TEXT",
+            "text": "Solar Flare",
+            "font": {
+             "family": "Fredoka One",
+             "style": "Regular"
+            },
+            "size": 34,
+            "color": "B07CF0",
+            "name": "Name"
+           },
+           {
+            "name": "Tags",
+            "layout": "H",
+            "gap": 8,
+            "cross": "CENTER",
+            "children": [
+             {
+              "type": "INSTANCE",
+              "ref": "3487:4328",
+              "variant": "Rarity=Epic",
+              "name": "Tag Epic"
+             },
+             {
+              "name": "Chance",
+              "layout": "H",
+              "pad": [
+               3,
+               10,
+               3,
+               10
+              ],
+              "radius": 999,
+              "fill": {
+               "var": "cozy/subtext"
+              },
+              "children": [
+               {
+                "type": "TEXT",
+                "text": "1/750",
+                "textStyle": "Aura Fishing/Caption",
+                "color": {
+                 "var": "cozy/on-accent"
+                },
+                "name": "Label"
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "type": "TEXT",
+            "text": "+35% Luck  •  +10% Sun-Forged",
+            "textStyle": "Aura Fishing/Small",
+            "color": {
+             "var": "cozy/subtext"
+            },
+            "name": "Stats"
+           },
+           {
+            "name": "Buttons",
+            "layout": "H",
+            "gap": 8,
+            "w": 336,
+            "children": [
+             {
+              "type": "INSTANCE",
+              "ref": "3487:4298",
+              "variant": "Style=Primary",
+              "texts": {
+               "Label": "EQUIP"
+              },
+              "name": "Btn Equip",
+              "fillW": true
+             },
+             {
+              "type": "INSTANCE",
+              "ref": "3487:4298",
+              "variant": "Style=Gem",
+              "texts": {
+               "Label": "ROLL AGAIN"
+              },
+              "name": "Btn Roll Again",
+              "fillW": true
+             }
+            ]
+           },
+           {
+            "type": "INSTANCE",
+            "ref": "3487:4298",
+            "variant": "Style=Ghost",
+            "texts": {
+             "Label": "CLOSE"
+            },
+            "name": "Btn Close",
+            "fillW": true
+           }
+          ],
+          "type": "COMPONENT",
+          "key": "g_reveal"
+         }
+        ]
+       },
+       {
+        "name": "Slot Rates",
+        "layout": "V",
+        "gap": 10,
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "Rates",
+          "textStyle": "Aura Fishing/Heading",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label"
+         },
+         {
+          "name": "Gacha / Rates",
+          "layout": "V",
+          "gap": 8,
+          "pad": 16,
+          "w": 480,
+          "radius": 24,
+          "fill": {
+           "var": "cozy/panel"
+          },
+          "stroke": {
+           "var": "cozy/track"
+          },
+          "strokeW": 2,
+          "children": [
+           {
+            "name": "Head",
+            "layout": "H",
+            "fillW": true,
+            "main": "SPACE_BETWEEN",
+            "cross": "CENTER",
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "Drop rates",
+              "textStyle": "Aura Fishing/Heading",
+              "color": {
+               "var": "cozy/text"
+              },
+              "name": "Title"
+             },
+             {
+              "type": "TEXT",
+              "text": "OWNED",
+              "textStyle": "Aura Fishing/Caption",
+              "color": {
+               "var": "cozy/subtext"
+              },
+              "name": "Owned Label"
+             }
+            ]
+           },
+           {
+            "name": "Rate Sparkling Dew",
+            "layout": "H",
+            "gap": 10,
+            "pad": [
+             6,
+             10,
+             6,
+             6
+            ],
+            "radius": 14,
+            "cross": "CENTER",
+            "fillW": true,
+            "fill": {
+             "var": "cozy/sand"
+            },
+            "children": [
+             {
+              "type": "RECT",
+              "name": "Img auras/SparklingDew",
+              "w": 40,
+              "h": 40
+             },
+             {
+              "name": "Text",
+              "layout": "V",
+              "gap": 0,
+              "fillW": true,
+              "children": [
+               {
+                "type": "TEXT",
+                "text": "Sparkling Dew",
+                "textStyle": "Aura Fishing/Heading",
+                "color": {
+                 "var": "cozy/text"
+                },
+                "name": "Name"
+               },
+               {
+                "name": "Meta",
+                "layout": "H",
+                "gap": 6,
+                "cross": "CENTER",
+                "children": [
+                 {
+                  "type": "INSTANCE",
+                  "ref": "3487:4328",
+                  "variant": "Rarity=Common",
+                  "name": "Tag Common"
+                 },
+                 {
+                  "type": "TEXT",
+                  "text": "1/10",
+                  "textStyle": "Aura Fishing/Caption",
+                  "color": {
+                   "var": "cozy/subtext"
+                  },
+                  "name": "Chance"
+                 }
+                ]
+               }
+              ]
+             },
+             {
+              "type": "TEXT",
+              "text": "x3",
+              "font": {
+               "family": "Fredoka One",
+               "style": "Regular"
+              },
+              "size": 16,
+              "color": "3D4B5C",
+              "name": "Owned"
+             }
+            ]
+           },
+           {
+            "name": "Rate Neon Wave",
+            "layout": "H",
+            "gap": 10,
+            "pad": [
+             6,
+             10,
+             6,
+             6
+            ],
+            "radius": 14,
+            "cross": "CENTER",
+            "fillW": true,
+            "fill": {
+             "var": "cozy/sand"
+            },
+            "children": [
+             {
+              "type": "RECT",
+              "name": "Img auras/NeonWave",
+              "w": 40,
+              "h": 40
+             },
+             {
+              "name": "Text",
+              "layout": "V",
+              "gap": 0,
+              "fillW": true,
+              "children": [
+               {
+                "type": "TEXT",
+                "text": "Neon Wave",
+                "textStyle": "Aura Fishing/Heading",
+                "color": {
+                 "var": "cozy/text"
+                },
+                "name": "Name"
+               },
+               {
+                "name": "Meta",
+                "layout": "H",
+                "gap": 6,
+                "cross": "CENTER",
+                "children": [
+                 {
+                  "type": "INSTANCE",
+                  "ref": "3487:4328",
+                  "variant": "Rarity=Rare",
+                  "name": "Tag Rare"
+                 },
+                 {
+                  "type": "TEXT",
+                  "text": "1/100",
+                  "textStyle": "Aura Fishing/Caption",
+                  "color": {
+                   "var": "cozy/subtext"
+                  },
+                  "name": "Chance"
+                 }
+                ]
+               }
+              ]
+             },
+             {
+              "type": "TEXT",
+              "text": "x1",
+              "font": {
+               "family": "Fredoka One",
+               "style": "Regular"
+              },
+              "size": 16,
+              "color": "3D4B5C",
+              "name": "Owned"
+             }
+            ]
+           },
+           {
+            "name": "Rate Solar Flare",
+            "layout": "H",
+            "gap": 10,
+            "pad": [
+             6,
+             10,
+             6,
+             6
+            ],
+            "radius": 14,
+            "cross": "CENTER",
+            "fillW": true,
+            "fill": {
+             "var": "cozy/sand"
+            },
+            "children": [
+             {
+              "type": "RECT",
+              "name": "Img auras/UnknownAura",
+              "w": 40,
+              "h": 40
+             },
+             {
+              "name": "Text",
+              "layout": "V",
+              "gap": 0,
+              "fillW": true,
+              "children": [
+               {
+                "type": "TEXT",
+                "text": "???",
+                "textStyle": "Aura Fishing/Heading",
+                "color": {
+                 "var": "cozy/subtext"
+                },
+                "name": "Name"
+               },
+               {
+                "name": "Meta",
+                "layout": "H",
+                "gap": 6,
+                "cross": "CENTER",
+                "children": [
+                 {
+                  "type": "INSTANCE",
+                  "ref": "3487:4328",
+                  "variant": "Rarity=Epic",
+                  "name": "Tag Epic"
+                 },
+                 {
+                  "type": "TEXT",
+                  "text": "1/750",
+                  "textStyle": "Aura Fishing/Caption",
+                  "color": {
+                   "var": "cozy/subtext"
+                  },
+                  "name": "Chance"
+                 }
+                ]
+               }
+              ]
+             },
+             {
+              "type": "TEXT",
+              "text": "-",
+              "font": {
+               "family": "Fredoka One",
+               "style": "Regular"
+              },
+              "size": 16,
+              "color": "9AA5B1",
+              "name": "Owned"
+             }
+            ]
+           },
+           {
+            "name": "Rate Abyssal Shadow",
+            "layout": "H",
+            "gap": 10,
+            "pad": [
+             6,
+             10,
+             6,
+             6
+            ],
+            "radius": 14,
+            "cross": "CENTER",
+            "fillW": true,
+            "fill": {
+             "var": "cozy/sand"
+            },
+            "children": [
+             {
+              "type": "RECT",
+              "name": "Img auras/UnknownAura",
+              "w": 40,
+              "h": 40
+             },
+             {
+              "name": "Text",
+              "layout": "V",
+              "gap": 0,
+              "fillW": true,
+              "children": [
+               {
+                "type": "TEXT",
+                "text": "???",
+                "textStyle": "Aura Fishing/Heading",
+                "color": {
+                 "var": "cozy/subtext"
+                },
+                "name": "Name"
+               },
+               {
+                "name": "Meta",
+                "layout": "H",
+                "gap": 6,
+                "cross": "CENTER",
+                "children": [
+                 {
+                  "type": "INSTANCE",
+                  "ref": "3487:4328",
+                  "variant": "Rarity=Legendary",
+                  "name": "Tag Legendary"
+                 },
+                 {
+                  "type": "TEXT",
+                  "text": "1/5,000",
+                  "textStyle": "Aura Fishing/Caption",
+                  "color": {
+                   "var": "cozy/subtext"
+                  },
+                  "name": "Chance"
+                 }
+                ]
+               }
+              ]
+             },
+             {
+              "type": "TEXT",
+              "text": "-",
+              "font": {
+               "family": "Fredoka One",
+               "style": "Regular"
+              },
+              "size": 16,
+              "color": "9AA5B1",
+              "name": "Owned"
+             }
+            ]
+           },
+           {
+            "name": "Rate Dragon Emperor",
+            "layout": "H",
+            "gap": 10,
+            "pad": [
+             6,
+             10,
+             6,
+             6
+            ],
+            "radius": 14,
+            "cross": "CENTER",
+            "fillW": true,
+            "fill": {
+             "var": "cozy/sand"
+            },
+            "children": [
+             {
+              "type": "RECT",
+              "name": "Img auras/UnknownAura",
+              "w": 40,
+              "h": 40
+             },
+             {
+              "name": "Text",
+              "layout": "V",
+              "gap": 0,
+              "fillW": true,
+              "children": [
+               {
+                "type": "TEXT",
+                "text": "???",
+                "textStyle": "Aura Fishing/Heading",
+                "color": {
+                 "var": "cozy/subtext"
+                },
+                "name": "Name"
+               },
+               {
+                "name": "Meta",
+                "layout": "H",
+                "gap": 6,
+                "cross": "CENTER",
+                "children": [
+                 {
+                  "type": "INSTANCE",
+                  "ref": "3487:4328",
+                  "variant": "Rarity=Mythic",
+                  "name": "Tag Mythic"
+                 },
+                 {
+                  "type": "TEXT",
+                  "text": "1/50,000",
+                  "textStyle": "Aura Fishing/Caption",
+                  "color": {
+                   "var": "cozy/subtext"
+                  },
+                  "name": "Chance"
+                 }
+                ]
+               }
+              ]
+             },
+             {
+              "type": "TEXT",
+              "text": "-",
+              "font": {
+               "family": "Fredoka One",
+               "style": "Regular"
+              },
+              "size": 16,
+              "color": "9AA5B1",
+              "name": "Owned"
+             }
+            ]
+           }
+          ],
+          "type": "COMPONENT",
+          "key": "g_rates"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "SECTION",
+    "name": "G1 · Aura Altar",
+    "fill": "FBF7EF",
+    "w": 1400,
+    "h": 950,
+    "x": 80,
+    "y": 820,
+    "children": [
+     {
+      "type": "TEXT",
+      "text": "G1 · Aura Altar",
+      "textStyle": "Aura Fishing/Display",
+      "color": {
+       "var": "cozy/text"
+      },
+      "name": "Title",
+      "x": 60,
+      "y": 30
+     },
+     {
+      "name": "Gacha - Altar",
+      "w": 1280,
+      "h": 720,
+      "radius": 0,
+      "clip": true,
+      "children": [
+       {
+        "name": "World [skip]",
+        "w": 1280,
+        "h": 720,
+        "x": 0,
+        "y": 0,
+        "fill": {
+         "grad": [
+          "DDF5EE",
+          "A8DCD8"
+         ],
+         "angle": 90
+        },
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Water",
+          "w": 1280,
+          "h": 300,
+          "x": 0,
+          "y": 420,
+          "fill": {
+           "hex": "9AD4F5",
+           "opacity": 0.35
+          }
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Island",
+          "w": 560,
+          "h": 130,
+          "x": 360,
+          "y": 370,
+          "fill": {
+           "hex": "7FD3B0",
+           "opacity": 0.55
+          }
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Island Top",
+          "w": 360,
+          "h": 70,
+          "x": 460,
+          "y": 372,
+          "fill": {
+           "hex": "4FAF8A",
+           "opacity": 0.35
+          }
+         }
+        ]
+       },
+       {
+        "type": "RECT",
+        "name": "Dim",
+        "w": 1280,
+        "h": 720,
+        "x": 0,
+        "y": 0,
+        "fill": {
+         "hex": "1A2140",
+         "opacity": 0.35
+        }
+       },
+       {
+        "name": "Aura Altar",
+        "w": 860,
+        "h": 640,
+        "x": 160,
+        "y": 66,
+        "radius": 32,
+        "fill": {
+         "grad": [
+          "FBF7EF",
+          "EFE6F8"
+         ],
+         "angle": 90
+        },
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "effects": [
+         {
+          "color": "3D4B5C",
+          "a": 0.1,
+          "y": 6,
+          "blur": 18
+         }
+        ],
+        "clip": true,
+        "children": [
+         {
+          "type": "SVG",
+          "name": "Rays",
+          "w": 700,
+          "h": 700,
+          "svg": "<svg width=\"700\" height=\"700\" viewBox=\"0 0 700 700\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M350 350 L700 350 L698 388Z\" fill=\"#B79CF2\" fill-opacity=\"0.12\"/><path d=\"M350 350 L673 484 L657 518Z\" fill=\"#B79CF2\" fill-opacity=\"0.12\"/><path d=\"M350 350 L597 597 L569 623Z\" fill=\"#B79CF2\" fill-opacity=\"0.12\"/><path d=\"M350 350 L484 673 L448 686Z\" fill=\"#B79CF2\" fill-opacity=\"0.12\"/><path d=\"M350 350 L350 700 L312 698Z\" fill=\"#B79CF2\" fill-opacity=\"0.12\"/><path d=\"M350 350 L216 673 L182 657Z\" fill=\"#B79CF2\" fill-opacity=\"0.12\"/><path d=\"M350 350 L103 597 L77 569Z\" fill=\"#B79CF2\" fill-opacity=\"0.12\"/><path d=\"M350 350 L27 484 L14 448Z\" fill=\"#B79CF2\" fill-opacity=\"0.12\"/><path d=\"M350 350 L0 350 L2 312Z\" fill=\"#B79CF2\" fill-opacity=\"0.12\"/><path d=\"M350 350 L27 216 L43 182Z\" fill=\"#B79CF2\" fill-opacity=\"0.12\"/><path d=\"M350 350 L103 103 L131 77Z\" fill=\"#B79CF2\" fill-opacity=\"0.12\"/><path d=\"M350 350 L216 27 L252 14Z\" fill=\"#B79CF2\" fill-opacity=\"0.12\"/><path d=\"M350 350 L350 0 L388 2Z\" fill=\"#B79CF2\" fill-opacity=\"0.12\"/><path d=\"M350 350 L484 27 L518 43Z\" fill=\"#B79CF2\" fill-opacity=\"0.12\"/><path d=\"M350 350 L597 103 L623 131Z\" fill=\"#B79CF2\" fill-opacity=\"0.12\"/><path d=\"M350 350 L673 216 L686 252Z\" fill=\"#B79CF2\" fill-opacity=\"0.12\"/></svg>",
+          "x": -120,
+          "y": -110
+         },
+         {
+          "name": "Header",
+          "layout": "H",
+          "w": 812,
+          "x": 24,
+          "y": 20,
+          "main": "SPACE_BETWEEN",
+          "cross": "CENTER",
+          "children": [
+           {
+            "name": "Title",
+            "layout": "H",
+            "gap": 10,
+            "cross": "CENTER",
+            "children": [
+             {
+              "type": "RECT",
+              "name": "Img ui/icons/auras",
+              "w": 44,
+              "h": 44
+             },
+             {
+              "type": "TEXT",
+              "text": "Aura Altar",
+              "textStyle": "Aura Fishing/Display",
+              "color": {
+               "var": "cozy/text"
+              },
+              "name": "Title"
+             }
+            ]
+           },
+           {
+            "name": "Right",
+            "layout": "H",
+            "gap": 10,
+            "cross": "CENTER",
+            "children": [
+             {
+              "type": "INSTANCE",
+              "ref": "3487:4313",
+              "variant": "Type=Gems",
+              "texts": {
+               "Value": "320"
+              },
+              "name": "Gems"
+             },
+             {
+              "type": "INSTANCE",
+              "ref": "3487:4298",
+              "variant": "Style=Danger",
+              "texts": {
+               "Label": "X"
+              },
+              "name": "Btn Close"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "INSTANCE",
+          "ref": "g_machine",
+          "x": 40,
+          "y": 96,
+          "name": "Reel Machine"
+         },
+         {
+          "type": "INSTANCE",
+          "ref": "g_rates",
+          "x": 340,
+          "y": 96,
+          "name": "Rates"
+         },
+         {
+          "type": "INSTANCE",
+          "ref": "g_pity",
+          "x": 40,
+          "y": 486,
+          "name": "Pity"
+         },
+         {
+          "type": "INSTANCE",
+          "ref": "g_roll",
+          "x": 340,
+          "y": 486,
+          "name": "Roll Bar"
+         }
+        ]
+       },
+       {
+        "name": "[skip] Roblox CoreGui (guide)",
+        "w": 1280,
+        "h": 720,
+        "x": 0,
+        "y": 0,
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Top Bar",
+          "w": 1280,
+          "h": 58,
+          "x": 0,
+          "y": 0,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.07
+          }
+         },
+         {
+          "type": "RECT",
+          "name": "Roblox Menu Btn",
+          "w": 44,
+          "h": 44,
+          "x": 12,
+          "y": 7,
+          "radius": 12,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.28
+          }
+         },
+         {
+          "type": "RECT",
+          "name": "Chat Btn",
+          "w": 44,
+          "h": 44,
+          "x": 64,
+          "y": 7,
+          "radius": 12,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.28
+          }
+         },
+         {
+          "type": "TEXT",
+          "text": "ROBLOX TOP BAR (58px)  —  keep clear",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label",
+          "x": 124,
+          "y": 22
+         },
+         {
+          "type": "RECT",
+          "name": "Chat Window (when open)",
+          "w": 380,
+          "h": 210,
+          "x": 8,
+          "y": 64,
+          "radius": 12,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.04
+          },
+          "stroke": {
+           "hex": "3D4B5C",
+           "opacity": 0.25
+          },
+          "strokeW": 1.5
+         },
+         {
+          "type": "TEXT",
+          "text": "CHAT WINDOW (desktop, when open)",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label",
+          "x": 20,
+          "y": 248
+         },
+         {
+          "type": "RECT",
+          "name": "Leaderboard",
+          "w": 236,
+          "h": 170,
+          "x": 1032,
+          "y": 64,
+          "radius": 12,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.06
+          },
+          "stroke": {
+           "hex": "3D4B5C",
+           "opacity": 0.25
+          },
+          "strokeW": 1.5
+         },
+         {
+          "type": "TEXT",
+          "text": "LEADERBOARD (leaderstats)",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label",
+          "x": 1044,
+          "y": 210
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Mobile Thumbstick",
+          "w": 150,
+          "h": 150,
+          "x": 50,
+          "y": 510,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.07
+          },
+          "stroke": {
+           "hex": "3D4B5C",
+           "opacity": 0.25
+          },
+          "strokeW": 1.5
+         },
+         {
+          "type": "TEXT",
+          "text": "MOBILE THUMBSTICK",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label",
+          "x": 62,
+          "y": 668
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Mobile Jump",
+          "w": 96,
+          "h": 96,
+          "x": 1120,
+          "y": 550,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.07
+          },
+          "stroke": {
+           "hex": "3D4B5C",
+           "opacity": 0.25
+          },
+          "strokeW": 1.5
+         },
+         {
+          "type": "TEXT",
+          "text": "MOBILE JUMP",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label",
+          "x": 1122,
+          "y": 660
+         }
+        ]
+       }
+      ],
+      "x": 60,
+      "y": 110
+     },
+     {
+      "type": "TEXT",
+      "text": "Gacha page (opened from the Auras menu or the altar in the world). Reel machine with a fishing-rod lever, drop rates with owned counts (unknown auras = ???), Mythic pity, ROLL x1 / x10 (-10%), Skip animation, Auto-roll until Epic+. Right edge stays clear of the leaderboard.",
+      "textStyle": "Aura Fishing/Body",
+      "color": {
+       "var": "cozy/subtext"
+      },
+      "name": "Note",
+      "w": 1280,
+      "x": 60,
+      "y": 860
+     }
+    ]
+   },
+   {
+    "type": "SECTION",
+    "name": "G2 · Spinning",
+    "fill": "FBF7EF",
+    "w": 1400,
+    "h": 950,
+    "x": 1560,
+    "y": 820,
+    "children": [
+     {
+      "type": "TEXT",
+      "text": "G2 · Spinning",
+      "textStyle": "Aura Fishing/Display",
+      "color": {
+       "var": "cozy/text"
+      },
+      "name": "Title",
+      "x": 60,
+      "y": 30
+     },
+     {
+      "name": "Gacha - Spinning",
+      "w": 1280,
+      "h": 720,
+      "radius": 0,
+      "clip": true,
+      "children": [
+       {
+        "name": "World [skip]",
+        "w": 1280,
+        "h": 720,
+        "x": 0,
+        "y": 0,
+        "fill": {
+         "grad": [
+          "DDF5EE",
+          "A8DCD8"
+         ],
+         "angle": 90
+        },
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Water",
+          "w": 1280,
+          "h": 300,
+          "x": 0,
+          "y": 420,
+          "fill": {
+           "hex": "9AD4F5",
+           "opacity": 0.35
+          }
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Island",
+          "w": 560,
+          "h": 130,
+          "x": 360,
+          "y": 370,
+          "fill": {
+           "hex": "7FD3B0",
+           "opacity": 0.55
+          }
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Island Top",
+          "w": 360,
+          "h": 70,
+          "x": 460,
+          "y": 372,
+          "fill": {
+           "hex": "4FAF8A",
+           "opacity": 0.35
+          }
+         }
+        ]
+       },
+       {
+        "type": "RECT",
+        "name": "Dim",
+        "w": 1280,
+        "h": 720,
+        "x": 0,
+        "y": 0,
+        "fill": {
+         "hex": "1A2140",
+         "opacity": 0.62
+        }
+       },
+       {
+        "type": "RECT",
+        "name": "Speed Line",
+        "w": 5,
+        "h": 70,
+        "x": 480,
+        "y": 220,
+        "radius": 3,
+        "fill": {
+         "hex": "FFFFFF",
+         "opacity": 0.5
+        }
+       },
+       {
+        "type": "RECT",
+        "name": "Speed Line",
+        "w": 5,
+        "h": 70,
+        "x": 500,
+        "y": 220,
+        "radius": 3,
+        "fill": {
+         "hex": "FFFFFF",
+         "opacity": 0.5
+        }
+       },
+       {
+        "type": "RECT",
+        "name": "Speed Line",
+        "w": 5,
+        "h": 70,
+        "x": 780,
+        "y": 220,
+        "radius": 3,
+        "fill": {
+         "hex": "FFFFFF",
+         "opacity": 0.5
+        }
+       },
+       {
+        "type": "RECT",
+        "name": "Speed Line",
+        "w": 5,
+        "h": 70,
+        "x": 800,
+        "y": 220,
+        "radius": 3,
+        "fill": {
+         "hex": "FFFFFF",
+         "opacity": 0.5
+        }
+       },
+       {
+        "name": "Reel Machine",
+        "w": 260,
+        "h": 380,
+        "x": 510,
+        "y": 120,
+        "children": [
+         {
+          "name": "Cabinet",
+          "w": 260,
+          "h": 360,
+          "x": 0,
+          "y": 10,
+          "radius": 40,
+          "fill": {
+           "grad": [
+            "FFF8EC",
+            "F3E3C8"
+           ],
+           "angle": 90
+          },
+          "stroke": {
+           "var": "cozy/track"
+          },
+          "strokeW": 2,
+          "effects": [
+           {
+            "color": "3D4B5C",
+            "a": 0.1,
+            "y": 6,
+            "blur": 18
+           }
+          ],
+          "children": [
+           {
+            "name": "Reel Window",
+            "w": 180,
+            "h": 288,
+            "x": 40,
+            "y": 36,
+            "radius": 28,
+            "clip": true,
+            "fill": {
+             "var": "cozy/panel"
+            },
+            "stroke": "F2B544",
+            "strokeW": 5,
+            "children": [
+             {
+              "type": "RECT",
+              "name": "Img auras/NeonWave",
+              "w": 74,
+              "h": 74,
+              "x": 53,
+              "y": -29,
+              "opacity": 0.45
+             },
+             {
+              "type": "RECT",
+              "name": "Img auras/SolarFlare",
+              "w": 74,
+              "h": 74,
+              "x": 53,
+              "y": 67,
+              "opacity": 0.45
+             },
+             {
+              "type": "RECT",
+              "name": "Img auras/SparklingDew",
+              "w": 74,
+              "h": 74,
+              "x": 53,
+              "y": 163,
+              "opacity": 0.45
+             },
+             {
+              "type": "RECT",
+              "name": "Img auras/AbyssalShadow",
+              "w": 74,
+              "h": 74,
+              "x": 53,
+              "y": 259,
+              "opacity": 0.45
+             },
+             {
+              "type": "RECT",
+              "name": "Centre Line",
+              "w": 180,
+              "h": 4,
+              "x": 0,
+              "y": 142,
+              "fill": {
+               "hex": "FFFFFF",
+               "opacity": 0.7
+              }
+             }
+            ]
+           },
+           {
+            "name": "Base Light",
+            "w": 180,
+            "h": 10,
+            "x": 40,
+            "y": 336,
+            "radius": 999,
+            "fill": "F2B544"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Hint Row",
+        "layout": "H",
+        "w": 1280,
+        "x": 0,
+        "y": 548,
+        "main": "CENTER",
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "SPINNING!",
+          "font": {
+           "family": "Fredoka One",
+           "style": "Regular"
+          },
+          "size": 28,
+          "color": "FFFFFF",
+          "name": "Title",
+          "textStroke": "3D4B5C",
+          "textStrokeW": 3
+         }
+        ]
+       },
+       {
+        "type": "TEXT",
+        "text": "tap anywhere to skip",
+        "textStyle": "Aura Fishing/Caption",
+        "color": {
+         "var": "cozy/on-accent"
+        },
+        "name": "Skip Hint",
+        "x": 578,
+        "y": 590
+       },
+       {
+        "name": "[skip] Roblox CoreGui (guide)",
+        "w": 1280,
+        "h": 720,
+        "x": 0,
+        "y": 0,
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Top Bar",
+          "w": 1280,
+          "h": 58,
+          "x": 0,
+          "y": 0,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.07
+          }
+         },
+         {
+          "type": "RECT",
+          "name": "Roblox Menu Btn",
+          "w": 44,
+          "h": 44,
+          "x": 12,
+          "y": 7,
+          "radius": 12,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.28
+          }
+         },
+         {
+          "type": "RECT",
+          "name": "Chat Btn",
+          "w": 44,
+          "h": 44,
+          "x": 64,
+          "y": 7,
+          "radius": 12,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.28
+          }
+         },
+         {
+          "type": "TEXT",
+          "text": "ROBLOX TOP BAR (58px)  —  keep clear",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label",
+          "x": 124,
+          "y": 22
+         },
+         {
+          "type": "RECT",
+          "name": "Chat Window (when open)",
+          "w": 380,
+          "h": 210,
+          "x": 8,
+          "y": 64,
+          "radius": 12,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.04
+          },
+          "stroke": {
+           "hex": "3D4B5C",
+           "opacity": 0.25
+          },
+          "strokeW": 1.5
+         },
+         {
+          "type": "TEXT",
+          "text": "CHAT WINDOW (desktop, when open)",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label",
+          "x": 20,
+          "y": 248
+         },
+         {
+          "type": "RECT",
+          "name": "Leaderboard",
+          "w": 236,
+          "h": 170,
+          "x": 1032,
+          "y": 64,
+          "radius": 12,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.06
+          },
+          "stroke": {
+           "hex": "3D4B5C",
+           "opacity": 0.25
+          },
+          "strokeW": 1.5
+         },
+         {
+          "type": "TEXT",
+          "text": "LEADERBOARD (leaderstats)",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label",
+          "x": 1044,
+          "y": 210
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Mobile Thumbstick",
+          "w": 150,
+          "h": 150,
+          "x": 50,
+          "y": 510,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.07
+          },
+          "stroke": {
+           "hex": "3D4B5C",
+           "opacity": 0.25
+          },
+          "strokeW": 1.5
+         },
+         {
+          "type": "TEXT",
+          "text": "MOBILE THUMBSTICK",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label",
+          "x": 62,
+          "y": 668
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Mobile Jump",
+          "w": 96,
+          "h": 96,
+          "x": 1120,
+          "y": 550,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.07
+          },
+          "stroke": {
+           "hex": "3D4B5C",
+           "opacity": 0.25
+          },
+          "strokeW": 1.5
+         },
+         {
+          "type": "TEXT",
+          "text": "MOBILE JUMP",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label",
+          "x": 1122,
+          "y": 660
+         }
+        ]
+       }
+      ],
+      "x": 60,
+      "y": 110
+     },
+     {
+      "type": "TEXT",
+      "text": "Screen dims, the reel spins fast with faded copies + speed lines; frame pops per orb. 'tap anywhere to skip'. Code: AuraReel spin tween (Quint out).",
+      "textStyle": "Aura Fishing/Body",
+      "color": {
+       "var": "cozy/subtext"
+      },
+      "name": "Note",
+      "w": 1280,
+      "x": 60,
+      "y": 860
+     }
+    ]
+   },
+   {
+    "type": "SECTION",
+    "name": "G3 · So close...",
+    "fill": "FBF7EF",
+    "w": 1400,
+    "h": 950,
+    "x": 80,
+    "y": 1890,
+    "children": [
+     {
+      "type": "TEXT",
+      "text": "G3 · So close...",
+      "textStyle": "Aura Fishing/Display",
+      "color": {
+       "var": "cozy/text"
+      },
+      "name": "Title",
+      "x": 60,
+      "y": 30
+     },
+     {
+      "name": "Gacha - So Close",
+      "w": 1280,
+      "h": 720,
+      "radius": 0,
+      "clip": true,
+      "children": [
+       {
+        "name": "World [skip]",
+        "w": 1280,
+        "h": 720,
+        "x": 0,
+        "y": 0,
+        "fill": {
+         "grad": [
+          "DDF5EE",
+          "A8DCD8"
+         ],
+         "angle": 90
+        },
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Water",
+          "w": 1280,
+          "h": 300,
+          "x": 0,
+          "y": 420,
+          "fill": {
+           "hex": "9AD4F5",
+           "opacity": 0.35
+          }
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Island",
+          "w": 560,
+          "h": 130,
+          "x": 360,
+          "y": 370,
+          "fill": {
+           "hex": "7FD3B0",
+           "opacity": 0.55
+          }
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Island Top",
+          "w": 360,
+          "h": 70,
+          "x": 460,
+          "y": 372,
+          "fill": {
+           "hex": "4FAF8A",
+           "opacity": 0.35
+          }
+         }
+        ]
+       },
+       {
+        "type": "RECT",
+        "name": "Dim",
+        "w": 1280,
+        "h": 720,
+        "x": 0,
+        "y": 0,
+        "fill": {
+         "hex": "1A2140",
+         "opacity": 0.62
+        }
+       },
+       {
+        "type": "ELLIPSE",
+        "name": "Glow",
+        "w": 300,
+        "h": 300,
+        "x": 490,
+        "y": 140,
+        "fill": {
+         "hex": "F2A93B",
+         "opacity": 0.35
+        },
+        "effects": [
+         {
+          "color": "F2A93B",
+          "a": 0.8,
+          "blur": 90
+         }
+        ]
+       },
+       {
+        "name": "Reel Machine",
+        "w": 260,
+        "h": 380,
+        "x": 510,
+        "y": 120,
+        "children": [
+         {
+          "name": "Cabinet",
+          "w": 260,
+          "h": 360,
+          "x": 0,
+          "y": 10,
+          "radius": 40,
+          "fill": {
+           "grad": [
+            "FFF8EC",
+            "F3E3C8"
+           ],
+           "angle": 90
+          },
+          "stroke": {
+           "var": "cozy/track"
+          },
+          "strokeW": 2,
+          "effects": [
+           {
+            "color": "3D4B5C",
+            "a": 0.1,
+            "y": 6,
+            "blur": 18
+           }
+          ],
+          "children": [
+           {
+            "name": "Reel Window",
+            "w": 180,
+            "h": 288,
+            "x": 40,
+            "y": 36,
+            "radius": 28,
+            "clip": true,
+            "fill": {
+             "var": "cozy/panel"
+            },
+            "stroke": "B07CF0",
+            "strokeW": 5,
+            "children": [
+             {
+              "type": "RECT",
+              "name": "Img auras/SparklingDew",
+              "w": 74,
+              "h": 74,
+              "x": 53,
+              "y": 51,
+              "opacity": 1
+             },
+             {
+              "type": "RECT",
+              "name": "Img auras/DragonEmperor",
+              "w": 74,
+              "h": 74,
+              "x": 53,
+              "y": 147,
+              "opacity": 1
+             },
+             {
+              "type": "RECT",
+              "name": "Img auras/SolarFlare",
+              "w": 74,
+              "h": 74,
+              "x": 53,
+              "y": 243,
+              "opacity": 1
+             },
+             {
+              "type": "RECT",
+              "name": "Centre Line",
+              "w": 180,
+              "h": 4,
+              "x": 0,
+              "y": 142,
+              "fill": {
+               "hex": "FFFFFF",
+               "opacity": 0.7
+              }
+             }
+            ]
+           },
+           {
+            "name": "Base Light",
+            "w": 180,
+            "h": 10,
+            "x": 40,
+            "y": 336,
+            "radius": 999,
+            "fill": "B07CF0"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "SVG",
+        "name": "Arrow",
+        "w": 24,
+        "h": 24,
+        "x": 512,
+        "y": 308,
+        "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M2 2L22 12L2 22Z\" fill=\"#FFFFFF\"/></svg>"
+       },
+       {
+        "name": "Hint Row",
+        "layout": "H",
+        "w": 1280,
+        "x": 0,
+        "y": 548,
+        "main": "CENTER",
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "so close...",
+          "font": {
+           "family": "Fredoka One",
+           "style": "Regular"
+          },
+          "size": 28,
+          "color": "FFD9A0",
+          "name": "Title",
+          "textStroke": "3D4B5C",
+          "textStrokeW": 3
+         }
+        ]
+       },
+       {
+        "name": "[skip] Roblox CoreGui (guide)",
+        "w": 1280,
+        "h": 720,
+        "x": 0,
+        "y": 0,
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Top Bar",
+          "w": 1280,
+          "h": 58,
+          "x": 0,
+          "y": 0,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.07
+          }
+         },
+         {
+          "type": "RECT",
+          "name": "Roblox Menu Btn",
+          "w": 44,
+          "h": 44,
+          "x": 12,
+          "y": 7,
+          "radius": 12,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.28
+          }
+         },
+         {
+          "type": "RECT",
+          "name": "Chat Btn",
+          "w": 44,
+          "h": 44,
+          "x": 64,
+          "y": 7,
+          "radius": 12,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.28
+          }
+         },
+         {
+          "type": "TEXT",
+          "text": "ROBLOX TOP BAR (58px)  —  keep clear",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label",
+          "x": 124,
+          "y": 22
+         },
+         {
+          "type": "RECT",
+          "name": "Chat Window (when open)",
+          "w": 380,
+          "h": 210,
+          "x": 8,
+          "y": 64,
+          "radius": 12,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.04
+          },
+          "stroke": {
+           "hex": "3D4B5C",
+           "opacity": 0.25
+          },
+          "strokeW": 1.5
+         },
+         {
+          "type": "TEXT",
+          "text": "CHAT WINDOW (desktop, when open)",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label",
+          "x": 20,
+          "y": 248
+         },
+         {
+          "type": "RECT",
+          "name": "Leaderboard",
+          "w": 236,
+          "h": 170,
+          "x": 1032,
+          "y": 64,
+          "radius": 12,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.06
+          },
+          "stroke": {
+           "hex": "3D4B5C",
+           "opacity": 0.25
+          },
+          "strokeW": 1.5
+         },
+         {
+          "type": "TEXT",
+          "text": "LEADERBOARD (leaderstats)",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label",
+          "x": 1044,
+          "y": 210
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Mobile Thumbstick",
+          "w": 150,
+          "h": 150,
+          "x": 50,
+          "y": 510,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.07
+          },
+          "stroke": {
+           "hex": "3D4B5C",
+           "opacity": 0.25
+          },
+          "strokeW": 1.5
+         },
+         {
+          "type": "TEXT",
+          "text": "MOBILE THUMBSTICK",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label",
+          "x": 62,
+          "y": 668
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Mobile Jump",
+          "w": 96,
+          "h": 96,
+          "x": 1120,
+          "y": 550,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.07
+          },
+          "stroke": {
+           "hex": "3D4B5C",
+           "opacity": 0.25
+          },
+          "strokeW": 1.5
+         },
+         {
+          "type": "TEXT",
+          "text": "MOBILE JUMP",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label",
+          "x": 1122,
+          "y": 660
+         }
+        ]
+       }
+      ],
+      "x": 60,
+      "y": 110
+     },
+     {
+      "type": "TEXT",
+      "text": "Last 30% of the spin: frame tints to the rolled rarity, the rarest aura above the result drifts past the centre line first (arrow).",
+      "textStyle": "Aura Fishing/Body",
+      "color": {
+       "var": "cozy/subtext"
+      },
+      "name": "Note",
+      "w": 1280,
+      "x": 60,
+      "y": 860
+     }
+    ]
+   },
+   {
+    "type": "SECTION",
+    "name": "G4 · Lock",
+    "fill": "FBF7EF",
+    "w": 1400,
+    "h": 950,
+    "x": 1560,
+    "y": 1890,
+    "children": [
+     {
+      "type": "TEXT",
+      "text": "G4 · Lock",
+      "textStyle": "Aura Fishing/Display",
+      "color": {
+       "var": "cozy/text"
+      },
+      "name": "Title",
+      "x": 60,
+      "y": 30
+     },
+     {
+      "name": "Gacha - Lock",
+      "w": 1280,
+      "h": 720,
+      "radius": 0,
+      "clip": true,
+      "children": [
+       {
+        "name": "World [skip]",
+        "w": 1280,
+        "h": 720,
+        "x": 0,
+        "y": 0,
+        "fill": {
+         "grad": [
+          "DDF5EE",
+          "A8DCD8"
+         ],
+         "angle": 90
+        },
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Water",
+          "w": 1280,
+          "h": 300,
+          "x": 0,
+          "y": 420,
+          "fill": {
+           "hex": "9AD4F5",
+           "opacity": 0.35
+          }
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Island",
+          "w": 560,
+          "h": 130,
+          "x": 360,
+          "y": 370,
+          "fill": {
+           "hex": "7FD3B0",
+           "opacity": 0.55
+          }
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Island Top",
+          "w": 360,
+          "h": 70,
+          "x": 460,
+          "y": 372,
+          "fill": {
+           "hex": "4FAF8A",
+           "opacity": 0.35
+          }
+         }
+        ]
+       },
+       {
+        "type": "RECT",
+        "name": "Dim",
+        "w": 1280,
+        "h": 720,
+        "x": 0,
+        "y": 0,
+        "fill": {
+         "hex": "1A2140",
+         "opacity": 0.62
+        }
+       },
+       {
+        "type": "SVG",
+        "name": "Rays",
+        "w": 760,
+        "h": 760,
+        "svg": "<svg width=\"760\" height=\"760\" viewBox=\"0 0 760 760\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M380 380 L760 380 L756 435Z\" fill=\"#B07CF0\" fill-opacity=\"0.28\"/><path d=\"M380 380 L709 570 L678 615Z\" fill=\"#B07CF0\" fill-opacity=\"0.28\"/><path d=\"M380 380 L570 709 L521 733Z\" fill=\"#B07CF0\" fill-opacity=\"0.28\"/><path d=\"M380 380 L380 760 L325 756Z\" fill=\"#B07CF0\" fill-opacity=\"0.28\"/><path d=\"M380 380 L190 709 L145 678Z\" fill=\"#B07CF0\" fill-opacity=\"0.28\"/><path d=\"M380 380 L51 570 L27 521Z\" fill=\"#B07CF0\" fill-opacity=\"0.28\"/><path d=\"M380 380 L0 380 L4 325Z\" fill=\"#B07CF0\" fill-opacity=\"0.28\"/><path d=\"M380 380 L51 190 L82 145Z\" fill=\"#B07CF0\" fill-opacity=\"0.28\"/><path d=\"M380 380 L190 51 L239 27Z\" fill=\"#B07CF0\" fill-opacity=\"0.28\"/><path d=\"M380 380 L380 0 L435 4Z\" fill=\"#B07CF0\" fill-opacity=\"0.28\"/><path d=\"M380 380 L570 51 L615 82Z\" fill=\"#B07CF0\" fill-opacity=\"0.28\"/><path d=\"M380 380 L709 190 L733 239Z\" fill=\"#B07CF0\" fill-opacity=\"0.28\"/></svg>",
+        "x": 260,
+        "y": -80
+       },
+       {
+        "type": "RECT",
+        "name": "Flash",
+        "w": 1280,
+        "h": 720,
+        "x": 0,
+        "y": 0,
+        "fill": {
+         "hex": "FFFFFF",
+         "opacity": 0.25
+        }
+       },
+       {
+        "name": "Reel Machine",
+        "w": 260,
+        "h": 380,
+        "x": 510,
+        "y": 120,
+        "children": [
+         {
+          "name": "Cabinet",
+          "w": 260,
+          "h": 360,
+          "x": 0,
+          "y": 10,
+          "radius": 40,
+          "fill": {
+           "grad": [
+            "FFF8EC",
+            "F3E3C8"
+           ],
+           "angle": 90
+          },
+          "stroke": {
+           "var": "cozy/track"
+          },
+          "strokeW": 2,
+          "effects": [
+           {
+            "color": "3D4B5C",
+            "a": 0.1,
+            "y": 6,
+            "blur": 18
+           }
+          ],
+          "children": [
+           {
+            "name": "Reel Window",
+            "w": 180,
+            "h": 288,
+            "x": 40,
+            "y": 36,
+            "radius": 28,
+            "clip": true,
+            "fill": {
+             "var": "cozy/panel"
+            },
+            "stroke": "B07CF0",
+            "strokeW": 5,
+            "children": [
+             {
+              "type": "RECT",
+              "name": "Img auras/SparklingDew",
+              "w": 74,
+              "h": 74,
+              "x": 53,
+              "y": 11,
+              "opacity": 1
+             },
+             {
+              "type": "RECT",
+              "name": "Img auras/SolarFlare",
+              "w": 74,
+              "h": 74,
+              "x": 53,
+              "y": 107,
+              "opacity": 1
+             },
+             {
+              "type": "RECT",
+              "name": "Img auras/NeonWave",
+              "w": 74,
+              "h": 74,
+              "x": 53,
+              "y": 203,
+              "opacity": 1
+             },
+             {
+              "type": "RECT",
+              "name": "Centre Line",
+              "w": 180,
+              "h": 4,
+              "x": 0,
+              "y": 142,
+              "fill": {
+               "hex": "FFFFFF",
+               "opacity": 0.7
+              }
+             }
+            ],
+            "effects": [
+             {
+              "color": "B07CF0",
+              "a": 0.8,
+              "blur": 30
+             }
+            ]
+           },
+           {
+            "name": "Base Light",
+            "w": 180,
+            "h": 10,
+            "x": 40,
+            "y": 336,
+            "radius": 999,
+            "fill": "B07CF0"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "RECT",
+        "name": "Confetti",
+        "w": 9,
+        "h": 14,
+        "x": 420,
+        "y": 140,
+        "radius": 2,
+        "fill": "FF9E80"
+       },
+       {
+        "type": "RECT",
+        "name": "Confetti",
+        "w": 9,
+        "h": 14,
+        "x": 470,
+        "y": 470,
+        "radius": 2,
+        "fill": "7FD3B0"
+       },
+       {
+        "type": "RECT",
+        "name": "Confetti",
+        "w": 9,
+        "h": 14,
+        "x": 860,
+        "y": 160,
+        "radius": 2,
+        "fill": "9AD4F5"
+       },
+       {
+        "type": "RECT",
+        "name": "Confetti",
+        "w": 9,
+        "h": 14,
+        "x": 820,
+        "y": 460,
+        "radius": 2,
+        "fill": "F2B544"
+       },
+       {
+        "type": "RECT",
+        "name": "Confetti",
+        "w": 9,
+        "h": 14,
+        "x": 640,
+        "y": 90,
+        "radius": 2,
+        "fill": "B79CF2"
+       },
+       {
+        "type": "RECT",
+        "name": "Confetti",
+        "w": 9,
+        "h": 14,
+        "x": 380,
+        "y": 300,
+        "radius": 2,
+        "fill": "FF9E80"
+       },
+       {
+        "type": "RECT",
+        "name": "Confetti",
+        "w": 9,
+        "h": 14,
+        "x": 900,
+        "y": 300,
+        "radius": 2,
+        "fill": "7FD3B0"
+       },
+       {
+        "type": "RECT",
+        "name": "Confetti",
+        "w": 9,
+        "h": 14,
+        "x": 560,
+        "y": 520,
+        "radius": 2,
+        "fill": "9AD4F5"
+       },
+       {
+        "type": "RECT",
+        "name": "Confetti",
+        "w": 9,
+        "h": 14,
+        "x": 720,
+        "y": 530,
+        "radius": 2,
+        "fill": "F2B544"
+       },
+       {
+        "type": "RECT",
+        "name": "Confetti",
+        "w": 9,
+        "h": 14,
+        "x": 450,
+        "y": 220,
+        "radius": 2,
+        "fill": "B79CF2"
+       },
+       {
+        "type": "RECT",
+        "name": "Confetti",
+        "w": 9,
+        "h": 14,
+        "x": 840,
+        "y": 240,
+        "radius": 2,
+        "fill": "FF9E80"
+       },
+       {
+        "name": "Hint Row",
+        "layout": "H",
+        "w": 1280,
+        "x": 0,
+        "y": 548,
+        "main": "CENTER",
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "EPIC!",
+          "font": {
+           "family": "Fredoka One",
+           "style": "Regular"
+          },
+          "size": 28,
+          "color": "D9B8FF",
+          "name": "Title",
+          "textStroke": "3D4B5C",
+          "textStrokeW": 3
+         }
+        ]
+       },
+       {
+        "name": "[skip] Roblox CoreGui (guide)",
+        "w": 1280,
+        "h": 720,
+        "x": 0,
+        "y": 0,
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Top Bar",
+          "w": 1280,
+          "h": 58,
+          "x": 0,
+          "y": 0,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.07
+          }
+         },
+         {
+          "type": "RECT",
+          "name": "Roblox Menu Btn",
+          "w": 44,
+          "h": 44,
+          "x": 12,
+          "y": 7,
+          "radius": 12,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.28
+          }
+         },
+         {
+          "type": "RECT",
+          "name": "Chat Btn",
+          "w": 44,
+          "h": 44,
+          "x": 64,
+          "y": 7,
+          "radius": 12,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.28
+          }
+         },
+         {
+          "type": "TEXT",
+          "text": "ROBLOX TOP BAR (58px)  —  keep clear",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label",
+          "x": 124,
+          "y": 22
+         },
+         {
+          "type": "RECT",
+          "name": "Chat Window (when open)",
+          "w": 380,
+          "h": 210,
+          "x": 8,
+          "y": 64,
+          "radius": 12,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.04
+          },
+          "stroke": {
+           "hex": "3D4B5C",
+           "opacity": 0.25
+          },
+          "strokeW": 1.5
+         },
+         {
+          "type": "TEXT",
+          "text": "CHAT WINDOW (desktop, when open)",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label",
+          "x": 20,
+          "y": 248
+         },
+         {
+          "type": "RECT",
+          "name": "Leaderboard",
+          "w": 236,
+          "h": 170,
+          "x": 1032,
+          "y": 64,
+          "radius": 12,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.06
+          },
+          "stroke": {
+           "hex": "3D4B5C",
+           "opacity": 0.25
+          },
+          "strokeW": 1.5
+         },
+         {
+          "type": "TEXT",
+          "text": "LEADERBOARD (leaderstats)",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label",
+          "x": 1044,
+          "y": 210
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Mobile Thumbstick",
+          "w": 150,
+          "h": 150,
+          "x": 50,
+          "y": 510,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.07
+          },
+          "stroke": {
+           "hex": "3D4B5C",
+           "opacity": 0.25
+          },
+          "strokeW": 1.5
+         },
+         {
+          "type": "TEXT",
+          "text": "MOBILE THUMBSTICK",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label",
+          "x": 62,
+          "y": 668
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Mobile Jump",
+          "w": 96,
+          "h": 96,
+          "x": 1120,
+          "y": 550,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.07
+          },
+          "stroke": {
+           "hex": "3D4B5C",
+           "opacity": 0.25
+          },
+          "strokeW": 1.5
+         },
+         {
+          "type": "TEXT",
+          "text": "MOBILE JUMP",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label",
+          "x": 1122,
+          "y": 660
+         }
+        ]
+       }
+      ],
+      "x": 60,
+      "y": 110
+     },
+     {
+      "type": "TEXT",
+      "text": "Snaps onto the result: white flash, rotating rays + confetti in rarity colour, 'EPIC!'. Legendary+: shake + 0.25s pause first.",
+      "textStyle": "Aura Fishing/Body",
+      "color": {
+       "var": "cozy/subtext"
+      },
+      "name": "Note",
+      "w": 1280,
+      "x": 60,
+      "y": 860
+     }
+    ]
+   },
+   {
+    "type": "SECTION",
+    "name": "G5 · Reveal",
+    "fill": "FBF7EF",
+    "w": 1400,
+    "h": 950,
+    "x": 80,
+    "y": 2960,
+    "children": [
+     {
+      "type": "TEXT",
+      "text": "G5 · Reveal",
+      "textStyle": "Aura Fishing/Display",
+      "color": {
+       "var": "cozy/text"
+      },
+      "name": "Title",
+      "x": 60,
+      "y": 30
+     },
+     {
+      "name": "Gacha - Reveal",
+      "w": 1280,
+      "h": 720,
+      "radius": 0,
+      "clip": true,
+      "children": [
+       {
+        "name": "World [skip]",
+        "w": 1280,
+        "h": 720,
+        "x": 0,
+        "y": 0,
+        "fill": {
+         "grad": [
+          "DDF5EE",
+          "A8DCD8"
+         ],
+         "angle": 90
+        },
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Water",
+          "w": 1280,
+          "h": 300,
+          "x": 0,
+          "y": 420,
+          "fill": {
+           "hex": "9AD4F5",
+           "opacity": 0.35
+          }
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Island",
+          "w": 560,
+          "h": 130,
+          "x": 360,
+          "y": 370,
+          "fill": {
+           "hex": "7FD3B0",
+           "opacity": 0.55
+          }
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Island Top",
+          "w": 360,
+          "h": 70,
+          "x": 460,
+          "y": 372,
+          "fill": {
+           "hex": "4FAF8A",
+           "opacity": 0.35
+          }
+         }
+        ]
+       },
+       {
+        "type": "RECT",
+        "name": "Dim",
+        "w": 1280,
+        "h": 720,
+        "x": 0,
+        "y": 0,
+        "fill": {
+         "hex": "1A2140",
+         "opacity": 0.62
+        }
+       },
+       {
+        "type": "SVG",
+        "name": "Rays",
+        "w": 760,
+        "h": 760,
+        "svg": "<svg width=\"760\" height=\"760\" viewBox=\"0 0 760 760\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M380 380 L760 380 L756 435Z\" fill=\"#B07CF0\" fill-opacity=\"0.22\"/><path d=\"M380 380 L709 570 L678 615Z\" fill=\"#B07CF0\" fill-opacity=\"0.22\"/><path d=\"M380 380 L570 709 L521 733Z\" fill=\"#B07CF0\" fill-opacity=\"0.22\"/><path d=\"M380 380 L380 760 L325 756Z\" fill=\"#B07CF0\" fill-opacity=\"0.22\"/><path d=\"M380 380 L190 709 L145 678Z\" fill=\"#B07CF0\" fill-opacity=\"0.22\"/><path d=\"M380 380 L51 570 L27 521Z\" fill=\"#B07CF0\" fill-opacity=\"0.22\"/><path d=\"M380 380 L0 380 L4 325Z\" fill=\"#B07CF0\" fill-opacity=\"0.22\"/><path d=\"M380 380 L51 190 L82 145Z\" fill=\"#B07CF0\" fill-opacity=\"0.22\"/><path d=\"M380 380 L190 51 L239 27Z\" fill=\"#B07CF0\" fill-opacity=\"0.22\"/><path d=\"M380 380 L380 0 L435 4Z\" fill=\"#B07CF0\" fill-opacity=\"0.22\"/><path d=\"M380 380 L570 51 L615 82Z\" fill=\"#B07CF0\" fill-opacity=\"0.22\"/><path d=\"M380 380 L709 190 L733 239Z\" fill=\"#B07CF0\" fill-opacity=\"0.22\"/></svg>",
+        "x": 260,
+        "y": -60
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "g_reveal",
+        "x": 450,
+        "y": 110,
+        "name": "Reveal Card"
+       },
+       {
+        "name": "[skip] Roblox CoreGui (guide)",
+        "w": 1280,
+        "h": 720,
+        "x": 0,
+        "y": 0,
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Top Bar",
+          "w": 1280,
+          "h": 58,
+          "x": 0,
+          "y": 0,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.07
+          }
+         },
+         {
+          "type": "RECT",
+          "name": "Roblox Menu Btn",
+          "w": 44,
+          "h": 44,
+          "x": 12,
+          "y": 7,
+          "radius": 12,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.28
+          }
+         },
+         {
+          "type": "RECT",
+          "name": "Chat Btn",
+          "w": 44,
+          "h": 44,
+          "x": 64,
+          "y": 7,
+          "radius": 12,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.28
+          }
+         },
+         {
+          "type": "TEXT",
+          "text": "ROBLOX TOP BAR (58px)  —  keep clear",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label",
+          "x": 124,
+          "y": 22
+         },
+         {
+          "type": "RECT",
+          "name": "Chat Window (when open)",
+          "w": 380,
+          "h": 210,
+          "x": 8,
+          "y": 64,
+          "radius": 12,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.04
+          },
+          "stroke": {
+           "hex": "3D4B5C",
+           "opacity": 0.25
+          },
+          "strokeW": 1.5
+         },
+         {
+          "type": "TEXT",
+          "text": "CHAT WINDOW (desktop, when open)",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label",
+          "x": 20,
+          "y": 248
+         },
+         {
+          "type": "RECT",
+          "name": "Leaderboard",
+          "w": 236,
+          "h": 170,
+          "x": 1032,
+          "y": 64,
+          "radius": 12,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.06
+          },
+          "stroke": {
+           "hex": "3D4B5C",
+           "opacity": 0.25
+          },
+          "strokeW": 1.5
+         },
+         {
+          "type": "TEXT",
+          "text": "LEADERBOARD (leaderstats)",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label",
+          "x": 1044,
+          "y": 210
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Mobile Thumbstick",
+          "w": 150,
+          "h": 150,
+          "x": 50,
+          "y": 510,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.07
+          },
+          "stroke": {
+           "hex": "3D4B5C",
+           "opacity": 0.25
+          },
+          "strokeW": 1.5
+         },
+         {
+          "type": "TEXT",
+          "text": "MOBILE THUMBSTICK",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label",
+          "x": 62,
+          "y": 668
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Mobile Jump",
+          "w": 96,
+          "h": 96,
+          "x": 1120,
+          "y": 550,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.07
+          },
+          "stroke": {
+           "hex": "3D4B5C",
+           "opacity": 0.25
+          },
+          "strokeW": 1.5
+         },
+         {
+          "type": "TEXT",
+          "text": "MOBILE JUMP",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label",
+          "x": 1122,
+          "y": 660
+         }
+        ]
+       }
+      ],
+      "x": 60,
+      "y": 110
+     },
+     {
+      "type": "TEXT",
+      "text": "Card pops in (Back easing): orb, name, rarity, chance, NEW!, stats, EQUIP / ROLL AGAIN / CLOSE.",
+      "textStyle": "Aura Fishing/Body",
+      "color": {
+       "var": "cozy/subtext"
+      },
+      "name": "Note",
+      "w": 1280,
+      "x": 60,
+      "y": 860
+     }
+    ]
+   },
+   {
+    "type": "SECTION",
+    "name": "G6 · x10 Summary (next)",
+    "fill": "FBF7EF",
+    "w": 1400,
+    "h": 950,
+    "x": 1560,
+    "y": 2960,
+    "children": [
+     {
+      "type": "TEXT",
+      "text": "G6 · x10 Summary (next)",
+      "textStyle": "Aura Fishing/Display",
+      "color": {
+       "var": "cozy/text"
+      },
+      "name": "Title",
+      "x": 60,
+      "y": 30
+     },
+     {
+      "name": "Gacha - x10 Summary",
+      "w": 1280,
+      "h": 720,
+      "radius": 0,
+      "clip": true,
+      "children": [
+       {
+        "name": "World [skip]",
+        "w": 1280,
+        "h": 720,
+        "x": 0,
+        "y": 0,
+        "fill": {
+         "grad": [
+          "DDF5EE",
+          "A8DCD8"
+         ],
+         "angle": 90
+        },
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Water",
+          "w": 1280,
+          "h": 300,
+          "x": 0,
+          "y": 420,
+          "fill": {
+           "hex": "9AD4F5",
+           "opacity": 0.35
+          }
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Island",
+          "w": 560,
+          "h": 130,
+          "x": 360,
+          "y": 370,
+          "fill": {
+           "hex": "7FD3B0",
+           "opacity": 0.55
+          }
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Island Top",
+          "w": 360,
+          "h": 70,
+          "x": 460,
+          "y": 372,
+          "fill": {
+           "hex": "4FAF8A",
+           "opacity": 0.35
+          }
+         }
+        ]
+       },
+       {
+        "type": "RECT",
+        "name": "Dim",
+        "w": 1280,
+        "h": 720,
+        "x": 0,
+        "y": 0,
+        "fill": {
+         "hex": "1A2140",
+         "opacity": 0.62
+        }
+       },
+       {
+        "type": "SVG",
+        "name": "Rays",
+        "w": 800,
+        "h": 800,
+        "svg": "<svg width=\"800\" height=\"800\" viewBox=\"0 0 800 800\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M400 400 L800 400 L797 449Z\" fill=\"#F2A93B\" fill-opacity=\"0.18\"/><path d=\"M400 400 L760 574 L736 617Z\" fill=\"#F2A93B\" fill-opacity=\"0.18\"/><path d=\"M400 400 L649 713 L609 741Z\" fill=\"#F2A93B\" fill-opacity=\"0.18\"/><path d=\"M400 400 L489 790 L440 798Z\" fill=\"#F2A93B\" fill-opacity=\"0.18\"/><path d=\"M400 400 L311 790 L264 776Z\" fill=\"#F2A93B\" fill-opacity=\"0.18\"/><path d=\"M400 400 L151 713 L114 680Z\" fill=\"#F2A93B\" fill-opacity=\"0.18\"/><path d=\"M400 400 L40 574 L21 528Z\" fill=\"#F2A93B\" fill-opacity=\"0.18\"/><path d=\"M400 400 L0 400 L3 351Z\" fill=\"#F2A93B\" fill-opacity=\"0.18\"/><path d=\"M400 400 L40 226 L64 183Z\" fill=\"#F2A93B\" fill-opacity=\"0.18\"/><path d=\"M400 400 L151 87 L191 59Z\" fill=\"#F2A93B\" fill-opacity=\"0.18\"/><path d=\"M400 400 L311 10 L360 2Z\" fill=\"#F2A93B\" fill-opacity=\"0.18\"/><path d=\"M400 400 L489 10 L536 24Z\" fill=\"#F2A93B\" fill-opacity=\"0.18\"/><path d=\"M400 400 L649 87 L686 120Z\" fill=\"#F2A93B\" fill-opacity=\"0.18\"/><path d=\"M400 400 L760 226 L779 272Z\" fill=\"#F2A93B\" fill-opacity=\"0.18\"/></svg>",
+        "x": 240,
+        "y": -100
+       },
+       {
+        "name": "x10 Summary",
+        "layout": "V",
+        "gap": 16,
+        "pad": 24,
+        "w": 760,
+        "x": 260,
+        "y": 80,
+        "radius": 28,
+        "cross": "CENTER",
+        "fill": {
+         "var": "cozy/panel"
+        },
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "effects": [
+         {
+          "color": "3D4B5C",
+          "a": 0.1,
+          "y": 6,
+          "blur": 18
+         }
+        ],
+        "children": [
+         {
+          "name": "Head",
+          "layout": "H",
+          "w": 712,
+          "main": "SPACE_BETWEEN",
+          "cross": "CENTER",
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "x10 Results",
+            "textStyle": "Aura Fishing/Title",
+            "color": {
+             "var": "cozy/text"
+            },
+            "name": "Title"
+           },
+           {
+            "name": "Best",
+            "layout": "H",
+            "gap": 6,
+            "cross": "CENTER",
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "Best:",
+              "textStyle": "Aura Fishing/Small",
+              "color": {
+               "var": "cozy/subtext"
+              },
+              "name": "Label"
+             },
+             {
+              "type": "INSTANCE",
+              "ref": "3487:4328",
+              "variant": "Rarity=Legendary",
+              "name": "Tag Legendary"
+             },
+             {
+              "type": "TEXT",
+              "text": "Abyssal Shadow",
+              "textStyle": "Aura Fishing/Heading",
+              "color": {
+               "var": "cozy/rarity/legendary"
+              },
+              "name": "Name"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Grid",
+          "layout": "H",
+          "wrap": true,
+          "gap": 12,
+          "rowGap": 12,
+          "w": 712,
+          "main": "CENTER",
+          "children": [
+           {
+            "name": "Result SparklingDew",
+            "layout": "V",
+            "gap": 4,
+            "pad": 10,
+            "w": 120,
+            "cross": "CENTER",
+            "radius": 20,
+            "fill": "FFFFFF",
+            "stroke": {
+             "var": "cozy/track"
+            },
+            "strokeW": 2,
+            "effects": [],
+            "children": [
+             {
+              "type": "RECT",
+              "name": "Img auras/SparklingDew",
+              "w": 72,
+              "h": 72
+             },
+             {
+              "type": "INSTANCE",
+              "ref": "3487:4328",
+              "variant": "Rarity=Common",
+              "name": "Tag Common"
+             }
+            ]
+           },
+           {
+            "name": "Result NeonWave",
+            "layout": "V",
+            "gap": 4,
+            "pad": 10,
+            "w": 120,
+            "cross": "CENTER",
+            "radius": 20,
+            "fill": "FFFFFF",
+            "stroke": {
+             "var": "cozy/track"
+            },
+            "strokeW": 2,
+            "effects": [],
+            "children": [
+             {
+              "type": "RECT",
+              "name": "Img auras/NeonWave",
+              "w": 72,
+              "h": 72
+             },
+             {
+              "type": "INSTANCE",
+              "ref": "3487:4328",
+              "variant": "Rarity=Rare",
+              "name": "Tag Rare"
+             }
+            ]
+           },
+           {
+            "name": "Result SparklingDew",
+            "layout": "V",
+            "gap": 4,
+            "pad": 10,
+            "w": 120,
+            "cross": "CENTER",
+            "radius": 20,
+            "fill": "FFFFFF",
+            "stroke": {
+             "var": "cozy/track"
+            },
+            "strokeW": 2,
+            "effects": [],
+            "children": [
+             {
+              "type": "RECT",
+              "name": "Img auras/SparklingDew",
+              "w": 72,
+              "h": 72
+             },
+             {
+              "type": "INSTANCE",
+              "ref": "3487:4328",
+              "variant": "Rarity=Common",
+              "name": "Tag Common"
+             }
+            ]
+           },
+           {
+            "name": "Result SparklingDew",
+            "layout": "V",
+            "gap": 4,
+            "pad": 10,
+            "w": 120,
+            "cross": "CENTER",
+            "radius": 20,
+            "fill": "FFFFFF",
+            "stroke": {
+             "var": "cozy/track"
+            },
+            "strokeW": 2,
+            "effects": [],
+            "children": [
+             {
+              "type": "RECT",
+              "name": "Img auras/SparklingDew",
+              "w": 72,
+              "h": 72
+             },
+             {
+              "type": "INSTANCE",
+              "ref": "3487:4328",
+              "variant": "Rarity=Common",
+              "name": "Tag Common"
+             }
+            ]
+           },
+           {
+            "name": "Result SolarFlare",
+            "layout": "V",
+            "gap": 4,
+            "pad": 10,
+            "w": 120,
+            "cross": "CENTER",
+            "radius": 20,
+            "fill": "FFFFFF",
+            "stroke": {
+             "var": "cozy/track"
+            },
+            "strokeW": 2,
+            "effects": [],
+            "children": [
+             {
+              "type": "RECT",
+              "name": "Img auras/SolarFlare",
+              "w": 72,
+              "h": 72
+             },
+             {
+              "type": "INSTANCE",
+              "ref": "3487:4328",
+              "variant": "Rarity=Epic",
+              "name": "Tag Epic"
+             },
+             {
+              "name": "New Badge",
+              "layout": "H",
+              "pad": [
+               3,
+               10,
+               3,
+               10
+              ],
+              "radius": 999,
+              "fill": {
+               "var": "cozy/coral"
+              },
+              "children": [
+               {
+                "type": "TEXT",
+                "text": "NEW!",
+                "textStyle": "Aura Fishing/Caption",
+                "color": {
+                 "var": "cozy/on-accent"
+                },
+                "name": "Label"
+               }
+              ],
+              "absolute": true,
+              "x": 66,
+              "y": -8
+             }
+            ]
+           },
+           {
+            "name": "Result SparklingDew",
+            "layout": "V",
+            "gap": 4,
+            "pad": 10,
+            "w": 120,
+            "cross": "CENTER",
+            "radius": 20,
+            "fill": "FFFFFF",
+            "stroke": {
+             "var": "cozy/track"
+            },
+            "strokeW": 2,
+            "effects": [],
+            "children": [
+             {
+              "type": "RECT",
+              "name": "Img auras/SparklingDew",
+              "w": 72,
+              "h": 72
+             },
+             {
+              "type": "INSTANCE",
+              "ref": "3487:4328",
+              "variant": "Rarity=Common",
+              "name": "Tag Common"
+             }
+            ]
+           },
+           {
+            "name": "Result NeonWave",
+            "layout": "V",
+            "gap": 4,
+            "pad": 10,
+            "w": 120,
+            "cross": "CENTER",
+            "radius": 20,
+            "fill": "FFFFFF",
+            "stroke": {
+             "var": "cozy/track"
+            },
+            "strokeW": 2,
+            "effects": [],
+            "children": [
+             {
+              "type": "RECT",
+              "name": "Img auras/NeonWave",
+              "w": 72,
+              "h": 72
+             },
+             {
+              "type": "INSTANCE",
+              "ref": "3487:4328",
+              "variant": "Rarity=Rare",
+              "name": "Tag Rare"
+             }
+            ]
+           },
+           {
+            "name": "Result SparklingDew",
+            "layout": "V",
+            "gap": 4,
+            "pad": 10,
+            "w": 120,
+            "cross": "CENTER",
+            "radius": 20,
+            "fill": "FFFFFF",
+            "stroke": {
+             "var": "cozy/track"
+            },
+            "strokeW": 2,
+            "effects": [],
+            "children": [
+             {
+              "type": "RECT",
+              "name": "Img auras/SparklingDew",
+              "w": 72,
+              "h": 72
+             },
+             {
+              "type": "INSTANCE",
+              "ref": "3487:4328",
+              "variant": "Rarity=Common",
+              "name": "Tag Common"
+             }
+            ]
+           },
+           {
+            "name": "Result AbyssalShadow",
+            "layout": "V",
+            "gap": 4,
+            "pad": 10,
+            "w": 120,
+            "cross": "CENTER",
+            "radius": 20,
+            "fill": "FFFFFF",
+            "stroke": {
+             "var": "cozy/track"
+            },
+            "strokeW": 2,
+            "effects": [
+             {
+              "color": "F2A93B",
+              "a": 0.9,
+              "blur": 22
+             }
+            ],
+            "children": [
+             {
+              "type": "RECT",
+              "name": "Img auras/AbyssalShadow",
+              "w": 72,
+              "h": 72
+             },
+             {
+              "type": "INSTANCE",
+              "ref": "3487:4328",
+              "variant": "Rarity=Legendary",
+              "name": "Tag Legendary"
+             },
+             {
+              "name": "New Badge",
+              "layout": "H",
+              "pad": [
+               3,
+               10,
+               3,
+               10
+              ],
+              "radius": 999,
+              "fill": {
+               "var": "cozy/coral"
+              },
+              "children": [
+               {
+                "type": "TEXT",
+                "text": "NEW!",
+                "textStyle": "Aura Fishing/Caption",
+                "color": {
+                 "var": "cozy/on-accent"
+                },
+                "name": "Label"
+               }
+              ],
+              "absolute": true,
+              "x": 66,
+              "y": -8
+             }
+            ]
+           },
+           {
+            "name": "Result SparklingDew",
+            "layout": "V",
+            "gap": 4,
+            "pad": 10,
+            "w": 120,
+            "cross": "CENTER",
+            "radius": 20,
+            "fill": "FFFFFF",
+            "stroke": {
+             "var": "cozy/track"
+            },
+            "strokeW": 2,
+            "effects": [],
+            "children": [
+             {
+              "type": "RECT",
+              "name": "Img auras/SparklingDew",
+              "w": 72,
+              "h": 72
+             },
+             {
+              "type": "INSTANCE",
+              "ref": "3487:4328",
+              "variant": "Rarity=Common",
+              "name": "Tag Common"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Buttons",
+          "layout": "H",
+          "gap": 10,
+          "children": [
+           {
+            "type": "INSTANCE",
+            "ref": "3487:4298",
+            "variant": "Style=Primary",
+            "texts": {
+             "Label": "EQUIP BEST"
+            },
+            "name": "Btn Equip Best"
+           },
+           {
+            "type": "INSTANCE",
+            "ref": "3487:4298",
+            "variant": "Style=Gold",
+            "texts": {
+             "Label": "ROLL x10 AGAIN"
+            },
+            "name": "Btn Roll 10"
+           },
+           {
+            "type": "INSTANCE",
+            "ref": "3487:4298",
+            "variant": "Style=Ghost",
+            "texts": {
+             "Label": "CLOSE"
+            },
+            "name": "Btn Close"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "[skip] Roblox CoreGui (guide)",
+        "w": 1280,
+        "h": 720,
+        "x": 0,
+        "y": 0,
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Top Bar",
+          "w": 1280,
+          "h": 58,
+          "x": 0,
+          "y": 0,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.07
+          }
+         },
+         {
+          "type": "RECT",
+          "name": "Roblox Menu Btn",
+          "w": 44,
+          "h": 44,
+          "x": 12,
+          "y": 7,
+          "radius": 12,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.28
+          }
+         },
+         {
+          "type": "RECT",
+          "name": "Chat Btn",
+          "w": 44,
+          "h": 44,
+          "x": 64,
+          "y": 7,
+          "radius": 12,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.28
+          }
+         },
+         {
+          "type": "TEXT",
+          "text": "ROBLOX TOP BAR (58px)  —  keep clear",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label",
+          "x": 124,
+          "y": 22
+         },
+         {
+          "type": "RECT",
+          "name": "Chat Window (when open)",
+          "w": 380,
+          "h": 210,
+          "x": 8,
+          "y": 64,
+          "radius": 12,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.04
+          },
+          "stroke": {
+           "hex": "3D4B5C",
+           "opacity": 0.25
+          },
+          "strokeW": 1.5
+         },
+         {
+          "type": "TEXT",
+          "text": "CHAT WINDOW (desktop, when open)",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label",
+          "x": 20,
+          "y": 248
+         },
+         {
+          "type": "RECT",
+          "name": "Leaderboard",
+          "w": 236,
+          "h": 170,
+          "x": 1032,
+          "y": 64,
+          "radius": 12,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.06
+          },
+          "stroke": {
+           "hex": "3D4B5C",
+           "opacity": 0.25
+          },
+          "strokeW": 1.5
+         },
+         {
+          "type": "TEXT",
+          "text": "LEADERBOARD (leaderstats)",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label",
+          "x": 1044,
+          "y": 210
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Mobile Thumbstick",
+          "w": 150,
+          "h": 150,
+          "x": 50,
+          "y": 510,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.07
+          },
+          "stroke": {
+           "hex": "3D4B5C",
+           "opacity": 0.25
+          },
+          "strokeW": 1.5
+         },
+         {
+          "type": "TEXT",
+          "text": "MOBILE THUMBSTICK",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label",
+          "x": 62,
+          "y": 668
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Mobile Jump",
+          "w": 96,
+          "h": 96,
+          "x": 1120,
+          "y": 550,
+          "fill": {
+           "hex": "3D4B5C",
+           "opacity": 0.07
+          },
+          "stroke": {
+           "hex": "3D4B5C",
+           "opacity": 0.25
+          },
+          "strokeW": 1.5
+         },
+         {
+          "type": "TEXT",
+          "text": "MOBILE JUMP",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Label",
+          "x": 1122,
+          "y": 660
+         }
+        ]
+       }
+      ],
+      "x": 60,
+      "y": 110
+     },
+     {
+      "type": "TEXT",
+      "text": "Planned: x10 roll = 10 quick reels then this grid; best result glows; EQUIP BEST / ROLL x10 AGAIN. Not in code yet.",
+      "textStyle": "Aura Fishing/Body",
+      "color": {
+       "var": "cozy/subtext"
+      },
+      "name": "Note",
+      "w": 1280,
+      "x": 60,
+      "y": 860
+     }
+    ]
+   }
+  ]
+ }
+}

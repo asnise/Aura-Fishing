@@ -1,0 +1,200 @@
+[
+ {
+  "replaceId": "3492:16684",
+  "tree": {
+   "name": "Btn Shop",
+   "layout": "V",
+   "gap": 2,
+   "w": 80,
+   "h": 88,
+   "cross": "CENTER",
+   "children": [
+    {
+     "name": "Tile",
+     "w": 64,
+     "h": 64,
+     "radius": 20,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 2,
+     "layout": "H",
+     "main": "CENTER",
+     "cross": "CENTER",
+     "children": [
+      {
+       "type": "RECT",
+       "name": "Img ui/icons/shop",
+       "w": 50,
+       "h": 50
+      }
+     ]
+    },
+    {
+     "type": "TEXT",
+     "text": "Shop",
+     "font": {
+      "family": "Fredoka One",
+      "style": "Regular"
+     },
+     "size": 14,
+     "color": "FFFFFF",
+     "name": "Label",
+     "textStroke": "3D4B5C",
+     "textStrokeW": 2
+    }
+   ]
+  }
+ },
+ {
+  "replaceId": "3492:16688",
+  "tree": {
+   "name": "Btn Auras",
+   "layout": "V",
+   "gap": 2,
+   "w": 80,
+   "h": 88,
+   "cross": "CENTER",
+   "children": [
+    {
+     "name": "Tile",
+     "w": 64,
+     "h": 64,
+     "radius": 20,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 2,
+     "layout": "H",
+     "main": "CENTER",
+     "cross": "CENTER",
+     "children": [
+      {
+       "type": "RECT",
+       "name": "Img ui/icons/auras",
+       "w": 50,
+       "h": 50
+      }
+     ]
+    },
+    {
+     "type": "TEXT",
+     "text": "Auras",
+     "font": {
+      "family": "Fredoka One",
+      "style": "Regular"
+     },
+     "size": 14,
+     "color": "FFFFFF",
+     "name": "Label",
+     "textStroke": "3D4B5C",
+     "textStrokeW": 2
+    }
+   ]
+  }
+ },
+ {
+  "replaceId": "3492:16692",
+  "tree": {
+   "name": "Btn Fishdex",
+   "layout": "V",
+   "gap": 2,
+   "w": 80,
+   "h": 88,
+   "cross": "CENTER",
+   "children": [
+    {
+     "name": "Tile",
+     "w": 64,
+     "h": 64,
+     "radius": 20,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 2,
+     "layout": "H",
+     "main": "CENTER",
+     "cross": "CENTER",
+     "children": [
+      {
+       "type": "RECT",
+       "name": "Img ui/icons/fishdex",
+       "w": 50,
+       "h": 50
+      }
+     ]
+    },
+    {
+     "type": "TEXT",
+     "text": "Fishdex",
+     "font": {
+      "family": "Fredoka One",
+      "style": "Regular"
+     },
+     "size": 14,
+     "color": "FFFFFF",
+     "name": "Label",
+     "textStroke": "3D4B5C",
+     "textStrokeW": 2
+    }
+   ]
+  }
+ },
+ {
+  "replaceId": "3520:22575",
+  "tree": {
+   "name": "Btn Menu",
+   "layout": "V",
+   "gap": 2,
+   "w": 80,
+   "h": 88,
+   "cross": "CENTER",
+   "children": [
+    {
+     "name": "Tile",
+     "w": 64,
+     "h": 64,
+     "radius": 20,
+     "fill": "D3ECFA",
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 2,
+     "layout": "H",
+     "main": "CENTER",
+     "cross": "CENTER",
+     "children": [
+      {
+       "type": "RECT",
+       "name": "Img equipment/StarterPouch",
+       "w": 50,
+       "h": 50
+      }
+     ]
+    },
+    {
+     "type": "TEXT",
+     "text": "Menu",
+     "font": {
+      "family": "Fredoka One",
+      "style": "Regular"
+     },
+     "size": 14,
+     "color": "FFFFFF",
+     "name": "Label",
+     "textStroke": "3D4B5C",
+     "textStrokeW": 2
+    }
+   ]
+  }
+ }
+]

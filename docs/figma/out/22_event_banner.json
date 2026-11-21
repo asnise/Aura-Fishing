@@ -1,0 +1,1749 @@
+{
+ "pageId": "3465:14993",
+ "replaceName": "E1 · Gacha page — Neon Tide (opened from hub)",
+ "tree": {
+  "type": "SECTION",
+  "name": "E1 · Gacha page — Neon Tide (opened from hub)",
+  "fill": "FBF7EF",
+  "w": 1960,
+  "h": 980,
+  "x": 12140,
+  "y": 7400,
+  "children": [
+   {
+    "type": "TEXT",
+    "text": "E1 · Gacha page — Neon Tide (opened from hub)",
+    "textStyle": "Aura Fishing/Display",
+    "color": {
+     "var": "cozy/text"
+    },
+    "name": "Title",
+    "x": 60,
+    "y": 30
+   },
+   {
+    "name": "Gacha Page - Neon Tide",
+    "w": 1280,
+    "h": 720,
+    "radius": 0,
+    "clip": true,
+    "children": [
+     {
+      "name": "World [skip]",
+      "w": 1280,
+      "h": 720,
+      "x": 0,
+      "y": 0,
+      "fill": {
+       "grad": [
+        "DDF5EE",
+        "A8DCD8"
+       ],
+       "angle": 90
+      },
+      "children": [
+       {
+        "type": "RECT",
+        "name": "Water",
+        "w": 1280,
+        "h": 300,
+        "x": 0,
+        "y": 420,
+        "fill": {
+         "hex": "9AD4F5",
+         "opacity": 0.35
+        }
+       },
+       {
+        "type": "ELLIPSE",
+        "name": "Island",
+        "w": 560,
+        "h": 130,
+        "x": 360,
+        "y": 370,
+        "fill": {
+         "hex": "7FD3B0",
+         "opacity": 0.55
+        }
+       },
+       {
+        "type": "ELLIPSE",
+        "name": "Island Top",
+        "w": 360,
+        "h": 70,
+        "x": 460,
+        "y": 372,
+        "fill": {
+         "hex": "4FAF8A",
+         "opacity": 0.35
+        }
+       }
+      ]
+     },
+     {
+      "type": "RECT",
+      "name": "Dim",
+      "w": 1280,
+      "h": 720,
+      "x": 0,
+      "y": 0,
+      "fill": {
+       "hex": "1A2140",
+       "opacity": 0.35
+      }
+     },
+     {
+      "name": "Neon Tide Altar",
+      "w": 860,
+      "h": 640,
+      "x": 160,
+      "y": 66,
+      "radius": 32,
+      "fill": {
+       "grad": [
+        "F3ECFC",
+        "DDEFFA"
+       ],
+       "angle": 90
+      },
+      "stroke": {
+       "var": "cozy/track"
+      },
+      "strokeW": 2,
+      "effects": [
+       {
+        "color": "3D4B5C",
+        "a": 0.1,
+        "y": 6,
+        "blur": 18
+       }
+      ],
+      "clip": true,
+      "children": [
+       {
+        "type": "SVG",
+        "name": "Rays",
+        "w": 700,
+        "h": 700,
+        "svg": "<svg width=\"700\" height=\"700\" viewBox=\"0 0 700 700\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M350 350 L700 350 L698 388Z\" fill=\"#9C86E8\" fill-opacity=\"0.13\"/><path d=\"M350 350 L673 484 L657 518Z\" fill=\"#9C86E8\" fill-opacity=\"0.13\"/><path d=\"M350 350 L597 597 L569 623Z\" fill=\"#9C86E8\" fill-opacity=\"0.13\"/><path d=\"M350 350 L484 673 L448 686Z\" fill=\"#9C86E8\" fill-opacity=\"0.13\"/><path d=\"M350 350 L350 700 L312 698Z\" fill=\"#9C86E8\" fill-opacity=\"0.13\"/><path d=\"M350 350 L216 673 L182 657Z\" fill=\"#9C86E8\" fill-opacity=\"0.13\"/><path d=\"M350 350 L103 597 L77 569Z\" fill=\"#9C86E8\" fill-opacity=\"0.13\"/><path d=\"M350 350 L27 484 L14 448Z\" fill=\"#9C86E8\" fill-opacity=\"0.13\"/><path d=\"M350 350 L0 350 L2 312Z\" fill=\"#9C86E8\" fill-opacity=\"0.13\"/><path d=\"M350 350 L27 216 L43 182Z\" fill=\"#9C86E8\" fill-opacity=\"0.13\"/><path d=\"M350 350 L103 103 L131 77Z\" fill=\"#9C86E8\" fill-opacity=\"0.13\"/><path d=\"M350 350 L216 27 L252 14Z\" fill=\"#9C86E8\" fill-opacity=\"0.13\"/><path d=\"M350 350 L350 0 L388 2Z\" fill=\"#9C86E8\" fill-opacity=\"0.13\"/><path d=\"M350 350 L484 27 L518 43Z\" fill=\"#9C86E8\" fill-opacity=\"0.13\"/><path d=\"M350 350 L597 103 L623 131Z\" fill=\"#9C86E8\" fill-opacity=\"0.13\"/><path d=\"M350 350 L673 216 L686 252Z\" fill=\"#9C86E8\" fill-opacity=\"0.13\"/></svg>",
+        "x": -120,
+        "y": -110
+       },
+       {
+        "type": "SVG",
+        "name": "Rays",
+        "w": 520,
+        "h": 520,
+        "svg": "<svg width=\"520\" height=\"520\" viewBox=\"0 0 520 520\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M260 260 L520 260 L517 297Z\" fill=\"#6BB3DE\" fill-opacity=\"0.1\"/><path d=\"M260 260 L485 390 L464 421Z\" fill=\"#6BB3DE\" fill-opacity=\"0.1\"/><path d=\"M260 260 L390 485 L356 501Z\" fill=\"#6BB3DE\" fill-opacity=\"0.1\"/><path d=\"M260 260 L260 520 L223 517Z\" fill=\"#6BB3DE\" fill-opacity=\"0.1\"/><path d=\"M260 260 L130 485 L99 464Z\" fill=\"#6BB3DE\" fill-opacity=\"0.1\"/><path d=\"M260 260 L35 390 L19 356Z\" fill=\"#6BB3DE\" fill-opacity=\"0.1\"/><path d=\"M260 260 L0 260 L3 223Z\" fill=\"#6BB3DE\" fill-opacity=\"0.1\"/><path d=\"M260 260 L35 130 L56 99Z\" fill=\"#6BB3DE\" fill-opacity=\"0.1\"/><path d=\"M260 260 L130 35 L164 19Z\" fill=\"#6BB3DE\" fill-opacity=\"0.1\"/><path d=\"M260 260 L260 0 L297 3Z\" fill=\"#6BB3DE\" fill-opacity=\"0.1\"/><path d=\"M260 260 L390 35 L421 56Z\" fill=\"#6BB3DE\" fill-opacity=\"0.1\"/><path d=\"M260 260 L485 130 L501 164Z\" fill=\"#6BB3DE\" fill-opacity=\"0.1\"/></svg>",
+        "x": 560,
+        "y": 340
+       },
+       {
+        "name": "Header",
+        "layout": "H",
+        "w": 812,
+        "x": 24,
+        "y": 20,
+        "main": "SPACE_BETWEEN",
+        "cross": "CENTER",
+        "clip": false,
+        "children": [
+         {
+          "name": "Title",
+          "layout": "H",
+          "gap": 10,
+          "cross": "CENTER",
+          "clip": false,
+          "children": [
+           {
+            "type": "INSTANCE",
+            "ref": "3487:4298",
+            "variant": "Style=Ghost",
+            "texts": {
+             "Label": "‹"
+            },
+            "name": "Btn Back"
+           },
+           {
+            "type": "RECT",
+            "name": "Img ui/icons/auras",
+            "w": 44,
+            "h": 44
+           },
+           {
+            "name": "Title Ribbon",
+            "w": 250,
+            "h": 52,
+            "clip": false,
+            "children": [
+             {
+              "type": "SVG",
+              "name": "Ribbon Shape",
+              "w": 250,
+              "h": 52,
+              "x": 0,
+              "y": 0,
+              "svg": "<svg width=\"250\" height=\"52\" viewBox=\"0 0 250 52\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 6 H250 L234 29 L250 52 H0 L16 29 Z\" fill=\"#8C6FD6\"/><path d=\"M0 0 H250 L234 23 L250 46 H0 L16 23 Z\" fill=\"#B79CF2\"/></svg>"
+             },
+             {
+              "name": "Label Row",
+              "layout": "H",
+              "w": 250,
+              "h": 46,
+              "x": 0,
+              "y": 0,
+              "main": "CENTER",
+              "cross": "CENTER",
+              "children": [
+               {
+                "type": "TEXT",
+                "text": "Neon Tide Banner",
+                "font": {
+                 "family": "Fredoka One",
+                 "style": "Regular"
+                },
+                "size": 23,
+                "color": "FFFFFF",
+                "name": "Title",
+                "textStroke": "8C6FD6"
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Right",
+          "layout": "H",
+          "gap": 10,
+          "cross": "CENTER",
+          "children": [
+           {
+            "name": "Timer",
+            "layout": "H",
+            "gap": 6,
+            "pad": [
+             6,
+             14,
+             6,
+             10
+            ],
+            "radius": 999,
+            "cross": "CENTER",
+            "fill": "FFFFFF",
+            "stroke": {
+             "var": "cozy/track"
+            },
+            "strokeW": 2,
+            "children": [
+             {
+              "type": "RECT",
+              "name": "Img ui/status/auto_timer",
+              "w": 22,
+              "h": 22
+             },
+             {
+              "type": "TEXT",
+              "text": "13d 05h left",
+              "font": {
+               "family": "Fredoka One",
+               "style": "Regular"
+              },
+              "size": 16,
+              "color": "E07A5C",
+              "name": "Value"
+             }
+            ]
+           },
+           {
+            "type": "INSTANCE",
+            "ref": "3487:4313",
+            "variant": "Type=Gems",
+            "texts": {
+             "Value": "320"
+            },
+            "name": "Gems"
+           },
+           {
+            "type": "INSTANCE",
+            "ref": "3487:4298",
+            "variant": "Style=Danger",
+            "texts": {
+             "Label": "X"
+            },
+            "name": "Btn Close"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3492:20553",
+        "name": "Reel Machine",
+        "x": 40,
+        "y": 96
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3492:20616",
+        "name": "Rates",
+        "x": 340,
+        "y": 96
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3492:20563",
+        "name": "Pity",
+        "x": 40,
+        "y": 486,
+        "texts": {
+         "Value": "63 rolls"
+        }
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3492:20571",
+        "name": "Roll Bar",
+        "x": 340,
+        "y": 486
+       },
+       {
+        "name": "Rate Up Neon Wave",
+        "layout": "H",
+        "gap": 4,
+        "pad": [
+         3,
+         10,
+         3,
+         8
+        ],
+        "radius": 999,
+        "cross": "CENTER",
+        "x": 640,
+        "y": 227,
+        "fill": {
+         "var": "cozy/coral"
+        },
+        "stroke": {
+         "var": "cozy/coral-lip"
+        },
+        "strokeSides": {
+         "b": 2
+        },
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "x2",
+          "font": {
+           "family": "Fredoka One",
+           "style": "Regular"
+          },
+          "size": 14,
+          "color": "FFFFFF",
+          "name": "Value"
+         },
+         {
+          "type": "TEXT",
+          "text": "RATE UP",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/on-accent"
+          },
+          "name": "Label"
+         }
+        ]
+       },
+       {
+        "name": "Rate Up Abyssal Shadow",
+        "layout": "H",
+        "gap": 4,
+        "pad": [
+         3,
+         10,
+         3,
+         8
+        ],
+        "radius": 999,
+        "cross": "CENTER",
+        "x": 640,
+        "y": 355,
+        "fill": {
+         "var": "cozy/coral"
+        },
+        "stroke": {
+         "var": "cozy/coral-lip"
+        },
+        "strokeSides": {
+         "b": 2
+        },
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "x2",
+          "font": {
+           "family": "Fredoka One",
+           "style": "Regular"
+          },
+          "size": 14,
+          "color": "FFFFFF",
+          "name": "Value"
+         },
+         {
+          "type": "TEXT",
+          "text": "RATE UP",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/on-accent"
+          },
+          "name": "Label"
+         }
+        ]
+       },
+       {
+        "type": "RECT",
+        "name": "Featured Ring",
+        "w": 450,
+        "h": 62,
+        "x": 355,
+        "y": 335,
+        "radius": 17,
+        "stroke": "F2A93B",
+        "strokeW": 3,
+        "effects": [
+         {
+          "color": "F2A93B",
+          "a": 0.55,
+          "blur": 14
+         }
+        ]
+       },
+       {
+        "name": "Featured Pill",
+        "layout": "H",
+        "pad": [
+         3,
+         10,
+         3,
+         10
+        ],
+        "radius": 999,
+        "fill": {
+         "var": "cozy/gold-lip"
+        },
+        "children": [
+         {
+          "type": "TEXT",
+          "text": "FEATURED",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/on-accent"
+          },
+          "name": "Label"
+         }
+        ],
+        "x": 372,
+        "y": 327
+       },
+       {
+        "name": "Milestones",
+        "layout": "V",
+        "gap": 5,
+        "pad": [
+         8,
+         12,
+         10,
+         12
+        ],
+        "w": 260,
+        "x": 40,
+        "y": 557,
+        "radius": 18,
+        "fill": {
+         "var": "cozy/panel"
+        },
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "clip": false,
+        "children": [
+         {
+          "name": "Row",
+          "layout": "H",
+          "fillW": true,
+          "main": "SPACE_BETWEEN",
+          "cross": "CENTER",
+          "clip": false,
+          "children": [
+           {
+            "name": "Left",
+            "layout": "H",
+            "gap": 6,
+            "cross": "CENTER",
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "Milestones",
+              "textStyle": "Aura Fishing/Small",
+              "color": {
+               "var": "cozy/subtext"
+              },
+              "name": "Label"
+             },
+             {
+              "type": "TEXT",
+              "text": "37/400",
+              "font": {
+               "family": "Fredoka One",
+               "style": "Regular"
+              },
+              "size": 16,
+              "color": "8C6FD6",
+              "name": "Value"
+             }
+            ]
+           },
+           {
+            "name": "Btn View",
+            "layout": "H",
+            "pad": [
+             3,
+             12,
+             4,
+             12
+            ],
+            "radius": 999,
+            "fill": {
+             "var": "cozy/sky"
+            },
+            "stroke": {
+             "var": "cozy/sky-lip"
+            },
+            "strokeSides": {
+             "b": 3
+            },
+            "clip": false,
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "View",
+              "textStyle": "Aura Fishing/Caption",
+              "color": {
+               "var": "cozy/on-accent"
+              },
+              "name": "Label"
+             },
+             {
+              "name": "Claim Dot",
+              "w": 18,
+              "h": 18,
+              "radius": 999,
+              "fill": {
+               "var": "cozy/coral"
+              },
+              "stroke": "FFFFFF",
+              "strokeW": 2,
+              "absolute": true,
+              "x": 44,
+              "y": -9,
+              "layout": "H",
+              "main": "CENTER",
+              "cross": "CENTER",
+              "children": [
+               {
+                "type": "TEXT",
+                "text": "1",
+                "font": {
+                 "family": "Fredoka One",
+                 "style": "Regular"
+                },
+                "size": 11,
+                "color": "FFFFFF",
+                "name": "Count"
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Bar",
+          "w": 236,
+          "h": 10,
+          "radius": 999,
+          "fill": {
+           "var": "cozy/track"
+          },
+          "clip": true,
+          "children": [
+           {
+            "type": "RECT",
+            "name": "Fill",
+            "w": 22,
+            "h": 10,
+            "x": 0,
+            "y": 0,
+            "radius": 999,
+            "fill": {
+             "grad": [
+              "B79CF2",
+              "8C6FD6"
+             ]
+            }
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "[skip] Roblox CoreGui (guide)",
+      "w": 1280,
+      "h": 720,
+      "x": 0,
+      "y": 0,
+      "children": [
+       {
+        "type": "RECT",
+        "name": "Top Bar",
+        "w": 1280,
+        "h": 58,
+        "x": 0,
+        "y": 0,
+        "fill": {
+         "hex": "3D4B5C",
+         "opacity": 0.07
+        }
+       },
+       {
+        "type": "RECT",
+        "name": "Roblox Menu Btn",
+        "w": 44,
+        "h": 44,
+        "x": 12,
+        "y": 7,
+        "radius": 12,
+        "fill": {
+         "hex": "3D4B5C",
+         "opacity": 0.28
+        }
+       },
+       {
+        "type": "RECT",
+        "name": "Chat Btn",
+        "w": 44,
+        "h": 44,
+        "x": 64,
+        "y": 7,
+        "radius": 12,
+        "fill": {
+         "hex": "3D4B5C",
+         "opacity": 0.28
+        }
+       },
+       {
+        "type": "TEXT",
+        "text": "ROBLOX TOP BAR (58px)  —  keep clear",
+        "textStyle": "Aura Fishing/Caption",
+        "color": {
+         "var": "cozy/subtext"
+        },
+        "name": "Label",
+        "x": 124,
+        "y": 22
+       },
+       {
+        "type": "RECT",
+        "name": "Chat Window (when open)",
+        "w": 380,
+        "h": 210,
+        "x": 8,
+        "y": 64,
+        "radius": 12,
+        "fill": {
+         "hex": "3D4B5C",
+         "opacity": 0.04
+        },
+        "stroke": {
+         "hex": "3D4B5C",
+         "opacity": 0.25
+        },
+        "strokeW": 1.5
+       },
+       {
+        "type": "TEXT",
+        "text": "CHAT WINDOW (desktop, when open)",
+        "textStyle": "Aura Fishing/Caption",
+        "color": {
+         "var": "cozy/subtext"
+        },
+        "name": "Label",
+        "x": 20,
+        "y": 248
+       },
+       {
+        "type": "RECT",
+        "name": "Leaderboard",
+        "w": 236,
+        "h": 170,
+        "x": 1032,
+        "y": 64,
+        "radius": 12,
+        "fill": {
+         "hex": "3D4B5C",
+         "opacity": 0.06
+        },
+        "stroke": {
+         "hex": "3D4B5C",
+         "opacity": 0.25
+        },
+        "strokeW": 1.5
+       },
+       {
+        "type": "TEXT",
+        "text": "LEADERBOARD (leaderstats)",
+        "textStyle": "Aura Fishing/Caption",
+        "color": {
+         "var": "cozy/subtext"
+        },
+        "name": "Label",
+        "x": 1044,
+        "y": 210
+       },
+       {
+        "type": "ELLIPSE",
+        "name": "Mobile Thumbstick",
+        "w": 150,
+        "h": 150,
+        "x": 50,
+        "y": 510,
+        "fill": {
+         "hex": "3D4B5C",
+         "opacity": 0.07
+        },
+        "stroke": {
+         "hex": "3D4B5C",
+         "opacity": 0.25
+        },
+        "strokeW": 1.5
+       },
+       {
+        "type": "TEXT",
+        "text": "MOBILE THUMBSTICK",
+        "textStyle": "Aura Fishing/Caption",
+        "color": {
+         "var": "cozy/subtext"
+        },
+        "name": "Label",
+        "x": 62,
+        "y": 668
+       },
+       {
+        "type": "ELLIPSE",
+        "name": "Mobile Jump",
+        "w": 96,
+        "h": 96,
+        "x": 1120,
+        "y": 550,
+        "fill": {
+         "hex": "3D4B5C",
+         "opacity": 0.07
+        },
+        "stroke": {
+         "hex": "3D4B5C",
+         "opacity": 0.25
+        },
+        "strokeW": 1.5
+       },
+       {
+        "type": "TEXT",
+        "text": "MOBILE JUMP",
+        "textStyle": "Aura Fishing/Caption",
+        "color": {
+         "var": "cozy/subtext"
+        },
+        "name": "Label",
+        "x": 1122,
+        "y": 660
+       }
+      ]
+     }
+    ],
+    "x": 60,
+    "y": 110
+   },
+   {
+    "name": "E1b · Milestones popup",
+    "w": 480,
+    "h": 520,
+    "x": 1420,
+    "y": 110,
+    "radius": 24,
+    "fill": {
+     "hex": "1A2140",
+     "opacity": 0.55
+    },
+    "children": [
+     {
+      "name": "Milestones Popup",
+      "layout": "V",
+      "gap": 12,
+      "pad": 20,
+      "w": 400,
+      "radius": 28,
+      "fill": {
+       "grad": [
+        "FBF7EF",
+        "EFE6F8"
+       ],
+       "angle": 90
+      },
+      "stroke": {
+       "var": "cozy/track"
+      },
+      "strokeW": 2,
+      "effects": [
+       {
+        "color": "3D4B5C",
+        "a": 0.1,
+        "y": 6,
+        "blur": 18
+       }
+      ],
+      "clip": false,
+      "children": [
+       {
+        "name": "Header",
+        "layout": "H",
+        "fillW": true,
+        "main": "SPACE_BETWEEN",
+        "cross": "CENTER",
+        "children": [
+         {
+          "name": "Title",
+          "layout": "V",
+          "gap": 0,
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "Pull milestones",
+            "textStyle": "Aura Fishing/Title",
+            "color": {
+             "var": "cozy/text"
+            },
+            "name": "Title"
+           },
+           {
+            "type": "TEXT",
+            "text": "REWARDS AT TOTAL BANNER PULLS",
+            "textStyle": "Aura Fishing/Caption",
+            "color": {
+             "var": "cozy/subtext"
+            },
+            "name": "Hint"
+           }
+          ]
+         },
+         {
+          "type": "INSTANCE",
+          "ref": "3487:4298",
+          "variant": "Style=Danger",
+          "texts": {
+           "Label": "X"
+          },
+          "name": "Btn Close"
+         }
+        ]
+       },
+       {
+        "name": "Grid",
+        "w": 360,
+        "h": 224,
+        "clip": false,
+        "children": [
+         {
+          "name": "Milestone 10 (claimed)",
+          "w": 104,
+          "h": 100,
+          "x": 0,
+          "y": 12,
+          "clip": false,
+          "children": [
+           {
+            "name": "Tile",
+            "w": 80,
+            "h": 80,
+            "x": 12,
+            "y": 0,
+            "radius": 18,
+            "clip": true,
+            "fill": "D2F0E2",
+            "stroke": {
+             "var": "cozy/track"
+            },
+            "strokeW": 2,
+            "effects": [
+             {
+              "color": "3D4B5C",
+              "a": 0.08,
+              "y": 4,
+              "blur": 10
+             }
+            ],
+            "children": [
+             {
+              "type": "RECT",
+              "name": "Img ui/status/gem",
+              "w": 54,
+              "h": 54,
+              "x": 13,
+              "y": 5
+             },
+             {
+              "type": "SVG",
+              "name": "Rarity Corner",
+              "w": 26,
+              "h": 26,
+              "x": 0,
+              "y": 0,
+              "svg": "<svg width=\"26\" height=\"26\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#9AA5B1\"/></svg>"
+             },
+             {
+              "name": "Count Row",
+              "layout": "H",
+              "w": 80,
+              "x": 0,
+              "y": 58,
+              "main": "MAX",
+              "pad": [
+               0,
+               7,
+               0,
+               0
+              ],
+              "children": [
+               {
+                "type": "TEXT",
+                "text": "+20",
+                "font": {
+                 "family": "Fredoka One",
+                 "style": "Regular"
+                },
+                "size": 14,
+                "color": "3D4B5C",
+                "name": "Count"
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "name": "Pulls Label",
+            "layout": "H",
+            "w": 104,
+            "x": 0,
+            "y": 84,
+            "main": "CENTER",
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "Claimed",
+              "font": {
+               "family": "Fredoka One",
+               "style": "Regular"
+              },
+              "size": 14,
+              "color": "4FAF8A",
+              "name": "Value"
+             }
+            ]
+           },
+           {
+            "name": "Check",
+            "w": 24,
+            "h": 24,
+            "x": 74,
+            "y": -6,
+            "radius": 999,
+            "fill": {
+             "var": "cozy/mint"
+            },
+            "stroke": "FFFFFF",
+            "strokeW": 2,
+            "layout": "H",
+            "main": "CENTER",
+            "cross": "CENTER",
+            "children": [
+             {
+              "type": "SVG",
+              "w": 14,
+              "h": 14,
+              "name": "Tick",
+              "svg": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 14 14\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M2.5 7.5l3 3 6-7\" stroke=\"#FFFFFF\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Milestone 30 (claimable)",
+          "w": 104,
+          "h": 100,
+          "x": 128,
+          "y": 12,
+          "clip": false,
+          "children": [
+           {
+            "name": "Tile",
+            "w": 80,
+            "h": 80,
+            "x": 12,
+            "y": 0,
+            "radius": 18,
+            "clip": true,
+            "fill": "FFFFFF",
+            "stroke": {
+             "var": "cozy/track"
+            },
+            "strokeW": 2,
+            "effects": [
+             {
+              "color": "3D4B5C",
+              "a": 0.08,
+              "y": 4,
+              "blur": 10
+             },
+             {
+              "color": "FF9E80",
+              "a": 1,
+              "spread": 3,
+              "blur": 0
+             },
+             {
+              "color": "FF9E80",
+              "a": 0.55,
+              "spread": 2,
+              "blur": 16
+             }
+            ],
+            "children": [
+             {
+              "type": "RECT",
+              "name": "Img ui/status/gem",
+              "w": 54,
+              "h": 54,
+              "x": 13,
+              "y": 5
+             },
+             {
+              "type": "SVG",
+              "name": "Rarity Corner",
+              "w": 26,
+              "h": 26,
+              "x": 0,
+              "y": 0,
+              "svg": "<svg width=\"26\" height=\"26\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#5CC98A\"/></svg>"
+             },
+             {
+              "name": "Count Row",
+              "layout": "H",
+              "w": 80,
+              "x": 0,
+              "y": 58,
+              "main": "MAX",
+              "pad": [
+               0,
+               7,
+               0,
+               0
+              ],
+              "children": [
+               {
+                "type": "TEXT",
+                "text": "+50",
+                "font": {
+                 "family": "Fredoka One",
+                 "style": "Regular"
+                },
+                "size": 14,
+                "color": "3D4B5C",
+                "name": "Count"
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "name": "Pulls Label",
+            "layout": "H",
+            "w": 104,
+            "x": 0,
+            "y": 84,
+            "main": "CENTER",
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "30 pulls",
+              "font": {
+               "family": "Fredoka One",
+               "style": "Regular"
+              },
+              "size": 14,
+              "color": "E07A5C",
+              "name": "Value"
+             }
+            ]
+           },
+           {
+            "name": "Btn Claim",
+            "layout": "H",
+            "pad": [
+             2,
+             10,
+             4,
+             10
+            ],
+            "radius": 999,
+            "x": 22,
+            "y": -11,
+            "w": 60,
+            "main": "CENTER",
+            "fill": {
+             "var": "cozy/coral"
+            },
+            "stroke": {
+             "var": "cozy/coral-lip"
+            },
+            "strokeSides": {
+             "b": 3
+            },
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "CLAIM",
+              "font": {
+               "family": "Fredoka One",
+               "style": "Regular"
+              },
+              "size": 13,
+              "color": "FFFFFF",
+              "name": "Label"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Milestone 50 (locked)",
+          "w": 104,
+          "h": 100,
+          "x": 256,
+          "y": 12,
+          "clip": false,
+          "children": [
+           {
+            "name": "Tile",
+            "w": 80,
+            "h": 80,
+            "x": 12,
+            "y": 0,
+            "radius": 18,
+            "clip": true,
+            "fill": "FFFFFF",
+            "stroke": {
+             "var": "cozy/track"
+            },
+            "strokeW": 2,
+            "effects": [
+             {
+              "color": "3D4B5C",
+              "a": 0.08,
+              "y": 4,
+              "blur": 10
+             }
+            ],
+            "children": [
+             {
+              "type": "RECT",
+              "name": "Img equipment/Shrimp",
+              "w": 54,
+              "h": 54,
+              "x": 13,
+              "y": 5
+             },
+             {
+              "type": "SVG",
+              "name": "Rarity Corner",
+              "w": 26,
+              "h": 26,
+              "x": 0,
+              "y": 0,
+              "svg": "<svg width=\"26\" height=\"26\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#5AA9F0\"/></svg>"
+             },
+             {
+              "name": "Count Row",
+              "layout": "H",
+              "w": 80,
+              "x": 0,
+              "y": 58,
+              "main": "MAX",
+              "pad": [
+               0,
+               7,
+               0,
+               0
+              ],
+              "children": [
+               {
+                "type": "TEXT",
+                "text": "x10",
+                "font": {
+                 "family": "Fredoka One",
+                 "style": "Regular"
+                },
+                "size": 14,
+                "color": "3D4B5C",
+                "name": "Count"
+               }
+              ]
+             }
+            ],
+            "opacity": 0.6
+           },
+           {
+            "name": "Pulls Label",
+            "layout": "H",
+            "w": 104,
+            "x": 0,
+            "y": 84,
+            "main": "CENTER",
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "50 pulls",
+              "font": {
+               "family": "Fredoka One",
+               "style": "Regular"
+              },
+              "size": 14,
+              "color": "7A8A99",
+              "name": "Value"
+             }
+            ]
+           },
+           {
+            "name": "Lock",
+            "w": 22,
+            "h": 22,
+            "x": 76,
+            "y": -6,
+            "radius": 999,
+            "fill": "FFFFFF",
+            "stroke": {
+             "var": "cozy/track"
+            },
+            "strokeW": 2,
+            "layout": "H",
+            "main": "CENTER",
+            "cross": "CENTER",
+            "children": [
+             {
+              "type": "SVG",
+              "name": "Icon FaLock",
+              "w": 10,
+              "h": 11,
+              "x": 0,
+              "y": 0,
+              "opacity": 1,
+              "svg": "<svg width=\"10\" height=\"11\" viewBox=\"0 0 448 512\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z\" fill=\"#7A8A99\"/></svg>"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Milestone 100 (locked)",
+          "w": 104,
+          "h": 100,
+          "x": 0,
+          "y": 124,
+          "clip": false,
+          "children": [
+           {
+            "name": "Tile",
+            "w": 80,
+            "h": 80,
+            "x": 12,
+            "y": 0,
+            "radius": 18,
+            "clip": true,
+            "fill": "FFFFFF",
+            "stroke": {
+             "var": "cozy/track"
+            },
+            "strokeW": 2,
+            "effects": [
+             {
+              "color": "3D4B5C",
+              "a": 0.08,
+              "y": 4,
+              "blur": 10
+             }
+            ],
+            "children": [
+             {
+              "type": "RECT",
+              "name": "Img ui/status/treasure_chest",
+              "w": 54,
+              "h": 54,
+              "x": 13,
+              "y": 5
+             },
+             {
+              "type": "SVG",
+              "name": "Rarity Corner",
+              "w": 26,
+              "h": 26,
+              "x": 0,
+              "y": 0,
+              "svg": "<svg width=\"26\" height=\"26\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#B07CF0\"/></svg>"
+             },
+             {
+              "name": "Count Row",
+              "layout": "H",
+              "w": 80,
+              "x": 0,
+              "y": 58,
+              "main": "MAX",
+              "pad": [
+               0,
+               7,
+               0,
+               0
+              ],
+              "children": [
+               {
+                "type": "TEXT",
+                "text": "x2",
+                "font": {
+                 "family": "Fredoka One",
+                 "style": "Regular"
+                },
+                "size": 14,
+                "color": "3D4B5C",
+                "name": "Count"
+               }
+              ]
+             }
+            ],
+            "opacity": 0.6
+           },
+           {
+            "name": "Pulls Label",
+            "layout": "H",
+            "w": 104,
+            "x": 0,
+            "y": 84,
+            "main": "CENTER",
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "100 pulls",
+              "font": {
+               "family": "Fredoka One",
+               "style": "Regular"
+              },
+              "size": 14,
+              "color": "7A8A99",
+              "name": "Value"
+             }
+            ]
+           },
+           {
+            "name": "Lock",
+            "w": 22,
+            "h": 22,
+            "x": 76,
+            "y": -6,
+            "radius": 999,
+            "fill": "FFFFFF",
+            "stroke": {
+             "var": "cozy/track"
+            },
+            "strokeW": 2,
+            "layout": "H",
+            "main": "CENTER",
+            "cross": "CENTER",
+            "children": [
+             {
+              "type": "SVG",
+              "name": "Icon FaLock",
+              "w": 10,
+              "h": 11,
+              "x": 0,
+              "y": 0,
+              "opacity": 1,
+              "svg": "<svg width=\"10\" height=\"11\" viewBox=\"0 0 448 512\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z\" fill=\"#7A8A99\"/></svg>"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Milestone 200 (locked)",
+          "w": 104,
+          "h": 100,
+          "x": 128,
+          "y": 124,
+          "clip": false,
+          "children": [
+           {
+            "name": "Tile",
+            "w": 80,
+            "h": 80,
+            "x": 12,
+            "y": 0,
+            "radius": 18,
+            "clip": true,
+            "fill": "FFFFFF",
+            "stroke": {
+             "var": "cozy/track"
+            },
+            "strokeW": 2,
+            "effects": [
+             {
+              "color": "3D4B5C",
+              "a": 0.08,
+              "y": 4,
+              "blur": 10
+             }
+            ],
+            "children": [
+             {
+              "type": "RECT",
+              "name": "Img ui/status/gem",
+              "w": 54,
+              "h": 54,
+              "x": 13,
+              "y": 5
+             },
+             {
+              "type": "SVG",
+              "name": "Rarity Corner",
+              "w": 26,
+              "h": 26,
+              "x": 0,
+              "y": 0,
+              "svg": "<svg width=\"26\" height=\"26\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#B07CF0\"/></svg>"
+             },
+             {
+              "name": "Count Row",
+              "layout": "H",
+              "w": 80,
+              "x": 0,
+              "y": 58,
+              "main": "MAX",
+              "pad": [
+               0,
+               7,
+               0,
+               0
+              ],
+              "children": [
+               {
+                "type": "TEXT",
+                "text": "+150",
+                "font": {
+                 "family": "Fredoka One",
+                 "style": "Regular"
+                },
+                "size": 14,
+                "color": "3D4B5C",
+                "name": "Count"
+               }
+              ]
+             }
+            ],
+            "opacity": 0.6
+           },
+           {
+            "name": "Pulls Label",
+            "layout": "H",
+            "w": 104,
+            "x": 0,
+            "y": 84,
+            "main": "CENTER",
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "200 pulls",
+              "font": {
+               "family": "Fredoka One",
+               "style": "Regular"
+              },
+              "size": 14,
+              "color": "7A8A99",
+              "name": "Value"
+             }
+            ]
+           },
+           {
+            "name": "Lock",
+            "w": 22,
+            "h": 22,
+            "x": 76,
+            "y": -6,
+            "radius": 999,
+            "fill": "FFFFFF",
+            "stroke": {
+             "var": "cozy/track"
+            },
+            "strokeW": 2,
+            "layout": "H",
+            "main": "CENTER",
+            "cross": "CENTER",
+            "children": [
+             {
+              "type": "SVG",
+              "name": "Icon FaLock",
+              "w": 10,
+              "h": 11,
+              "x": 0,
+              "y": 0,
+              "opacity": 1,
+              "svg": "<svg width=\"10\" height=\"11\" viewBox=\"0 0 448 512\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z\" fill=\"#7A8A99\"/></svg>"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Milestone 400 (locked)",
+          "w": 104,
+          "h": 100,
+          "x": 256,
+          "y": 124,
+          "clip": false,
+          "children": [
+           {
+            "name": "Tile",
+            "w": 80,
+            "h": 80,
+            "x": 12,
+            "y": 0,
+            "radius": 18,
+            "clip": true,
+            "fill": "FFFFFF",
+            "stroke": {
+             "var": "cozy/track"
+            },
+            "strokeW": 2,
+            "effects": [
+             {
+              "color": "F2A93B",
+              "a": 0.6,
+              "spread": 1,
+              "blur": 16
+             }
+            ],
+            "children": [
+             {
+              "type": "RECT",
+              "name": "Img auras/AbyssalShadow",
+              "w": 54,
+              "h": 54,
+              "x": 13,
+              "y": 5
+             },
+             {
+              "type": "SVG",
+              "name": "Rarity Corner",
+              "w": 26,
+              "h": 26,
+              "x": 0,
+              "y": 0,
+              "svg": "<svg width=\"26\" height=\"26\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#F2A93B\"/></svg>"
+             },
+             {
+              "name": "Count Row",
+              "layout": "H",
+              "w": 80,
+              "x": 0,
+              "y": 58,
+              "main": "MAX",
+              "pad": [
+               0,
+               7,
+               0,
+               0
+              ],
+              "children": [
+               {
+                "type": "TEXT",
+                "text": "x1",
+                "font": {
+                 "family": "Fredoka One",
+                 "style": "Regular"
+                },
+                "size": 14,
+                "color": "3D4B5C",
+                "name": "Count"
+               }
+              ]
+             }
+            ],
+            "opacity": 0.8
+           },
+           {
+            "name": "Pulls Label",
+            "layout": "H",
+            "w": 104,
+            "x": 0,
+            "y": 84,
+            "main": "CENTER",
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "400 pulls",
+              "font": {
+               "family": "Fredoka One",
+               "style": "Regular"
+              },
+              "size": 14,
+              "color": "C98B1E",
+              "name": "Value"
+             }
+            ]
+           },
+           {
+            "name": "Lock",
+            "w": 22,
+            "h": 22,
+            "x": 76,
+            "y": -6,
+            "radius": 999,
+            "fill": "FFFFFF",
+            "stroke": {
+             "var": "cozy/track"
+            },
+            "strokeW": 2,
+            "layout": "H",
+            "main": "CENTER",
+            "cross": "CENTER",
+            "children": [
+             {
+              "type": "SVG",
+              "name": "Icon FaLock",
+              "w": 10,
+              "h": 11,
+              "x": 0,
+              "y": 0,
+              "opacity": 1,
+              "svg": "<svg width=\"10\" height=\"11\" viewBox=\"0 0 448 512\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z\" fill=\"#7A8A99\"/></svg>"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Progress",
+        "layout": "V",
+        "gap": 6,
+        "fillW": true,
+        "children": [
+         {
+          "name": "Row",
+          "layout": "H",
+          "fillW": true,
+          "main": "SPACE_BETWEEN",
+          "cross": "CENTER",
+          "children": [
+           {
+            "type": "TEXT",
+            "text": "Banner pulls",
+            "textStyle": "Aura Fishing/Small",
+            "color": {
+             "var": "cozy/subtext"
+            },
+            "name": "Label"
+           },
+           {
+            "type": "TEXT",
+            "text": "37 / 400",
+            "font": {
+             "family": "Fredoka One",
+             "style": "Regular"
+            },
+            "size": 16,
+            "color": "8C6FD6",
+            "name": "Value"
+           }
+          ]
+         },
+         {
+          "name": "Bar",
+          "w": 360,
+          "h": 14,
+          "radius": 999,
+          "fill": {
+           "var": "cozy/track"
+          },
+          "clip": true,
+          "children": [
+           {
+            "type": "RECT",
+            "name": "Fill",
+            "w": 33,
+            "h": 14,
+            "x": 0,
+            "y": 0,
+            "radius": 999,
+            "fill": {
+             "grad": [
+              "B79CF2",
+              "8C6FD6"
+             ]
+            }
+           }
+          ]
+         }
+        ]
+       }
+      ],
+      "x": 40,
+      "y": 40
+     }
+    ]
+   },
+   {
+    "type": "TEXT",
+    "text": "E1b · Milestones popup (View)",
+    "textStyle": "Aura Fishing/Heading",
+    "color": {
+     "var": "cozy/subtext"
+    },
+    "name": "Popup Label",
+    "x": 1420,
+    "y": 80
+   },
+   {
+    "type": "TEXT",
+    "text": "Limited-banner VARIANT of G1 · Aura Altar — same window, same Reel Machine / Rates / Pity / Roll Bar instances at the same positions. Opened by OPEN on the Neon Tide card in the E0 Events hub; Btn Back returns to the hub, X closes everything. Differences: lilac title ribbon + countdown pill, lilac->sky tint, Neon Wave and Abyssal Shadow at x2 odds (1/50, 1/2,500) with RATE UP pills, featured Abyssal Shadow revealed (gold ring + FEATURED) and centred in the reel, own Mythic pity counter, compact Milestones row (37/400, red dot = claimable) whose View pill opens E1b. Rolls use the same G2-G6 reel/reveal flow and prices (ROLL x1 = 5, x10 = 45).",
+    "textStyle": "Aura Fishing/Body",
+    "color": {
+     "var": "cozy/subtext"
+    },
+    "name": "Note",
+    "w": 1280,
+    "x": 60,
+    "y": 860
+   }
+  ]
+ }
+}

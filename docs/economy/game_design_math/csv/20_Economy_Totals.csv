@@ -1,0 +1,26 @@
+﻿Economy Totals - sinks and sources,,,
+"Everything players can spend or earn, summed from the other sheets. Use it to spot where content is too cheap or too slow.",,,
+,,,
+Sink,Currency,Total,Notes
+All rods (shop price),Coins,25535000,One of each rod
+All lines,Coins,7366000,Max depth tiers
+All bags,Coins,296800,Capacity tiers
+Enhance every rod to +10,Coins,289388337,Rods with scaling stats
+All Aquarium slots,Coins,196905000,9 extra slots
+One bait batch of each bait type (BuyAmount each),Coins,1496960,Baits are consumed per catch
+Aura Altar: guaranteed Legendary (worst case),Gems,500,Soft pity
+Aura Altar: guaranteed Mythic (worst case),Gems,1500,Hard pity
+Mastery: CatchBar to max level (50),Pearls,72154,"Linear, capped"
+Mastery: AutoWait to max level (40),Pearls,21327,"Linear, capped"
+Mastery: OfflineCap to max level (32),Pearls,11529,"Linear, capped"
+,,,
+,,,
+Sources,,,
+Source,Currency,Amount,Notes
+"Daily login, 7-day cycle: Coins",Coins,1000,Per 7 days
+"Daily login, 7-day cycle: Gems",Gems,65,Per 7 days
+"Daily login, 7-day cycle: Pearls",Pearls,500,Per 7 days
+Daily quests: Gems per day (all done),Gems,15,3 quests x 5 gems
+Level-ups: Gems by level 50,Gems,245,5 Gems per level
+New species: Gems for all 30 fish,Gems,90,First catch of each species
+Event banner milestones (Neon Tide),Gems,220,Total over 400 pulls

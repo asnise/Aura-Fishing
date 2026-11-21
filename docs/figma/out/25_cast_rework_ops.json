@@ -1,0 +1,303 @@
+[
+ {
+  "remove": [
+   "3492:16704"
+  ]
+ },
+ {
+  "replaceId": "3492:16696",
+  "tree": {
+   "name": "Actions",
+   "layout": "V",
+   "gap": 10,
+   "w": 200,
+   "x": 1064,
+   "y": 290,
+   "children": [
+    {
+     "type": "INSTANCE",
+     "ref": "3487:4313",
+     "variant": "Type=Bag",
+     "texts": {
+      "Value": "18 / 50"
+     },
+     "name": "Bag"
+    },
+    {
+     "name": "Depth Stepper",
+     "layout": "H",
+     "w": 200,
+     "h": 57,
+     "pad": [
+      0,
+      8,
+      0,
+      8
+     ],
+     "main": "SPACE_BETWEEN",
+     "cross": "CENTER",
+     "radius": 16,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 2,
+     "children": [
+      {
+       "name": "Btn Minus",
+       "w": 40,
+       "h": 40,
+       "radius": 12,
+       "fill": {
+        "var": "cozy/sand"
+       },
+       "stroke": {
+        "var": "cozy/track"
+       },
+       "strokeW": 2,
+       "strokeSides": {
+        "b": 4
+       },
+       "layout": "H",
+       "main": "CENTER",
+       "cross": "CENTER",
+       "children": [
+        {
+         "type": "TEXT",
+         "text": "-",
+         "font": {
+          "family": "Fredoka One",
+          "style": "Regular"
+         },
+         "size": 26,
+         "color": "3D4B5C",
+         "name": "Label"
+        }
+       ]
+      },
+      {
+       "name": "Readout",
+       "layout": "V",
+       "gap": 0,
+       "cross": "CENTER",
+       "children": [
+        {
+         "type": "TEXT",
+         "text": "DEPTH",
+         "textStyle": "Aura Fishing/Caption",
+         "color": {
+          "var": "cozy/subtext"
+         },
+         "name": "Label"
+        },
+        {
+         "type": "TEXT",
+         "text": "80m",
+         "font": {
+          "family": "Fredoka One",
+          "style": "Regular"
+         },
+         "size": 22,
+         "color": "3D4B5C",
+         "name": "Value"
+        }
+       ]
+      },
+      {
+       "name": "Btn Plus",
+       "w": 40,
+       "h": 40,
+       "radius": 12,
+       "fill": {
+        "var": "cozy/sand"
+       },
+       "stroke": {
+        "var": "cozy/track"
+       },
+       "strokeW": 2,
+       "strokeSides": {
+        "b": 4
+       },
+       "layout": "H",
+       "main": "CENTER",
+       "cross": "CENTER",
+       "children": [
+        {
+         "type": "TEXT",
+         "text": "+",
+         "font": {
+          "family": "Fredoka One",
+          "style": "Regular"
+         },
+         "size": 26,
+         "color": "3D4B5C",
+         "name": "Label"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "INSTANCE",
+     "ref": "3487:4298",
+     "variant": "Style=Ghost",
+     "texts": {
+      "Label": "AUTO: OFF"
+     },
+     "name": "Btn Auto",
+     "fillW": true
+    },
+    {
+     "type": "INSTANCE",
+     "ref": "3487:4298",
+     "variant": "Style=Gold",
+     "texts": {
+      "Label": "SELL ALL"
+     },
+     "name": "Btn Sell",
+     "fillW": true
+    }
+   ]
+  }
+ },
+ {
+  "parentId": "3492:16667",
+  "tree": {
+   "name": "Btn Cast Mobile",
+   "x": 1020,
+   "y": 554,
+   "w": 88,
+   "h": 88,
+   "radius": 999,
+   "fill": {
+    "var": "cozy/coral"
+   },
+   "stroke": {
+    "var": "cozy/coral-lip"
+   },
+   "strokeW": 2,
+   "strokeSides": {
+    "b": 5
+   },
+   "layout": "H",
+   "main": "CENTER",
+   "cross": "CENTER",
+   "children": [
+    {
+     "type": "TEXT",
+     "text": "CAST",
+     "font": {
+      "family": "Fredoka One",
+      "style": "Regular"
+     },
+     "size": 20,
+     "color": "FFFFFF",
+     "name": "Label"
+    }
+   ]
+  }
+ },
+ {
+  "parentId": "3492:16667",
+  "tree": {
+   "name": "Cast Charge [state: holding]",
+   "x": 0,
+   "y": 0,
+   "w": 1280,
+   "h": 720,
+   "children": [
+    {
+     "name": "Power Bar",
+     "x": 700,
+     "y": 230,
+     "w": 26,
+     "h": 170,
+     "radius": 13,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 2,
+     "clip": true,
+     "children": [
+      {
+       "type": "RECT",
+       "name": "Fill",
+       "x": 0,
+       "y": 51,
+       "w": 26,
+       "h": 118,
+       "fill": {
+        "var": "cozy/coral"
+       }
+      },
+      {
+       "type": "RECT",
+       "name": "Perfect Zone",
+       "x": 0,
+       "y": 17,
+       "w": 26,
+       "h": 20,
+       "fill": {
+        "var": "cozy/gold"
+       },
+       "opacity": 0.85
+      },
+      {
+       "type": "RECT",
+       "name": "Needle",
+       "x": 0,
+       "y": 49,
+       "w": 26,
+       "h": 4,
+       "fill": "FFFFFF"
+      }
+     ]
+    },
+    {
+     "type": "ELLIPSE",
+     "name": "Aim Marker",
+     "x": 610,
+     "y": 520,
+     "w": 70,
+     "h": 26,
+     "fill": "FFFFFF",
+     "opacity": 0.25,
+     "stroke": "FFFFFF",
+     "strokeW": 3
+    },
+    {
+     "type": "ELLIPSE",
+     "name": "Aim Marker Miss (grey, not water)",
+     "x": 470,
+     "y": 455,
+     "w": 56,
+     "h": 20,
+     "fill": "9AA5B1",
+     "opacity": 0.35,
+     "stroke": "9AA5B1",
+     "strokeW": 3
+    },
+    {
+     "type": "TEXT",
+     "text": "PERFECT!",
+     "font": {
+      "family": "Fredoka One",
+      "style": "Regular"
+     },
+     "size": 30,
+     "color": "F2B544",
+     "name": "Perfect Pop",
+     "x": 660,
+     "y": 186,
+     "textStroke": "3D4B5C",
+     "textStrokeW": 3
+    }
+   ]
+  }
+ }
+]

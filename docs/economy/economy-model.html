@@ -1,0 +1,555 @@
+<title>Aura Fishing Economy Model</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Thai:wght@400;500;600&family=Mitr:wght@500;600&display=swap">
+<style>
+/* Layout: one working column — preset bar, KPI strip, results tables, then editable inputs; numbers in mono. */
+:root {
+  --bg: #EEF3F4; --surface: #FFFFFF; --sunk: #E3ECEE; --line: #CFDCDF;
+  --ink: #12262E; --muted: #587078; --accent: #0E7C86; --accent-soft: #D3EEF0;
+  --gold: #A87A0C; --gold-soft: #F6EBCB; --warn: #C2532F; --warn-soft: #F8DFD5; --good: #2F8A55;
+  --f-display: "Mitr", "IBM Plex Sans Thai", system-ui, sans-serif;
+  --f-body: "IBM Plex Sans Thai", system-ui, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0B181D; --surface: #11232A; --sunk: #0E1E24; --line: #22404A;
+  --ink: #E2EDEF; --muted: #8DA6AD; --accent: #3BB8C2; --accent-soft: #123C42;
+  --gold: #E3BC52; --gold-soft: #3A3014; --warn: #F08A6E; --warn-soft: #43241B; --good: #5CC98A; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0B181D; --surface: #11232A; --sunk: #0E1E24; --line: #22404A;
+  --ink: #E2EDEF; --muted: #8DA6AD; --accent: #3BB8C2; --accent-soft: #123C42;
+  --gold: #E3BC52; --gold-soft: #3A3014; --warn: #F08A6E; --warn-soft: #43241B; --good: #5CC98A; color-scheme: dark }
+* { box-sizing: border-box }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 14px; line-height: 1.55; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-block: 28px 64px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 28px; }
+h1, h2, h3 { font-family: var(--f-display); font-weight: 600; text-wrap: balance; margin: 0; }
+h1 { font-size: 28px; letter-spacing: -0.01em; }
+h2 { font-size: 19px; }
+h3 { font-size: 15px; font-weight: 500; }
+p { margin: 0; }
+.sub { color: var(--muted); max-width: 72ch; }
+.mono, td.n, input[type=number] { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+header { display: grid; gap: 10px; }
+.bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+button { font: inherit; font-weight: 500; border: 1px solid var(--line); background: var(--surface); color: var(--ink); padding: 7px 14px; border-radius: 8px; cursor: pointer; }
+button:hover { border-color: var(--accent); }
+button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+button.primary { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+button.on { background: var(--accent-soft); border-color: var(--accent); }
+.tag { font-size: 12px; color: var(--muted); }
+section { display: grid; gap: 12px; }
+.sec-head { display: grid; gap: 4px; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; }
+.kpi { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; display: grid; gap: 2px; align-content: start; }
+.kpi .k { font-size: 12px; color: var(--muted); }
+.kpi .v { font-family: var(--f-mono); font-size: 22px; font-weight: 500; }
+.kpi .cmp { font-size: 11.5px; color: var(--muted); font-family: var(--f-mono); }
+.kpi.bad { border-color: var(--warn); background: var(--warn-soft); }
+.kpi.gold { border-color: var(--gold); background: var(--gold-soft); }
+.tbl { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+table { border-collapse: collapse; width: 100%; min-width: 560px; }
+th, td { padding: 7px 10px; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th { font-size: 12px; font-weight: 500; color: var(--muted); background: var(--sunk); position: sticky; top: 0; }
+td.n, th.n { text-align: right; }
+tr:last-child td { border-bottom: 0; }
+tr.lvgate td { background: var(--warn-soft); }
+.pill { display: inline-block; font-size: 11.5px; padding: 1px 8px; border-radius: 99px; background: var(--sunk); color: var(--muted); }
+.pill.warn { background: var(--warn-soft); color: var(--warn); }
+.pill.good { background: var(--accent-soft); color: var(--accent); }
+.formula { font-family: var(--f-mono); font-size: 12.5px; background: var(--sunk); border-radius: 8px; padding: 10px 12px; white-space: pre-wrap; overflow-x: auto; color: var(--ink); }
+details { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; }
+details > summary { cursor: pointer; font-family: var(--f-display); font-weight: 500; font-size: 15px; }
+details[open] > summary { margin-bottom: 10px; }
+.params { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 8px 16px; }
+.param { display: grid; grid-template-columns: 1fr 96px; gap: 8px; align-items: center; min-width: 0; }
+.param label { font-size: 13px; min-width: 0; }
+.param label small { display: block; color: var(--muted); font-size: 11.5px; }
+input[type=number], input[type=text], select, textarea { font: inherit; background: var(--bg); color: var(--ink); border: 1px solid var(--line); border-radius: 6px; padding: 4px 6px; width: 100%; min-width: 0; }
+input[type=number] { text-align: right; font-size: 13px; }
+td input[type=number] { width: 90px; }
+td input[type=text] { width: 150px; }
+td select { width: 120px; }
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 14px; }
+.grid2 > * { min-width: 0; }
+textarea { font-family: var(--f-mono); font-size: 12px; height: 120px; }
+.note { font-size: 12.5px; color: var(--muted); }
+.x { color: var(--muted); cursor: pointer; border: 0; background: none; padding: 2px 6px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important } }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Aura Fishing — โมเดลเศรษฐกิจ</h1>
+    <p class="sub">จำลองการเล่น (ตกปลา → ขาย → ซื้อของ → เลเวล → สุ่มกาชา) นาทีต่อนาทีจากตัวเลข config ทุกช่องสีเทาด้านล่างแก้ได้ ผลคำนวณใหม่ทันที และจำค่าไว้ในเบราว์เซอร์นี้ ตัวเลขเป็นการประมาณ ต้องเทียบกับการเล่นจริงอีกที</p>
+    <div class="bar">
+      <span class="tag">เริ่มจาก:</span>
+      <button id="pCurrent">เกมตอนนี้ (Current)</button>
+      <button id="pPlan">แผน Balance Pass 1</button>
+      <span class="tag" id="dirty"></span>
+    </div>
+  </header>
+
+  <section>
+    <div class="sec-head"><h2>สรุปสำคัญ</h2>
+      <p class="note">บรรทัดเล็กใต้ตัวเลข = ค่าเดียวกันของ preset "เกมตอนนี้" และ "แผน Pass 1" ไว้เทียบ</p></div>
+    <div class="kpis" id="kpis"></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>ไทม์ไลน์การเล่น</h2>
+      <p class="note">ผู้เล่นเล่น <span class="mono" id="mixNote"></span> โดยเงินถูกใช้ซื้อของตามลำดับรายการ และ Gems ถูกใช้สุ่มกาชาทันทีที่พอ</p></div>
+    <div class="tbl"><table id="tTimeline"></table></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>จังหวะการซื้อของ</h2>
+      <p class="note">แถวสีส้ม = เงินพอแล้วแต่ต้องรอเลเวล (กำแพงเลเวล) — "ห่างจากชิ้นก่อน" คือช่วงที่ไม่มีอะไรให้ซื้อ</p></div>
+    <div class="tbl"><table id="tBuys"></table></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>รายได้ต่อด่าน (ตามสายเบ็ด)</h2>
+      <p class="note">ผู้เล่นเลือกความลึกที่ได้เงินต่อตัวสูงสุดภายในเพดานสาย; Luck = คันที่ถืออยู่ตอนซื้อสาย + เหยื่อ + ออร่า</p></div>
+    <div class="tbl"><table id="tStages"></table></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>เลเวลและกาชา</h2></div>
+    <div class="grid2">
+      <div class="tbl"><table id="tLevels"></table></div>
+      <div class="tbl"><table id="tGacha"></table></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>จ่ายเงิน vs เวลาเล่น</h2>
+      <p class="note">ของแต่ละชิ้นเท่ากับเวลาเล่นกี่นาที ณ จุดอ้างอิง → ราคา Robux ต่อ 1 ชั่วโมงที่ผู้เล่นประหยัดได้ (ยิ่งต่ำ ยิ่งคุ้มในสายตาผู้เล่น)</p>
+      <div class="bar"><span class="tag">จุดอ้างอิง:</span><select id="refSel" style="width:auto"></select></div></div>
+    <div class="tbl"><table id="tPay"></table></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>ระบบ idle: บ่อปลา → Pearls → Mastery</h2>
+      <p class="note">ยังไม่มีในเกม — ตัวเลขตามแผน ใช้ดูว่าระดับ Mastery โตเร็วแค่ไหนตามจำนวนวันที่เข้าเกม</p></div>
+    <div class="tbl"><table id="tIdle"></table></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>สูตรที่ใช้</h2></div>
+    <div class="formula" id="formulas"></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>ปรับค่า</h2><p class="note">แก้ตัวเลขแล้วตารางด้านบนเปลี่ยนตาม — เปิดทีละหมวด</p></div>
+    <details open><summary>ค่าหลัก (GameConfig + สมมติฐานการเล่น)</summary><div class="params" id="params"></div></details>
+    <details><summary>ระดับความหายาก (Rarities)</summary><div class="tbl"><table id="eRar"></table></div></details>
+    <details><summary>ปลา (Fish)</summary><div class="tbl"><table id="eFish"></table></div><div class="bar" style="margin-top:8px"><button id="addFish">+ เพิ่มปลา</button></div></details>
+    <details><summary>ของในร้าน (ลำดับ = ลำดับที่ผู้เล่นซื้อ)</summary><div class="tbl"><table id="eGear"></table></div><div class="bar" style="margin-top:8px"><button id="addGear">+ เพิ่มของ</button></div></details>
+    <details><summary>สินค้า Robux</summary><div class="tbl"><table id="eProd"></table></div><div class="bar" style="margin-top:8px"><button id="addProd">+ เพิ่มสินค้า</button></div>
+      <p class="note" style="margin-top:8px">ชนิด: gems / coins = ได้ทันที · boost = เงิน ×(1+ค่า) นาน "นาที" · pass_coin = เงิน +ค่า ถาวร · pass_luck = Luck +ค่า ถาวร · pass_auto = ลดเวลารอ Auto ค่า · qol = ความสะดวก (คำนวณเป็นเวลาไม่ได้)</p></details>
+    <details><summary>ระบบ idle (แผน)</summary><div class="params" id="idleParams"></div></details>
+    <details><summary>Export / Import ค่า (JSON)</summary>
+      <p class="note">กด Export แล้วคัดลอกไปเก็บ หรือส่งให้ Claude ใส่ลง config จริง • วาง JSON แล้วกด Import เพื่อโหลดกลับ</p>
+      <textarea id="json" aria-label="JSON ของค่าทั้งหมด"></textarea>
+      <div class="bar" style="margin-top:8px"><button id="exp">Export</button><button id="cpy">Copy</button><button id="imp">Import</button><span class="tag" id="jsonMsg"></span></div>
+    </details>
+  </section>
+</div>
+
+<script>
+(() => {
+const RAR = ["Common","Uncommon","Rare","Epic","Legendary","Mythic"];
+const clone = o => JSON.parse(JSON.stringify(o));
+
+const FISH = [
+  ["Pebble Minnow","Common",0,40,4],["Bubble Carp","Common",0,50,6],["Reed Perch","Common",5,60,8],["Sunscale Sardine","Common",0,30,5],
+  ["Pearl Clam","Uncommon",10,50,22],["Lily Trout","Uncommon",0,45,18],["Dewdrop Koi","Rare",0,35,70],["Crystal Guppy","Epic",0,50,240],
+  ["Stripe Bass","Common",40,140,14],["Tide Snapper","Common",50,160,16],["Armored Crab","Uncommon",60,120,34],["Silver Ray","Uncommon",70,200,40],
+  ["Razor Pike","Rare",60,180,110],["Moon Jelly","Rare",80,200,95],["Ember Tuna","Epic",100,200,420],["Coral Seahorse","Legendary",50,150,1500],
+  ["Lantern Angler","Uncommon",200,400,90],["Glow Eel","Rare",220,500,260],["Ancient Coelacanth","Legendary",250,600,3200],["Naga Hatchling","Mythic",200,300,12000],
+  ["(ใหม่) Deep Common","Common",200,400,60],
+].map(([name,rarity,dmin,dmax,value]) => ({ name, rarity, dmin, dmax, value, rw: 0, on: true }));
+
+const RARITIES = {
+  Common: { weight: 1000, xp: 5, gems: 0, pearl: 0.2 }, Uncommon: { weight: 400, xp: 10, gems: 0, pearl: 0.5 },
+  Rare: { weight: 120, xp: 25, gems: 1, pearl: 1.5 }, Epic: { weight: 30, xp: 60, gems: 3, pearl: 4 },
+  Legendary: { weight: 6, xp: 150, gems: 10, pearl: 12 }, Mythic: { weight: 1, xp: 400, gems: 30, pearl: 40 },
+};
+
+const PARAMS = [
+  ["hours","ชั่วโมงที่จำลอง",1,""],
+  ["minutesPerDay","เล่นต่อวัน (นาที)",5,"ใช้แปลงเควสต์รายวัน/วันเล่น"],
+  ["manualShare","สัดส่วนเวลาเล่นมือ",0.05,"0–1 ที่เหลือ = Auto"],
+  ["manualSec","เล่นมือ: วินาที/ตัว",0.5,"รอกิน + Hook + มินิเกม + การ์ด"],
+  ["manualSuccess","เล่นมือ: อัตราจับสำเร็จ",0.05,"สายขาด = ไม่ได้ปลา"],
+  ["manualMult","ตัวคูณเล่นมือ",0.1,"ManualMultiplier"],
+  ["perfectRate","สัดส่วน PERFECT",0.05,""],
+  ["perfectBonus","โบนัส PERFECT",0.05,"PerfectCatchBonus"],
+  ["streakAvg","Hot Streak เฉลี่ย",0.05,"0 = ยังไม่มีระบบ"],
+  ["sellOverhead","เวลาเสียไปกับการขาย",0.05,"สัดส่วนเวลาเดินไปขาย/เปิดเมนู"],
+  ["autoCycle","Auto: วินาที/ตัว",1,"AutoCycleTime"],
+  ["autoMult","Auto: ตัวคูณราคา",0.1,"AutoMultiplier"],
+  ["autoGemFactor","Auto: ตัวคูณ Gems",0.1,"1 = เท่าเล่นมือ"],
+  ["autoChestFactor","Auto: ตัวคูณหีบ",0.1,""],
+  ["valueScale","ตัวคูณมูลค่าปลาทั้งหมด",1,"×10 = ตัวเลขใหญ่"],
+  ["sizeFactor","ตัวคูณขนาดเฉลี่ย",0.01,"ปลาเบาออกบ่อยกว่า ≈ 0.93"],
+  ["mutAvg","ตัวคูณ mutation เฉลี่ย",0.005,"1 + Σ โอกาส×(คูณ−1)"],
+  ["luckExp","LuckTierExponent",0.05,""],
+  ["baitLuck","Luck จากเหยื่อ",0.05,"Worm 0.1"],
+  ["auraLuck","Luck จากออร่า",0.05,"Sparkling Dew 0.05"],
+  ["locationMax","ความลึกสูงสุดของแผนที่ (m)",10,"Starter Bay = 300"],
+  ["startDepth","สายเริ่มต้น (m)",10,"Cotton 30m"],
+  ["startCoins","เงินเริ่มต้น",50,""],
+  ["startGems","Gems เริ่มต้น",5,""],
+  ["xpBase","XPBase",5,""],
+  ["xpExp","XPExponent",0.05,""],
+  ["gemsPerLevel","Gems ต่อเลเวล",1,""],
+  ["chestChance","หีบ: โอกาสต่อตัว",0.005,"× (1 + Luck×0.5)"],
+  ["chestCoinP","หีบ: โอกาสได้เงิน",0.05,""],
+  ["chestCoinAvg","หีบ: เงินเฉลี่ย",25,"× ตัวคูณมูลค่า"],
+  ["chestGemP","หีบ: โอกาสได้ Gems",0.05,""],
+  ["chestGemAvg","หีบ: Gems เฉลี่ย",0.5,""],
+  ["gachaCost","กาชา: Gems ต่อครั้ง",1,""],
+  ["pityLeg","Pity Legendary (ครั้ง)",10,"0 = ไม่มี"],
+  ["pityMythic","Pity Mythic (ครั้ง)",10,"0 = ไม่มี"],
+  ["newSpeciesGems","Gems เมื่อจับชนิดใหม่",1,""],
+  ["dailyQuestGems","Gems จากเควสต์/วัน",5,""],
+  ["robuxUSD","ราคา 1 Robux (USD)",0.001,"≈ 0.0125"],
+];
+const IDLE = [
+  ["slotsStart","ช่องบ่อเริ่มต้น",1,""],["slotsPerDay","ช่องเพิ่มต่อวัน",1,"ซื้อด้วย Coins"],["slotsMax","ช่องสูงสุด",1,""],
+  ["pearlPerSlot","Pearls/นาที ต่อช่อง",0.1,"ปลาทั่วไปในบ่อ (Rare = 1.5)"],["offlineHours","ออฟไลน์ต่อวัน (ชม.)",1,""],
+  ["offlineCap","เพดานออฟไลน์ (ชม.)",0.5,""],["masteryBase","Mastery ราคาเลเวลแรก",5,""],["masteryGrowth","Mastery ราคา ×/เลเวล",0.01,""],
+  ["masteryTracks","จำนวนสาย Mastery",1,"แบ่ง Pearls เท่ากัน"],
+];
+
+const base = {
+  hours: 30, minutesPerDay: 60, manualShare: 0.7, manualSec: 12, manualSuccess: 0.9, manualMult: 1.5, perfectRate: 0.3, perfectBonus: 0.25,
+  streakAvg: 0, sellOverhead: 0.1, autoCycle: 9, autoMult: 1, autoGemFactor: 1, autoChestFactor: 1, valueScale: 1, sizeFactor: 0.93,
+  mutAvg: 1.026, luckExp: 0.75, baitLuck: 0.1, auraLuck: 0.05, locationMax: 300, startDepth: 30, startCoins: 0, startGems: 15,
+  xpBase: 60, xpExp: 1.45, gemsPerLevel: 5, chestChance: 0.03, chestCoinP: 0.6, chestCoinAvg: 375, chestGemP: 0.25, chestGemAvg: 6.5,
+  gachaCost: 5, pityLeg: 0, pityMythic: 100, newSpeciesGems: 0, dailyQuestGems: 0, robuxUSD: 0.0125,
+  slotsStart: 3, slotsPerDay: 1, slotsMax: 12, pearlPerSlot: 1.5, offlineHours: 16, offlineCap: 4, masteryBase: 50, masteryGrowth: 1.15, masteryTracks: 7,
+};
+
+const gear = (rows) => rows.map(([name, kind, price, lv, stat]) => ({ name, kind, price, lv, depth: kind === "Line" ? stat : 0, luck: kind === "Rod" ? stat : 0 }));
+const PRODUCTS = [
+  { name: "Gems Pack S", robux: 99, kind: "gems", amount: 100, dur: 0 },
+  { name: "Gems Pack L", robux: 449, kind: "gems", amount: 600, dur: 0 },
+  { name: "Starter Pack (เงิน)", robux: 49, kind: "coins", amount: 20000, dur: 0 },
+  { name: "2x Coins 30 นาที", robux: 49, kind: "boost", amount: 1, dur: 30 },
+  { name: "VIP (+15% Luck)", robux: 299, kind: "pass_luck", amount: 0.15, dur: 0 },
+  { name: "Auto-Fish Pro (−25% Auto Wait)", robux: 199, kind: "pass_auto", amount: 0.25, dur: 0 },
+  { name: "Infinite Bag", robux: 249, kind: "qol", amount: 0, dur: 0 },
+];
+
+const PRESETS = {
+  current: {
+    p: { ...base },
+    rar: clone(RARITIES),
+    fish: FISH.map(f => ({ ...f, on: f.name !== "(ใหม่) Deep Common" })),
+    gear: gear([["Woven Basket","Bag",250,0],["Hemp Line","Line",300,0,80],["Bamboo Rod","Rod",400,0,0.05],["Fish Crate","Bag",1500,0],
+      ["Nylon Line","Line",1800,0,150],["Coral Rod","Rod",2500,0,0.15],["Ice Coolbox","Bag",8000,0],["Spider-Silk Line","Line",9000,0,300],
+      ["Moonsilver Rod","Rod",15000,10,0.35],["Ship's Hold","Bag",40000,0],["Naga Scale Rod","Rod",90000,25,0.75]]),
+    prod: clone(PRODUCTS),
+  },
+  plan: {
+    p: { ...base, valueScale: 10, startCoins: 500, streakAvg: 0.2, autoCycle: 14, autoGemFactor: 0.5, autoChestFactor: 0.5, luckExp: 0.6,
+      xpExp: 1.3, pityLeg: 100, pityMythic: 300, newSpeciesGems: 3, dailyQuestGems: 15 },
+    rar: clone(RARITIES),
+    fish: FISH.map(f => ({ ...f, rw: f.name === "Naga Hatchling" ? 0.2 : 0 })),
+    gear: gear([["Woven Basket","Bag",800,0],["Hemp Line","Line",1000,0,80],["Bamboo Rod","Rod",1500,0,0.05],["Fish Crate","Bag",6000,0],
+      ["Coral Rod","Rod",12000,0,0.15],["Nylon Line","Line",15000,0,150],["Ice Coolbox","Bag",40000,0],["Moonsilver Rod","Rod",120000,10,0.35],
+      ["Spider-Silk Line","Line",150000,12,300],["Ship's Hold","Bag",250000,0],["Naga Scale Rod","Rod",900000,25,0.75]]),
+    prod: clone(PRODUCTS),
+  },
+};
+
+// ---------- model ----------
+const TIER = Object.fromEntries(RAR.map((r, i) => [r, i + 1]));
+const xpFor = (p, L) => Math.floor(p.xpBase * Math.pow(L, p.xpExp));
+
+function makeEV(s) {
+  const cache = new Map();
+  return (cap, luck) => {
+    const key = cap + "|" + luck.toFixed(4);
+    if (cache.has(key)) return cache.get(key);
+    const p = s.p, top = Math.min(cap, p.locationMax);
+    let best = null;
+    for (let d = 0; d <= top; d++) {
+      let W = 0, C = 0, X = 0, G = 0, M = 0, L = 0, n = 0;
+      for (const f of s.fish) {
+        if (!f.on || d < f.dmin || d > f.dmax) continue;
+        const r = s.rar[f.rarity]; if (!r) continue;
+        const w = (f.rw > 0 ? f.rw : r.weight) * Math.pow(1 + luck, (TIER[f.rarity] - 1) * p.luckExp);
+        W += w; C += w * f.value; X += w * r.xp; G += w * r.gems; n++;
+        if (f.rarity === "Mythic") M += w; if (f.rarity === "Legendary") L += w;
+      }
+      if (!W) continue;
+      const coin = C / W * p.valueScale * p.sizeFactor * p.mutAvg;
+      if (!best || coin > best.coin + 1e-9) best = { depth: d, coin, xp: X / W, gem: G / W, myth: M / W, leg: L / W, n };
+    }
+    const out = best || { depth: 0, coin: 0, xp: 0, gem: 0, myth: 0, leg: 0, n: 0 };
+    cache.set(key, out);
+    return out;
+  };
+}
+
+function rates(s, ev, luck) {
+  const p = s.p;
+  const play = 1 - p.sellOverhead;
+  const fM = 60 / p.manualSec * p.manualSuccess * p.manualShare * play;
+  const fA = 60 / p.autoCycle * (1 - p.manualShare) * play;
+  const mMult = (p.manualMult + p.perfectRate * p.perfectBonus) * (1 + p.streakAvg);
+  const chest = p.chestChance * (1 + luck * 0.5);
+  const chestFish = fM + fA * p.autoChestFactor;
+  const cpm = fM * ev.coin * mMult + fA * ev.coin * p.autoMult + chestFish * chest * p.chestCoinP * p.chestCoinAvg * p.valueScale;
+  const xpm = fM * ev.xp * p.manualMult + fA * ev.xp;
+  const gpm = (fM + fA * p.autoGemFactor) * ev.gem + chestFish * chest * p.chestGemP * p.chestGemAvg + p.dailyQuestGems / Math.max(1, p.minutesPerDay);
+  return { cpm, xpm, gpm, fpm: fM + fA, mythPerHour: (fM + fA) * 60 * ev.myth };
+}
+
+function simulate(s) {
+  const p = s.p, EV = makeEV(s);
+  const dt = 0.25, T = Math.max(1, p.hours) * 60;
+  let coins = p.startCoins, gems = p.startGems, level = 1, xp = 0, cap = p.startDepth, rodLuck = 0;
+  let pulls = 0, coinsEarned = 0, gemsEarned = p.startGems;
+  const items = s.gear.map((g, i) => ({ ...g, i, at: null, waitLv: 0, coinsReadyAt: null }));
+  const reachable = () => s.fish.filter(f => f.on && f.dmin <= Math.min(cap, p.locationMax)).length;
+  let seen = reachable();
+  const stages = [];
+  const lvAt = {}; const pityAt = { leg: null, myth: null };
+  const checkpoints = [10, 30, 60, 120, 180, 300, 600, 1200, 1800, 3000].filter(m => m <= T);
+  const cp = []; let ci = 0;
+  const luckNow = () => rodLuck + p.baitLuck + p.auraLuck;
+  const stageRow = (name, t) => { const l = luckNow(), ev = EV(cap, l), r = rates(s, ev, l); stages.push({ name, t, cap, luck: l, ev, r }); };
+  stageRow(`เริ่มเกม (${p.startDepth}m)`, 0);
+  for (let t = 0; t <= T + 1e-9; t += dt) {
+    let bought = true;
+    while (bought) {
+      bought = false;
+      for (const it of items) {
+        if (it.at !== null) continue;
+        if (coins >= it.price && it.coinsReadyAt === null) it.coinsReadyAt = t;
+        if (coins >= it.price && level >= it.lv) {
+          coins -= it.price; it.at = t; it.waitLv = t - it.coinsReadyAt; bought = true;
+          if (it.kind === "Rod") rodLuck = Math.max(rodLuck, it.luck);
+          if (it.kind === "Line" && it.depth > cap) {
+            cap = it.depth;
+            const now = reachable(); if (now > seen) { gems += (now - seen) * p.newSpeciesGems; gemsEarned += (now - seen) * p.newSpeciesGems; seen = now; }
+            stageRow(it.name + ` (${it.depth}m)`, t);
+          }
+        }
+      }
+    }
+    const l = luckNow(), ev = EV(cap, l), r = rates(s, ev, l);
+    while (ci < checkpoints.length && t >= checkpoints[ci] - 1e-9) {
+      cp.push({ t, coinsEarned, coins, level, gemsEarned, pulls, owned: items.filter(i => i.at !== null).length, ...r, cap, luck: l });
+      ci++;
+    }
+    coins += r.cpm * dt; coinsEarned += r.cpm * dt; xp += r.xpm * dt; gems += r.gpm * dt; gemsEarned += r.gpm * dt;
+    while (xp >= xpFor(p, level)) { xp -= xpFor(p, level); level++; gems += p.gemsPerLevel; gemsEarned += p.gemsPerLevel; if (!lvAt[level]) lvAt[level] = t; }
+    while (p.gachaCost > 0 && gems >= p.gachaCost) {
+      gems -= p.gachaCost; pulls++;
+      if (p.pityLeg > 0 && pityAt.leg === null && pulls >= p.pityLeg) pityAt.leg = t;
+      if (p.pityMythic > 0 && pityAt.myth === null && pulls >= p.pityMythic) pityAt.myth = t;
+    }
+  }
+  const last = rates(s, EV(cap, luckNow()), luckNow());
+  return { items, stages, lvAt, pityAt, cp, pulls, level, xp, last, T, EV };
+}
+
+// ---------- formatting ----------
+const fmtN = (v, d = 0) => (v === null || v === undefined || !isFinite(v)) ? "—" : Number(v).toLocaleString("en-US", { maximumFractionDigits: d, minimumFractionDigits: d });
+const fmtBig = v => { if (!isFinite(v)) return "—"; const a = Math.abs(v); if (a >= 1e9) return fmtN(v / 1e9, 2) + "B"; if (a >= 1e6) return fmtN(v / 1e6, 2) + "M"; if (a >= 1e4) return fmtN(v / 1e3, 1) + "k"; return fmtN(v, a < 10 ? 1 : 0); };
+const fmtT = m => { if (m === null || m === undefined || !isFinite(m)) return "—"; if (m < 1) return "ทันที"; if (m < 60) return Math.round(m) + " น."; const h = Math.floor(m / 60), r = Math.round(m % 60); return r ? `${h} ชม. ${r} น.` : `${h} ชม.`; };
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+// ---------- state ----------
+const KEY = "aura-econ-v1";
+let state, refHour = 60;
+try { state = JSON.parse(localStorage.getItem(KEY)); } catch { state = null; }
+if (!state || !state.p) state = clone(PRESETS.plan);
+for (const k in base) if (state.p[k] === undefined) state.p[k] = base[k];
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch {} };
+const $ = id => document.getElementById(id);
+
+// ---------- results ----------
+let simCur = simulate(PRESETS.current), simPlan = simulate(PRESETS.plan);
+
+function kpiData(sim) {
+  const b = sim.items.filter(i => i.at !== null).sort((a, c) => a.at - c.at);
+  const first = b.length ? b[0].at : null;
+  const early = b.filter(i => i.at <= 120);
+  const gap = early.length > 1 ? (early[early.length - 1].at - early[0].at) / (early.length - 1) : null;
+  const pulls1h = sim.cp.find(c => c.t >= 60 - 1e-9);
+  const allAt = sim.items.every(i => i.at !== null) ? Math.max(...sim.items.map(i => i.at)) : null;
+  const wait = sim.items.reduce((a, i) => a + (i.at !== null ? i.waitLv : 0), 0);
+  return { first, gap, pulls1h: pulls1h ? pulls1h.pulls : null, leg: sim.pityAt.leg, myth: sim.pityAt.myth, lv25: sim.lvAt[25] ?? null, wait, allAt, T: sim.T };
+}
+
+function renderKPIs(sim) {
+  const a = kpiData(sim), c = kpiData(simCur), pl = kpiData(simPlan);
+  const tiles = [
+    ["ซื้อของชิ้นแรก", a.first, c.first, pl.first, fmtT, v => v !== null && v > 5],
+    ["ซื้อของห่างกันเฉลี่ย (2 ชม.แรก)", a.gap, c.gap, pl.gap, fmtT, v => v !== null && v > 12],
+    ["สุ่มกาชาได้ใน 1 ชม.แรก", a.pulls1h, c.pulls1h, pl.pulls1h, v => fmtN(v) + " ครั้ง", v => v !== null && v < 6],
+    ["ได้ Legendary แรก (pity)", a.leg, c.leg, pl.leg, fmtT, null, true],
+    ["ได้ Mythic แรก (pity)", a.myth, c.myth, pl.myth, fmtT, v => v !== null && v < 600, true],
+    ["ถึง Lv.25", a.lv25, c.lv25, pl.lv25, fmtT, null],
+    ["เวลารอเลเวลรวม (เงินพอแต่ซื้อไม่ได้)", a.wait, c.wait, pl.wait, fmtT, v => v > 120],
+    ["ซื้อของในร้านครบทุกชิ้น", a.allAt, c.allAt, pl.allAt, v => v === null ? `> ${fmtT(a.T)}` : fmtT(v), v => v !== null && v < 180],
+  ];
+  $("kpis").innerHTML = tiles.map(([k, v, cv, pv, f, bad, gold]) =>
+    `<div class="kpi ${bad && bad(v) ? "bad" : gold ? "gold" : ""}"><span class="k">${k}</span><span class="v">${f(v)}</span><span class="cmp">ปัจจุบัน ${f(cv)} · แผน ${f(pv)}</span></div>`).join("");
+}
+
+function renderTables(sim) {
+  const p = state.p;
+  $("mixNote").textContent = `มือ ${Math.round(p.manualShare * 100)}% / Auto ${Math.round((1 - p.manualShare) * 100)}%`;
+  $("tTimeline").innerHTML = `<tr><th>เวลาเล่น</th><th class="n">เงินที่หาได้รวม</th><th class="n">เงิน/นาที</th><th class="n">เลเวล</th><th class="n">Gems รวม</th><th class="n">สุ่มกาชาแล้ว</th><th class="n">ของที่มี</th><th class="n">สาย (m)</th><th class="n">Luck</th></tr>` +
+    sim.cp.map(c => `<tr><td>${fmtT(c.t)}</td><td class="n">${fmtBig(c.coinsEarned)}</td><td class="n">${fmtBig(c.cpm)}</td><td class="n">${c.level}</td><td class="n">${fmtN(c.gemsEarned)}</td><td class="n">${fmtN(c.pulls)}</td><td class="n">${c.owned}/${sim.items.length}</td><td class="n">${c.cap}</td><td class="n">${fmtN(c.luck * 100)}%</td></tr>`).join("");
+
+  const bs = [...sim.items].sort((a, b) => (a.at ?? 1e12) - (b.at ?? 1e12));
+  let prev = 0;
+  $("tBuys").innerHTML = `<tr><th>ของ</th><th class="n">ราคา</th><th class="n">ต้องการ Lv</th><th class="n">ซื้อได้ตอน</th><th class="n">ห่างจากชิ้นก่อน</th><th>ติดอะไร</th></tr>` +
+    bs.map(it => {
+      const gap = it.at === null ? null : it.at - prev; if (it.at !== null) prev = it.at;
+      const gate = it.at === null ? `<span class="pill warn">ยังซื้อไม่ได้ใน ${fmtT(sim.T)}</span>` : it.waitLv > 1 ? `<span class="pill warn">รอเลเวล ${fmtT(it.waitLv)}</span>` : `<span class="pill good">เงิน</span>`;
+      return `<tr class="${it.waitLv > 1 ? "lvgate" : ""}"><td>${esc(it.name)}</td><td class="n">${fmtBig(it.price)}</td><td class="n">${it.lv || "—"}</td><td class="n">${fmtT(it.at)}</td><td class="n">${fmtT(gap)}</td><td>${gate}</td></tr>`;
+    }).join("");
+
+  $("tStages").innerHTML = `<tr><th>ด่าน</th><th class="n">ถึงตอน</th><th class="n">ลึกที่คุ้มสุด</th><th class="n">ชนิดปลา</th><th class="n">เงิน/ตัว</th><th class="n">เงิน/นาที</th><th class="n">XP/นาที</th><th class="n">Gems/ชม.</th><th class="n">กาชา/ชม.</th><th class="n">Mythic</th></tr>` +
+    sim.stages.map(st => `<tr><td>${esc(st.name)}</td><td class="n">${fmtT(st.t)}</td><td class="n">${st.ev.depth}m</td><td class="n">${st.ev.n}</td><td class="n">${fmtBig(st.ev.coin)}</td><td class="n">${fmtBig(st.r.cpm)}</td><td class="n">${fmtN(st.r.xpm, 1)}</td><td class="n">${fmtN(st.r.gpm * 60, 1)}</td><td class="n">${fmtN(st.r.gpm * 60 / Math.max(1e-9, p.gachaCost), 1)}</td><td class="n">${st.ev.myth ? "1/" + fmtN(1 / st.ev.myth) + " ตัว" : "—"}</td></tr>`).join("");
+
+  let cum = 0; const lvRows = [];
+  for (let L = 1; L <= 100; L++) { if ([5, 10, 25, 50, 100].includes(L)) lvRows.push([L, cum]); cum += xpFor(p, L); }
+  const lastXpm = sim.last.xpm;
+  $("tLevels").innerHTML = `<tr><th>เลเวล</th><th class="n">XP สะสม</th><th class="n">ถึงตอน (จำลอง)</th></tr>` +
+    lvRows.map(([L, x]) => { const at = L === 1 ? 0 : sim.lvAt[L]; return `<tr><td>Lv.${L}</td><td class="n">${fmtBig(x)}</td><td class="n">${at !== undefined ? fmtT(at) : `≈ ${fmtT(sim.T + (x - cumXP(p, sim.level) - sim.xp) / Math.max(1e-9, lastXpm))}`}</td></tr>`; }).join("");
+
+  const g = sim.last.gpm * 60;
+  $("tGacha").innerHTML = `<tr><th>กาชา (ช่วงท้ายจำลอง)</th><th class="n">ค่า</th></tr>
+    <tr><td>Gems ต่อชั่วโมง</td><td class="n">${fmtN(g, 1)}</td></tr>
+    <tr><td>สุ่มได้ต่อชั่วโมง</td><td class="n">${fmtN(g / Math.max(1e-9, p.gachaCost), 1)}</td></tr>
+    <tr><td>สุ่มทั้งหมดใน ${fmtT(sim.T)}</td><td class="n">${fmtN(sim.pulls)}</td></tr>
+    <tr><td>Legendary แรกจาก pity (${p.pityLeg || "ไม่มี"})</td><td class="n">${fmtT(sim.pityAt.leg)}</td></tr>
+    <tr><td>Mythic แรกจาก pity (${p.pityMythic || "ไม่มี"})</td><td class="n">${fmtT(sim.pityAt.myth)}</td></tr>
+    <tr><td>Mythic ปลาต่อชั่วโมง (ด่านสุดท้าย)</td><td class="n">${fmtN(sim.last.mythPerHour, 2)}</td></tr>`;
+
+  renderPay(sim); renderIdle();
+}
+const cumXP = (p, L) => { let c = 0; for (let i = 1; i < L; i++) c += xpFor(p, i); return c; };
+
+function renderPay(sim) {
+  const p = state.p;
+  const opts = sim.cp.map(c => c.t);
+  if (!opts.some(t => Math.abs(t - refHour) < 1e-6)) refHour = opts.includes(60) ? 60 : opts[Math.min(2, opts.length - 1)];
+  $("refSel").innerHTML = opts.map(t => `<option value="${t}" ${Math.abs(t - refHour) < 1e-6 ? "selected" : ""}>หลังเล่น ${fmtT(t)}</option>`).join("");
+  const ref = sim.cp.find(c => Math.abs(c.t - refHour) < 1e-6) || sim.cp[sim.cp.length - 1];
+  const ev = sim.EV(ref.cap, ref.luck);
+  const rows = state.prod.map(pr => {
+    let min = null, label = "";
+    if (pr.kind === "gems") { min = pr.amount / ref.gpm; label = "ทันที"; }
+    else if (pr.kind === "coins") { min = pr.amount / ref.cpm; label = "ทันที"; }
+    else if (pr.kind === "boost") { min = pr.amount * pr.dur; label = `ระหว่าง ${pr.dur} น.`; }
+    else if (pr.kind === "pass_coin") { min = 600 * (1 - 1 / (1 + pr.amount)); label = "ต่อเล่น 10 ชม."; }
+    else if (pr.kind === "pass_luck") { const e2 = sim.EV(ref.cap, ref.luck + pr.amount); const r = e2.coin / Math.max(1e-9, ev.coin); min = 600 * (1 - 1 / r); label = "ต่อเล่น 10 ชม."; }
+    else if (pr.kind === "pass_auto") { min = 600 * pr.amount; label = "ต่อ AFK 10 ชม."; }
+    const perH = min ? pr.robux / (min / 60) : null;
+    return `<tr><td>${esc(pr.name)}</td><td>${pr.kind}</td><td class="n">${fmtN(pr.robux)}</td><td class="n">$${fmtN(pr.robux * p.robuxUSD, 2)}</td><td class="n">${min === null ? "—" : fmtT(min)}</td><td>${label || "ความสะดวก"}</td><td class="n">${perH === null ? "—" : fmtN(perH)}</td></tr>`;
+  });
+  $("tPay").innerHTML = `<tr><th>สินค้า</th><th>ชนิด</th><th class="n">Robux</th><th class="n">≈ USD</th><th class="n">เท่ากับเล่น</th><th>เงื่อนไข</th><th class="n">R$ / ชม.ที่ประหยัด</th></tr>` + rows.join("") +
+    `<tr><td colspan="7" class="note">อ้างอิง ณ ${fmtT(ref.t)}: เงิน ${fmtBig(ref.cpm)}/นาที · Gems ${fmtN(ref.gpm * 60, 1)}/ชม. · สาย ${ref.cap}m · Luck ${fmtN(ref.luck * 100)}%</td></tr>`;
+}
+
+function renderIdle() {
+  const p = state.p, days = [1, 3, 7, 14, 30];
+  let total = 0, slots = p.slotsStart, d = 0; const rows = [];
+  for (let day = 1; day <= 30; day++) {
+    const minutes = p.minutesPerDay + Math.min(p.offlineHours, p.offlineCap) * 60;
+    const today = slots * p.pearlPerSlot * minutes;
+    total += today;
+    if (days.includes(day)) {
+      const per = total / Math.max(1, p.masteryTracks), g = p.masteryGrowth;
+      const lv = g > 1 ? Math.floor(Math.log(1 + per * (g - 1) / p.masteryBase) / Math.log(g)) : Math.floor(per / p.masteryBase);
+      rows.push(`<tr><td>วันที่ ${day}</td><td class="n">${slots}</td><td class="n">${fmtBig(today)}</td><td class="n">${fmtBig(total)}</td><td class="n">${lv}</td><td class="n">${lv * p.masteryTracks}</td><td class="n">${fmtBig(p.masteryBase * Math.pow(g, lv))}</td></tr>`);
+    }
+    slots = Math.min(p.slotsMax, slots + p.slotsPerDay);
+  }
+  $("tIdle").innerHTML = `<tr><th>วัน</th><th class="n">ช่องบ่อ</th><th class="n">Pearls วันนั้น</th><th class="n">Pearls สะสม</th><th class="n">Mastery เลเวล/สาย</th><th class="n">เลเวลรวม</th><th class="n">ราคาเลเวลถัดไป</th></tr>` + rows.join("");
+}
+
+$("formulas").textContent =
+`ปลาที่ออก:        น้ำหนัก = RarityWeight (หรือ RollWeight) × (1 + Luck) ^ ((Tier − 1) × LuckTierExponent)
+เงินต่อตัว:        Σ(น้ำหนัก × BaseValue) / Σน้ำหนัก × ตัวคูณมูลค่า × ตัวคูณขนาด × ตัวคูณ mutation   (เลือกความลึกที่ได้มากสุด)
+ปลา/นาที เล่นมือ:  60 / วินาทีต่อตัว × อัตราสำเร็จ × สัดส่วนเล่นมือ × (1 − เวลาขาย)
+ปลา/นาที Auto:     60 / AutoCycle × (1 − สัดส่วนเล่นมือ) × (1 − เวลาขาย)
+เงิน/นาที:         ปลามือ × เงินต่อตัว × (ManualMult + PERFECT% × โบนัส) × (1 + Hot Streak)
+                   + ปลาAuto × เงินต่อตัว × AutoMult
+                   + (ปลามือ + ปลาAuto × ตัวคูณหีบAuto) × โอกาสหีบ × (1 + Luck × 0.5) × โอกาสได้เงิน × เงินเฉลี่ย × ตัวคูณมูลค่า
+XP/นาที:           ปลามือ × XPเฉลี่ย × ManualMult + ปลาAuto × XPเฉลี่ย
+XP ต่อเลเวล:       floor(XPBase × Level ^ XPExponent)
+Gems/นาที:         (ปลามือ + ปลาAuto × ตัวคูณGemsAuto) × Gemsเฉลี่ยต่อตัว + หีบ × โอกาสได้Gems × Gemsเฉลี่ย + เควสต์ต่อวัน / นาทีเล่นต่อวัน
+                   + Gems ต่อเลเวล ตอนเลเวลอัป + Gems ชนิดใหม่ ตอนปลดสายใหม่
+จ่าย vs เวลา:      gems → จำนวน / Gems ต่อนาที · coins → จำนวน / เงินต่อนาที · boost → ค่า × นาที
+                   pass_luck → 600 × (1 − เงินต่อตัวเดิม / เงินต่อตัวใหม่) ต่อ 10 ชม. · pass_auto → 600 × ค่า ต่อ AFK 10 ชม.
+                   R$ ต่อ ชม. = Robux / (นาทีที่ประหยัด / 60)
+Mastery:           ราคาเลเวล n = ราคาแรก × Growth^n  →  เลเวลที่ซื้อได้ = floor(log(1 + Pearls × (Growth − 1) / ราคาแรก) / log(Growth))
+Pearls/วัน:        ช่องบ่อ × Pearls/นาที/ช่อง × (นาทีเล่น + min(ออฟไลน์, เพดาน) × 60)`;
+
+// ---------- editors ----------
+function paramGrid(el, defs) {
+  el.innerHTML = defs.map(([k, label, step, hint]) =>
+    `<div class="param"><label for="p_${k}">${label}${hint ? `<small>${hint}</small>` : ""}</label><input type="number" id="p_${k}" data-k="${k}" step="${step}" value="${state.p[k]}"></div>`).join("");
+  el.querySelectorAll("input").forEach(inp => inp.addEventListener("input", () => { const v = parseFloat(inp.value); if (isFinite(v)) { state.p[inp.dataset.k] = v; changed(); } }));
+}
+function editTable(el, rows, cols, onRemove) {
+  el.innerHTML = `<tr>${cols.map(c => `<th>${c[1]}</th>`).join("")}${onRemove ? "<th></th>" : ""}</tr>` + rows.map((r, i) => `<tr>${cols.map(([k, , type, opt]) => {
+    const id = `${el.id}_${i}_${k}`;
+    if (type === "sel") return `<td><select id="${id}" data-i="${i}" data-k="${k}">${opt.map(o => `<option ${o === r[k] ? "selected" : ""}>${o}</option>`).join("")}</select></td>`;
+    if (type === "chk") return `<td><input type="checkbox" id="${id}" data-i="${i}" data-k="${k}" ${r[k] ? "checked" : ""}></td>`;
+    if (type === "txt") return `<td><input type="text" id="${id}" data-i="${i}" data-k="${k}" value="${esc(r[k])}"></td>`;
+    if (type === "ro") return `<td>${esc(r[k])}</td>`;
+    return `<td><input type="number" id="${id}" data-i="${i}" data-k="${k}" step="${opt || 1}" value="${r[k]}"></td>`;
+  }).join("")}${onRemove ? `<td><button class="x" data-rm="${i}" aria-label="ลบแถว">✕</button></td>` : ""}</tr>`).join("");
+  el.querySelectorAll("input,select").forEach(inp => inp.addEventListener(inp.type === "checkbox" || inp.tagName === "SELECT" ? "change" : "input", () => {
+    const r = rows[+inp.dataset.i], k = inp.dataset.k;
+    if (inp.type === "checkbox") r[k] = inp.checked; else if (inp.type === "number") { const v = parseFloat(inp.value); if (!isFinite(v)) return; r[k] = v; } else r[k] = inp.value;
+    changed();
+  }));
+  el.querySelectorAll("[data-rm]").forEach(b => b.addEventListener("click", () => { onRemove(+b.dataset.rm); }));
+}
+function renderEditors() {
+  paramGrid($("params"), PARAMS); paramGrid($("idleParams"), IDLE);
+  const rarRows = RAR.map(r => ({ id: r, ...state.rar[r] }));
+  editTable($("eRar"), rarRows, [["id", "ระดับ", "ro"], ["weight", "น้ำหนักสุ่ม", "num", 1], ["xp", "XP", "num", 1], ["gems", "Gems/ตัว", "num", 1], ["pearl", "Pearls/นาที (บ่อ)", "num", 0.1]]);
+  $("eRar").querySelectorAll("input").forEach(inp => inp.addEventListener("input", () => { const row = rarRows[+inp.dataset.i]; state.rar[row.id][inp.dataset.k] = row[inp.dataset.k]; }));
+  editTable($("eFish"), state.fish, [["on", "ใช้", "chk"], ["name", "ชื่อ", "txt"], ["rarity", "ระดับ", "sel", RAR], ["dmin", "ลึกต่ำสุด", "num", 5], ["dmax", "ลึกสูงสุด", "num", 5], ["value", "BaseValue", "num", 1], ["rw", "RollWeight (0 = ตามระดับ)", "num", 0.1]],
+    i => { state.fish.splice(i, 1); renderEditors(); changed(); });
+  editTable($("eGear"), state.gear, [["name", "ชื่อ", "txt"], ["kind", "หมวด", "sel", ["Rod", "Line", "Bag", "Other"]], ["price", "ราคา", "num", 100], ["lv", "ต้องการ Lv", "num", 1], ["depth", "ความลึก (Line)", "num", 10], ["luck", "Luck (Rod)", "num", 0.05]],
+    i => { state.gear.splice(i, 1); renderEditors(); changed(); });
+  editTable($("eProd"), state.prod, [["name", "ชื่อ", "txt"], ["kind", "ชนิด", "sel", ["gems", "coins", "boost", "pass_coin", "pass_luck", "pass_auto", "qol"]], ["robux", "Robux", "num", 1], ["amount", "ค่า", "num", 0.05], ["dur", "นาที (boost)", "num", 5]],
+    i => { state.prod.splice(i, 1); renderEditors(); changed(); });
+}
+
+let timer = null;
+function changed() { save(); $("dirty").textContent = "แก้ไขแล้ว (บันทึกในเบราว์เซอร์นี้)"; clearTimeout(timer); timer = setTimeout(recompute, 120); }
+function recompute() { const sim = simulate(state); renderKPIs(sim); renderTables(sim); }
+function load(preset) { state = clone(PRESETS[preset]); save(); renderEditors(); recompute(); $("dirty").textContent = preset === "plan" ? "โหลด: แผน Pass 1" : "โหลด: เกมตอนนี้"; }
+
+$("pCurrent").addEventListener("click", () => load("current"));
+$("pPlan").addEventListener("click", () => load("plan"));
+$("refSel").addEventListener("change", e => { refHour = parseFloat(e.target.value); recompute(); });
+$("addFish").addEventListener("click", () => { state.fish.push({ name: "ปลาใหม่", rarity: "Common", dmin: 0, dmax: 50, value: 10, rw: 0, on: true }); renderEditors(); changed(); });
+$("addGear").addEventListener("click", () => { state.gear.push({ name: "ของใหม่", kind: "Other", price: 1000, lv: 0, depth: 0, luck: 0 }); renderEditors(); changed(); });
+$("addProd").addEventListener("click", () => { state.prod.push({ name: "สินค้าใหม่", robux: 99, kind: "gems", amount: 100, dur: 0 }); renderEditors(); changed(); });
+$("exp").addEventListener("click", () => { $("json").value = JSON.stringify(state, null, 1); $("jsonMsg").textContent = "Export แล้ว"; });
+$("cpy").addEventListener("click", () => { const t = $("json"); if (!t.value) t.value = JSON.stringify(state, null, 1);
+  navigator.clipboard.writeText(t.value).then(() => $("jsonMsg").textContent = "คัดลอกแล้ว", () => { t.select(); $("jsonMsg").textContent = "เลือกข้อความแล้ว กด Ctrl+C"; }); });
+$("imp").addEventListener("click", () => { try { const s = JSON.parse($("json").value); if (!s.p || !s.fish || !s.gear) throw 0; state = s; for (const k in base) if (state.p[k] === undefined) state.p[k] = base[k]; if (!state.prod) state.prod = clone(PRODUCTS); if (!state.rar) state.rar = clone(RARITIES); save(); renderEditors(); recompute(); $("jsonMsg").textContent = "Import แล้ว"; } catch { $("jsonMsg").textContent = "JSON ไม่ถูกต้อง: ต้องมี p, fish, gear"; } });
+
+renderEditors(); recompute();
+})();
+</script>

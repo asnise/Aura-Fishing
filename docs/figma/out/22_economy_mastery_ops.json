@@ -1,0 +1,2434 @@
+[
+ {
+  "pageId": "3465:14993",
+  "replaceName": "Economy · 3 Mastery (C15)",
+  "tree": {
+   "type": "SECTION",
+   "name": "Economy · 3 Mastery (C15)",
+   "fill": "F3E9D8",
+   "x": 17000,
+   "y": 4400,
+   "children": [
+    {
+     "type": "TEXT",
+     "text": "Economy UI · 3 — Mastery",
+     "textStyle": "Aura Fishing/Display",
+     "color": {
+      "var": "cozy/text"
+     },
+     "name": "Title",
+     "x": 60,
+     "y": 40
+    },
+    {
+     "type": "TEXT",
+     "text": "7 tracks paid with Pearls, never reset by Rebirth.",
+     "textStyle": "Aura Fishing/Body",
+     "color": {
+      "var": "cozy/subtext"
+     },
+     "name": "Sub",
+     "x": 60,
+     "y": 96,
+     "w": 2200
+    },
+    {
+     "name": "Screen C15 · Mastery",
+     "layout": "V",
+     "gap": 12,
+     "x": 60,
+     "y": 160,
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "C15 · Mastery",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "name": "Mastery",
+       "w": 1280,
+       "h": 720,
+       "radius": 0,
+       "clip": true,
+       "children": [
+        {
+         "name": "World [skip]",
+         "w": 1280,
+         "h": 720,
+         "x": 0,
+         "y": 0,
+         "fill": {
+          "grad": [
+           "DDF5EE",
+           "A8DCD8"
+          ],
+          "angle": 90
+         },
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Water",
+           "w": 1280,
+           "h": 300,
+           "x": 0,
+           "y": 420,
+           "fill": {
+            "hex": "9AD4F5",
+            "opacity": 0.35
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Island",
+           "w": 560,
+           "h": 130,
+           "x": 360,
+           "y": 370,
+           "fill": {
+            "hex": "7FD3B0",
+            "opacity": 0.55
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Island Top",
+           "w": 360,
+           "h": 70,
+           "x": 460,
+           "y": 372,
+           "fill": {
+            "hex": "4FAF8A",
+            "opacity": 0.35
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Dim",
+           "w": 1280,
+           "h": 720,
+           "x": 0,
+           "y": 0,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          }
+         ]
+        },
+        {
+         "name": "Window Mastery",
+         "layout": "V",
+         "pad": 20,
+         "gap": 14,
+         "w": 760,
+         "h": 610,
+         "x": 260,
+         "y": 70,
+         "radius": 24,
+         "fill": {
+          "var": "cozy/panel"
+         },
+         "stroke": {
+          "var": "cozy/track"
+         },
+         "strokeW": 2,
+         "effects": [
+          {
+           "color": "3D4B5C",
+           "a": 0.1,
+           "y": 6,
+           "blur": 18
+          }
+         ],
+         "children": [
+          {
+           "name": "Header",
+           "layout": "H",
+           "fillW": true,
+           "main": "SPACE_BETWEEN",
+           "cross": "CENTER",
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "Mastery",
+             "textStyle": "Aura Fishing/Title",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Title"
+            },
+            {
+             "type": "INSTANCE",
+             "ref": "3487:4298",
+             "variant": "Style=Danger",
+             "texts": {
+              "Label": "X"
+             },
+             "name": "Btn Close"
+            }
+           ]
+          },
+          {
+           "name": "Head",
+           "layout": "H",
+           "gap": 10,
+           "fillW": true,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Pearls",
+             "layout": "H",
+             "gap": 8,
+             "pad": [
+              6,
+              16,
+              6,
+              8
+             ],
+             "cross": "CENTER",
+             "radius": 999,
+             "fill": {
+              "var": "cozy/panel"
+             },
+             "stroke": {
+              "var": "cozy/track"
+             },
+             "strokeW": 2,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/status/pearl",
+               "w": 24,
+               "h": 24
+              },
+              {
+               "type": "TEXT",
+               "text": "1,250",
+               "textStyle": "Aura Fishing/Number",
+               "color": {
+                "var": "cozy/text"
+               },
+               "name": "Value"
+              }
+             ]
+            },
+            {
+             "name": "Pill Total Lv. 84",
+             "layout": "H",
+             "gap": 5,
+             "pad": [
+              5,
+              12,
+              5,
+              10
+             ],
+             "radius": 999,
+             "cross": "CENTER",
+             "fill": {
+              "var": "cozy/panel"
+             },
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/status/mastery_up",
+               "w": 18,
+               "h": 18
+              },
+              {
+               "type": "TEXT",
+               "text": "Total Lv. 84",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/gem-lip"
+               },
+               "name": "Label"
+              }
+             ]
+            },
+            {
+             "name": "Spacer",
+             "w": 1,
+             "h": 1,
+             "fillW": true
+            },
+            {
+             "type": "TEXT",
+             "text": "Kept after Rebirth",
+             "textStyle": "Aura Fishing/Small",
+             "color": {
+              "var": "cozy/subtext"
+             },
+             "name": "Note"
+            }
+           ]
+          },
+          {
+           "name": "Tracks",
+           "layout": "V",
+           "gap": 12,
+           "children": [
+            {
+             "name": "Row 1",
+             "layout": "H",
+             "gap": 16,
+             "children": [
+              {
+               "name": "Track Luck",
+               "layout": "H",
+               "gap": 12,
+               "pad": 12,
+               "w": 352,
+               "h": 92,
+               "radius": 18,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/sand"
+               },
+               "children": [
+                {
+                 "name": "Icon",
+                 "w": 60,
+                 "h": 60,
+                 "radius": 16,
+                 "fill": {
+                  "hex": "7FD3B0"
+                 },
+                 "stroke": {
+                  "var": "cozy/track"
+                 },
+                 "strokeW": 2,
+                 "layout": "H",
+                 "main": "CENTER",
+                 "cross": "CENTER",
+                 "children": [
+                  {
+                   "type": "SVG",
+                   "svg": "<svg width=\"34\" height=\"34\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"17\" cy=\"17\" r=\"8\" fill=\"#FFFFFF\"/><circle cx=\"31\" cy=\"17\" r=\"8\" fill=\"#FFFFFF\"/><circle cx=\"17\" cy=\"31\" r=\"8\" fill=\"#FFFFFF\"/><circle cx=\"31\" cy=\"31\" r=\"8\" fill=\"#FFFFFF\"/><path d=\"M30 30l10 12\" stroke=\"#FFFFFF\" stroke-width=\"4\" stroke-linecap=\"round\"/></svg>",
+                   "w": 34,
+                   "h": 34,
+                   "name": "icon_clover"
+                  }
+                 ]
+                },
+                {
+                 "name": "Text",
+                 "layout": "V",
+                 "gap": 2,
+                 "fillW": true,
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "Luck",
+                   "textStyle": "Aura Fishing/Heading",
+                   "color": {
+                    "var": "cozy/text"
+                   },
+                   "name": "Name"
+                  },
+                  {
+                   "name": "Line",
+                   "layout": "H",
+                   "gap": 6,
+                   "cross": "CENTER",
+                   "children": [
+                    {
+                     "name": "Pill Lv.12",
+                     "layout": "H",
+                     "gap": 5,
+                     "pad": [
+                      5,
+                      12,
+                      5,
+                      10
+                     ],
+                     "radius": 999,
+                     "cross": "CENTER",
+                     "fill": {
+                      "var": "cozy/panel"
+                     },
+                     "children": [
+                      {
+                       "type": "TEXT",
+                       "text": "Lv.12",
+                       "textStyle": "Aura Fishing/Caption",
+                       "color": {
+                        "var": "cozy/gem-lip"
+                       },
+                       "name": "Label"
+                      }
+                     ]
+                    },
+                    {
+                     "name": "Effect",
+                     "layout": "H",
+                     "gap": 4,
+                     "cross": "CENTER",
+                     "children": [
+                      {
+                       "type": "TEXT",
+                       "text": "+12%",
+                       "textStyle": "Aura Fishing/Small",
+                       "color": {
+                        "var": "cozy/text"
+                       },
+                       "name": "From"
+                      },
+                      {
+                       "type": "TEXT",
+                       "text": "→",
+                       "textStyle": "Aura Fishing/Small",
+                       "color": {
+                        "var": "cozy/subtext"
+                       },
+                       "name": "Arrow"
+                      },
+                      {
+                       "type": "TEXT",
+                       "text": "+13%",
+                       "textStyle": "Aura Fishing/Small",
+                       "color": {
+                        "var": "cozy/mint-lip"
+                       },
+                       "name": "To"
+                      }
+                     ]
+                    }
+                   ]
+                  }
+                 ]
+                },
+                {
+                 "name": "Btn Upgrade",
+                 "layout": "V",
+                 "gap": 2,
+                 "pad": [
+                  7,
+                  10,
+                  10,
+                  10
+                 ],
+                 "radius": 16,
+                 "cross": "CENTER",
+                 "main": "CENTER",
+                 "fill": {
+                  "var": "cozy/mint"
+                 },
+                 "stroke": {
+                  "var": "cozy/mint-lip"
+                 },
+                 "strokeSides": {
+                  "b": 5
+                 },
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "UPGRADE",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 15,
+                   "color": "FFFFFF",
+                   "name": "Label"
+                  },
+                  {
+                   "name": "Cost",
+                   "layout": "H",
+                   "gap": 4,
+                   "cross": "CENTER",
+                   "children": [
+                    {
+                     "type": "RECT",
+                     "name": "Img ui/status/pearl",
+                     "w": 16,
+                     "h": 16
+                    },
+                    {
+                     "type": "TEXT",
+                     "text": "407",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 14,
+                     "color": "FFFFFF",
+                     "name": "Value"
+                    }
+                   ]
+                  }
+                 ],
+                 "w": 104
+                }
+               ]
+              },
+              {
+               "name": "Track Catch Bar",
+               "layout": "H",
+               "gap": 12,
+               "pad": 12,
+               "w": 352,
+               "h": 92,
+               "radius": 18,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/sand"
+               },
+               "children": [
+                {
+                 "name": "Icon",
+                 "w": 60,
+                 "h": 60,
+                 "radius": 16,
+                 "fill": {
+                  "hex": "9AD4F5"
+                 },
+                 "stroke": {
+                  "var": "cozy/track"
+                 },
+                 "strokeW": 2,
+                 "layout": "H",
+                 "main": "CENTER",
+                 "cross": "CENTER",
+                 "children": [
+                  {
+                   "type": "SVG",
+                   "svg": "<svg width=\"34\" height=\"34\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"19\" y=\"4\" width=\"10\" height=\"40\" rx=\"5\" stroke=\"#FFFFFF\" stroke-width=\"4\"/><rect x=\"16\" y=\"18\" width=\"16\" height=\"14\" rx=\"5\" fill=\"#FFFFFF\"/></svg>",
+                   "w": 34,
+                   "h": 34,
+                   "name": "icon_bar"
+                  }
+                 ]
+                },
+                {
+                 "name": "Text",
+                 "layout": "V",
+                 "gap": 2,
+                 "fillW": true,
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "Catch Bar",
+                   "textStyle": "Aura Fishing/Heading",
+                   "color": {
+                    "var": "cozy/text"
+                   },
+                   "name": "Name"
+                  },
+                  {
+                   "name": "Line",
+                   "layout": "H",
+                   "gap": 6,
+                   "cross": "CENTER",
+                   "children": [
+                    {
+                     "name": "Pill Lv.8",
+                     "layout": "H",
+                     "gap": 5,
+                     "pad": [
+                      5,
+                      12,
+                      5,
+                      10
+                     ],
+                     "radius": 999,
+                     "cross": "CENTER",
+                     "fill": {
+                      "var": "cozy/panel"
+                     },
+                     "children": [
+                      {
+                       "type": "TEXT",
+                       "text": "Lv.8",
+                       "textStyle": "Aura Fishing/Caption",
+                       "color": {
+                        "var": "cozy/gem-lip"
+                       },
+                       "name": "Label"
+                      }
+                     ]
+                    },
+                    {
+                     "name": "Effect",
+                     "layout": "H",
+                     "gap": 4,
+                     "cross": "CENTER",
+                     "children": [
+                      {
+                       "type": "TEXT",
+                       "text": "+4%",
+                       "textStyle": "Aura Fishing/Small",
+                       "color": {
+                        "var": "cozy/text"
+                       },
+                       "name": "From"
+                      },
+                      {
+                       "type": "TEXT",
+                       "text": "→",
+                       "textStyle": "Aura Fishing/Small",
+                       "color": {
+                        "var": "cozy/subtext"
+                       },
+                       "name": "Arrow"
+                      },
+                      {
+                       "type": "TEXT",
+                       "text": "+4.5%",
+                       "textStyle": "Aura Fishing/Small",
+                       "color": {
+                        "var": "cozy/mint-lip"
+                       },
+                       "name": "To"
+                      }
+                     ]
+                    }
+                   ]
+                  }
+                 ]
+                },
+                {
+                 "name": "Btn Upgrade",
+                 "layout": "V",
+                 "gap": 2,
+                 "pad": [
+                  7,
+                  10,
+                  10,
+                  10
+                 ],
+                 "radius": 16,
+                 "cross": "CENTER",
+                 "main": "CENTER",
+                 "fill": {
+                  "var": "cozy/mint"
+                 },
+                 "stroke": {
+                  "var": "cozy/mint-lip"
+                 },
+                 "strokeSides": {
+                  "b": 5
+                 },
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "UPGRADE",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 15,
+                   "color": "FFFFFF",
+                   "name": "Label"
+                  },
+                  {
+                   "name": "Cost",
+                   "layout": "H",
+                   "gap": 4,
+                   "cross": "CENTER",
+                   "children": [
+                    {
+                     "type": "RECT",
+                     "name": "Img ui/status/pearl",
+                     "w": 16,
+                     "h": 16
+                    },
+                    {
+                     "type": "TEXT",
+                     "text": "210",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 14,
+                     "color": "FFFFFF",
+                     "name": "Value"
+                    }
+                   ]
+                  }
+                 ],
+                 "w": 104
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Row 2",
+             "layout": "H",
+             "gap": 16,
+             "children": [
+              {
+               "name": "Track Reel Power",
+               "layout": "H",
+               "gap": 12,
+               "pad": 12,
+               "w": 352,
+               "h": 92,
+               "radius": 18,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/sand"
+               },
+               "children": [
+                {
+                 "name": "Icon",
+                 "w": 60,
+                 "h": 60,
+                 "radius": 16,
+                 "fill": {
+                  "hex": "FF9E80"
+                 },
+                 "stroke": {
+                  "var": "cozy/track"
+                 },
+                 "strokeW": 2,
+                 "layout": "H",
+                 "main": "CENTER",
+                 "cross": "CENTER",
+                 "children": [
+                  {
+                   "type": "SVG",
+                   "svg": "<svg width=\"34\" height=\"34\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"24\" cy=\"24\" r=\"16\" stroke=\"#FFFFFF\" stroke-width=\"5\"/><circle cx=\"24\" cy=\"24\" r=\"5\" fill=\"#FFFFFF\"/><path d=\"M24 24 36 12\" stroke=\"#FFFFFF\" stroke-width=\"5\" stroke-linecap=\"round\"/></svg>",
+                   "w": 34,
+                   "h": 34,
+                   "name": "icon_reel"
+                  }
+                 ]
+                },
+                {
+                 "name": "Text",
+                 "layout": "V",
+                 "gap": 2,
+                 "fillW": true,
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "Reel Power",
+                   "textStyle": "Aura Fishing/Heading",
+                   "color": {
+                    "var": "cozy/text"
+                   },
+                   "name": "Name"
+                  },
+                  {
+                   "name": "Line",
+                   "layout": "H",
+                   "gap": 6,
+                   "cross": "CENTER",
+                   "children": [
+                    {
+                     "name": "Pill Lv.10",
+                     "layout": "H",
+                     "gap": 5,
+                     "pad": [
+                      5,
+                      12,
+                      5,
+                      10
+                     ],
+                     "radius": 999,
+                     "cross": "CENTER",
+                     "fill": {
+                      "var": "cozy/panel"
+                     },
+                     "children": [
+                      {
+                       "type": "TEXT",
+                       "text": "Lv.10",
+                       "textStyle": "Aura Fishing/Caption",
+                       "color": {
+                        "var": "cozy/gem-lip"
+                       },
+                       "name": "Label"
+                      }
+                     ]
+                    },
+                    {
+                     "name": "Effect",
+                     "layout": "H",
+                     "gap": 4,
+                     "cross": "CENTER",
+                     "children": [
+                      {
+                       "type": "TEXT",
+                       "text": "+10%",
+                       "textStyle": "Aura Fishing/Small",
+                       "color": {
+                        "var": "cozy/text"
+                       },
+                       "name": "From"
+                      },
+                      {
+                       "type": "TEXT",
+                       "text": "→",
+                       "textStyle": "Aura Fishing/Small",
+                       "color": {
+                        "var": "cozy/subtext"
+                       },
+                       "name": "Arrow"
+                      },
+                      {
+                       "type": "TEXT",
+                       "text": "+11%",
+                       "textStyle": "Aura Fishing/Small",
+                       "color": {
+                        "var": "cozy/mint-lip"
+                       },
+                       "name": "To"
+                      }
+                     ]
+                    }
+                   ]
+                  }
+                 ]
+                },
+                {
+                 "name": "Btn Upgrade",
+                 "layout": "V",
+                 "gap": 2,
+                 "pad": [
+                  7,
+                  10,
+                  10,
+                  10
+                 ],
+                 "radius": 16,
+                 "cross": "CENTER",
+                 "main": "CENTER",
+                 "fill": {
+                  "var": "cozy/mint"
+                 },
+                 "stroke": {
+                  "var": "cozy/mint-lip"
+                 },
+                 "strokeSides": {
+                  "b": 5
+                 },
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "UPGRADE",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 15,
+                   "color": "FFFFFF",
+                   "name": "Label"
+                  },
+                  {
+                   "name": "Cost",
+                   "layout": "H",
+                   "gap": 4,
+                   "cross": "CENTER",
+                   "children": [
+                    {
+                     "type": "RECT",
+                     "name": "Img ui/status/pearl",
+                     "w": 16,
+                     "h": 16
+                    },
+                    {
+                     "type": "TEXT",
+                     "text": "330",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 14,
+                     "color": "FFFFFF",
+                     "name": "Value"
+                    }
+                   ]
+                  }
+                 ],
+                 "w": 104
+                }
+               ]
+              },
+              {
+               "name": "Track Auto Wait",
+               "layout": "H",
+               "gap": 12,
+               "pad": 12,
+               "w": 352,
+               "h": 92,
+               "radius": 18,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/sand"
+               },
+               "children": [
+                {
+                 "name": "Icon",
+                 "w": 60,
+                 "h": 60,
+                 "radius": 16,
+                 "fill": {
+                  "hex": "B79CF2"
+                 },
+                 "stroke": {
+                  "var": "cozy/track"
+                 },
+                 "strokeW": 2,
+                 "layout": "H",
+                 "main": "CENTER",
+                 "cross": "CENTER",
+                 "children": [
+                  {
+                   "type": "SVG",
+                   "svg": "<svg width=\"34\" height=\"34\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"24\" cy=\"27\" r=\"16\" stroke=\"#FFFFFF\" stroke-width=\"5\"/><path d=\"M24 27V17\" stroke=\"#FFFFFF\" stroke-width=\"5\" stroke-linecap=\"round\"/><rect x=\"18\" y=\"3\" width=\"12\" height=\"5\" rx=\"2.5\" fill=\"#FFFFFF\"/></svg>",
+                   "w": 34,
+                   "h": 34,
+                   "name": "icon_timer"
+                  }
+                 ]
+                },
+                {
+                 "name": "Text",
+                 "layout": "V",
+                 "gap": 2,
+                 "fillW": true,
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "Auto Wait",
+                   "textStyle": "Aura Fishing/Heading",
+                   "color": {
+                    "var": "cozy/text"
+                   },
+                   "name": "Name"
+                  },
+                  {
+                   "name": "Line",
+                   "layout": "H",
+                   "gap": 6,
+                   "cross": "CENTER",
+                   "children": [
+                    {
+                     "name": "Pill Lv.5",
+                     "layout": "H",
+                     "gap": 5,
+                     "pad": [
+                      5,
+                      12,
+                      5,
+                      10
+                     ],
+                     "radius": 999,
+                     "cross": "CENTER",
+                     "fill": {
+                      "var": "cozy/panel"
+                     },
+                     "children": [
+                      {
+                       "type": "TEXT",
+                       "text": "Lv.5",
+                       "textStyle": "Aura Fishing/Caption",
+                       "color": {
+                        "var": "cozy/gem-lip"
+                       },
+                       "name": "Label"
+                      }
+                     ]
+                    },
+                    {
+                     "name": "Effect",
+                     "layout": "H",
+                     "gap": 4,
+                     "cross": "CENTER",
+                     "children": [
+                      {
+                       "type": "TEXT",
+                       "text": "-5%",
+                       "textStyle": "Aura Fishing/Small",
+                       "color": {
+                        "var": "cozy/text"
+                       },
+                       "name": "From"
+                      },
+                      {
+                       "type": "TEXT",
+                       "text": "→",
+                       "textStyle": "Aura Fishing/Small",
+                       "color": {
+                        "var": "cozy/subtext"
+                       },
+                       "name": "Arrow"
+                      },
+                      {
+                       "type": "TEXT",
+                       "text": "-6%",
+                       "textStyle": "Aura Fishing/Small",
+                       "color": {
+                        "var": "cozy/mint-lip"
+                       },
+                       "name": "To"
+                      }
+                     ]
+                    }
+                   ]
+                  }
+                 ]
+                },
+                {
+                 "name": "Btn Upgrade",
+                 "layout": "V",
+                 "gap": 2,
+                 "pad": [
+                  7,
+                  10,
+                  10,
+                  10
+                 ],
+                 "radius": 16,
+                 "cross": "CENTER",
+                 "main": "CENTER",
+                 "fill": {
+                  "var": "cozy/mint"
+                 },
+                 "stroke": {
+                  "var": "cozy/mint-lip"
+                 },
+                 "strokeSides": {
+                  "b": 5
+                 },
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "UPGRADE",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 15,
+                   "color": "FFFFFF",
+                   "name": "Label"
+                  },
+                  {
+                   "name": "Cost",
+                   "layout": "H",
+                   "gap": 4,
+                   "cross": "CENTER",
+                   "children": [
+                    {
+                     "type": "RECT",
+                     "name": "Img ui/status/pearl",
+                     "w": 16,
+                     "h": 16
+                    },
+                    {
+                     "type": "TEXT",
+                     "text": "120",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 14,
+                     "color": "FFFFFF",
+                     "name": "Value"
+                    }
+                   ]
+                  }
+                 ],
+                 "w": 104
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Row 3",
+             "layout": "H",
+             "gap": 16,
+             "children": [
+              {
+               "name": "Track Pearl Rate",
+               "layout": "H",
+               "gap": 12,
+               "pad": 12,
+               "w": 352,
+               "h": 92,
+               "radius": 18,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/sand"
+               },
+               "children": [
+                {
+                 "name": "Icon",
+                 "w": 60,
+                 "h": 60,
+                 "radius": 16,
+                 "fill": "FFFFFF",
+                 "stroke": {
+                  "var": "cozy/track"
+                 },
+                 "strokeW": 2,
+                 "layout": "H",
+                 "main": "CENTER",
+                 "cross": "CENTER",
+                 "children": [
+                  {
+                   "type": "RECT",
+                   "name": "Img ui/status/pearl",
+                   "w": 46,
+                   "h": 46
+                  }
+                 ]
+                },
+                {
+                 "name": "Text",
+                 "layout": "V",
+                 "gap": 2,
+                 "fillW": true,
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "Pearl Rate",
+                   "textStyle": "Aura Fishing/Heading",
+                   "color": {
+                    "var": "cozy/text"
+                   },
+                   "name": "Name"
+                  },
+                  {
+                   "name": "Line",
+                   "layout": "H",
+                   "gap": 6,
+                   "cross": "CENTER",
+                   "children": [
+                    {
+                     "name": "Pill Lv.15",
+                     "layout": "H",
+                     "gap": 5,
+                     "pad": [
+                      5,
+                      12,
+                      5,
+                      10
+                     ],
+                     "radius": 999,
+                     "cross": "CENTER",
+                     "fill": {
+                      "var": "cozy/panel"
+                     },
+                     "children": [
+                      {
+                       "type": "TEXT",
+                       "text": "Lv.15",
+                       "textStyle": "Aura Fishing/Caption",
+                       "color": {
+                        "var": "cozy/gem-lip"
+                       },
+                       "name": "Label"
+                      }
+                     ]
+                    },
+                    {
+                     "name": "Effect",
+                     "layout": "H",
+                     "gap": 4,
+                     "cross": "CENTER",
+                     "children": [
+                      {
+                       "type": "TEXT",
+                       "text": "+15%",
+                       "textStyle": "Aura Fishing/Small",
+                       "color": {
+                        "var": "cozy/text"
+                       },
+                       "name": "From"
+                      },
+                      {
+                       "type": "TEXT",
+                       "text": "→",
+                       "textStyle": "Aura Fishing/Small",
+                       "color": {
+                        "var": "cozy/subtext"
+                       },
+                       "name": "Arrow"
+                      },
+                      {
+                       "type": "TEXT",
+                       "text": "+16%",
+                       "textStyle": "Aura Fishing/Small",
+                       "color": {
+                        "var": "cozy/mint-lip"
+                       },
+                       "name": "To"
+                      }
+                     ]
+                    }
+                   ]
+                  }
+                 ]
+                },
+                {
+                 "name": "Btn Upgrade",
+                 "layout": "V",
+                 "gap": 2,
+                 "pad": [
+                  7,
+                  10,
+                  10,
+                  10
+                 ],
+                 "radius": 16,
+                 "cross": "CENTER",
+                 "main": "CENTER",
+                 "fill": {
+                  "var": "cozy/sand"
+                 },
+                 "stroke": {
+                  "var": "cozy/track"
+                 },
+                 "strokeSides": {
+                  "b": 5
+                 },
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "UPGRADE",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 15,
+                   "color": "9AA5B1",
+                   "name": "Label"
+                  },
+                  {
+                   "name": "Cost",
+                   "layout": "H",
+                   "gap": 4,
+                   "cross": "CENTER",
+                   "children": [
+                    {
+                     "type": "RECT",
+                     "name": "Img ui/status/pearl",
+                     "w": 16,
+                     "h": 16
+                    },
+                    {
+                     "type": "TEXT",
+                     "text": "620",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 14,
+                     "color": "9AA5B1",
+                     "name": "Value"
+                    }
+                   ]
+                  }
+                 ],
+                 "w": 104
+                }
+               ]
+              },
+              {
+               "name": "Track Offline Cap",
+               "layout": "H",
+               "gap": 12,
+               "pad": 12,
+               "w": 352,
+               "h": 92,
+               "radius": 18,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/sand"
+               },
+               "children": [
+                {
+                 "name": "Icon",
+                 "w": 60,
+                 "h": 60,
+                 "radius": 16,
+                 "fill": "FFFFFF",
+                 "stroke": {
+                  "var": "cozy/track"
+                 },
+                 "strokeW": 2,
+                 "layout": "H",
+                 "main": "CENTER",
+                 "cross": "CENTER",
+                 "children": [
+                  {
+                   "type": "RECT",
+                   "name": "Img ui/status/offline_reward",
+                   "w": 46,
+                   "h": 46
+                  }
+                 ]
+                },
+                {
+                 "name": "Text",
+                 "layout": "V",
+                 "gap": 2,
+                 "fillW": true,
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "Offline Cap",
+                   "textStyle": "Aura Fishing/Heading",
+                   "color": {
+                    "var": "cozy/text"
+                   },
+                   "name": "Name"
+                  },
+                  {
+                   "name": "Line",
+                   "layout": "H",
+                   "gap": 6,
+                   "cross": "CENTER",
+                   "children": [
+                    {
+                     "name": "Pill Lv.4",
+                     "layout": "H",
+                     "gap": 5,
+                     "pad": [
+                      5,
+                      12,
+                      5,
+                      10
+                     ],
+                     "radius": 999,
+                     "cross": "CENTER",
+                     "fill": {
+                      "var": "cozy/panel"
+                     },
+                     "children": [
+                      {
+                       "type": "TEXT",
+                       "text": "Lv.4",
+                       "textStyle": "Aura Fishing/Caption",
+                       "color": {
+                        "var": "cozy/gem-lip"
+                       },
+                       "name": "Label"
+                      }
+                     ]
+                    },
+                    {
+                     "name": "Effect",
+                     "layout": "H",
+                     "gap": 4,
+                     "cross": "CENTER",
+                     "children": [
+                      {
+                       "type": "TEXT",
+                       "text": "4h",
+                       "textStyle": "Aura Fishing/Small",
+                       "color": {
+                        "var": "cozy/text"
+                       },
+                       "name": "From"
+                      },
+                      {
+                       "type": "TEXT",
+                       "text": "→",
+                       "textStyle": "Aura Fishing/Small",
+                       "color": {
+                        "var": "cozy/subtext"
+                       },
+                       "name": "Arrow"
+                      },
+                      {
+                       "type": "TEXT",
+                       "text": "4h 30m",
+                       "textStyle": "Aura Fishing/Small",
+                       "color": {
+                        "var": "cozy/mint-lip"
+                       },
+                       "name": "To"
+                      }
+                     ]
+                    }
+                   ]
+                  }
+                 ]
+                },
+                {
+                 "name": "Btn Upgrade",
+                 "layout": "V",
+                 "gap": 2,
+                 "pad": [
+                  7,
+                  10,
+                  10,
+                  10
+                 ],
+                 "radius": 16,
+                 "cross": "CENTER",
+                 "main": "CENTER",
+                 "fill": {
+                  "var": "cozy/sand"
+                 },
+                 "stroke": {
+                  "var": "cozy/track"
+                 },
+                 "strokeSides": {
+                  "b": 5
+                 },
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "UPGRADE",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 15,
+                   "color": "9AA5B1",
+                   "name": "Label"
+                  },
+                  {
+                   "name": "Cost",
+                   "layout": "H",
+                   "gap": 4,
+                   "cross": "CENTER",
+                   "children": [
+                    {
+                     "type": "RECT",
+                     "name": "Img ui/status/pearl",
+                     "w": 16,
+                     "h": 16
+                    },
+                    {
+                     "type": "TEXT",
+                     "text": "900",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 14,
+                     "color": "9AA5B1",
+                     "name": "Value"
+                    }
+                   ]
+                  }
+                 ],
+                 "w": 104
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Row 4",
+             "layout": "H",
+             "gap": 16,
+             "children": [
+              {
+               "name": "Track Sell Mult",
+               "layout": "H",
+               "gap": 12,
+               "pad": 12,
+               "w": 352,
+               "h": 92,
+               "radius": 18,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/sand"
+               },
+               "children": [
+                {
+                 "name": "Icon",
+                 "w": 60,
+                 "h": 60,
+                 "radius": 16,
+                 "fill": "FFFFFF",
+                 "stroke": {
+                  "var": "cozy/track"
+                 },
+                 "strokeW": 2,
+                 "layout": "H",
+                 "main": "CENTER",
+                 "cross": "CENTER",
+                 "children": [
+                  {
+                   "type": "RECT",
+                   "name": "Img ui/status/sell_bag",
+                   "w": 46,
+                   "h": 46
+                  }
+                 ]
+                },
+                {
+                 "name": "Text",
+                 "layout": "V",
+                 "gap": 2,
+                 "fillW": true,
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "Sell Mult",
+                   "textStyle": "Aura Fishing/Heading",
+                   "color": {
+                    "var": "cozy/text"
+                   },
+                   "name": "Name"
+                  },
+                  {
+                   "name": "Line",
+                   "layout": "H",
+                   "gap": 6,
+                   "cross": "CENTER",
+                   "children": [
+                    {
+                     "name": "Pill Lv.30",
+                     "layout": "H",
+                     "gap": 5,
+                     "pad": [
+                      5,
+                      12,
+                      5,
+                      10
+                     ],
+                     "radius": 999,
+                     "cross": "CENTER",
+                     "fill": {
+                      "var": "cozy/panel"
+                     },
+                     "children": [
+                      {
+                       "type": "TEXT",
+                       "text": "Lv.30",
+                       "textStyle": "Aura Fishing/Caption",
+                       "color": {
+                        "var": "cozy/gem-lip"
+                       },
+                       "name": "Label"
+                      }
+                     ]
+                    },
+                    {
+                     "name": "Effect",
+                     "layout": "H",
+                     "gap": 4,
+                     "cross": "CENTER",
+                     "children": [
+                      {
+                       "type": "TEXT",
+                       "text": "+30%",
+                       "textStyle": "Aura Fishing/Small",
+                       "color": {
+                        "var": "cozy/text"
+                       },
+                       "name": "From"
+                      },
+                      {
+                       "type": "TEXT",
+                       "text": "→",
+                       "textStyle": "Aura Fishing/Small",
+                       "color": {
+                        "var": "cozy/subtext"
+                       },
+                       "name": "Arrow"
+                      },
+                      {
+                       "type": "TEXT",
+                       "text": "+31%",
+                       "textStyle": "Aura Fishing/Small",
+                       "color": {
+                        "var": "cozy/mint-lip"
+                       },
+                       "name": "To"
+                      }
+                     ]
+                    }
+                   ]
+                  }
+                 ]
+                },
+                {
+                 "name": "Btn Upgrade",
+                 "layout": "V",
+                 "gap": 2,
+                 "pad": [
+                  7,
+                  10,
+                  10,
+                  10
+                 ],
+                 "radius": 16,
+                 "cross": "CENTER",
+                 "main": "CENTER",
+                 "fill": {
+                  "var": "cozy/sand"
+                 },
+                 "stroke": {
+                  "var": "cozy/track"
+                 },
+                 "strokeSides": {
+                  "b": 5
+                 },
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "UPGRADE",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 15,
+                   "color": "9AA5B1",
+                   "name": "Label"
+                  },
+                  {
+                   "name": "Cost",
+                   "layout": "H",
+                   "gap": 4,
+                   "cross": "CENTER",
+                   "children": [
+                    {
+                     "type": "RECT",
+                     "name": "Img ui/status/pearl",
+                     "w": 16,
+                     "h": 16
+                    },
+                    {
+                     "type": "TEXT",
+                     "text": "2.1k",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 14,
+                     "color": "9AA5B1",
+                     "name": "Value"
+                    }
+                   ]
+                  }
+                 ],
+                 "w": 104
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "[skip] Roblox CoreGui (guide)",
+         "w": 1280,
+         "h": 720,
+         "x": 0,
+         "y": 0,
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Top Bar",
+           "w": 1280,
+           "h": 58,
+           "x": 0,
+           "y": 0,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Roblox Menu Btn",
+           "w": 44,
+           "h": 44,
+           "x": 12,
+           "y": 7,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Chat Btn",
+           "w": 44,
+           "h": 44,
+           "x": 64,
+           "y": 7,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          },
+          {
+           "type": "TEXT",
+           "text": "ROBLOX TOP BAR (58px)  —  keep clear",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 124,
+           "y": 22
+          },
+          {
+           "type": "RECT",
+           "name": "Chat Window (when open)",
+           "w": 380,
+           "h": 210,
+           "x": 8,
+           "y": 64,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.04
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "CHAT WINDOW (desktop, when open)",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 20,
+           "y": 248
+          },
+          {
+           "type": "RECT",
+           "name": "Leaderboard",
+           "w": 236,
+           "h": 170,
+           "x": 1032,
+           "y": 64,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.06
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "LEADERBOARD (leaderstats)",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 1044,
+           "y": 210
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Mobile Thumbstick",
+           "w": 150,
+           "h": 150,
+           "x": 50,
+           "y": 510,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "MOBILE THUMBSTICK",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 62,
+           "y": 668
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Mobile Jump",
+           "w": 96,
+           "h": 96,
+           "x": 1120,
+           "y": 550,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "MOBILE JUMP",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 1122,
+           "y": 660
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Card states",
+     "layout": "V",
+     "gap": 10,
+     "pad": 24,
+     "radius": 24,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 2,
+     "effects": [
+      {
+       "color": "3D4B5C",
+       "a": 0.1,
+       "y": 6,
+       "blur": 18
+      }
+     ],
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "Card states",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "type": "TEXT",
+       "text": "Mint = can afford • grey = not enough Pearls • MAX when a track has a cap (Offline Cap stops at 12h). Price ×1.15 per level.",
+       "textStyle": "Aura Fishing/Small",
+       "color": {
+        "var": "cozy/subtext"
+       },
+       "name": "Desc",
+       "w": 372
+      },
+      {
+       "name": "Body",
+       "layout": "V",
+       "gap": 14,
+       "children": [
+        {
+         "name": "Track Luck",
+         "layout": "H",
+         "gap": 12,
+         "pad": 12,
+         "w": 352,
+         "h": 92,
+         "radius": 18,
+         "cross": "CENTER",
+         "fill": {
+          "var": "cozy/sand"
+         },
+         "children": [
+          {
+           "name": "Icon",
+           "w": 60,
+           "h": 60,
+           "radius": 16,
+           "fill": {
+            "hex": "7FD3B0"
+           },
+           "stroke": {
+            "var": "cozy/track"
+           },
+           "strokeW": 2,
+           "layout": "H",
+           "main": "CENTER",
+           "cross": "CENTER",
+           "children": [
+            {
+             "type": "SVG",
+             "svg": "<svg width=\"34\" height=\"34\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"17\" cy=\"17\" r=\"8\" fill=\"#FFFFFF\"/><circle cx=\"31\" cy=\"17\" r=\"8\" fill=\"#FFFFFF\"/><circle cx=\"17\" cy=\"31\" r=\"8\" fill=\"#FFFFFF\"/><circle cx=\"31\" cy=\"31\" r=\"8\" fill=\"#FFFFFF\"/><path d=\"M30 30l10 12\" stroke=\"#FFFFFF\" stroke-width=\"4\" stroke-linecap=\"round\"/></svg>",
+             "w": 34,
+             "h": 34,
+             "name": "icon_clover"
+            }
+           ]
+          },
+          {
+           "name": "Text",
+           "layout": "V",
+           "gap": 2,
+           "fillW": true,
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "Luck",
+             "textStyle": "Aura Fishing/Heading",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Name"
+            },
+            {
+             "name": "Line",
+             "layout": "H",
+             "gap": 6,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Pill Lv.12",
+               "layout": "H",
+               "gap": 5,
+               "pad": [
+                5,
+                12,
+                5,
+                10
+               ],
+               "radius": 999,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/panel"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "Lv.12",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/gem-lip"
+                 },
+                 "name": "Label"
+                }
+               ]
+              },
+              {
+               "name": "Effect",
+               "layout": "H",
+               "gap": 4,
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+12%",
+                 "textStyle": "Aura Fishing/Small",
+                 "color": {
+                  "var": "cozy/text"
+                 },
+                 "name": "From"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "→",
+                 "textStyle": "Aura Fishing/Small",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Arrow"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+13%",
+                 "textStyle": "Aura Fishing/Small",
+                 "color": {
+                  "var": "cozy/mint-lip"
+                 },
+                 "name": "To"
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Btn Upgrade",
+           "layout": "V",
+           "gap": 2,
+           "pad": [
+            7,
+            10,
+            10,
+            10
+           ],
+           "radius": 16,
+           "cross": "CENTER",
+           "main": "CENTER",
+           "fill": {
+            "var": "cozy/mint"
+           },
+           "stroke": {
+            "var": "cozy/mint-lip"
+           },
+           "strokeSides": {
+            "b": 5
+           },
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "UPGRADE",
+             "font": {
+              "family": "Fredoka One",
+              "style": "Regular"
+             },
+             "size": 15,
+             "color": "FFFFFF",
+             "name": "Label"
+            },
+            {
+             "name": "Cost",
+             "layout": "H",
+             "gap": 4,
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/status/pearl",
+               "w": 16,
+               "h": 16
+              },
+              {
+               "type": "TEXT",
+               "text": "407",
+               "font": {
+                "family": "Fredoka One",
+                "style": "Regular"
+               },
+               "size": 14,
+               "color": "FFFFFF",
+               "name": "Value"
+              }
+             ]
+            }
+           ],
+           "w": 104
+          }
+         ]
+        },
+        {
+         "name": "Track Pearl Rate",
+         "layout": "H",
+         "gap": 12,
+         "pad": 12,
+         "w": 352,
+         "h": 92,
+         "radius": 18,
+         "cross": "CENTER",
+         "fill": {
+          "var": "cozy/sand"
+         },
+         "children": [
+          {
+           "name": "Icon",
+           "w": 60,
+           "h": 60,
+           "radius": 16,
+           "fill": "FFFFFF",
+           "stroke": {
+            "var": "cozy/track"
+           },
+           "strokeW": 2,
+           "layout": "H",
+           "main": "CENTER",
+           "cross": "CENTER",
+           "children": [
+            {
+             "type": "RECT",
+             "name": "Img ui/status/pearl",
+             "w": 46,
+             "h": 46
+            }
+           ]
+          },
+          {
+           "name": "Text",
+           "layout": "V",
+           "gap": 2,
+           "fillW": true,
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "Pearl Rate",
+             "textStyle": "Aura Fishing/Heading",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Name"
+            },
+            {
+             "name": "Line",
+             "layout": "H",
+             "gap": 6,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Pill Lv.15",
+               "layout": "H",
+               "gap": 5,
+               "pad": [
+                5,
+                12,
+                5,
+                10
+               ],
+               "radius": 999,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/panel"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "Lv.15",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/gem-lip"
+                 },
+                 "name": "Label"
+                }
+               ]
+              },
+              {
+               "name": "Effect",
+               "layout": "H",
+               "gap": 4,
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+15%",
+                 "textStyle": "Aura Fishing/Small",
+                 "color": {
+                  "var": "cozy/text"
+                 },
+                 "name": "From"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "→",
+                 "textStyle": "Aura Fishing/Small",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Arrow"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+16%",
+                 "textStyle": "Aura Fishing/Small",
+                 "color": {
+                  "var": "cozy/mint-lip"
+                 },
+                 "name": "To"
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Btn Upgrade",
+           "layout": "V",
+           "gap": 2,
+           "pad": [
+            7,
+            10,
+            10,
+            10
+           ],
+           "radius": 16,
+           "cross": "CENTER",
+           "main": "CENTER",
+           "fill": {
+            "var": "cozy/sand"
+           },
+           "stroke": {
+            "var": "cozy/track"
+           },
+           "strokeSides": {
+            "b": 5
+           },
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "UPGRADE",
+             "font": {
+              "family": "Fredoka One",
+              "style": "Regular"
+             },
+             "size": 15,
+             "color": "9AA5B1",
+             "name": "Label"
+            },
+            {
+             "name": "Cost",
+             "layout": "H",
+             "gap": 4,
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/status/pearl",
+               "w": 16,
+               "h": 16
+              },
+              {
+               "type": "TEXT",
+               "text": "620",
+               "font": {
+                "family": "Fredoka One",
+                "style": "Regular"
+               },
+               "size": 14,
+               "color": "9AA5B1",
+               "name": "Value"
+              }
+             ]
+            }
+           ],
+           "w": 104
+          }
+         ]
+        },
+        {
+         "name": "Track Offline Cap",
+         "layout": "H",
+         "gap": 12,
+         "pad": 12,
+         "w": 352,
+         "h": 92,
+         "radius": 18,
+         "cross": "CENTER",
+         "fill": {
+          "var": "cozy/sand"
+         },
+         "children": [
+          {
+           "name": "Icon",
+           "w": 60,
+           "h": 60,
+           "radius": 16,
+           "fill": "FFFFFF",
+           "stroke": {
+            "var": "cozy/track"
+           },
+           "strokeW": 2,
+           "layout": "H",
+           "main": "CENTER",
+           "cross": "CENTER",
+           "children": [
+            {
+             "type": "RECT",
+             "name": "Img ui/status/offline_reward",
+             "w": 46,
+             "h": 46
+            }
+           ]
+          },
+          {
+           "name": "Text",
+           "layout": "V",
+           "gap": 2,
+           "fillW": true,
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "Offline Cap",
+             "textStyle": "Aura Fishing/Heading",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Name"
+            },
+            {
+             "name": "Line",
+             "layout": "H",
+             "gap": 6,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Pill Lv.16",
+               "layout": "H",
+               "gap": 5,
+               "pad": [
+                5,
+                12,
+                5,
+                10
+               ],
+               "radius": 999,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/panel"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "Lv.16",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/gem-lip"
+                 },
+                 "name": "Label"
+                }
+               ]
+              },
+              {
+               "name": "Effect",
+               "layout": "H",
+               "gap": 4,
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "12h",
+                 "textStyle": "Aura Fishing/Small",
+                 "color": {
+                  "var": "cozy/text"
+                 },
+                 "name": "From"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "→",
+                 "textStyle": "Aura Fishing/Small",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Arrow"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "12h",
+                 "textStyle": "Aura Fishing/Small",
+                 "color": {
+                  "var": "cozy/mint-lip"
+                 },
+                 "name": "To"
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Btn Max",
+           "layout": "H",
+           "gap": 6,
+           "pad": [
+            8,
+            14,
+            11,
+            14
+           ],
+           "radius": 16,
+           "cross": "CENTER",
+           "main": "CENTER",
+           "fill": {
+            "var": "cozy/sand"
+           },
+           "stroke": {
+            "var": "cozy/track"
+           },
+           "strokeSides": {
+            "b": 5
+           },
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "MAX",
+             "font": {
+              "family": "Fredoka One",
+              "style": "Regular"
+             },
+             "size": 16,
+             "color": "9AA5B1",
+             "name": "Label"
+            }
+           ],
+           "w": 104
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "w": 420,
+     "x": 1400,
+     "y": 200
+    },
+    {
+     "name": "Data",
+     "layout": "V",
+     "gap": 10,
+     "pad": 24,
+     "radius": 24,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 2,
+     "effects": [
+      {
+       "color": "3D4B5C",
+       "a": 0.1,
+       "y": 6,
+       "blur": 18
+      }
+     ],
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "Data",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "type": "TEXT",
+       "text": "Server: { Tracks = { {Id, Stat, Level, Current, Next, Price} }, Pearls } as numbers. Client formats with Format.Stat(Stat, value) like Shop / aura badges.",
+       "textStyle": "Aura Fishing/Small",
+       "color": {
+        "var": "cozy/subtext"
+       },
+       "name": "Desc",
+       "w": 372
+      }
+     ],
+     "w": 420,
+     "x": 1400,
+     "y": 720
+    }
+   ]
+  }
+ }
+]

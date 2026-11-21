@@ -1,0 +1,5484 @@
+[
+ {
+  "pageId": "3465:14993",
+  "replaceName": "18 · Empty Slot options",
+  "tree": {
+   "type": "SECTION",
+   "name": "18 · Empty Slot options",
+   "fill": "F3E9D8",
+   "x": 27200,
+   "y": 9900,
+   "children": [
+    {
+     "type": "TEXT",
+     "text": "18 · Empty Slot — 6 options (no centre +)",
+     "textStyle": "Aura Fishing/Display",
+     "color": {
+      "var": "cozy/text"
+     },
+     "name": "Title",
+     "x": 60,
+     "y": 40
+    },
+    {
+     "type": "TEXT",
+     "text": "Mini Inventory grids at real size (72px). Last cell = Get More (opens the Shop on that tab), redesigned too so it is not a + either.",
+     "textStyle": "Aura Fishing/Body",
+     "color": {
+      "var": "cozy/subtext"
+     },
+     "name": "Sub",
+     "x": 60,
+     "y": 100,
+     "w": 2200
+    },
+    {
+     "name": "1 · Recessed",
+     "layout": "V",
+     "gap": 10,
+     "pad": 24,
+     "radius": 24,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 2,
+     "effects": [
+      {
+       "color": "3D4B5C",
+       "a": 0.1,
+       "y": 6,
+       "blur": 18
+      }
+     ],
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "1 · Recessed",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "type": "TEXT",
+       "text": "Sunken darker tile, nothing inside. Cleanest; empty space reads as 'holes'.",
+       "textStyle": "Aura Fishing/Small",
+       "color": {
+        "var": "cozy/subtext"
+       },
+       "name": "Desc",
+       "w": 632
+      },
+      {
+       "name": "Body",
+       "layout": "V",
+       "gap": 14,
+       "children": [
+        {
+         "name": "Grid",
+         "layout": "V",
+         "gap": 10,
+         "pad": 14,
+         "radius": 20,
+         "fill": {
+          "var": "cozy/panel"
+         },
+         "stroke": {
+          "var": "cozy/track"
+         },
+         "strokeW": 2,
+         "children": [
+          {
+           "name": "Row 1",
+           "layout": "H",
+           "gap": 8,
+           "children": [
+            {
+             "type": "FRAME",
+             "name": "PebbleMinnow",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "x": 0,
+               "y": 0,
+               "radius": 16,
+               "clip": true,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "color": "3D4B5C",
+                 "a": 0.08,
+                 "y": 4,
+                 "blur": 10
+                }
+               ],
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/PebbleMinnow",
+                 "w": 56,
+                 "h": 56,
+                 "x": 8,
+                 "y": 5
+                },
+                {
+                 "type": "SVG",
+                 "name": "Rarity Corner",
+                 "w": 25,
+                 "h": 25,
+                 "x": 0,
+                 "y": 0,
+                 "svg": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#9AA5B1\"/></svg>"
+                },
+                {
+                 "name": "Count Row",
+                 "layout": "H",
+                 "w": 72,
+                 "x": 0,
+                 "y": 52,
+                 "main": "MAX",
+                 "pad": [
+                  0,
+                  7,
+                  0,
+                  0
+                 ],
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "x23",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "3D4B5C",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "FRAME",
+             "name": "BubbleCarp",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "x": 0,
+               "y": 0,
+               "radius": 16,
+               "clip": true,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "color": "3D4B5C",
+                 "a": 0.08,
+                 "y": 4,
+                 "blur": 10
+                }
+               ],
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/BubbleCarp",
+                 "w": 56,
+                 "h": 56,
+                 "x": 8,
+                 "y": 5
+                },
+                {
+                 "type": "SVG",
+                 "name": "Rarity Corner",
+                 "w": 25,
+                 "h": 25,
+                 "x": 0,
+                 "y": 0,
+                 "svg": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#9AA5B1\"/></svg>"
+                },
+                {
+                 "name": "Count Row",
+                 "layout": "H",
+                 "w": 72,
+                 "x": 0,
+                 "y": 52,
+                 "main": "MAX",
+                 "pad": [
+                  0,
+                  7,
+                  0,
+                  0
+                 ],
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "x41",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "3D4B5C",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "FRAME",
+             "name": "PearlClam",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "x": 0,
+               "y": 0,
+               "radius": 16,
+               "clip": true,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "color": "3D4B5C",
+                 "a": 0.08,
+                 "y": 4,
+                 "blur": 10
+                }
+               ],
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/PearlClam",
+                 "w": 56,
+                 "h": 56,
+                 "x": 8,
+                 "y": 5
+                },
+                {
+                 "type": "SVG",
+                 "name": "Rarity Corner",
+                 "w": 25,
+                 "h": 25,
+                 "x": 0,
+                 "y": 0,
+                 "svg": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#5CC98A\"/></svg>"
+                },
+                {
+                 "name": "Count Row",
+                 "layout": "H",
+                 "w": 72,
+                 "x": 0,
+                 "y": 52,
+                 "main": "MAX",
+                 "pad": [
+                  0,
+                  7,
+                  0,
+                  0
+                 ],
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "x6",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "3D4B5C",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "FRAME",
+             "name": "DewdropKoi",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "x": 0,
+               "y": 0,
+               "radius": 16,
+               "clip": true,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "color": "3D4B5C",
+                 "a": 0.08,
+                 "y": 4,
+                 "blur": 10
+                }
+               ],
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/DewdropKoi",
+                 "w": 56,
+                 "h": 56,
+                 "x": 8,
+                 "y": 5
+                },
+                {
+                 "type": "SVG",
+                 "name": "Rarity Corner",
+                 "w": 25,
+                 "h": 25,
+                 "x": 0,
+                 "y": 0,
+                 "svg": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#5AA9F0\"/></svg>"
+                },
+                {
+                 "name": "Count Row",
+                 "layout": "H",
+                 "w": 72,
+                 "x": 0,
+                 "y": 52,
+                 "main": "MAX",
+                 "pad": [
+                  0,
+                  7,
+                  0,
+                  0
+                 ],
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "x2",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "3D4B5C",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "FRAME",
+             "name": "CrystalGuppy",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "x": 0,
+               "y": 0,
+               "radius": 16,
+               "clip": true,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "color": "3D4B5C",
+                 "a": 0.08,
+                 "y": 4,
+                 "blur": 10
+                }
+               ],
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/CrystalGuppy",
+                 "w": 56,
+                 "h": 56,
+                 "x": 8,
+                 "y": 5
+                },
+                {
+                 "type": "SVG",
+                 "name": "Rarity Corner",
+                 "w": 25,
+                 "h": 25,
+                 "x": 0,
+                 "y": 0,
+                 "svg": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#B07CF0\"/></svg>"
+                },
+                {
+                 "name": "Count Row",
+                 "layout": "H",
+                 "w": 72,
+                 "x": 0,
+                 "y": 52,
+                 "main": "MAX",
+                 "pad": [
+                  0,
+                  7,
+                  0,
+                  0
+                 ],
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "x1",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "3D4B5C",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "EADFCB"
+               },
+               "children": [],
+               "effects": [
+                {
+                 "inner": true,
+                 "color": "3D4B5C",
+                 "a": 0.14,
+                 "y": 3,
+                 "blur": 6
+                }
+               ],
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "EADFCB"
+               },
+               "children": [],
+               "effects": [
+                {
+                 "inner": true,
+                 "color": "3D4B5C",
+                 "a": 0.14,
+                 "y": 3,
+                 "blur": 6
+                }
+               ],
+               "x": 0,
+               "y": 0
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Row 2",
+           "layout": "H",
+           "gap": 8,
+           "children": [
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "EADFCB"
+               },
+               "children": [],
+               "effects": [
+                {
+                 "inner": true,
+                 "color": "3D4B5C",
+                 "a": 0.14,
+                 "y": 3,
+                 "blur": 6
+                }
+               ],
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "EADFCB"
+               },
+               "children": [],
+               "effects": [
+                {
+                 "inner": true,
+                 "color": "3D4B5C",
+                 "a": 0.14,
+                 "y": 3,
+                 "blur": 6
+                }
+               ],
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "EADFCB"
+               },
+               "children": [],
+               "effects": [
+                {
+                 "inner": true,
+                 "color": "3D4B5C",
+                 "a": 0.14,
+                 "y": 3,
+                 "blur": 6
+                }
+               ],
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "EADFCB"
+               },
+               "children": [],
+               "effects": [
+                {
+                 "inner": true,
+                 "color": "3D4B5C",
+                 "a": 0.14,
+                 "y": 3,
+                 "blur": 6
+                }
+               ],
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "EADFCB"
+               },
+               "children": [],
+               "effects": [
+                {
+                 "inner": true,
+                 "color": "3D4B5C",
+                 "a": 0.14,
+                 "y": 3,
+                 "blur": 6
+                }
+               ],
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "EADFCB"
+               },
+               "children": [],
+               "effects": [
+                {
+                 "inner": true,
+                 "color": "3D4B5C",
+                 "a": 0.14,
+                 "y": 3,
+                 "blur": 6
+                }
+               ],
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Btn Get More",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8"
+               },
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/icons/shop",
+                 "w": 34,
+                 "h": 34,
+                 "x": 19,
+                 "y": 10
+                },
+                {
+                 "type": "TEXT",
+                 "text": "Shop",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Label",
+                 "x": 0,
+                 "y": 46,
+                 "w": 72,
+                 "align": "CENTER"
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "x": 0,
+               "y": 0
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Zoom",
+         "layout": "H",
+         "gap": 16,
+         "cross": "CENTER",
+         "children": [
+          {
+           "name": "Empty x1",
+           "w": 72,
+           "h": 72,
+           "clip": false,
+           "children": [
+            {
+             "name": "Slot",
+             "w": 72,
+             "h": 72,
+             "radius": 18,
+             "clip": true,
+             "fill": {
+              "hex": "EADFCB"
+             },
+             "children": [],
+             "effects": [
+              {
+               "inner": true,
+               "color": "3D4B5C",
+               "a": 0.14,
+               "y": 3,
+               "blur": 6
+              }
+             ],
+             "x": 0,
+             "y": 0
+            }
+           ]
+          },
+          {
+           "name": "Get More x1",
+           "w": 72,
+           "h": 72,
+           "clip": false,
+           "children": [
+            {
+             "name": "Slot",
+             "w": 72,
+             "h": 72,
+             "radius": 18,
+             "clip": true,
+             "fill": {
+              "hex": "F3E9D8"
+             },
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/icons/shop",
+               "w": 34,
+               "h": 34,
+               "x": 19,
+               "y": 10
+              },
+              {
+               "type": "TEXT",
+               "text": "Shop",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Label",
+               "x": 0,
+               "y": 46,
+               "w": 72,
+               "align": "CENTER"
+              }
+             ],
+             "stroke": {
+              "var": "cozy/track"
+             },
+             "strokeW": 2,
+             "x": 0,
+             "y": 0
+            }
+           ]
+          },
+          {
+           "type": "TEXT",
+           "text": "empty  |  get more (opens Shop)",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Legend"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "w": 680,
+     "x": 60,
+     "y": 180
+    },
+    {
+     "name": "2 · Dashed",
+     "layout": "V",
+     "gap": 10,
+     "pad": 24,
+     "radius": 24,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 2,
+     "effects": [
+      {
+       "color": "3D4B5C",
+       "a": 0.1,
+       "y": 6,
+       "blur": 18
+      }
+     ],
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "2 · Dashed",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "type": "TEXT",
+       "text": "Dashed outline on a very light tile. Classic 'drop here' look.",
+       "textStyle": "Aura Fishing/Small",
+       "color": {
+        "var": "cozy/subtext"
+       },
+       "name": "Desc",
+       "w": 632
+      },
+      {
+       "name": "Body",
+       "layout": "V",
+       "gap": 14,
+       "children": [
+        {
+         "name": "Grid",
+         "layout": "V",
+         "gap": 10,
+         "pad": 14,
+         "radius": 20,
+         "fill": {
+          "var": "cozy/panel"
+         },
+         "stroke": {
+          "var": "cozy/track"
+         },
+         "strokeW": 2,
+         "children": [
+          {
+           "name": "Row 1",
+           "layout": "H",
+           "gap": 8,
+           "children": [
+            {
+             "type": "FRAME",
+             "name": "PebbleMinnow",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "x": 0,
+               "y": 0,
+               "radius": 16,
+               "clip": true,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "color": "3D4B5C",
+                 "a": 0.08,
+                 "y": 4,
+                 "blur": 10
+                }
+               ],
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/PebbleMinnow",
+                 "w": 56,
+                 "h": 56,
+                 "x": 8,
+                 "y": 5
+                },
+                {
+                 "type": "SVG",
+                 "name": "Rarity Corner",
+                 "w": 25,
+                 "h": 25,
+                 "x": 0,
+                 "y": 0,
+                 "svg": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#9AA5B1\"/></svg>"
+                },
+                {
+                 "name": "Count Row",
+                 "layout": "H",
+                 "w": 72,
+                 "x": 0,
+                 "y": 52,
+                 "main": "MAX",
+                 "pad": [
+                  0,
+                  7,
+                  0,
+                  0
+                 ],
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "x23",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "3D4B5C",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "FRAME",
+             "name": "BubbleCarp",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "x": 0,
+               "y": 0,
+               "radius": 16,
+               "clip": true,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "color": "3D4B5C",
+                 "a": 0.08,
+                 "y": 4,
+                 "blur": 10
+                }
+               ],
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/BubbleCarp",
+                 "w": 56,
+                 "h": 56,
+                 "x": 8,
+                 "y": 5
+                },
+                {
+                 "type": "SVG",
+                 "name": "Rarity Corner",
+                 "w": 25,
+                 "h": 25,
+                 "x": 0,
+                 "y": 0,
+                 "svg": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#9AA5B1\"/></svg>"
+                },
+                {
+                 "name": "Count Row",
+                 "layout": "H",
+                 "w": 72,
+                 "x": 0,
+                 "y": 52,
+                 "main": "MAX",
+                 "pad": [
+                  0,
+                  7,
+                  0,
+                  0
+                 ],
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "x41",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "3D4B5C",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "FRAME",
+             "name": "PearlClam",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "x": 0,
+               "y": 0,
+               "radius": 16,
+               "clip": true,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "color": "3D4B5C",
+                 "a": 0.08,
+                 "y": 4,
+                 "blur": 10
+                }
+               ],
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/PearlClam",
+                 "w": 56,
+                 "h": 56,
+                 "x": 8,
+                 "y": 5
+                },
+                {
+                 "type": "SVG",
+                 "name": "Rarity Corner",
+                 "w": 25,
+                 "h": 25,
+                 "x": 0,
+                 "y": 0,
+                 "svg": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#5CC98A\"/></svg>"
+                },
+                {
+                 "name": "Count Row",
+                 "layout": "H",
+                 "w": 72,
+                 "x": 0,
+                 "y": 52,
+                 "main": "MAX",
+                 "pad": [
+                  0,
+                  7,
+                  0,
+                  0
+                 ],
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "x6",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "3D4B5C",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "FRAME",
+             "name": "DewdropKoi",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "x": 0,
+               "y": 0,
+               "radius": 16,
+               "clip": true,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "color": "3D4B5C",
+                 "a": 0.08,
+                 "y": 4,
+                 "blur": 10
+                }
+               ],
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/DewdropKoi",
+                 "w": 56,
+                 "h": 56,
+                 "x": 8,
+                 "y": 5
+                },
+                {
+                 "type": "SVG",
+                 "name": "Rarity Corner",
+                 "w": 25,
+                 "h": 25,
+                 "x": 0,
+                 "y": 0,
+                 "svg": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#5AA9F0\"/></svg>"
+                },
+                {
+                 "name": "Count Row",
+                 "layout": "H",
+                 "w": 72,
+                 "x": 0,
+                 "y": 52,
+                 "main": "MAX",
+                 "pad": [
+                  0,
+                  7,
+                  0,
+                  0
+                 ],
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "x2",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "3D4B5C",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "FRAME",
+             "name": "CrystalGuppy",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "x": 0,
+               "y": 0,
+               "radius": 16,
+               "clip": true,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "color": "3D4B5C",
+                 "a": 0.08,
+                 "y": 4,
+                 "blur": 10
+                }
+               ],
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/CrystalGuppy",
+                 "w": 56,
+                 "h": 56,
+                 "x": 8,
+                 "y": 5
+                },
+                {
+                 "type": "SVG",
+                 "name": "Rarity Corner",
+                 "w": 25,
+                 "h": 25,
+                 "x": 0,
+                 "y": 0,
+                 "svg": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#B07CF0\"/></svg>"
+                },
+                {
+                 "name": "Count Row",
+                 "layout": "H",
+                 "w": 72,
+                 "x": 0,
+                 "y": 52,
+                 "main": "MAX",
+                 "pad": [
+                  0,
+                  7,
+                  0,
+                  0
+                 ],
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "x1",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "3D4B5C",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8",
+                "opacity": 0.35
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Dashes",
+                 "w": 72,
+                 "h": 72,
+                 "svg": "<svg width=\"72\" height=\"72\" viewBox=\"0 0 72 72\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"1.5\" y=\"1.5\" width=\"69\" height=\"69\" rx=\"17\" fill=\"none\" stroke=\"#D6C8B0\" stroke-width=\"2.5\" stroke-dasharray=\"7 6\"/></svg>",
+                 "x": 0,
+                 "y": 0
+                }
+               ],
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8",
+                "opacity": 0.35
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Dashes",
+                 "w": 72,
+                 "h": 72,
+                 "svg": "<svg width=\"72\" height=\"72\" viewBox=\"0 0 72 72\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"1.5\" y=\"1.5\" width=\"69\" height=\"69\" rx=\"17\" fill=\"none\" stroke=\"#D6C8B0\" stroke-width=\"2.5\" stroke-dasharray=\"7 6\"/></svg>",
+                 "x": 0,
+                 "y": 0
+                }
+               ],
+               "x": 0,
+               "y": 0
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Row 2",
+           "layout": "H",
+           "gap": 8,
+           "children": [
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8",
+                "opacity": 0.35
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Dashes",
+                 "w": 72,
+                 "h": 72,
+                 "svg": "<svg width=\"72\" height=\"72\" viewBox=\"0 0 72 72\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"1.5\" y=\"1.5\" width=\"69\" height=\"69\" rx=\"17\" fill=\"none\" stroke=\"#D6C8B0\" stroke-width=\"2.5\" stroke-dasharray=\"7 6\"/></svg>",
+                 "x": 0,
+                 "y": 0
+                }
+               ],
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8",
+                "opacity": 0.35
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Dashes",
+                 "w": 72,
+                 "h": 72,
+                 "svg": "<svg width=\"72\" height=\"72\" viewBox=\"0 0 72 72\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"1.5\" y=\"1.5\" width=\"69\" height=\"69\" rx=\"17\" fill=\"none\" stroke=\"#D6C8B0\" stroke-width=\"2.5\" stroke-dasharray=\"7 6\"/></svg>",
+                 "x": 0,
+                 "y": 0
+                }
+               ],
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8",
+                "opacity": 0.35
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Dashes",
+                 "w": 72,
+                 "h": 72,
+                 "svg": "<svg width=\"72\" height=\"72\" viewBox=\"0 0 72 72\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"1.5\" y=\"1.5\" width=\"69\" height=\"69\" rx=\"17\" fill=\"none\" stroke=\"#D6C8B0\" stroke-width=\"2.5\" stroke-dasharray=\"7 6\"/></svg>",
+                 "x": 0,
+                 "y": 0
+                }
+               ],
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8",
+                "opacity": 0.35
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Dashes",
+                 "w": 72,
+                 "h": 72,
+                 "svg": "<svg width=\"72\" height=\"72\" viewBox=\"0 0 72 72\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"1.5\" y=\"1.5\" width=\"69\" height=\"69\" rx=\"17\" fill=\"none\" stroke=\"#D6C8B0\" stroke-width=\"2.5\" stroke-dasharray=\"7 6\"/></svg>",
+                 "x": 0,
+                 "y": 0
+                }
+               ],
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8",
+                "opacity": 0.35
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Dashes",
+                 "w": 72,
+                 "h": 72,
+                 "svg": "<svg width=\"72\" height=\"72\" viewBox=\"0 0 72 72\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"1.5\" y=\"1.5\" width=\"69\" height=\"69\" rx=\"17\" fill=\"none\" stroke=\"#D6C8B0\" stroke-width=\"2.5\" stroke-dasharray=\"7 6\"/></svg>",
+                 "x": 0,
+                 "y": 0
+                }
+               ],
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8",
+                "opacity": 0.35
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Dashes",
+                 "w": 72,
+                 "h": 72,
+                 "svg": "<svg width=\"72\" height=\"72\" viewBox=\"0 0 72 72\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"1.5\" y=\"1.5\" width=\"69\" height=\"69\" rx=\"17\" fill=\"none\" stroke=\"#D6C8B0\" stroke-width=\"2.5\" stroke-dasharray=\"7 6\"/></svg>",
+                 "x": 0,
+                 "y": 0
+                }
+               ],
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Btn Get More",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "FFF8EC"
+               },
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/icons/shop",
+                 "w": 34,
+                 "h": 34,
+                 "x": 19,
+                 "y": 10
+                },
+                {
+                 "type": "TEXT",
+                 "text": "Shop",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Label",
+                 "x": 0,
+                 "y": 46,
+                 "w": 72,
+                 "align": "CENTER"
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "x": 0,
+               "y": 0
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Zoom",
+         "layout": "H",
+         "gap": 16,
+         "cross": "CENTER",
+         "children": [
+          {
+           "name": "Empty x1",
+           "w": 72,
+           "h": 72,
+           "clip": false,
+           "children": [
+            {
+             "name": "Slot",
+             "w": 72,
+             "h": 72,
+             "radius": 18,
+             "clip": true,
+             "fill": {
+              "hex": "F3E9D8",
+              "opacity": 0.35
+             },
+             "children": [
+              {
+               "type": "SVG",
+               "name": "Dashes",
+               "w": 72,
+               "h": 72,
+               "svg": "<svg width=\"72\" height=\"72\" viewBox=\"0 0 72 72\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"1.5\" y=\"1.5\" width=\"69\" height=\"69\" rx=\"17\" fill=\"none\" stroke=\"#D6C8B0\" stroke-width=\"2.5\" stroke-dasharray=\"7 6\"/></svg>",
+               "x": 0,
+               "y": 0
+              }
+             ],
+             "x": 0,
+             "y": 0
+            }
+           ]
+          },
+          {
+           "name": "Get More x1",
+           "w": 72,
+           "h": 72,
+           "clip": false,
+           "children": [
+            {
+             "name": "Slot",
+             "w": 72,
+             "h": 72,
+             "radius": 18,
+             "clip": true,
+             "fill": {
+              "hex": "FFF8EC"
+             },
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/icons/shop",
+               "w": 34,
+               "h": 34,
+               "x": 19,
+               "y": 10
+              },
+              {
+               "type": "TEXT",
+               "text": "Shop",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Label",
+               "x": 0,
+               "y": 46,
+               "w": 72,
+               "align": "CENTER"
+              }
+             ],
+             "stroke": {
+              "var": "cozy/track"
+             },
+             "strokeW": 2,
+             "x": 0,
+             "y": 0
+            }
+           ]
+          },
+          {
+           "type": "TEXT",
+           "text": "empty  |  get more (opens Shop)",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Legend"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "w": 680,
+     "x": 800,
+     "y": 180
+    },
+    {
+     "name": "3 · Silhouette",
+     "layout": "V",
+     "gap": 10,
+     "pad": 24,
+     "radius": 24,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 2,
+     "effects": [
+      {
+       "color": "3D4B5C",
+       "a": 0.1,
+       "y": 6,
+       "blur": 18
+      }
+     ],
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "3 · Silhouette",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "type": "TEXT",
+       "text": "Faint shape of the tab's item (fish / rod / orb ...). Tells you what goes there.",
+       "textStyle": "Aura Fishing/Small",
+       "color": {
+        "var": "cozy/subtext"
+       },
+       "name": "Desc",
+       "w": 632
+      },
+      {
+       "name": "Body",
+       "layout": "V",
+       "gap": 14,
+       "children": [
+        {
+         "name": "Grid",
+         "layout": "V",
+         "gap": 10,
+         "pad": 14,
+         "radius": 20,
+         "fill": {
+          "var": "cozy/panel"
+         },
+         "stroke": {
+          "var": "cozy/track"
+         },
+         "strokeW": 2,
+         "children": [
+          {
+           "name": "Row 1",
+           "layout": "H",
+           "gap": 8,
+           "children": [
+            {
+             "type": "FRAME",
+             "name": "PebbleMinnow",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "x": 0,
+               "y": 0,
+               "radius": 16,
+               "clip": true,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "color": "3D4B5C",
+                 "a": 0.08,
+                 "y": 4,
+                 "blur": 10
+                }
+               ],
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/PebbleMinnow",
+                 "w": 56,
+                 "h": 56,
+                 "x": 8,
+                 "y": 5
+                },
+                {
+                 "type": "SVG",
+                 "name": "Rarity Corner",
+                 "w": 25,
+                 "h": 25,
+                 "x": 0,
+                 "y": 0,
+                 "svg": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#9AA5B1\"/></svg>"
+                },
+                {
+                 "name": "Count Row",
+                 "layout": "H",
+                 "w": 72,
+                 "x": 0,
+                 "y": 52,
+                 "main": "MAX",
+                 "pad": [
+                  0,
+                  7,
+                  0,
+                  0
+                 ],
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "x23",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "3D4B5C",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "FRAME",
+             "name": "BubbleCarp",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "x": 0,
+               "y": 0,
+               "radius": 16,
+               "clip": true,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "color": "3D4B5C",
+                 "a": 0.08,
+                 "y": 4,
+                 "blur": 10
+                }
+               ],
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/BubbleCarp",
+                 "w": 56,
+                 "h": 56,
+                 "x": 8,
+                 "y": 5
+                },
+                {
+                 "type": "SVG",
+                 "name": "Rarity Corner",
+                 "w": 25,
+                 "h": 25,
+                 "x": 0,
+                 "y": 0,
+                 "svg": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#9AA5B1\"/></svg>"
+                },
+                {
+                 "name": "Count Row",
+                 "layout": "H",
+                 "w": 72,
+                 "x": 0,
+                 "y": 52,
+                 "main": "MAX",
+                 "pad": [
+                  0,
+                  7,
+                  0,
+                  0
+                 ],
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "x41",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "3D4B5C",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "FRAME",
+             "name": "PearlClam",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "x": 0,
+               "y": 0,
+               "radius": 16,
+               "clip": true,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "color": "3D4B5C",
+                 "a": 0.08,
+                 "y": 4,
+                 "blur": 10
+                }
+               ],
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/PearlClam",
+                 "w": 56,
+                 "h": 56,
+                 "x": 8,
+                 "y": 5
+                },
+                {
+                 "type": "SVG",
+                 "name": "Rarity Corner",
+                 "w": 25,
+                 "h": 25,
+                 "x": 0,
+                 "y": 0,
+                 "svg": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#5CC98A\"/></svg>"
+                },
+                {
+                 "name": "Count Row",
+                 "layout": "H",
+                 "w": 72,
+                 "x": 0,
+                 "y": 52,
+                 "main": "MAX",
+                 "pad": [
+                  0,
+                  7,
+                  0,
+                  0
+                 ],
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "x6",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "3D4B5C",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "FRAME",
+             "name": "DewdropKoi",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "x": 0,
+               "y": 0,
+               "radius": 16,
+               "clip": true,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "color": "3D4B5C",
+                 "a": 0.08,
+                 "y": 4,
+                 "blur": 10
+                }
+               ],
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/DewdropKoi",
+                 "w": 56,
+                 "h": 56,
+                 "x": 8,
+                 "y": 5
+                },
+                {
+                 "type": "SVG",
+                 "name": "Rarity Corner",
+                 "w": 25,
+                 "h": 25,
+                 "x": 0,
+                 "y": 0,
+                 "svg": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#5AA9F0\"/></svg>"
+                },
+                {
+                 "name": "Count Row",
+                 "layout": "H",
+                 "w": 72,
+                 "x": 0,
+                 "y": 52,
+                 "main": "MAX",
+                 "pad": [
+                  0,
+                  7,
+                  0,
+                  0
+                 ],
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "x2",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "3D4B5C",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "FRAME",
+             "name": "CrystalGuppy",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "x": 0,
+               "y": 0,
+               "radius": 16,
+               "clip": true,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "color": "3D4B5C",
+                 "a": 0.08,
+                 "y": 4,
+                 "blur": 10
+                }
+               ],
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/CrystalGuppy",
+                 "w": 56,
+                 "h": 56,
+                 "x": 8,
+                 "y": 5
+                },
+                {
+                 "type": "SVG",
+                 "name": "Rarity Corner",
+                 "w": 25,
+                 "h": 25,
+                 "x": 0,
+                 "y": 0,
+                 "svg": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#B07CF0\"/></svg>"
+                },
+                {
+                 "name": "Count Row",
+                 "layout": "H",
+                 "w": 72,
+                 "x": 0,
+                 "y": 52,
+                 "main": "MAX",
+                 "pad": [
+                  0,
+                  7,
+                  0,
+                  0
+                 ],
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "x1",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "3D4B5C",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8"
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Silhouette",
+                 "w": 48,
+                 "h": 48,
+                 "svg": "<svg width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 36c8-12 21-17 35-11l11-9v40l-11-9C29 53 16 48 8 36z\" transform=\"scale(0.78) translate(2 -4)\" fill=\"#3D4B5C\"/></svg>",
+                 "x": 12,
+                 "y": 14,
+                 "opacity": 0.07
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8"
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Silhouette",
+                 "w": 48,
+                 "h": 48,
+                 "svg": "<svg width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 36c8-12 21-17 35-11l11-9v40l-11-9C29 53 16 48 8 36z\" transform=\"scale(0.78) translate(2 -4)\" fill=\"#3D4B5C\"/></svg>",
+                 "x": 12,
+                 "y": 14,
+                 "opacity": 0.07
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "x": 0,
+               "y": 0
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Row 2",
+           "layout": "H",
+           "gap": 8,
+           "children": [
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8"
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Silhouette",
+                 "w": 48,
+                 "h": 48,
+                 "svg": "<svg width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 36c8-12 21-17 35-11l11-9v40l-11-9C29 53 16 48 8 36z\" transform=\"scale(0.78) translate(2 -4)\" fill=\"#3D4B5C\"/></svg>",
+                 "x": 12,
+                 "y": 14,
+                 "opacity": 0.07
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8"
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Silhouette",
+                 "w": 48,
+                 "h": 48,
+                 "svg": "<svg width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 36c8-12 21-17 35-11l11-9v40l-11-9C29 53 16 48 8 36z\" transform=\"scale(0.78) translate(2 -4)\" fill=\"#3D4B5C\"/></svg>",
+                 "x": 12,
+                 "y": 14,
+                 "opacity": 0.07
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8"
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Silhouette",
+                 "w": 48,
+                 "h": 48,
+                 "svg": "<svg width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 36c8-12 21-17 35-11l11-9v40l-11-9C29 53 16 48 8 36z\" transform=\"scale(0.78) translate(2 -4)\" fill=\"#3D4B5C\"/></svg>",
+                 "x": 12,
+                 "y": 14,
+                 "opacity": 0.07
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8"
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Silhouette",
+                 "w": 48,
+                 "h": 48,
+                 "svg": "<svg width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 36c8-12 21-17 35-11l11-9v40l-11-9C29 53 16 48 8 36z\" transform=\"scale(0.78) translate(2 -4)\" fill=\"#3D4B5C\"/></svg>",
+                 "x": 12,
+                 "y": 14,
+                 "opacity": 0.07
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8"
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Silhouette",
+                 "w": 48,
+                 "h": 48,
+                 "svg": "<svg width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 36c8-12 21-17 35-11l11-9v40l-11-9C29 53 16 48 8 36z\" transform=\"scale(0.78) translate(2 -4)\" fill=\"#3D4B5C\"/></svg>",
+                 "x": 12,
+                 "y": 14,
+                 "opacity": 0.07
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8"
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Silhouette",
+                 "w": 48,
+                 "h": 48,
+                 "svg": "<svg width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 36c8-12 21-17 35-11l11-9v40l-11-9C29 53 16 48 8 36z\" transform=\"scale(0.78) translate(2 -4)\" fill=\"#3D4B5C\"/></svg>",
+                 "x": 12,
+                 "y": 14,
+                 "opacity": 0.07
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Btn Get More",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8"
+               },
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/icons/shop",
+                 "w": 34,
+                 "h": 34,
+                 "x": 19,
+                 "y": 10
+                },
+                {
+                 "type": "TEXT",
+                 "text": "Shop",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Label",
+                 "x": 0,
+                 "y": 46,
+                 "w": 72,
+                 "align": "CENTER"
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "x": 0,
+               "y": 0
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Zoom",
+         "layout": "H",
+         "gap": 16,
+         "cross": "CENTER",
+         "children": [
+          {
+           "name": "Empty x1",
+           "w": 72,
+           "h": 72,
+           "clip": false,
+           "children": [
+            {
+             "name": "Slot",
+             "w": 72,
+             "h": 72,
+             "radius": 18,
+             "clip": true,
+             "fill": {
+              "hex": "F3E9D8"
+             },
+             "children": [
+              {
+               "type": "SVG",
+               "name": "Silhouette",
+               "w": 48,
+               "h": 48,
+               "svg": "<svg width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 36c8-12 21-17 35-11l11-9v40l-11-9C29 53 16 48 8 36z\" transform=\"scale(0.78) translate(2 -4)\" fill=\"#3D4B5C\"/></svg>",
+               "x": 12,
+               "y": 14,
+               "opacity": 0.07
+              }
+             ],
+             "stroke": {
+              "var": "cozy/track"
+             },
+             "strokeW": 2,
+             "x": 0,
+             "y": 0
+            }
+           ]
+          },
+          {
+           "name": "Get More x1",
+           "w": 72,
+           "h": 72,
+           "clip": false,
+           "children": [
+            {
+             "name": "Slot",
+             "w": 72,
+             "h": 72,
+             "radius": 18,
+             "clip": true,
+             "fill": {
+              "hex": "F3E9D8"
+             },
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/icons/shop",
+               "w": 34,
+               "h": 34,
+               "x": 19,
+               "y": 10
+              },
+              {
+               "type": "TEXT",
+               "text": "Shop",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Label",
+               "x": 0,
+               "y": 46,
+               "w": 72,
+               "align": "CENTER"
+              }
+             ],
+             "stroke": {
+              "var": "cozy/track"
+             },
+             "strokeW": 2,
+             "x": 0,
+             "y": 0
+            }
+           ]
+          },
+          {
+           "type": "TEXT",
+           "text": "empty  |  get more (opens Shop)",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Legend"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "w": 680,
+     "x": 1540,
+     "y": 180
+    },
+    {
+     "name": "4 · Numbered",
+     "layout": "V",
+     "gap": 10,
+     "pad": 24,
+     "radius": 24,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 2,
+     "effects": [
+      {
+       "color": "3D4B5C",
+       "a": 0.1,
+       "y": 6,
+       "blur": 18
+      }
+     ],
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "4 · Numbered",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "type": "TEXT",
+       "text": "Slot number in the corner. Easy to see how much room is left.",
+       "textStyle": "Aura Fishing/Small",
+       "color": {
+        "var": "cozy/subtext"
+       },
+       "name": "Desc",
+       "w": 632
+      },
+      {
+       "name": "Body",
+       "layout": "V",
+       "gap": 14,
+       "children": [
+        {
+         "name": "Grid",
+         "layout": "V",
+         "gap": 10,
+         "pad": 14,
+         "radius": 20,
+         "fill": {
+          "var": "cozy/panel"
+         },
+         "stroke": {
+          "var": "cozy/track"
+         },
+         "strokeW": 2,
+         "children": [
+          {
+           "name": "Row 1",
+           "layout": "H",
+           "gap": 8,
+           "children": [
+            {
+             "type": "FRAME",
+             "name": "PebbleMinnow",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "x": 0,
+               "y": 0,
+               "radius": 16,
+               "clip": true,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "color": "3D4B5C",
+                 "a": 0.08,
+                 "y": 4,
+                 "blur": 10
+                }
+               ],
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/PebbleMinnow",
+                 "w": 56,
+                 "h": 56,
+                 "x": 8,
+                 "y": 5
+                },
+                {
+                 "type": "SVG",
+                 "name": "Rarity Corner",
+                 "w": 25,
+                 "h": 25,
+                 "x": 0,
+                 "y": 0,
+                 "svg": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#9AA5B1\"/></svg>"
+                },
+                {
+                 "name": "Count Row",
+                 "layout": "H",
+                 "w": 72,
+                 "x": 0,
+                 "y": 52,
+                 "main": "MAX",
+                 "pad": [
+                  0,
+                  7,
+                  0,
+                  0
+                 ],
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "x23",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "3D4B5C",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "FRAME",
+             "name": "BubbleCarp",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "x": 0,
+               "y": 0,
+               "radius": 16,
+               "clip": true,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "color": "3D4B5C",
+                 "a": 0.08,
+                 "y": 4,
+                 "blur": 10
+                }
+               ],
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/BubbleCarp",
+                 "w": 56,
+                 "h": 56,
+                 "x": 8,
+                 "y": 5
+                },
+                {
+                 "type": "SVG",
+                 "name": "Rarity Corner",
+                 "w": 25,
+                 "h": 25,
+                 "x": 0,
+                 "y": 0,
+                 "svg": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#9AA5B1\"/></svg>"
+                },
+                {
+                 "name": "Count Row",
+                 "layout": "H",
+                 "w": 72,
+                 "x": 0,
+                 "y": 52,
+                 "main": "MAX",
+                 "pad": [
+                  0,
+                  7,
+                  0,
+                  0
+                 ],
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "x41",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "3D4B5C",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "FRAME",
+             "name": "PearlClam",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "x": 0,
+               "y": 0,
+               "radius": 16,
+               "clip": true,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "color": "3D4B5C",
+                 "a": 0.08,
+                 "y": 4,
+                 "blur": 10
+                }
+               ],
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/PearlClam",
+                 "w": 56,
+                 "h": 56,
+                 "x": 8,
+                 "y": 5
+                },
+                {
+                 "type": "SVG",
+                 "name": "Rarity Corner",
+                 "w": 25,
+                 "h": 25,
+                 "x": 0,
+                 "y": 0,
+                 "svg": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#5CC98A\"/></svg>"
+                },
+                {
+                 "name": "Count Row",
+                 "layout": "H",
+                 "w": 72,
+                 "x": 0,
+                 "y": 52,
+                 "main": "MAX",
+                 "pad": [
+                  0,
+                  7,
+                  0,
+                  0
+                 ],
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "x6",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "3D4B5C",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "FRAME",
+             "name": "DewdropKoi",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "x": 0,
+               "y": 0,
+               "radius": 16,
+               "clip": true,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "color": "3D4B5C",
+                 "a": 0.08,
+                 "y": 4,
+                 "blur": 10
+                }
+               ],
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/DewdropKoi",
+                 "w": 56,
+                 "h": 56,
+                 "x": 8,
+                 "y": 5
+                },
+                {
+                 "type": "SVG",
+                 "name": "Rarity Corner",
+                 "w": 25,
+                 "h": 25,
+                 "x": 0,
+                 "y": 0,
+                 "svg": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#5AA9F0\"/></svg>"
+                },
+                {
+                 "name": "Count Row",
+                 "layout": "H",
+                 "w": 72,
+                 "x": 0,
+                 "y": 52,
+                 "main": "MAX",
+                 "pad": [
+                  0,
+                  7,
+                  0,
+                  0
+                 ],
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "x2",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "3D4B5C",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "FRAME",
+             "name": "CrystalGuppy",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "x": 0,
+               "y": 0,
+               "radius": 16,
+               "clip": true,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "color": "3D4B5C",
+                 "a": 0.08,
+                 "y": 4,
+                 "blur": 10
+                }
+               ],
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/CrystalGuppy",
+                 "w": 56,
+                 "h": 56,
+                 "x": 8,
+                 "y": 5
+                },
+                {
+                 "type": "SVG",
+                 "name": "Rarity Corner",
+                 "w": 25,
+                 "h": 25,
+                 "x": 0,
+                 "y": 0,
+                 "svg": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#B07CF0\"/></svg>"
+                },
+                {
+                 "name": "Count Row",
+                 "layout": "H",
+                 "w": 72,
+                 "x": 0,
+                 "y": 52,
+                 "main": "MAX",
+                 "pad": [
+                  0,
+                  7,
+                  0,
+                  0
+                 ],
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "x1",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "3D4B5C",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "6",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "C9BBA3",
+                 "name": "Index",
+                 "x": 9,
+                 "y": 6
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "7",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "C9BBA3",
+                 "name": "Index",
+                 "x": 9,
+                 "y": 6
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "x": 0,
+               "y": 0
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Row 2",
+           "layout": "H",
+           "gap": 8,
+           "children": [
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "8",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "C9BBA3",
+                 "name": "Index",
+                 "x": 9,
+                 "y": 6
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "9",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "C9BBA3",
+                 "name": "Index",
+                 "x": 9,
+                 "y": 6
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "10",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "C9BBA3",
+                 "name": "Index",
+                 "x": 9,
+                 "y": 6
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "11",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "C9BBA3",
+                 "name": "Index",
+                 "x": 9,
+                 "y": 6
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "12",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "C9BBA3",
+                 "name": "Index",
+                 "x": 9,
+                 "y": 6
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "13",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "C9BBA3",
+                 "name": "Index",
+                 "x": 9,
+                 "y": 6
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Btn Get More",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "FF9E80",
+                "opacity": 0.14
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Arrow",
+                 "w": 26,
+                 "h": 26,
+                 "svg": "<svg width=\"26\" height=\"26\" viewBox=\"0 0 26 26\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 4l10 9-10 9\" stroke=\"#E08A6E\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\"/></svg>",
+                 "x": 23,
+                 "y": 14
+                },
+                {
+                 "type": "TEXT",
+                 "text": "More",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/coral-lip"
+                 },
+                 "name": "Label",
+                 "x": 0,
+                 "y": 46,
+                 "w": 72,
+                 "align": "CENTER"
+                }
+               ],
+               "x": 0,
+               "y": 0
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Zoom",
+         "layout": "H",
+         "gap": 16,
+         "cross": "CENTER",
+         "children": [
+          {
+           "name": "Empty x1",
+           "w": 72,
+           "h": 72,
+           "clip": false,
+           "children": [
+            {
+             "name": "Slot",
+             "w": 72,
+             "h": 72,
+             "radius": 18,
+             "clip": true,
+             "fill": {
+              "hex": "F3E9D8"
+             },
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "6",
+               "font": {
+                "family": "Fredoka One",
+                "style": "Regular"
+               },
+               "size": 13,
+               "color": "C9BBA3",
+               "name": "Index",
+               "x": 9,
+               "y": 6
+              }
+             ],
+             "stroke": {
+              "var": "cozy/track"
+             },
+             "strokeW": 2,
+             "x": 0,
+             "y": 0
+            }
+           ]
+          },
+          {
+           "name": "Get More x1",
+           "w": 72,
+           "h": 72,
+           "clip": false,
+           "children": [
+            {
+             "name": "Slot",
+             "w": 72,
+             "h": 72,
+             "radius": 18,
+             "clip": true,
+             "fill": {
+              "hex": "FF9E80",
+              "opacity": 0.14
+             },
+             "children": [
+              {
+               "type": "SVG",
+               "name": "Arrow",
+               "w": 26,
+               "h": 26,
+               "svg": "<svg width=\"26\" height=\"26\" viewBox=\"0 0 26 26\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 4l10 9-10 9\" stroke=\"#E08A6E\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\"/></svg>",
+               "x": 23,
+               "y": 14
+              },
+              {
+               "type": "TEXT",
+               "text": "More",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/coral-lip"
+               },
+               "name": "Label",
+               "x": 0,
+               "y": 46,
+               "w": 72,
+               "align": "CENTER"
+              }
+             ],
+             "x": 0,
+             "y": 0
+            }
+           ]
+          },
+          {
+           "type": "TEXT",
+           "text": "empty  |  get more (opens Shop)",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Legend"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "w": 680,
+     "x": 60,
+     "y": 700
+    },
+    {
+     "name": "5 · Bubbles",
+     "layout": "V",
+     "gap": 10,
+     "pad": 24,
+     "radius": 24,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 2,
+     "effects": [
+      {
+       "color": "3D4B5C",
+       "a": 0.1,
+       "y": 6,
+       "blur": 18
+      }
+     ],
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "5 · Bubbles",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "type": "TEXT",
+       "text": "Three tiny bubbles. Quiet and on-theme (lake).",
+       "textStyle": "Aura Fishing/Small",
+       "color": {
+        "var": "cozy/subtext"
+       },
+       "name": "Desc",
+       "w": 632
+      },
+      {
+       "name": "Body",
+       "layout": "V",
+       "gap": 14,
+       "children": [
+        {
+         "name": "Grid",
+         "layout": "V",
+         "gap": 10,
+         "pad": 14,
+         "radius": 20,
+         "fill": {
+          "var": "cozy/panel"
+         },
+         "stroke": {
+          "var": "cozy/track"
+         },
+         "strokeW": 2,
+         "children": [
+          {
+           "name": "Row 1",
+           "layout": "H",
+           "gap": 8,
+           "children": [
+            {
+             "type": "FRAME",
+             "name": "PebbleMinnow",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "x": 0,
+               "y": 0,
+               "radius": 16,
+               "clip": true,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "color": "3D4B5C",
+                 "a": 0.08,
+                 "y": 4,
+                 "blur": 10
+                }
+               ],
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/PebbleMinnow",
+                 "w": 56,
+                 "h": 56,
+                 "x": 8,
+                 "y": 5
+                },
+                {
+                 "type": "SVG",
+                 "name": "Rarity Corner",
+                 "w": 25,
+                 "h": 25,
+                 "x": 0,
+                 "y": 0,
+                 "svg": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#9AA5B1\"/></svg>"
+                },
+                {
+                 "name": "Count Row",
+                 "layout": "H",
+                 "w": 72,
+                 "x": 0,
+                 "y": 52,
+                 "main": "MAX",
+                 "pad": [
+                  0,
+                  7,
+                  0,
+                  0
+                 ],
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "x23",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "3D4B5C",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "FRAME",
+             "name": "BubbleCarp",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "x": 0,
+               "y": 0,
+               "radius": 16,
+               "clip": true,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "color": "3D4B5C",
+                 "a": 0.08,
+                 "y": 4,
+                 "blur": 10
+                }
+               ],
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/BubbleCarp",
+                 "w": 56,
+                 "h": 56,
+                 "x": 8,
+                 "y": 5
+                },
+                {
+                 "type": "SVG",
+                 "name": "Rarity Corner",
+                 "w": 25,
+                 "h": 25,
+                 "x": 0,
+                 "y": 0,
+                 "svg": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#9AA5B1\"/></svg>"
+                },
+                {
+                 "name": "Count Row",
+                 "layout": "H",
+                 "w": 72,
+                 "x": 0,
+                 "y": 52,
+                 "main": "MAX",
+                 "pad": [
+                  0,
+                  7,
+                  0,
+                  0
+                 ],
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "x41",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "3D4B5C",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "FRAME",
+             "name": "PearlClam",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "x": 0,
+               "y": 0,
+               "radius": 16,
+               "clip": true,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "color": "3D4B5C",
+                 "a": 0.08,
+                 "y": 4,
+                 "blur": 10
+                }
+               ],
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/PearlClam",
+                 "w": 56,
+                 "h": 56,
+                 "x": 8,
+                 "y": 5
+                },
+                {
+                 "type": "SVG",
+                 "name": "Rarity Corner",
+                 "w": 25,
+                 "h": 25,
+                 "x": 0,
+                 "y": 0,
+                 "svg": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#5CC98A\"/></svg>"
+                },
+                {
+                 "name": "Count Row",
+                 "layout": "H",
+                 "w": 72,
+                 "x": 0,
+                 "y": 52,
+                 "main": "MAX",
+                 "pad": [
+                  0,
+                  7,
+                  0,
+                  0
+                 ],
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "x6",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "3D4B5C",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "FRAME",
+             "name": "DewdropKoi",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "x": 0,
+               "y": 0,
+               "radius": 16,
+               "clip": true,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "color": "3D4B5C",
+                 "a": 0.08,
+                 "y": 4,
+                 "blur": 10
+                }
+               ],
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/DewdropKoi",
+                 "w": 56,
+                 "h": 56,
+                 "x": 8,
+                 "y": 5
+                },
+                {
+                 "type": "SVG",
+                 "name": "Rarity Corner",
+                 "w": 25,
+                 "h": 25,
+                 "x": 0,
+                 "y": 0,
+                 "svg": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#5AA9F0\"/></svg>"
+                },
+                {
+                 "name": "Count Row",
+                 "layout": "H",
+                 "w": 72,
+                 "x": 0,
+                 "y": 52,
+                 "main": "MAX",
+                 "pad": [
+                  0,
+                  7,
+                  0,
+                  0
+                 ],
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "x2",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "3D4B5C",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "FRAME",
+             "name": "CrystalGuppy",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "x": 0,
+               "y": 0,
+               "radius": 16,
+               "clip": true,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "color": "3D4B5C",
+                 "a": 0.08,
+                 "y": 4,
+                 "blur": 10
+                }
+               ],
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/CrystalGuppy",
+                 "w": 56,
+                 "h": 56,
+                 "x": 8,
+                 "y": 5
+                },
+                {
+                 "type": "SVG",
+                 "name": "Rarity Corner",
+                 "w": 25,
+                 "h": 25,
+                 "x": 0,
+                 "y": 0,
+                 "svg": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#B07CF0\"/></svg>"
+                },
+                {
+                 "name": "Count Row",
+                 "layout": "H",
+                 "w": 72,
+                 "x": 0,
+                 "y": 52,
+                 "main": "MAX",
+                 "pad": [
+                  0,
+                  7,
+                  0,
+                  0
+                 ],
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "x1",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "3D4B5C",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8"
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Bubbles",
+                 "w": 28,
+                 "h": 28,
+                 "svg": "<svg width=\"28\" height=\"28\" viewBox=\"0 0 28 28\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"8\" cy=\"19\" r=\"4\" fill=\"#D9CDB8\"/><circle cx=\"18\" cy=\"11\" r=\"3\" fill=\"#D9CDB8\"/><circle cx=\"21\" cy=\"21\" r=\"2\" fill=\"#D9CDB8\"/></svg>",
+                 "x": 22,
+                 "y": 22
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8"
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Bubbles",
+                 "w": 28,
+                 "h": 28,
+                 "svg": "<svg width=\"28\" height=\"28\" viewBox=\"0 0 28 28\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"8\" cy=\"19\" r=\"4\" fill=\"#D9CDB8\"/><circle cx=\"18\" cy=\"11\" r=\"3\" fill=\"#D9CDB8\"/><circle cx=\"21\" cy=\"21\" r=\"2\" fill=\"#D9CDB8\"/></svg>",
+                 "x": 22,
+                 "y": 22
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "x": 0,
+               "y": 0
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Row 2",
+           "layout": "H",
+           "gap": 8,
+           "children": [
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8"
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Bubbles",
+                 "w": 28,
+                 "h": 28,
+                 "svg": "<svg width=\"28\" height=\"28\" viewBox=\"0 0 28 28\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"8\" cy=\"19\" r=\"4\" fill=\"#D9CDB8\"/><circle cx=\"18\" cy=\"11\" r=\"3\" fill=\"#D9CDB8\"/><circle cx=\"21\" cy=\"21\" r=\"2\" fill=\"#D9CDB8\"/></svg>",
+                 "x": 22,
+                 "y": 22
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8"
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Bubbles",
+                 "w": 28,
+                 "h": 28,
+                 "svg": "<svg width=\"28\" height=\"28\" viewBox=\"0 0 28 28\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"8\" cy=\"19\" r=\"4\" fill=\"#D9CDB8\"/><circle cx=\"18\" cy=\"11\" r=\"3\" fill=\"#D9CDB8\"/><circle cx=\"21\" cy=\"21\" r=\"2\" fill=\"#D9CDB8\"/></svg>",
+                 "x": 22,
+                 "y": 22
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8"
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Bubbles",
+                 "w": 28,
+                 "h": 28,
+                 "svg": "<svg width=\"28\" height=\"28\" viewBox=\"0 0 28 28\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"8\" cy=\"19\" r=\"4\" fill=\"#D9CDB8\"/><circle cx=\"18\" cy=\"11\" r=\"3\" fill=\"#D9CDB8\"/><circle cx=\"21\" cy=\"21\" r=\"2\" fill=\"#D9CDB8\"/></svg>",
+                 "x": 22,
+                 "y": 22
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8"
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Bubbles",
+                 "w": 28,
+                 "h": 28,
+                 "svg": "<svg width=\"28\" height=\"28\" viewBox=\"0 0 28 28\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"8\" cy=\"19\" r=\"4\" fill=\"#D9CDB8\"/><circle cx=\"18\" cy=\"11\" r=\"3\" fill=\"#D9CDB8\"/><circle cx=\"21\" cy=\"21\" r=\"2\" fill=\"#D9CDB8\"/></svg>",
+                 "x": 22,
+                 "y": 22
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8"
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Bubbles",
+                 "w": 28,
+                 "h": 28,
+                 "svg": "<svg width=\"28\" height=\"28\" viewBox=\"0 0 28 28\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"8\" cy=\"19\" r=\"4\" fill=\"#D9CDB8\"/><circle cx=\"18\" cy=\"11\" r=\"3\" fill=\"#D9CDB8\"/><circle cx=\"21\" cy=\"21\" r=\"2\" fill=\"#D9CDB8\"/></svg>",
+                 "x": 22,
+                 "y": 22
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "F3E9D8"
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Bubbles",
+                 "w": 28,
+                 "h": 28,
+                 "svg": "<svg width=\"28\" height=\"28\" viewBox=\"0 0 28 28\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"8\" cy=\"19\" r=\"4\" fill=\"#D9CDB8\"/><circle cx=\"18\" cy=\"11\" r=\"3\" fill=\"#D9CDB8\"/><circle cx=\"21\" cy=\"21\" r=\"2\" fill=\"#D9CDB8\"/></svg>",
+                 "x": 22,
+                 "y": 22
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Btn Get More",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "FF9E80",
+                "opacity": 0.14
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Arrow",
+                 "w": 26,
+                 "h": 26,
+                 "svg": "<svg width=\"26\" height=\"26\" viewBox=\"0 0 26 26\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 4l10 9-10 9\" stroke=\"#E08A6E\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\"/></svg>",
+                 "x": 23,
+                 "y": 14
+                },
+                {
+                 "type": "TEXT",
+                 "text": "More",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/coral-lip"
+                 },
+                 "name": "Label",
+                 "x": 0,
+                 "y": 46,
+                 "w": 72,
+                 "align": "CENTER"
+                }
+               ],
+               "x": 0,
+               "y": 0
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Zoom",
+         "layout": "H",
+         "gap": 16,
+         "cross": "CENTER",
+         "children": [
+          {
+           "name": "Empty x1",
+           "w": 72,
+           "h": 72,
+           "clip": false,
+           "children": [
+            {
+             "name": "Slot",
+             "w": 72,
+             "h": 72,
+             "radius": 18,
+             "clip": true,
+             "fill": {
+              "hex": "F3E9D8"
+             },
+             "children": [
+              {
+               "type": "SVG",
+               "name": "Bubbles",
+               "w": 28,
+               "h": 28,
+               "svg": "<svg width=\"28\" height=\"28\" viewBox=\"0 0 28 28\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"8\" cy=\"19\" r=\"4\" fill=\"#D9CDB8\"/><circle cx=\"18\" cy=\"11\" r=\"3\" fill=\"#D9CDB8\"/><circle cx=\"21\" cy=\"21\" r=\"2\" fill=\"#D9CDB8\"/></svg>",
+               "x": 22,
+               "y": 22
+              }
+             ],
+             "stroke": {
+              "var": "cozy/track"
+             },
+             "strokeW": 2,
+             "x": 0,
+             "y": 0
+            }
+           ]
+          },
+          {
+           "name": "Get More x1",
+           "w": 72,
+           "h": 72,
+           "clip": false,
+           "children": [
+            {
+             "name": "Slot",
+             "w": 72,
+             "h": 72,
+             "radius": 18,
+             "clip": true,
+             "fill": {
+              "hex": "FF9E80",
+              "opacity": 0.14
+             },
+             "children": [
+              {
+               "type": "SVG",
+               "name": "Arrow",
+               "w": 26,
+               "h": 26,
+               "svg": "<svg width=\"26\" height=\"26\" viewBox=\"0 0 26 26\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 4l10 9-10 9\" stroke=\"#E08A6E\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\"/></svg>",
+               "x": 23,
+               "y": 14
+              },
+              {
+               "type": "TEXT",
+               "text": "More",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/coral-lip"
+               },
+               "name": "Label",
+               "x": 0,
+               "y": 46,
+               "w": 72,
+               "align": "CENTER"
+              }
+             ],
+             "x": 0,
+             "y": 0
+            }
+           ]
+          },
+          {
+           "type": "TEXT",
+           "text": "empty  |  get more (opens Shop)",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Legend"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "w": 680,
+     "x": 800,
+     "y": 700
+    },
+    {
+     "name": "6 · Glass",
+     "layout": "V",
+     "gap": 10,
+     "pad": 24,
+     "radius": 24,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 2,
+     "effects": [
+      {
+       "color": "3D4B5C",
+       "a": 0.1,
+       "y": 6,
+       "blur": 18
+      }
+     ],
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "6 · Glass",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "type": "TEXT",
+       "text": "Soft white glass tile with a highlight. Feels like an empty jar.",
+       "textStyle": "Aura Fishing/Small",
+       "color": {
+        "var": "cozy/subtext"
+       },
+       "name": "Desc",
+       "w": 632
+      },
+      {
+       "name": "Body",
+       "layout": "V",
+       "gap": 14,
+       "children": [
+        {
+         "name": "Grid",
+         "layout": "V",
+         "gap": 10,
+         "pad": 14,
+         "radius": 20,
+         "fill": {
+          "var": "cozy/panel"
+         },
+         "stroke": {
+          "var": "cozy/track"
+         },
+         "strokeW": 2,
+         "children": [
+          {
+           "name": "Row 1",
+           "layout": "H",
+           "gap": 8,
+           "children": [
+            {
+             "type": "FRAME",
+             "name": "PebbleMinnow",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "x": 0,
+               "y": 0,
+               "radius": 16,
+               "clip": true,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "color": "3D4B5C",
+                 "a": 0.08,
+                 "y": 4,
+                 "blur": 10
+                }
+               ],
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/PebbleMinnow",
+                 "w": 56,
+                 "h": 56,
+                 "x": 8,
+                 "y": 5
+                },
+                {
+                 "type": "SVG",
+                 "name": "Rarity Corner",
+                 "w": 25,
+                 "h": 25,
+                 "x": 0,
+                 "y": 0,
+                 "svg": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#9AA5B1\"/></svg>"
+                },
+                {
+                 "name": "Count Row",
+                 "layout": "H",
+                 "w": 72,
+                 "x": 0,
+                 "y": 52,
+                 "main": "MAX",
+                 "pad": [
+                  0,
+                  7,
+                  0,
+                  0
+                 ],
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "x23",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "3D4B5C",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "FRAME",
+             "name": "BubbleCarp",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "x": 0,
+               "y": 0,
+               "radius": 16,
+               "clip": true,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "color": "3D4B5C",
+                 "a": 0.08,
+                 "y": 4,
+                 "blur": 10
+                }
+               ],
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/BubbleCarp",
+                 "w": 56,
+                 "h": 56,
+                 "x": 8,
+                 "y": 5
+                },
+                {
+                 "type": "SVG",
+                 "name": "Rarity Corner",
+                 "w": 25,
+                 "h": 25,
+                 "x": 0,
+                 "y": 0,
+                 "svg": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#9AA5B1\"/></svg>"
+                },
+                {
+                 "name": "Count Row",
+                 "layout": "H",
+                 "w": 72,
+                 "x": 0,
+                 "y": 52,
+                 "main": "MAX",
+                 "pad": [
+                  0,
+                  7,
+                  0,
+                  0
+                 ],
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "x41",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "3D4B5C",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "FRAME",
+             "name": "PearlClam",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "x": 0,
+               "y": 0,
+               "radius": 16,
+               "clip": true,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "color": "3D4B5C",
+                 "a": 0.08,
+                 "y": 4,
+                 "blur": 10
+                }
+               ],
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/PearlClam",
+                 "w": 56,
+                 "h": 56,
+                 "x": 8,
+                 "y": 5
+                },
+                {
+                 "type": "SVG",
+                 "name": "Rarity Corner",
+                 "w": 25,
+                 "h": 25,
+                 "x": 0,
+                 "y": 0,
+                 "svg": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#5CC98A\"/></svg>"
+                },
+                {
+                 "name": "Count Row",
+                 "layout": "H",
+                 "w": 72,
+                 "x": 0,
+                 "y": 52,
+                 "main": "MAX",
+                 "pad": [
+                  0,
+                  7,
+                  0,
+                  0
+                 ],
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "x6",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "3D4B5C",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "FRAME",
+             "name": "DewdropKoi",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "x": 0,
+               "y": 0,
+               "radius": 16,
+               "clip": true,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "color": "3D4B5C",
+                 "a": 0.08,
+                 "y": 4,
+                 "blur": 10
+                }
+               ],
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/DewdropKoi",
+                 "w": 56,
+                 "h": 56,
+                 "x": 8,
+                 "y": 5
+                },
+                {
+                 "type": "SVG",
+                 "name": "Rarity Corner",
+                 "w": 25,
+                 "h": 25,
+                 "x": 0,
+                 "y": 0,
+                 "svg": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#5AA9F0\"/></svg>"
+                },
+                {
+                 "name": "Count Row",
+                 "layout": "H",
+                 "w": 72,
+                 "x": 0,
+                 "y": 52,
+                 "main": "MAX",
+                 "pad": [
+                  0,
+                  7,
+                  0,
+                  0
+                 ],
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "x2",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "3D4B5C",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "FRAME",
+             "name": "CrystalGuppy",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "x": 0,
+               "y": 0,
+               "radius": 16,
+               "clip": true,
+               "fill": "FFFFFF",
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "color": "3D4B5C",
+                 "a": 0.08,
+                 "y": 4,
+                 "blur": 10
+                }
+               ],
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img fish/CrystalGuppy",
+                 "w": 56,
+                 "h": 56,
+                 "x": 8,
+                 "y": 5
+                },
+                {
+                 "type": "SVG",
+                 "name": "Rarity Corner",
+                 "w": 25,
+                 "h": 25,
+                 "x": 0,
+                 "y": 0,
+                 "svg": "<svg width=\"25\" height=\"25\" viewBox=\"0 0 34 34\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0H34L0 34Z\" fill=\"#B07CF0\"/></svg>"
+                },
+                {
+                 "name": "Count Row",
+                 "layout": "H",
+                 "w": 72,
+                 "x": 0,
+                 "y": 52,
+                 "main": "MAX",
+                 "pad": [
+                  0,
+                  7,
+                  0,
+                  0
+                 ],
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "x1",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "3D4B5C",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "grad": [
+                 "FFFFFF",
+                 "EFE6D6"
+                ],
+                "angle": 90
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Shine",
+                 "w": 72,
+                 "h": 72,
+                 "svg": "<svg width=\"72\" height=\"72\" viewBox=\"0 0 72 72\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M10 14c0-4 3-6 7-6h20\" stroke=\"#FFFFFF\" stroke-width=\"4\" stroke-linecap=\"round\" fill=\"none\" opacity=\"0.9\"/></svg>",
+                 "x": 0,
+                 "y": 0
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "inner": true,
+                 "color": "3D4B5C",
+                 "a": 0.06,
+                 "y": -2,
+                 "blur": 4
+                }
+               ],
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "grad": [
+                 "FFFFFF",
+                 "EFE6D6"
+                ],
+                "angle": 90
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Shine",
+                 "w": 72,
+                 "h": 72,
+                 "svg": "<svg width=\"72\" height=\"72\" viewBox=\"0 0 72 72\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M10 14c0-4 3-6 7-6h20\" stroke=\"#FFFFFF\" stroke-width=\"4\" stroke-linecap=\"round\" fill=\"none\" opacity=\"0.9\"/></svg>",
+                 "x": 0,
+                 "y": 0
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "inner": true,
+                 "color": "3D4B5C",
+                 "a": 0.06,
+                 "y": -2,
+                 "blur": 4
+                }
+               ],
+               "x": 0,
+               "y": 0
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Row 2",
+           "layout": "H",
+           "gap": 8,
+           "children": [
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "grad": [
+                 "FFFFFF",
+                 "EFE6D6"
+                ],
+                "angle": 90
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Shine",
+                 "w": 72,
+                 "h": 72,
+                 "svg": "<svg width=\"72\" height=\"72\" viewBox=\"0 0 72 72\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M10 14c0-4 3-6 7-6h20\" stroke=\"#FFFFFF\" stroke-width=\"4\" stroke-linecap=\"round\" fill=\"none\" opacity=\"0.9\"/></svg>",
+                 "x": 0,
+                 "y": 0
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "inner": true,
+                 "color": "3D4B5C",
+                 "a": 0.06,
+                 "y": -2,
+                 "blur": 4
+                }
+               ],
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "grad": [
+                 "FFFFFF",
+                 "EFE6D6"
+                ],
+                "angle": 90
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Shine",
+                 "w": 72,
+                 "h": 72,
+                 "svg": "<svg width=\"72\" height=\"72\" viewBox=\"0 0 72 72\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M10 14c0-4 3-6 7-6h20\" stroke=\"#FFFFFF\" stroke-width=\"4\" stroke-linecap=\"round\" fill=\"none\" opacity=\"0.9\"/></svg>",
+                 "x": 0,
+                 "y": 0
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "inner": true,
+                 "color": "3D4B5C",
+                 "a": 0.06,
+                 "y": -2,
+                 "blur": 4
+                }
+               ],
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "grad": [
+                 "FFFFFF",
+                 "EFE6D6"
+                ],
+                "angle": 90
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Shine",
+                 "w": 72,
+                 "h": 72,
+                 "svg": "<svg width=\"72\" height=\"72\" viewBox=\"0 0 72 72\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M10 14c0-4 3-6 7-6h20\" stroke=\"#FFFFFF\" stroke-width=\"4\" stroke-linecap=\"round\" fill=\"none\" opacity=\"0.9\"/></svg>",
+                 "x": 0,
+                 "y": 0
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "inner": true,
+                 "color": "3D4B5C",
+                 "a": 0.06,
+                 "y": -2,
+                 "blur": 4
+                }
+               ],
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "grad": [
+                 "FFFFFF",
+                 "EFE6D6"
+                ],
+                "angle": 90
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Shine",
+                 "w": 72,
+                 "h": 72,
+                 "svg": "<svg width=\"72\" height=\"72\" viewBox=\"0 0 72 72\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M10 14c0-4 3-6 7-6h20\" stroke=\"#FFFFFF\" stroke-width=\"4\" stroke-linecap=\"round\" fill=\"none\" opacity=\"0.9\"/></svg>",
+                 "x": 0,
+                 "y": 0
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "inner": true,
+                 "color": "3D4B5C",
+                 "a": 0.06,
+                 "y": -2,
+                 "blur": 4
+                }
+               ],
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "grad": [
+                 "FFFFFF",
+                 "EFE6D6"
+                ],
+                "angle": 90
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Shine",
+                 "w": 72,
+                 "h": 72,
+                 "svg": "<svg width=\"72\" height=\"72\" viewBox=\"0 0 72 72\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M10 14c0-4 3-6 7-6h20\" stroke=\"#FFFFFF\" stroke-width=\"4\" stroke-linecap=\"round\" fill=\"none\" opacity=\"0.9\"/></svg>",
+                 "x": 0,
+                 "y": 0
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "inner": true,
+                 "color": "3D4B5C",
+                 "a": 0.06,
+                 "y": -2,
+                 "blur": 4
+                }
+               ],
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Empty",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "grad": [
+                 "FFFFFF",
+                 "EFE6D6"
+                ],
+                "angle": 90
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "name": "Shine",
+                 "w": 72,
+                 "h": 72,
+                 "svg": "<svg width=\"72\" height=\"72\" viewBox=\"0 0 72 72\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M10 14c0-4 3-6 7-6h20\" stroke=\"#FFFFFF\" stroke-width=\"4\" stroke-linecap=\"round\" fill=\"none\" opacity=\"0.9\"/></svg>",
+                 "x": 0,
+                 "y": 0
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "effects": [
+                {
+                 "inner": true,
+                 "color": "3D4B5C",
+                 "a": 0.06,
+                 "y": -2,
+                 "blur": 4
+                }
+               ],
+               "x": 0,
+               "y": 0
+              }
+             ]
+            },
+            {
+             "name": "Btn Get More",
+             "w": 72,
+             "h": 72,
+             "clip": false,
+             "children": [
+              {
+               "name": "Slot",
+               "w": 72,
+               "h": 72,
+               "radius": 18,
+               "clip": true,
+               "fill": {
+                "hex": "FFF8EC"
+               },
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/icons/shop",
+                 "w": 34,
+                 "h": 34,
+                 "x": 19,
+                 "y": 10
+                },
+                {
+                 "type": "TEXT",
+                 "text": "Shop",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Label",
+                 "x": 0,
+                 "y": 46,
+                 "w": 72,
+                 "align": "CENTER"
+                }
+               ],
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeW": 2,
+               "x": 0,
+               "y": 0
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Zoom",
+         "layout": "H",
+         "gap": 16,
+         "cross": "CENTER",
+         "children": [
+          {
+           "name": "Empty x1",
+           "w": 72,
+           "h": 72,
+           "clip": false,
+           "children": [
+            {
+             "name": "Slot",
+             "w": 72,
+             "h": 72,
+             "radius": 18,
+             "clip": true,
+             "fill": {
+              "grad": [
+               "FFFFFF",
+               "EFE6D6"
+              ],
+              "angle": 90
+             },
+             "children": [
+              {
+               "type": "SVG",
+               "name": "Shine",
+               "w": 72,
+               "h": 72,
+               "svg": "<svg width=\"72\" height=\"72\" viewBox=\"0 0 72 72\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M10 14c0-4 3-6 7-6h20\" stroke=\"#FFFFFF\" stroke-width=\"4\" stroke-linecap=\"round\" fill=\"none\" opacity=\"0.9\"/></svg>",
+               "x": 0,
+               "y": 0
+              }
+             ],
+             "stroke": {
+              "var": "cozy/track"
+             },
+             "strokeW": 2,
+             "effects": [
+              {
+               "inner": true,
+               "color": "3D4B5C",
+               "a": 0.06,
+               "y": -2,
+               "blur": 4
+              }
+             ],
+             "x": 0,
+             "y": 0
+            }
+           ]
+          },
+          {
+           "name": "Get More x1",
+           "w": 72,
+           "h": 72,
+           "clip": false,
+           "children": [
+            {
+             "name": "Slot",
+             "w": 72,
+             "h": 72,
+             "radius": 18,
+             "clip": true,
+             "fill": {
+              "hex": "FFF8EC"
+             },
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/icons/shop",
+               "w": 34,
+               "h": 34,
+               "x": 19,
+               "y": 10
+              },
+              {
+               "type": "TEXT",
+               "text": "Shop",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Label",
+               "x": 0,
+               "y": 46,
+               "w": 72,
+               "align": "CENTER"
+              }
+             ],
+             "stroke": {
+              "var": "cozy/track"
+             },
+             "strokeW": 2,
+             "x": 0,
+             "y": 0
+            }
+           ]
+          },
+          {
+           "type": "TEXT",
+           "text": "empty  |  get more (opens Shop)",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Legend"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "w": 680,
+     "x": 1540,
+     "y": 700
+    }
+   ]
+  }
+ }
+]

@@ -1,0 +1,141 @@
+{
+ "parentId": "3491:7771",
+ "replaceName": "Reel Minigame",
+ "tree": {
+  "name": "Reel Minigame",
+  "w": 420,
+  "h": 350,
+  "x": 430,
+  "y": 110,
+  "children": [
+   {
+    "name": "Ring",
+    "w": 300,
+    "h": 300,
+    "x": 60,
+    "y": 0,
+    "radius": 999,
+    "fill": {
+     "var": "cozy/panel"
+    },
+    "stroke": {
+     "var": "cozy/track"
+    },
+    "strokeW": 2,
+    "effects": [
+     {
+      "color": "3D4B5C",
+      "a": 0.1,
+      "y": 6,
+      "blur": 18
+     }
+    ],
+    "children": [
+     {
+      "type": "SVG",
+      "name": "Ring Track",
+      "w": 300,
+      "h": 300,
+      "svg": "<svg width=\"300\" height=\"300\" viewBox=\"0 0 300 300\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M150.0 28.0 A122 122 0 1 1 149.8 28.0\" stroke=\"#CFEFFF\" stroke-width=\"30\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M228.4 56.5 A122 122 0 0 1 260.6 201.6\" stroke=\"#7FD3B0\" stroke-width=\"30\" stroke-linecap=\"round\" fill=\"none\"/></svg>",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "type": "RECT",
+      "name": "Img fish/EmberTuna",
+      "w": 48,
+      "h": 48,
+      "x": 245,
+      "y": 101
+     },
+     {
+      "type": "SVG",
+      "name": "Progress Donut",
+      "w": 150,
+      "h": 150,
+      "svg": "<svg width=\"150\" height=\"150\" viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M75.0 19.0 A56 56 0 1 1 74.9 19.0\" stroke=\"#E6DCCB\" stroke-width=\"16\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M75.0 19.0 A56 56 0 1 1 29.7 107.9\" stroke=\"#F2B544\" stroke-width=\"16\" stroke-linecap=\"round\" fill=\"none\"/></svg>",
+      "x": 75,
+      "y": 75
+     },
+     {
+      "name": "Centre Text",
+      "layout": "V",
+      "cross": "CENTER",
+      "w": 300,
+      "x": 0,
+      "y": 124,
+      "children": [
+       {
+        "type": "TEXT",
+        "text": "65%",
+        "font": {
+         "family": "Fredoka One",
+         "style": "Regular"
+        },
+        "size": 30,
+        "color": "3D4B5C",
+        "name": "Percent"
+       },
+       {
+        "type": "TEXT",
+        "text": "REEL!",
+        "textStyle": "Aura Fishing/Caption",
+        "color": {
+         "var": "cozy/subtext"
+        },
+        "name": "Hint"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Footer",
+    "layout": "H",
+    "w": 420,
+    "x": 0,
+    "y": 314,
+    "main": "CENTER",
+    "children": [
+     {
+      "name": "Hint Pill",
+      "layout": "H",
+      "gap": 8,
+      "cross": "CENTER",
+      "pad": [
+       5,
+       14,
+       5,
+       6
+      ],
+      "radius": 999,
+      "fill": {
+       "var": "cozy/panel"
+      },
+      "stroke": {
+       "var": "cozy/track"
+      },
+      "strokeW": 2,
+      "children": [
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4328",
+        "variant": "Rarity=Legendary",
+        "name": "Tag Legendary"
+       },
+       {
+        "type": "TEXT",
+        "text": "Hold to spin the green arc onto the fish",
+        "textStyle": "Aura Fishing/Small",
+        "color": {
+         "var": "cozy/subtext"
+        },
+        "name": "Hint"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,35 @@
+﻿Stats Calculator - final stats for any build,,,,,,,,,,,,,
+"Mirrors Stats.Compute: base + rod/line/bait + aura + passes + mastery + rebirth + skills, then clamped by Min/Max. Yellow cells are the build; the table shows each source.",,,,,,,,,,,,,
+Build,,,Mastery levels,,,Skill levels,,,,,,,
+Rod Id,CelestialRod,,Luck,0,,KeenEye,0,,,,,,
+Rod Enhance level (0-10),0,,CatchBar,0,,QuickHands,0,,,,,,
+Line Id,StarLine,,ReelPower,0,,MultiCast,0,,,,,,
+Bait Id (blank = none),PearlBait,,AutoWait,0,,,,,,,,,
+Bait left (1 = yes),1,,PearlRate,0,,,,,,,,,
+Aura Id (blank = none),AbyssalShadow,,OfflineCap,0,,,,,,,,,
+Aura stars (0-5),0,,SellMult,0,,,,,,,,,
+VIP pass (1 = owned),0,,,,,,,,,,,,
+Auto-Fish Pro pass (1 = owned),0,,,,,,,,,,,,
+Rebirths,0,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+Stat,Base,Rod,Line,Bait,Aura,Passes,Mastery,Rebirth,Skills,Raw total,Min,Max,FINAL
+Luck,0,1.6,0.1,1.8,0.5,0,0,0,0,4,0,,4
+CastRange,14,18,0,0,0,0,0,0,0,32,6,,32
+BiteSpeed,0,0,0,0,0,0,0,0,0,0,0,0.8,0
+AutoSpeed,0,0.3,0,0.15,0,0,0,0,0,0.45,0,0.75,0.45
+AutoMultiplier,1,0,0,0,0.2,0,0,0,0,1.2,0,,1.2
+CatchBarSize,0.22,0.16,0,0,0,0,0,0,0,0.38,0.08,0.6,0.38
+ReelPower,1,1.5,0,0,0,0,0,0,0,2.5,0.2,,2.5
+Resilience,0,0.65,0.2,0,0,0,0,0,0,0.85,0,0.9,0.85
+FishStability,0,0.3,0,0,0,0,0,0,0,0.3,0,0.8,0.3
+MutationChance,0,0.05,0,0.02,0,0,0,0,0,0.07,0,,0.07
+SellMultiplier,1,0,0,0,0,0,0,0,0,1,0,,1
+XPMultiplier,1,0,0,0,0,0,0,0,0,1,0,,1
+PearlRate,1,0,0,0,0,0,0,0,0,1,0,,1
+OfflineCapHours,4,0,0,0,0,0,0,0,0,4,0,48,4
+MaxDepth,0,0,1000,0,0,0,0,0,0,1000,0,,1000
+ExtraLines,0,0,0,0,0,0,0,0,0,0,0,9,0
+,,,,,,,,,,,,,
+"Percent stats (Luck, BiteSpeed, ...) are fractions: 0.5 = +50%. Bag capacity is not a stat; see Items.",,,,,,,,,,,,,

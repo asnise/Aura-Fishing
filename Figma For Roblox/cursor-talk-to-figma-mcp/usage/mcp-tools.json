@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "kind": "mcp-tools",
+  "updatedAt": "2026-11-20T18:11:52.503Z",
+  "totals": {
+    "calls": 4,
+    "ok": 4,
+    "errors": 0
+  },
+  "byAgent": {
+    "mcp:codex-motion-verification": 1,
+    "mcp:codex-live-figma": 3
+  },
+  "items": {
+    "motion_keyframes": {
+      "calls": 3,
+      "ok": 3,
+      "errors": 0,
+      "totalMs": 15,
+      "avgMs": 5,
+      "maxMs": 6,
+      "firstUsed": "2026-11-20T17:50:55.035Z",
+      "lastUsed": "2026-11-20T18:11:52.502Z",
+      "byAgent": {
+        "mcp:codex-motion-verification": 1,
+        "mcp:codex-live-figma": 2
+      }
+    },
+    "join_channel": {
+      "calls": 1,
+      "ok": 1,
+      "errors": 0,
+      "totalMs": 2,
+      "avgMs": 2,
+      "maxMs": 2,
+      "firstUsed": "2026-11-20T18:11:48.690Z",
+      "lastUsed": "2026-11-20T18:11:48.690Z",
+      "byAgent": {
+        "mcp:codex-live-figma": 1
+      }
+    }
+  }
+}

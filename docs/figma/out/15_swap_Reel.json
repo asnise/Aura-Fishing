@@ -1,0 +1,12 @@
+{
+ "parentId": "3491:7771",
+ "replaceName": "Stats",
+ "tree": {
+  "type": "INSTANCE",
+  "ref": "3491:14275",
+  "variant": "Style=E Minimal Floating",
+  "name": "Stats",
+  "x": 24,
+  "y": 24
+ }
+}

@@ -1,0 +1,3575 @@
+[
+  {
+    "pageId": "3465:14993",
+    "tree": {
+      "type": "SECTION",
+      "name": "Gacha UI Redesign · 8 Concepts (Alchemy Stars Style)",
+      "x": 33000,
+      "y": 0,
+      "w": 6260,
+      "h": 2160,
+      "fill": "F8F5EE",
+      "children": [
+        {
+          "type": "TEXT",
+          "name": "Text",
+          "text": "GACHA UI REDESIGN · 8 CONCEPTS (ALCHEMY STARS & MODERN GACHA UI)",
+          "font": {
+            "family": "Fredoka One",
+            "style": "Regular"
+          },
+          "fontSize": 36,
+          "fill": "3D4B5C",
+          "x": 100,
+          "y": 50
+        },
+        {
+          "type": "TEXT",
+          "name": "Text",
+          "text": "Designed for 1440x900 Roblox Safe Zone. Select your preferred concept or mix-and-match elements.",
+          "font": {
+            "family": "Nunito",
+            "style": "Medium"
+          },
+          "fontSize": 18,
+          "fill": "7A8A99",
+          "x": 100,
+          "y": 96
+        },
+        {
+          "type": "FRAME",
+          "name": "Concept 01 · Alchemy Stars Grand Summoner",
+          "w": 1440,
+          "h": 900,
+          "radius": 24,
+          "clip": true,
+          "fill": {
+            "grad": [
+              "0D1520",
+              "152336"
+            ],
+            "angle": 90
+          },
+          "stroke": "3D4B5C",
+          "strokeW": 2,
+          "children": [
+            {
+              "name": "TopBar [safe]",
+              "w": 1440,
+              "h": 58,
+              "x": 0,
+              "y": 0,
+              "children": [
+                {
+                  "type": "FRAME",
+                  "name": "Btn Back",
+                  "x": 48,
+                  "y": 14,
+                  "w": 96,
+                  "h": 40,
+                  "radius": 12,
+                  "fill": "FFF8EC",
+                  "stroke": "E6DCCB",
+                  "strokeW": 2,
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "BACK",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 14,
+                      "fill": "3D4B5C",
+                      "x": 28,
+                      "y": 10
+                    }
+                  ]
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Currencies",
+                  "x": 1012,
+                  "y": 14,
+                  "w": 380,
+                  "h": 40,
+                  "layout": "H",
+                  "gap": 12,
+                  "cross": "CENTER",
+                  "children": [
+                    {
+                      "type": "FRAME",
+                      "name": "Chip Gems",
+                      "w": 115,
+                      "h": 36,
+                      "radius": 999,
+                      "fill": "1A2536",
+                      "stroke": "4A6588",
+                      "strokeW": 1.5,
+                      "children": [
+                        {
+                          "type": "RECT",
+                          "name": "Img ui/status/gem",
+                          "w": 22,
+                          "h": 22,
+                          "fill": "FFFFFF",
+                          "x": 8,
+                          "y": 7
+                        },
+                        {
+                          "type": "TEXT",
+                          "name": "Text",
+                          "text": "2,350",
+                          "font": {
+                            "family": "Nunito",
+                            "style": "Bold"
+                          },
+                          "fontSize": 15,
+                          "fill": "FFFFFF",
+                          "x": 36,
+                          "y": 8
+                        }
+                      ]
+                    },
+                    {
+                      "type": "FRAME",
+                      "name": "Chip StarTokens",
+                      "w": 115,
+                      "h": 36,
+                      "radius": 999,
+                      "fill": "1A2536",
+                      "stroke": "FFA94D",
+                      "strokeW": 1.5,
+                      "children": [
+                        {
+                          "type": "RECT",
+                          "name": "Img ui/status/star_token",
+                          "w": 22,
+                          "h": 22,
+                          "fill": "FFFFFF",
+                          "x": 8,
+                          "y": 7
+                        },
+                        {
+                          "type": "TEXT",
+                          "name": "Text",
+                          "text": "12",
+                          "font": {
+                            "family": "Nunito",
+                            "style": "Bold"
+                          },
+                          "fontSize": 15,
+                          "fill": "FFA94D",
+                          "x": 36,
+                          "y": 8
+                        }
+                      ]
+                    },
+                    {
+                      "type": "FRAME",
+                      "name": "Chip Pearls",
+                      "w": 115,
+                      "h": 36,
+                      "radius": 999,
+                      "fill": "1A2536",
+                      "stroke": "7FD3B0",
+                      "strokeW": 1.5,
+                      "children": [
+                        {
+                          "type": "RECT",
+                          "name": "Img ui/status/pearl",
+                          "w": 22,
+                          "h": 22,
+                          "fill": "FFFFFF",
+                          "x": 8,
+                          "y": 7
+                        },
+                        {
+                          "type": "TEXT",
+                          "name": "Text",
+                          "text": "850",
+                          "font": {
+                            "family": "Nunito",
+                            "style": "Bold"
+                          },
+                          "fontSize": 15,
+                          "fill": "7FD3B0",
+                          "x": 36,
+                          "y": 8
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "FRAME",
+              "name": "Banner Tabs Left Rail",
+              "x": 48,
+              "y": 90,
+              "w": 180,
+              "h": 400,
+              "layout": "V",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "FRAME",
+                  "name": "Tab NEON TIDE",
+                  "w": 180,
+                  "h": 85,
+                  "radius": 14,
+                  "fill": "1E2D40",
+                  "stroke": "5AA9F0",
+                  "strokeW": 2,
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "NEON TIDE",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 16,
+                      "fill": "FFFFFF",
+                      "x": 14,
+                      "y": 18
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "RATE UP 2.0%",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 12,
+                      "fill": "7FD3B0",
+                      "x": 14,
+                      "y": 44
+                    }
+                  ]
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Tab DRAGON EMPEROR",
+                  "w": 180,
+                  "h": 85,
+                  "radius": 14,
+                  "fill": "131D2A",
+                  "stroke": "2C3B4E",
+                  "strokeW": 1,
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "DRAGON EMPEROR",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 16,
+                      "fill": "9AA5B1",
+                      "x": 14,
+                      "y": 18
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "FEATURED 5*",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 12,
+                      "fill": "627D98",
+                      "x": 14,
+                      "y": 44
+                    }
+                  ]
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Tab CELESTIAL REEL",
+                  "w": 180,
+                  "h": 85,
+                  "radius": 14,
+                  "fill": "131D2A",
+                  "stroke": "2C3B4E",
+                  "strokeW": 1,
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "CELESTIAL REEL",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 16,
+                      "fill": "9AA5B1",
+                      "x": 14,
+                      "y": 18
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "STANDARD POOL",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 12,
+                      "fill": "627D98",
+                      "x": 14,
+                      "y": 44
+                    }
+                  ]
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Tab NOVICE ALTAR",
+                  "w": 180,
+                  "h": 85,
+                  "radius": 14,
+                  "fill": "131D2A",
+                  "stroke": "2C3B4E",
+                  "strokeW": 1,
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "NOVICE ALTAR",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 16,
+                      "fill": "9AA5B1",
+                      "x": 14,
+                      "y": 18
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "GUARANTEED 5*",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 12,
+                      "fill": "627D98",
+                      "x": 14,
+                      "y": 44
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "FRAME",
+              "name": "Hero Stage",
+              "x": 260,
+              "y": 70,
+              "w": 860,
+              "h": 660,
+              "children": [
+                {
+                  "type": "RECT",
+                  "name": "Img auras_Art/CelestialLeviathan",
+                  "w": 640,
+                  "h": 640,
+                  "fill": "FFFFFF",
+                  "x": 110,
+                  "y": 10
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Badge Element",
+                  "x": 310,
+                  "y": 480,
+                  "w": 100,
+                  "h": 32,
+                  "radius": 999,
+                  "fill": "5AA9F0",
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "TIDAL 5★",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "ExtraBold"
+                      },
+                      "fontSize": 13,
+                      "fill": "FFFFFF",
+                      "x": 18,
+                      "y": 7
+                    }
+                  ]
+                },
+                {
+                  "type": "TEXT",
+                  "name": "Text",
+                  "text": "CELESTIAL LEVIATHAN",
+                  "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                  },
+                  "fontSize": 38,
+                  "fill": "FFFFFF",
+                  "x": 310,
+                  "y": 520
+                },
+                {
+                  "type": "TEXT",
+                  "name": "Text",
+                  "text": "Deep Ocean Emperor Aura · Grants +50% Luck & Mega Bite VFX",
+                  "font": {
+                    "family": "Nunito",
+                    "style": "Medium"
+                  },
+                  "fontSize": 16,
+                  "fill": "A9DCF7",
+                  "x": 310,
+                  "y": 570
+                }
+              ]
+            },
+            {
+              "type": "FRAME",
+              "name": "Bottom Left Info",
+              "x": 260,
+              "y": 760,
+              "w": 500,
+              "h": 90,
+              "children": [
+                {
+                  "type": "TEXT",
+                  "name": "Text",
+                  "text": "Standard Altar · Pity: 38 / 50 pulls to guaranteed Mythic",
+                  "font": {
+                    "family": "Nunito",
+                    "style": "Bold"
+                  },
+                  "fontSize": 14,
+                  "fill": "A8DCD8",
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Pity Track",
+                  "x": 0,
+                  "y": 24,
+                  "w": 380,
+                  "h": 8,
+                  "radius": 999,
+                  "fill": "1A2536",
+                  "children": [
+                    {
+                      "type": "RECT",
+                      "name": "Pity Fill",
+                      "w": 288,
+                      "h": 8,
+                      "radius": 999,
+                      "fill": "7FD3B0"
+                    }
+                  ]
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Btn Rates",
+                  "x": 0,
+                  "y": 46,
+                  "w": 140,
+                  "h": 36,
+                  "radius": 18,
+                  "fill": "1E2D40",
+                  "stroke": "3D4B5C",
+                  "strokeW": 1.5,
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "Summon Rates",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 13,
+                      "fill": "E6DCCB",
+                      "x": 22,
+                      "y": 8
+                    }
+                  ]
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Btn Exchange Shop",
+                  "x": 154,
+                  "y": 46,
+                  "w": 170,
+                  "h": 36,
+                  "radius": 18,
+                  "fill": "1E2D40",
+                  "stroke": "FFA94D",
+                  "strokeW": 1.5,
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "Star Token Shop",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 13,
+                      "fill": "FFA94D",
+                      "x": 26,
+                      "y": 8
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "FRAME",
+              "name": "Bottom Right CTAs",
+              "x": 932,
+              "y": 750,
+              "w": 460,
+              "h": 100,
+              "children": [
+                {
+                  "type": "FRAME",
+                  "name": "Btn Roll x1",
+                  "x": 0,
+                  "y": 14,
+                  "w": 190,
+                  "h": 72,
+                  "radius": 20,
+                  "fill": "1E2D40",
+                  "stroke": "5AA9F0",
+                  "strokeW": 2,
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "SUMMON x1",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 17,
+                      "fill": "FFFFFF",
+                      "x": 42,
+                      "y": 14
+                    },
+                    {
+                      "type": "RECT",
+                      "name": "Img ui/status/gem",
+                      "w": 20,
+                      "h": 20,
+                      "fill": "FFFFFF",
+                      "x": 55,
+                      "y": 42
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "100 Gems",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 14,
+                      "fill": "A9DCF7",
+                      "x": 82,
+                      "y": 42
+                    }
+                  ]
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Btn Roll x10",
+                  "x": 210,
+                  "y": 8,
+                  "w": 250,
+                  "h": 78,
+                  "radius": 22,
+                  "fill": "F2B544",
+                  "stroke": "C98B1E",
+                  "strokeW": 3,
+                  "children": [
+                    {
+                      "type": "FRAME",
+                      "name": "Badge Discount",
+                      "x": 120,
+                      "y": -12,
+                      "w": 115,
+                      "h": 22,
+                      "radius": 999,
+                      "fill": "FF7A7A",
+                      "children": [
+                        {
+                          "type": "TEXT",
+                          "name": "Text",
+                          "text": "SAVE 10% + 10★",
+                          "font": {
+                            "family": "Nunito",
+                            "style": "ExtraBold"
+                          },
+                          "fontSize": 11,
+                          "fill": "FFFFFF",
+                          "x": 12,
+                          "y": 4
+                        }
+                      ]
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "SUMMON x10",
+                      "font": {
+                        "family": "Fredoka One",
+                        "style": "Regular"
+                      },
+                      "fontSize": 20,
+                      "fill": "FFFFFF",
+                      "x": 62,
+                      "y": 14
+                    },
+                    {
+                      "type": "RECT",
+                      "name": "Img ui/status/gem",
+                      "w": 22,
+                      "h": 22,
+                      "fill": "FFFFFF",
+                      "x": 70,
+                      "y": 44
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "900 Gems",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "ExtraBold"
+                      },
+                      "fontSize": 16,
+                      "fill": "FFFFFF",
+                      "x": 98,
+                      "y": 44
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "x": 100,
+          "y": 160
+        },
+        {
+          "type": "FRAME",
+          "name": "Concept 02 · Star Rail Cosmic Warp Pedestal",
+          "w": 1440,
+          "h": 900,
+          "radius": 24,
+          "clip": true,
+          "fill": {
+            "grad": [
+              "090E1A",
+              "182638"
+            ],
+            "angle": 90
+          },
+          "stroke": "3D4B5C",
+          "strokeW": 2,
+          "children": [
+            {
+              "name": "TopBar [safe]",
+              "w": 1440,
+              "h": 58,
+              "x": 0,
+              "y": 0,
+              "children": [
+                {
+                  "type": "FRAME",
+                  "name": "Btn Back",
+                  "x": 48,
+                  "y": 14,
+                  "w": 96,
+                  "h": 40,
+                  "radius": 12,
+                  "fill": "FFF8EC",
+                  "stroke": "E6DCCB",
+                  "strokeW": 2,
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "BACK",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 14,
+                      "fill": "3D4B5C",
+                      "x": 28,
+                      "y": 10
+                    }
+                  ]
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Currencies",
+                  "x": 1012,
+                  "y": 14,
+                  "w": 380,
+                  "h": 40,
+                  "layout": "H",
+                  "gap": 12,
+                  "cross": "CENTER",
+                  "children": [
+                    {
+                      "type": "FRAME",
+                      "name": "Chip Gems",
+                      "w": 115,
+                      "h": 36,
+                      "radius": 999,
+                      "fill": "1A2536",
+                      "stroke": "4A6588",
+                      "strokeW": 1.5,
+                      "children": [
+                        {
+                          "type": "RECT",
+                          "name": "Img ui/status/gem",
+                          "w": 22,
+                          "h": 22,
+                          "fill": "FFFFFF",
+                          "x": 8,
+                          "y": 7
+                        },
+                        {
+                          "type": "TEXT",
+                          "name": "Text",
+                          "text": "2,350",
+                          "font": {
+                            "family": "Nunito",
+                            "style": "Bold"
+                          },
+                          "fontSize": 15,
+                          "fill": "FFFFFF",
+                          "x": 36,
+                          "y": 8
+                        }
+                      ]
+                    },
+                    {
+                      "type": "FRAME",
+                      "name": "Chip StarTokens",
+                      "w": 115,
+                      "h": 36,
+                      "radius": 999,
+                      "fill": "1A2536",
+                      "stroke": "FFA94D",
+                      "strokeW": 1.5,
+                      "children": [
+                        {
+                          "type": "RECT",
+                          "name": "Img ui/status/star_token",
+                          "w": 22,
+                          "h": 22,
+                          "fill": "FFFFFF",
+                          "x": 8,
+                          "y": 7
+                        },
+                        {
+                          "type": "TEXT",
+                          "name": "Text",
+                          "text": "12",
+                          "font": {
+                            "family": "Nunito",
+                            "style": "Bold"
+                          },
+                          "fontSize": 15,
+                          "fill": "FFA94D",
+                          "x": 36,
+                          "y": 8
+                        }
+                      ]
+                    },
+                    {
+                      "type": "FRAME",
+                      "name": "Chip Pearls",
+                      "w": 115,
+                      "h": 36,
+                      "radius": 999,
+                      "fill": "1A2536",
+                      "stroke": "7FD3B0",
+                      "strokeW": 1.5,
+                      "children": [
+                        {
+                          "type": "RECT",
+                          "name": "Img ui/status/pearl",
+                          "w": 22,
+                          "h": 22,
+                          "fill": "FFFFFF",
+                          "x": 8,
+                          "y": 7
+                        },
+                        {
+                          "type": "TEXT",
+                          "name": "Text",
+                          "text": "850",
+                          "font": {
+                            "family": "Nunito",
+                            "style": "Bold"
+                          },
+                          "fontSize": 15,
+                          "fill": "7FD3B0",
+                          "x": 36,
+                          "y": 8
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "FRAME",
+              "name": "Warp Pedestal Stage",
+              "x": 100,
+              "y": 80,
+              "w": 1240,
+              "h": 650,
+              "radius": 28,
+              "fill": "0E1724",
+              "stroke": "4A6588",
+              "strokeW": 2,
+              "children": [
+                {
+                  "type": "FRAME",
+                  "name": "Warp Tabs",
+                  "x": 360,
+                  "y": 24,
+                  "w": 520,
+                  "h": 46,
+                  "radius": 999,
+                  "fill": "1A2536",
+                  "layout": "H",
+                  "gap": 8,
+                  "pad": 4,
+                  "children": [
+                    {
+                      "type": "FRAME",
+                      "w": 165,
+                      "h": 38,
+                      "radius": 999,
+                      "fill": "5AA9F0",
+                      "children": [
+                        {
+                          "type": "TEXT",
+                          "name": "Text",
+                          "text": "FEATURED WARP",
+                          "font": {
+                            "family": "Nunito",
+                            "style": "Bold"
+                          },
+                          "fontSize": 13,
+                          "fill": "FFFFFF",
+                          "x": 24,
+                          "y": 10
+                        }
+                      ]
+                    },
+                    {
+                      "type": "FRAME",
+                      "w": 165,
+                      "h": 38,
+                      "radius": 999,
+                      "children": [
+                        {
+                          "type": "TEXT",
+                          "name": "Text",
+                          "text": "STANDARD WARP",
+                          "font": {
+                            "family": "Nunito",
+                            "style": "Bold"
+                          },
+                          "fontSize": 13,
+                          "fill": "9AA5B1",
+                          "x": 24,
+                          "y": 10
+                        }
+                      ]
+                    },
+                    {
+                      "type": "FRAME",
+                      "w": 165,
+                      "h": 38,
+                      "radius": 999,
+                      "children": [
+                        {
+                          "type": "TEXT",
+                          "name": "Text",
+                          "text": "ROD & BAIT WARP",
+                          "font": {
+                            "family": "Nunito",
+                            "style": "Bold"
+                          },
+                          "fontSize": 13,
+                          "fill": "9AA5B1",
+                          "x": 20,
+                          "y": 10
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "RECT",
+                  "name": "Img auras_Art/DragonEmperor",
+                  "w": 520,
+                  "h": 520,
+                  "fill": "FFFFFF",
+                  "x": 360,
+                  "y": 80
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Pill Stats",
+                  "x": 120,
+                  "y": 260,
+                  "w": 240,
+                  "h": 160,
+                  "radius": 18,
+                  "fill": "142130",
+                  "stroke": "F2B544",
+                  "strokeW": 1.5,
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "FEATURED 5★ AURA",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 12,
+                      "fill": "F2B544",
+                      "x": 18,
+                      "y": 16
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "Dragon Emperor",
+                      "font": {
+                        "family": "Fredoka One",
+                        "style": "Regular"
+                      },
+                      "fontSize": 22,
+                      "fill": "FFFFFF",
+                      "x": 18,
+                      "y": 36
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "+45% Luck Boost",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 14,
+                      "fill": "7FD3B0",
+                      "x": 18,
+                      "y": 74
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "+25% Auto Reel Power",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 14,
+                      "fill": "7FD3B0",
+                      "x": 18,
+                      "y": 98
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "Golden Dragon VFX Trails",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Medium"
+                      },
+                      "fontSize": 13,
+                      "fill": "E6DCCB",
+                      "x": 18,
+                      "y": 122
+                    }
+                  ]
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Pity Chamber",
+                  "x": 900,
+                  "y": 260,
+                  "w": 220,
+                  "h": 160,
+                  "radius": 18,
+                  "fill": "142130",
+                  "stroke": "4A6588",
+                  "strokeW": 1.5,
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "WARP PITY METER",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 12,
+                      "fill": "9AA5B1",
+                      "x": 18,
+                      "y": 16
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "42 / 50",
+                      "font": {
+                        "family": "Fredoka One",
+                        "style": "Regular"
+                      },
+                      "fontSize": 32,
+                      "fill": "FFA94D",
+                      "x": 18,
+                      "y": 36
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "8 pulls to guaranteed 5★",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Medium"
+                      },
+                      "fontSize": 13,
+                      "fill": "E6DCCB",
+                      "x": 18,
+                      "y": 82
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "Base 5★ Rate: 2.0%",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 12,
+                      "fill": "A9DCF7",
+                      "x": 18,
+                      "y": 118
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "FRAME",
+              "name": "Bottom Bar",
+              "x": 100,
+              "y": 760,
+              "w": 1240,
+              "h": 85,
+              "radius": 22,
+              "fill": "101928",
+              "stroke": "3D4B5C",
+              "strokeW": 1.5,
+              "children": [
+                {
+                  "type": "TEXT",
+                  "name": "Text",
+                  "text": "Warp Details & Rates",
+                  "font": {
+                    "family": "Nunito",
+                    "style": "Bold"
+                  },
+                  "fontSize": 14,
+                  "fill": "E6DCCB",
+                  "x": 40,
+                  "y": 32
+                },
+                {
+                  "type": "TEXT",
+                  "name": "Text",
+                  "text": "Exchange Shop",
+                  "font": {
+                    "family": "Nunito",
+                    "style": "Bold"
+                  },
+                  "fontSize": 14,
+                  "fill": "FFA94D",
+                  "x": 230,
+                  "y": 32
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Btn 1 Pull",
+                  "x": 780,
+                  "y": 14,
+                  "w": 200,
+                  "h": 58,
+                  "radius": 16,
+                  "fill": "1E2D40",
+                  "stroke": "5AA9F0",
+                  "strokeW": 2,
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "Warp x1 (100 Gems)",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 15,
+                      "fill": "FFFFFF",
+                      "x": 24,
+                      "y": 18
+                    }
+                  ]
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Btn 10 Pulls",
+                  "x": 1000,
+                  "y": 14,
+                  "w": 215,
+                  "h": 58,
+                  "radius": 16,
+                  "fill": "F2B544",
+                  "stroke": "C98B1E",
+                  "strokeW": 2,
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "Warp x10 (900 Gems)",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "ExtraBold"
+                      },
+                      "fontSize": 16,
+                      "fill": "FFFFFF",
+                      "x": 24,
+                      "y": 18
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "x": 1640,
+          "y": 160
+        },
+        {
+          "type": "FRAME",
+          "name": "Concept 03 · Vintage Cozy Atelier (Reverse 1999)",
+          "w": 1440,
+          "h": 900,
+          "radius": 24,
+          "clip": true,
+          "fill": "2A211B",
+          "stroke": "E6DCCB",
+          "strokeW": 2,
+          "children": [
+            {
+              "name": "TopBar [safe]",
+              "w": 1440,
+              "h": 58,
+              "x": 0,
+              "y": 0,
+              "children": [
+                {
+                  "type": "FRAME",
+                  "name": "Btn Back",
+                  "x": 48,
+                  "y": 14,
+                  "w": 96,
+                  "h": 40,
+                  "radius": 12,
+                  "fill": "FFF8EC",
+                  "stroke": "E6DCCB",
+                  "strokeW": 2,
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "BACK",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 14,
+                      "fill": "3D4B5C",
+                      "x": 28,
+                      "y": 10
+                    }
+                  ]
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Currencies",
+                  "x": 1012,
+                  "y": 14,
+                  "w": 380,
+                  "h": 40,
+                  "layout": "H",
+                  "gap": 12,
+                  "cross": "CENTER",
+                  "children": [
+                    {
+                      "type": "FRAME",
+                      "name": "Chip Gems",
+                      "w": 115,
+                      "h": 36,
+                      "radius": 999,
+                      "fill": "1A2536",
+                      "stroke": "4A6588",
+                      "strokeW": 1.5,
+                      "children": [
+                        {
+                          "type": "RECT",
+                          "name": "Img ui/status/gem",
+                          "w": 22,
+                          "h": 22,
+                          "fill": "FFFFFF",
+                          "x": 8,
+                          "y": 7
+                        },
+                        {
+                          "type": "TEXT",
+                          "name": "Text",
+                          "text": "2,350",
+                          "font": {
+                            "family": "Nunito",
+                            "style": "Bold"
+                          },
+                          "fontSize": 15,
+                          "fill": "FFFFFF",
+                          "x": 36,
+                          "y": 8
+                        }
+                      ]
+                    },
+                    {
+                      "type": "FRAME",
+                      "name": "Chip StarTokens",
+                      "w": 115,
+                      "h": 36,
+                      "radius": 999,
+                      "fill": "1A2536",
+                      "stroke": "FFA94D",
+                      "strokeW": 1.5,
+                      "children": [
+                        {
+                          "type": "RECT",
+                          "name": "Img ui/status/star_token",
+                          "w": 22,
+                          "h": 22,
+                          "fill": "FFFFFF",
+                          "x": 8,
+                          "y": 7
+                        },
+                        {
+                          "type": "TEXT",
+                          "name": "Text",
+                          "text": "12",
+                          "font": {
+                            "family": "Nunito",
+                            "style": "Bold"
+                          },
+                          "fontSize": 15,
+                          "fill": "FFA94D",
+                          "x": 36,
+                          "y": 8
+                        }
+                      ]
+                    },
+                    {
+                      "type": "FRAME",
+                      "name": "Chip Pearls",
+                      "w": 115,
+                      "h": 36,
+                      "radius": 999,
+                      "fill": "1A2536",
+                      "stroke": "7FD3B0",
+                      "strokeW": 1.5,
+                      "children": [
+                        {
+                          "type": "RECT",
+                          "name": "Img ui/status/pearl",
+                          "w": 22,
+                          "h": 22,
+                          "fill": "FFFFFF",
+                          "x": 8,
+                          "y": 7
+                        },
+                        {
+                          "type": "TEXT",
+                          "name": "Text",
+                          "text": "850",
+                          "font": {
+                            "family": "Nunito",
+                            "style": "Bold"
+                          },
+                          "fontSize": 15,
+                          "fill": "7FD3B0",
+                          "x": 36,
+                          "y": 8
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "FRAME",
+              "name": "Storybook Left Page",
+              "x": 80,
+              "y": 90,
+              "w": 720,
+              "h": 740,
+              "radius": 24,
+              "fill": "FFF8EC",
+              "stroke": "E6DCCB",
+              "strokeW": 3,
+              "children": [
+                {
+                  "type": "TEXT",
+                  "name": "Text",
+                  "text": "CHAPTER IV · THE SACRED REEL",
+                  "font": {
+                    "family": "Nunito",
+                    "style": "Bold"
+                  },
+                  "fontSize": 14,
+                  "fill": "7A8A99",
+                  "x": 40,
+                  "y": 36
+                },
+                {
+                  "type": "TEXT",
+                  "name": "Text",
+                  "text": "Lotus Naga of the Ancient Depths",
+                  "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                  },
+                  "fontSize": 32,
+                  "fill": "3D4B5C",
+                  "x": 40,
+                  "y": 64
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Illustration Box",
+                  "x": 40,
+                  "y": 120,
+                  "w": 640,
+                  "h": 460,
+                  "radius": 16,
+                  "fill": "D3ECFA",
+                  "stroke": "A9DCF7",
+                  "strokeW": 2,
+                  "children": [
+                    {
+                      "type": "RECT",
+                      "name": "Img auras_Art/LotusNaga",
+                      "w": 440,
+                      "h": 440,
+                      "fill": "FFFFFF",
+                      "x": 100,
+                      "y": 10
+                    }
+                  ]
+                },
+                {
+                  "type": "TEXT",
+                  "name": "Text",
+                  "text": "Lore Snippet: In the deepest springs of Cozy Lake, the Lotus Naga stirs...",
+                  "font": {
+                    "family": "Nunito",
+                    "style": "Medium"
+                  },
+                  "fontSize": 14,
+                  "fill": "7A8A99",
+                  "x": 40,
+                  "y": 600
+                },
+                {
+                  "type": "TEXT",
+                  "name": "Text",
+                  "text": "Drop Rate: 2.0% Mythic | Guaranteed in 50 casts",
+                  "font": {
+                    "family": "Nunito",
+                    "style": "Bold"
+                  },
+                  "fontSize": 15,
+                  "fill": "4FAF8A",
+                  "x": 40,
+                  "y": 640
+                }
+              ]
+            },
+            {
+              "type": "FRAME",
+              "name": "Storybook Right Page",
+              "x": 830,
+              "y": 90,
+              "w": 530,
+              "h": 740,
+              "radius": 24,
+              "fill": "F3E9D8",
+              "stroke": "E6DCCB",
+              "strokeW": 3,
+              "children": [
+                {
+                  "type": "TEXT",
+                  "name": "Text",
+                  "text": "OFFERING MECHANISM",
+                  "font": {
+                    "family": "Nunito",
+                    "style": "Bold"
+                  },
+                  "fontSize": 16,
+                  "fill": "3D4B5C",
+                  "x": 40,
+                  "y": 40
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Dial Frame",
+                  "x": 40,
+                  "y": 80,
+                  "w": 450,
+                  "h": 320,
+                  "radius": 20,
+                  "fill": "FFF8EC",
+                  "stroke": "E6DCCB",
+                  "strokeW": 2,
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "SACRED PITY DIAL",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 14,
+                      "fill": "7A8A99",
+                      "x": 30,
+                      "y": 24
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "38 / 50",
+                      "font": {
+                        "family": "Fredoka One",
+                        "style": "Regular"
+                      },
+                      "fontSize": 48,
+                      "fill": "E27D60",
+                      "x": 30,
+                      "y": 56
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "12 offerings until Sacred Guarantee",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 14,
+                      "fill": "3D4B5C",
+                      "x": 30,
+                      "y": 130
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "Your Offerings: 2,350 Gems",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Medium"
+                      },
+                      "fontSize": 14,
+                      "fill": "7A8A99",
+                      "x": 30,
+                      "y": 160
+                    }
+                  ]
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Btn Cast One",
+                  "x": 40,
+                  "y": 440,
+                  "w": 450,
+                  "h": 70,
+                  "radius": 16,
+                  "fill": "FFF8EC",
+                  "stroke": "3D4B5C",
+                  "strokeW": 2,
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "CAST ONCE · 100 GEMS",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 18,
+                      "fill": "3D4B5C",
+                      "x": 120,
+                      "y": 24
+                    }
+                  ]
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Btn Cast Decade",
+                  "x": 40,
+                  "y": 530,
+                  "w": 450,
+                  "h": 80,
+                  "radius": 18,
+                  "fill": "FF9E80",
+                  "stroke": "E07A5C",
+                  "strokeW": 3,
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "CAST DECADE · 900 GEMS",
+                      "font": {
+                        "family": "Fredoka One",
+                        "style": "Regular"
+                      },
+                      "fontSize": 20,
+                      "fill": "FFFFFF",
+                      "x": 95,
+                      "y": 26
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "x": 3180,
+          "y": 160
+        },
+        {
+          "type": "FRAME",
+          "name": "Concept 04 · Tactical Holographic Terminal",
+          "w": 1440,
+          "h": 900,
+          "radius": 24,
+          "clip": true,
+          "fill": "0D1117",
+          "stroke": "30363D",
+          "strokeW": 2,
+          "children": [
+            {
+              "name": "TopBar [safe]",
+              "w": 1440,
+              "h": 58,
+              "x": 0,
+              "y": 0,
+              "children": [
+                {
+                  "type": "FRAME",
+                  "name": "Btn Back",
+                  "x": 48,
+                  "y": 14,
+                  "w": 96,
+                  "h": 40,
+                  "radius": 12,
+                  "fill": "FFF8EC",
+                  "stroke": "E6DCCB",
+                  "strokeW": 2,
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "BACK",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 14,
+                      "fill": "3D4B5C",
+                      "x": 28,
+                      "y": 10
+                    }
+                  ]
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Currencies",
+                  "x": 1012,
+                  "y": 14,
+                  "w": 380,
+                  "h": 40,
+                  "layout": "H",
+                  "gap": 12,
+                  "cross": "CENTER",
+                  "children": [
+                    {
+                      "type": "FRAME",
+                      "name": "Chip Gems",
+                      "w": 115,
+                      "h": 36,
+                      "radius": 999,
+                      "fill": "1A2536",
+                      "stroke": "4A6588",
+                      "strokeW": 1.5,
+                      "children": [
+                        {
+                          "type": "RECT",
+                          "name": "Img ui/status/gem",
+                          "w": 22,
+                          "h": 22,
+                          "fill": "FFFFFF",
+                          "x": 8,
+                          "y": 7
+                        },
+                        {
+                          "type": "TEXT",
+                          "name": "Text",
+                          "text": "2,350",
+                          "font": {
+                            "family": "Nunito",
+                            "style": "Bold"
+                          },
+                          "fontSize": 15,
+                          "fill": "FFFFFF",
+                          "x": 36,
+                          "y": 8
+                        }
+                      ]
+                    },
+                    {
+                      "type": "FRAME",
+                      "name": "Chip StarTokens",
+                      "w": 115,
+                      "h": 36,
+                      "radius": 999,
+                      "fill": "1A2536",
+                      "stroke": "FFA94D",
+                      "strokeW": 1.5,
+                      "children": [
+                        {
+                          "type": "RECT",
+                          "name": "Img ui/status/star_token",
+                          "w": 22,
+                          "h": 22,
+                          "fill": "FFFFFF",
+                          "x": 8,
+                          "y": 7
+                        },
+                        {
+                          "type": "TEXT",
+                          "name": "Text",
+                          "text": "12",
+                          "font": {
+                            "family": "Nunito",
+                            "style": "Bold"
+                          },
+                          "fontSize": 15,
+                          "fill": "FFA94D",
+                          "x": 36,
+                          "y": 8
+                        }
+                      ]
+                    },
+                    {
+                      "type": "FRAME",
+                      "name": "Chip Pearls",
+                      "w": 115,
+                      "h": 36,
+                      "radius": 999,
+                      "fill": "1A2536",
+                      "stroke": "7FD3B0",
+                      "strokeW": 1.5,
+                      "children": [
+                        {
+                          "type": "RECT",
+                          "name": "Img ui/status/pearl",
+                          "w": 22,
+                          "h": 22,
+                          "fill": "FFFFFF",
+                          "x": 8,
+                          "y": 7
+                        },
+                        {
+                          "type": "TEXT",
+                          "name": "Text",
+                          "text": "850",
+                          "font": {
+                            "family": "Nunito",
+                            "style": "Bold"
+                          },
+                          "fontSize": 15,
+                          "fill": "7FD3B0",
+                          "x": 36,
+                          "y": 8
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TEXT",
+              "name": "Text",
+              "text": "[OPERATIONAL ARCHIVE: SUMMON ALTAR 07]",
+              "font": {
+                "family": "Nunito",
+                "style": "Bold"
+              },
+              "fontSize": 14,
+              "fill": "58A6FF",
+              "x": 48,
+              "y": 74
+            },
+            {
+              "type": "FRAME",
+              "name": "Hologram Matrix",
+              "x": 48,
+              "y": 100,
+              "w": 920,
+              "h": 620,
+              "radius": 18,
+              "fill": "161B22",
+              "stroke": "58A6FF",
+              "strokeW": 1.5,
+              "children": [
+                {
+                  "type": "RECT",
+                  "name": "Img auras/NeonWave",
+                  "w": 500,
+                  "h": 500,
+                  "fill": "FFFFFF",
+                  "x": 210,
+                  "y": 50
+                },
+                {
+                  "type": "TEXT",
+                  "name": "Text",
+                  "text": "REEL FREQUENCY DETECTED: NEON WAVE",
+                  "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                  },
+                  "fontSize": 24,
+                  "fill": "58A6FF",
+                  "x": 30,
+                  "y": 520
+                },
+                {
+                  "type": "TEXT",
+                  "name": "Text",
+                  "text": "Probability Sync: 2.0% | Resonance Pity: 38/50",
+                  "font": {
+                    "family": "Nunito",
+                    "style": "Medium"
+                  },
+                  "fontSize": 14,
+                  "fill": "8B949E",
+                  "x": 30,
+                  "y": 560
+                }
+              ]
+            },
+            {
+              "type": "FRAME",
+              "name": "Tactical Sidebar",
+              "x": 990,
+              "y": 100,
+              "w": 400,
+              "h": 620,
+              "radius": 18,
+              "fill": "161B22",
+              "stroke": "30363D",
+              "strokeW": 1.5,
+              "children": [
+                {
+                  "type": "TEXT",
+                  "name": "Text",
+                  "text": "PROBABILITY MATRIX",
+                  "font": {
+                    "family": "Nunito",
+                    "style": "Bold"
+                  },
+                  "fontSize": 14,
+                  "fill": "FFA94D",
+                  "x": 24,
+                  "y": 24
+                },
+                {
+                  "type": "TEXT",
+                  "name": "Text",
+                  "text": "Mythic 5★: 2.00%",
+                  "font": {
+                    "family": "Nunito",
+                    "style": "Bold"
+                  },
+                  "fontSize": 15,
+                  "fill": "FF7A7A",
+                  "x": 24,
+                  "y": 60
+                },
+                {
+                  "type": "TEXT",
+                  "name": "Text",
+                  "text": "Legendary 4★: 8.00%",
+                  "font": {
+                    "family": "Nunito",
+                    "style": "Bold"
+                  },
+                  "fontSize": 15,
+                  "fill": "FFA94D",
+                  "x": 24,
+                  "y": 90
+                },
+                {
+                  "type": "TEXT",
+                  "name": "Text",
+                  "text": "Epic 3★: 25.00%",
+                  "font": {
+                    "family": "Nunito",
+                    "style": "Bold"
+                  },
+                  "fontSize": 15,
+                  "fill": "B79CF2",
+                  "x": 24,
+                  "y": 120
+                },
+                {
+                  "type": "TEXT",
+                  "name": "Text",
+                  "text": "Rare 2★: 65.00%",
+                  "font": {
+                    "family": "Nunito",
+                    "style": "Bold"
+                  },
+                  "fontSize": 15,
+                  "fill": "5AA9F0",
+                  "x": 24,
+                  "y": 150
+                },
+                {
+                  "type": "TEXT",
+                  "name": "Text",
+                  "text": "GUARANTEED LOGIC: Pull 10 ensures 1x Epic+",
+                  "font": {
+                    "family": "Nunito",
+                    "style": "Medium"
+                  },
+                  "fontSize": 13,
+                  "fill": "8B949E",
+                  "x": 24,
+                  "y": 200
+                }
+              ]
+            },
+            {
+              "type": "FRAME",
+              "name": "Tactical Bottom CTA",
+              "x": 48,
+              "y": 740,
+              "w": 1342,
+              "h": 110,
+              "radius": 18,
+              "fill": "161B22",
+              "stroke": "30363D",
+              "strokeW": 1.5,
+              "children": [
+                {
+                  "type": "FRAME",
+                  "name": "Btn Single",
+                  "x": 780,
+                  "y": 20,
+                  "w": 240,
+                  "h": 70,
+                  "radius": 12,
+                  "fill": "21262D",
+                  "stroke": "58A6FF",
+                  "strokeW": 2,
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "RESONATE x1 [100 G]",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 16,
+                      "fill": "FFFFFF",
+                      "x": 30,
+                      "y": 24
+                    }
+                  ]
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Btn Multi",
+                  "x": 1050,
+                  "y": 20,
+                  "w": 260,
+                  "h": 70,
+                  "radius": 12,
+                  "fill": "238636",
+                  "stroke": "2EA043",
+                  "strokeW": 2,
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "OVERDRIVE x10 [900 G]",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 17,
+                      "fill": "FFFFFF",
+                      "x": 30,
+                      "y": 24
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "x": 4720,
+          "y": 160
+        },
+        {
+          "type": "FRAME",
+          "name": "Concept 05 · Pop Comic Magazine (Blue Archive)",
+          "w": 1440,
+          "h": 900,
+          "radius": 24,
+          "clip": true,
+          "fill": "5AA9F0",
+          "stroke": "3D4B5C",
+          "strokeW": 2,
+          "children": [
+            {
+              "name": "TopBar [safe]",
+              "w": 1440,
+              "h": 58,
+              "x": 0,
+              "y": 0,
+              "children": [
+                {
+                  "type": "FRAME",
+                  "name": "Btn Back",
+                  "x": 48,
+                  "y": 14,
+                  "w": 96,
+                  "h": 40,
+                  "radius": 12,
+                  "fill": "FFF8EC",
+                  "stroke": "E6DCCB",
+                  "strokeW": 2,
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "BACK",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 14,
+                      "fill": "3D4B5C",
+                      "x": 28,
+                      "y": 10
+                    }
+                  ]
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Currencies",
+                  "x": 1012,
+                  "y": 14,
+                  "w": 380,
+                  "h": 40,
+                  "layout": "H",
+                  "gap": 12,
+                  "cross": "CENTER",
+                  "children": [
+                    {
+                      "type": "FRAME",
+                      "name": "Chip Gems",
+                      "w": 115,
+                      "h": 36,
+                      "radius": 999,
+                      "fill": "1A2536",
+                      "stroke": "4A6588",
+                      "strokeW": 1.5,
+                      "children": [
+                        {
+                          "type": "RECT",
+                          "name": "Img ui/status/gem",
+                          "w": 22,
+                          "h": 22,
+                          "fill": "FFFFFF",
+                          "x": 8,
+                          "y": 7
+                        },
+                        {
+                          "type": "TEXT",
+                          "name": "Text",
+                          "text": "2,350",
+                          "font": {
+                            "family": "Nunito",
+                            "style": "Bold"
+                          },
+                          "fontSize": 15,
+                          "fill": "FFFFFF",
+                          "x": 36,
+                          "y": 8
+                        }
+                      ]
+                    },
+                    {
+                      "type": "FRAME",
+                      "name": "Chip StarTokens",
+                      "w": 115,
+                      "h": 36,
+                      "radius": 999,
+                      "fill": "1A2536",
+                      "stroke": "FFA94D",
+                      "strokeW": 1.5,
+                      "children": [
+                        {
+                          "type": "RECT",
+                          "name": "Img ui/status/star_token",
+                          "w": 22,
+                          "h": 22,
+                          "fill": "FFFFFF",
+                          "x": 8,
+                          "y": 7
+                        },
+                        {
+                          "type": "TEXT",
+                          "name": "Text",
+                          "text": "12",
+                          "font": {
+                            "family": "Nunito",
+                            "style": "Bold"
+                          },
+                          "fontSize": 15,
+                          "fill": "FFA94D",
+                          "x": 36,
+                          "y": 8
+                        }
+                      ]
+                    },
+                    {
+                      "type": "FRAME",
+                      "name": "Chip Pearls",
+                      "w": 115,
+                      "h": 36,
+                      "radius": 999,
+                      "fill": "1A2536",
+                      "stroke": "7FD3B0",
+                      "strokeW": 1.5,
+                      "children": [
+                        {
+                          "type": "RECT",
+                          "name": "Img ui/status/pearl",
+                          "w": 22,
+                          "h": 22,
+                          "fill": "FFFFFF",
+                          "x": 8,
+                          "y": 7
+                        },
+                        {
+                          "type": "TEXT",
+                          "name": "Text",
+                          "text": "850",
+                          "font": {
+                            "family": "Nunito",
+                            "style": "Bold"
+                          },
+                          "fontSize": 15,
+                          "fill": "7FD3B0",
+                          "x": 36,
+                          "y": 8
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "FRAME",
+              "name": "Magazine Cover",
+              "x": 60,
+              "y": 80,
+              "w": 1320,
+              "h": 760,
+              "radius": 28,
+              "fill": "FFFFFF",
+              "stroke": "3D4B5C",
+              "strokeW": 4,
+              "children": [
+                {
+                  "type": "FRAME",
+                  "name": "Header Magazine",
+                  "x": 0,
+                  "y": 0,
+                  "w": 1320,
+                  "h": 90,
+                  "fill": "FFD45C",
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "AURA ANGLER MONTHLY · SPECIAL ISSUE",
+                      "font": {
+                        "family": "Fredoka One",
+                        "style": "Regular"
+                      },
+                      "fontSize": 32,
+                      "fill": "3D4B5C",
+                      "x": 40,
+                      "y": 26
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "VOL. 07",
+                      "font": {
+                        "family": "Fredoka One",
+                        "style": "Regular"
+                      },
+                      "fontSize": 24,
+                      "fill": "E07A5C",
+                      "x": 1180,
+                      "y": 30
+                    }
+                  ]
+                },
+                {
+                  "type": "RECT",
+                  "name": "Img auras_Art/NebulaKoi",
+                  "w": 520,
+                  "h": 520,
+                  "fill": "FFFFFF",
+                  "x": 400,
+                  "y": 110
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Sticker Rate Up",
+                  "x": 120,
+                  "y": 140,
+                  "w": 260,
+                  "h": 80,
+                  "radius": 16,
+                  "fill": "FF6B6B",
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "MEGA RATE UP!",
+                      "font": {
+                        "family": "Fredoka One",
+                        "style": "Regular"
+                      },
+                      "fontSize": 26,
+                      "fill": "FFFFFF",
+                      "x": 30,
+                      "y": 22
+                    }
+                  ]
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Speech Bubble",
+                  "x": 120,
+                  "y": 250,
+                  "w": 260,
+                  "h": 120,
+                  "radius": 20,
+                  "fill": "FFF8EC",
+                  "stroke": "3D4B5C",
+                  "strokeW": 3,
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "Nebula Koi emerges from starlit water! Grants huge luck bonuses!",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 15,
+                      "fill": "3D4B5C",
+                      "x": 20,
+                      "y": 24
+                    }
+                  ]
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Btn Arcade 1",
+                  "x": 780,
+                  "y": 640,
+                  "w": 240,
+                  "h": 80,
+                  "radius": 22,
+                  "fill": "4FAF8A",
+                  "stroke": "2B8A64",
+                  "strokeW": 4,
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "ROLL 1x · 100 G",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Black"
+                      },
+                      "fontSize": 18,
+                      "fill": "FFFFFF",
+                      "x": 45,
+                      "y": 26
+                    }
+                  ]
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Btn Arcade 10",
+                  "x": 1040,
+                  "y": 640,
+                  "w": 240,
+                  "h": 80,
+                  "radius": 22,
+                  "fill": "FF9E80",
+                  "stroke": "E07A5C",
+                  "strokeW": 4,
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "ROLL 10x · 900 G",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Black"
+                      },
+                      "fontSize": 18,
+                      "fill": "FFFFFF",
+                      "x": 40,
+                      "y": 26
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "x": 100,
+          "y": 1160
+        },
+        {
+          "type": "FRAME",
+          "name": "Concept 06 · Sacred Water Shrine Window",
+          "w": 1440,
+          "h": 900,
+          "radius": 24,
+          "clip": true,
+          "fill": "121D28",
+          "stroke": "3D4B5C",
+          "strokeW": 2,
+          "children": [
+            {
+              "name": "TopBar [safe]",
+              "w": 1440,
+              "h": 58,
+              "x": 0,
+              "y": 0,
+              "children": [
+                {
+                  "type": "FRAME",
+                  "name": "Btn Back",
+                  "x": 48,
+                  "y": 14,
+                  "w": 96,
+                  "h": 40,
+                  "radius": 12,
+                  "fill": "FFF8EC",
+                  "stroke": "E6DCCB",
+                  "strokeW": 2,
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "BACK",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 14,
+                      "fill": "3D4B5C",
+                      "x": 28,
+                      "y": 10
+                    }
+                  ]
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Currencies",
+                  "x": 1012,
+                  "y": 14,
+                  "w": 380,
+                  "h": 40,
+                  "layout": "H",
+                  "gap": 12,
+                  "cross": "CENTER",
+                  "children": [
+                    {
+                      "type": "FRAME",
+                      "name": "Chip Gems",
+                      "w": 115,
+                      "h": 36,
+                      "radius": 999,
+                      "fill": "1A2536",
+                      "stroke": "4A6588",
+                      "strokeW": 1.5,
+                      "children": [
+                        {
+                          "type": "RECT",
+                          "name": "Img ui/status/gem",
+                          "w": 22,
+                          "h": 22,
+                          "fill": "FFFFFF",
+                          "x": 8,
+                          "y": 7
+                        },
+                        {
+                          "type": "TEXT",
+                          "name": "Text",
+                          "text": "2,350",
+                          "font": {
+                            "family": "Nunito",
+                            "style": "Bold"
+                          },
+                          "fontSize": 15,
+                          "fill": "FFFFFF",
+                          "x": 36,
+                          "y": 8
+                        }
+                      ]
+                    },
+                    {
+                      "type": "FRAME",
+                      "name": "Chip StarTokens",
+                      "w": 115,
+                      "h": 36,
+                      "radius": 999,
+                      "fill": "1A2536",
+                      "stroke": "FFA94D",
+                      "strokeW": 1.5,
+                      "children": [
+                        {
+                          "type": "RECT",
+                          "name": "Img ui/status/star_token",
+                          "w": 22,
+                          "h": 22,
+                          "fill": "FFFFFF",
+                          "x": 8,
+                          "y": 7
+                        },
+                        {
+                          "type": "TEXT",
+                          "name": "Text",
+                          "text": "12",
+                          "font": {
+                            "family": "Nunito",
+                            "style": "Bold"
+                          },
+                          "fontSize": 15,
+                          "fill": "FFA94D",
+                          "x": 36,
+                          "y": 8
+                        }
+                      ]
+                    },
+                    {
+                      "type": "FRAME",
+                      "name": "Chip Pearls",
+                      "w": 115,
+                      "h": 36,
+                      "radius": 999,
+                      "fill": "1A2536",
+                      "stroke": "7FD3B0",
+                      "strokeW": 1.5,
+                      "children": [
+                        {
+                          "type": "RECT",
+                          "name": "Img ui/status/pearl",
+                          "w": 22,
+                          "h": 22,
+                          "fill": "FFFFFF",
+                          "x": 8,
+                          "y": 7
+                        },
+                        {
+                          "type": "TEXT",
+                          "name": "Text",
+                          "text": "850",
+                          "font": {
+                            "family": "Nunito",
+                            "style": "Bold"
+                          },
+                          "fontSize": 15,
+                          "fill": "7FD3B0",
+                          "x": 36,
+                          "y": 8
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "FRAME",
+              "name": "Altar Window",
+              "x": 140,
+              "y": 80,
+              "w": 1160,
+              "h": 760,
+              "radius": 32,
+              "fill": "FFF8EC",
+              "stroke": "E6DCCB",
+              "strokeW": 4,
+              "children": [
+                {
+                  "type": "FRAME",
+                  "name": "Ribbon Header",
+                  "x": 420,
+                  "y": -16,
+                  "w": 320,
+                  "h": 48,
+                  "radius": 14,
+                  "fill": "FF9E80",
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "SACRED AURA SHRINE",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 18,
+                      "fill": "FFFFFF",
+                      "x": 60,
+                      "y": 12
+                    }
+                  ]
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Water Pool",
+                  "x": 40,
+                  "y": 60,
+                  "w": 1080,
+                  "h": 540,
+                  "radius": 24,
+                  "fill": {
+                    "grad": [
+                      "D3ECFA",
+                      "7FD3B0"
+                    ],
+                    "angle": 90
+                  },
+                  "children": [
+                    {
+                      "type": "RECT",
+                      "name": "Img auras_Art/SerpentOfTheVoid",
+                      "w": 500,
+                      "h": 500,
+                      "fill": "FFFFFF",
+                      "x": 290,
+                      "y": 20
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "Serpent of the Void (Mythic 5★)",
+                      "font": {
+                        "family": "Fredoka One",
+                        "style": "Regular"
+                      },
+                      "fontSize": 26,
+                      "fill": "3D4B5C",
+                      "x": 40,
+                      "y": 470
+                    }
+                  ]
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Dock Controls",
+                  "x": 40,
+                  "y": 620,
+                  "w": 1080,
+                  "h": 100,
+                  "radius": 20,
+                  "fill": "F3E9D8",
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "Shrine Blessing: 38/50 Offerings Completed",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 16,
+                      "fill": "3D4B5C",
+                      "x": 40,
+                      "y": 40
+                    },
+                    {
+                      "type": "FRAME",
+                      "name": "Btn 1",
+                      "x": 600,
+                      "y": 20,
+                      "w": 210,
+                      "h": 60,
+                      "radius": 16,
+                      "fill": "9AD4F5",
+                      "stroke": "6BB3DE",
+                      "strokeW": 2,
+                      "children": [
+                        {
+                          "type": "TEXT",
+                          "name": "Text",
+                          "text": "1 Blessing · 100 G",
+                          "font": {
+                            "family": "Nunito",
+                            "style": "Bold"
+                          },
+                          "fontSize": 16,
+                          "fill": "FFFFFF",
+                          "x": 30,
+                          "y": 18
+                        }
+                      ]
+                    },
+                    {
+                      "type": "FRAME",
+                      "name": "Btn 10",
+                      "x": 830,
+                      "y": 20,
+                      "w": 220,
+                      "h": 60,
+                      "radius": 16,
+                      "fill": "F2B544",
+                      "stroke": "C98B1E",
+                      "strokeW": 2,
+                      "children": [
+                        {
+                          "type": "TEXT",
+                          "name": "Text",
+                          "text": "10 Blessings · 900 G",
+                          "font": {
+                            "family": "Nunito",
+                            "style": "Bold"
+                          },
+                          "fontSize": 16,
+                          "fill": "FFFFFF",
+                          "x": 24,
+                          "y": 18
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "x": 1640,
+          "y": 1160
+        },
+        {
+          "type": "FRAME",
+          "name": "Concept 07 · Mystic Tarot Spread",
+          "w": 1440,
+          "h": 900,
+          "radius": 24,
+          "clip": true,
+          "fill": "0F172A",
+          "stroke": "3D4B5C",
+          "strokeW": 2,
+          "children": [
+            {
+              "name": "TopBar [safe]",
+              "w": 1440,
+              "h": 58,
+              "x": 0,
+              "y": 0,
+              "children": [
+                {
+                  "type": "FRAME",
+                  "name": "Btn Back",
+                  "x": 48,
+                  "y": 14,
+                  "w": 96,
+                  "h": 40,
+                  "radius": 12,
+                  "fill": "FFF8EC",
+                  "stroke": "E6DCCB",
+                  "strokeW": 2,
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "BACK",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 14,
+                      "fill": "3D4B5C",
+                      "x": 28,
+                      "y": 10
+                    }
+                  ]
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Currencies",
+                  "x": 1012,
+                  "y": 14,
+                  "w": 380,
+                  "h": 40,
+                  "layout": "H",
+                  "gap": 12,
+                  "cross": "CENTER",
+                  "children": [
+                    {
+                      "type": "FRAME",
+                      "name": "Chip Gems",
+                      "w": 115,
+                      "h": 36,
+                      "radius": 999,
+                      "fill": "1A2536",
+                      "stroke": "4A6588",
+                      "strokeW": 1.5,
+                      "children": [
+                        {
+                          "type": "RECT",
+                          "name": "Img ui/status/gem",
+                          "w": 22,
+                          "h": 22,
+                          "fill": "FFFFFF",
+                          "x": 8,
+                          "y": 7
+                        },
+                        {
+                          "type": "TEXT",
+                          "name": "Text",
+                          "text": "2,350",
+                          "font": {
+                            "family": "Nunito",
+                            "style": "Bold"
+                          },
+                          "fontSize": 15,
+                          "fill": "FFFFFF",
+                          "x": 36,
+                          "y": 8
+                        }
+                      ]
+                    },
+                    {
+                      "type": "FRAME",
+                      "name": "Chip StarTokens",
+                      "w": 115,
+                      "h": 36,
+                      "radius": 999,
+                      "fill": "1A2536",
+                      "stroke": "FFA94D",
+                      "strokeW": 1.5,
+                      "children": [
+                        {
+                          "type": "RECT",
+                          "name": "Img ui/status/star_token",
+                          "w": 22,
+                          "h": 22,
+                          "fill": "FFFFFF",
+                          "x": 8,
+                          "y": 7
+                        },
+                        {
+                          "type": "TEXT",
+                          "name": "Text",
+                          "text": "12",
+                          "font": {
+                            "family": "Nunito",
+                            "style": "Bold"
+                          },
+                          "fontSize": 15,
+                          "fill": "FFA94D",
+                          "x": 36,
+                          "y": 8
+                        }
+                      ]
+                    },
+                    {
+                      "type": "FRAME",
+                      "name": "Chip Pearls",
+                      "w": 115,
+                      "h": 36,
+                      "radius": 999,
+                      "fill": "1A2536",
+                      "stroke": "7FD3B0",
+                      "strokeW": 1.5,
+                      "children": [
+                        {
+                          "type": "RECT",
+                          "name": "Img ui/status/pearl",
+                          "w": 22,
+                          "h": 22,
+                          "fill": "FFFFFF",
+                          "x": 8,
+                          "y": 7
+                        },
+                        {
+                          "type": "TEXT",
+                          "name": "Text",
+                          "text": "850",
+                          "font": {
+                            "family": "Nunito",
+                            "style": "Bold"
+                          },
+                          "fontSize": 15,
+                          "fill": "7FD3B0",
+                          "x": 36,
+                          "y": 8
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "FRAME",
+              "name": "Tarot Left",
+              "x": 120,
+              "y": 140,
+              "w": 340,
+              "h": 540,
+              "radius": 20,
+              "fill": "1E293B",
+              "stroke": "475569",
+              "strokeW": 2,
+              "children": [
+                {
+                  "type": "TEXT",
+                  "name": "Text",
+                  "text": "PAST FATE",
+                  "font": {
+                    "family": "Nunito",
+                    "style": "Bold"
+                  },
+                  "fontSize": 16,
+                  "fill": "94A3B8",
+                  "x": 115,
+                  "y": 30
+                },
+                {
+                  "type": "RECT",
+                  "name": "Img auras/FrostPearl",
+                  "w": 240,
+                  "h": 240,
+                  "fill": "FFFFFF",
+                  "x": 50,
+                  "y": 120
+                },
+                {
+                  "type": "TEXT",
+                  "name": "Text",
+                  "text": "Frost Pearl (Rare)",
+                  "font": {
+                    "family": "Nunito",
+                    "style": "Bold"
+                  },
+                  "fontSize": 18,
+                  "fill": "E2E8F0",
+                  "x": 90,
+                  "y": 420
+                }
+              ]
+            },
+            {
+              "type": "FRAME",
+              "name": "Tarot Center Main",
+              "x": 520,
+              "y": 90,
+              "w": 400,
+              "h": 620,
+              "radius": 24,
+              "fill": "1E293B",
+              "stroke": "F59E0B",
+              "strokeW": 4,
+              "children": [
+                {
+                  "type": "TEXT",
+                  "name": "Text",
+                  "text": "CELESTIAL FATE · 5★",
+                  "font": {
+                    "family": "Nunito",
+                    "style": "Bold"
+                  },
+                  "fontSize": 18,
+                  "fill": "F59E0B",
+                  "x": 105,
+                  "y": 30
+                },
+                {
+                  "type": "RECT",
+                  "name": "Img auras/SolarFlare",
+                  "w": 320,
+                  "h": 320,
+                  "fill": "FFFFFF",
+                  "x": 40,
+                  "y": 90
+                },
+                {
+                  "type": "TEXT",
+                  "name": "Text",
+                  "text": "SOLAR FLARE",
+                  "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                  },
+                  "fontSize": 32,
+                  "fill": "FFFFFF",
+                  "x": 90,
+                  "y": 450
+                },
+                {
+                  "type": "TEXT",
+                  "name": "Text",
+                  "text": "Blazing Aura · +45% Bite Rate",
+                  "font": {
+                    "family": "Nunito",
+                    "style": "Medium"
+                  },
+                  "fontSize": 15,
+                  "fill": "CBD5E1",
+                  "x": 85,
+                  "y": 510
+                }
+              ]
+            },
+            {
+              "type": "FRAME",
+              "name": "Tarot Right",
+              "x": 980,
+              "y": 140,
+              "w": 340,
+              "h": 540,
+              "radius": 20,
+              "fill": "1E293B",
+              "stroke": "475569",
+              "strokeW": 2,
+              "children": [
+                {
+                  "type": "TEXT",
+                  "name": "Text",
+                  "text": "FUTURE FATE",
+                  "font": {
+                    "family": "Nunito",
+                    "style": "Bold"
+                  },
+                  "fontSize": 16,
+                  "fill": "94A3B8",
+                  "x": 110,
+                  "y": 30
+                },
+                {
+                  "type": "RECT",
+                  "name": "Img auras/UnknownAura",
+                  "w": 240,
+                  "h": 240,
+                  "fill": "FFFFFF",
+                  "x": 50,
+                  "y": 120
+                },
+                {
+                  "type": "TEXT",
+                  "name": "Text",
+                  "text": "Mystery Aura",
+                  "font": {
+                    "family": "Nunito",
+                    "style": "Bold"
+                  },
+                  "fontSize": 18,
+                  "fill": "E2E8F0",
+                  "x": 110,
+                  "y": 420
+                }
+              ]
+            },
+            {
+              "type": "FRAME",
+              "name": "Tarot Bottom Controls",
+              "x": 420,
+              "y": 750,
+              "w": 600,
+              "h": 85,
+              "children": [
+                {
+                  "type": "FRAME",
+                  "name": "Btn 1",
+                  "x": 0,
+                  "y": 8,
+                  "w": 280,
+                  "h": 68,
+                  "radius": 18,
+                  "fill": "334155",
+                  "stroke": "64748B",
+                  "strokeW": 2,
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "REVEAL 1 FATE · 100 G",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 16,
+                      "fill": "FFFFFF",
+                      "x": 40,
+                      "y": 22
+                    }
+                  ]
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Btn 10",
+                  "x": 310,
+                  "y": 8,
+                  "w": 290,
+                  "h": 68,
+                  "radius": 18,
+                  "fill": "D97706",
+                  "stroke": "B45309",
+                  "strokeW": 2,
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "SPREAD 10 FATES · 900 G",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 16,
+                      "fill": "FFFFFF",
+                      "x": 36,
+                      "y": 22
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "x": 3180,
+          "y": 1160
+        },
+        {
+          "type": "FRAME",
+          "name": "Concept 08 · Split Dual Showcase (Genshin Wish)",
+          "w": 1440,
+          "h": 900,
+          "radius": 24,
+          "clip": true,
+          "fill": "111E2E",
+          "stroke": "3D4B5C",
+          "strokeW": 2,
+          "children": [
+            {
+              "name": "TopBar [safe]",
+              "w": 1440,
+              "h": 58,
+              "x": 0,
+              "y": 0,
+              "children": [
+                {
+                  "type": "FRAME",
+                  "name": "Btn Back",
+                  "x": 48,
+                  "y": 14,
+                  "w": 96,
+                  "h": 40,
+                  "radius": 12,
+                  "fill": "FFF8EC",
+                  "stroke": "E6DCCB",
+                  "strokeW": 2,
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "BACK",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 14,
+                      "fill": "3D4B5C",
+                      "x": 28,
+                      "y": 10
+                    }
+                  ]
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Currencies",
+                  "x": 1012,
+                  "y": 14,
+                  "w": 380,
+                  "h": 40,
+                  "layout": "H",
+                  "gap": 12,
+                  "cross": "CENTER",
+                  "children": [
+                    {
+                      "type": "FRAME",
+                      "name": "Chip Gems",
+                      "w": 115,
+                      "h": 36,
+                      "radius": 999,
+                      "fill": "1A2536",
+                      "stroke": "4A6588",
+                      "strokeW": 1.5,
+                      "children": [
+                        {
+                          "type": "RECT",
+                          "name": "Img ui/status/gem",
+                          "w": 22,
+                          "h": 22,
+                          "fill": "FFFFFF",
+                          "x": 8,
+                          "y": 7
+                        },
+                        {
+                          "type": "TEXT",
+                          "name": "Text",
+                          "text": "2,350",
+                          "font": {
+                            "family": "Nunito",
+                            "style": "Bold"
+                          },
+                          "fontSize": 15,
+                          "fill": "FFFFFF",
+                          "x": 36,
+                          "y": 8
+                        }
+                      ]
+                    },
+                    {
+                      "type": "FRAME",
+                      "name": "Chip StarTokens",
+                      "w": 115,
+                      "h": 36,
+                      "radius": 999,
+                      "fill": "1A2536",
+                      "stroke": "FFA94D",
+                      "strokeW": 1.5,
+                      "children": [
+                        {
+                          "type": "RECT",
+                          "name": "Img ui/status/star_token",
+                          "w": 22,
+                          "h": 22,
+                          "fill": "FFFFFF",
+                          "x": 8,
+                          "y": 7
+                        },
+                        {
+                          "type": "TEXT",
+                          "name": "Text",
+                          "text": "12",
+                          "font": {
+                            "family": "Nunito",
+                            "style": "Bold"
+                          },
+                          "fontSize": 15,
+                          "fill": "FFA94D",
+                          "x": 36,
+                          "y": 8
+                        }
+                      ]
+                    },
+                    {
+                      "type": "FRAME",
+                      "name": "Chip Pearls",
+                      "w": 115,
+                      "h": 36,
+                      "radius": 999,
+                      "fill": "1A2536",
+                      "stroke": "7FD3B0",
+                      "strokeW": 1.5,
+                      "children": [
+                        {
+                          "type": "RECT",
+                          "name": "Img ui/status/pearl",
+                          "w": 22,
+                          "h": 22,
+                          "fill": "FFFFFF",
+                          "x": 8,
+                          "y": 7
+                        },
+                        {
+                          "type": "TEXT",
+                          "name": "Text",
+                          "text": "850",
+                          "font": {
+                            "family": "Nunito",
+                            "style": "Bold"
+                          },
+                          "fontSize": 15,
+                          "fill": "7FD3B0",
+                          "x": 36,
+                          "y": 8
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "FRAME",
+              "name": "Main Banner Left",
+              "x": 48,
+              "y": 80,
+              "w": 880,
+              "h": 760,
+              "radius": 24,
+              "fill": "16273B",
+              "stroke": "325175",
+              "strokeW": 2,
+              "children": [
+                {
+                  "type": "TEXT",
+                  "name": "Text",
+                  "text": "TRENCH MONARCHS · EVENT WISH",
+                  "font": {
+                    "family": "Nunito",
+                    "style": "Bold"
+                  },
+                  "fontSize": 16,
+                  "fill": "FFA94D",
+                  "x": 40,
+                  "y": 36
+                },
+                {
+                  "type": "TEXT",
+                  "name": "Text",
+                  "text": "Abyssal Shadow",
+                  "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                  },
+                  "fontSize": 42,
+                  "fill": "FFFFFF",
+                  "x": 40,
+                  "y": 70
+                },
+                {
+                  "type": "RECT",
+                  "name": "Img auras_Art/AbyssalShadow",
+                  "w": 520,
+                  "h": 520,
+                  "fill": "FFFFFF",
+                  "x": 180,
+                  "y": 120
+                },
+                {
+                  "type": "TEXT",
+                  "name": "Text",
+                  "text": "Event Duration: 14d remaining",
+                  "font": {
+                    "family": "Nunito",
+                    "style": "Medium"
+                  },
+                  "fontSize": 14,
+                  "fill": "7FD3B0",
+                  "x": 40,
+                  "y": 690
+                }
+              ]
+            },
+            {
+              "type": "FRAME",
+              "name": "Roster & Controls Right",
+              "x": 950,
+              "y": 80,
+              "w": 442,
+              "h": 760,
+              "radius": 24,
+              "fill": "16273B",
+              "stroke": "325175",
+              "strokeW": 2,
+              "children": [
+                {
+                  "type": "TEXT",
+                  "name": "Text",
+                  "text": "FEATURED 4★ AURAS",
+                  "font": {
+                    "family": "Nunito",
+                    "style": "Bold"
+                  },
+                  "fontSize": 14,
+                  "fill": "E6DCCB",
+                  "x": 30,
+                  "y": 30
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Roster Slot 1",
+                  "x": 30,
+                  "y": 64,
+                  "w": 382,
+                  "h": 68,
+                  "radius": 14,
+                  "fill": "1E344D",
+                  "children": [
+                    {
+                      "type": "RECT",
+                      "name": "Img auras/CoralHeart",
+                      "w": 48,
+                      "h": 48,
+                      "fill": "FFFFFF",
+                      "x": 10,
+                      "y": 10
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "Coral Heart",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 16,
+                      "fill": "FFFFFF",
+                      "x": 70,
+                      "y": 16
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "+3.5% Rate Boost",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 12,
+                      "fill": "7FD3B0",
+                      "x": 70,
+                      "y": 38
+                    }
+                  ]
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Roster Slot 2",
+                  "x": 30,
+                  "y": 142,
+                  "w": 382,
+                  "h": 68,
+                  "radius": 14,
+                  "fill": "1E344D",
+                  "children": [
+                    {
+                      "type": "RECT",
+                      "name": "Img auras/FrostPearl",
+                      "w": 48,
+                      "h": 48,
+                      "fill": "FFFFFF",
+                      "x": 10,
+                      "y": 10
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "Frost Pearl",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 16,
+                      "fill": "FFFFFF",
+                      "x": 70,
+                      "y": 16
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "+3.5% Rate Boost",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 12,
+                      "fill": "7FD3B0",
+                      "x": 70,
+                      "y": 38
+                    }
+                  ]
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Roster Slot 3",
+                  "x": 30,
+                  "y": 220,
+                  "w": 382,
+                  "h": 68,
+                  "radius": 14,
+                  "fill": "1E344D",
+                  "children": [
+                    {
+                      "type": "RECT",
+                      "name": "Img auras/TidalBloom",
+                      "w": 48,
+                      "h": 48,
+                      "fill": "FFFFFF",
+                      "x": 10,
+                      "y": 10
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "Tidal Bloom",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 16,
+                      "fill": "FFFFFF",
+                      "x": 70,
+                      "y": 16
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "+3.5% Rate Boost",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 12,
+                      "fill": "7FD3B0",
+                      "x": 70,
+                      "y": 38
+                    }
+                  ]
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Roster Slot 4",
+                  "x": 30,
+                  "y": 298,
+                  "w": 382,
+                  "h": 68,
+                  "radius": 14,
+                  "fill": "1E344D",
+                  "children": [
+                    {
+                      "type": "RECT",
+                      "name": "Img auras/StormCurrent",
+                      "w": 48,
+                      "h": 48,
+                      "fill": "FFFFFF",
+                      "x": 10,
+                      "y": 10
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "Storm Current",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 16,
+                      "fill": "FFFFFF",
+                      "x": 70,
+                      "y": 16
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "+3.5% Rate Boost",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 12,
+                      "fill": "7FD3B0",
+                      "x": 70,
+                      "y": 38
+                    }
+                  ]
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Pity Box",
+                  "x": 30,
+                  "y": 390,
+                  "w": 382,
+                  "h": 120,
+                  "radius": 16,
+                  "fill": "122030",
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "PITY GUARANTEE",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 13,
+                      "fill": "A8DCD8",
+                      "x": 20,
+                      "y": 18
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "38 / 50 PULLS",
+                      "font": {
+                        "family": "Fredoka One",
+                        "style": "Regular"
+                      },
+                      "fontSize": 24,
+                      "fill": "FFA94D",
+                      "x": 20,
+                      "y": 42
+                    },
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "Guaranteed 5★ Mythic in 12 pulls",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Medium"
+                      },
+                      "fontSize": 13,
+                      "fill": "E6DCCB",
+                      "x": 20,
+                      "y": 78
+                    }
+                  ]
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Btn 1",
+                  "x": 30,
+                  "y": 550,
+                  "w": 382,
+                  "h": 76,
+                  "radius": 18,
+                  "fill": "1E344D",
+                  "stroke": "5AA9F0",
+                  "strokeW": 2,
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "WISH x1 · 100 GEMS",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 17,
+                      "fill": "FFFFFF",
+                      "x": 100,
+                      "y": 26
+                    }
+                  ]
+                },
+                {
+                  "type": "FRAME",
+                  "name": "Btn 10",
+                  "x": 30,
+                  "y": 646,
+                  "w": 382,
+                  "h": 84,
+                  "radius": 20,
+                  "fill": "F2B544",
+                  "stroke": "C98B1E",
+                  "strokeW": 2,
+                  "children": [
+                    {
+                      "type": "TEXT",
+                      "name": "Text",
+                      "text": "WISH x10 · 900 GEMS",
+                      "font": {
+                        "family": "Nunito",
+                        "style": "Bold"
+                      },
+                      "fontSize": 19,
+                      "fill": "FFFFFF",
+                      "x": 90,
+                      "y": 28
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "x": 4720,
+          "y": 1160
+        }
+      ]
+    }
+  }
+]

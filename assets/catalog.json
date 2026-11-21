@@ -1,0 +1,2956 @@
+{
+ "generated": "2026-11-16",
+ "figma_file": "givb0hmQYmmaOy7p7DGtb2",
+ "figma_page": "3465:14993",
+ "global_assets_section": "3493:22415",
+ "rules": {
+  "global": "one file per shape, exported white, tint in code with ImageColor3; art PNGs are unique per item",
+  "rbxassetid": "fill after uploading (Studio > Asset Manager > Bulk Import), then run tools/art/sync_ui_assets.py"
+ },
+ "global": {
+  "icon_lock": {
+   "file": "assets/ui-global/icon_lock.png",
+   "figma": "3539:28116",
+   "size": [
+    64,
+    64
+   ],
+   "tintable": true,
+   "note": "Locked state (Item Slot, gacha, aquarium expand).",
+   "used_by": [
+    "Components board › Item Slot",
+    "Economy · 2 Aquarium (C14/C18)"
+   ],
+   "rbxassetid": "rbxassetid://73063703436789"
+  },
+  "icon_check": {
+   "file": "assets/ui-global/icon_check.png",
+   "figma": "3493:22424",
+   "size": [
+    128,
+    128
+   ],
+   "tintable": true,
+   "note": "Selected badge (Item Slot), checkboxes (Cast popup Auto depth, gacha options).",
+   "rbxassetid": "rbxassetid://129256103758409",
+   "used_by": [
+    "Components board › Tick",
+    "Game Menus (Cozy Lake) › 13 · Inventory",
+    "Game Menus (Cozy Lake) › 16 · Cast Popup — Auto depth"
+   ]
+  },
+  "icon_close": {
+   "file": "assets/ui-global/icon_close.png",
+   "figma": "3493:22429",
+   "size": [
+    128,
+    128
+   ],
+   "tintable": true,
+   "note": "Close buttons (windows, Main Menu side tab, Dialogue). Buttons may also use the text glyph 'X'.",
+   "rbxassetid": "rbxassetid://115042017898548",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 11 · Dialogue",
+    "Game Menus (Cozy Lake) › 12 · Main Menu"
+   ]
+  },
+  "icon_plus": {
+   "file": "assets/ui-global/icon_plus.png",
+   "figma": "3493:22434",
+   "size": [
+    128,
+    128
+   ],
+   "tintable": true,
+   "note": "Empty Item Slot '+', currency '+' buttons (HUD Stats C).",
+   "rbxassetid": "rbxassetid://95007362624762",
+   "used_by": [
+    "Components board › Plus",
+    "Game Menus (Cozy Lake) › 13 · Inventory"
+   ]
+  },
+  "icon_chevron_left": {
+   "file": "assets/ui-global/icon_chevron_left.png",
+   "figma": "3493:22440",
+   "size": [
+    128,
+    128
+   ],
+   "tintable": true,
+   "note": "Pager previous (Shop / Auras / Fishdex).",
+   "rbxassetid": "rbxassetid://136706086274372",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 05 · Shop — Rods",
+    "Game Menus (Cozy Lake) › 07 · Auras",
+    "Game Menus (Cozy Lake) › 09 · Fishdex"
+   ]
+  },
+  "icon_chevron_right": {
+   "file": "assets/ui-global/icon_chevron_right.png",
+   "figma": "3493:22445",
+   "size": [
+    128,
+    128
+   ],
+   "tintable": true,
+   "note": "Pager next; gacha near-miss marker.",
+   "rbxassetid": "rbxassetid://104663307705573",
+   "used_by": [
+    "Aura Gacha — Reel Slot (FINAL) › G3 · So close...",
+    "Game Menus (Cozy Lake) › 05 · Shop — Rods",
+    "Game Menus (Cozy Lake) › 07 · Auras",
+    "Game Menus (Cozy Lake) › 09 · Fishdex"
+   ]
+  },
+  "shape_rarity_corner": {
+   "file": "assets/ui-global/shape_rarity_corner.png",
+   "figma": "3493:22450",
+   "size": [
+    64,
+    64
+   ],
+   "tintable": true,
+   "note": "Item Slot top-left rarity corner (tint = rarity colour). Clip with the slot's UICorner.",
+   "rbxassetid": "rbxassetid://103480680557517",
+   "used_by": [
+    "Components board › Rarity Corner",
+    "Game Menus (Cozy Lake) › 13 · Inventory"
+   ]
+  },
+  "shape_wave_edge": {
+   "file": "assets/ui-global/shape_wave_edge.png",
+   "figma": "3493:22455",
+   "size": [
+    728,
+    52
+   ],
+   "tintable": true,
+   "note": "Main Menu header wavy bottom edge (tint = panel colour #FFF8EC). ScaleType Tile or Stretch horizontally.",
+   "rbxassetid": "rbxassetid://72604944528225",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 12 · Main Menu"
+   ]
+  },
+  "fx_rays": {
+   "file": "assets/ui-global/fx_rays.png",
+   "figma": "3493:22460",
+   "size": [
+    512,
+    512
+   ],
+   "tintable": true,
+   "note": "Gacha lock/reveal light rays, rotating (tint = rarity colour, ImageTransparency 0.6-0.8).",
+   "rbxassetid": "rbxassetid://87693990883599",
+   "used_by": [
+    "Aura Gacha — Reel Slot (FINAL) › G1 · Aura Altar",
+    "Aura Gacha — Reel Slot (FINAL) › G4 · Lock",
+    "Aura Gacha — Reel Slot (FINAL) › G5 · Reveal",
+    "Aura Gacha — Reel Slot (FINAL) › G6 · x10 Summary (next)"
+   ]
+  },
+  "icon_moon": {
+   "file": "assets/ui-global/icon_moon.png",
+   "figma": "3493:22480",
+   "size": [
+    64,
+    64
+   ],
+   "tintable": true,
+   "note": "Main Menu day-phase row (night/dusk).",
+   "rbxassetid": "rbxassetid://110509249173162",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 12 · Main Menu"
+   ]
+  },
+  "icon_dawn": {
+   "file": "assets/ui-global/icon_dawn.png",
+   "figma": "3493:22485",
+   "size": [
+    72,
+    64
+   ],
+   "tintable": true,
+   "note": "Main Menu day-phase row (dawn).",
+   "rbxassetid": "rbxassetid://125323694150546",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 12 · Main Menu"
+   ]
+  },
+  "icon_day": {
+   "file": "assets/ui-global/icon_day.png",
+   "figma": "3493:22494",
+   "size": [
+    64,
+    64
+   ],
+   "tintable": true,
+   "note": "Main Menu day-phase row (current = day).",
+   "rbxassetid": "rbxassetid://113537016381908",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 12 · Main Menu"
+   ]
+  },
+  "icon_chat": {
+   "file": "assets/ui-global/icon_chat.png",
+   "figma": "3493:22500",
+   "size": [
+    128,
+    128
+   ],
+   "tintable": true,
+   "note": "Dialogue choice 'Just chatting'.",
+   "rbxassetid": "rbxassetid://101721242778293",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 11 · Dialogue"
+   ]
+  },
+  "icon_fish": {
+   "file": "assets/ui-global/icon_fish.png",
+   "figma": "3493:22505",
+   "size": [
+    128,
+    128
+   ],
+   "tintable": true,
+   "note": "Dialogue choice 'Sell All Fish', generic fish glyph (tint).",
+   "rbxassetid": "rbxassetid://97656085936692",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 11 · Dialogue"
+   ]
+  },
+  "icon_sun": {
+   "file": "assets/ui-global/icon_sun.png",
+   "figma": "3493:22510",
+   "size": [
+    128,
+    128
+   ],
+   "tintable": false,
+   "note": "Main Menu weather (sunny). Full colour — do not tint.",
+   "rbxassetid": "rbxassetid://139000063369856",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 12 · Main Menu"
+   ]
+  },
+  "slice_shadow_window": {
+   "file": "assets/ui-global/slice_shadow_window.png",
+   "figma": "3498:22524",
+   "size": [
+    156,
+    156
+   ],
+   "tintable": true,
+   "slice": {
+    "insets_ltrb": [
+     18,
+     12,
+     18,
+     24
+    ],
+    "radius": 24
+   },
+   "note": "List windows (Shop/Auras/Fishdex) shadow - 9-slice (ScaleType Slice), white shape + shadow; tint = panel colour. Section \"Roblox 9-slice (export)\".",
+   "rbxassetid": "rbxassetid://71826842646338",
+   "used_by": [
+    "List windows (Shop/Auras/Fishdex) shadow"
+   ]
+  },
+  "slice_shadow_modal": {
+   "file": "assets/ui-global/slice_shadow_modal.png",
+   "figma": "3498:22525",
+   "size": [
+    156,
+    156
+   ],
+   "tintable": true,
+   "slice": {
+    "insets_ltrb": [
+     18,
+     12,
+     18,
+     24
+    ],
+    "radius": 36
+   },
+   "note": "14 Modal shadow - 9-slice (ScaleType Slice), white shape + shadow; tint = panel colour. Section \"Roblox 9-slice (export)\".",
+   "rbxassetid": "rbxassetid://70804661198116",
+   "used_by": [
+    "14 Modal shadow"
+   ]
+  },
+  "slice_shadow_glass": {
+   "file": "assets/ui-global/slice_shadow_glass.png",
+   "figma": "3498:22526",
+   "size": [
+    180,
+    180
+   ],
+   "tintable": true,
+   "slice": {
+    "insets_ltrb": [
+     30,
+     20,
+     30,
+     40
+    ],
+    "radius": 48
+   },
+   "note": "12 Main Menu glass frame shadow - 9-slice (ScaleType Slice), white shape + shadow; tint = panel colour. Section \"Roblox 9-slice (export)\".",
+   "rbxassetid": "rbxassetid://124319390879105",
+   "used_by": [
+    "12 Main Menu glass frame shadow"
+   ]
+  },
+  "pattern_stripes": {
+   "file": "assets/ui-global/pattern_stripes.png",
+   "figma": null,
+   "size": [
+    64,
+    64
+   ],
+   "tintable": true,
+   "tile": {
+    "size": 64
+   },
+   "note": "Diagonal stripes (hatch), period 16px: empty Item Slots, empty list areas, locked/disabled zones. Seamless 64x64 tile, white on transparent: ScaleType Tile + ImageColor3 (New.Stripes). Made by tools/art/make_patterns.py; preview docs/figma/patterns_preview.png.",
+   "rbxassetid": "rbxassetid://70574578813156",
+   "used_by": [
+    "New.Stripes"
+   ]
+  },
+  "pattern_stripes_fine": {
+   "file": "assets/ui-global/pattern_stripes_fine.png",
+   "figma": null,
+   "size": [
+    64,
+    64
+   ],
+   "tintable": true,
+   "tile": {
+    "size": 64
+   },
+   "note": "Fine diagonal stripes, period 8px: progress-bar tracks (the empty part behind the fill), thin bars, small badges. Seamless 64x64 tile, white on transparent: ScaleType Tile + ImageColor3 (New.Stripes). Made by tools/art/make_patterns.py; preview docs/figma/patterns_preview.png.",
+   "rbxassetid": "rbxassetid://130027187345312",
+   "used_by": [
+    "New.Stripes"
+   ]
+  },
+  "icon_clover": {
+   "file": "assets/ui-global/icon_clover.png",
+   "figma": "3539:28154",
+   "size": [
+    64,
+    64
+   ],
+   "tintable": true,
+   "note": "Mastery Luck track (white, on mint tile).",
+   "used_by": [
+    "Economy · 3 Mastery (C15)"
+   ],
+   "rbxassetid": "rbxassetid://91567152861846"
+  },
+  "icon_bar": {
+   "file": "assets/ui-global/icon_bar.png",
+   "figma": "3539:28188",
+   "size": [
+    64,
+    64
+   ],
+   "tintable": true,
+   "note": "Mastery Catch Bar track (white, on sky tile).",
+   "used_by": [
+    "Economy · 3 Mastery (C15)"
+   ],
+   "rbxassetid": "rbxassetid://125672784771784"
+  },
+  "icon_reel": {
+   "file": "assets/ui-global/icon_reel.png",
+   "figma": "3539:28207",
+   "size": [
+    64,
+    64
+   ],
+   "tintable": true,
+   "note": "Mastery Reel Power track (white, on coral tile).",
+   "used_by": [
+    "Economy · 3 Mastery (C15)"
+   ],
+   "rbxassetid": "rbxassetid://125704968039118"
+  },
+  "icon_timer": {
+   "file": "assets/ui-global/icon_timer.png",
+   "figma": "3539:28067",
+   "size": [
+    64,
+    64
+   ],
+   "tintable": true,
+   "note": "Mastery Auto Wait track (white, on lilac tile); Aquarium offline cap pill (tinted).",
+   "used_by": [
+    "Economy · 3 Mastery (C15)",
+    "Economy · 2 Aquarium (C14/C18)"
+   ],
+   "rbxassetid": "rbxassetid://87052668580778"
+  },
+  "icon_star": {
+   "file": "assets/ui-global/icon_star.png",
+   "figma": "3539:27997",
+   "size": [
+    64,
+    64
+   ],
+   "tintable": true,
+   "note": "Rating star filled (Aura stars, Mastery levels). White SVG, tintable.",
+   "used_by": [
+    "Economy · 5 Auras + Gacha (C17)",
+    "Economy · 3 Mastery (C15)"
+   ],
+   "rbxassetid": "rbxassetid://80457278463618"
+  },
+  "icon_star_empty": {
+   "file": "assets/ui-global/icon_star_empty.png",
+   "figma": "3539:28011",
+   "size": [
+    64,
+    64
+   ],
+   "tintable": true,
+   "note": "Rating star outline/empty (Aura stars unobtained). White SVG, tintable.",
+   "used_by": [
+    "Economy · 5 Auras + Gacha (C17)"
+   ],
+   "rbxassetid": "rbxassetid://73976756993807"
+  },
+  "icon_arrow_up": {
+   "file": "assets/ui-global/icon_arrow_up.png",
+   "figma": "3539:28025",
+   "size": [
+    64,
+    64
+   ],
+   "tintable": true,
+   "note": "Upgrade arrow (Enhance, Mastery upgrade buttons). White SVG, tintable.",
+   "used_by": [
+    "Economy · 3 Mastery (C15)",
+    "Economy · 4 Enhance (C16)"
+   ],
+   "rbxassetid": "rbxassetid://104424146601328"
+  },
+  "icon_flame": {
+   "file": "assets/ui-global/icon_flame.png",
+   "figma": "3539:28039",
+   "size": [
+    64,
+    64
+   ],
+   "tintable": true,
+   "note": "Hot streak / fire icon (Hot Fish streak multiplier). White SVG, tintable.",
+   "used_by": [
+    "Economy · 7 Hot fish + Hub (C18)"
+   ],
+   "rbxassetid": "rbxassetid://98609829033714"
+  },
+  "icon_infinity": {
+   "file": "assets/ui-global/icon_infinity.png",
+   "figma": "3539:28053",
+   "size": [
+    64,
+    64
+   ],
+   "tintable": true,
+   "note": "Infinite bag / unlimited badge. White SVG, tintable.",
+   "used_by": [
+    "Economy · 6 Store (C6/C19)"
+   ],
+   "rbxassetid": "rbxassetid://89895172259219"
+  },
+  "icon_info": {
+   "file": "assets/ui-global/icon_info.png",
+   "figma": "3539:28092",
+   "size": [
+    64,
+    64
+   ],
+   "tintable": true,
+   "note": "Information tooltip / rates popup trigger. White SVG, tintable.",
+   "used_by": [
+    "Economy · 5 Auras + Gacha (C17)",
+    "Economy · 6 Store (C6/C19)"
+   ],
+   "rbxassetid": "rbxassetid://92271897096402"
+  },
+  "icon_robux": {
+   "file": "assets/ui-global/icon_robux.png",
+   "figma": "3539:28135",
+   "size": [
+    64,
+    64
+   ],
+   "tintable": true,
+   "note": "Robux currency symbol for store purchase buttons. White SVG, tintable.",
+   "used_by": [
+    "Economy · 6 Store (C6/C19)"
+   ],
+   "rbxassetid": "rbxassetid://119504403391855"
+  }
+ },
+ "art": {
+  "auras/AbyssalShadow": {
+   "file": "assets/art/auras/AbyssalShadow.png",
+   "sheet": "08_aura_orbs",
+   "desc": "an orb with dark purple mist and shadow tentacles inside",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://125786365378368",
+   "used_by": [
+    "Aura Gacha — Reel Slot (FINAL) › G2 · Spinning",
+    "Aura Gacha — Reel Slot (FINAL) › G6 · x10 Summary (next)",
+    "Components board › Img auras/AbyssalShadow"
+   ],
+   "global": true
+  },
+  "auras/DragonEmperor": {
+   "file": "assets/art/auras/DragonEmperor.png",
+   "sheet": "08_aura_orbs",
+   "desc": "an orb with a tiny golden eastern dragon coiled inside",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://102649867191340",
+   "used_by": [
+    "Aura Gacha — Reel Slot (FINAL) › G3 · So close...",
+    "Components board › Img auras/DragonEmperor"
+   ],
+   "global": true
+  },
+  "auras/NeonWave": {
+   "file": "assets/art/auras/NeonWave.png",
+   "sheet": "08_aura_orbs",
+   "desc": "an orb with a glowing neon blue ocean wave inside",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://136917801623968",
+   "used_by": [
+    "Aura Gacha — Reel Slot (FINAL) › G1 · Aura Altar",
+    "Aura Gacha — Reel Slot (FINAL) › G2 · Spinning",
+    "Aura Gacha — Reel Slot (FINAL) › G4 · Lock",
+    "Aura Gacha — Reel Slot (FINAL) › G6 · x10 Summary (next)",
+    "Aura Gacha — Reel Slot (FINAL) › Gacha · Components (edit here)",
+    "Components board › Img auras/NeonWave",
+    "Game Menus (Cozy Lake) › 07 · Auras",
+    "Game Menus (Cozy Lake) › 08 · Aura Roll Result"
+   ],
+   "global": true
+  },
+  "auras/SerpentOfTheVoid": {
+   "file": "assets/art/auras/SerpentOfTheVoid.png",
+   "sheet": "08_aura_orbs",
+   "desc": "an orb with an iridescent rainbow crystal serpent (naga) coiled inside",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://71301438855987",
+   "used_by": [],
+   "global": false
+  },
+  "auras/SolarFlare": {
+   "file": "assets/art/auras/SolarFlare.png",
+   "sheet": "08_aura_orbs",
+   "desc": "an orb with a swirling orange-gold sun flame inside",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://95577812579133",
+   "used_by": [
+    "Aura Gacha — Reel Slot (FINAL) › G2 · Spinning",
+    "Aura Gacha — Reel Slot (FINAL) › G3 · So close...",
+    "Aura Gacha — Reel Slot (FINAL) › G4 · Lock",
+    "Aura Gacha — Reel Slot (FINAL) › G5 · Reveal",
+    "Aura Gacha — Reel Slot (FINAL) › G6 · x10 Summary (next)",
+    "Aura Gacha — Reel Slot (FINAL) › Gacha · Components (edit here)",
+    "Components board › Img auras/SolarFlare"
+   ],
+   "global": true
+  },
+  "auras/SparklingDew": {
+   "file": "assets/art/auras/SparklingDew.png",
+   "sheet": "08_aura_orbs",
+   "desc": "a clear orb filled with sparkling water droplets, pale cyan",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://74247005515338",
+   "used_by": [
+    "Aura Gacha — Reel Slot (FINAL) › G1 · Aura Altar",
+    "Aura Gacha — Reel Slot (FINAL) › G2 · Spinning",
+    "Aura Gacha — Reel Slot (FINAL) › G3 · So close...",
+    "Aura Gacha — Reel Slot (FINAL) › G4 · Lock",
+    "Aura Gacha — Reel Slot (FINAL) › G6 · x10 Summary (next)",
+    "Aura Gacha — Reel Slot (FINAL) › Gacha · Components (edit here)",
+    "Components board › Img auras/SparklingDew",
+    "Game Menus (Cozy Lake) › 07 · Auras"
+   ],
+   "global": true
+  },
+  "auras/UnknownAura": {
+   "file": "assets/art/auras/UnknownAura.png",
+   "sheet": "08_aura_orbs",
+   "desc": "an empty frosted glass orb with a faint grey swirl, mysterious",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://132847643402004",
+   "used_by": [
+    "Aura Gacha — Reel Slot (FINAL) › G1 · Aura Altar",
+    "Aura Gacha — Reel Slot (FINAL) › Gacha · Components (edit here)",
+    "Game Menus (Cozy Lake) › 07 · Auras"
+   ],
+   "global": true
+  },
+  "auras/fx_glow": {
+   "file": "assets/art/auras/fx_glow.png",
+   "sheet": "08_aura_orbs",
+   "desc": "a soft round radial glow blob, pale cyan fading to white",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://79722913011392",
+   "used_by": [],
+   "global": false
+  },
+  "auras/fx_sparkle": {
+   "file": "assets/art/auras/fx_sparkle.png",
+   "sheet": "08_aura_orbs",
+   "desc": "a single four-pointed white-gold sparkle shape",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://71876634496352",
+   "used_by": [],
+   "global": false
+  },
+  "equipment/BambooRod": {
+   "file": "assets/art/equipment/BambooRod.png",
+   "sheet": "06_rods_lines",
+   "desc": "a green bamboo fishing rod with knotted joints",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://100511632531797",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 05 · Shop — Rods"
+   ],
+   "global": false
+  },
+  "equipment/Coolbox": {
+   "file": "assets/art/equipment/Coolbox.png",
+   "sheet": "07_bags_baits",
+   "desc": "a sky-blue ice cooler box with a white lid and ice cubes",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://140730864728757",
+   "used_by": [],
+   "global": false
+  },
+  "equipment/CoralRod": {
+   "file": "assets/art/equipment/CoralRod.png",
+   "sheet": "06_rods_lines",
+   "desc": "a pink coral fishing rod with little shell decorations",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://119470493341475",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 05 · Shop — Rods"
+   ],
+   "global": false
+  },
+  "equipment/CottonLine": {
+   "file": "assets/art/equipment/CottonLine.png",
+   "sheet": "06_rods_lines",
+   "desc": "a spool of soft white cotton fishing line",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://93265075720328",
+   "used_by": [],
+   "global": false
+  },
+  "equipment/Crate": {
+   "file": "assets/art/equipment/Crate.png",
+   "sheet": "07_bags_baits",
+   "desc": "a wooden fish crate with rope handles",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://88338425642394",
+   "used_by": [],
+   "global": false
+  },
+  "equipment/DriftwoodRod": {
+   "file": "assets/art/equipment/DriftwoodRod.png",
+   "sheet": "06_rods_lines",
+   "desc": "a simple fishing rod made of pale driftwood with a small wooden reel",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://133721249713269",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 05 · Shop — Rods"
+   ],
+   "global": false
+  },
+  "equipment/GlowGrub": {
+   "file": "assets/art/equipment/GlowGrub.png",
+   "sheet": "07_bags_baits",
+   "desc": "a chubby glowing mint grub with soft light",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://100703519947558",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 06 · Shop — Baits",
+    "Game Menus (Cozy Lake) › 13 · Inventory"
+   ],
+   "global": true
+  },
+  "equipment/HempLine": {
+   "file": "assets/art/equipment/HempLine.png",
+   "sheet": "06_rods_lines",
+   "desc": "a spool of tan hemp rope line",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://76517446013353",
+   "used_by": [],
+   "global": false
+  },
+  "equipment/Hold": {
+   "file": "assets/art/equipment/Hold.png",
+   "sheet": "07_bags_baits",
+   "desc": "a sturdy ship's barrel with gold metal bands",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://126928882100584",
+   "used_by": [],
+   "global": false
+  },
+  "equipment/MoonsilverRod": {
+   "file": "assets/art/equipment/MoonsilverRod.png",
+   "sheet": "06_rods_lines",
+   "desc": "a silver fishing rod with a crescent moon charm and soft blue glow",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://76370045566713",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 05 · Shop — Rods"
+   ],
+   "global": false
+  },
+  "equipment/NagaScaleRod": {
+   "file": "assets/art/equipment/NagaScaleRod.png",
+   "sheet": "06_rods_lines",
+   "desc": "an emerald fishing rod covered in gold-edged scales, serpent head tip",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://120027891820785",
+   "used_by": [],
+   "global": false
+  },
+  "equipment/NylonLine": {
+   "file": "assets/art/equipment/NylonLine.png",
+   "sheet": "06_rods_lines",
+   "desc": "a spool of shiny sky-blue nylon line",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://129663782459473",
+   "used_by": [],
+   "global": false
+  },
+  "equipment/Shrimp": {
+   "file": "assets/art/equipment/Shrimp.png",
+   "sheet": "07_bags_baits",
+   "desc": "a curled coral shrimp",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://129743833004856",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 06 · Shop — Baits"
+   ],
+   "global": false
+  },
+  "equipment/SilkLine": {
+   "file": "assets/art/equipment/SilkLine.png",
+   "sheet": "06_rods_lines",
+   "desc": "a spool of glittering lavender spider-silk line with a tiny web pattern",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://125796989693478",
+   "used_by": [],
+   "global": false
+  },
+  "equipment/StarterPouch": {
+   "file": "assets/art/equipment/StarterPouch.png",
+   "sheet": "07_bags_baits",
+   "desc": "a small cream cloth pouch with a drawstring",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://119790327724431",
+   "used_by": [],
+   "global": false
+  },
+  "equipment/SummonBait": {
+   "file": "assets/art/equipment/SummonBait.png",
+   "sheet": "07_bags_baits",
+   "desc": "a mystical bait: a glowing purple orb wrapped in seaweed (for boss summoning)",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://131038551265481",
+   "used_by": [],
+   "global": false
+  },
+  "equipment/Worm": {
+   "file": "assets/art/equipment/Worm.png",
+   "sheet": "07_bags_baits",
+   "desc": "a cute pink earthworm wiggling",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://70868912296230",
+   "used_by": [
+    "Components board › Img equipment/Worm",
+    "Game Menus (Cozy Lake) › 06 · Shop — Baits",
+    "Game Menus (Cozy Lake) › 13 · Inventory"
+   ],
+   "global": true
+  },
+  "equipment/WovenBasket": {
+   "file": "assets/art/equipment/WovenBasket.png",
+   "sheet": "07_bags_baits",
+   "desc": "a woven straw fishing basket with a lid",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://79741713063053",
+   "used_by": [],
+   "global": false
+  },
+  "fish/AncientCoelacanth": {
+   "file": "assets/art/fish/AncientCoelacanth.png",
+   "sheet": "05_fish_deep_mutations",
+   "desc": "a big ancient lobe-finned fish, deep blue with pale spots",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://78294109584677",
+   "used_by": [],
+   "global": false
+  },
+  "fish/ArmoredCrab": {
+   "file": "assets/art/fish/ArmoredCrab.png",
+   "sheet": "04_fish_mid",
+   "desc": "a chunky steel-blue crab with rounded armored shell plates, front view",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://116167091924026",
+   "used_by": [],
+   "global": false
+  },
+  "fish/BubbleCarp": {
+   "file": "assets/art/fish/BubbleCarp.png",
+   "sheet": "03_fish_shallow",
+   "desc": "a round chubby orange-cream carp with little bubbles near its mouth",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://73940011830037",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 09 · Fishdex",
+    "Game Menus (Cozy Lake) › 13 · Inventory"
+   ],
+   "global": true
+  },
+  "fish/CoralSeahorse": {
+   "file": "assets/art/fish/CoralSeahorse.png",
+   "sheet": "04_fish_mid",
+   "desc": "a pink and gold seahorse decorated with tiny coral branches, side view",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://102640583872624",
+   "used_by": [
+    "Components board › Img fish/CoralSeahorse",
+    "Game Menus (Cozy Lake) › 13 · Inventory"
+   ],
+   "global": true
+  },
+  "fish/CrystalGuppy": {
+   "file": "assets/art/fish/CrystalGuppy.png",
+   "sheet": "03_fish_shallow",
+   "desc": "a small translucent lavender guppy with a crystal-like fan tail",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://132418106669310",
+   "used_by": [
+    "Components board › Img fish/CrystalGuppy",
+    "Game Menus (Cozy Lake) › 13 · Inventory"
+   ],
+   "global": true
+  },
+  "fish/DewdropKoi": {
+   "file": "assets/art/fish/DewdropKoi.png",
+   "sheet": "03_fish_shallow",
+   "desc": "a white and sky-blue koi with water droplet patterns",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://98015270949392",
+   "used_by": [
+    "Components board › Img fish/DewdropKoi",
+    "Game Menus (Cozy Lake) › 13 · Inventory"
+   ],
+   "global": true
+  },
+  "fish/EmberTuna": {
+   "file": "assets/art/fish/EmberTuna.png",
+   "sheet": "04_fish_mid",
+   "desc": "a big tuna with orange ember-like glowing scales",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://117369138452149",
+   "used_by": [],
+   "global": false
+  },
+  "fish/GlowEel": {
+   "file": "assets/art/fish/GlowEel.png",
+   "sheet": "05_fish_deep_mutations",
+   "desc": "a long curvy eel with glowing cyan spots",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://101910487045345",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 04 · Catch Result"
+   ],
+   "global": false
+  },
+  "fish/GoldenKoi": {
+   "file": "assets/art/fish/GoldenKoi.png",
+   "sheet": "",
+   "desc": "a legendary koi with shimmering golden scales and pale fin tips",
+   "size": [
+    1254,
+    1254
+   ],
+   "rbxassetid": "rbxassetid://109436578580598",
+   "used_by": [
+    "Fishdex",
+    "Inventory"
+   ],
+   "global": false
+  },
+  "fish/LanternAngler": {
+   "file": "assets/art/fish/LanternAngler.png",
+   "sheet": "04_fish_mid",
+   "desc": "a cute dark-teal anglerfish with a warm glowing lantern lure",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://118339412371750",
+   "used_by": [],
+   "global": false
+  },
+  "fish/LilyTrout": {
+   "file": "assets/art/fish/LilyTrout.png",
+   "sheet": "03_fish_shallow",
+   "desc": "a pink-spotted trout with a tiny lily pad stuck on its back",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://116121933286675",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 09 · Fishdex",
+    "Game Menus (Cozy Lake) › 13 · Inventory"
+   ],
+   "global": true
+  },
+  "fish/MoonJelly": {
+   "file": "assets/art/fish/MoonJelly.png",
+   "sheet": "04_fish_mid",
+   "desc": "a glowing pale lavender jellyfish with a moon-shaped bell",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://108325845496851",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 13 · Inventory"
+   ],
+   "global": false
+  },
+  "fish/MysteryFish": {
+   "file": "assets/art/fish/MysteryFish.png",
+   "sheet": "03_fish_shallow",
+   "desc": "a plain soft slate-grey fish silhouette with a lighter question-mark-free belly, used for undiscovered fish",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://125111787672801",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 03 · Reel Minigame"
+   ],
+   "global": false
+  },
+  "fish/NagaHatchling": {
+   "file": "assets/art/fish/NagaHatchling.png",
+   "sheet": "05_fish_deep_mutations",
+   "desc": "a baby emerald-green sea serpent (naga) with a tiny gold crest, curled S-shape",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://118756615792393",
+   "used_by": [
+    "Components board › Img fish/NagaHatchling",
+    "Game Menus (Cozy Lake) › 13 · Inventory"
+   ],
+   "global": true
+  },
+  "fish/PearlClam": {
+   "file": "assets/art/fish/PearlClam.png",
+   "sheet": "03_fish_shallow",
+   "desc": "a pastel pink clam shell slightly open showing a glossy pearl",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://94255407608263",
+   "used_by": [
+    "Components board › Img fish/PearlClam",
+    "Game Menus (Cozy Lake) › 09 · Fishdex",
+    "Game Menus (Cozy Lake) › 13 · Inventory"
+   ],
+   "global": true
+  },
+  "fish/PebbleMinnow": {
+   "file": "assets/art/fish/PebbleMinnow.png",
+   "sheet": "03_fish_shallow",
+   "desc": "a tiny grey-blue minnow with pebble-like speckles",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://109838867173672",
+   "used_by": [
+    "Components board › Img fish/PebbleMinnow",
+    "Game Menus (Cozy Lake) › 09 · Fishdex",
+    "Game Menus (Cozy Lake) › 13 · Inventory"
+   ],
+   "global": true
+  },
+  "fish/RazorPike": {
+   "file": "assets/art/fish/RazorPike.png",
+   "sheet": "04_fish_mid",
+   "desc": "a long sleek pike with a pointed snout and teal back",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://128094684388098",
+   "used_by": [],
+   "global": false
+  },
+  "fish/ReedPerch": {
+   "file": "assets/art/fish/ReedPerch.png",
+   "sheet": "03_fish_shallow",
+   "desc": "a green and gold striped perch with a spiky dorsal fin",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://101030458627425",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 09 · Fishdex",
+    "Game Menus (Cozy Lake) › 13 · Inventory"
+   ],
+   "global": true
+  },
+  "fish/SilverRay": {
+   "file": "assets/art/fish/SilverRay.png",
+   "sheet": "04_fish_mid",
+   "desc": "a silver manta ray seen from above, wings spread",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://100617254413466",
+   "used_by": [],
+   "global": false
+  },
+  "fish/StripeBass": {
+   "file": "assets/art/fish/StripeBass.png",
+   "sheet": "04_fish_mid",
+   "desc": "a sturdy olive bass with dark horizontal stripes",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://89222808118643",
+   "used_by": [],
+   "global": false
+  },
+  "fish/SunscaleSardine": {
+   "file": "assets/art/fish/SunscaleSardine.png",
+   "sheet": "03_fish_shallow",
+   "desc": "a slim silver sardine with warm yellow sun-shine scales",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://96790507966941",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 09 · Fishdex"
+   ],
+   "global": false
+  },
+  "fish/TideSnapper": {
+   "file": "assets/art/fish/TideSnapper.png",
+   "sheet": "04_fish_mid",
+   "desc": "a coral red snapper with wave-shaped fin edges",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://122209408871854",
+   "used_by": [],
+   "global": false
+  },
+  "fish/deco_bubbles": {
+   "file": "assets/art/fish/deco_bubbles.png",
+   "sheet": "05_fish_deep_mutations",
+   "desc": "a cluster of shiny pastel blue bubbles",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://119415196287345",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 03 · Reel Minigame"
+   ],
+   "global": false
+  },
+  "fish/deco_seaweed": {
+   "file": "assets/art/fish/deco_seaweed.png",
+   "sheet": "05_fish_deep_mutations",
+   "desc": "a cute bundle of mint green seaweed",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://126077835277085",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 03 · Reel Minigame"
+   ],
+   "global": false
+  },
+  "fish/mut_glowing": {
+   "file": "assets/art/fish/mut_glowing.png",
+   "sheet": "05_fish_deep_mutations",
+   "desc": "a round mint badge with a glowing teal water drop symbol",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://107791076823655",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 04 · Catch Result",
+    "Game Menus (Cozy Lake) › 13 · Inventory"
+   ],
+   "global": true
+  },
+  "fish/mut_golden": {
+   "file": "assets/art/fish/mut_golden.png",
+   "sheet": "05_fish_deep_mutations",
+   "desc": "a round gold badge with a shining gold fish scale symbol",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://94228374635500",
+   "used_by": [],
+   "global": false
+  },
+  "fish/mut_sunforged": {
+   "file": "assets/art/fish/mut_sunforged.png",
+   "sheet": "05_fish_deep_mutations",
+   "desc": "a round orange badge with a stylised sun symbol",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://73182544992744",
+   "used_by": [],
+   "global": false
+  },
+  "fish/mut_voidtouched": {
+   "file": "assets/art/fish/mut_voidtouched.png",
+   "sheet": "05_fish_deep_mutations",
+   "desc": "a round deep purple badge with a swirling dark mist symbol",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://79278072467475",
+   "used_by": [],
+   "global": false
+  },
+  "npc/Marlin_happy": {
+   "file": "assets/art/npc/Marlin_happy.png",
+   "sheet": "09_npc_portraits",
+   "desc": "the same Old Marlin, big warm smile, eyes closed happily",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://140465676807576",
+   "used_by": [],
+   "global": false
+  },
+  "npc/Marlin_neutral": {
+   "file": "assets/art/npc/Marlin_neutral.png",
+   "sheet": "09_npc_portraits",
+   "desc": "Old Marlin, a kind old fish merchant with a white beard, cream fisherman hat and mint scarf, calm expression",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://101675689952498",
+   "used_by": [],
+   "global": false
+  },
+  "npc/Marlin_surprised": {
+   "file": "assets/art/npc/Marlin_surprised.png",
+   "sheet": "09_npc_portraits",
+   "desc": "the same Old Marlin, eyebrows raised, mouth open in surprise",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://114931279376591",
+   "used_by": [],
+   "global": false
+  },
+  "npc/Pip_happy": {
+   "file": "assets/art/npc/Pip_happy.png",
+   "sheet": "09_npc_portraits",
+   "desc": "the same Pip, grinning with a thumbs up",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://73620959021805",
+   "used_by": [
+    "Components board › Img npc/Pip_happy",
+    "Game Menus (Cozy Lake) › 12 · Main Menu"
+   ],
+   "global": true
+  },
+  "npc/Pip_neutral": {
+   "file": "assets/art/npc/Pip_neutral.png",
+   "sheet": "09_npc_portraits",
+   "desc": "Pip, a small dock kid with a coral beanie, sky-blue raincoat and a tiny fishing net, curious expression",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://127787884753409",
+   "used_by": [],
+   "global": false
+  },
+  "npc/Pip_surprised": {
+   "file": "assets/art/npc/Pip_surprised.png",
+   "sheet": "09_npc_portraits",
+   "desc": "the same Pip, shocked open mouth, beanie popping up",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://104954642432715",
+   "used_by": [],
+   "global": false
+  },
+  "npc/Sela_happy": {
+   "file": "assets/art/npc/Sela_happy.png",
+   "sheet": "09_npc_portraits",
+   "desc": "the same Sela, cheerful smile",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://115778499410594",
+   "used_by": [],
+   "global": false
+  },
+  "npc/Sela_neutral": {
+   "file": "assets/art/npc/Sela_neutral.png",
+   "sheet": "09_npc_portraits",
+   "desc": "Sela, a young aura altar keeper with lavender hair, star hairpin and flowing lavender robe, calm expression",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://107950893609537",
+   "used_by": [],
+   "global": false
+  },
+  "npc/Sela_surprised": {
+   "file": "assets/art/npc/Sela_surprised.png",
+   "sheet": "09_npc_portraits",
+   "desc": "the same Sela, amazed wide eyes, hands near cheeks",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://94439895159654",
+   "used_by": [],
+   "global": false
+  },
+  "ui/icons/auras": {
+   "file": "assets/art/ui/icons/auras.png",
+   "sheet": "01_menu_icons",
+   "desc": "a glowing lavender magic orb with a sparkle star inside",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://90278015982718",
+   "used_by": [
+    "Aura Gacha — Reel Slot (FINAL) › G1 · Aura Altar",
+    "Game Menus (Cozy Lake) › 01 · HUD",
+    "Game Menus (Cozy Lake) › 04 · Catch Result",
+    "Game Menus (Cozy Lake) › 12 · Main Menu",
+    "Game Menus (Cozy Lake) › 15 · Cast Popup",
+    "Game Menus (Cozy Lake) › 16 · Cast Popup — Auto depth"
+   ],
+   "global": true
+  },
+  "ui/icons/bag": {
+   "file": "assets/art/ui/icons/bag.png",
+   "sheet": "01_menu_icons",
+   "desc": "a plump gold fishing satchel with a buckle strap",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://140654924190580",
+   "used_by": [
+    "Components board › Icon",
+    "Game Menus (Cozy Lake) › 01 · HUD",
+    "Game Menus (Cozy Lake) › 04 · Catch Result",
+    "Game Menus (Cozy Lake) › 12 · Main Menu",
+    "Game Menus (Cozy Lake) › 13 · Inventory",
+    "Game Menus (Cozy Lake) › 15 · Cast Popup",
+    "Game Menus (Cozy Lake) › 16 · Cast Popup — Auto depth"
+   ],
+   "global": true
+  },
+  "ui/icons/events": {
+   "file": "assets/art/ui/icons/events.png",
+   "sheet": "01_menu_icons",
+   "desc": "a coral gift box with a cream ribbon bow",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://98747542607964",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 12 · Main Menu"
+   ],
+   "global": false
+  },
+  "ui/icons/fishdex": {
+   "file": "assets/art/ui/icons/fishdex.png",
+   "sheet": "01_menu_icons",
+   "desc": "a thick sky-blue book with a small fish emblem on the cover",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://128241599600626",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 01 · HUD",
+    "Game Menus (Cozy Lake) › 04 · Catch Result",
+    "Game Menus (Cozy Lake) › 12 · Main Menu",
+    "Game Menus (Cozy Lake) › 15 · Cast Popup",
+    "Game Menus (Cozy Lake) › 16 · Cast Popup — Auto depth"
+   ],
+   "global": true
+  },
+  "ui/icons/friends": {
+   "file": "assets/art/ui/icons/friends.png",
+   "sheet": "01_menu_icons",
+   "desc": "two cute round fish-shaped badges side by side, sky blue and mint",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://124367775434166",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 12 · Main Menu"
+   ],
+   "global": false
+  },
+  "ui/icons/quests": {
+   "file": "assets/art/ui/icons/quests.png",
+   "sheet": "01_menu_icons",
+   "desc": "a mint green scroll with a small gold ribbon tied around it",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://106047203034029",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 12 · Main Menu"
+   ],
+   "global": false
+  },
+  "ui/icons/rebirth": {
+   "file": "assets/art/ui/icons/rebirth.png",
+   "sheet": "01_menu_icons",
+   "desc": "a pink circular arrow loop around a tiny glowing star",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://124931582143286",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 12 · Main Menu"
+   ],
+   "global": false
+  },
+  "ui/icons/settings": {
+   "file": "assets/art/ui/icons/settings.png",
+   "sheet": "01_menu_icons",
+   "desc": "a soft slate-grey rounded gear cog",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://119917909263934",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 12 · Main Menu"
+   ],
+   "global": false
+  },
+  "ui/icons/shop": {
+   "file": "assets/art/ui/icons/shop.png",
+   "sheet": "01_menu_icons",
+   "desc": "a small market stall with a coral and cream striped awning",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://136979866198873",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 01 · HUD",
+    "Game Menus (Cozy Lake) › 04 · Catch Result",
+    "Game Menus (Cozy Lake) › 12 · Main Menu",
+    "Game Menus (Cozy Lake) › 15 · Cast Popup",
+    "Game Menus (Cozy Lake) › 16 · Cast Popup — Auto depth"
+   ],
+   "global": true
+  },
+  "ui/status/auto_timer": {
+   "file": "assets/art/ui/status/auto_timer.png",
+   "sheet": "02_currency_status",
+   "desc": "a mint green hourglass with sand flowing",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://72654769526423",
+   "used_by": [],
+   "global": false
+  },
+  "ui/status/bite_alert": {
+   "file": "assets/art/ui/status/bite_alert.png",
+   "sheet": "02_currency_status",
+   "desc": "a round cream speech bubble containing a bold coral exclamation mark shape (a symbol, not a letter)",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://96380011530038",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 02 · HUD States"
+   ],
+   "global": false
+  },
+  "ui/status/bobber": {
+   "file": "assets/art/ui/status/bobber.png",
+   "sheet": "02_currency_status",
+   "desc": "a classic round fishing bobber, coral red top and cream bottom, floating",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://75934834200220",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 03 · Reel Minigame",
+    "Game Menus (Cozy Lake) › 15 · Cast Popup",
+    "Game Menus (Cozy Lake) › 16 · Cast Popup — Auto depth"
+   ],
+   "global": true
+  },
+  "ui/status/coin": {
+   "file": "assets/art/ui/status/coin.png",
+   "sheet": "02_currency_status",
+   "desc": "a shiny round gold coin with a small fish symbol embossed in the middle",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://77146443071671",
+   "used_by": [
+    "Components board › Icon",
+    "Components board › Img ui/status/coin",
+    "Game Menus (Cozy Lake) › 01 · HUD",
+    "Game Menus (Cozy Lake) › 03 · Reel Minigame",
+    "Game Menus (Cozy Lake) › 04 · Catch Result",
+    "Game Menus (Cozy Lake) › 05 · Shop — Rods",
+    "Game Menus (Cozy Lake) › 06 · Shop — Baits",
+    "Game Menus (Cozy Lake) › 12 · Main Menu",
+    "Game Menus (Cozy Lake) › 13 · Inventory",
+    "Game Menus (Cozy Lake) › 15 · Cast Popup",
+    "Game Menus (Cozy Lake) › 16 · Cast Popup — Auto depth"
+   ],
+   "global": true
+  },
+  "ui/status/gem": {
+   "file": "assets/art/ui/status/gem.png",
+   "sheet": "02_currency_status",
+   "desc": "a faceted lavender crystal gem",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://109342164972413",
+   "used_by": [
+    "Aura Gacha — Reel Slot (FINAL) › G1 · Aura Altar",
+    "Aura Gacha — Reel Slot (FINAL) › Gacha · Components (edit here)",
+    "Components board › Icon",
+    "Components board › Img ui/status/gem",
+    "Game Menus (Cozy Lake) › 01 · HUD",
+    "Game Menus (Cozy Lake) › 03 · Reel Minigame",
+    "Game Menus (Cozy Lake) › 04 · Catch Result",
+    "Game Menus (Cozy Lake) › 05 · Shop — Rods",
+    "Game Menus (Cozy Lake) › 06 · Shop — Baits",
+    "Game Menus (Cozy Lake) › 07 · Auras",
+    "Game Menus (Cozy Lake) › 12 · Main Menu",
+    "Game Menus (Cozy Lake) › 13 · Inventory",
+    "Game Menus (Cozy Lake) › 15 · Cast Popup",
+    "Game Menus (Cozy Lake) › 16 · Cast Popup — Auto depth"
+   ],
+   "global": true
+  },
+  "ui/status/lock": {
+   "file": "assets/art/ui/status/lock.png",
+   "sheet": "02_currency_status",
+   "desc": "a cute rounded gold padlock",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://105347420639174",
+   "used_by": [],
+   "global": false
+  },
+  "ui/status/sell_bag": {
+   "file": "assets/art/ui/status/sell_bag.png",
+   "sheet": "02_currency_status",
+   "desc": "a small cream coin pouch tied with a string, with two gold coins peeking out",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://84809593714837",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 14 · Modal"
+   ],
+   "global": false
+  },
+  "ui/status/treasure_chest": {
+   "file": "assets/art/ui/status/treasure_chest.png",
+   "sheet": "02_currency_status",
+   "desc": "a small wooden treasure chest with gold trim, slightly open, glowing",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://136264616071522",
+   "used_by": [
+    "Game Menus (Cozy Lake) › 13 · Inventory"
+   ],
+   "global": false
+  },
+  "ui/status/xp_star": {
+   "file": "assets/art/ui/status/xp_star.png",
+   "sheet": "02_currency_status",
+   "desc": "a chubby mint green star with a soft glow",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://139480733607986",
+   "used_by": [
+    "Components board › Icon"
+   ],
+   "global": false
+  },
+  "auras/CelestialLeviathan": {
+   "file": "assets/art/auras/CelestialLeviathan.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://92605200397233",
+   "used_by": [],
+   "global": false
+  },
+  "auras/CoralHeart": {
+   "file": "assets/art/auras/CoralHeart.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://95864006471846",
+   "used_by": [],
+   "global": false
+  },
+  "auras/FrostPearl": {
+   "file": "assets/art/auras/FrostPearl.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://122301753690134",
+   "used_by": [],
+   "global": false
+  },
+  "auras/KelpWhisper": {
+   "file": "assets/art/auras/KelpWhisper.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://126775459169763",
+   "used_by": [],
+   "global": false
+  },
+  "auras/LotusNaga": {
+   "file": "assets/art/auras/LotusNaga.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://139427589650914",
+   "used_by": [],
+   "global": false
+  },
+  "auras/MoonlitRipple": {
+   "file": "assets/art/auras/MoonlitRipple.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://124320713088100",
+   "used_by": [],
+   "global": false
+  },
+  "auras/NebulaKoi": {
+   "file": "assets/art/auras/NebulaKoi.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://82159023452639",
+   "used_by": [],
+   "global": false
+  },
+  "auras/StormCurrent": {
+   "file": "assets/art/auras/StormCurrent.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://98940328463221",
+   "used_by": [],
+   "global": false
+  },
+  "auras/TidalBloom": {
+   "file": "assets/art/auras/TidalBloom.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://94294938499044",
+   "used_by": [],
+   "global": false
+  },
+  "equipment/AbyssLine": {
+   "file": "assets/art/equipment/AbyssLine.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://111048477004437",
+   "used_by": [],
+   "global": false
+  },
+  "equipment/AbyssRod": {
+   "file": "assets/art/equipment/AbyssRod.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://103331589923894",
+   "used_by": [],
+   "global": false
+  },
+  "equipment/BottomlessBag": {
+   "file": "assets/art/equipment/BottomlessBag.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://86466687555941",
+   "used_by": [],
+   "global": false
+  },
+  "equipment/CelestialRod": {
+   "file": "assets/art/equipment/CelestialRod.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://89234877402422",
+   "used_by": [],
+   "global": false
+  },
+  "equipment/PearlBait": {
+   "file": "assets/art/equipment/PearlBait.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://91219118544555",
+   "used_by": [],
+   "global": false
+  },
+  "equipment/SquidBait": {
+   "file": "assets/art/equipment/SquidBait.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://112362445656275",
+   "used_by": [],
+   "global": false
+  },
+  "equipment/StarLine": {
+   "file": "assets/art/equipment/StarLine.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://120295117652538",
+   "used_by": [],
+   "global": false
+  },
+  "equipment/StormBait": {
+   "file": "assets/art/equipment/StormBait.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://115931847829916",
+   "used_by": [],
+   "global": false
+  },
+  "equipment/SweetheartRod": {
+   "file": "assets/art/equipment/SweetheartRod.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://137912278870031",
+   "used_by": [],
+   "global": false
+  },
+  "fish/AbyssLeviathan": {
+   "file": "assets/art/fish/AbyssLeviathan.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://120001819983298",
+   "used_by": [],
+   "global": false
+  },
+  "fish/BoneCarp": {
+   "file": "assets/art/fish/BoneCarp.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://138918275647317",
+   "used_by": [],
+   "global": false
+  },
+  "fish/FrostRay": {
+   "file": "assets/art/fish/FrostRay.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://109917018247105",
+   "used_by": [],
+   "global": false
+  },
+  "fish/GloomSprat": {
+   "file": "assets/art/fish/GloomSprat.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://131942492670131",
+   "used_by": [],
+   "global": false
+  },
+  "fish/InkletSquid": {
+   "file": "assets/art/fish/InkletSquid.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://112273937267311",
+   "used_by": [],
+   "global": false
+  },
+  "fish/LanternJellyfish": {
+   "file": "assets/art/fish/LanternJellyfish.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://95567694147617",
+   "used_by": [],
+   "global": false
+  },
+  "fish/PearlNautilus": {
+   "file": "assets/art/fish/PearlNautilus.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://106831064774513",
+   "used_by": [],
+   "global": false
+  },
+  "fish/StarlightEel": {
+   "file": "assets/art/fish/StarlightEel.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://79075263771591",
+   "used_by": [],
+   "global": false
+  },
+  "fish/VoidKoi": {
+   "file": "assets/art/fish/VoidKoi.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://82343824354265",
+   "used_by": [],
+   "global": false
+  },
+  "materials/abyss_scale": {
+   "file": "assets/art/materials/abyss_scale.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://111862215188545",
+   "used_by": [],
+   "global": false
+  },
+  "materials/coral_shard": {
+   "file": "assets/art/materials/coral_shard.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://121497027875847",
+   "used_by": [],
+   "global": false
+  },
+  "materials/enhance_stone": {
+   "file": "assets/art/materials/enhance_stone.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://126206904439147",
+   "used_by": [],
+   "global": false
+  },
+  "materials/glow_ink": {
+   "file": "assets/art/materials/glow_ink.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://121111321880089",
+   "used_by": [],
+   "global": false
+  },
+  "materials/kelp_fiber": {
+   "file": "assets/art/materials/kelp_fiber.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://74294105867300",
+   "used_by": [],
+   "global": false
+  },
+  "materials/moon_pearl": {
+   "file": "assets/art/materials/moon_pearl.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://80367824600967",
+   "used_by": [],
+   "global": false
+  },
+  "materials/naga_scale": {
+   "file": "assets/art/materials/naga_scale.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://104164916443126",
+   "used_by": [],
+   "global": false
+  },
+  "materials/star_shard": {
+   "file": "assets/art/materials/star_shard.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://84229375598183",
+   "used_by": [],
+   "global": false
+  },
+  "materials/void_essence": {
+   "file": "assets/art/materials/void_essence.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://84313909648521",
+   "used_by": [],
+   "global": false
+  },
+  "ui/icons/aquarium": {
+   "file": "assets/art/ui/icons/aquarium.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://129621406227196",
+   "used_by": [],
+   "global": false
+  },
+  "ui/icons/auto_pro": {
+   "file": "assets/art/ui/icons/auto_pro.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://120481854227705",
+   "used_by": [],
+   "global": false
+  },
+  "ui/icons/daily_login": {
+   "file": "assets/art/ui/icons/daily_login.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://125819130710547",
+   "used_by": [],
+   "global": false
+  },
+  "ui/icons/extra_cast": {
+   "file": "assets/art/ui/icons/extra_cast.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://109223403444887",
+   "used_by": [],
+   "global": false
+  },
+  "ui/icons/infinite_bag": {
+   "file": "assets/art/ui/icons/infinite_bag.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://93446992430984",
+   "used_by": [],
+   "global": false
+  },
+  "ui/icons/mastery": {
+   "file": "assets/art/ui/icons/mastery.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://82114092244647",
+   "used_by": [],
+   "global": false
+  },
+  "ui/icons/starter_pack": {
+   "file": "assets/art/ui/icons/starter_pack.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://124699237127115",
+   "used_by": [],
+   "global": false
+  },
+  "ui/icons/store": {
+   "file": "assets/art/ui/icons/store.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://125871154574560",
+   "used_by": [],
+   "global": false
+  },
+  "ui/icons/vip": {
+   "file": "assets/art/ui/icons/vip.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://134714373832645",
+   "used_by": [],
+   "global": false
+  },
+  "ui/shop/boost_coins": {
+   "file": "assets/art/ui/shop/boost_coins.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://78105027231074",
+   "used_by": [],
+   "global": false
+  },
+  "ui/shop/boost_pearls": {
+   "file": "assets/art/ui/shop/boost_pearls.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://119168893434742",
+   "used_by": [],
+   "global": false
+  },
+  "ui/shop/coins_l": {
+   "file": "assets/art/ui/shop/coins_l.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://106908475427997",
+   "used_by": [],
+   "global": false
+  },
+  "ui/shop/coins_m": {
+   "file": "assets/art/ui/shop/coins_m.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://132598879122363",
+   "used_by": [],
+   "global": false
+  },
+  "ui/shop/coins_s": {
+   "file": "assets/art/ui/shop/coins_s.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://82487754022337",
+   "used_by": [],
+   "global": false
+  },
+  "ui/shop/gems_l": {
+   "file": "assets/art/ui/shop/gems_l.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://106984420622495",
+   "used_by": [],
+   "global": false
+  },
+  "ui/shop/gems_m": {
+   "file": "assets/art/ui/shop/gems_m.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://83091714623954",
+   "used_by": [],
+   "global": false
+  },
+  "ui/shop/gems_s": {
+   "file": "assets/art/ui/shop/gems_s.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://87565621580303",
+   "used_by": [],
+   "global": false
+  },
+  "ui/shop/starter_bundle": {
+   "file": "assets/art/ui/shop/starter_bundle.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://140598883325252",
+   "used_by": [],
+   "global": false
+  },
+  "ui/status/boost": {
+   "file": "assets/art/ui/status/boost.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://96737273384927",
+   "used_by": [],
+   "global": false
+  },
+  "ui/status/enhance": {
+   "file": "assets/art/ui/status/enhance.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://129624551601311",
+   "used_by": [],
+   "global": false
+  },
+  "ui/status/hot_price": {
+   "file": "assets/art/ui/status/hot_price.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://87880540593517",
+   "used_by": [],
+   "global": false
+  },
+  "ui/status/hot_streak": {
+   "file": "assets/art/ui/status/hot_streak.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://136669371379635",
+   "used_by": [],
+   "global": false
+  },
+  "ui/status/mastery_up": {
+   "file": "assets/art/ui/status/mastery_up.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://136151837590016",
+   "used_by": [],
+   "global": false
+  },
+  "ui/status/offline_reward": {
+   "file": "assets/art/ui/status/offline_reward.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://108000191700751",
+   "used_by": [],
+   "global": false
+  },
+  "ui/status/pearl": {
+   "file": "assets/art/ui/status/pearl.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://125835772165609",
+   "used_by": [],
+   "global": false
+  },
+  "ui/status/pearl_pile": {
+   "file": "assets/art/ui/status/pearl_pile.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://84438324027547",
+   "used_by": [],
+   "global": false
+  },
+  "ui/status/star_token": {
+   "file": "assets/art/ui/status/star_token.png",
+   "sheet": "",
+   "desc": "",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://107429916411400",
+   "used_by": [],
+   "global": false
+  },
+  "ui/tabs/all": {
+   "file": "assets/art/ui/tabs/all.png",
+   "sheet": "17_inventory_tabs",
+   "desc": "a small cozy wooden treasure crate overflowing with a fish, a coin and a little orb, all four items tiny and simple",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://116267946346537",
+   "used_by": [],
+   "global": false
+  },
+  "ui/tabs/fish": {
+   "file": "assets/art/ui/tabs/fish.png",
+   "sheet": "17_inventory_tabs",
+   "desc": "a single plump sky-blue cartoon fish facing left with a tiny coral fin",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://106968735709829",
+   "used_by": [],
+   "global": false
+  },
+  "ui/tabs/rods": {
+   "file": "assets/art/ui/tabs/rods.png",
+   "sheet": "17_inventory_tabs",
+   "desc": "a short chunky fishing rod drawn diagonally with a gold reel and a curled line",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://97393402359668",
+   "used_by": [],
+   "global": false
+  },
+  "ui/tabs/lines": {
+   "file": "assets/art/ui/tabs/lines.png",
+   "sheet": "17_inventory_tabs",
+   "desc": "a round spool of mint fishing line with the loose end curling out",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://139620615902154",
+   "used_by": [],
+   "global": false
+  },
+  "ui/tabs/auras": {
+   "file": "assets/art/ui/tabs/auras.png",
+   "sheet": "17_inventory_tabs",
+   "desc": "a glowing lavender magic orb with a small sparkle star inside",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://118317270139052",
+   "used_by": [],
+   "global": false
+  },
+  "ui/tabs/baits": {
+   "file": "assets/art/ui/tabs/baits.png",
+   "sheet": "17_inventory_tabs",
+   "desc": "a small cream tin of bait with a pink worm peeking over the rim",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://133468136562342",
+   "used_by": [],
+   "global": false
+  },
+  "ui/tabs/treasure": {
+   "file": "assets/art/ui/tabs/treasure.png",
+   "sheet": "17_inventory_tabs",
+   "desc": "a small coral treasure chest with gold trim, lid slightly open with a soft glow",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://101433519565273",
+   "used_by": [],
+   "global": false
+  },
+  "ui/tabs/materials": {
+   "file": "assets/art/ui/tabs/materials.png",
+   "sheet": "17_inventory_tabs",
+   "desc": "three stacked crafting materials: a sky-blue crystal shard, a mint fish scale and a small pearl",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://115697344378647",
+   "used_by": [],
+   "global": false
+  },
+  "ui/tabs/bag_upgrade": {
+   "file": "assets/art/ui/tabs/bag_upgrade.png",
+   "sheet": "17_inventory_tabs",
+   "desc": "a plump gold fishing satchel with a big mint up-arrow badge on its front",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://74086300395911",
+   "used_by": [],
+   "global": false
+  },
+  "ui/mastery/luck": {
+   "file": "assets/art/ui/mastery/luck.png",
+   "sheet": "18_mastery_icons",
+   "desc": "a lucky mint four-leaf clover with a tiny gold sparkle",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://112173245519914",
+   "used_by": [],
+   "global": false
+  },
+  "ui/mastery/catch_bar": {
+   "file": "assets/art/ui/mastery/catch_bar.png",
+   "sheet": "18_mastery_icons",
+   "desc": "a short vertical glass tube gauge with a glowing mint bar segment inside and a tiny fish silhouette",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://98000295154829",
+   "used_by": [],
+   "global": false
+  },
+  "ui/mastery/reel_power": {
+   "file": "assets/art/ui/mastery/reel_power.png",
+   "sheet": "18_mastery_icons",
+   "desc": "a chunky gold fishing reel with a small coral handle and motion swoosh",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://79479723853886",
+   "used_by": [],
+   "global": false
+  },
+  "ui/mastery/auto_wait": {
+   "file": "assets/art/ui/mastery/auto_wait.png",
+   "sheet": "18_mastery_icons",
+   "desc": "a round sky-blue stopwatch with a small fish-shaped hand and a mint fast-forward arrow",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://76906645693015",
+   "used_by": [],
+   "global": false
+  },
+  "ui/mastery/pearl_rate": {
+   "file": "assets/art/ui/mastery/pearl_rate.png",
+   "sheet": "18_mastery_icons",
+   "desc": "a pink-white glossy pearl resting in a small open lavender clam with an up sparkle",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://135685859133288",
+   "used_by": [],
+   "global": false
+  },
+  "ui/mastery/offline_cap": {
+   "file": "assets/art/ui/mastery/offline_cap.png",
+   "sheet": "18_mastery_icons",
+   "desc": "a cozy crescent moon with a small sleeping fishing bobber hanging from it",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://102659335161414",
+   "used_by": [],
+   "global": false
+  },
+  "ui/mastery/sell_mult": {
+   "file": "assets/art/ui/mastery/sell_mult.png",
+   "sheet": "18_mastery_icons",
+   "desc": "a small cream coin pouch with a gold coin and a coral x2 shaped ribbon tag (no readable text, just a ribbon)",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://116083347296392",
+   "used_by": [],
+   "global": false
+  },
+  "ui/mastery/locked": {
+   "file": "assets/art/ui/mastery/locked.png",
+   "sheet": "18_mastery_icons",
+   "desc": "a soft slate-grey rounded padlock with a small mint keyhole glow",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://112685257674398",
+   "used_by": [],
+   "global": false
+  },
+  "ui/mastery/total_level": {
+   "file": "assets/art/ui/mastery/total_level.png",
+   "sheet": "18_mastery_icons",
+   "desc": "a gold star medal with a lavender ribbon and a small up-arrow on the star",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://71040290363796",
+   "used_by": [],
+   "global": false
+  },
+  "ui/gacha_bg_celestial": {
+   "file": "assets/art/ui/gacha_bg_celestial.png",
+   "sheet": "",
+   "desc": "gacha page background",
+   "size": [
+    1440,
+    900
+   ],
+   "rbxassetid": "rbxassetid://95015057000687",
+   "used_by": [
+    "GachaPage"
+   ],
+   "global": false
+  },
+  "ui/gacha_bg_cosmic": {
+   "file": "assets/art/ui/gacha_bg_cosmic.png",
+   "sheet": "",
+   "desc": "gacha page background",
+   "size": [
+    1440,
+    900
+   ],
+   "rbxassetid": "rbxassetid://125522017053990",
+   "used_by": [
+    "GachaPage"
+   ],
+   "global": false
+  },
+  "ui/gacha_bg_cozy": {
+   "file": "assets/art/ui/gacha_bg_cozy.png",
+   "sheet": "",
+   "desc": "gacha page background",
+   "size": [
+    1440,
+    900
+   ],
+   "rbxassetid": null,
+   "used_by": [
+    "GachaPage"
+   ],
+   "global": false
+  },
+  "auras_Art/AbyssalShadow": {
+   "file": "assets/art/auras_Art/AbyssalShadow.png",
+   "sheet": "",
+   "desc": "big aura illustration (gacha hero), NOT the orb icon",
+   "size": [
+    1254,
+    1254
+   ],
+   "rbxassetid": "rbxassetid://122339939840558",
+   "used_by": [
+    "GachaPage"
+   ],
+   "global": false
+  },
+  "auras_Art/CelestialLeviathan": {
+   "file": "assets/art/auras_Art/CelestialLeviathan.png",
+   "sheet": "",
+   "desc": "big aura illustration (gacha hero), NOT the orb icon",
+   "size": [
+    1254,
+    1254
+   ],
+   "rbxassetid": "rbxassetid://131203919186078",
+   "used_by": [
+    "GachaPage"
+   ],
+   "global": false
+  },
+  "auras_Art/DragonEmperor": {
+   "file": "assets/art/auras_Art/DragonEmperor.png",
+   "sheet": "",
+   "desc": "big aura illustration (gacha hero), NOT the orb icon",
+   "size": [
+    1254,
+    1254
+   ],
+   "rbxassetid": "rbxassetid://130553436455947",
+   "used_by": [
+    "GachaPage"
+   ],
+   "global": false
+  },
+  "auras_Art/LotusNaga": {
+   "file": "assets/art/auras_Art/LotusNaga.png",
+   "sheet": "",
+   "desc": "big aura illustration (gacha hero), NOT the orb icon",
+   "size": [
+    1254,
+    1254
+   ],
+   "rbxassetid": "rbxassetid://105835690848474",
+   "used_by": [
+    "GachaPage"
+   ],
+   "global": false
+  },
+  "auras_Art/NebulaKoi": {
+   "file": "assets/art/auras_Art/NebulaKoi.png",
+   "sheet": "",
+   "desc": "big aura illustration (gacha hero), NOT the orb icon",
+   "size": [
+    1254,
+    1254
+   ],
+   "rbxassetid": "rbxassetid://96977226060655",
+   "used_by": [
+    "GachaPage"
+   ],
+   "global": false
+  },
+  "auras_Art/SerpentOfTheVoid": {
+   "file": "assets/art/auras_Art/SerpentOfTheVoid.png",
+   "sheet": "",
+   "desc": "big aura illustration (gacha hero), NOT the orb icon",
+   "size": [
+    1254,
+    1254
+   ],
+   "rbxassetid": "rbxassetid://132498990416202",
+   "used_by": [
+    "GachaPage"
+   ],
+   "global": false
+  },
+  "ui/icons/hook_cast": {
+   "file": "assets/art/ui/icons/hook_cast.png",
+   "sheet": "",
+   "desc": "CAST button hook charm (Figma HUD 3760:5762)",
+   "size": [
+    480,
+    480
+   ],
+   "rbxassetid": "rbxassetid://111371126675038",
+   "used_by": [],
+   "global": false
+  },
+  "ui/icons/reel_in": {
+   "file": "assets/art/ui/icons/reel_in.png",
+   "sheet": "",
+   "desc": "CAST button: REEL IN state (hook with water splash)",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://76400978628676",
+   "used_by": [],
+   "global": false
+  },
+  "ui/icons/hook_catch": {
+   "file": "assets/art/ui/icons/hook_catch.png",
+   "sheet": "",
+   "desc": "CAST button: HOOK! state (hook with golden flash)",
+   "size": [
+    512,
+    512
+   ],
+   "rbxassetid": "rbxassetid://108973559278048",
+   "used_by": [],
+   "global": false
+  },
+  "auras/fx_ring": {
+   "file": "assets/art/auras/fx_ring.png",
+   "sheet": "",
+   "desc": "Eclipse rim / shockwave ring: 5px stroke with glow, exported from Figma 3717:1434, white so it can be tinted",
+   "size": [
+    1024,
+    1024
+   ],
+   "rbxassetid": "rbxassetid://133919159070204",
+   "used_by": [],
+   "global": false
+  }
+ },
+ "components": {
+  "3487:4298": {
+   "name": "Button",
+   "type": "COMPONENT_SET",
+   "variants": [
+    "Style=Primary",
+    "Style=Secondary",
+    "Style=Success",
+    "Style=Gold",
+    "Style=Gem",
+    "Style=Ghost",
+    "Style=Danger"
+   ],
+   "board": "Components board"
+  },
+  "3487:4313": {
+   "name": "Chip",
+   "type": "COMPONENT_SET",
+   "variants": [
+    "Type=Coins",
+    "Type=Gems",
+    "Type=Level",
+    "Type=Bag"
+   ],
+   "board": "Components board"
+  },
+  "3487:4328": {
+   "name": "Rarity Tag",
+   "type": "COMPONENT_SET",
+   "variants": [
+    "Rarity=Common",
+    "Rarity=Uncommon",
+    "Rarity=Rare",
+    "Rarity=Epic",
+    "Rarity=Legendary",
+    "Rarity=Mythic"
+   ],
+   "board": "Components board"
+  },
+  "3487:4331": {
+   "name": "Progress Bar",
+   "type": "COMPONENT",
+   "variants": [],
+   "board": "Components board"
+  },
+  "3487:4333": {
+   "name": "Catch Card",
+   "type": "COMPONENT",
+   "variants": [],
+   "board": "Components board"
+  },
+  "3487:4339": {
+   "name": "Shop Row",
+   "type": "COMPONENT",
+   "variants": [],
+   "board": "Components board"
+  },
+  "3491:10583": {
+   "name": "Item Slot",
+   "type": "COMPONENT_SET",
+   "variants": [
+    "Rarity=Common, State=Normal",
+    "Rarity=Uncommon, State=Normal",
+    "Rarity=Rare, State=Normal",
+    "Rarity=Epic, State=Normal",
+    "Rarity=Legendary, State=Normal",
+    "Rarity=Mythic, State=Normal",
+    "Rarity=Bait, State=Normal",
+    "Rarity=Rare, State=Selected",
+    "Rarity=Rare, State=New",
+    "Rarity=Rare, State=Locked",
+    "Rarity=None, State=Empty"
+   ],
+   "board": "Components board"
+  },
+  "3491:14275": {
+   "name": "HUD Stats",
+   "type": "COMPONENT_SET",
+   "variants": [
+    "Style=A Classic Card",
+    "Style=B Level Badge",
+    "Style=C Top Bar Strip",
+    "Style=D Avatar Card",
+    "Style=E Minimal Floating",
+    "Style=F Aura Spotlight"
+   ],
+   "board": "Components board"
+  },
+  "3492:21453": {
+   "name": "Aura Card",
+   "type": "COMPONENT_SET",
+   "variants": [
+    "Size=Large, Rarity=Common",
+    "Size=Large, Rarity=Rare",
+    "Size=Large, Rarity=Epic",
+    "Size=Large, Rarity=Legendary",
+    "Size=Large, Rarity=Mythic",
+    "Size=Row, Rarity=Common",
+    "Size=Row, Rarity=Rare",
+    "Size=Row, Rarity=Epic",
+    "Size=Row, Rarity=Legendary",
+    "Size=Row, Rarity=Mythic",
+    "Size=Compact, Rarity=Common",
+    "Size=Compact, Rarity=Rare",
+    "Size=Compact, Rarity=Epic",
+    "Size=Compact, Rarity=Legendary",
+    "Size=Compact, Rarity=Mythic"
+   ],
+   "board": "Components board"
+  },
+  "3492:20553": {
+   "name": "Gacha / Reel Machine",
+   "type": "COMPONENT",
+   "variants": [],
+   "board": "Aura Gacha — Reel Slot (FINAL)"
+  },
+  "3492:20563": {
+   "name": "Gacha / Pity",
+   "type": "COMPONENT",
+   "variants": [],
+   "board": "Aura Gacha — Reel Slot (FINAL)"
+  },
+  "3492:20571": {
+   "name": "Gacha / Roll Bar",
+   "type": "COMPONENT",
+   "variants": [],
+   "board": "Aura Gacha — Reel Slot (FINAL)"
+  },
+  "3492:20594": {
+   "name": "Gacha / Reveal Card",
+   "type": "COMPONENT",
+   "variants": [],
+   "board": "Aura Gacha — Reel Slot (FINAL)"
+  },
+  "3492:20616": {
+   "name": "Gacha / Rates",
+   "type": "COMPONENT",
+   "variants": [],
+   "board": "Aura Gacha — Reel Slot (FINAL)"
+  }
+ },
+ "code_drawn": {
+  "Ring Track": "Ring Reel ring (FishingController, 72 dots)",
+  "Progress Donut": "Ring Reel progress (48 dots)",
+  "XP Ring": "HUD Stats style B only (not used)"
+ },
+ "unmapped_vectors": {}
+}

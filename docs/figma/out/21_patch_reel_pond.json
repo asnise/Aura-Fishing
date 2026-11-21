@@ -1,0 +1,277 @@
+[
+ {
+  "replaceId": "3492:16781",
+  "tree": {
+   "name": "Reel Minigame",
+   "layout": "V",
+   "gap": 10,
+   "pad": 16,
+   "x": 524,
+   "y": 110,
+   "radius": 26,
+   "fill": {
+    "var": "cozy/panel"
+   },
+   "stroke": {
+    "var": "cozy/track"
+   },
+   "strokeW": 2,
+   "effects": [
+    {
+     "color": "3D4B5C",
+     "a": 0.1,
+     "y": 6,
+     "blur": 18
+    }
+   ],
+   "children": [
+    {
+     "name": "Header",
+     "layout": "H",
+     "gap": 8,
+     "cross": "CENTER",
+     "children": [
+      {
+       "type": "INSTANCE",
+       "ref": "3487:4328",
+       "variant": "Rarity=Rare",
+       "name": "Tag Rare"
+      },
+      {
+       "name": "Depth",
+       "layout": "H",
+       "pad": [
+        3,
+        10,
+        3,
+        10
+       ],
+       "radius": 999,
+       "fill": {
+        "var": "cozy/sky"
+       },
+       "children": [
+        {
+         "type": "TEXT",
+         "text": "120m",
+         "textStyle": "Aura Fishing/Caption",
+         "color": {
+          "var": "cozy/on-accent"
+         },
+         "name": "Label"
+        }
+       ]
+      },
+      {
+       "type": "TEXT",
+       "text": "0:12",
+       "textStyle": "Aura Fishing/Heading",
+       "color": {
+        "var": "cozy/subtext"
+       },
+       "name": "Timer"
+      }
+     ]
+    },
+    {
+     "name": "Body",
+     "layout": "H",
+     "gap": 14,
+     "children": [
+      {
+       "name": "Water",
+       "w": 130,
+       "h": 286,
+       "radius": 18,
+       "clip": true,
+       "fill": {
+        "grad": [
+         "BEE6FA",
+         "4C8FC7"
+        ],
+        "angle": 90
+       },
+       "children": [
+        {
+         "type": "RECT",
+         "name": "Img fish/deco_bubbles",
+         "w": 44,
+         "h": 44,
+         "x": 80,
+         "y": 10
+        },
+        {
+         "type": "RECT",
+         "name": "Img fish/deco_seaweed",
+         "w": 70,
+         "h": 70,
+         "x": -6,
+         "y": 220
+        },
+        {
+         "type": "RECT",
+         "name": "Img fish/deco_seaweed",
+         "w": 54,
+         "h": 54,
+         "x": 88,
+         "y": 236
+        },
+        {
+         "name": "Catch Bar",
+         "w": 130,
+         "h": 84,
+         "x": 0,
+         "y": 118,
+         "radius": 16,
+         "fill": {
+          "hex": "7FD3B0",
+          "opacity": 0.8
+         },
+         "stroke": "FFFFFF",
+         "strokeW": 3
+        },
+        {
+         "type": "RECT",
+         "name": "Img fish/MysteryFish",
+         "w": 58,
+         "h": 58,
+         "x": 36,
+         "y": 131
+        }
+       ]
+      },
+      {
+       "name": "Line Meter",
+       "layout": "V",
+       "gap": 6,
+       "cross": "CENTER",
+       "children": [
+        {
+         "type": "TEXT",
+         "text": "REEL",
+         "textStyle": "Aura Fishing/Caption",
+         "color": {
+          "var": "cozy/subtext"
+         },
+         "name": "Label"
+        },
+        {
+         "name": "Progress",
+         "w": 26,
+         "h": 254,
+         "radius": 999,
+         "fill": {
+          "var": "cozy/track"
+         },
+         "clip": true,
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Fill",
+           "w": 26,
+           "h": 160,
+           "x": 0,
+           "y": 94,
+           "radius": 999,
+           "fill": {
+            "grad": [
+             "FFD45C",
+             "F2B544"
+            ],
+            "angle": 90
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Img ui/status/bobber",
+           "w": 26,
+           "h": 26,
+           "x": 0,
+           "y": 82
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Tension",
+     "layout": "H",
+     "gap": 6,
+     "children": [
+      {
+       "name": "Tension LOOSE",
+       "layout": "H",
+       "pad": [
+        3,
+        10,
+        3,
+        10
+       ],
+       "radius": 999,
+       "fill": "F3E9D8",
+       "children": [
+        {
+         "type": "TEXT",
+         "text": "LOOSE",
+         "textStyle": "Aura Fishing/Caption",
+         "color": {
+          "var": "cozy/subtext"
+         },
+         "name": "Label"
+        }
+       ]
+      },
+      {
+       "name": "Tension GOOD",
+       "layout": "H",
+       "pad": [
+        3,
+        10,
+        3,
+        10
+       ],
+       "radius": 999,
+       "fill": "7FD3B0",
+       "children": [
+        {
+         "type": "TEXT",
+         "text": "GOOD",
+         "textStyle": "Aura Fishing/Caption",
+         "color": {
+          "var": "cozy/on-accent"
+         },
+         "name": "Label"
+        }
+       ]
+      },
+      {
+       "name": "Tension SNAP!",
+       "layout": "H",
+       "pad": [
+        3,
+        10,
+        3,
+        10
+       ],
+       "radius": 999,
+       "fill": "FBE0DD",
+       "children": [
+        {
+         "type": "TEXT",
+         "text": "SNAP!",
+         "textStyle": "Aura Fishing/Caption",
+         "color": {
+          "var": "cozy/danger-lip"
+         },
+         "name": "Label"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+]

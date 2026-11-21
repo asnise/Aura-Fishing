@@ -1,0 +1,38 @@
+﻿Fishing Loop - catches and income per hour,,,,,,,
+"Estimates, not a simulation. Links to the Stats Calculator (Luck, speeds, multipliers) and Fish Odds (depth, expected value). Change the yellow assumptions.",,,,,,,
+Stats (linked to Stats Calculator),,,Assumptions (inputs),,,,
+Luck,4,,Perfect cast share (0-1),,,,0.5
+BiteSpeed,0,,Reaction time to '!' (sec),,,,1
+AutoSpeed,0.45,,Reel minigame time (sec),,,,8
+AutoMultiplier,1.2,,Share of manual catches that are 'perfect' (never left the bar),,,,0.4
+SellMultiplier,1,,Average Hot Streak count while fishing,,,,5
+XPMultiplier,1,,2x Coins boost active (1 = yes),,,,0
+,,,Average XP per catch before multipliers (see Rarities),,,,25
+,,,,,,,
+Manual fishing,,,,,,,
+"Bite wait (avg, sec)",3.6125,,,,,,
+Seconds per catch,13.5625,,,,,,
+Catches per hour,265.437788,,,,,,
+Coin multiplier per catch (avg),2,,,,,,
+Coins per hour (before hot fish),203860.428993,,,,,,
+Gems per hour (catch rewards only),42.541333,,,,,,
+,,,,,,,
+Auto fishing,,,,,,,
+Seconds per catch = AutoCycleTime x (1-AutoSpeed) x (1-BiteSpeed x 0.5),7.7,,,,,,
+Catches per hour,467.532468,,,,,,
+Coins per hour (before hot fish),215443.407913,,,,,,
+Gems per hour (Auto gives 50%),37.465378,,,,,,
+Auto coins as % of Manual,1.056818,,,,,,
+,,,,,,,
+Chests (Treasure Chest),,,,,,,
+Chest drop chance per manual catch = DropChance x (1 + Luck x TreasureLuckScale),0.09,,,,,,
+Chests per hour (manual),23.889401,,,,,,
+Chest reward weights: Coins / Gems / Bait,60 / 25 / 15,,,,,,
+Expected coins per chest,2250,,,,,,
+Expected Gems per chest,1.625,,,,,,
+Chest coins per hour (manual),53751.152074,,,,,,
+,,,,,,,
+XP,,,,,,,
+XP per hour (manual) = catches x XP x XPMultiplier x Manual multiplier,9953.917051,,,,,,
+XP per hour (auto),11688.311688,,,,,,
+Hours of manual fishing to gain one level at level 30,0.501612,,,,,,

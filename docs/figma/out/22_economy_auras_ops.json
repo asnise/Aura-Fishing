@@ -1,0 +1,3350 @@
+[
+ {
+  "pageId": "3465:14993",
+  "replaceName": "Economy · 5 Auras + Gacha (C17)",
+  "tree": {
+   "type": "SECTION",
+   "name": "Economy · 5 Auras + Gacha (C17)",
+   "fill": "F3E9D8",
+   "x": 17000,
+   "y": 7900,
+   "children": [
+    {
+     "type": "TEXT",
+     "text": "Economy UI · 5 — Aura stars + gacha",
+     "textStyle": "Aura Fishing/Display",
+     "color": {
+      "var": "cozy/text"
+     },
+     "name": "Title",
+     "x": 60,
+     "y": 40
+    },
+    {
+     "type": "TEXT",
+     "text": "Stars ★1–5 from Star Tokens, two pity rows, x10 Rare+, real drop rates, G6 tokens.",
+     "textStyle": "Aura Fishing/Body",
+     "color": {
+      "var": "cozy/subtext"
+     },
+     "name": "Sub",
+     "x": 60,
+     "y": 96,
+     "w": 2200
+    },
+    {
+     "name": "Screen C17 · Auras with stars",
+     "layout": "V",
+     "gap": 12,
+     "x": 60,
+     "y": 160,
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "C17 · Auras with stars",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "name": "Auras",
+       "w": 1280,
+       "h": 720,
+       "radius": 0,
+       "clip": true,
+       "children": [
+        {
+         "name": "World [skip]",
+         "w": 1280,
+         "h": 720,
+         "x": 0,
+         "y": 0,
+         "fill": {
+          "grad": [
+           "DDF5EE",
+           "A8DCD8"
+          ],
+          "angle": 90
+         },
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Water",
+           "w": 1280,
+           "h": 300,
+           "x": 0,
+           "y": 420,
+           "fill": {
+            "hex": "9AD4F5",
+            "opacity": 0.35
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Island",
+           "w": 560,
+           "h": 130,
+           "x": 360,
+           "y": 370,
+           "fill": {
+            "hex": "7FD3B0",
+            "opacity": 0.55
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Island Top",
+           "w": 360,
+           "h": 70,
+           "x": 460,
+           "y": 372,
+           "fill": {
+            "hex": "4FAF8A",
+            "opacity": 0.35
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Dim",
+           "w": 1280,
+           "h": 720,
+           "x": 0,
+           "y": 0,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          }
+         ]
+        },
+        {
+         "name": "Window Auras",
+         "layout": "V",
+         "pad": 20,
+         "gap": 14,
+         "w": 760,
+         "h": 610,
+         "x": 260,
+         "y": 70,
+         "radius": 24,
+         "fill": {
+          "var": "cozy/panel"
+         },
+         "stroke": {
+          "var": "cozy/track"
+         },
+         "strokeW": 2,
+         "effects": [
+          {
+           "color": "3D4B5C",
+           "a": 0.1,
+           "y": 6,
+           "blur": 18
+          }
+         ],
+         "children": [
+          {
+           "name": "Header",
+           "layout": "H",
+           "fillW": true,
+           "main": "SPACE_BETWEEN",
+           "cross": "CENTER",
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "Auras",
+             "textStyle": "Aura Fishing/Title",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Title"
+            },
+            {
+             "type": "INSTANCE",
+             "ref": "3487:4298",
+             "variant": "Style=Danger",
+             "texts": {
+              "Label": "X"
+             },
+             "name": "Btn Close"
+            }
+           ]
+          },
+          {
+           "name": "Top",
+           "layout": "H",
+           "gap": 12,
+           "fillW": true,
+           "cross": "CENTER",
+           "children": [
+            {
+             "type": "INSTANCE",
+             "ref": "3487:4298",
+             "variant": "Style=Gem",
+             "texts": {
+              "Label": "OPEN ALTAR"
+             },
+             "name": "Btn Altar",
+             "fillW": true
+            },
+            {
+             "name": "Star Tokens",
+             "layout": "H",
+             "gap": 8,
+             "pad": [
+              6,
+              16,
+              6,
+              8
+             ],
+             "cross": "CENTER",
+             "radius": 999,
+             "fill": {
+              "var": "cozy/panel"
+             },
+             "stroke": {
+              "var": "cozy/track"
+             },
+             "strokeW": 2,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/status/star_token",
+               "w": 24,
+               "h": 24
+              },
+              {
+               "type": "TEXT",
+               "text": "7",
+               "textStyle": "Aura Fishing/Number",
+               "color": {
+                "var": "cozy/text"
+               },
+               "name": "Value"
+              }
+             ]
+            },
+            {
+             "type": "INSTANCE",
+             "ref": "3487:4298",
+             "variant": "Style=Ghost",
+             "texts": {
+              "Label": "Low FX: OFF"
+             },
+             "name": "Btn LowFX"
+            }
+           ]
+          },
+          {
+           "name": "List",
+           "layout": "V",
+           "gap": 10,
+           "fillW": true,
+           "children": [
+            {
+             "name": "Row Neon Wave",
+             "layout": "H",
+             "pad": 12,
+             "gap": 12,
+             "cross": "CENTER",
+             "radius": 16,
+             "h": 80,
+             "fill": {
+              "var": "cozy/sand"
+             },
+             "fillW": true,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img auras/NeonWave",
+               "w": 56,
+               "h": 56
+              },
+              {
+               "name": "Text",
+               "layout": "V",
+               "gap": 2,
+               "fillW": true,
+               "children": [
+                {
+                 "name": "Line",
+                 "layout": "H",
+                 "gap": 8,
+                 "cross": "CENTER",
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "Neon Wave",
+                   "textStyle": "Aura Fishing/Heading",
+                   "color": {
+                    "var": "cozy/rarity/rare"
+                   },
+                   "name": "Title"
+                  },
+                  {
+                   "name": "Stars 3",
+                   "layout": "H",
+                   "gap": 2,
+                   "children": [
+                    {
+                     "type": "SVG",
+                     "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#F2B544\"/></svg>",
+                     "w": 16,
+                     "h": 16,
+                     "name": "icon_star"
+                    },
+                    {
+                     "type": "SVG",
+                     "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#F2B544\"/></svg>",
+                     "w": 16,
+                     "h": 16,
+                     "name": "icon_star"
+                    },
+                    {
+                     "type": "SVG",
+                     "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#F2B544\"/></svg>",
+                     "w": 16,
+                     "h": 16,
+                     "name": "icon_star"
+                    },
+                    {
+                     "type": "SVG",
+                     "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#E6DCCB\"/></svg>",
+                     "w": 16,
+                     "h": 16,
+                     "name": "icon_star"
+                    },
+                    {
+                     "type": "SVG",
+                     "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#E6DCCB\"/></svg>",
+                     "w": 16,
+                     "h": 16,
+                     "name": "icon_star"
+                    }
+                   ]
+                  },
+                  {
+                   "type": "TEXT",
+                   "text": "9%",
+                   "textStyle": "Aura Fishing/Caption",
+                   "color": {
+                    "var": "cozy/subtext"
+                   },
+                   "name": "Chance"
+                  }
+                 ]
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+15% Luck ×1.6 (★3) • equipped",
+                 "textStyle": "Aura Fishing/Small",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Sub"
+                }
+               ]
+              },
+              {
+               "name": "Btn Star Up",
+               "layout": "V",
+               "gap": 2,
+               "pad": [
+                7,
+                10,
+                10,
+                10
+               ],
+               "radius": 16,
+               "cross": "CENTER",
+               "main": "CENTER",
+               "fill": {
+                "var": "cozy/gold"
+               },
+               "stroke": {
+                "var": "cozy/gold-lip"
+               },
+               "strokeSides": {
+                "b": 5
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "STAR UP",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 15,
+                 "color": "FFFFFF",
+                 "name": "Label"
+                },
+                {
+                 "name": "Cost",
+                 "layout": "H",
+                 "gap": 4,
+                 "cross": "CENTER",
+                 "children": [
+                  {
+                   "type": "RECT",
+                   "name": "Img ui/status/star_token",
+                   "w": 16,
+                   "h": 16
+                  },
+                  {
+                   "type": "TEXT",
+                   "text": "3",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 14,
+                   "color": "FFFFFF",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ],
+               "w": 110
+              }
+             ]
+            },
+            {
+             "name": "Row Sparkling Dew",
+             "layout": "H",
+             "pad": 12,
+             "gap": 12,
+             "cross": "CENTER",
+             "radius": 16,
+             "h": 80,
+             "fill": {
+              "var": "cozy/sand"
+             },
+             "fillW": true,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img auras/SparklingDew",
+               "w": 56,
+               "h": 56
+              },
+              {
+               "name": "Text",
+               "layout": "V",
+               "gap": 2,
+               "fillW": true,
+               "children": [
+                {
+                 "name": "Line",
+                 "layout": "H",
+                 "gap": 8,
+                 "cross": "CENTER",
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "Sparkling Dew",
+                   "textStyle": "Aura Fishing/Heading",
+                   "color": {
+                    "var": "cozy/rarity/common"
+                   },
+                   "name": "Title"
+                  },
+                  {
+                   "name": "Stars 5",
+                   "layout": "H",
+                   "gap": 2,
+                   "children": [
+                    {
+                     "type": "SVG",
+                     "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#F2B544\"/></svg>",
+                     "w": 16,
+                     "h": 16,
+                     "name": "icon_star"
+                    },
+                    {
+                     "type": "SVG",
+                     "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#F2B544\"/></svg>",
+                     "w": 16,
+                     "h": 16,
+                     "name": "icon_star"
+                    },
+                    {
+                     "type": "SVG",
+                     "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#F2B544\"/></svg>",
+                     "w": 16,
+                     "h": 16,
+                     "name": "icon_star"
+                    },
+                    {
+                     "type": "SVG",
+                     "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#F2B544\"/></svg>",
+                     "w": 16,
+                     "h": 16,
+                     "name": "icon_star"
+                    },
+                    {
+                     "type": "SVG",
+                     "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#F2B544\"/></svg>",
+                     "w": 16,
+                     "h": 16,
+                     "name": "icon_star"
+                    }
+                   ]
+                  },
+                  {
+                   "type": "TEXT",
+                   "text": "89.6%",
+                   "textStyle": "Aura Fishing/Caption",
+                   "color": {
+                    "var": "cozy/subtext"
+                   },
+                   "name": "Chance"
+                  }
+                 ]
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+5% Luck ×2.0 (★5)",
+                 "textStyle": "Aura Fishing/Small",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Sub"
+                }
+               ]
+              },
+              {
+               "name": "Btn Max",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                8,
+                14,
+                11,
+                14
+               ],
+               "radius": 16,
+               "cross": "CENTER",
+               "main": "CENTER",
+               "fill": {
+                "var": "cozy/sand"
+               },
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeSides": {
+                "b": 5
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "MAX",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 16,
+                 "color": "9AA5B1",
+                 "name": "Value"
+                }
+               ],
+               "w": 110
+              }
+             ]
+            },
+            {
+             "name": "Row Solar Flare",
+             "layout": "H",
+             "pad": 12,
+             "gap": 12,
+             "cross": "CENTER",
+             "radius": 16,
+             "h": 80,
+             "fill": {
+              "var": "cozy/sand"
+             },
+             "fillW": true,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img auras/SolarFlare",
+               "w": 56,
+               "h": 56
+              },
+              {
+               "name": "Text",
+               "layout": "V",
+               "gap": 2,
+               "fillW": true,
+               "children": [
+                {
+                 "name": "Line",
+                 "layout": "H",
+                 "gap": 8,
+                 "cross": "CENTER",
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "Solar Flare",
+                   "textStyle": "Aura Fishing/Heading",
+                   "color": {
+                    "var": "cozy/rarity/epic"
+                   },
+                   "name": "Title"
+                  },
+                  {
+                   "name": "Stars 1",
+                   "layout": "H",
+                   "gap": 2,
+                   "children": [
+                    {
+                     "type": "SVG",
+                     "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#F2B544\"/></svg>",
+                     "w": 16,
+                     "h": 16,
+                     "name": "icon_star"
+                    },
+                    {
+                     "type": "SVG",
+                     "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#E6DCCB\"/></svg>",
+                     "w": 16,
+                     "h": 16,
+                     "name": "icon_star"
+                    },
+                    {
+                     "type": "SVG",
+                     "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#E6DCCB\"/></svg>",
+                     "w": 16,
+                     "h": 16,
+                     "name": "icon_star"
+                    },
+                    {
+                     "type": "SVG",
+                     "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#E6DCCB\"/></svg>",
+                     "w": 16,
+                     "h": 16,
+                     "name": "icon_star"
+                    },
+                    {
+                     "type": "SVG",
+                     "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#E6DCCB\"/></svg>",
+                     "w": 16,
+                     "h": 16,
+                     "name": "icon_star"
+                    }
+                   ]
+                  },
+                  {
+                   "type": "TEXT",
+                   "text": "1.2%",
+                   "textStyle": "Aura Fishing/Caption",
+                   "color": {
+                    "var": "cozy/subtext"
+                   },
+                   "name": "Chance"
+                  }
+                 ]
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+25% Luck • +3% Mutation",
+                 "textStyle": "Aura Fishing/Small",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Sub"
+                }
+               ]
+              },
+              {
+               "name": "Btn Star Up",
+               "layout": "V",
+               "gap": 2,
+               "pad": [
+                7,
+                10,
+                10,
+                10
+               ],
+               "radius": 16,
+               "cross": "CENTER",
+               "main": "CENTER",
+               "fill": {
+                "var": "cozy/sand"
+               },
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeSides": {
+                "b": 5
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "STAR UP",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 15,
+                 "color": "9AA5B1",
+                 "name": "Label"
+                },
+                {
+                 "name": "Cost",
+                 "layout": "H",
+                 "gap": 4,
+                 "cross": "CENTER",
+                 "children": [
+                  {
+                   "type": "RECT",
+                   "name": "Img ui/status/star_token",
+                   "w": 16,
+                   "h": 16
+                  },
+                  {
+                   "type": "TEXT",
+                   "text": "8",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 14,
+                   "color": "9AA5B1",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ],
+               "w": 110
+              }
+             ]
+            },
+            {
+             "name": "Row ???",
+             "layout": "H",
+             "pad": 12,
+             "gap": 12,
+             "cross": "CENTER",
+             "radius": 16,
+             "h": 80,
+             "fill": {
+              "var": "cozy/sand"
+             },
+             "fillW": true,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img auras/UnknownAura",
+               "w": 56,
+               "h": 56
+              },
+              {
+               "name": "Text",
+               "layout": "V",
+               "gap": 2,
+               "fillW": true,
+               "children": [
+                {
+                 "name": "Line",
+                 "layout": "H",
+                 "gap": 8,
+                 "cross": "CENTER",
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "???",
+                   "textStyle": "Aura Fishing/Heading",
+                   "color": {
+                    "var": "cozy/rarity/legendary"
+                   },
+                   "name": "Title"
+                  },
+                  {
+                   "name": "Stars 0",
+                   "layout": "H",
+                   "gap": 2,
+                   "children": [
+                    {
+                     "type": "SVG",
+                     "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#E6DCCB\"/></svg>",
+                     "w": 16,
+                     "h": 16,
+                     "name": "icon_star"
+                    },
+                    {
+                     "type": "SVG",
+                     "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#E6DCCB\"/></svg>",
+                     "w": 16,
+                     "h": 16,
+                     "name": "icon_star"
+                    },
+                    {
+                     "type": "SVG",
+                     "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#E6DCCB\"/></svg>",
+                     "w": 16,
+                     "h": 16,
+                     "name": "icon_star"
+                    },
+                    {
+                     "type": "SVG",
+                     "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#E6DCCB\"/></svg>",
+                     "w": 16,
+                     "h": 16,
+                     "name": "icon_star"
+                    },
+                    {
+                     "type": "SVG",
+                     "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#E6DCCB\"/></svg>",
+                     "w": 16,
+                     "h": 16,
+                     "name": "icon_star"
+                    }
+                   ]
+                  },
+                  {
+                   "type": "TEXT",
+                   "text": "0.18%",
+                   "textStyle": "Aura Fishing/Caption",
+                   "color": {
+                    "var": "cozy/subtext"
+                   },
+                   "name": "Chance"
+                  }
+                 ]
+                },
+                {
+                 "type": "TEXT",
+                 "text": "Not found yet",
+                 "textStyle": "Aura Fishing/Small",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Sub"
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Footer",
+           "layout": "H",
+           "fillW": true,
+           "main": "SPACE_BETWEEN",
+           "cross": "CENTER",
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "Duplicate auras turn into Star Tokens. Each star = +20% stats. Cost per step: Config/AuraStars.",
+             "textStyle": "Aura Fishing/Small",
+             "color": {
+              "var": "cozy/subtext"
+             },
+             "name": "Hint"
+            },
+            {
+             "type": "INSTANCE",
+             "ref": "3487:4313",
+             "variant": "Type=Gems",
+             "texts": {
+              "Value": "320"
+             },
+             "name": "Gems"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "[skip] Roblox CoreGui (guide)",
+         "w": 1280,
+         "h": 720,
+         "x": 0,
+         "y": 0,
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Top Bar",
+           "w": 1280,
+           "h": 58,
+           "x": 0,
+           "y": 0,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Roblox Menu Btn",
+           "w": 44,
+           "h": 44,
+           "x": 12,
+           "y": 7,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Chat Btn",
+           "w": 44,
+           "h": 44,
+           "x": 64,
+           "y": 7,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          },
+          {
+           "type": "TEXT",
+           "text": "ROBLOX TOP BAR (58px)  —  keep clear",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 124,
+           "y": 22
+          },
+          {
+           "type": "RECT",
+           "name": "Chat Window (when open)",
+           "w": 380,
+           "h": 210,
+           "x": 8,
+           "y": 64,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.04
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "CHAT WINDOW (desktop, when open)",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 20,
+           "y": 248
+          },
+          {
+           "type": "RECT",
+           "name": "Leaderboard",
+           "w": 236,
+           "h": 170,
+           "x": 1032,
+           "y": 64,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.06
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "LEADERBOARD (leaderstats)",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 1044,
+           "y": 210
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Mobile Thumbstick",
+           "w": 150,
+           "h": 150,
+           "x": 50,
+           "y": 510,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "MOBILE THUMBSTICK",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 62,
+           "y": 668
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Mobile Jump",
+           "w": 96,
+           "h": 96,
+           "x": 1120,
+           "y": 550,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "MOBILE JUMP",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 1122,
+           "y": 660
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Screen C17 · Rates popup",
+     "layout": "V",
+     "gap": 12,
+     "x": 1400,
+     "y": 160,
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "C17 · Rates popup",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "name": "Rates",
+       "w": 1280,
+       "h": 720,
+       "radius": 0,
+       "clip": true,
+       "children": [
+        {
+         "name": "World [skip]",
+         "w": 1280,
+         "h": 720,
+         "x": 0,
+         "y": 0,
+         "fill": {
+          "grad": [
+           "DDF5EE",
+           "A8DCD8"
+          ],
+          "angle": 90
+         },
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Water",
+           "w": 1280,
+           "h": 300,
+           "x": 0,
+           "y": 420,
+           "fill": {
+            "hex": "9AD4F5",
+            "opacity": 0.35
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Island",
+           "w": 560,
+           "h": 130,
+           "x": 360,
+           "y": 370,
+           "fill": {
+            "hex": "7FD3B0",
+            "opacity": 0.55
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Island Top",
+           "w": 360,
+           "h": 70,
+           "x": 460,
+           "y": 372,
+           "fill": {
+            "hex": "4FAF8A",
+            "opacity": 0.35
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Dim",
+           "w": 1280,
+           "h": 720,
+           "x": 0,
+           "y": 0,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          }
+         ]
+        },
+        {
+         "name": "Rates",
+         "layout": "V",
+         "w": 540,
+         "radius": 36,
+         "clip": true,
+         "fill": {
+          "var": "cozy/panel"
+         },
+         "stroke": {
+          "var": "cozy/track"
+         },
+         "strokeW": 2,
+         "effects": [
+          {
+           "color": "3D4B5C",
+           "a": 0.1,
+           "y": 6,
+           "blur": 18
+          }
+         ],
+         "children": [
+          {
+           "name": "Body",
+           "layout": "V",
+           "gap": 10,
+           "pad": [
+            34,
+            40,
+            26,
+            40
+           ],
+           "fillW": true,
+           "cross": "CENTER",
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "Drop rates",
+             "textStyle": "Aura Fishing/Title",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Title",
+             "align": "CENTER",
+             "w": 460
+            },
+            {
+             "type": "TEXT",
+             "text": "Real chance per roll for this altar. Pity: Legendary every 100, Mythic at 300. x10 guarantees Rare+.",
+             "textStyle": "Aura Fishing/Small",
+             "color": {
+              "var": "cozy/subtext"
+             },
+             "name": "Desc",
+             "align": "CENTER",
+             "w": 460
+            },
+            {
+             "name": "Rate Sparkling Dew",
+             "layout": "H",
+             "gap": 10,
+             "pad": [
+              6,
+              12,
+              6,
+              6
+             ],
+             "radius": 14,
+             "fill": {
+              "var": "cozy/sand"
+             },
+             "w": 460,
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img auras/SparklingDew",
+               "w": 40,
+               "h": 40
+              },
+              {
+               "name": "Text",
+               "layout": "V",
+               "gap": 0,
+               "fillW": true,
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "Sparkling Dew",
+                 "textStyle": "Aura Fishing/Heading",
+                 "color": {
+                  "var": "cozy/text"
+                 },
+                 "name": "Name"
+                },
+                {
+                 "type": "INSTANCE",
+                 "ref": "3487:4328",
+                 "variant": "Rarity=Common",
+                 "name": "Tag Common"
+                }
+               ]
+              },
+              {
+               "name": "Stars 5",
+               "layout": "H",
+               "gap": 2,
+               "children": [
+                {
+                 "type": "SVG",
+                 "svg": "<svg width=\"12\" height=\"12\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#F2B544\"/></svg>",
+                 "w": 12,
+                 "h": 12,
+                 "name": "icon_star"
+                },
+                {
+                 "type": "SVG",
+                 "svg": "<svg width=\"12\" height=\"12\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#F2B544\"/></svg>",
+                 "w": 12,
+                 "h": 12,
+                 "name": "icon_star"
+                },
+                {
+                 "type": "SVG",
+                 "svg": "<svg width=\"12\" height=\"12\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#F2B544\"/></svg>",
+                 "w": 12,
+                 "h": 12,
+                 "name": "icon_star"
+                },
+                {
+                 "type": "SVG",
+                 "svg": "<svg width=\"12\" height=\"12\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#F2B544\"/></svg>",
+                 "w": 12,
+                 "h": 12,
+                 "name": "icon_star"
+                },
+                {
+                 "type": "SVG",
+                 "svg": "<svg width=\"12\" height=\"12\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#F2B544\"/></svg>",
+                 "w": 12,
+                 "h": 12,
+                 "name": "icon_star"
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "89.6%",
+               "font": {
+                "family": "Fredoka One",
+                "style": "Regular"
+               },
+               "size": 18,
+               "color": "3D4B5C",
+               "name": "Chance",
+               "w": 70,
+               "align": "RIGHT"
+              }
+             ]
+            },
+            {
+             "name": "Rate Neon Wave",
+             "layout": "H",
+             "gap": 10,
+             "pad": [
+              6,
+              12,
+              6,
+              6
+             ],
+             "radius": 14,
+             "fill": {
+              "var": "cozy/sand"
+             },
+             "w": 460,
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img auras/NeonWave",
+               "w": 40,
+               "h": 40
+              },
+              {
+               "name": "Text",
+               "layout": "V",
+               "gap": 0,
+               "fillW": true,
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "Neon Wave",
+                 "textStyle": "Aura Fishing/Heading",
+                 "color": {
+                  "var": "cozy/text"
+                 },
+                 "name": "Name"
+                },
+                {
+                 "type": "INSTANCE",
+                 "ref": "3487:4328",
+                 "variant": "Rarity=Rare",
+                 "name": "Tag Rare"
+                }
+               ]
+              },
+              {
+               "name": "Stars 3",
+               "layout": "H",
+               "gap": 2,
+               "children": [
+                {
+                 "type": "SVG",
+                 "svg": "<svg width=\"12\" height=\"12\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#F2B544\"/></svg>",
+                 "w": 12,
+                 "h": 12,
+                 "name": "icon_star"
+                },
+                {
+                 "type": "SVG",
+                 "svg": "<svg width=\"12\" height=\"12\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#F2B544\"/></svg>",
+                 "w": 12,
+                 "h": 12,
+                 "name": "icon_star"
+                },
+                {
+                 "type": "SVG",
+                 "svg": "<svg width=\"12\" height=\"12\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#F2B544\"/></svg>",
+                 "w": 12,
+                 "h": 12,
+                 "name": "icon_star"
+                },
+                {
+                 "type": "SVG",
+                 "svg": "<svg width=\"12\" height=\"12\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#E6DCCB\"/></svg>",
+                 "w": 12,
+                 "h": 12,
+                 "name": "icon_star"
+                },
+                {
+                 "type": "SVG",
+                 "svg": "<svg width=\"12\" height=\"12\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#E6DCCB\"/></svg>",
+                 "w": 12,
+                 "h": 12,
+                 "name": "icon_star"
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "8.96%",
+               "font": {
+                "family": "Fredoka One",
+                "style": "Regular"
+               },
+               "size": 18,
+               "color": "3D4B5C",
+               "name": "Chance",
+               "w": 70,
+               "align": "RIGHT"
+              }
+             ]
+            },
+            {
+             "name": "Rate Solar Flare",
+             "layout": "H",
+             "gap": 10,
+             "pad": [
+              6,
+              12,
+              6,
+              6
+             ],
+             "radius": 14,
+             "fill": {
+              "var": "cozy/sand"
+             },
+             "w": 460,
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img auras/SolarFlare",
+               "w": 40,
+               "h": 40
+              },
+              {
+               "name": "Text",
+               "layout": "V",
+               "gap": 0,
+               "fillW": true,
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "Solar Flare",
+                 "textStyle": "Aura Fishing/Heading",
+                 "color": {
+                  "var": "cozy/text"
+                 },
+                 "name": "Name"
+                },
+                {
+                 "type": "INSTANCE",
+                 "ref": "3487:4328",
+                 "variant": "Rarity=Epic",
+                 "name": "Tag Epic"
+                }
+               ]
+              },
+              {
+               "name": "Stars 1",
+               "layout": "H",
+               "gap": 2,
+               "children": [
+                {
+                 "type": "SVG",
+                 "svg": "<svg width=\"12\" height=\"12\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#F2B544\"/></svg>",
+                 "w": 12,
+                 "h": 12,
+                 "name": "icon_star"
+                },
+                {
+                 "type": "SVG",
+                 "svg": "<svg width=\"12\" height=\"12\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#E6DCCB\"/></svg>",
+                 "w": 12,
+                 "h": 12,
+                 "name": "icon_star"
+                },
+                {
+                 "type": "SVG",
+                 "svg": "<svg width=\"12\" height=\"12\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#E6DCCB\"/></svg>",
+                 "w": 12,
+                 "h": 12,
+                 "name": "icon_star"
+                },
+                {
+                 "type": "SVG",
+                 "svg": "<svg width=\"12\" height=\"12\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#E6DCCB\"/></svg>",
+                 "w": 12,
+                 "h": 12,
+                 "name": "icon_star"
+                },
+                {
+                 "type": "SVG",
+                 "svg": "<svg width=\"12\" height=\"12\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 4l6 12.6 13.8 1.6-10.2 9.4 2.8 13.6L24 34.4 11.6 41.2l2.8-13.6L4.2 18.2 18 16.6z\" fill=\"#E6DCCB\"/></svg>",
+                 "w": 12,
+                 "h": 12,
+                 "name": "icon_star"
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "1.20%",
+               "font": {
+                "family": "Fredoka One",
+                "style": "Regular"
+               },
+               "size": 18,
+               "color": "3D4B5C",
+               "name": "Chance",
+               "w": 70,
+               "align": "RIGHT"
+              }
+             ]
+            },
+            {
+             "name": "Rate Abyssal Shadow",
+             "layout": "H",
+             "gap": 10,
+             "pad": [
+              6,
+              12,
+              6,
+              6
+             ],
+             "radius": 14,
+             "fill": {
+              "var": "cozy/sand"
+             },
+             "w": 460,
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img auras/UnknownAura",
+               "w": 40,
+               "h": 40
+              },
+              {
+               "name": "Text",
+               "layout": "V",
+               "gap": 0,
+               "fillW": true,
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "???",
+                 "textStyle": "Aura Fishing/Heading",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Name"
+                },
+                {
+                 "type": "INSTANCE",
+                 "ref": "3487:4328",
+                 "variant": "Rarity=Legendary",
+                 "name": "Tag Legendary"
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "—",
+               "textStyle": "Aura Fishing/Small",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Stars"
+              },
+              {
+               "type": "TEXT",
+               "text": "0.18%",
+               "font": {
+                "family": "Fredoka One",
+                "style": "Regular"
+               },
+               "size": 18,
+               "color": "3D4B5C",
+               "name": "Chance",
+               "w": 70,
+               "align": "RIGHT"
+              }
+             ]
+            },
+            {
+             "name": "Rate Dragon Emperor",
+             "layout": "H",
+             "gap": 10,
+             "pad": [
+              6,
+              12,
+              6,
+              6
+             ],
+             "radius": 14,
+             "fill": {
+              "var": "cozy/sand"
+             },
+             "w": 460,
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img auras/UnknownAura",
+               "w": 40,
+               "h": 40
+              },
+              {
+               "name": "Text",
+               "layout": "V",
+               "gap": 0,
+               "fillW": true,
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "???",
+                 "textStyle": "Aura Fishing/Heading",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Name"
+                },
+                {
+                 "type": "INSTANCE",
+                 "ref": "3487:4328",
+                 "variant": "Rarity=Mythic",
+                 "name": "Tag Mythic"
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "—",
+               "textStyle": "Aura Fishing/Small",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Stars"
+              },
+              {
+               "type": "TEXT",
+               "text": "0.018%",
+               "font": {
+                "family": "Fredoka One",
+                "style": "Regular"
+               },
+               "size": 18,
+               "color": "3D4B5C",
+               "name": "Chance",
+               "w": 70,
+               "align": "RIGHT"
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Footer",
+           "layout": "H",
+           "gap": 16,
+           "pad": [
+            16,
+            32,
+            20,
+            32
+           ],
+           "fillW": true,
+           "main": "CENTER",
+           "fill": {
+            "var": "cozy/sand"
+           },
+           "children": [
+            {
+             "type": "INSTANCE",
+             "ref": "3487:4298",
+             "variant": "Style=Primary",
+             "texts": {
+              "Label": "OK"
+             },
+             "name": "Btn OK",
+             "fillW": true
+            }
+           ]
+          }
+         ],
+         "x": 370,
+         "y": 40
+        },
+        {
+         "name": "[skip] Roblox CoreGui (guide)",
+         "w": 1280,
+         "h": 720,
+         "x": 0,
+         "y": 0,
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Top Bar",
+           "w": 1280,
+           "h": 58,
+           "x": 0,
+           "y": 0,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Roblox Menu Btn",
+           "w": 44,
+           "h": 44,
+           "x": 12,
+           "y": 7,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Chat Btn",
+           "w": 44,
+           "h": 44,
+           "x": 64,
+           "y": 7,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          },
+          {
+           "type": "TEXT",
+           "text": "ROBLOX TOP BAR (58px)  —  keep clear",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 124,
+           "y": 22
+          },
+          {
+           "type": "RECT",
+           "name": "Chat Window (when open)",
+           "w": 380,
+           "h": 210,
+           "x": 8,
+           "y": 64,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.04
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "CHAT WINDOW (desktop, when open)",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 20,
+           "y": 248
+          },
+          {
+           "type": "RECT",
+           "name": "Leaderboard",
+           "w": 236,
+           "h": 170,
+           "x": 1032,
+           "y": 64,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.06
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "LEADERBOARD (leaderstats)",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 1044,
+           "y": 210
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Mobile Thumbstick",
+           "w": 150,
+           "h": 150,
+           "x": 50,
+           "y": 510,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "MOBILE THUMBSTICK",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 62,
+           "y": 668
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Mobile Jump",
+           "w": 96,
+           "h": 96,
+           "x": 1120,
+           "y": 550,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "MOBILE JUMP",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 1122,
+           "y": 660
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Altar parts (G1 / E1)",
+     "layout": "V",
+     "gap": 10,
+     "pad": 24,
+     "radius": 24,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 2,
+     "effects": [
+      {
+       "color": "3D4B5C",
+       "a": 0.1,
+       "y": 6,
+       "blur": 18
+      }
+     ],
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "Altar parts (G1 / E1)",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "type": "TEXT",
+       "text": "Replace the old single pity bar with two rows; x10 shows RARE+; Rates button opens the popup. Duplicate result = +1 Star Token instead of NEW!.",
+       "textStyle": "Aura Fishing/Small",
+       "color": {
+        "var": "cozy/subtext"
+       },
+       "name": "Desc",
+       "w": 772
+      },
+      {
+       "name": "Body",
+       "layout": "V",
+       "gap": 14,
+       "children": [
+        {
+         "name": "Row",
+         "layout": "H",
+         "gap": 20,
+         "children": [
+          {
+           "name": "Pity",
+           "layout": "V",
+           "gap": 10,
+           "pad": 12,
+           "w": 300,
+           "radius": 18,
+           "fill": {
+            "var": "cozy/panel"
+           },
+           "stroke": {
+            "var": "cozy/track"
+           },
+           "strokeW": 2,
+           "children": [
+            {
+             "name": "Pity Legendary",
+             "layout": "V",
+             "gap": 4,
+             "fillW": true,
+             "children": [
+              {
+               "name": "Row",
+               "layout": "H",
+               "fillW": true,
+               "main": "SPACE_BETWEEN",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "Legendary in",
+                 "textStyle": "Aura Fishing/Small",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Label"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "37 rolls",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 16,
+                 "color": "F2A93B",
+                 "name": "Value"
+                }
+               ]
+              },
+              {
+               "name": "Bar",
+               "w": 276,
+               "h": 10,
+               "radius": 999,
+               "fill": {
+                "var": "cozy/track"
+               },
+               "clip": true,
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Fill",
+                 "w": 174,
+                 "h": 10,
+                 "x": 0,
+                 "y": 0,
+                 "radius": 999,
+                 "fill": {
+                  "grad": [
+                   "FFD45C",
+                   "F2A93B"
+                  ]
+                 }
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Pity Mythic",
+             "layout": "V",
+             "gap": 4,
+             "fillW": true,
+             "children": [
+              {
+               "name": "Row",
+               "layout": "H",
+               "fillW": true,
+               "main": "SPACE_BETWEEN",
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "Mythic in",
+                 "textStyle": "Aura Fishing/Small",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Label"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "263 rolls",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 16,
+                 "color": "F2668B",
+                 "name": "Value"
+                }
+               ]
+              },
+              {
+               "name": "Bar",
+               "w": 276,
+               "h": 10,
+               "radius": 999,
+               "fill": {
+                "var": "cozy/track"
+               },
+               "clip": true,
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Fill",
+                 "w": 34,
+                 "h": 10,
+                 "x": 0,
+                 "y": 0,
+                 "radius": 999,
+                 "fill": {
+                  "grad": [
+                   "F2A93B",
+                   "F2668B"
+                  ]
+                 }
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Roll Bar",
+           "layout": "V",
+           "gap": 8,
+           "w": 420,
+           "children": [
+            {
+             "name": "Buttons",
+             "layout": "H",
+             "gap": 10,
+             "fillW": true,
+             "children": [
+              {
+               "name": "Btn Roll 1",
+               "layout": "V",
+               "gap": 2,
+               "pad": [
+                8,
+                14,
+                11,
+                14
+               ],
+               "radius": 16,
+               "cross": "CENTER",
+               "main": "CENTER",
+               "fill": {
+                "var": "cozy/gem"
+               },
+               "stroke": {
+                "var": "cozy/gem-lip"
+               },
+               "strokeSides": {
+                "b": 5
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "ROLL x1",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 20,
+                 "color": "FFFFFF",
+                 "name": "Label"
+                },
+                {
+                 "name": "Cost",
+                 "layout": "H",
+                 "gap": 4,
+                 "cross": "CENTER",
+                 "children": [
+                  {
+                   "type": "RECT",
+                   "name": "Img ui/status/gem",
+                   "w": 16,
+                   "h": 16
+                  },
+                  {
+                   "type": "TEXT",
+                   "text": "5",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 14,
+                   "color": "FFFFFF",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ],
+               "fillW": true
+              },
+              {
+               "name": "Btn Roll 10",
+               "layout": "V",
+               "gap": 2,
+               "pad": [
+                8,
+                14,
+                11,
+                14
+               ],
+               "radius": 16,
+               "cross": "CENTER",
+               "main": "CENTER",
+               "fill": {
+                "var": "cozy/gold"
+               },
+               "stroke": {
+                "var": "cozy/gold-lip"
+               },
+               "strokeSides": {
+                "b": 5
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "ROLL x10",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 20,
+                 "color": "FFFFFF",
+                 "name": "Label"
+                },
+                {
+                 "name": "Cost Row",
+                 "layout": "H",
+                 "gap": 6,
+                 "cross": "CENTER",
+                 "children": [
+                  {
+                   "name": "Cost",
+                   "layout": "H",
+                   "gap": 4,
+                   "cross": "CENTER",
+                   "children": [
+                    {
+                     "type": "RECT",
+                     "name": "Img ui/status/gem",
+                     "w": 16,
+                     "h": 16
+                    },
+                    {
+                     "type": "TEXT",
+                     "text": "45",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 14,
+                     "color": "FFFFFF",
+                     "name": "Value"
+                    }
+                   ]
+                  },
+                  {
+                   "name": "Guarantee",
+                   "layout": "H",
+                   "pad": [
+                    3,
+                    10,
+                    3,
+                    10
+                   ],
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/coral"
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "RARE+",
+                     "textStyle": "Aura Fishing/Caption",
+                     "color": {
+                      "var": "cozy/on-accent"
+                     },
+                     "name": "Label"
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ],
+               "fillW": true
+              }
+             ]
+            },
+            {
+             "name": "Under",
+             "layout": "H",
+             "fillW": true,
+             "main": "SPACE_BETWEEN",
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "x10 always has at least one Rare or better",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Note"
+              },
+              {
+               "name": "Btn Rates",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                8,
+                14,
+                11,
+                14
+               ],
+               "radius": 16,
+               "cross": "CENTER",
+               "main": "CENTER",
+               "fill": {
+                "var": "cozy/panel"
+               },
+               "stroke": {
+                "var": "cozy/track"
+               },
+               "strokeSides": {
+                "b": 5
+               },
+               "children": [
+                {
+                 "type": "SVG",
+                 "svg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"24\" cy=\"24\" r=\"19\" fill=\"#7A8A99\"/><rect x=\"21\" y=\"21\" width=\"6\" height=\"15\" rx=\"3\" fill=\"#3D4B5C\"/><circle cx=\"24\" cy=\"14.5\" r=\"3.5\" fill=\"#3D4B5C\"/></svg>",
+                 "w": 18,
+                 "h": 18,
+                 "name": "icon_info"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "Rates",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 16,
+                 "color": "3D4B5C",
+                 "name": "Label"
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Duplicate Reveal",
+         "layout": "V",
+         "gap": 8,
+         "pad": 22,
+         "w": 300,
+         "cross": "CENTER",
+         "radius": 24,
+         "fill": {
+          "var": "cozy/panel"
+         },
+         "stroke": {
+          "var": "cozy/track"
+         },
+         "strokeW": 2,
+         "effects": [
+          {
+           "color": "3D4B5C",
+           "a": 0.1,
+           "y": 6,
+           "blur": 18
+          }
+         ],
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Img auras/NeonWave",
+           "w": 110,
+           "h": 110
+          },
+          {
+           "type": "TEXT",
+           "text": "Neon Wave",
+           "textStyle": "Aura Fishing/Title",
+           "color": {
+            "var": "cozy/rarity/rare"
+           },
+           "name": "Name"
+          },
+          {
+           "name": "Token",
+           "layout": "H",
+           "gap": 6,
+           "pad": [
+            6,
+            14,
+            6,
+            8
+           ],
+           "radius": 999,
+           "cross": "CENTER",
+           "fill": {
+            "hex": "FBEAB8"
+           },
+           "stroke": {
+            "var": "cozy/gold"
+           },
+           "strokeW": 2,
+           "children": [
+            {
+             "type": "RECT",
+             "name": "Img ui/status/star_token",
+             "w": 26,
+             "h": 26
+            },
+            {
+             "type": "TEXT",
+             "text": "+1 Star Token",
+             "textStyle": "Aura Fishing/Heading",
+             "color": {
+              "var": "cozy/gold-lip"
+             },
+             "name": "Label"
+            }
+           ]
+          },
+          {
+           "type": "TEXT",
+           "text": "Already owned → token for stars",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Note"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "w": 820,
+     "x": 60,
+     "y": 960
+    },
+    {
+     "name": "Screen G6 · x10 Summary (tokens)",
+     "layout": "V",
+     "gap": 12,
+     "x": 1400,
+     "y": 960,
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "G6 · x10 Summary (tokens)",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "name": "G6",
+       "w": 1280,
+       "h": 720,
+       "radius": 0,
+       "clip": true,
+       "children": [
+        {
+         "name": "World [skip]",
+         "w": 1280,
+         "h": 720,
+         "x": 0,
+         "y": 0,
+         "fill": {
+          "grad": [
+           "DDF5EE",
+           "A8DCD8"
+          ],
+          "angle": 90
+         },
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Water",
+           "w": 1280,
+           "h": 300,
+           "x": 0,
+           "y": 420,
+           "fill": {
+            "hex": "9AD4F5",
+            "opacity": 0.35
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Island",
+           "w": 560,
+           "h": 130,
+           "x": 360,
+           "y": 370,
+           "fill": {
+            "hex": "7FD3B0",
+            "opacity": 0.55
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Island Top",
+           "w": 360,
+           "h": 70,
+           "x": 460,
+           "y": 372,
+           "fill": {
+            "hex": "4FAF8A",
+            "opacity": 0.35
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Dim",
+           "w": 1280,
+           "h": 720,
+           "x": 0,
+           "y": 0,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          }
+         ]
+        },
+        {
+         "name": "G6 x10 Summary",
+         "layout": "V",
+         "gap": 14,
+         "pad": 24,
+         "w": 700,
+         "cross": "CENTER",
+         "radius": 28,
+         "fill": {
+          "var": "cozy/panel"
+         },
+         "stroke": {
+          "var": "cozy/track"
+         },
+         "strokeW": 2,
+         "effects": [
+          {
+           "color": "3D4B5C",
+           "a": 0.1,
+           "y": 6,
+           "blur": 18
+          }
+         ],
+         "children": [
+          {
+           "type": "TEXT",
+           "text": "x10 RESULTS",
+           "textStyle": "Aura Fishing/Title",
+           "color": {
+            "var": "cozy/text"
+           },
+           "name": "Title"
+          },
+          {
+           "name": "Row 1",
+           "layout": "H",
+           "gap": 10,
+           "children": [
+            {
+             "name": "Card SparklingDew",
+             "layout": "V",
+             "gap": 4,
+             "pad": 8,
+             "w": 120,
+             "cross": "CENTER",
+             "radius": 16,
+             "fill": "FFFFFF",
+             "stroke": {
+              "hex": "9AA5B1"
+             },
+             "strokeW": 2,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img auras/SparklingDew",
+               "w": 64,
+               "h": 64
+              },
+              {
+               "type": "INSTANCE",
+               "ref": "3487:4328",
+               "variant": "Rarity=Common",
+               "name": "Tag Common"
+              },
+              {
+               "name": "Token",
+               "layout": "H",
+               "gap": 2,
+               "pad": [
+                1,
+                6,
+                1,
+                3
+               ],
+               "radius": 999,
+               "cross": "CENTER",
+               "fill": {
+                "hex": "FBEAB8"
+               },
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/status/star_token",
+                 "w": 14,
+                 "h": 14
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+1",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "C98B1E",
+                 "name": "Value"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Card NeonWave",
+             "layout": "V",
+             "gap": 4,
+             "pad": 8,
+             "w": 120,
+             "cross": "CENTER",
+             "radius": 16,
+             "fill": "FFFFFF",
+             "stroke": {
+              "hex": "5AA9F0"
+             },
+             "strokeW": 2,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img auras/NeonWave",
+               "w": 64,
+               "h": 64
+              },
+              {
+               "type": "INSTANCE",
+               "ref": "3487:4328",
+               "variant": "Rarity=Rare",
+               "name": "Tag Rare"
+              },
+              {
+               "name": "Token",
+               "layout": "H",
+               "gap": 2,
+               "pad": [
+                1,
+                6,
+                1,
+                3
+               ],
+               "radius": 999,
+               "cross": "CENTER",
+               "fill": {
+                "hex": "FBEAB8"
+               },
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/status/star_token",
+                 "w": 14,
+                 "h": 14
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+1",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "C98B1E",
+                 "name": "Value"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Card SparklingDew",
+             "layout": "V",
+             "gap": 4,
+             "pad": 8,
+             "w": 120,
+             "cross": "CENTER",
+             "radius": 16,
+             "fill": "FFFFFF",
+             "stroke": {
+              "hex": "9AA5B1"
+             },
+             "strokeW": 2,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img auras/SparklingDew",
+               "w": 64,
+               "h": 64
+              },
+              {
+               "type": "INSTANCE",
+               "ref": "3487:4328",
+               "variant": "Rarity=Common",
+               "name": "Tag Common"
+              },
+              {
+               "name": "Token",
+               "layout": "H",
+               "gap": 2,
+               "pad": [
+                1,
+                6,
+                1,
+                3
+               ],
+               "radius": 999,
+               "cross": "CENTER",
+               "fill": {
+                "hex": "FBEAB8"
+               },
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/status/star_token",
+                 "w": 14,
+                 "h": 14
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+1",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "C98B1E",
+                 "name": "Value"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Card TidalBloom",
+             "layout": "V",
+             "gap": 4,
+             "pad": 8,
+             "w": 120,
+             "cross": "CENTER",
+             "radius": 16,
+             "fill": "FFFFFF",
+             "stroke": {
+              "hex": "5AA9F0"
+             },
+             "strokeW": 2,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img auras/TidalBloom",
+               "w": 64,
+               "h": 64
+              },
+              {
+               "type": "INSTANCE",
+               "ref": "3487:4328",
+               "variant": "Rarity=Rare",
+               "name": "Tag Rare"
+              },
+              {
+               "name": "New",
+               "layout": "H",
+               "pad": [
+                3,
+                10,
+                3,
+                10
+               ],
+               "radius": 999,
+               "fill": {
+                "var": "cozy/coral"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "NEW!",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/on-accent"
+                 },
+                 "name": "Label"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Card SparklingDew",
+             "layout": "V",
+             "gap": 4,
+             "pad": 8,
+             "w": 120,
+             "cross": "CENTER",
+             "radius": 16,
+             "fill": "FFFFFF",
+             "stroke": {
+              "hex": "9AA5B1"
+             },
+             "strokeW": 2,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img auras/SparklingDew",
+               "w": 64,
+               "h": 64
+              },
+              {
+               "type": "INSTANCE",
+               "ref": "3487:4328",
+               "variant": "Rarity=Common",
+               "name": "Tag Common"
+              },
+              {
+               "name": "Token",
+               "layout": "H",
+               "gap": 2,
+               "pad": [
+                1,
+                6,
+                1,
+                3
+               ],
+               "radius": 999,
+               "cross": "CENTER",
+               "fill": {
+                "hex": "FBEAB8"
+               },
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/status/star_token",
+                 "w": 14,
+                 "h": 14
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+1",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "C98B1E",
+                 "name": "Value"
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Row 2",
+           "layout": "H",
+           "gap": 10,
+           "children": [
+            {
+             "name": "Card SolarFlare",
+             "layout": "V",
+             "gap": 4,
+             "pad": 8,
+             "w": 120,
+             "cross": "CENTER",
+             "radius": 16,
+             "fill": "FFFFFF",
+             "stroke": {
+              "hex": "B07CF0"
+             },
+             "strokeW": 3,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img auras/SolarFlare",
+               "w": 64,
+               "h": 64
+              },
+              {
+               "type": "INSTANCE",
+               "ref": "3487:4328",
+               "variant": "Rarity=Epic",
+               "name": "Tag Epic"
+              },
+              {
+               "name": "Best",
+               "layout": "H",
+               "pad": [
+                3,
+                10,
+                3,
+                10
+               ],
+               "radius": 999,
+               "fill": {
+                "var": "cozy/gold"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "BEST",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/on-accent"
+                 },
+                 "name": "Label"
+                }
+               ]
+              }
+             ],
+             "effects": [
+              {
+               "color": "B07CF0",
+               "a": 0.6,
+               "blur": 16,
+               "spread": 2
+              }
+             ]
+            },
+            {
+             "name": "Card SparklingDew",
+             "layout": "V",
+             "gap": 4,
+             "pad": 8,
+             "w": 120,
+             "cross": "CENTER",
+             "radius": 16,
+             "fill": "FFFFFF",
+             "stroke": {
+              "hex": "9AA5B1"
+             },
+             "strokeW": 2,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img auras/SparklingDew",
+               "w": 64,
+               "h": 64
+              },
+              {
+               "type": "INSTANCE",
+               "ref": "3487:4328",
+               "variant": "Rarity=Common",
+               "name": "Tag Common"
+              },
+              {
+               "name": "Token",
+               "layout": "H",
+               "gap": 2,
+               "pad": [
+                1,
+                6,
+                1,
+                3
+               ],
+               "radius": 999,
+               "cross": "CENTER",
+               "fill": {
+                "hex": "FBEAB8"
+               },
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/status/star_token",
+                 "w": 14,
+                 "h": 14
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+1",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "C98B1E",
+                 "name": "Value"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Card SparklingDew",
+             "layout": "V",
+             "gap": 4,
+             "pad": 8,
+             "w": 120,
+             "cross": "CENTER",
+             "radius": 16,
+             "fill": "FFFFFF",
+             "stroke": {
+              "hex": "9AA5B1"
+             },
+             "strokeW": 2,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img auras/SparklingDew",
+               "w": 64,
+               "h": 64
+              },
+              {
+               "type": "INSTANCE",
+               "ref": "3487:4328",
+               "variant": "Rarity=Common",
+               "name": "Tag Common"
+              },
+              {
+               "name": "Token",
+               "layout": "H",
+               "gap": 2,
+               "pad": [
+                1,
+                6,
+                1,
+                3
+               ],
+               "radius": 999,
+               "cross": "CENTER",
+               "fill": {
+                "hex": "FBEAB8"
+               },
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/status/star_token",
+                 "w": 14,
+                 "h": 14
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+1",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "C98B1E",
+                 "name": "Value"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Card NeonWave",
+             "layout": "V",
+             "gap": 4,
+             "pad": 8,
+             "w": 120,
+             "cross": "CENTER",
+             "radius": 16,
+             "fill": "FFFFFF",
+             "stroke": {
+              "hex": "5AA9F0"
+             },
+             "strokeW": 2,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img auras/NeonWave",
+               "w": 64,
+               "h": 64
+              },
+              {
+               "type": "INSTANCE",
+               "ref": "3487:4328",
+               "variant": "Rarity=Rare",
+               "name": "Tag Rare"
+              },
+              {
+               "name": "Token",
+               "layout": "H",
+               "gap": 2,
+               "pad": [
+                1,
+                6,
+                1,
+                3
+               ],
+               "radius": 999,
+               "cross": "CENTER",
+               "fill": {
+                "hex": "FBEAB8"
+               },
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/status/star_token",
+                 "w": 14,
+                 "h": 14
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+1",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "C98B1E",
+                 "name": "Value"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Card SparklingDew",
+             "layout": "V",
+             "gap": 4,
+             "pad": 8,
+             "w": 120,
+             "cross": "CENTER",
+             "radius": 16,
+             "fill": "FFFFFF",
+             "stroke": {
+              "hex": "9AA5B1"
+             },
+             "strokeW": 2,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img auras/SparklingDew",
+               "w": 64,
+               "h": 64
+              },
+              {
+               "type": "INSTANCE",
+               "ref": "3487:4328",
+               "variant": "Rarity=Common",
+               "name": "Tag Common"
+              },
+              {
+               "name": "Token",
+               "layout": "H",
+               "gap": 2,
+               "pad": [
+                1,
+                6,
+                1,
+                3
+               ],
+               "radius": 999,
+               "cross": "CENTER",
+               "fill": {
+                "hex": "FBEAB8"
+               },
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/status/star_token",
+                 "w": 14,
+                 "h": 14
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+1",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "C98B1E",
+                 "name": "Value"
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Tokens",
+           "layout": "H",
+           "gap": 6,
+           "cross": "CENTER",
+           "children": [
+            {
+             "type": "RECT",
+             "name": "Img ui/status/star_token",
+             "w": 22,
+             "h": 22
+            },
+            {
+             "type": "TEXT",
+             "text": "+8 Star Tokens from duplicates",
+             "textStyle": "Aura Fishing/Heading",
+             "color": {
+              "var": "cozy/gold-lip"
+             },
+             "name": "Label"
+            }
+           ]
+          },
+          {
+           "name": "Buttons",
+           "layout": "H",
+           "gap": 12,
+           "children": [
+            {
+             "type": "INSTANCE",
+             "ref": "3487:4298",
+             "variant": "Style=Primary",
+             "texts": {
+              "Label": "EQUIP BEST"
+             },
+             "name": "Btn Equip Best"
+            },
+            {
+             "type": "INSTANCE",
+             "ref": "3487:4298",
+             "variant": "Style=Gold",
+             "texts": {
+              "Label": "ROLL x10 AGAIN"
+             },
+             "name": "Btn Again"
+            }
+           ]
+          }
+         ],
+         "x": 290,
+         "y": 90
+        },
+        {
+         "name": "[skip] Roblox CoreGui (guide)",
+         "w": 1280,
+         "h": 720,
+         "x": 0,
+         "y": 0,
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Top Bar",
+           "w": 1280,
+           "h": 58,
+           "x": 0,
+           "y": 0,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Roblox Menu Btn",
+           "w": 44,
+           "h": 44,
+           "x": 12,
+           "y": 7,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Chat Btn",
+           "w": 44,
+           "h": 44,
+           "x": 64,
+           "y": 7,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          },
+          {
+           "type": "TEXT",
+           "text": "ROBLOX TOP BAR (58px)  —  keep clear",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 124,
+           "y": 22
+          },
+          {
+           "type": "RECT",
+           "name": "Chat Window (when open)",
+           "w": 380,
+           "h": 210,
+           "x": 8,
+           "y": 64,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.04
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "CHAT WINDOW (desktop, when open)",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 20,
+           "y": 248
+          },
+          {
+           "type": "RECT",
+           "name": "Leaderboard",
+           "w": 236,
+           "h": 170,
+           "x": 1032,
+           "y": 64,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.06
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "LEADERBOARD (leaderstats)",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 1044,
+           "y": 210
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Mobile Thumbstick",
+           "w": 150,
+           "h": 150,
+           "x": 50,
+           "y": 510,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "MOBILE THUMBSTICK",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 62,
+           "y": 668
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Mobile Jump",
+           "w": 96,
+           "h": 96,
+           "x": 1120,
+           "y": 550,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "MOBILE JUMP",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 1122,
+           "y": 660
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+]

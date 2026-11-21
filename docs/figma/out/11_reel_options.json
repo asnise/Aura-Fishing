@@ -1,0 +1,1728 @@
+{
+ "pageId": "3465:14993",
+ "replaceName": "Reel Minigame · 6 options",
+ "tree": {
+  "type": "SECTION",
+  "name": "Reel Minigame · 6 options",
+  "fill": "F3E9D8",
+  "x": 8900,
+  "y": 1700,
+  "children": [
+   {
+    "type": "TEXT",
+    "text": "Reel Minigame — 6 redesign options",
+    "textStyle": "Aura Fishing/Display",
+    "color": {
+     "var": "cozy/text"
+    },
+    "name": "Title",
+    "x": 60,
+    "y": 40
+   },
+   {
+    "type": "TEXT",
+    "text": "Same moment in every option: an Epic/Rare fish is hooked, catch bar overlaps the fish, progress ~65%. Pick one (or mix).",
+    "textStyle": "Aura Fishing/Body",
+    "color": {
+     "var": "cozy/subtext"
+    },
+    "name": "Sub",
+    "x": 60,
+    "y": 96,
+    "w": 1800
+   },
+   {
+    "name": "Option A — Glass Tube",
+    "layout": "V",
+    "gap": 12,
+    "pad": 24,
+    "w": 600,
+    "radius": 24,
+    "fill": {
+     "var": "cozy/panel"
+    },
+    "stroke": {
+     "var": "cozy/track"
+    },
+    "strokeW": 2,
+    "effects": [
+     {
+      "color": "3D4B5C",
+      "a": 0.1,
+      "y": 6,
+      "blur": 18
+     }
+    ],
+    "children": [
+     {
+      "type": "TEXT",
+      "text": "A. Glass Tube",
+      "textStyle": "Aura Fishing/Title",
+      "color": {
+       "var": "cozy/text"
+      },
+      "name": "Title"
+     },
+     {
+      "type": "TEXT",
+      "text": "Current layout, polished: rounded glass tube with bubbles, capsule catch bar, star-capped gold progress. No code change beyond visuals.",
+      "textStyle": "Aura Fishing/Small",
+      "color": {
+       "var": "cozy/subtext"
+      },
+      "name": "Desc",
+      "w": 552
+     },
+     {
+      "name": "Scene",
+      "w": 552,
+      "h": 440,
+      "radius": 18,
+      "clip": true,
+      "fill": {
+       "grad": [
+        "DDF5EE",
+        "A8DCD8"
+       ],
+       "angle": 90
+      },
+      "children": [
+       {
+        "name": "World [skip]",
+        "w": 552,
+        "h": 440,
+        "x": 0,
+        "y": 0,
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Water",
+          "w": 552,
+          "h": 200,
+          "x": 0,
+          "y": 240,
+          "fill": {
+           "hex": "9AD4F5",
+           "opacity": 0.35
+          }
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Island",
+          "w": 300,
+          "h": 80,
+          "x": -60,
+          "y": 205,
+          "fill": {
+           "hex": "7FD3B0",
+           "opacity": 0.5
+          }
+         }
+        ]
+       },
+       {
+        "name": "Reel Minigame",
+        "layout": "V",
+        "gap": 10,
+        "pad": 16,
+        "cross": "CENTER",
+        "x": 166,
+        "y": 14,
+        "radius": 32,
+        "fill": {
+         "var": "cozy/panel"
+        },
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "effects": [
+         {
+          "color": "3D4B5C",
+          "a": 0.1,
+          "y": 6,
+          "blur": 18
+         }
+        ],
+        "children": [
+         {
+          "name": "Header",
+          "layout": "H",
+          "gap": 8,
+          "cross": "CENTER",
+          "children": [
+           {
+            "type": "INSTANCE",
+            "ref": "3487:4328",
+            "variant": "Rarity=Epic",
+            "name": "Tag Epic"
+           },
+           {
+            "type": "TEXT",
+            "text": "???",
+            "textStyle": "Aura Fishing/Heading",
+            "color": {
+             "var": "cozy/text"
+            },
+            "name": "Fish Name"
+           }
+          ]
+         },
+         {
+          "name": "Body",
+          "layout": "H",
+          "gap": 14,
+          "children": [
+           {
+            "name": "Water Tube",
+            "w": 72,
+            "h": 300,
+            "radius": 999,
+            "clip": true,
+            "fill": {
+             "grad": [
+              "CFEFFF",
+              "7FC3EE"
+             ],
+             "angle": 90
+            },
+            "stroke": "FFFFFF",
+            "strokeW": 3,
+            "children": [
+             {
+              "type": "ELLIPSE",
+              "name": "Bubble",
+              "w": 10,
+              "h": 10,
+              "x": 14,
+              "y": 45,
+              "fill": {
+               "hex": "FFFFFF",
+               "opacity": 0.5
+              }
+             },
+             {
+              "type": "ELLIPSE",
+              "name": "Bubble",
+              "w": 7,
+              "h": 7,
+              "x": 50,
+              "y": 90,
+              "fill": {
+               "hex": "FFFFFF",
+               "opacity": 0.5
+              }
+             },
+             {
+              "type": "ELLIPSE",
+              "name": "Bubble",
+              "w": 12,
+              "h": 12,
+              "x": 25,
+              "y": 165,
+              "fill": {
+               "hex": "FFFFFF",
+               "opacity": 0.5
+              }
+             },
+             {
+              "type": "ELLIPSE",
+              "name": "Bubble",
+              "w": 8,
+              "h": 8,
+              "x": 54,
+              "y": 225,
+              "fill": {
+               "hex": "FFFFFF",
+               "opacity": 0.5
+              }
+             },
+             {
+              "type": "ELLIPSE",
+              "name": "Bubble",
+              "w": 6,
+              "h": 6,
+              "x": 18,
+              "y": 264,
+              "fill": {
+               "hex": "FFFFFF",
+               "opacity": 0.5
+              }
+             },
+             {
+              "name": "Catch Bar",
+              "w": 72,
+              "h": 84,
+              "x": 0,
+              "y": 150,
+              "radius": 999,
+              "fill": {
+               "hex": "7FD3B0",
+               "opacity": 0.85
+              },
+              "stroke": "FFFFFF",
+              "strokeW": 3
+             },
+             {
+              "type": "RECT",
+              "name": "Img fish/EmberTuna",
+              "w": 54,
+              "h": 54,
+              "x": 9,
+              "y": 165
+             }
+            ]
+           },
+           {
+            "name": "Progress Column",
+            "layout": "V",
+            "gap": 6,
+            "cross": "CENTER",
+            "children": [
+             {
+              "type": "RECT",
+              "name": "Img ui/status/xp_star",
+              "w": 28,
+              "h": 28
+             },
+             {
+              "name": "Progress",
+              "w": 22,
+              "h": 266,
+              "radius": 999,
+              "fill": {
+               "var": "cozy/track"
+              },
+              "clip": true,
+              "children": [
+               {
+                "type": "RECT",
+                "name": "Fill",
+                "w": 22,
+                "h": 176,
+                "x": 0,
+                "y": 90,
+                "radius": 999,
+                "fill": {
+                 "grad": [
+                  "FFD45C",
+                  "F2B544"
+                 ],
+                 "angle": 90
+                }
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "TEXT",
+          "text": "HOLD TO REEL",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Hint"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "x": 60,
+    "y": 150
+   },
+   {
+    "name": "Option B — Horizontal River",
+    "layout": "V",
+    "gap": 12,
+    "pad": 24,
+    "w": 600,
+    "radius": 24,
+    "fill": {
+     "var": "cozy/panel"
+    },
+    "stroke": {
+     "var": "cozy/track"
+    },
+    "strokeW": 2,
+    "effects": [
+     {
+      "color": "3D4B5C",
+      "a": 0.1,
+      "y": 6,
+      "blur": 18
+     }
+    ],
+    "children": [
+     {
+      "type": "TEXT",
+      "text": "B. Horizontal River",
+      "textStyle": "Aura Fishing/Title",
+      "color": {
+       "var": "cozy/text"
+      },
+      "name": "Title"
+     },
+     {
+      "type": "TEXT",
+      "text": "Wide bar near the bottom of the screen — thumbs on mobile, doesn't cover the character. Code: swap the minigame axis (Y → X).",
+      "textStyle": "Aura Fishing/Small",
+      "color": {
+       "var": "cozy/subtext"
+      },
+      "name": "Desc",
+      "w": 552
+     },
+     {
+      "name": "Scene",
+      "w": 552,
+      "h": 440,
+      "radius": 18,
+      "clip": true,
+      "fill": {
+       "grad": [
+        "DDF5EE",
+        "A8DCD8"
+       ],
+       "angle": 90
+      },
+      "children": [
+       {
+        "name": "World [skip]",
+        "w": 552,
+        "h": 440,
+        "x": 0,
+        "y": 0,
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Water",
+          "w": 552,
+          "h": 200,
+          "x": 0,
+          "y": 240,
+          "fill": {
+           "hex": "9AD4F5",
+           "opacity": 0.35
+          }
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Island",
+          "w": 300,
+          "h": 80,
+          "x": -60,
+          "y": 205,
+          "fill": {
+           "hex": "7FD3B0",
+           "opacity": 0.5
+          }
+         }
+        ]
+       },
+       {
+        "name": "Reel Minigame",
+        "layout": "V",
+        "gap": 10,
+        "pad": 16,
+        "x": 34,
+        "y": 268,
+        "radius": 28,
+        "fill": {
+         "var": "cozy/panel"
+        },
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "effects": [
+         {
+          "color": "3D4B5C",
+          "a": 0.1,
+          "y": 6,
+          "blur": 18
+         }
+        ],
+        "children": [
+         {
+          "name": "Header",
+          "layout": "H",
+          "gap": 8,
+          "cross": "CENTER",
+          "w": 452,
+          "children": [
+           {
+            "type": "INSTANCE",
+            "ref": "3487:4328",
+            "variant": "Rarity=Rare",
+            "name": "Tag Rare"
+           },
+           {
+            "type": "TEXT",
+            "text": "Something big is biting!",
+            "textStyle": "Aura Fishing/Small",
+            "color": {
+             "var": "cozy/subtext"
+            },
+            "name": "Hint"
+           }
+          ]
+         },
+         {
+          "name": "River",
+          "w": 452,
+          "h": 60,
+          "radius": 999,
+          "clip": true,
+          "fill": {
+           "grad": [
+            "CFEFFF",
+            "9AD4F5"
+           ]
+          },
+          "stroke": "FFFFFF",
+          "strokeW": 3,
+          "children": [
+           {
+            "type": "ELLIPSE",
+            "name": "Bubble",
+            "w": 8,
+            "h": 8,
+            "x": 40,
+            "y": 14,
+            "fill": {
+             "hex": "FFFFFF",
+             "opacity": 0.6
+            }
+           },
+           {
+            "type": "ELLIPSE",
+            "name": "Bubble",
+            "w": 8,
+            "h": 8,
+            "x": 120,
+            "y": 38,
+            "fill": {
+             "hex": "FFFFFF",
+             "opacity": 0.6
+            }
+           },
+           {
+            "type": "ELLIPSE",
+            "name": "Bubble",
+            "w": 8,
+            "h": 8,
+            "x": 330,
+            "y": 18,
+            "fill": {
+             "hex": "FFFFFF",
+             "opacity": 0.6
+            }
+           },
+           {
+            "type": "ELLIPSE",
+            "name": "Bubble",
+            "w": 8,
+            "h": 8,
+            "x": 400,
+            "y": 40,
+            "fill": {
+             "hex": "FFFFFF",
+             "opacity": 0.6
+            }
+           },
+           {
+            "name": "Catch Bar",
+            "w": 120,
+            "h": 60,
+            "x": 170,
+            "y": 0,
+            "radius": 999,
+            "fill": {
+             "hex": "7FD3B0",
+             "opacity": 0.85
+            },
+            "stroke": "FFFFFF",
+            "strokeW": 3
+           },
+           {
+            "type": "RECT",
+            "name": "Img fish/EmberTuna",
+            "w": 50,
+            "h": 50,
+            "x": 205,
+            "y": 5
+           }
+          ]
+         },
+         {
+          "name": "Progress",
+          "w": 452,
+          "h": 12,
+          "radius": 999,
+          "fill": {
+           "var": "cozy/track"
+          },
+          "clip": true,
+          "children": [
+           {
+            "type": "RECT",
+            "name": "Fill",
+            "w": 300,
+            "h": 12,
+            "x": 0,
+            "y": 0,
+            "radius": 999,
+            "fill": {
+             "grad": [
+              "FFD45C",
+              "F2B544"
+             ]
+            }
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "x": 720,
+    "y": 150
+   },
+   {
+    "name": "Option C — Ring Reel  (CHOSEN)",
+    "layout": "V",
+    "gap": 12,
+    "pad": 24,
+    "w": 600,
+    "radius": 24,
+    "fill": {
+     "var": "cozy/panel"
+    },
+    "stroke": {
+     "var": "cozy/track"
+    },
+    "strokeW": 2,
+    "effects": [
+     {
+      "color": "3D4B5C",
+      "a": 0.1,
+      "y": 6,
+      "blur": 18
+     }
+    ],
+    "children": [
+     {
+      "type": "TEXT",
+      "text": "C. Ring Reel  (CHOSEN)",
+      "textStyle": "Aura Fishing/Title",
+      "color": {
+       "var": "cozy/text"
+      },
+      "name": "Title"
+     },
+     {
+      "type": "TEXT",
+      "text": "Fish swims around a ring; keep the green arc on it. Progress donut in the middle. Most unique. Code: position → angle (new controller).",
+      "textStyle": "Aura Fishing/Small",
+      "color": {
+       "var": "cozy/subtext"
+      },
+      "name": "Desc",
+      "w": 552
+     },
+     {
+      "name": "Scene",
+      "w": 552,
+      "h": 440,
+      "radius": 18,
+      "clip": true,
+      "fill": {
+       "grad": [
+        "DDF5EE",
+        "A8DCD8"
+       ],
+       "angle": 90
+      },
+      "children": [
+       {
+        "name": "World [skip]",
+        "w": 552,
+        "h": 440,
+        "x": 0,
+        "y": 0,
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Water",
+          "w": 552,
+          "h": 200,
+          "x": 0,
+          "y": 240,
+          "fill": {
+           "hex": "9AD4F5",
+           "opacity": 0.35
+          }
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Island",
+          "w": 300,
+          "h": 80,
+          "x": -60,
+          "y": 205,
+          "fill": {
+           "hex": "7FD3B0",
+           "opacity": 0.5
+          }
+         }
+        ]
+       },
+       {
+        "name": "Reel Minigame",
+        "w": 300,
+        "h": 300,
+        "x": 126,
+        "y": 22,
+        "radius": 999,
+        "fill": {
+         "var": "cozy/panel"
+        },
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "effects": [
+         {
+          "color": "3D4B5C",
+          "a": 0.1,
+          "y": 6,
+          "blur": 18
+         }
+        ],
+        "children": [
+         {
+          "type": "SVG",
+          "name": "Ring Track",
+          "w": 300,
+          "h": 300,
+          "svg": "<svg width=\"300\" height=\"300\" viewBox=\"0 0 300 300\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M150.0 28.0 A122 122 0 1 1 149.8 28.0\" stroke=\"#CFEFFF\" stroke-width=\"30\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M228.4 56.5 A122 122 0 0 1 260.6 201.6\" stroke=\"#7FD3B0\" stroke-width=\"30\" stroke-linecap=\"round\" fill=\"none\"/></svg>",
+          "x": 0,
+          "y": 0
+         },
+         {
+          "type": "RECT",
+          "name": "Img fish/EmberTuna",
+          "w": 48,
+          "h": 48,
+          "x": 245,
+          "y": 101
+         },
+         {
+          "type": "SVG",
+          "name": "Progress Donut",
+          "w": 150,
+          "h": 150,
+          "svg": "<svg width=\"150\" height=\"150\" viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M75.0 19.0 A56 56 0 1 1 74.9 19.0\" stroke=\"#E6DCCB\" stroke-width=\"16\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M75.0 19.0 A56 56 0 1 1 29.7 107.9\" stroke=\"#F2B544\" stroke-width=\"16\" stroke-linecap=\"round\" fill=\"none\"/></svg>",
+          "x": 75,
+          "y": 75
+         },
+         {
+          "type": "TEXT",
+          "text": "65%",
+          "font": {
+           "family": "Fredoka One",
+           "style": "Regular"
+          },
+          "size": 30,
+          "color": "3D4B5C",
+          "name": "Percent",
+          "x": 118,
+          "y": 126
+         },
+         {
+          "type": "TEXT",
+          "text": "REEL!",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Hint",
+          "x": 130,
+          "y": 162
+         }
+        ]
+       },
+       {
+        "name": "Footer",
+        "layout": "H",
+        "gap": 8,
+        "cross": "CENTER",
+        "w": 552,
+        "x": 0,
+        "y": 338,
+        "main": "CENTER",
+        "children": [
+         {
+          "type": "INSTANCE",
+          "ref": "3487:4328",
+          "variant": "Rarity=Legendary",
+          "name": "Tag Legendary"
+         },
+         {
+          "type": "TEXT",
+          "text": "Keep the green arc on the fish",
+          "textStyle": "Aura Fishing/Small",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Hint"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "x": 1380,
+    "y": 150
+   },
+   {
+    "name": "Option D — Pond Card",
+    "layout": "V",
+    "gap": 12,
+    "pad": 24,
+    "w": 600,
+    "radius": 24,
+    "fill": {
+     "var": "cozy/panel"
+    },
+    "stroke": {
+     "var": "cozy/track"
+    },
+    "strokeW": 2,
+    "effects": [
+     {
+      "color": "3D4B5C",
+      "a": 0.1,
+      "y": 6,
+      "blur": 18
+     }
+    ],
+    "children": [
+     {
+      "type": "TEXT",
+      "text": "D. Pond Card",
+      "textStyle": "Aura Fishing/Title",
+      "color": {
+       "var": "cozy/text"
+      },
+      "name": "Title"
+     },
+     {
+      "type": "TEXT",
+      "text": "Water gets darker with depth, seaweed + bubbles, bobber rides the progress, live tension chips and timer. Code: visuals + tension label.",
+      "textStyle": "Aura Fishing/Small",
+      "color": {
+       "var": "cozy/subtext"
+      },
+      "name": "Desc",
+      "w": 552
+     },
+     {
+      "name": "Scene",
+      "w": 552,
+      "h": 440,
+      "radius": 18,
+      "clip": true,
+      "fill": {
+       "grad": [
+        "DDF5EE",
+        "A8DCD8"
+       ],
+       "angle": 90
+      },
+      "children": [
+       {
+        "name": "World [skip]",
+        "w": 552,
+        "h": 440,
+        "x": 0,
+        "y": 0,
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Water",
+          "w": 552,
+          "h": 200,
+          "x": 0,
+          "y": 240,
+          "fill": {
+           "hex": "9AD4F5",
+           "opacity": 0.35
+          }
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Island",
+          "w": 300,
+          "h": 80,
+          "x": -60,
+          "y": 205,
+          "fill": {
+           "hex": "7FD3B0",
+           "opacity": 0.5
+          }
+         }
+        ]
+       },
+       {
+        "name": "Reel Minigame",
+        "layout": "V",
+        "gap": 10,
+        "pad": 16,
+        "x": 116,
+        "y": 10,
+        "radius": 26,
+        "fill": {
+         "var": "cozy/panel"
+        },
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "effects": [
+         {
+          "color": "3D4B5C",
+          "a": 0.1,
+          "y": 6,
+          "blur": 18
+         }
+        ],
+        "children": [
+         {
+          "name": "Header",
+          "layout": "H",
+          "gap": 8,
+          "cross": "CENTER",
+          "children": [
+           {
+            "type": "INSTANCE",
+            "ref": "3487:4328",
+            "variant": "Rarity=Rare",
+            "name": "Tag Rare"
+           },
+           {
+            "name": "Depth",
+            "layout": "H",
+            "pad": [
+             3,
+             10,
+             3,
+             10
+            ],
+            "radius": 999,
+            "fill": {
+             "var": "cozy/sky"
+            },
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "120m",
+              "textStyle": "Aura Fishing/Caption",
+              "color": {
+               "var": "cozy/on-accent"
+              },
+              "name": "Label"
+             }
+            ]
+           },
+           {
+            "type": "TEXT",
+            "text": "0:12",
+            "textStyle": "Aura Fishing/Heading",
+            "color": {
+             "var": "cozy/subtext"
+            },
+            "name": "Timer"
+           }
+          ]
+         },
+         {
+          "name": "Body",
+          "layout": "H",
+          "gap": 14,
+          "children": [
+           {
+            "name": "Water",
+            "w": 130,
+            "h": 286,
+            "radius": 18,
+            "clip": true,
+            "fill": {
+             "grad": [
+              "BEE6FA",
+              "4C8FC7"
+             ],
+             "angle": 90
+            },
+            "children": [
+             {
+              "type": "RECT",
+              "name": "Img fish/deco_bubbles",
+              "w": 44,
+              "h": 44,
+              "x": 80,
+              "y": 10
+             },
+             {
+              "type": "RECT",
+              "name": "Img fish/deco_seaweed",
+              "w": 70,
+              "h": 70,
+              "x": -6,
+              "y": 220
+             },
+             {
+              "type": "RECT",
+              "name": "Img fish/deco_seaweed",
+              "w": 54,
+              "h": 54,
+              "x": 88,
+              "y": 236
+             },
+             {
+              "name": "Catch Bar",
+              "w": 130,
+              "h": 84,
+              "x": 0,
+              "y": 118,
+              "radius": 16,
+              "fill": {
+               "hex": "7FD3B0",
+               "opacity": 0.8
+              },
+              "stroke": "FFFFFF",
+              "strokeW": 3
+             },
+             {
+              "type": "RECT",
+              "name": "Img fish/EmberTuna",
+              "w": 58,
+              "h": 58,
+              "x": 36,
+              "y": 131
+             }
+            ]
+           },
+           {
+            "name": "Line Meter",
+            "layout": "V",
+            "gap": 6,
+            "cross": "CENTER",
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "REEL",
+              "textStyle": "Aura Fishing/Caption",
+              "color": {
+               "var": "cozy/subtext"
+              },
+              "name": "Label"
+             },
+             {
+              "name": "Progress",
+              "w": 26,
+              "h": 254,
+              "radius": 999,
+              "fill": {
+               "var": "cozy/track"
+              },
+              "clip": true,
+              "children": [
+               {
+                "type": "RECT",
+                "name": "Fill",
+                "w": 26,
+                "h": 160,
+                "x": 0,
+                "y": 94,
+                "radius": 999,
+                "fill": {
+                 "grad": [
+                  "FFD45C",
+                  "F2B544"
+                 ],
+                 "angle": 90
+                }
+               },
+               {
+                "type": "RECT",
+                "name": "Img ui/status/bobber",
+                "w": 26,
+                "h": 26,
+                "x": 0,
+                "y": 82
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Tension",
+          "layout": "H",
+          "gap": 6,
+          "children": [
+           {
+            "name": "Tension LOOSE",
+            "layout": "H",
+            "pad": [
+             3,
+             10,
+             3,
+             10
+            ],
+            "radius": 999,
+            "fill": "F3E9D8",
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "LOOSE",
+              "textStyle": "Aura Fishing/Caption",
+              "color": {
+               "var": "cozy/subtext"
+              },
+              "name": "Label"
+             }
+            ]
+           },
+           {
+            "name": "Tension GOOD",
+            "layout": "H",
+            "pad": [
+             3,
+             10,
+             3,
+             10
+            ],
+            "radius": 999,
+            "fill": "7FD3B0",
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "GOOD",
+              "textStyle": "Aura Fishing/Caption",
+              "color": {
+               "var": "cozy/on-accent"
+              },
+              "name": "Label"
+             }
+            ]
+           },
+           {
+            "name": "Tension SNAP!",
+            "layout": "H",
+            "pad": [
+             3,
+             10,
+             3,
+             10
+            ],
+            "radius": 999,
+            "fill": "FBE0DD",
+            "children": [
+             {
+              "type": "TEXT",
+              "text": "SNAP!",
+              "textStyle": "Aura Fishing/Caption",
+              "color": {
+               "var": "cozy/danger-lip"
+              },
+              "name": "Label"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "x": 60,
+    "y": 830
+   },
+   {
+    "name": "Option E — Bobber Meter",
+    "layout": "V",
+    "gap": 12,
+    "pad": 24,
+    "w": 600,
+    "radius": 24,
+    "fill": {
+     "var": "cozy/panel"
+    },
+    "stroke": {
+     "var": "cozy/track"
+    },
+    "strokeW": 2,
+    "effects": [
+     {
+      "color": "3D4B5C",
+      "a": 0.1,
+      "y": 6,
+      "blur": 18
+     }
+    ],
+    "children": [
+     {
+      "type": "TEXT",
+      "text": "E. Bobber Meter",
+      "textStyle": "Aura Fishing/Title",
+      "color": {
+       "var": "cozy/text"
+      },
+      "name": "Title"
+     },
+     {
+      "type": "TEXT",
+      "text": "Compact pill: the catch bar is a coral/cream bobber, progress is a donut around the mystery fish. Small footprint. Code: visuals only.",
+      "textStyle": "Aura Fishing/Small",
+      "color": {
+       "var": "cozy/subtext"
+      },
+      "name": "Desc",
+      "w": 552
+     },
+     {
+      "name": "Scene",
+      "w": 552,
+      "h": 440,
+      "radius": 18,
+      "clip": true,
+      "fill": {
+       "grad": [
+        "DDF5EE",
+        "A8DCD8"
+       ],
+       "angle": 90
+      },
+      "children": [
+       {
+        "name": "World [skip]",
+        "w": 552,
+        "h": 440,
+        "x": 0,
+        "y": 0,
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Water",
+          "w": 552,
+          "h": 200,
+          "x": 0,
+          "y": 240,
+          "fill": {
+           "hex": "9AD4F5",
+           "opacity": 0.35
+          }
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Island",
+          "w": 300,
+          "h": 80,
+          "x": -60,
+          "y": 205,
+          "fill": {
+           "hex": "7FD3B0",
+           "opacity": 0.5
+          }
+         }
+        ]
+       },
+       {
+        "name": "Reel Minigame",
+        "layout": "V",
+        "gap": 10,
+        "pad": [
+         14,
+         14,
+         18,
+         14
+        ],
+        "cross": "CENTER",
+        "x": 210,
+        "y": 18,
+        "radius": 999,
+        "fill": {
+         "var": "cozy/panel"
+        },
+        "stroke": {
+         "var": "cozy/track"
+        },
+        "strokeW": 2,
+        "effects": [
+         {
+          "color": "3D4B5C",
+          "a": 0.1,
+          "y": 6,
+          "blur": 18
+         }
+        ],
+        "children": [
+         {
+          "name": "Progress Badge",
+          "w": 96,
+          "h": 96,
+          "children": [
+           {
+            "type": "SVG",
+            "name": "Progress Donut",
+            "w": 96,
+            "h": 96,
+            "svg": "<svg width=\"96\" height=\"96\" viewBox=\"0 0 96 96\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M48.0 8.0 A40 40 0 1 1 47.9 8.0\" stroke=\"#E6DCCB\" stroke-width=\"10\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M48.0 8.0 A40 40 0 1 1 10.0 60.4\" stroke=\"#F2B544\" stroke-width=\"10\" stroke-linecap=\"round\" fill=\"none\"/></svg>",
+            "x": 0,
+            "y": 0
+           },
+           {
+            "type": "RECT",
+            "name": "Img fish/MysteryFish",
+            "w": 46,
+            "h": 46,
+            "x": 25,
+            "y": 25
+           }
+          ]
+         },
+         {
+          "name": "Water",
+          "w": 64,
+          "h": 236,
+          "radius": 999,
+          "clip": true,
+          "fill": {
+           "grad": [
+            "CFEFFF",
+            "7FC3EE"
+           ],
+           "angle": 90
+          },
+          "children": [
+           {
+            "type": "ELLIPSE",
+            "name": "Bubble",
+            "w": 10,
+            "h": 10,
+            "x": 13,
+            "y": 35,
+            "fill": {
+             "hex": "FFFFFF",
+             "opacity": 0.5
+            }
+           },
+           {
+            "type": "ELLIPSE",
+            "name": "Bubble",
+            "w": 7,
+            "h": 7,
+            "x": 45,
+            "y": 71,
+            "fill": {
+             "hex": "FFFFFF",
+             "opacity": 0.5
+            }
+           },
+           {
+            "type": "ELLIPSE",
+            "name": "Bubble",
+            "w": 12,
+            "h": 12,
+            "x": 22,
+            "y": 130,
+            "fill": {
+             "hex": "FFFFFF",
+             "opacity": 0.5
+            }
+           },
+           {
+            "type": "ELLIPSE",
+            "name": "Bubble",
+            "w": 8,
+            "h": 8,
+            "x": 48,
+            "y": 177,
+            "fill": {
+             "hex": "FFFFFF",
+             "opacity": 0.5
+            }
+           },
+           {
+            "name": "Catch Bar (Bobber)",
+            "w": 64,
+            "h": 78,
+            "x": 0,
+            "y": 100,
+            "radius": 999,
+            "stroke": "FFFFFF",
+            "strokeW": 3,
+            "fill": {
+             "grad": [
+              "FF9E80",
+              "FF9E80",
+              "FFF8EC",
+              "FFF8EC"
+             ],
+             "angle": 90
+            }
+           },
+           {
+            "type": "RECT",
+            "name": "Img fish/EmberTuna",
+            "w": 46,
+            "h": 46,
+            "x": 9,
+            "y": 116
+           }
+          ]
+         },
+         {
+          "type": "TEXT",
+          "text": "HOLD",
+          "textStyle": "Aura Fishing/Caption",
+          "color": {
+           "var": "cozy/subtext"
+          },
+          "name": "Hint"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "x": 720,
+    "y": 830
+   },
+   {
+    "name": "Option F — Minimal HUD",
+    "layout": "V",
+    "gap": 12,
+    "pad": 24,
+    "w": 600,
+    "radius": 24,
+    "fill": {
+     "var": "cozy/panel"
+    },
+    "stroke": {
+     "var": "cozy/track"
+    },
+    "strokeW": 2,
+    "effects": [
+     {
+      "color": "3D4B5C",
+      "a": 0.1,
+      "y": 6,
+      "blur": 18
+     }
+    ],
+    "children": [
+     {
+      "type": "TEXT",
+      "text": "F. Minimal HUD",
+      "textStyle": "Aura Fishing/Title",
+      "color": {
+       "var": "cozy/text"
+      },
+      "name": "Title"
+     },
+     {
+      "type": "TEXT",
+      "text": "No panel: frosted track floating in the world with a rarity glow, 10 progress pips, big HOLD button for mobile. Code: visuals + touch button.",
+      "textStyle": "Aura Fishing/Small",
+      "color": {
+       "var": "cozy/subtext"
+      },
+      "name": "Desc",
+      "w": 552
+     },
+     {
+      "name": "Scene",
+      "w": 552,
+      "h": 440,
+      "radius": 18,
+      "clip": true,
+      "fill": {
+       "grad": [
+        "DDF5EE",
+        "A8DCD8"
+       ],
+       "angle": 90
+      },
+      "children": [
+       {
+        "name": "World [skip]",
+        "w": 552,
+        "h": 440,
+        "x": 0,
+        "y": 0,
+        "children": [
+         {
+          "type": "RECT",
+          "name": "Water",
+          "w": 552,
+          "h": 200,
+          "x": 0,
+          "y": 240,
+          "fill": {
+           "hex": "9AD4F5",
+           "opacity": 0.35
+          }
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Island",
+          "w": 300,
+          "h": 80,
+          "x": -60,
+          "y": 205,
+          "fill": {
+           "hex": "7FD3B0",
+           "opacity": 0.5
+          }
+         }
+        ]
+       },
+       {
+        "type": "RECT",
+        "name": "Img ui/status/bobber",
+        "w": 34,
+        "h": 34,
+        "x": 150,
+        "y": 300
+       },
+       {
+        "name": "Track",
+        "w": 42,
+        "h": 300,
+        "x": 330,
+        "y": 50,
+        "radius": 999,
+        "clip": true,
+        "fill": {
+         "hex": "FFFFFF",
+         "opacity": 0.55
+        },
+        "stroke": "FFFFFF",
+        "strokeW": 2,
+        "effects": [
+         {
+          "color": "B07CF0",
+          "a": 0.55,
+          "blur": 22
+         }
+        ],
+        "children": [
+         {
+          "name": "Catch Bar",
+          "w": 42,
+          "h": 76,
+          "x": 0,
+          "y": 140,
+          "radius": 999,
+          "fill": {
+           "hex": "7FD3B0",
+           "opacity": 0.85
+          },
+          "stroke": "FFFFFF",
+          "strokeW": 3
+         },
+         {
+          "type": "RECT",
+          "name": "Img fish/EmberTuna",
+          "w": 34,
+          "h": 34,
+          "x": 4,
+          "y": 160
+         }
+        ]
+       },
+       {
+        "name": "Progress Pips",
+        "layout": "V",
+        "gap": 8,
+        "x": 300,
+        "y": 96,
+        "children": [
+         {
+          "type": "ELLIPSE",
+          "name": "Pip",
+          "w": 14,
+          "h": 14,
+          "fill": {
+           "var": "cozy/track"
+          },
+          "stroke": "FFFFFF",
+          "strokeW": 2
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Pip",
+          "w": 14,
+          "h": 14,
+          "fill": {
+           "var": "cozy/track"
+          },
+          "stroke": "FFFFFF",
+          "strokeW": 2
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Pip",
+          "w": 14,
+          "h": 14,
+          "fill": {
+           "var": "cozy/track"
+          },
+          "stroke": "FFFFFF",
+          "strokeW": 2
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Pip",
+          "w": 14,
+          "h": 14,
+          "fill": {
+           "grad": [
+            "FFD45C",
+            "F2B544"
+           ],
+           "angle": 90
+          },
+          "stroke": "FFFFFF",
+          "strokeW": 2
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Pip",
+          "w": 14,
+          "h": 14,
+          "fill": {
+           "grad": [
+            "FFD45C",
+            "F2B544"
+           ],
+           "angle": 90
+          },
+          "stroke": "FFFFFF",
+          "strokeW": 2
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Pip",
+          "w": 14,
+          "h": 14,
+          "fill": {
+           "grad": [
+            "FFD45C",
+            "F2B544"
+           ],
+           "angle": 90
+          },
+          "stroke": "FFFFFF",
+          "strokeW": 2
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Pip",
+          "w": 14,
+          "h": 14,
+          "fill": {
+           "grad": [
+            "FFD45C",
+            "F2B544"
+           ],
+           "angle": 90
+          },
+          "stroke": "FFFFFF",
+          "strokeW": 2
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Pip",
+          "w": 14,
+          "h": 14,
+          "fill": {
+           "grad": [
+            "FFD45C",
+            "F2B544"
+           ],
+           "angle": 90
+          },
+          "stroke": "FFFFFF",
+          "strokeW": 2
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Pip",
+          "w": 14,
+          "h": 14,
+          "fill": {
+           "grad": [
+            "FFD45C",
+            "F2B544"
+           ],
+           "angle": 90
+          },
+          "stroke": "FFFFFF",
+          "strokeW": 2
+         },
+         {
+          "type": "ELLIPSE",
+          "name": "Pip",
+          "w": 14,
+          "h": 14,
+          "fill": {
+           "grad": [
+            "FFD45C",
+            "F2B544"
+           ],
+           "angle": 90
+          },
+          "stroke": "FFFFFF",
+          "strokeW": 2
+         }
+        ]
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4328",
+        "variant": "Rarity=Epic",
+        "name": "Tag Epic",
+        "x": 322,
+        "y": 18
+       },
+       {
+        "type": "INSTANCE",
+        "ref": "3487:4298",
+        "variant": "Style=Primary",
+        "texts": {
+         "Label": "HOLD"
+        },
+        "name": "Btn Hold",
+        "x": 420,
+        "y": 368
+       }
+      ]
+     }
+    ],
+    "x": 1380,
+    "y": 830
+   }
+  ]
+ }
+}

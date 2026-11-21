@@ -1,0 +1,2420 @@
+[
+ {
+  "pageId": "3465:14993",
+  "replaceName": "Economy · 1 HUD + Streak (C12/C14/C19)",
+  "tree": {
+   "type": "SECTION",
+   "name": "Economy · 1 HUD + Streak (C12/C14/C19)",
+   "fill": "F3E9D8",
+   "x": 14400,
+   "y": 0,
+   "children": [
+    {
+     "type": "TEXT",
+     "text": "Economy UI · 1 — HUD + Streak",
+     "textStyle": "Aura Fishing/Display",
+     "color": {
+      "var": "cozy/text"
+     },
+     "name": "Title",
+     "x": 60,
+     "y": 40
+    },
+    {
+     "name": "HUD Frame",
+     "layout": "V",
+     "gap": 12,
+     "x": 60,
+     "y": 110,
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "01 · HUD (economy)",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "name": "HUD · Economy",
+       "w": 1280,
+       "h": 720,
+       "radius": 0,
+       "clip": true,
+       "children": [
+        {
+         "name": "World [skip]",
+         "w": 1280,
+         "h": 720,
+         "x": 0,
+         "y": 0,
+         "fill": {
+          "grad": [
+           "DDF5EE",
+           "A8DCD8"
+          ],
+          "angle": 90
+         },
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Water",
+           "w": 1280,
+           "h": 300,
+           "x": 0,
+           "y": 420,
+           "fill": {
+            "hex": "9AD4F5",
+            "opacity": 0.35
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Island",
+           "w": 560,
+           "h": 130,
+           "x": 360,
+           "y": 370,
+           "fill": {
+            "hex": "7FD3B0",
+            "opacity": 0.55
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Island Top",
+           "w": 360,
+           "h": 70,
+           "x": 460,
+           "y": 372,
+           "fill": {
+            "hex": "4FAF8A",
+            "opacity": 0.35
+           }
+          }
+         ]
+        },
+        {
+         "name": "Character [skip]",
+         "w": 44,
+         "h": 86,
+         "x": 618,
+         "y": 330,
+         "children": [
+          {
+           "type": "ELLIPSE",
+           "name": "Head",
+           "w": 30,
+           "h": 30,
+           "x": 7,
+           "y": 0,
+           "fill": {
+            "hex": "FFD9B3"
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "RECT",
+           "name": "Body",
+           "w": 36,
+           "h": 40,
+           "x": 4,
+           "y": 30,
+           "radius": 10,
+           "fill": {
+            "hex": "6BB3DE"
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Legs",
+           "w": 28,
+           "h": 18,
+           "x": 8,
+           "y": 68,
+           "radius": 6,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.7
+           }
+          }
+         ]
+        },
+        {
+         "name": "Name Tag VIP",
+         "layout": "V",
+         "gap": 0,
+         "cross": "CENTER",
+         "w": 180,
+         "x": 550,
+         "y": 274,
+         "children": [
+          {
+           "name": "Name Row",
+           "layout": "H",
+           "gap": 4,
+           "cross": "CENTER",
+           "children": [
+            {
+             "type": "RECT",
+             "name": "Img ui/icons/vip",
+             "w": 22,
+             "h": 22,
+             "fill": {
+              "hex": "F2B544"
+             },
+             "radius": 10
+            },
+            {
+             "type": "TEXT",
+             "text": "PipFisher",
+             "font": {
+              "family": "Fredoka One",
+              "style": "Regular"
+             },
+             "size": 20,
+             "color": "F2B544",
+             "name": "Name",
+             "textStrokeW": 3,
+             "textStroke": "3D4B5C"
+            }
+           ]
+          },
+          {
+           "type": "TEXT",
+           "text": "Lv.42",
+           "font": {
+            "family": "Fredoka One",
+            "style": "Regular"
+           },
+           "size": 13,
+           "color": "FFFFFF",
+           "name": "Level",
+           "textStrokeW": 2,
+           "textStroke": "3D4B5C"
+          }
+         ]
+        },
+        {
+         "name": "Stats",
+         "layout": "V",
+         "gap": 6,
+         "x": 16,
+         "y": 70,
+         "children": [
+          {
+           "name": "Level Row",
+           "layout": "H",
+           "gap": 10,
+           "cross": "CENTER",
+           "pad": [
+            0,
+            5,
+            0,
+            5
+           ],
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "Lv.12",
+             "font": {
+              "family": "Fredoka One",
+              "style": "Regular"
+             },
+             "size": 30,
+             "color": "FFFFFF",
+             "name": "Level",
+             "textStrokeW": 3,
+             "textStroke": "3D4B5C"
+            },
+            {
+             "type": "TEXT",
+             "text": "340 / 900 XP",
+             "font": {
+              "family": "Fredoka One",
+              "style": "Regular"
+             },
+             "size": 16,
+             "color": "FFFFFF",
+             "name": "XP Text",
+             "textStrokeW": 2.5,
+             "textStroke": "3D4B5C"
+            }
+           ]
+          },
+          {
+           "name": "Currencies",
+           "layout": "H",
+           "gap": 6,
+           "pad": [
+            0,
+            0,
+            0,
+            5
+           ],
+           "children": [
+            {
+             "type": "INSTANCE",
+             "ref": "3487:4313",
+             "variant": "Type=Coins",
+             "texts": {
+              "Value": "12.4k"
+             },
+             "name": "Coins"
+            },
+            {
+             "type": "INSTANCE",
+             "ref": "3487:4313",
+             "variant": "Type=Gems",
+             "texts": {
+              "Value": "320"
+             },
+             "name": "Gems"
+            },
+            {
+             "name": "Pearls",
+             "layout": "H",
+             "gap": 6,
+             "pad": [
+              6,
+              14,
+              6,
+              8
+             ],
+             "cross": "CENTER",
+             "radius": 999,
+             "fill": {
+              "var": "cozy/panel"
+             },
+             "stroke": {
+              "var": "cozy/track"
+             },
+             "strokeW": 2,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/status/pearl",
+               "w": 24,
+               "h": 24,
+               "fill": {
+                "hex": "E8E2F7"
+               },
+               "radius": 999
+              },
+              {
+               "type": "TEXT",
+               "text": "1,250",
+               "textStyle": "Aura Fishing/Number",
+               "color": {
+                "var": "cozy/text"
+               },
+               "name": "Value"
+              },
+              {
+               "type": "TEXT",
+               "text": "+1.5/m",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/mint-lip"
+               },
+               "name": "Rate"
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Boosts",
+           "layout": "H",
+           "gap": 10,
+           "pad": [
+            4,
+            0,
+            0,
+            7
+           ],
+           "children": [
+            {
+             "name": "Boost Coins",
+             "w": 48,
+             "h": 60,
+             "clip": false,
+             "children": [
+              {
+               "type": "ELLIPSE",
+               "name": "Disc",
+               "w": 48,
+               "h": 48,
+               "x": 0,
+               "y": 0,
+               "fill": {
+                "var": "cozy/panel"
+               }
+              },
+              {
+               "type": "SVG",
+               "name": "Ring",
+               "w": 48,
+               "h": 48,
+               "svg": "<svg width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24.0 3.0 A21.0 21.0 0 0 1 24.0 45.0\" stroke=\"#DDD0BA\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M24.0 45.0 A21.0 21.0 0 0 1 24.0 3.0\" stroke=\"#DDD0BA\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M24.0 3.0 A21.0 21.0 0 0 1 24.0 45.0\" stroke=\"#F2B544\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M24.0 45.0 A21.0 21.0 0 0 1 3.0 24.0\" stroke=\"#F2B544\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"/></svg>",
+               "x": 0,
+               "y": 0
+              },
+              {
+               "type": "RECT",
+               "name": "Img ui/shop/boost_coins",
+               "w": 28,
+               "h": 28,
+               "x": 10.0,
+               "y": 10.0
+              },
+              {
+               "name": "Mult",
+               "layout": "H",
+               "pad": [
+                1,
+                5,
+                1,
+                5
+               ],
+               "radius": 999,
+               "x": 28,
+               "y": -4,
+               "fill": {
+                "hex": "F2B544"
+               },
+               "stroke": "FFFFFF",
+               "strokeW": 2,
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "2x",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 11,
+                 "color": "FFFFFF",
+                 "name": "Value"
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "1h",
+               "font": {
+                "family": "Fredoka One",
+                "style": "Regular"
+               },
+               "size": 14,
+               "color": "FFFFFF",
+               "name": "Time",
+               "textStrokeW": 2.5,
+               "align": "CENTER",
+               "w": 48,
+               "x": 0,
+               "y": 42,
+               "textStroke": "3D4B5C"
+              }
+             ]
+            },
+            {
+             "name": "Boost Pearls",
+             "w": 48,
+             "h": 60,
+             "clip": false,
+             "children": [
+              {
+               "type": "ELLIPSE",
+               "name": "Disc",
+               "w": 48,
+               "h": 48,
+               "x": 0,
+               "y": 0,
+               "fill": {
+                "var": "cozy/panel"
+               }
+              },
+              {
+               "type": "SVG",
+               "name": "Ring",
+               "w": 48,
+               "h": 48,
+               "svg": "<svg width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24.0 3.0 A21.0 21.0 0 0 1 24.0 45.0\" stroke=\"#DDD0BA\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M24.0 45.0 A21.0 21.0 0 0 1 24.0 3.0\" stroke=\"#DDD0BA\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M24.0 3.0 A21.0 21.0 0 0 1 24.0 45.0\" stroke=\"#B79CF2\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M24.0 45.0 A21.0 21.0 0 0 1 21.3 44.8\" stroke=\"#B79CF2\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"/></svg>",
+               "x": 0,
+               "y": 0
+              },
+              {
+               "type": "RECT",
+               "name": "Img ui/shop/boost_pearls",
+               "w": 28,
+               "h": 28,
+               "x": 10.0,
+               "y": 10.0
+              },
+              {
+               "name": "Mult",
+               "layout": "H",
+               "pad": [
+                1,
+                5,
+                1,
+                5
+               ],
+               "radius": 999,
+               "x": 28,
+               "y": -4,
+               "fill": {
+                "hex": "B79CF2"
+               },
+               "stroke": "FFFFFF",
+               "strokeW": 2,
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "2x",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 11,
+                 "color": "FFFFFF",
+                 "name": "Value"
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "1D",
+               "font": {
+                "family": "Fredoka One",
+                "style": "Regular"
+               },
+               "size": 14,
+               "color": "FFFFFF",
+               "name": "Time",
+               "textStrokeW": 2.5,
+               "align": "CENTER",
+               "w": 48,
+               "x": 0,
+               "y": 42,
+               "textStroke": "3D4B5C"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Menu",
+         "layout": "V",
+         "gap": 10,
+         "x": 16,
+         "y": 292,
+         "children": [
+          {
+           "name": "Btn Shop",
+           "layout": "V",
+           "gap": 2,
+           "w": 80,
+           "h": 88,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Tile",
+             "w": 64,
+             "h": 64,
+             "radius": 20,
+             "fill": {
+              "var": "cozy/panel"
+             },
+             "stroke": {
+              "var": "cozy/track"
+             },
+             "strokeW": 2,
+             "layout": "H",
+             "main": "CENTER",
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/icons/shop",
+               "w": 50,
+               "h": 50
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "Shop",
+             "font": {
+              "family": "Fredoka One",
+              "style": "Regular"
+             },
+             "size": 14,
+             "color": "FFFFFF",
+             "name": "Label",
+             "textStroke": "3D4B5C",
+             "textStrokeW": 2
+            }
+           ]
+          },
+          {
+           "name": "Btn Auras",
+           "layout": "V",
+           "gap": 2,
+           "w": 80,
+           "h": 88,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Tile",
+             "w": 64,
+             "h": 64,
+             "radius": 20,
+             "fill": {
+              "var": "cozy/panel"
+             },
+             "stroke": {
+              "var": "cozy/track"
+             },
+             "strokeW": 2,
+             "layout": "H",
+             "main": "CENTER",
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/icons/auras",
+               "w": 50,
+               "h": 50
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "Auras",
+             "font": {
+              "family": "Fredoka One",
+              "style": "Regular"
+             },
+             "size": 14,
+             "color": "FFFFFF",
+             "name": "Label",
+             "textStroke": "3D4B5C",
+             "textStrokeW": 2
+            }
+           ]
+          },
+          {
+           "name": "Btn Fishdex",
+           "layout": "V",
+           "gap": 2,
+           "w": 80,
+           "h": 88,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Tile",
+             "w": 64,
+             "h": 64,
+             "radius": 20,
+             "fill": {
+              "var": "cozy/panel"
+             },
+             "stroke": {
+              "var": "cozy/track"
+             },
+             "strokeW": 2,
+             "layout": "H",
+             "main": "CENTER",
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/icons/fishdex",
+               "w": 50,
+               "h": 50
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "Fishdex",
+             "font": {
+              "family": "Fredoka One",
+              "style": "Regular"
+             },
+             "size": 14,
+             "color": "FFFFFF",
+             "name": "Label",
+             "textStroke": "3D4B5C",
+             "textStrokeW": 2
+            }
+           ]
+          },
+          {
+           "name": "Btn Menu",
+           "layout": "V",
+           "gap": 2,
+           "w": 80,
+           "h": 88,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Tile",
+             "w": 64,
+             "h": 64,
+             "radius": 20,
+             "fill": "D3ECFA",
+             "stroke": {
+              "var": "cozy/track"
+             },
+             "strokeW": 2,
+             "layout": "H",
+             "main": "CENTER",
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img equipment/StarterPouch",
+               "w": 50,
+               "h": 50
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "Menu",
+             "font": {
+              "family": "Fredoka One",
+              "style": "Regular"
+             },
+             "size": 14,
+             "color": "FFFFFF",
+             "name": "Label",
+             "textStroke": "3D4B5C",
+             "textStrokeW": 2
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Actions",
+         "layout": "V",
+         "gap": 10,
+         "w": 200,
+         "x": 1064,
+         "y": 330,
+         "children": [
+          {
+           "type": "INSTANCE",
+           "ref": "3487:4313",
+           "variant": "Type=Bag",
+           "texts": {
+            "Value": "18 / 50"
+           },
+           "name": "Bag"
+          },
+          {
+           "type": "INSTANCE",
+           "ref": "3487:4298",
+           "variant": "Style=Ghost",
+           "texts": {
+            "Label": "AUTO: OFF"
+           },
+           "name": "Btn Auto",
+           "fillW": true
+          },
+          {
+           "type": "INSTANCE",
+           "ref": "3487:4298",
+           "variant": "Style=Gold",
+           "texts": {
+            "Label": "SELL ALL"
+           },
+           "name": "Btn Sell",
+           "fillW": true
+          }
+         ]
+        },
+        {
+         "name": "Cast Row",
+         "layout": "H",
+         "w": 1280,
+         "x": 0,
+         "y": 600,
+         "gap": 10,
+         "main": "CENTER",
+         "cross": "MAX",
+         "children": [
+          {
+           "name": "Cast",
+           "w": 115,
+           "h": 67,
+           "clip": false,
+           "children": [
+            {
+             "type": "INSTANCE",
+             "ref": "3487:4298",
+             "variant": "Style=Primary",
+             "texts": {
+              "Label": "CAST"
+             },
+             "name": "Btn Cast",
+             "x": 0,
+             "y": 10
+            },
+            {
+             "name": "Streak",
+             "layout": "H",
+             "gap": 2,
+             "pad": [
+              2,
+              7,
+              2,
+              5
+             ],
+             "cross": "CENTER",
+             "radius": 999,
+             "fill": {
+              "grad": [
+               "FFB199",
+               "FF7A59"
+              ],
+              "angle": 90
+             },
+             "stroke": "FFFFFF",
+             "strokeW": 2,
+             "children": [
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"12\" height=\"12\" viewBox=\"0 0 14 14\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7 1c.6 2.2 3.6 3.6 3.6 7A3.6 3.6 0 0 1 3.4 8c0-1.6.8-2.6 1.6-3.3C5 6 5.6 6.6 6.3 6.6 6.3 4.6 6 2.6 7 1z\" fill=\"#FFFFFF\"/></svg>",
+               "w": 12,
+               "h": 12,
+               "name": "Icon flame"
+              },
+              {
+               "type": "TEXT",
+               "text": "x7",
+               "font": {
+                "family": "Fredoka One",
+                "style": "Regular"
+               },
+               "size": 13,
+               "color": "FFFFFF",
+               "name": "Count"
+              }
+             ],
+             "x": 78,
+             "y": 0
+            }
+           ]
+          },
+          {
+           "name": "Btn Depth",
+           "layout": "V",
+           "gap": 0,
+           "pad": [
+            6,
+            14,
+            9,
+            14
+           ],
+           "cross": "CENTER",
+           "radius": 16,
+           "fill": {
+            "var": "cozy/panel"
+           },
+           "stroke": {
+            "var": "cozy/track"
+           },
+           "strokeW": 2,
+           "strokeSides": {
+            "b": 4
+           },
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "DEPTH",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/subtext"
+             },
+             "name": "Label"
+            },
+            {
+             "type": "TEXT",
+             "text": "AUTO",
+             "font": {
+              "family": "Fredoka One",
+              "style": "Regular"
+             },
+             "size": 18,
+             "color": "3D4B5C",
+             "name": "Value"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "[skip] Roblox CoreGui (guide)",
+         "w": 1280,
+         "h": 720,
+         "x": 0,
+         "y": 0,
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Top Bar",
+           "w": 1280,
+           "h": 58,
+           "x": 0,
+           "y": 0,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Roblox Menu Btn",
+           "w": 44,
+           "h": 44,
+           "x": 12,
+           "y": 7,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Chat Btn",
+           "w": 44,
+           "h": 44,
+           "x": 64,
+           "y": 7,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          },
+          {
+           "type": "TEXT",
+           "text": "ROBLOX TOP BAR (58px)  —  keep clear",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 124,
+           "y": 22
+          },
+          {
+           "type": "RECT",
+           "name": "Chat Window (when open)",
+           "w": 380,
+           "h": 210,
+           "x": 8,
+           "y": 64,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.04
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "CHAT WINDOW (desktop, when open)",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 20,
+           "y": 248
+          },
+          {
+           "type": "RECT",
+           "name": "Leaderboard",
+           "w": 236,
+           "h": 170,
+           "x": 1032,
+           "y": 64,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.06
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "LEADERBOARD (leaderstats)",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 1044,
+           "y": 210
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Mobile Thumbstick",
+           "w": 150,
+           "h": 150,
+           "x": 50,
+           "y": 510,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "MOBILE THUMBSTICK",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 62,
+           "y": 668
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Mobile Jump",
+           "w": 96,
+           "h": 96,
+           "x": 1120,
+           "y": 550,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "MOBILE JUMP",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 1122,
+           "y": 660
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Parts",
+     "layout": "V",
+     "gap": 30,
+     "x": 1400,
+     "y": 150,
+     "children": [
+      {
+       "name": "Hot Streak · tag on CAST",
+       "layout": "V",
+       "gap": 10,
+       "pad": 24,
+       "w": 760,
+       "radius": 24,
+       "fill": {
+        "var": "cozy/panel"
+       },
+       "stroke": {
+        "var": "cozy/track"
+       },
+       "strokeW": 2,
+       "effects": [
+        {
+         "color": "3D4B5C",
+         "a": 0.1,
+         "y": 6,
+         "blur": 18
+        }
+       ],
+       "children": [
+        {
+         "type": "TEXT",
+         "text": "Hot Streak · tag on CAST",
+         "textStyle": "Aura Fishing/Title",
+         "color": {
+          "var": "cozy/text"
+         },
+         "name": "Title"
+        },
+        {
+         "type": "TEXT",
+         "text": "Small tag pinned to CAST's top-right corner. +5% coins per stack, MAX x10. Warm 1-4 (gold), hot 5-9 (coral), x10 blaze (glow). Auto catches do not change it; a line snap or missed hook shows LOST for ~1.5 s, then it fades. Hidden at x0. The % shows on the Catch Result card.",
+         "textStyle": "Aura Fishing/Small",
+         "color": {
+          "var": "cozy/subtext"
+         },
+         "name": "Desc",
+         "w": 712
+        },
+        {
+         "name": "Stage",
+         "layout": "H",
+         "gap": 24,
+         "pad": 24,
+         "cross": "CENTER",
+         "radius": 18,
+         "fillW": true,
+         "fill": {
+          "grad": [
+           "DDF5EE",
+           "A8DCD8"
+          ],
+          "angle": 90
+         },
+         "children": [
+          {
+           "name": "x2",
+           "w": 115,
+           "h": 67,
+           "clip": false,
+           "children": [
+            {
+             "type": "INSTANCE",
+             "ref": "3487:4298",
+             "variant": "Style=Primary",
+             "texts": {
+              "Label": "CAST"
+             },
+             "name": "Btn Cast",
+             "x": 0,
+             "y": 10
+            },
+            {
+             "name": "Streak",
+             "layout": "H",
+             "gap": 2,
+             "pad": [
+              2,
+              7,
+              2,
+              5
+             ],
+             "cross": "CENTER",
+             "radius": 999,
+             "fill": {
+              "hex": "F2B544"
+             },
+             "stroke": "FFFFFF",
+             "strokeW": 2,
+             "children": [
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"12\" height=\"12\" viewBox=\"0 0 14 14\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7 1c.6 2.2 3.6 3.6 3.6 7A3.6 3.6 0 0 1 3.4 8c0-1.6.8-2.6 1.6-3.3C5 6 5.6 6.6 6.3 6.6 6.3 4.6 6 2.6 7 1z\" fill=\"#FFFFFF\"/></svg>",
+               "w": 12,
+               "h": 12,
+               "name": "Icon flame"
+              },
+              {
+               "type": "TEXT",
+               "text": "x2",
+               "font": {
+                "family": "Fredoka One",
+                "style": "Regular"
+               },
+               "size": 13,
+               "color": "FFFFFF",
+               "name": "Count"
+              }
+             ],
+             "x": 78,
+             "y": 0
+            }
+           ]
+          },
+          {
+           "name": "x7",
+           "w": 115,
+           "h": 67,
+           "clip": false,
+           "children": [
+            {
+             "type": "INSTANCE",
+             "ref": "3487:4298",
+             "variant": "Style=Primary",
+             "texts": {
+              "Label": "CAST"
+             },
+             "name": "Btn Cast",
+             "x": 0,
+             "y": 10
+            },
+            {
+             "name": "Streak",
+             "layout": "H",
+             "gap": 2,
+             "pad": [
+              2,
+              7,
+              2,
+              5
+             ],
+             "cross": "CENTER",
+             "radius": 999,
+             "fill": {
+              "grad": [
+               "FFB199",
+               "FF7A59"
+              ],
+              "angle": 90
+             },
+             "stroke": "FFFFFF",
+             "strokeW": 2,
+             "children": [
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"12\" height=\"12\" viewBox=\"0 0 14 14\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7 1c.6 2.2 3.6 3.6 3.6 7A3.6 3.6 0 0 1 3.4 8c0-1.6.8-2.6 1.6-3.3C5 6 5.6 6.6 6.3 6.6 6.3 4.6 6 2.6 7 1z\" fill=\"#FFFFFF\"/></svg>",
+               "w": 12,
+               "h": 12,
+               "name": "Icon flame"
+              },
+              {
+               "type": "TEXT",
+               "text": "x7",
+               "font": {
+                "family": "Fredoka One",
+                "style": "Regular"
+               },
+               "size": 13,
+               "color": "FFFFFF",
+               "name": "Count"
+              }
+             ],
+             "x": 78,
+             "y": 0
+            }
+           ]
+          },
+          {
+           "name": "x10",
+           "w": 115,
+           "h": 67,
+           "clip": false,
+           "children": [
+            {
+             "type": "INSTANCE",
+             "ref": "3487:4298",
+             "variant": "Style=Primary",
+             "texts": {
+              "Label": "CAST"
+             },
+             "name": "Btn Cast",
+             "x": 0,
+             "y": 10
+            },
+            {
+             "name": "Streak",
+             "layout": "H",
+             "gap": 2,
+             "pad": [
+              2,
+              7,
+              2,
+              5
+             ],
+             "cross": "CENTER",
+             "radius": 999,
+             "fill": {
+              "grad": [
+               "FFD45C",
+               "FF7A59"
+              ],
+              "angle": 90
+             },
+             "stroke": "FFFFFF",
+             "strokeW": 2,
+             "children": [
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"12\" height=\"12\" viewBox=\"0 0 14 14\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7 1c.6 2.2 3.6 3.6 3.6 7A3.6 3.6 0 0 1 3.4 8c0-1.6.8-2.6 1.6-3.3C5 6 5.6 6.6 6.3 6.6 6.3 4.6 6 2.6 7 1z\" fill=\"#FFFFFF\"/></svg>",
+               "w": 12,
+               "h": 12,
+               "name": "Icon flame"
+              },
+              {
+               "type": "TEXT",
+               "text": "x10",
+               "font": {
+                "family": "Fredoka One",
+                "style": "Regular"
+               },
+               "size": 13,
+               "color": "FFFFFF",
+               "name": "Count"
+              }
+             ],
+             "effects": [
+              {
+               "color": "FF7A59",
+               "a": 0.6,
+               "blur": 10,
+               "spread": 1
+              }
+             ],
+             "x": 70,
+             "y": 0
+            }
+           ]
+          },
+          {
+           "name": "Lost",
+           "w": 115,
+           "h": 67,
+           "clip": false,
+           "children": [
+            {
+             "type": "INSTANCE",
+             "ref": "3487:4298",
+             "variant": "Style=Primary",
+             "texts": {
+              "Label": "CAST"
+             },
+             "name": "Btn Cast",
+             "x": 0,
+             "y": 10
+            },
+            {
+             "name": "Streak",
+             "layout": "H",
+             "gap": 2,
+             "pad": [
+              2,
+              7,
+              2,
+              5
+             ],
+             "cross": "CENTER",
+             "radius": 999,
+             "fill": {
+              "hex": "B8C2CC"
+             },
+             "stroke": "FFFFFF",
+             "strokeW": 2,
+             "children": [
+              {
+               "type": "SVG",
+               "svg": "<svg width=\"12\" height=\"12\" viewBox=\"0 0 14 14\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7 1c.6 2.2 3.6 3.6 3.6 7A3.6 3.6 0 0 1 3.4 8c0-1.6.8-2.6 1.6-3.3C5 6 5.6 6.6 6.3 6.6 6.3 4.6 6 2.6 7 1z\" fill=\"#FFFFFF\"/></svg>",
+               "w": 12,
+               "h": 12,
+               "name": "Icon flame"
+              },
+              {
+               "type": "TEXT",
+               "text": "LOST",
+               "font": {
+                "family": "Fredoka One",
+                "style": "Regular"
+               },
+               "size": 13,
+               "color": "FFFFFF",
+               "name": "Count"
+              }
+             ],
+             "x": 70,
+             "y": 0
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Boosts · countdown rings",
+       "layout": "V",
+       "gap": 10,
+       "pad": 24,
+       "w": 760,
+       "radius": 24,
+       "fill": {
+        "var": "cozy/panel"
+       },
+       "stroke": {
+        "var": "cozy/track"
+       },
+       "strokeW": 2,
+       "effects": [
+        {
+         "color": "3D4B5C",
+         "a": 0.1,
+         "y": 6,
+         "blur": 18
+        }
+       ],
+       "children": [
+        {
+         "type": "TEXT",
+         "text": "Boosts · countdown rings",
+         "textStyle": "Aura Fishing/Title",
+         "color": {
+          "var": "cozy/text"
+         },
+         "name": "Title"
+        },
+        {
+         "type": "TEXT",
+         "text": "One ring per active boost, under the currencies. The coloured arc is the time left and drains clockwise. Time shows only its biggest unit: 1D+ → 1D, 2D · 1h+ → 23h, 1h · 1m+ → 45m, 20m · under 1m → 30s. Gone at 0.",
+         "textStyle": "Aura Fishing/Small",
+         "color": {
+          "var": "cozy/subtext"
+         },
+         "name": "Desc",
+         "w": 712
+        },
+        {
+         "name": "Stage",
+         "layout": "H",
+         "gap": 24,
+         "pad": 24,
+         "cross": "CENTER",
+         "radius": 18,
+         "fillW": true,
+         "fill": {
+          "grad": [
+           "DDF5EE",
+           "A8DCD8"
+          ],
+          "angle": 90
+         },
+         "children": [
+          {
+           "name": "Boost Coins",
+           "w": 48,
+           "h": 60,
+           "clip": false,
+           "children": [
+            {
+             "type": "ELLIPSE",
+             "name": "Disc",
+             "w": 48,
+             "h": 48,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "var": "cozy/panel"
+             }
+            },
+            {
+             "type": "SVG",
+             "name": "Ring",
+             "w": 48,
+             "h": 48,
+             "svg": "<svg width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24.0 3.0 A21.0 21.0 0 0 1 24.0 45.0\" stroke=\"#DDD0BA\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M24.0 45.0 A21.0 21.0 0 0 1 24.0 3.0\" stroke=\"#DDD0BA\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M24.0 3.0 A21.0 21.0 0 0 1 24.0 45.0\" stroke=\"#F2B544\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M24.0 45.0 A21.0 21.0 0 0 1 24.0 3.0\" stroke=\"#F2B544\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"/></svg>",
+             "x": 0,
+             "y": 0
+            },
+            {
+             "type": "RECT",
+             "name": "Img ui/shop/boost_coins",
+             "w": 28,
+             "h": 28,
+             "x": 10.0,
+             "y": 10.0
+            },
+            {
+             "name": "Mult",
+             "layout": "H",
+             "pad": [
+              1,
+              5,
+              1,
+              5
+             ],
+             "radius": 999,
+             "x": 28,
+             "y": -4,
+             "fill": {
+              "hex": "F2B544"
+             },
+             "stroke": "FFFFFF",
+             "strokeW": 2,
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "2x",
+               "font": {
+                "family": "Fredoka One",
+                "style": "Regular"
+               },
+               "size": 11,
+               "color": "FFFFFF",
+               "name": "Value"
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "2D",
+             "font": {
+              "family": "Fredoka One",
+              "style": "Regular"
+             },
+             "size": 14,
+             "color": "FFFFFF",
+             "name": "Time",
+             "textStrokeW": 2.5,
+             "align": "CENTER",
+             "w": 48,
+             "x": 0,
+             "y": 42,
+             "textStroke": "3D4B5C"
+            }
+           ]
+          },
+          {
+           "name": "Boost Coins",
+           "w": 48,
+           "h": 60,
+           "clip": false,
+           "children": [
+            {
+             "type": "ELLIPSE",
+             "name": "Disc",
+             "w": 48,
+             "h": 48,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "var": "cozy/panel"
+             }
+            },
+            {
+             "type": "SVG",
+             "name": "Ring",
+             "w": 48,
+             "h": 48,
+             "svg": "<svg width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24.0 3.0 A21.0 21.0 0 0 1 24.0 45.0\" stroke=\"#DDD0BA\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M24.0 45.0 A21.0 21.0 0 0 1 24.0 3.0\" stroke=\"#DDD0BA\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M24.0 3.0 A21.0 21.0 0 0 1 26.7 44.8\" stroke=\"#F2B544\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"/></svg>",
+             "x": 0,
+             "y": 0
+            },
+            {
+             "type": "RECT",
+             "name": "Img ui/shop/boost_coins",
+             "w": 28,
+             "h": 28,
+             "x": 10.0,
+             "y": 10.0
+            },
+            {
+             "name": "Mult",
+             "layout": "H",
+             "pad": [
+              1,
+              5,
+              1,
+              5
+             ],
+             "radius": 999,
+             "x": 28,
+             "y": -4,
+             "fill": {
+              "hex": "F2B544"
+             },
+             "stroke": "FFFFFF",
+             "strokeW": 2,
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "2x",
+               "font": {
+                "family": "Fredoka One",
+                "style": "Regular"
+               },
+               "size": 11,
+               "color": "FFFFFF",
+               "name": "Value"
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "23h",
+             "font": {
+              "family": "Fredoka One",
+              "style": "Regular"
+             },
+             "size": 14,
+             "color": "FFFFFF",
+             "name": "Time",
+             "textStrokeW": 2.5,
+             "align": "CENTER",
+             "w": 48,
+             "x": 0,
+             "y": 42,
+             "textStroke": "3D4B5C"
+            }
+           ]
+          },
+          {
+           "name": "Boost Pearls",
+           "w": 48,
+           "h": 60,
+           "clip": false,
+           "children": [
+            {
+             "type": "ELLIPSE",
+             "name": "Disc",
+             "w": 48,
+             "h": 48,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "var": "cozy/panel"
+             }
+            },
+            {
+             "type": "SVG",
+             "name": "Ring",
+             "w": 48,
+             "h": 48,
+             "svg": "<svg width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24.0 3.0 A21.0 21.0 0 0 1 24.0 45.0\" stroke=\"#DDD0BA\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M24.0 45.0 A21.0 21.0 0 0 1 24.0 3.0\" stroke=\"#DDD0BA\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M24.0 3.0 A21.0 21.0 0 0 1 24.0 45.0\" stroke=\"#B79CF2\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M24.0 45.0 A21.0 21.0 0 0 1 5.8 34.5\" stroke=\"#B79CF2\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"/></svg>",
+             "x": 0,
+             "y": 0
+            },
+            {
+             "type": "RECT",
+             "name": "Img ui/shop/boost_pearls",
+             "w": 28,
+             "h": 28,
+             "x": 10.0,
+             "y": 10.0
+            },
+            {
+             "name": "Mult",
+             "layout": "H",
+             "pad": [
+              1,
+              5,
+              1,
+              5
+             ],
+             "radius": 999,
+             "x": 28,
+             "y": -4,
+             "fill": {
+              "hex": "B79CF2"
+             },
+             "stroke": "FFFFFF",
+             "strokeW": 2,
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "2x",
+               "font": {
+                "family": "Fredoka One",
+                "style": "Regular"
+               },
+               "size": 11,
+               "color": "FFFFFF",
+               "name": "Value"
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "1h",
+             "font": {
+              "family": "Fredoka One",
+              "style": "Regular"
+             },
+             "size": 14,
+             "color": "FFFFFF",
+             "name": "Time",
+             "textStrokeW": 2.5,
+             "align": "CENTER",
+             "w": 48,
+             "x": 0,
+             "y": 42,
+             "textStroke": "3D4B5C"
+            }
+           ]
+          },
+          {
+           "name": "Boost Pearls",
+           "w": 48,
+           "h": 60,
+           "clip": false,
+           "children": [
+            {
+             "type": "ELLIPSE",
+             "name": "Disc",
+             "w": 48,
+             "h": 48,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "var": "cozy/panel"
+             }
+            },
+            {
+             "type": "SVG",
+             "name": "Ring",
+             "w": 48,
+             "h": 48,
+             "svg": "<svg width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24.0 3.0 A21.0 21.0 0 0 1 24.0 45.0\" stroke=\"#DDD0BA\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M24.0 45.0 A21.0 21.0 0 0 1 24.0 3.0\" stroke=\"#DDD0BA\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M24.0 3.0 A21.0 21.0 0 0 1 42.2 13.5\" stroke=\"#B79CF2\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"/></svg>",
+             "x": 0,
+             "y": 0
+            },
+            {
+             "type": "RECT",
+             "name": "Img ui/shop/boost_pearls",
+             "w": 28,
+             "h": 28,
+             "x": 10.0,
+             "y": 10.0
+            },
+            {
+             "name": "Mult",
+             "layout": "H",
+             "pad": [
+              1,
+              5,
+              1,
+              5
+             ],
+             "radius": 999,
+             "x": 28,
+             "y": -4,
+             "fill": {
+              "hex": "B79CF2"
+             },
+             "stroke": "FFFFFF",
+             "strokeW": 2,
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "2x",
+               "font": {
+                "family": "Fredoka One",
+                "style": "Regular"
+               },
+               "size": 11,
+               "color": "FFFFFF",
+               "name": "Value"
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "20m",
+             "font": {
+              "family": "Fredoka One",
+              "style": "Regular"
+             },
+             "size": 14,
+             "color": "FFFFFF",
+             "name": "Time",
+             "textStrokeW": 2.5,
+             "align": "CENTER",
+             "w": 48,
+             "x": 0,
+             "y": 42,
+             "textStroke": "3D4B5C"
+            }
+           ]
+          },
+          {
+           "name": "Boost Coins",
+           "w": 48,
+           "h": 60,
+           "clip": false,
+           "children": [
+            {
+             "type": "ELLIPSE",
+             "name": "Disc",
+             "w": 48,
+             "h": 48,
+             "x": 0,
+             "y": 0,
+             "fill": {
+              "var": "cozy/panel"
+             }
+            },
+            {
+             "type": "SVG",
+             "name": "Ring",
+             "w": 48,
+             "h": 48,
+             "svg": "<svg width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24.0 3.0 A21.0 21.0 0 0 1 24.0 45.0\" stroke=\"#DDD0BA\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M24.0 45.0 A21.0 21.0 0 0 1 24.0 3.0\" stroke=\"#DDD0BA\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M24.0 3.0 A21.0 21.0 0 0 1 24.5 3.0\" stroke=\"#F2B544\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"/></svg>",
+             "x": 0,
+             "y": 0
+            },
+            {
+             "type": "RECT",
+             "name": "Img ui/shop/boost_coins",
+             "w": 28,
+             "h": 28,
+             "x": 10.0,
+             "y": 10.0
+            },
+            {
+             "name": "Mult",
+             "layout": "H",
+             "pad": [
+              1,
+              5,
+              1,
+              5
+             ],
+             "radius": 999,
+             "x": 28,
+             "y": -4,
+             "fill": {
+              "hex": "F2B544"
+             },
+             "stroke": "FFFFFF",
+             "strokeW": 2,
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "2x",
+               "font": {
+                "family": "Fredoka One",
+                "style": "Regular"
+               },
+               "size": 11,
+               "color": "FFFFFF",
+               "name": "Value"
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "30s",
+             "font": {
+              "family": "Fredoka One",
+              "style": "Regular"
+             },
+             "size": 14,
+             "color": "FFFFFF",
+             "name": "Time",
+             "textStrokeW": 2.5,
+             "align": "CENTER",
+             "w": 48,
+             "x": 0,
+             "y": 42,
+             "textStroke": "3D4B5C"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "VIP · over the head",
+       "layout": "V",
+       "gap": 10,
+       "pad": 24,
+       "w": 760,
+       "radius": 24,
+       "fill": {
+        "var": "cozy/panel"
+       },
+       "stroke": {
+        "var": "cozy/track"
+       },
+       "strokeW": 2,
+       "effects": [
+        {
+         "color": "3D4B5C",
+         "a": 0.1,
+         "y": 6,
+         "blur": 18
+        }
+       ],
+       "children": [
+        {
+         "type": "TEXT",
+         "text": "VIP · over the head",
+         "textStyle": "Aura Fishing/Title",
+         "color": {
+          "var": "cozy/text"
+         },
+         "name": "Title"
+        },
+        {
+         "type": "TEXT",
+         "text": "BillboardGui on the character only. VIP: gold name + crown (ui/icons/vip). Others keep the white name.",
+         "textStyle": "Aura Fishing/Small",
+         "color": {
+          "var": "cozy/subtext"
+         },
+         "name": "Desc",
+         "w": 712
+        },
+        {
+         "name": "Stage",
+         "layout": "H",
+         "gap": 24,
+         "pad": 24,
+         "cross": "CENTER",
+         "radius": 18,
+         "fillW": true,
+         "fill": {
+          "grad": [
+           "DDF5EE",
+           "A8DCD8"
+          ],
+          "angle": 90
+         },
+         "children": [
+          {
+           "name": "VIP",
+           "w": 200,
+           "h": 150,
+           "children": [
+            {
+             "name": "Character [skip]",
+             "w": 44,
+             "h": 86,
+             "x": 78,
+             "y": 60,
+             "children": [
+              {
+               "type": "ELLIPSE",
+               "name": "Head",
+               "w": 30,
+               "h": 30,
+               "x": 7,
+               "y": 0,
+               "fill": {
+                "hex": "FFD9B3"
+               },
+               "stroke": {
+                "hex": "3D4B5C",
+                "opacity": 0.25
+               },
+               "strokeW": 1.5
+              },
+              {
+               "type": "RECT",
+               "name": "Body",
+               "w": 36,
+               "h": 40,
+               "x": 4,
+               "y": 30,
+               "radius": 10,
+               "fill": {
+                "hex": "6BB3DE"
+               }
+              },
+              {
+               "type": "RECT",
+               "name": "Legs",
+               "w": 28,
+               "h": 18,
+               "x": 8,
+               "y": 68,
+               "radius": 6,
+               "fill": {
+                "hex": "3D4B5C",
+                "opacity": 0.7
+               }
+              }
+             ]
+            },
+            {
+             "name": "Name Tag VIP",
+             "layout": "V",
+             "gap": 0,
+             "cross": "CENTER",
+             "w": 180,
+             "x": 10,
+             "y": 4,
+             "children": [
+              {
+               "name": "Name Row",
+               "layout": "H",
+               "gap": 4,
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/icons/vip",
+                 "w": 22,
+                 "h": 22,
+                 "fill": {
+                  "hex": "F2B544"
+                 },
+                 "radius": 10
+                },
+                {
+                 "type": "TEXT",
+                 "text": "PipFisher",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 20,
+                 "color": "F2B544",
+                 "name": "Name",
+                 "textStrokeW": 3,
+                 "textStroke": "3D4B5C"
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "Lv.42",
+               "font": {
+                "family": "Fredoka One",
+                "style": "Regular"
+               },
+               "size": 13,
+               "color": "FFFFFF",
+               "name": "Level",
+               "textStrokeW": 2,
+               "textStroke": "3D4B5C"
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Normal",
+           "w": 200,
+           "h": 150,
+           "children": [
+            {
+             "name": "Character [skip]",
+             "w": 44,
+             "h": 86,
+             "x": 78,
+             "y": 60,
+             "children": [
+              {
+               "type": "ELLIPSE",
+               "name": "Head",
+               "w": 30,
+               "h": 30,
+               "x": 7,
+               "y": 0,
+               "fill": {
+                "hex": "FFD9B3"
+               },
+               "stroke": {
+                "hex": "3D4B5C",
+                "opacity": 0.25
+               },
+               "strokeW": 1.5
+              },
+              {
+               "type": "RECT",
+               "name": "Body",
+               "w": 36,
+               "h": 40,
+               "x": 4,
+               "y": 30,
+               "radius": 10,
+               "fill": {
+                "hex": "6BB3DE"
+               }
+              },
+              {
+               "type": "RECT",
+               "name": "Legs",
+               "w": 28,
+               "h": 18,
+               "x": 8,
+               "y": 68,
+               "radius": 6,
+               "fill": {
+                "hex": "3D4B5C",
+                "opacity": 0.7
+               }
+              }
+             ]
+            },
+            {
+             "name": "Name Tag Normal",
+             "layout": "V",
+             "gap": 0,
+             "cross": "CENTER",
+             "w": 180,
+             "x": 10,
+             "y": 4,
+             "children": [
+              {
+               "name": "Name Row",
+               "layout": "H",
+               "gap": 4,
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "PipFisher",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 20,
+                 "color": "FFFFFF",
+                 "name": "Name",
+                 "textStrokeW": 3,
+                 "textStroke": "3D4B5C"
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "Lv.42",
+               "font": {
+                "family": "Fredoka One",
+                "style": "Regular"
+               },
+               "size": 13,
+               "color": "FFFFFF",
+               "name": "Level",
+               "textStrokeW": 2,
+               "textStroke": "3D4B5C"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "04 · Catch Result (economy)",
+     "layout": "V",
+     "gap": 10,
+     "pad": 24,
+     "w": 520,
+     "radius": 24,
+     "x": 60,
+     "y": 930,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 2,
+     "effects": [
+      {
+       "color": "3D4B5C",
+       "a": 0.1,
+       "y": 6,
+       "blur": 18
+      }
+     ],
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "04 · Catch Result (economy)",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "type": "TEXT",
+       "text": "Tags row adds the streak pill with its % and HOT xN (Hot fish of the hour). Numbers are x10 now, so rewards use k / M.",
+       "textStyle": "Aura Fishing/Small",
+       "color": {
+        "var": "cozy/subtext"
+       },
+       "name": "Desc",
+       "w": 472
+      },
+      {
+       "name": "Catch Card",
+       "layout": "V",
+       "gap": 8,
+       "pad": 22,
+       "w": 400,
+       "radius": 24,
+       "fill": {
+        "var": "cozy/panel"
+       },
+       "stroke": {
+        "var": "cozy/track"
+       },
+       "strokeW": 2,
+       "effects": [
+        {
+         "color": "3D4B5C",
+         "a": 0.1,
+         "y": 6,
+         "blur": 18
+        }
+       ],
+       "children": [
+        {
+         "name": "Tags",
+         "layout": "H",
+         "gap": 6,
+         "cross": "CENTER",
+         "children": [
+          {
+           "type": "INSTANCE",
+           "ref": "3487:4328",
+           "variant": "Rarity=Rare",
+           "name": "Tag Rare"
+          },
+          {
+           "name": "New",
+           "layout": "H",
+           "pad": [
+            3,
+            10,
+            3,
+            10
+           ],
+           "radius": 999,
+           "fill": {
+            "var": "cozy/coral"
+           },
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "NEW!",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/on-accent"
+             },
+             "name": "Label"
+            }
+           ]
+          },
+          {
+           "name": "Streak",
+           "layout": "H",
+           "gap": 4,
+           "pad": [
+            3,
+            10,
+            3,
+            7
+           ],
+           "cross": "CENTER",
+           "radius": 999,
+           "fill": {
+            "grad": [
+             "FFB199",
+             "FF7A59"
+            ],
+            "angle": 90
+           },
+           "children": [
+            {
+             "type": "SVG",
+             "svg": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 14 14\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7 1c.6 2.2 3.6 3.6 3.6 7A3.6 3.6 0 0 1 3.4 8c0-1.6.8-2.6 1.6-3.3C5 6 5.6 6.6 6.3 6.6 6.3 4.6 6 2.6 7 1z\" fill=\"#FFFFFF\"/></svg>",
+             "w": 14,
+             "h": 14,
+             "name": "Icon flame"
+            },
+            {
+             "type": "TEXT",
+             "text": "x7 +35%",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/on-accent"
+             },
+             "name": "Label"
+            }
+           ]
+          },
+          {
+           "name": "Hot",
+           "layout": "H",
+           "gap": 4,
+           "pad": [
+            3,
+            10,
+            3,
+            10
+           ],
+           "cross": "CENTER",
+           "radius": 999,
+           "fill": {
+            "grad": [
+             "FFD45C",
+             "FF7A59"
+            ],
+            "angle": 90
+           },
+           "children": [
+            {
+             "type": "TEXT",
+             "text": "HOT x3",
+             "textStyle": "Aura Fishing/Caption",
+             "color": {
+              "var": "cozy/on-accent"
+             },
+             "name": "Label"
+            }
+           ]
+          },
+          {
+           "type": "RECT",
+           "name": "Img fish/mut_glowing",
+           "w": 30,
+           "h": 30
+          }
+         ]
+        },
+        {
+         "type": "RECT",
+         "name": "Img fish/GlowEel",
+         "w": 356,
+         "h": 150
+        },
+        {
+         "type": "TEXT",
+         "text": "Glowing Glow Eel",
+         "textStyle": "Aura Fishing/Display",
+         "color": {
+          "var": "cozy/rarity/rare"
+         },
+         "name": "FishName"
+        },
+        {
+         "type": "TEXT",
+         "text": "Rare  •  4.2 kg  •  Manual  •  PERFECT",
+         "textStyle": "Aura Fishing/Small",
+         "color": {
+          "var": "cozy/subtext"
+         },
+         "name": "Meta"
+        },
+        {
+         "type": "RECT",
+         "name": "Divider",
+         "h": 2,
+         "w": 300,
+         "fill": {
+          "var": "cozy/track"
+         },
+         "fillW": true
+        },
+        {
+         "name": "Rewards",
+         "layout": "H",
+         "gap": 10,
+         "children": [
+          {
+           "type": "INSTANCE",
+           "ref": "3487:4313",
+           "variant": "Type=Coins",
+           "texts": {
+            "Value": "+14.0k"
+           },
+           "name": "Coins"
+          },
+          {
+           "type": "INSTANCE",
+           "ref": "3487:4313",
+           "variant": "Type=Gems",
+           "texts": {
+            "Value": "+1"
+           },
+           "name": "Gems"
+          }
+         ]
+        },
+        {
+         "type": "TEXT",
+         "text": "Glowing x1.8  •  Manual x1.5  •  Perfect +0.25  •  Streak +35%  •  Hot x3",
+         "textStyle": "Aura Fishing/Caption",
+         "color": {
+          "var": "cozy/subtext"
+         },
+         "name": "Breakdown",
+         "w": 356
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Number format",
+     "layout": "V",
+     "gap": 8,
+     "pad": 24,
+     "w": 600,
+     "radius": 24,
+     "x": 640,
+     "y": 930,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 2,
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "Number format (x10 economy)",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "type": "TEXT",
+       "text": "Below 10,000: full with commas  →  8,450\n10,000 and up: one decimal + k  →  12.4k · 950k\n1,000,000 and up: + M  →  1.2M · 15M\nEvery coin/pearl/price field must fit 6 characters (e.g. 999.9k).",
+       "textStyle": "Aura Fishing/Body",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Rules",
+       "w": 552
+      }
+     ]
+    }
+   ]
+  }
+ }
+]

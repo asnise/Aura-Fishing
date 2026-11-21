@@ -1,0 +1,67 @@
+[
+ {
+  "pageId": "3465:14993",
+  "replaceName": "Roblox 9-slice (export)",
+  "tree": {
+   "type": "SECTION",
+   "name": "Roblox 9-slice (export)",
+   "fill": "F3E9D8",
+   "x": 8900,
+   "y": 12900,
+   "pad": 80,
+   "children": [
+    {
+     "name": "Slice slice_shadow_window",
+     "w": 120,
+     "h": 120,
+     "x": 0,
+     "y": 0,
+     "radius": 24,
+     "fill": "FFFFFF",
+     "effects": [
+      {
+       "color": "3D4B5C",
+       "a": 0.1,
+       "y": 6,
+       "blur": 18
+      }
+     ]
+    },
+    {
+     "name": "Slice slice_shadow_modal",
+     "w": 120,
+     "h": 120,
+     "x": 240,
+     "y": 0,
+     "radius": 36,
+     "fill": "FFFFFF",
+     "effects": [
+      {
+       "color": "3D4B5C",
+       "a": 0.1,
+       "y": 6,
+       "blur": 18
+      }
+     ]
+    },
+    {
+     "name": "Slice slice_shadow_glass",
+     "w": 120,
+     "h": 120,
+     "x": 480,
+     "y": 0,
+     "radius": 48,
+     "fill": "FFFFFF",
+     "effects": [
+      {
+       "color": "3D4B5C",
+       "a": 0.16,
+       "y": 10,
+       "blur": 30
+      }
+     ]
+    }
+   ]
+  }
+ }
+]

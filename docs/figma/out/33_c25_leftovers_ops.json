@@ -1,0 +1,375 @@
+[
+ {
+  "remove": [
+   "3492:16647",
+   "3492:16798",
+   "3492:16865",
+   "3539:27541",
+   "3539:27547"
+  ]
+ },
+ {
+  "replaceId": "3492:16857",
+  "tree": {
+   "name": "Actions",
+   "layout": "V",
+   "gap": 10,
+   "w": 200,
+   "x": 1064,
+   "y": 290,
+   "children": [
+    {
+     "type": "INSTANCE",
+     "ref": "3487:4313",
+     "variant": "Type=Bag",
+     "texts": {
+      "Value": "18 / 50"
+     },
+     "name": "Bag"
+    },
+    {
+     "name": "Depth Stepper",
+     "layout": "H",
+     "w": 200,
+     "h": 57,
+     "pad": [
+      0,
+      8,
+      0,
+      8
+     ],
+     "main": "SPACE_BETWEEN",
+     "cross": "CENTER",
+     "radius": 16,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 2,
+     "children": [
+      {
+       "name": "Btn Minus",
+       "w": 40,
+       "h": 40,
+       "radius": 12,
+       "fill": {
+        "var": "cozy/sand"
+       },
+       "stroke": {
+        "var": "cozy/track"
+       },
+       "strokeW": 2,
+       "strokeSides": {
+        "b": 4
+       },
+       "layout": "H",
+       "main": "CENTER",
+       "cross": "CENTER",
+       "children": [
+        {
+         "type": "TEXT",
+         "text": "-",
+         "font": {
+          "family": "Fredoka One",
+          "style": "Regular"
+         },
+         "size": 26,
+         "color": "3D4B5C",
+         "name": "Label"
+        }
+       ]
+      },
+      {
+       "name": "Readout",
+       "layout": "V",
+       "gap": 0,
+       "cross": "CENTER",
+       "children": [
+        {
+         "type": "TEXT",
+         "text": "DEPTH",
+         "textStyle": "Aura Fishing/Caption",
+         "color": {
+          "var": "cozy/subtext"
+         },
+         "name": "Label"
+        },
+        {
+         "type": "TEXT",
+         "text": "80m",
+         "font": {
+          "family": "Fredoka One",
+          "style": "Regular"
+         },
+         "size": 22,
+         "color": "3D4B5C",
+         "name": "Value"
+        }
+       ]
+      },
+      {
+       "name": "Btn Plus",
+       "w": 40,
+       "h": 40,
+       "radius": 12,
+       "fill": {
+        "var": "cozy/sand"
+       },
+       "stroke": {
+        "var": "cozy/track"
+       },
+       "strokeW": 2,
+       "strokeSides": {
+        "b": 4
+       },
+       "layout": "H",
+       "main": "CENTER",
+       "cross": "CENTER",
+       "children": [
+        {
+         "type": "TEXT",
+         "text": "+",
+         "font": {
+          "family": "Fredoka One",
+          "style": "Regular"
+         },
+         "size": 26,
+         "color": "3D4B5C",
+         "name": "Label"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "INSTANCE",
+     "ref": "3487:4298",
+     "variant": "Style=Ghost",
+     "texts": {
+      "Label": "AUTO: OFF"
+     },
+     "name": "Btn Auto",
+     "fillW": true
+    },
+    {
+     "type": "INSTANCE",
+     "ref": "3487:4298",
+     "variant": "Style=Gold",
+     "texts": {
+      "Label": "SELL ALL"
+     },
+     "name": "Btn Sell",
+     "fillW": true
+    }
+   ]
+  }
+ },
+ {
+  "replaceId": "3539:27531",
+  "tree": {
+   "name": "Actions",
+   "layout": "V",
+   "gap": 10,
+   "w": 200,
+   "x": 1064,
+   "y": 290,
+   "children": [
+    {
+     "type": "INSTANCE",
+     "ref": "3487:4313",
+     "variant": "Type=Bag",
+     "texts": {
+      "Value": "18 / 50"
+     },
+     "name": "Bag"
+    },
+    {
+     "name": "Depth Stepper",
+     "layout": "H",
+     "w": 200,
+     "h": 57,
+     "pad": [
+      0,
+      8,
+      0,
+      8
+     ],
+     "main": "SPACE_BETWEEN",
+     "cross": "CENTER",
+     "radius": 16,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 2,
+     "children": [
+      {
+       "name": "Btn Minus",
+       "w": 40,
+       "h": 40,
+       "radius": 12,
+       "fill": {
+        "var": "cozy/sand"
+       },
+       "stroke": {
+        "var": "cozy/track"
+       },
+       "strokeW": 2,
+       "strokeSides": {
+        "b": 4
+       },
+       "layout": "H",
+       "main": "CENTER",
+       "cross": "CENTER",
+       "children": [
+        {
+         "type": "TEXT",
+         "text": "-",
+         "font": {
+          "family": "Fredoka One",
+          "style": "Regular"
+         },
+         "size": 26,
+         "color": "3D4B5C",
+         "name": "Label"
+        }
+       ]
+      },
+      {
+       "name": "Readout",
+       "layout": "V",
+       "gap": 0,
+       "cross": "CENTER",
+       "children": [
+        {
+         "type": "TEXT",
+         "text": "DEPTH",
+         "textStyle": "Aura Fishing/Caption",
+         "color": {
+          "var": "cozy/subtext"
+         },
+         "name": "Label"
+        },
+        {
+         "type": "TEXT",
+         "text": "80m",
+         "font": {
+          "family": "Fredoka One",
+          "style": "Regular"
+         },
+         "size": 22,
+         "color": "3D4B5C",
+         "name": "Value"
+        }
+       ]
+      },
+      {
+       "name": "Btn Plus",
+       "w": 40,
+       "h": 40,
+       "radius": 12,
+       "fill": {
+        "var": "cozy/sand"
+       },
+       "stroke": {
+        "var": "cozy/track"
+       },
+       "strokeW": 2,
+       "strokeSides": {
+        "b": 4
+       },
+       "layout": "H",
+       "main": "CENTER",
+       "cross": "CENTER",
+       "children": [
+        {
+         "type": "TEXT",
+         "text": "+",
+         "font": {
+          "family": "Fredoka One",
+          "style": "Regular"
+         },
+         "size": 26,
+         "color": "3D4B5C",
+         "name": "Label"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "INSTANCE",
+     "ref": "3487:4298",
+     "variant": "Style=Ghost",
+     "texts": {
+      "Label": "AUTO: OFF"
+     },
+     "name": "Btn Auto",
+     "fillW": true
+    },
+    {
+     "type": "INSTANCE",
+     "ref": "3487:4298",
+     "variant": "Style=Gold",
+     "texts": {
+      "Label": "SELL ALL"
+     },
+     "name": "Btn Sell",
+     "fillW": true
+    }
+   ]
+  }
+ },
+ {
+  "parentId": "3492:16844",
+  "tree": {
+   "name": "Btn Menu",
+   "layout": "V",
+   "gap": 2,
+   "w": 80,
+   "h": 88,
+   "cross": "CENTER",
+   "children": [
+    {
+     "name": "Tile",
+     "w": 64,
+     "h": 64,
+     "radius": 20,
+     "fill": "D3ECFA",
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 2,
+     "layout": "H",
+     "main": "CENTER",
+     "cross": "CENTER",
+     "children": [
+      {
+       "type": "RECT",
+       "name": "Img equipment/StarterPouch",
+       "w": 50,
+       "h": 50
+      }
+     ]
+    },
+    {
+     "type": "TEXT",
+     "text": "Menu",
+     "font": {
+      "family": "Fredoka One",
+      "style": "Regular"
+     },
+     "size": 14,
+     "color": "FFFFFF",
+     "name": "Label",
+     "textStroke": "3D4B5C",
+     "textStrokeW": 2
+    }
+   ]
+  }
+ }
+]
