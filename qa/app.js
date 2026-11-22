@@ -126,7 +126,7 @@ async function write(action, label) {
     toast(label);
     return true;
   } catch (err) {
-    toast(err.code === 'permission-denied' ? 'บัญชีนี้ไม่มีสิทธิ์แก้ไข (ติดต่อผู้ดูแลเพื่อเพิ่มอีเมล)' : err.message, true);
+    toast(err.code === 'permission-denied' ? `บัญชี ${user?.email || ''} ถูก Firestore ปฏิเสธ: อีเมลไม่อยู่ใน rules ที่ publish แล้ว หรือ rules ยังไม่ได้ publish (ติดต่อผู้ดูแล)` : err.message, true);
     return false;
   }
 }
