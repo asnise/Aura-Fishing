@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-22T19:05:21.061Z",
+ "generated": "2026-11-22T19:11:32.376Z",
  "stage": {
   "name": "ต้นแบบ Vertical Slice",
   "summary": "วงจรตกปลาและระบบหลักของออร่าเล่นได้แล้ว งานระบบระยะยาวและการทดสอบมือถือยังอยู่ในแผนพัฒนา"
@@ -1106,14 +1106,14 @@
    "title": "Daily Login ปฏิทินของขวัญ 7 วัน (Streak, เคลมรางวัล, เชื่อมการ์ด Events)",
    "titleEn": "Daily login rewards",
    "status": "testing",
-   "note": "โค้ดเสร็จ + bake แล้ว รอทดสอบใน Play",
+   "note": "โค้ดเดิมเสร็จ + bake แล้ว มี Figma ใหม่ 6 แบบรอเลือก",
    "steps": [
     "Ctrl+S → Play → เปิดโทรศัพท์ Main Menu → Events → การ์ด Daily Login ขึ้นแท็ก DAILY และกด OPEN ได้",
     "หน้าต่าง Daily Login เปิดขึ้นมา แสดง Streak: 1 Day, ปุ่ม CLAIM DAY 1 สีเขียวมินต์",
     "กด CLAIM DAY 1 → ได้รับ 1,000 Coins, สถานะเปลี่ยนเป็น CLAIMED, ปุ่มเปลี่ยนเป็น CLAIMED TODAY สีเทา",
     "กดปุ่ม X หรือคลิก Backdrop พื้นหลังสีดำ → หน้าต่างปิดลงอย่างเรียบร้อย"
    ],
-   "rev": "0f3952a5"
+   "rev": "5c215e80"
   },
   {
    "id": "C24",
@@ -1353,6 +1353,38 @@
   }
  ],
  "history": [
+  {
+   "at": "2026-11-23T02:20:00+07:00",
+   "text": "C34 Line Modifier: เส้นเอ็น Uncommon ขึ้นไปสุ่ม Prefix/Suffix เหมือน Rod, การ์ดแสดงชิป, ข้อความขายบอก line/rod, dev give Lines. ตรวจ check.mjs ผ่าน ยังไม่ทดสอบใน Play"
+  },
+  {
+   "at": "2026-11-23T02:18:00+07:00",
+   "text": "C34 ของ starter (Driftwood Rod, Cotton Line) ขายได้แต่ได้ 0 โคอิน และถือได้ทีละชิ้น (ปุ่มซื้อเป็น Owned)"
+  },
+  {
+   "at": "2026-11-23T02:16:00+07:00",
+   "text": "C34 Gacha Aura Summon: เปลี่ยนปุ่ม < เป็นปุ่ม Close X มาตรฐานมุมขวาบน (รองรับ bake เดิม)"
+  },
+  {
+   "at": "2026-11-23T02:14:00+07:00",
+   "text": "C34 Daily Login: ปุ่ม Daily บน HUD แสดงเฉพาะตอนยังไม่รับ และเพิ่ม tile Daily ใน Main Menu พร้อมจุดแดง (ตรวจใน Play แล้วว่า tile โผล่)"
+  },
+  {
+   "at": "2026-11-23T02:12:00+07:00",
+   "text": "C34 พื้นดำเต็มจอหลังเมนูเต็มหน้าต่างทุกหน้า (MenuManager MenuBackdrop ไม่ติด safe area) ตรวจใน Play: DisplayOrder อยู่ใต้เมนู เหนือ HUD"
+  },
+  {
+   "at": "2026-11-23T02:10:00+07:00",
+   "text": "C34 Item Card ไม่ scroll (ย่อการ์ด, ซ่อน Desc/Meta บนจอสั้น) และแก้ขอบมุมช่องรูปที่ถูกตัด; Enhance popup มือถือ 2 คอลัมน์ ตารางเลื่อนได้พร้อมแถบ scroll for N more และลบป้าย Enchant Preview"
+  },
+  {
+   "at": "2026-11-23T02:08:48+07:00",
+   "text": "C23 เพิ่ม Daily Login 6 แบบใน Figma (3792:1019) ใช้รางวัลจริง 7 วันและไอคอนเดิม ตรวจช่องข้อความและป้ายสถานะในทุกแบบ"
+  },
+  {
+   "at": "2026-11-23T02:08:00+07:00",
+   "text": "C34 Store ห้ามเป็น scroller: จอสั้นแบ่งหน้าด้วยปุ่ม < >; Inventory เอาแถบ Highlights, ป้าย UP/TOP, ขอบเรืองออก"
+  },
   {
    "at": "2026-11-23T02:00+07:00",
    "text": "ออกแบบระบบ Line Modifier (Prefix / Suffix สำหรับเส้นเอ็นเบ็ด): จัดทำเอกสาร docs/LINE_MODIFIER_SYSTEM_SPEC.md เพื่อสร้างวงจรเศรษฐกิจการซื้อ-ขายเอ็นเบ็ด (Buy/Sell Loop) ใช้ฐานข้อมูล ModifierDefs เดียวกันกับ Rod 100% (แชร์ Prefixes, Suffixes, Cap Breakers, Drop Profiles) รองรับการสุ่มออฟชั่นตอนซื้อใน Shop และเปิดกล่องสมบัติ, คิดโบนัสราคาขายคืนตาม ModSellBonus, รวมสเตตัส Rod + Line ใน Stats.Compute อัตโนมัติ, วางแผนงาน 4 ขั้นตอนสำหรับ Coding Agent — node tools/check.mjs ผ่าน 100%"
@@ -1720,38 +1752,6 @@
   {
    "at": "2026-11-18",
    "text": "C21 คอนเทนต์ใหม่จากรูปที่อัปโหลดแล้ว: ปลา 8, ออร่า 10, คันเบ็ด 2, สาย 2, เหยื่อ 4; Starter Bay ลึก 1000m (ดู C21)"
-  },
-  {
-   "at": "2026-11-18",
-   "text": "งานเล็ก: แก้ HUD ซ้อนตอนตัวละครโหลดช้า (Baked.Get รอ 60 วิ + ลบตัวซ้ำ), bake CastPopup ใหม่, Main Menu 13 ไทล์ + ป้าย VIP (Figma Economy 7), ชิปกระเป๋า HUD แสดง Inf"
-  },
-  {
-   "at": "2026-11-18",
-   "text": "UI ค้างของ Economy: ป้าย Streak (C12), ป้ายชื่อ VIP (C6), +N (C16), HOT + ป้าย Merchant + Hot bonus (C18), หน้าต่าง Skills (C4), กาชา pity 2 แถว/อัตรา %/Star Token (C17), ดาวใน Aura Dex; อัปเดตสถานะภาพรวม C4–C19 ให้ตรงของจริง"
-  },
-  {
-   "at": "2026-11-18",
-   "text": "B21 รอบ 2: การ์ดไอเท็มใน Shop + Fishdex, ไอคอนราคาในปุ่มการ์ด, หน้าต่าง Character (C / รูปโปรไฟล์ Main Menu), Aura Dex (ปุ่มในแท็บ Auras), Shop Bags ไม่ให้กลับไปกระเป๋าเล็ก, UI/ItemSlots.luau. bake Inventory/ItemDetail/Character แล้ว ทดสอบใน Play ผ่าน (ดู B21)"
-  },
-  {
-   "at": "2026-11-18",
-   "text": "B21 ในเกม: Inventory v2 (แท็บคั่นหนังสือ, 600x480, ช่อง 72) + Item Card (UI/ItemDetail, ใช้ remote เดิมทั้งหมด ไม่เพิ่ม field เซฟ) + Bag Upgrade (ladder, ขั้นสุดท้าย = Infinite Bag pass) + server กันกระเป๋าเล็กลง; แท็บ Auras แสดงเฉพาะที่มี (ตามที่คุณขอ). check ผ่าน รอ bake + ทดสอบ (ดู B21)"
-  },
-  {
-   "at": "2026-11-18",
-   "text": "B20 Virtual Grid: UI/VirtualGrid.luau (แนวคิด Global Visualizer: สร้างเฉพาะช่องที่มองเห็น + pool/rebind) ใช้กับ Inventory, Aquarium, Mastery, Put in Tank แทนการลบ/สร้างการ์ดใหม่ทุก refresh. ทดสอบ edit mode: 500 ชิ้น = 30 view. รอทดสอบใน Play (ดู B20)"
-  },
-  {
-   "at": "2026-11-18",
-   "text": "A18 เฟส 1: compact reads (depth/fields/maxNodes ใน get_node_info / get_nodes_info / read_my_design, เล็กลง ~10 เท่า), tool ใหม่ find_nodes, batch อ้างผล \"$N.path\" + brief, figma.commitUndo() ต่อคำสั่ง (batch = undo 1 ครั้ง), error แนะนำชื่อคำสั่ง/วิธีหา id, ตัวนับเก็บ avgKB. ทดสอบ: ดูข้อ 6-7 ใน A18"
-  },
-  {
-   "at": "2026-11-18",
-   "text": "A18 รอบ 3: แผง Selection ในปลั๊กอิน (ชื่อ / ชนิด / id / path, ปุ่ม Copy id, Copy all, คลิกชื่อ = ซูมไป) + โน้ตต่อโหนด (พิมพ์ในแผงหรือ Agent ใช้ set_node_note) — get_selection คืน path, size, text, image, note ด้วย; Agent ใช้ชื่อ + โน้ต ไม่ต้องวิเคราะห์รูป. ทดสอบ: เปิดปลั๊กอินใหม่ → คลิก layer ใน Figma → แผงขึ้นชื่อ+id ทันที → พิมพ์โน้ต กด Enter → บอก Claude \"get_selection\" ต้องเห็นโน้ตนั้น"
-  },
-  {
-   "at": "2026-11-18",
-   "text": "A18 รอบ 2 (ความเร็ว): log ของ relay/MCP เหลือบรรทัดเดียว (เดิมพิมพ์ JSON เต็มรวม base64 หลาย MB), ตัดการรอคงที่ (scan_text_nodes เดิมแฟลชสีส้ม + รอ 0.1-0.5 วิ/โหนด), export_to_roblox ดึงรูปพร้อมกัน 4 รูป, MCP join ห้องเองหลัง relay รีสตาร์ท, แก้บั๊กผลลัพธ์ 0/false ค้าง 30 วิ, เพิ่ม batch_commands (หลายคำสั่งในรอบเดียว) + list_plugin_commands. พบว่า relay ที่รันอยู่เป็นของ upstream (bunx) ไม่ใช่ของ fork"
   }
  ],
  "fixes": {}

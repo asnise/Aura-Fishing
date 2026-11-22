@@ -76,7 +76,7 @@
 - [ ] C20 — มินิเกม: Catch Bar เริ่มตรงตำแหน่งปลา + ช่วงพักตอนเริ่ม  `โค้ดเสร็จ รอทดสอบ`
 - [ ] C21 — คอนเทนต์ใหม่จากรูปที่อัปโหลดแล้ว (ปลา 8, ออร่า 10, คันเบ็ด 2, สาย 2, เหยื่อ 4)  `โค้ดเสร็จ รอทดสอบ`
 - [ ] C22 — FishingZone / PlayArea ใช้เฉพาะใน Workspace (แมพสำรองใน ServerStorage ไม่นับ)  `โค้ดเสร็จ ตรวจ logic ใน Studio แล้ว รอทดสอบ Play ใหม่`
-- [ ] C23 — Daily Login ปฏิทินของขวัญ 7 วัน (Streak, เคลมรางวัล, เชื่อมการ์ด Events)  `โค้ดเสร็จ + bake แล้ว รอทดสอบใน Play`
+- [ ] C23 — Daily Login ปฏิทินของขวัญ 7 วัน (Streak, เคลมรางวัล, เชื่อมการ์ด Events)  `โค้ดเดิมเสร็จ + bake แล้ว มี Figma ใหม่ 6 แบบรอเลือก`
 - [ ] C24 — Core Menu Manager (แบ่งชั้นหน้าต่าง ไม่เปิดซ้อนมั่ว, ซ้อนได้เฉพาะที่กำหนด)  `โค้ดเสร็จ ทดสอบใน Play บางส่วนผ่าน — M2-M4 โค้ดเสร็จ รอทดสอบ — งานต่อ M1, M5, M6 ใน docs/MENU_MANAGER.md`
 - [ ] C25 — เหวี่ยงเบ็ดใหม่: กดค้าง + Perfect Cast + ระยะเหวี่ยงตามคัน + ตัวปรับความลึกบน HUD  `โค้ดเสร็จ + bake + Figma แล้ว รอทดสอบใน Play`
 - [x] C26 — จุดฟองปลา (Hotspot): เหวี่ยงลงวงฟองได้ Luck +50%  `ทดสอบผ่าน (QA)`
@@ -962,6 +962,8 @@
   - [ ] 3. ว่ายออกไปไกล -> กระแสน้ำผลักกลับที่ขอบแมพเดิม
 
 ### C23. Daily Login (ปฏิทินของขวัญ 7 วัน) — 2026-11-19
+- [บอร์ด Figma Daily Login 6 แบบ](https://www.figma.com/design/givb0hmQYmmaOy7p7DGtb2/Ro-Offline?node-id=3792-1019) บนหน้า Out Space เลือกได้ระหว่าง A Reward Calendar, B 7-Day Reward Trail, C Today Spotlight, D Reward Ledger, E Grand Reward Spotlight และ F Pocket Calendar
+- [x] **Done when (Figma)** — ทุกแบบแสดงรางวัลครบ 7 วันด้วยไอคอนเดิม ใช้สถานะวันที่ 3 พร้อมรับเหมือนกัน และตรวจกรอบข้อความของรางวัลกับป้ายสถานะว่าไม่ล้ำขอบการ์ด มีตัวอย่างปุ่ม CLAIMED TODAY แยกไว้ใต้บอร์ด
 - หน้าต่าง Cozy Lake 680x480 ขอบมน 24px: ชิป Streak วันล็อกอินต่อเนื่อง, ชิปเวลานับถอยหลังรีเซ็ตเที่ยงคืน UTC, การ์ดของรางวัล 7 วัน (แถวแรกวันที่ 1-4, แถวล่างวันที่ 5-6 และวันที่ 7 Grand Reward ขนาดใหญ่สีทอง), ปุ่มกดรับ CLAIM DAY N สีเขียวมินต์
 - ไฟล์: `Config/DailyLogin.luau`, `Shared/DailyLogin.luau`, `Services/DailyLoginService.luau`, `UI/Screens/DailyLogin.luau` (bake แล้ว), `Controllers/DailyLoginController.luau`, `UI/EventActions/DailyLogin.luau`, remote `ClaimDailyLogin`; การ์ดใน Events hub ปลดล็อคจาก SOON เป็นปุ่ม OPEN เปิดหน้าต่างเคลมรางวัล
 - ของรางวัล: วันที่ 1 (1,000 Coins), วันที่ 2 (15 Worms), วันที่ 3 (15 Gems), วันที่ 4 (10 Glow Grubs), วันที่ 5 (500 Pearls), วันที่ 6 (10 Squid Baits), วันที่ 7 (50 Gems)
@@ -1057,7 +1059,7 @@
 - Figma ที่ยังไม่ได้แก้ (รอคุณตัดสินใจ / งานต่อ):
   - [x] ดีไซน์ที่เกมยังไม่มี → ลบจาก Figma แล้ว (คุณเลือก): แท็บ Materials x3 + การ์ด Material, ปุ่ม Lock ปลา x2, ช่อง "Get More" x3, Boost ใต้เหรียญ + แผ่น countdown rings, การ์ดปลาแบบ economy, Sell All แบบแยกรายการ, popup Enhance MAX, จอ Shop with Enhance (ops 34); ไอคอนกุญแจบนช่อง Modifier ของคันเบ็ดและออร่าที่ยังไม่มี ยังเก็บไว้เพราะเกมมี
   - [ ] อัปเดตให้ตรงเกม: E0 Events (Naga Tide 30 MIN เปิดแล้ว, Daily Login DAILY เปิดแล้ว, ข้อความ Altar "Legendary every 100, Mythic at 300"), 17 Character (ปุ่ม SKILLS + สเตตัส 5 แถว), 18 Inventory (ปุ่ม AURA DEX), Economy 1 (ชิป Star Tokens, อัตรา Pearls เป็น /s), Economy 2 Put in Tank (แถบบน "< Tank" + CONFIRM(N), MAX/CLR ต่อการ์ด, ไม่มี Quantity modal), ข้อความโน้ต G6 / In-Game Workspace ที่ล้าสมัย
-  - [ ] จอที่ยังไม่มีดีไซน์: Daily Login ปฏิทิน, Skills, Settings/Credits, Tide Event HUD
+- [ ] จอที่ยังรอแบบสุดท้าย: Daily Login ปฏิทิน (มี 6 แบบให้เลือกใน C23), Skills, Settings/Credits, Tide Event HUD
 - ทดสอบ (คุณ):
   - [ ] 1. Ctrl+S → Play → Main Menu → Store: เห็นการ์ด Passes 4 ใบ, ไม่มีฉากดำด้านหลัง; สลับแท็บ Gems/Boosts/Packs มีรายการครบ; ปุ่มราคาอาจหมุนแวบหนึ่งก่อนขึ้นราคา
   - [ ] 2. ถ้า Store ยังว่าง: ดู Output หาบรรทัด `[Store] ... tab failed:` แล้วส่งมา
@@ -1237,6 +1239,14 @@
 - [x] ทดสอบโหมดในเครื่อง (ไม่มี config): ตาราง 69 งาน, เปิดงานเห็นขั้นตอน, ผ่าน/ไม่ผ่าน, สร้าง/ปิด Ticket, หน้าระบบเกมและประวัติ
 
 ## บันทึกการอัปเดต
+- 2026-11-23T02:20:00+07:00 — C34 Line Modifier: เส้นเอ็น Uncommon ขึ้นไปสุ่ม Prefix/Suffix เหมือน Rod, การ์ดแสดงชิป, ข้อความขายบอก line/rod, dev give Lines. ตรวจ check.mjs ผ่าน ยังไม่ทดสอบใน Play
+- 2026-11-23T02:18:00+07:00 — C34 ของ starter (Driftwood Rod, Cotton Line) ขายได้แต่ได้ 0 โคอิน และถือได้ทีละชิ้น (ปุ่มซื้อเป็น Owned)
+- 2026-11-23T02:16:00+07:00 — C34 Gacha Aura Summon: เปลี่ยนปุ่ม < เป็นปุ่ม Close X มาตรฐานมุมขวาบน (รองรับ bake เดิม)
+- 2026-11-23T02:14:00+07:00 — C34 Daily Login: ปุ่ม Daily บน HUD แสดงเฉพาะตอนยังไม่รับ และเพิ่ม tile Daily ใน Main Menu พร้อมจุดแดง (ตรวจใน Play แล้วว่า tile โผล่)
+- 2026-11-23T02:12:00+07:00 — C34 พื้นดำเต็มจอหลังเมนูเต็มหน้าต่างทุกหน้า (MenuManager MenuBackdrop ไม่ติด safe area) ตรวจใน Play: DisplayOrder อยู่ใต้เมนู เหนือ HUD
+- 2026-11-23T02:10:00+07:00 — C34 Item Card ไม่ scroll (ย่อการ์ด, ซ่อน Desc/Meta บนจอสั้น) และแก้ขอบมุมช่องรูปที่ถูกตัด; Enhance popup มือถือ 2 คอลัมน์ ตารางเลื่อนได้พร้อมแถบ scroll for N more และลบป้าย Enchant Preview
+- 2026-11-23T02:08:00+07:00 — C34 Store ห้ามเป็น scroller: จอสั้นแบ่งหน้าด้วยปุ่ม < >; Inventory เอาแถบ Highlights, ป้าย UP/TOP, ขอบเรืองออก
+- 2026-11-23T02:08:48+07:00 — C23 เพิ่ม Daily Login 6 แบบใน Figma (3792:1019) ใช้รางวัลจริง 7 วันและไอคอนเดิม ตรวจช่องข้อความและป้ายสถานะในทุกแบบ
 - 2026-11-23 — C34 (ต่อ) Item Card ไม่ scroll, Enhance มือถือ 2 คอลัมน์, พื้นดำเต็มจอ, Gacha Close X, Daily ใน Main Menu, ของ starter ขายได้ 0 โคอิน, Line Modifier, เอาแถบ Highlights/UP/TOP ออก. ดูหัวข้อ C34
 - 2026-11-23T01:35:29+07:00 — อัปโหลดไอคอน Stats Codex เป็น Image Asset `122180566876353` ผูกกับไทล์ Main Menu และตรวจการโหลดใน Studio Play ผ่าน
 - 2026-11-23 — C34 Daily Login ย้ายไปปุ่มบน HUD (BtnDaily + จุดแจ้งเตือน) เอาการ์ดออกจาก Events. กฎใหม่: Store ห้ามเป็น scroller ในจอสั้นใช้ปุ่ม < > แบ่งหน้า (StoreScreen paginate), Window.Shell scroll เฉพาะ opts.ScrollOnShort (Aquarium/Mastery). ทดสอบ: Play จอโทรศัพท์แนวนอน เปิด Store ทุกแท็บ ต้องไม่มีแถบเลื่อน มีปุ่ม < >; HUD ต้องมีปุ่ม Daily.
