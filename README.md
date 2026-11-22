@@ -11,7 +11,8 @@
 
 ## Agent ทำอะไรทุกครั้งที่แก้งาน
 1. แก้ `docs/TASKS.md` ตามเดิม (เช็กลิสต์ภาพรวม, หัวข้องานพร้อม `- ทดสอบ:` เป็นข้อ ๆ, บรรทัดใน "บันทึกการอัปเดต")
-2. `node qa/tools/build.mjs` สร้าง `qa/data/qadata.json` ใหม่ แล้ว commit ไปกับงาน (CI สร้างซ้ำก่อน deploy อยู่แล้ว)
+2. `node qa/tools/build.mjs` สร้าง `qa/data/qadata.json` ใหม่ แล้ว commit ไปกับงาน
+   - เผยแพร่เว็บ: `git subtree push --prefix qa origin gh-pages` (ไม่ใช้ GitHub Actions)
 3. `node qa/tools/pull.mjs` ดูงานที่ QA ตีว่าไม่ผ่านและ Ticket ที่ยังเปิด
 4. แก้บั๊กแล้วแจ้ง: `node qa/tools/fix.mjs T-XXXX "แก้อะไรไป"` (เขียน `qa/data/fixes.json` ให้ QA เห็นว่า "dev แก้แล้ว รอตรวจซ้ำ")
 
@@ -23,7 +24,7 @@
 3. Firestore > Rules > วางเนื้อหา `qa/firestore.rules` แก้อีเมลทีม QA ในรายการ `request.auth.token.email in [...]` แล้ว Publish
 4. Project settings > Your apps > Web (`</>`) > คัดลอก config ใส่ `qa/config.json` (`apiKey`, `authDomain`, `projectId`, `appId` ค่าเหล่านี้เป็นค่าสาธารณะ ใส่ใน repo ได้)
 5. Authentication > Settings > Authorized domains > เพิ่ม `<user>.github.io`
-6. GitHub repo > Settings > Pages > Source: **GitHub Actions** แล้ว push เข้า `main` เว็บอยู่ที่ `https://<user>.github.io/<repo>/`
+6. `git subtree push --prefix qa origin gh-pages` แล้วไป GitHub repo > Settings > Pages > Source: **Deploy from a branch** > Branch `gh-pages` / `/ (root)` เว็บอยู่ที่ `https://<user>.github.io/<repo>/`
 
 ถ้ายังไม่ตั้ง `config.json` เว็บทำงานในโหมดทดลอง เก็บผลในเบราว์เซอร์ตัวเอง (ไว้ลอง UI)
 
