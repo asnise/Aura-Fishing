@@ -1,0 +1,437 @@
+{
+  "stage": {
+    "name": {
+      "th": "ต้นแบบ Vertical Slice",
+      "en": "Vertical-slice prototype"
+    },
+    "summary": {
+      "th": "วงจรตกปลาและระบบหลักของออร่าเล่นได้แล้ว งานระบบระยะยาวและการทดสอบมือถือยังอยู่ในแผนพัฒนา",
+      "en": "The fishing loop and core Aura features are playable. Long-term progression and mobile testing are still in development."
+    }
+  },
+  "systems": [
+    {
+      "id": "fishing",
+      "status": "done",
+      "name": {
+        "th": "วงจรตกปลา",
+        "en": "Fishing loop"
+      },
+      "summary": {
+        "th": "เหวี่ยงเบ็ด รอปลากิน ดึงปลา และเลือกความลึก ใช้ทดสอบต้นแบบได้",
+        "en": "Casting, bites, reeling and depth selection work in the prototype."
+      },
+      "tasks": [
+        "A1",
+        "A5",
+        "A6",
+        "B14"
+      ],
+      "source": "tasks"
+    },
+    {
+      "id": "inventory-shop",
+      "status": "done",
+      "name": {
+        "th": "กระเป๋า ร้านค้า และสมุดปลา",
+        "en": "Inventory, shop and Fishdex"
+      },
+      "summary": {
+        "th": "กระเป๋าแบบช่อง ร้านขายอุปกรณ์ และสมุดปลาผ่านการทดสอบตามรายการงาน",
+        "en": "Slot inventory, equipment shop and Fishdex are marked complete in the task list."
+      },
+      "tasks": [
+        "B3",
+        "B8",
+        "B12",
+        "C2"
+      ],
+      "source": "tasks"
+    },
+    {
+      "id": "save",
+      "status": "done",
+      "name": {
+        "th": "การบันทึกข้อมูลผู้เล่น",
+        "en": "Player saves"
+      },
+      "summary": {
+        "th": "บันทึกโปรไฟล์ผู้เล่นผ่าน DataStore",
+        "en": "Player profiles are persisted through DataStore."
+      },
+      "tasks": [
+        "A11"
+      ],
+      "source": "tasks"
+    },
+    {
+      "id": "auto",
+      "status": "testing",
+      "name": {
+        "th": "ตกออโต้และสมดุลรางวัล",
+        "en": "Auto-fishing and rewards"
+      },
+      "summary": {
+        "th": "ตกออโต้มีในต้นแบบ งานปรับจังหวะ Hot Streak และผลตอบแทนอยู่ในรอบทดสอบ",
+        "en": "Auto-fishing is in the prototype. The pacing and Hot Streak balance pass awaits testing."
+      },
+      "tasks": [
+        "B18",
+        "C12"
+      ],
+      "source": "tasks"
+    },
+    {
+      "id": "casting",
+      "status": "testing",
+      "name": {
+        "th": "กดค้างเหวี่ยงและจุดฟองปลา",
+        "en": "Charge casting and hotspots"
+      },
+      "summary": {
+        "th": "ระบบเหวี่ยงตามแรงกดและจุด Hotspot มีโค้ดแล้ว รอทดสอบการใช้งานใน Play",
+        "en": "Charge casting and fishing hotspots are implemented and await Play testing."
+      },
+      "tasks": [
+        "C25",
+        "C26"
+      ],
+      "source": "tasks"
+    },
+    {
+      "id": "auras",
+      "status": "testing",
+      "name": {
+        "th": "กาชา ออร่า และดาว",
+        "en": "Aura rolls, equipping and stars"
+      },
+      "summary": {
+        "th": "ระบบสุ่มและสวมออร่าทำงานในต้นแบบ หน้ากาชารอบล่าสุด ดาวออร่า และ pity รอทดสอบเพิ่ม",
+        "en": "Aura rolling and equipping work in the prototype. The latest gacha UI, stars and pity need further testing."
+      },
+      "tasks": [
+        "A8",
+        "A10",
+        "B6",
+        "B22",
+        "C17"
+      ],
+      "source": "tasks"
+    },
+    {
+      "id": "aquarium",
+      "status": "testing",
+      "name": {
+        "th": "ตู้ปลา ไข่มุก และ Mastery",
+        "en": "Aquarium, Pearls and Mastery"
+      },
+      "summary": {
+        "th": "ตู้ปลาผลิตไข่มุกและสะสมออฟไลน์ ใช้ไข่มุกอัป Mastery มีโค้ดแล้ว",
+        "en": "Aquarium income, offline Pearls and Mastery upgrades are implemented."
+      },
+      "tasks": [
+        "C14",
+        "C15"
+      ],
+      "source": "tasks"
+    },
+    {
+      "id": "gear",
+      "status": "testing",
+      "name": {
+        "th": "ตีบวกอุปกรณ์",
+        "en": "Gear enhancement"
+      },
+      "summary": {
+        "th": "ตีบวกคันเบ็ดและสายเบ็ดด้วย Coins รอทดสอบในเกม",
+        "en": "Coin-based rod and line upgrades await in-game testing."
+      },
+      "tasks": [
+        "C16"
+      ],
+      "source": "tasks"
+    },
+    {
+      "id": "rebirth-current",
+      "status": "testing",
+      "name": {
+        "th": "Rebirth และสกิลรุ่นปัจจุบัน",
+        "en": "Current Rebirth and skills"
+      },
+      "summary": {
+        "th": "Rebirth รุ่นปัจจุบันเริ่มที่เลเวล 50 และมีฉายา สกิล Multi-Cast มีระบบฝั่งเกมแล้ว",
+        "en": "The current Rebirth starts at level 50 and grants titles. Multi-Cast skills are implemented."
+      },
+      "tasks": [
+        "C3",
+        "C4"
+      ],
+      "source": "tasks"
+    },
+    {
+      "id": "events",
+      "status": "testing",
+      "name": {
+        "th": "อีเวนต์และรางวัลรายวัน",
+        "en": "Events and daily rewards"
+      },
+      "summary": {
+        "th": "Naga Tide ปลาขายดี เควสต์ และ Daily Login มีระบบแล้ว รอทดสอบรอบเล่น",
+        "en": "Naga Tide, Hot Fish, quests and daily login are implemented and await Play checks."
+      },
+      "tasks": [
+        "C5",
+        "C7",
+        "C18",
+        "C23"
+      ],
+      "source": "tasks"
+    },
+    {
+      "id": "store",
+      "status": "testing",
+      "name": {
+        "th": "ร้าน Robux และ Gamepasses",
+        "en": "Robux store and passes"
+      },
+      "summary": {
+        "th": "มีร้านค้า การรับใบเสร็จ บูสต์ และ Starter Pack งานซื้อจริงและ Extra Cast ยังมีรายการรอทดสอบ",
+        "en": "The store, receipts, boosts and Starter Pack exist. Live purchases and Extra Cast still have open checks."
+      },
+      "tasks": [
+        "C6",
+        "C13",
+        "C19"
+      ],
+      "source": "tasks"
+    },
+    {
+      "id": "map",
+      "status": "progress",
+      "name": {
+        "th": "แมพและความพร้อมบนมือถือ",
+        "en": "Map and mobile readiness"
+      },
+      "summary": {
+        "th": "มีแมพต้นแบบ Stilt Boardwalk แล้ว งานแมพจริง โมเดล และทดสอบมือถือยังเปิดอยู่",
+        "en": "The Stilt Boardwalk prototype exists. Final map, models and mobile tests are open."
+      },
+      "tasks": [
+        "B19",
+        "A17",
+        "C9",
+        "C11"
+      ],
+      "source": "tasks"
+    },
+    {
+      "id": "sound",
+      "status": "planned",
+      "name": {
+        "th": "เสียงประกอบ",
+        "en": "Sound effects"
+      },
+      "summary": {
+        "th": "บันทึกงานระบุว่ายังไม่เริ่มทำเสียงในมินิเกมและกาชา",
+        "en": "The task list marks minigame and gacha sound work as not started."
+      },
+      "tasks": [
+        "C8"
+      ],
+      "source": "tasks"
+    },
+    {
+      "id": "inventory-rework",
+      "status": "design",
+      "name": {
+        "th": "กระเป๋านับปลาทีละตัว",
+        "en": "One fish per inventory slot"
+      },
+      "summary": {
+        "th": "ข้อสรุปใน report คือเปลี่ยนจากการซ้อนปลาเป็นนับทีละตัว โค้ดปัจจุบันยังรองรับการซ้อนปลา",
+        "en": "The report proposes one fish per slot. Current inventory code still supports fish stacks."
+      },
+      "tasks": [],
+      "source": "report"
+    },
+    {
+      "id": "fish-weight",
+      "status": "design",
+      "name": {
+        "th": "ราคาแบบไม่อิงน้ำหนักปลา",
+        "en": "Weight-free fish pricing"
+      },
+      "summary": {
+        "th": "report สรุปให้เลิกใช้น้ำหนักคำนวณราคาขาย โค้ดปัจจุบันยังใช้ Weight ใน Roll.Value",
+        "en": "The report removes weight from sale pricing. The current Roll.Value still uses fish weight."
+      },
+      "tasks": [],
+      "source": "report"
+    },
+    {
+      "id": "trading",
+      "status": "design",
+      "name": {
+        "th": "ระบบเทรดและไอเทมผูกมัด",
+        "en": "Trading and bound items"
+      },
+      "summary": {
+        "th": "ตกลงเรื่อง Trade License จำกัด 4 ช่อง ภาษี Coins และไอเทมที่เทรดไม่ได้",
+        "en": "Decisions cover Trade Licenses, four trade slots, a Coin tax and bound items."
+      },
+      "tasks": [],
+      "source": "decisions"
+    },
+    {
+      "id": "rod-fusion",
+      "status": "design",
+      "name": {
+        "th": "Mod คันเบ็ดและ Rod Fusion",
+        "en": "Rod mods and fusion"
+      },
+      "summary": {
+        "th": "กำหนด 2 Prefix กับ 2 Suffix และย้าย Mod ระหว่างคันเบ็ดชนิดเดียวกัน",
+        "en": "The design defines two prefixes, two suffixes and mod transfer between rods of the same type."
+      },
+      "tasks": [],
+      "source": "decisions"
+    },
+    {
+      "id": "gem-pacing",
+      "status": "design",
+      "name": {
+        "th": "รางวัล Gems และ Luck รอบใหม่",
+        "en": "Revised Gem rewards and Luck"
+      },
+      "summary": {
+        "th": "ตกลงรับ Gems ตั้งแต่ Uncommon และตั้งเป้าการสุ่มต่อชั่วโมง พร้อมตัวคูณ Luck ของ Gamepass 1.25 เท่า",
+        "en": "The plan adds Gem rewards from Uncommon, roll-rate targets and a 1.25× pass Luck multiplier."
+      },
+      "tasks": [],
+      "source": "decisions"
+    },
+    {
+      "id": "prestige",
+      "status": "design",
+      "name": {
+        "th": "Prestige Tree และเหยื่อข้าม Rebirth",
+        "en": "Prestige tree and rebirth bait"
+      },
+      "summary": {
+        "th": "กำหนดแต้ม Rebirth สำหรับ Perk 3 สาย การล้างปลา/เหยื่อ และ Rebirth Protected",
+        "en": "The design adds points for three perk branches, fish and bait resets and Rebirth Protected."
+      },
+      "tasks": [],
+      "source": "decisions"
+    },
+    {
+      "id": "exploration",
+      "status": "planned",
+      "name": {
+        "th": "สำรวจเกาะและสภาพอากาศ",
+        "en": "Island exploration and weather"
+      },
+      "summary": {
+        "th": "ข้อเสนอใน report ครอบคลุมเรือ เกาะ สภาพอากาศ และปลาธาตุ",
+        "en": "The report proposes boats, islands, dynamic weather and elemental fish."
+      },
+      "tasks": [],
+      "source": "report"
+    }
+  ],
+  "taskNames": {
+    "A1": "Core fishing loop",
+    "A2": "Cozy Lake UI theme",
+    "A3": "Roblox safe areas",
+    "A4": "Minimal HUD stats",
+    "A5": "Casting and auto depth",
+    "A6": "Pond Card minigame",
+    "A7": "Fish catch badge",
+    "A8": "Aura Gacha reel",
+    "A9": "Fixed-size menus",
+    "A10": "Aura VFX and Low FX",
+    "A11": "DataStore saves",
+    "A12": "StudioBridge MCP",
+    "A13": "Asset pipeline",
+    "A14": "Figma to Roblox export",
+    "A15": "Figma style guide and screens",
+    "A16": "Aura UI panel in Studio",
+    "A17": "Landscape mobile layout",
+    "A18": "Figma plugin modules and usage count",
+    "B0": "Figma buttons and item highlights",
+    "B1": "Sell All confirmation",
+    "B2": "Aura cards and paging",
+    "B3": "Shop thumbnails and paging",
+    "B4": "Fishdex cards and paging",
+    "B5": "Main menu hub",
+    "B6": "Aura Altar and pity",
+    "B7": "NPC dialogue",
+    "B8": "Inventory",
+    "B9": "Ten-roll summary",
+    "B10": "Explorer screens and prefab components",
+    "B11": "Catch result screen",
+    "B12": "Fishdex sorting and discovery",
+    "B13": "Main menu actions",
+    "B14": "Twin-tube minigame",
+    "B15": "Events hub",
+    "B16": "Dev commands",
+    "B17": "Image loading placeholders",
+    "B18": "Auto Wait stat",
+    "B19": "Stilt Boardwalk map",
+    "B20": "Virtual grid",
+    "B21": "Item Detail and Inventory v2",
+    "B22": "Gacha page redesign",
+    "C1": "Upload art to Roblox",
+    "C2": "Inventory data model",
+    "C3": "Rebirth and titles",
+    "C4": "Skills and Multi-Cast",
+    "C5": "Naga Tide event",
+    "C6": "Gamepasses",
+    "C7": "Daily quests",
+    "C8": "Minigame and gacha sound effects",
+    "C9": "Final map and models",
+    "C10": "Font Awesome credits",
+    "C11": "Mobile device checks",
+    "C12": "Balance pass 1",
+    "C13": "Robux receipts and pass checks",
+    "C14": "Aquarium and offline Pearls",
+    "C15": "Pearl-funded Mastery",
+    "C16": "Gear enhancement",
+    "C17": "Aura stars, tokens and pity",
+    "C18": "Hourly Hot Fish",
+    "C19": "Developer products and Starter Pack",
+    "C20": "Minigame start behavior",
+    "C21": "New fish, auras and equipment",
+    "C22": "Fishing zones and map boundaries",
+    "C23": "Daily login rewards",
+    "C24": "Core menu manager",
+    "C25": "Charge casting and Perfect Cast",
+    "C26": "Fishing hotspots",
+    "C27": "Store loading and notification fixes",
+    "C28": "Window shell and bite indicator"
+  },
+  "history": [
+    {
+      "at": "2026-11-21",
+      "source": "report",
+      "text": {
+        "th": "ประชุมออกแบบเกมและเทียบกับระบบในโค้ด ครอบคลุมข้อสรุปเรื่องน้ำหนักปลา กระเป๋า การเทรด และการพัฒนา Rebirth",
+        "en": "Design review compared the current game with proposed changes to fish weight, inventory, trading and Rebirth."
+      }
+    }
+  ],
+  "sources": {
+    "tasks": {
+      "path": "docs/TASKS.md",
+      "label": "Task log"
+    },
+    "report": {
+      "path": "report/21_11_2026_report.md",
+      "label": "Design report"
+    },
+    "decisions": {
+      "path": "docs/DESIGN_DECISIONS_2026-11-21.md",
+      "label": "Design decisions"
+    }
+  }
+}

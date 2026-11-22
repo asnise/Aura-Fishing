@@ -63,4 +63,5 @@ Talk to the user in Thai; code, identifiers and comments in English.
 - Next-conversation brief: **`docs/HANDOFF_UI.md`** (screen status, conversion rules, tools, open decisions).
 - Asset catalog: `assets/catalog.json` + `docs/ASSET_CATALOG.md`; ids in code via `Shared.Config.UIAssets` (generated). Upload then `tools/art/sync_ui_assets.py`.
 - Place file with the map: `places/AuraFishing.rbxlx` (do not overwrite with `build/`).
+- **QA site (`qa/`, GitHub Pages + Firebase):** after editing `docs/TASKS.md` run `node qa/tools/build.mjs` and commit `qa/data/qadata.json`; at session start run `node qa/tools/pull.mjs` for failed tasks / open tickets, after fixing a ticket run `node qa/tools/fix.mjs <id> "note"`. Details: `qa/README.md`.
 - **Task list & test guide: `docs/TASKS.md`.** Every session that finishes a piece of work MUST update it: set the status (☐/◐/☑), add "Done when" and step-by-step "ทดสอบ" (Thai) the user can follow in Studio, and add a line to "บันทึกการอัปเดต".

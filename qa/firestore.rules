@@ -1,0 +1,15 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Only the two QA documents exist. Anyone can read (needed by the page and by agents' pull.mjs);
+    // only the listed Google accounts can write. Replace the example emails before publishing.
+    match /qa/{doc} {
+      allow read: if doc in ['state', 'tickets'];
+      allow write: if doc in ['state', 'tickets']
+        && request.auth != null
+        && request.auth.token.email_verified == true
+        && request.auth.token.email in ['qa1@example.com', 'qa2@example.com']
+        && request.resource.size < 900000;
+    }
+  }
+}

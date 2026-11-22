@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aura Fishing QA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="bar">
+    <h1>Aura Fishing <span>QA</span></h1>
+    <nav id="nav">
+      <a href="#tasks">งาน</a>
+      <a href="#systems">ระบบเกม</a>
+      <a href="#tickets">Ticket <b id="ticketCount"></b></a>
+      <a href="#log">ประวัติ</a>
+    </nav>
+    <div class="bar-end">
+      <span id="syncInfo" class="muted"></span>
+      <button class="btn icon" id="refreshBtn" title="โหลดข้อมูลล่าสุด" aria-label="โหลดข้อมูลล่าสุด"></button>
+      <button class="btn" id="authBtn"></button>
+    </div>
+  </header>
+  <p id="banner" class="banner" hidden></p>
+  <main id="view"></main>
+
+  <dialog id="dialog"></dialog>
+  <p id="toast" class="toast" hidden></p>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

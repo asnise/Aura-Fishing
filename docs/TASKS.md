@@ -1067,7 +1067,30 @@
   - [ ] 3. Aquarium → + → Put in Tank ซ้อนบนบ่อ ปิดแล้วกลับบ่อ; Character → SKILLS เปิดได้
   - [ ] 4. กระเป๋า → คันเบ็ด → ENHANCE: popup ขึ้นเหนือการ์ด, Cancel ปิดได้
 
+## เว็บ QA (`qa/`)
+
+**สถานะ** ◐ โค้ดเสร็จ ทดสอบ UI โหมดในเครื่องแล้ว รอตั้งค่า Firebase + เปิด GitHub Pages
+
+**Done when** ทีม QA เปิดเว็บบน GitHub Pages, เข้าสู่ระบบด้วย Google, ตรวจงานตามขั้นตอนใน "วิธีตรวจ", กดผ่าน/ไม่ผ่าน, แจ้ง Ticket ได้ และ agent ดึงผลด้วย `node qa/tools/pull.mjs`
+
+**ทดสอบ**
+
+- [ ] 1. ทำตาม `qa/README.md` หัวข้อ "ตั้งค่าครั้งแรก" (Firebase, rules, config.json, Pages)
+- [ ] 2. เปิดเว็บ > เข้าสู่ระบบด้วยอีเมลที่อยู่ใน rules > เปิดงานใดก็ได้ > กด "ผ่าน" > รีเฟรชหน้า ผลยังอยู่
+- [ ] 3. ลองกด "ไม่ผ่าน" โดยไม่เขียนความเห็น ต้องมีข้อความเตือน
+- [ ] 4. แจ้ง Ticket หนึ่งอัน > `node qa/tools/pull.mjs` ต้องเห็น Ticket นั้น
+- [ ] 5. `node qa/tools/fix.mjs <ticketId> "แก้แล้ว"` > commit/push > เว็บต้องขึ้น "dev แก้แล้ว รอตรวจซ้ำ"
+- [ ] 6. แก้ข้อความ `ทดสอบ` ของงานที่ QA ผ่านแล้วใน TASKS.md > `node qa/tools/build.mjs` > งานนั้นต้องมีป้าย "แก้หลังตรวจ"
+- [x] ทดสอบโหมดในเครื่อง (ไม่มี config): ตาราง 69 งาน, เปิดงานเห็นขั้นตอน, ผ่าน/ไม่ผ่าน, สร้าง/ปิด Ticket, หน้าระบบเกมและประวัติ
+
 ## บันทึกการอัปเดต
+- 2026-11-22T18:30:00+07:00 — เปลี่ยน Web Dashboard เป็นเว็บ QA (`qa/`): deploy GitHub Pages, ทีม QA ตรวจงาน/แจ้ง Ticket เก็บใน Firebase Firestore, agent อัปเดตผ่าน `node qa/tools/build.mjs`; ลบ `dashboard/` ออกแล้ว
+- 2026-11-22T17:30:00+07:00 — Dashboard: แยกหน้า "สถานะงาน" เป็น 2 หน้า ระบบเกม (#systems) และ QA (#qa) เอาปุ่ม Collapse ออก
+- 2026-11-22T17:00:00+07:00 — Dashboard: Dark theme โทน GitHub, badge สีทึบมีขอบให้ตัดกับพื้นแถว, ปุ่มแก้ไข/ลบ/Quick Pass/Review เปลี่ยนเป็นไอคอน
+- 2026-11-22T16:15:00+07:00 — อัปเดตข้อมูล QA ลง Google Sheet ครบ 69 รายการจริง และแยกคอลัมน์ ID (A1, B0...), Section (หมวด A, B, C) และ Task Name ออกจากกันในตาราง QA พร้อมตัวกรองหมวดงาน
+- 2026-11-22T16:05:00+07:00 — ปรับปรุง Web Dashboard: เปลี่ยนธีมเป็น Medical Palette, แยกฟอร์มแก้ไขค่า (Edit Modal), เพิ่มระบบตรวจงานและบันทึกเวลา QA พร้อมซิงก์ Google Sheets Web App และเพิ่มปุ่ม Collapse / Expand พับเก็บแผงระบบเกมและ QA Tracker ได้อิสระ
+- 2026-11-22T14:02:33+07:00 — Web Dashboard ใช้สี Cozy Lake และ UI ไทย–อังกฤษ เพิ่มเมนูกลุ่ม Tuning หน้าสถานะงาน และประวัติการพัฒนาจาก TASKS.md และ report
+- 2026-11-22T02:39:31+07:00 — ปรับ Web Balance Dashboard ให้ใช้ตารางตามชีต แยกสคริปต์ตามระบบ และทดสอบการเชื่อม Sheets แบบจำลอง
 - 2026-11-21 — Game Design Math: `docs/economy/game_design_math/AuraFishing_GameDesignMath.xlsx` (22 ชีต สูตรสดครบ: Constants, Rarities, Fish, Fish Odds, Mutations, Sell Value, Progression, Items, Enhance, Mastery, Skills, Rebirth, Stats Calculator, Fishing Loop, Reel Minigame, Aquarium, Auras, Gacha, Monetization, Economy Totals, Live Content) พร้อม CSV ค่าล้วนใน `csv/` สร้างจาก Config จริงด้วย `node tools/balance_sheet/build.mjs` (ต้องมี luau + python) สูตรตรวจกับโค้ดเกม 122 จุดผ่านหมด (Roll.Value, AuraRates, Mastery, Enhance, Stats.Compute, XP, Rebirth, ความน่าจะเป็นปลา) ยังไม่ได้เปิดใน Google Sheets จริง
 - 2026-11-21 — Aura Reveal: วง Eclipse rim และ Shockwave ใช้ภาพวงที่ export จาก Figma `3717:1434` (เส้น 5px + แสงเรือง, `auras/fx_ring`, ภาพขาว tint ตามสีระดับ rarity) แทน UIStroke เส้นขอบขยายตามวงเหมือน Figma หน้า reveal แสดงเฉพาะ Item Card Detail + ข้อความ Tap to close (ซ่อนแถบล่าง) ผ่าน `node tools/check.mjs` ดูวงใน Play แล้ว ยังไม่ได้ดูครบทั้งแอนิเมชันและสี Mythic
 - 2026-11-21 — บูสต์ที่ทำงานอยู่เป็นชิปสีส้มเล็ก (ไอคอน + เวลา เช่น 31:34) วางข้างลูกศรของลิ้นชักสกุลเงิน ไม่ซ่อนในลิ้นชักแล้ว ตามแบบ Boost ใน Figma `3766:5984` ผ่าน `node tools/check.mjs` ดูใน Play แล้ว
