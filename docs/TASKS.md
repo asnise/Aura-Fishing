@@ -76,19 +76,19 @@
 - [ ] C20 — มินิเกม: Catch Bar เริ่มตรงตำแหน่งปลา + ช่วงพักตอนเริ่ม  `โค้ดเสร็จ รอทดสอบ`
 - [ ] C21 — คอนเทนต์ใหม่จากรูปที่อัปโหลดแล้ว (ปลา 8, ออร่า 10, คันเบ็ด 2, สาย 2, เหยื่อ 4)  `โค้ดเสร็จ รอทดสอบ`
 - [ ] C22 — FishingZone / PlayArea ใช้เฉพาะใน Workspace (แมพสำรองใน ServerStorage ไม่นับ)  `โค้ดเสร็จ ตรวจ logic ใน Studio แล้ว รอทดสอบ Play ใหม่`
-- [ ] C23 — Daily Login ปฏิทินของขวัญ 7 วัน (Streak, เคลมรางวัล, เชื่อมการ์ด Events)  `โค้ดเดิมเสร็จ + bake แล้ว มี Figma ใหม่ 6 แบบรอเลือก`
+- [ ] C23 — Daily Login ปฏิทินของขวัญ 7 วัน (HUD และ Main Menu)  `โค้ดเสร็จ รอทดสอบการเปิดและรับรางวัล มี Figma ใหม่ 6 แบบรอเลือก`
 - [ ] C24 — Core Menu Manager (แบ่งชั้นหน้าต่าง ไม่เปิดซ้อนมั่ว, ซ้อนได้เฉพาะที่กำหนด)  `โค้ดเสร็จ ทดสอบใน Play บางส่วนผ่าน — M2-M4 โค้ดเสร็จ รอทดสอบ — งานต่อ M1, M5, M6 ใน docs/MENU_MANAGER.md`
 - [ ] C25 — เหวี่ยงเบ็ดใหม่: กดค้าง + Perfect Cast + ระยะเหวี่ยงตามคัน + ตัวปรับความลึกบน HUD  `โค้ดเสร็จ + bake + Figma แล้ว รอทดสอบใน Play`
 - [x] C26 — จุดฟองปลา (Hotspot): เหวี่ยงลงวงฟองได้ Luck +50%  `ทดสอบผ่าน (QA)`
 - [ ] C27 — Store ไม่มีรายการ + spinner โหลด + แจ้งเตือนอยู่บนสุด + Enhance popup + Figma ตรงกับเกม  `โค้ดเสร็จ รอทดสอบใน Play`
 - [x] C28 — Window core (`Window.Shell`) + "!" ปลากินเบ็ดบนหัวตัวละคร  `ทดสอบผ่าน (QA)`
-- [ ] C29 — Item rework: ไอเทมแบบ UUID (ปลาไม่รวมกอง, คันเบ็ด/สายซื้อซ้ำและขายคืนได้, เซฟ v6)  `โค้ดเสร็จ type check ผ่าน รอทดสอบใน Play`
-- [ ] C30 — ระบบ Modifier เบ็ด (Prefix/Suffix) สุ่มค่า -N~+N, Stat Max Cap Breaker และ Rarity  `โค้ดขั้น 1-5 รอทดสอบใน Play, Rod Fusion ออกแบบ Figma แล้ว รอเขียนระบบ`
+- [ ] C29 — Item rework: ไอเทมแบบ UUID (ปลาไม่รวมกอง, คันเบ็ด/สายซื้อซ้ำและขายคืนได้, เซฟ v6)  `โค้ดเสร็จ รอทดสอบด้วยเซฟทดสอบ v5 และเซฟใหม่ รวมถึงราคาขายคืน`
+- [ ] C30 — ระบบ Modifier เบ็ด (Prefix/Suffix) สุ่มค่า -N~+N, Stat Max Cap Breaker และ Rarity  `โค้ดเสร็จ รอทดสอบการสุ่ม สเตตัส และการดรอปคันเบ็ดใน Play`
 - [ ] C31 — Rod Fusion (หลอม mod ข้ามคันเบ็ดรุ่นเดียวกัน, เปิดที่ Old Marlin)  `โค้ดเสร็จ type check ผ่าน รอทดสอบใน Play`
-- [ ] C32 — Responsive menu + ไอเทมเด่นใน Scroller (เฟส 1-3 ของ docs/RESPONSIVE_MENU_PLAN.md)  `โค้ดเสร็จ check.mjs ผ่าน รอทดสอบใน Play, เฟส 4 ยังไม่ได้ตรวจ`
-- [ ] C33 — Bake UI ทั้ง 18 หน้าลง Studio + ตรวจ responsive มือถือ  `bake แล้ว รอตรวจใน Play และ Device Emulator`
+- [ ] C32 — Responsive menu และการค้นหาไอเทมใหม่ใน Inventory  `โค้ดเสร็จ รอทดสอบปุ่ม NEW และ Item Detail บนมือถือ เฟส 4 ยังไม่ได้ตรวจ`
+- [ ] C33 — Bake UI ทั้ง 18 หน้าลง Studio + ตรวจ responsive มือถือ  `bake ครบ 18 หน้า รอทดสอบใน Play และ Device Emulator`
 - [ ] C34 — ปรับ UI รอบ 23 พ.ย. (Daily บน HUD/Main Menu, Store แบ่งหน้า, Item Card ไม่ scroll, Enhance มือถือ, พื้นดำเต็มจอ, Gacha Close, Line Modifier, ของฟรีขายได้ 0 โคอิน)  `โค้ดเสร็จ check.mjs ผ่าน รอทดสอบใน Play`
-- [ ] C32 — Stats Codex (Main Menu)  `ทดสอบเปิดจาก Main Menu ค้นหา เปลี่ยนแท็บ และปิดใน Studio ผ่าน รอทดสอบจอแนวตั้ง`
+- [ ] C35 — Stats Codex (Main Menu)  `โค้ดเสร็จ รอทดสอบการค้นหาและการอ่านคำอธิบายบนจอแนวตั้ง`
 
 ---
 
@@ -963,16 +963,17 @@
 
 ### C23. Daily Login (ปฏิทินของขวัญ 7 วัน) — 2026-11-19
 - [บอร์ด Figma Daily Login 6 แบบ](https://www.figma.com/design/givb0hmQYmmaOy7p7DGtb2/Ro-Offline?node-id=3792-1019) บนหน้า Out Space เลือกได้ระหว่าง A Reward Calendar, B 7-Day Reward Trail, C Today Spotlight, D Reward Ledger, E Grand Reward Spotlight และ F Pocket Calendar
-- [x] **Done when (Figma)** — ทุกแบบแสดงรางวัลครบ 7 วันด้วยไอคอนเดิม ใช้สถานะวันที่ 3 พร้อมรับเหมือนกัน และตรวจกรอบข้อความของรางวัลกับป้ายสถานะว่าไม่ล้ำขอบการ์ด มีตัวอย่างปุ่ม CLAIMED TODAY แยกไว้ใต้บอร์ด
+- [x] **Done when (Figma)** — ทุกแบบแสดงรางวัลครบ 7 วันด้วยไอคอนเดิม วันที่ 1–2 ที่รับแล้วมีชั้นสีมิ้นต์โปร่งและตรา CLAIMED ทับการ์ด วันที่ 3 ในตัวอย่างหลักพร้อมรับ และใต้บอร์ดมีตัวอย่างการ์ดวันที่ 3 หลังรับคู่กับปุ่ม CLAIMED TODAY ตรวจแล้วว่าตราเว้นพื้นที่ให้ชื่อและจำนวนรางวัลครบทั้ง 6 แบบ
 - หน้าต่าง Cozy Lake 680x480 ขอบมน 24px: ชิป Streak วันล็อกอินต่อเนื่อง, ชิปเวลานับถอยหลังรีเซ็ตเที่ยงคืน UTC, การ์ดของรางวัล 7 วัน (แถวแรกวันที่ 1-4, แถวล่างวันที่ 5-6 และวันที่ 7 Grand Reward ขนาดใหญ่สีทอง), ปุ่มกดรับ CLAIM DAY N สีเขียวมินต์
-- ไฟล์: `Config/DailyLogin.luau`, `Shared/DailyLogin.luau`, `Services/DailyLoginService.luau`, `UI/Screens/DailyLogin.luau` (bake แล้ว), `Controllers/DailyLoginController.luau`, `UI/EventActions/DailyLogin.luau`, remote `ClaimDailyLogin`; การ์ดใน Events hub ปลดล็อคจาก SOON เป็นปุ่ม OPEN เปิดหน้าต่างเคลมรางวัล
+- ไฟล์: `Config/DailyLogin.luau`, `Shared/DailyLogin.luau`, `Services/DailyLoginService.luau`, `UI/Screens/DailyLogin.luau` (bake แล้ว), `Controllers/DailyLoginController.luau` และ remote `ClaimDailyLogin`. เปิดปฏิทินจากปุ่ม Daily บน HUD หรือไทล์ Daily ใน Main Menu
 - ของรางวัล: วันที่ 1 (1,000 Coins), วันที่ 2 (15 Worms), วันที่ 3 (15 Gems), วันที่ 4 (10 Glow Grubs), วันที่ 5 (500 Pearls), วันที่ 6 (10 Squid Baits), วันที่ 7 (50 Gems)
 - ป้องกันการกดเคลมซ้ำฝั่ง server, บันทึกสถิติ Streak และรีเซ็ตอัตโนมัติหากขาดการล็อกอินเกิน 1 วัน
+- Done when: เปิดปฏิทินได้จาก HUD และ Main Menu รางวัลของวันรับได้ครั้งเดียว และจุดแจ้งเตือนหายหลังรับ
 - ทดสอบ:
-  - [ ] 1. Ctrl+S → Play → เปิดโทรศัพท์ Main Menu → Events → การ์ด Daily Login ขึ้นแท็ก DAILY และกด OPEN ได้
-  - [ ] 2. หน้าต่าง Daily Login เปิดขึ้นมา แสดง Streak: 1 Day, ปุ่ม CLAIM DAY 1 สีเขียวมินต์
-  - [ ] 3. กด CLAIM DAY 1 → ได้รับ 1,000 Coins, สถานะเปลี่ยนเป็น CLAIMED, ปุ่มเปลี่ยนเป็น CLAIMED TODAY สีเทา
-  - [ ] 4. กดปุ่ม X หรือคลิก Backdrop พื้นหลังสีดำ → หน้าต่างปิดลงอย่างเรียบร้อย
+  - [ ] 1. กด Play ด้วยเซฟทดสอบใหม่ แล้วกด Daily บน HUD: ปุ่มมีจุดแดงและเปิดปฏิทิน 7 วันพร้อมปุ่ม CLAIM DAY 1
+  - [ ] 2. กด X แล้วเปิด Main Menu > Daily: ไทล์มีจุดแดงและเปิดปฏิทินเดียวกัน
+  - [ ] 3. กด CLAIM DAY 1: Coins เพิ่ม 1,000 การ์ดวันที่ 1 แสดง CLAIMED และปุ่มเปลี่ยนเป็น CLAIMED TODAY
+  - [ ] 4. ปิดปฏิทินและเปิดใหม่จาก Main Menu > Daily: ปุ่ม Daily บน HUD กับจุดแดงบนไทล์หายไป ปุ่ม CLAIMED TODAY ไม่จ่ายรางวัลซ้ำเมื่อกด
 
 ### B7. 11 Dialogue (NPC) — 2026-11-19
 - Figma 11 (`docs/figma/cozy_menus_spec.py` s_dialogue): กล่องคุยด้านล่าง 900x190, ป้ายชื่อสีมิ้นต์, ปุ่มตัวเลือกแคปซูลด้านขวา (สูงสุด 4), ปุ่ม X กลมที่มุมขวาบนของกล่อง, ไม่มีรูป NPC (NPC อยู่ในโลก 3D); ไอคอนใช้ของเดิมในโปรเจกต์ (icon_fish / icon_flame / icon_reel / icon_chat / icon_star / icon_info)
@@ -1082,18 +1083,19 @@
 ### C29. Item rework — ไอเทมแบบ UUID — 2026-11-22  `โค้ดเสร็จ รอทดสอบใน Play`
 แผน: `docs/ITEM_REWORK_PLAN.md`. ทุกอย่างอยู่ใน `profile.Bag` เป็นเรคคอร์ดธรรมดา (ไม่มี metatable) ที่มี `UUID`.
 - ปลา 1 ตัว = 1 ช่อง มีน้ำหนัก, Mutation, Tags (Manual/Auto/Perfect/Hotspot), มูลค่าของตัวเอง. หีบสมบัติยังรวมกองได้ (สูงสุด 5).
-- คันเบ็ดและสายเบ็ด = ไอเทมใน Bag ซื้อซ้ำได้ไม่จำกัด, ระดับ Enhance อยู่ที่ตัวไอเทม, คันเบ็ดมีช่อง Prefix 2 / Suffix 2 (ยังว่าง รอระบบสุ่ม/หลอม). ทุกชิ้นกินช่อง รวมที่สวมอยู่ด้วย (มีแค่ Aura ที่ไม่กินช่อง; เหยื่อนับ 1 ช่องต่อชนิด)
-- ขายคืนคันเบ็ด/สาย = 40% ของราคาซื้อ + เหรียญที่ใช้ Enhance (`GameConfig.Inventory.GearSellFraction`). ของเริ่มต้น (ราคา 0) และของแจก Starter Pack (Bound) ขายไม่ได้.
+- คันเบ็ดและสายเบ็ดเป็นไอเทมใน Bag มีระดับ Enhance รายชิ้นและใส่ Prefix กับ Suffix ได้ตาม C30/C34. ซื้อซ้ำได้ยกเว้นของเริ่มต้นที่ถือได้ชนิดละชิ้น คันและสายที่สวมอยู่กินช่องเหมือนชิ้นอื่น. Aura ไม่กินช่องและเหยื่อนับ 1 ช่องต่อชนิด
+- ราคาขายคืนคันเบ็ดและสายคือ 40% ของมูลค่ารวมราคาอุปกรณ์ โบนัส Mod และ Coins ที่ใช้ Enhance ตาม `GameConfig.Inventory.GearSellFraction`. ของเริ่มต้นที่ไม่ได้สวมขายได้ 0 Coins ส่วนของ Bound จาก Starter Pack ขายไม่ได้
 - กระเป๋ายังเป็นบันไดอัปเกรดถาวร (ไม่กินช่อง) แต่ปรับความจุใหม่เพราะปลาไม่รวมกองแล้ว: 10 / 16 / 24 / 36 / 50 (เดิม 6 / 10 / 15 / 20 / 30).
 - เซฟ `Version = 6`: ล้าง Bag, Owned, Equipped (เหลือเหยื่อที่สวม), Aquarium.Fish, Enhance. เก็บ Coins, Gems, Pearls, Level, Skills, Rebirths, Fishdex, Gamepass, เหยื่อ. ของแจก Starter Pack ที่เคยมีจะถูกคืนเป็นไอเทม Bound. ผู้เล่นทุกคนได้คันเบ็ด+สายเริ่มต้นใหม่ที่มี UUID ของตัวเอง.
 - Remotes ใหม่/เปลี่ยน: `SellItem(uuid)` แทน `SellStack`, `OpenTreasure/OpenAllTreasure(uuid)`, `Enhance(uuid)`, `Equip("Rods"|"Lines", uuid)`.
-- ยังไม่ทำ (ตั้งใจข้าม): สุ่ม Mod ให้คันเบ็ด, Rod Fusion, ระบบเทรดจริง (มี `Inventory.CanTrade` และสถานะ Bound ให้แล้ว), คลาส OOP แยกไฟล์ของ Definitions/Instances (ใช้ตาราง plain + ฟังก์ชันใน `Items/ItemContainer.luau` เพราะโปรไฟล์ถูกเซฟลง DataStore และส่งไป client), หน้าตา ItemDetail ใหม่ใน Figma (ใช้แถวป้ายเดิมของการ์ด).
+- ระบบ Modifier และ Rod Fusion ดู C30/C31. การตรวจสิทธิ์เทรดอยู่ใน `Inventory.CanTrade` และสถานะ Bound. โปรไฟล์ใช้ตาราง plain เพื่อเซฟลง DataStore และส่งไป client
+- Done when: ปลาอยู่แยกช่อง อุปกรณ์รุ่นเดียวกันสวม ตีบวก และขายคืนแยกรายชิ้นได้ และการย้ายเซฟทดสอบ v5 ไป v6 เก็บ Coins กับ Level ตามกติกา
 - ทดสอบ (คุณ):
-  - [ ] 1. เล่นด้วยเซฟเก่า: เข้าเกมได้ไม่ error, ได้ Driftwood Rod + Cotton Line, Bag ว่าง, Coins/Level คงเดิม, Output ไม่มี warn/error จาก DataService/Registry
+  - [ ] 1. เข้าเกมด้วยสำเนาเซฟทดสอบ v5: ได้ Driftwood Rod และ Cotton Line ติดตัว ปลาเก่าถูกล้าง Coins กับ Level คงเดิม และ Output ไม่มี error จาก DataService/Registry
   - [ ] 2. ตกปลา 3 ตัวชนิดเดียวกัน: Inventory ขึ้น 3 ช่อง (ไม่มีเลข x3), กดแต่ละช่องเห็นน้ำหนัก/ป้าย Manual/Perfect/Hotspot/Mutation ไม่เหมือนกัน
   - [ ] 3. HUD ตัวนับกระเป๋า: นับทุกอย่าง ปลา คันเบ็ด สายเบ็ด (รวมที่สวมอยู่) หีบ และเหยื่อ (1 ช่องต่อชนิด); Aura ไม่นับ. เริ่มเกมใหม่ใช้ 2 ช่อง (คัน+สาย). กระเป๋าเริ่มต้นจุ 10
   - [ ] 4. Shop > Rods: ซื้อ Bamboo Rod สองครั้ง: ครั้งแรกสวมให้เลย ครั้งที่สองเป็นของสำรองใน Bag (ชื่อแถวขึ้น x2) ไม่ขึ้น "Already owned"
-  - [ ] 5. Inventory > Rods: เห็น 3 คัน กดคันสำรอง > SELL ได้ 600 coins (Bamboo 1500 x 40%) กดคันที่สวมอยู่ต้องไม่มีปุ่ม SELL; คัน Driftwood ไม่มีปุ่ม SELL
+  - [ ] 5. เปิด Inventory > Rods แล้วขาย Bamboo Rod สำรอง: Coins เพิ่มตามราคาที่แสดงรวมโบนัส Mod และคันที่สวมอยู่ไม่มีปุ่ม SELL. เลือก Driftwood ที่ไม่ได้สวมแล้วตรวจราคาขาย 0 Coins
   - [ ] 6. กด EQUIP คันสำรอง: คันเดิมกลับไปอยู่ใน Bag, Stats ใน HUD เปลี่ยนตามคัน; ENHANCE คันหนึ่ง +1 อีกคันต้องยังเป็น +0; ขายคัน +N ได้เงินเพิ่มตามที่ลงไป
   - [ ] 7. Bag เต็ม: ซื้อคัน/สายเพิ่มต้องขึ้น "Bag full - sell something first"; Auto fishing หยุดเมื่อเต็ม; ปลาที่ตกตอนเต็มถูกปล่อย (Kept = false)
   - [ ] 8. SELL ALL: ขายเฉพาะปลา คันเบ็ด/สาย/หีบยังอยู่; ขายปลาทีละตัวจากการ์ดได้ราคาตามตัวนั้น
@@ -1111,14 +1113,15 @@
   - [ ] 14. HUD ฝั่งซ้ายมี 5 ทางลัด: Bag, Shop, Auras, Quests, Menu (Fishdex ย้ายไปอยู่ใน Menu). จุดแดง: Bag = มีของใหม่/กระเป๋าเต็ม, Auras = เจมพอสุ่ม, Quests = มีรางวัลรอรับ, Menu = Daily Login รับได้ (ถ้า Features.Quests ปิด ปุ่ม Quests ซ่อน). ทดสอบจอเล็ก/มือถือแนวนอน: แถวทางลัดต้องไม่ล้นจอ
   - [ ] 15. popup Bag Upgrade มีแค่ 2 ปุ่ม (Cancel, Upgrade). สุดบันไดเหรียญหรือมี Infinite Bag pass: ปุ่มเป็นสีเทา MAX กดไม่ได้. Infinite Bag ซื้อที่ Store เท่านั้น
   - [ ] 16. การ์ดไอเทม: ปุ่ม action ไม่เบียดกัน (1 ปุ่ม เต็มแถว, 2 ปุ่ม คู่กัน, 3 ปุ่ม สองปุ่มบน หนึ่งปุ่มเต็มแถวล่าง) ลองคันเบ็ด (Equip, Enhance, Sell) และปลา (Sell, Tank)
-  - [ ] 17. การ์ดคันเบ็ดแสดง mod เป็นป้ายเม็ด (chips) 4 ช่อง: Prefix 2 สีฟ้า, Suffix 2 สีม่วง, ช่องว่างเป็น "+" และห่อบรรทัดได้; สายเบ็ดและปลาไม่มีบล็อกนี้
+  - [ ] 17. เปิดการ์ดคันเบ็ดและสายเบ็ด Uncommon ที่มี Mod: เห็นชิป Prefix และ Suffix ของชิ้นที่เลือก. เปิดการ์ดปลาแล้วตรวจว่าส่วน Mod ของอุปกรณ์ไม่แสดง
 
 ### C30. ระบบ Modifier เบ็ด (Prefix / Suffix) — 2026-11-22  `โค้ดเสร็จ รอทดสอบใน Play`
 สเปก: `docs/MODIFIER_SYSTEM_SPEC.md`, handoff: `docs/HANDOFF_MODIFIERS.md`.
 - `Config/ModifierDefs.luau` (แคตตาล็อก Prefix/Suffix + 5 Drop Profiles), `Items/ModifierRoll.luau` (สุ่มจำนวนช่อง, สุ่ม mod ตาม Rarity weight, ค่า -N ถึง +N), `Inventory.NewGear(cat, id, profile)` สุ่ม mod ให้เบ็ด Uncommon ขึ้นไป (ไม่สุ่มให้ของเริ่มต้นและของแจก), ร้านค้าใช้โปรไฟล์ Shop.
 - Cap Breaker: mod ที่ Stat ชื่อ `Max<Stat>` ขยายเพดานสเตตัส (`Stats.Compute`), เพดานเด็ดขาด Resilience 0.95, AutoSpeed 0.85, CatchBarSize 0.75.
 - UI: ชิป mod ค่าติดลบเป็นสีแดง, ข้อความ Cap Breaker เช่น "+4% Max Catch Bar" (`Format.Mod`).
-- Rod Fusion (ขั้น 6) รอเขียนระบบ ส่วนดรอปเบ็ดจากการตกปลาและบอสมีโปรไฟล์ Fishing, DeepSea, BossRaid, QuestPure แล้ว รอเชื่อมกับแหล่งดรอปจริง
+- การดรอปคันเบ็ดระหว่างตกปลาและจากหีบเชื่อมแล้ว ดู Rod Fusion ใน C31
+- Done when: คันเบ็ดที่ได้จากแต่ละแหล่งสุ่ม Mod ตามโปรไฟล์ แสดงค่าบนการ์ด และใช้ Cap Breaker ตามเพดานในระบบสเตตัส
 - [x] ออกแบบ [Screen 19 - Rod Fusion steps](https://www.figma.com/design/givb0hmQYmmaOy7p7DGtb2/Ro-Offline?node-id=3782-24507) เป็น 4 ขั้น ได้แก่ Base, Material, Type และ Compare
 - **Done when (Figma)** — เลือกคันหลักและคันวัตถุดิบชนิดเดียวกัน เลือก Prefix หรือ Suffix ก่อนเทียบช่องคันหลักกับ Mod วัตถุดิบ แต่ละฝั่งเลือกได้หนึ่งรายการ ตัวเลือกที่เหลือในฝั่งนั้นปิดจนกว่าจะติ๊กตัวเดิมออก กด FUSE ได้เมื่อเลือกครบทั้งสองฝั่ง
 - ตรวจใน Figma
@@ -1155,7 +1158,7 @@
   - [ ] 9. Mod Rare ขึ้นไป: มีกล่อง Guard (ไอคอนเจม + ราคา). ติ๊กแล้ว FUSE: สำเร็จเสมอ หักเจม, กล่อง 5% FAIL หายไป. เจมไม่พอ: ติ๊กไม่ได้
   - [ ] 10. เดินออกไปไกลจาก Old Marlin (เกิน 40 studs) ขณะหน้าต่างเปิด แล้วกด FUSE: ขึ้นข้อความให้กลับไปหา Old Marlin
 
-### C32. Stats Codex — 2026-11-22
+### C35. Stats Codex — 2026-11-22
 
 - ดีไซน์ใน [Figma Stats Codex](https://www.figma.com/design/givb0hmQYmmaOy7p7DGtb2/Ro-Offline?node-id=3785-25180) มี 4 แบบ ได้แก่ Searchable Index, Browse by Category, Inline Glossary และ Mobile Read View ใช้แบบ A ในเกม
 - เพิ่มปุ่มข้อความ Stats Codex ที่ Main Menu และรองรับ Main Menu รุ่นเก่าที่อยู่ใน StarterGui แล้ว หน้าต่างมีแท็บ All, Stats, Rod Mods และ Attributes
@@ -1168,37 +1171,34 @@
   - [x] 1. เปิด Main Menu แล้วกด Stats Codex หน้าหลักปิดและหน้าต่าง Codex เปิด
   - [x] 2. ค้น `Auto Wait` ตรวจว่าเจอ Stat และ Cap Breaker จากนั้นเข้า Rod Mods แล้วค้น `Brisk` ตรวจว่าคำอธิบายตรงกับรายการ
   - [x] 3. ค้น `Golden` ตรวจตัวคูณ 3x พิมพ์คำที่ไม่มีผลแล้วตรวจข้อความ และล้างคำค้นเพื่อให้รายการกลับมา
-  - [ ] 4. ย่อหน้าจอแนวตั้ง เลือกแถวเพื่ออ่านคำอธิบาย กด Back เพื่อกลับไปยังผลค้นหา
+  - [ ] 4. เปิด Codex ใน Device Emulator แนวตั้งแล้วเลือกผลค้นหา: เห็นคำอธิบายเต็มและกด Back กลับมายังผลค้นหาเดิมได้
   - [x] 5. ตรวจขนาดและตำแหน่งของ X แล้วเลื่อนรายการและคำอธิบายถึงท้ายสุดใน Studio ทดสอบคำอธิบายยาวด้วยหน้าต่างที่ลดความสูง
 
-### C32. Responsive menu + ไอเทมเด่นใน Scroller — 2026-11-23  `โค้ดเสร็จ รอทดสอบใน Play`
-แผน: `docs/RESPONSIVE_MENU_PLAN.md`. ทำแล้ว: เฟส 1 (ป้ายบนสล็อต), เฟส 2 (ScrollToIndex, Newest, ปุ่ม NEW), เฟส 3 (ItemDetail ปรับตามจอ). ทำเพิ่มวันที่ 23: แก้หน้าต่างเด้งใหญ่ตอนเปิดครั้งแรก, Daily Login มือถือ, แถบ Highlights, ขอบปุ่ม Depth. ยังไม่ทำ: ตรวจ Safe Area รายหน้าตามตารางข้อ 4 (เฟส 4) และการทดสอบด้วย Device Emulator.
-- สล็อต: ป้าย UP (เขียว) เมื่อคันหรือสายที่ไม่ได้สวมให้ Stat รวมดีกว่าที่สวมอยู่, ป้าย TOP (ทอง) เมื่อ mod สุ่มได้ค่าอยู่ใน 10% บนสุดของช่วง, ขอบเรืองตามสี Rarity เมื่อ Legendary ขึ้นไป, ขอบฟ้ากระพริบเมื่อเป็นของใหม่ที่ยังไม่เคยดู.
+### C32. Responsive menu และการค้นหาไอเทมใหม่ใน Inventory — 2026-11-23  `โค้ดเสร็จ รอทดสอบใน Play`
+แผน: `docs/RESPONSIVE_MENU_PLAN.md`. ตรวจ Safe Area รายหน้าตามเฟส 4 ด้วย Device Emulator.
 - Inventory: Sort เริ่มต้นเป็น Newest (ของใหม่ขึ้นก่อน), ปุ่ม "NEW n" ลอยบนกริด กดแล้วเลื่อนไปไอเทมใหม่ชิ้นแรก.
 - ItemDetail: จอกว้างน้อยกว่า 900 หรือสูงน้อยกว่า 480 (มือถือ) การ์ดอยู่กลางจอและแตะนอกการ์ดเพื่อปิด; จอใหญ่ยังวางข้างสล็อตเหมือนเดิม.
+- Done when: เปิดเมนูครั้งแรกพอดีจอ ปุ่ม NEW พาไปยังไอเทมใหม่ และ Item Detail มีปุ่มที่กดได้บนจอเล็ก
 - ทดสอบ (คุณ):
-  - [ ] 1. Inventory > Rods: มีคัน Rare ขึ้นไปที่ stat ดีกว่าคันที่สวม: เห็นป้าย UP; Dev `give rods BambooRod BossRaid` หลายครั้งจนได้ mod ค่าสูง: เห็นป้าย TOP
-  - [ ] 2. ตกปลาได้ของใหม่แล้วเปิดกระเป๋า: ของใหม่อยู่บนสุด (Newest) ขอบฟ้ากระพริบ กดดูแล้วหยุดกระพริบ; มีปุ่ม NEW n เหนือกริด กดแล้วกริดเลื่อนไปชิ้นนั้น (ลองเปลี่ยน Sort เป็น Value ก่อน)
-  - [ ] 3. ของ Legendary/Mythic มีขอบเรืองสีตามความหายาก
-  - [ ] 4. Studio Device Emulator มือถือแนวนอน (844x390): กดสล็อต > การ์ดอยู่กลางจอ ปุ่ม EQUIP/ENHANCE/SELL กดได้ แตะนอกการ์ดปิด; จอคอมการ์ดยังอยู่ข้างสล็อต
-  - [ ] 5. เปิดกระเป๋าที่มีของ 100 ชิ้นขึ้นไป ไม่กระตุกเมื่อเลื่อน (ป้ายคำนวณตอนสร้างรายการ)
-  - [ ] 6. หน้าต่างเปิดครั้งแรกบนมือถือ (Device Emulator): ไม่เด้งใหญ่เกินจอก่อนแล้วค่อยหด; เปิดครั้งแรกขึ้นพอดีจอ (ลอง Inventory, Daily Login, Enhance, Rod Fusion)
-  - [ ] 7. Inventory มีแถบ Highlights เหนือกริดเมื่อมีของเด่น (Epic ขึ้นไป, Mutation, TOP, UP): แตะแล้วกริดเลื่อนไปที่ชิ้นนั้นและเปิดการ์ด; ไม่มีของเด่นแถบหาย; แท็บ Baits และ Auras ไม่มีแถบ
-  - [ ] 8. Daily Login: จอคอมเหมือนเดิม; มือถือแนวนอน (844x390) การ์ดเตี้ยลง พอดีจอ; มือถือแนวตั้ง (390x844) 3+3 การ์ดแล้ววัน 7 เต็มแถว ชิปอยู่ใต้ชื่อ ปุ่มปิดและ CLAIM กดง่าย (สูง 44 ขึ้นไป)
-  - [ ] 9. ปุ่ม Depth บน HUD: ขอบวงกลมหนาและสีเหมือนปุ่ม AUTO และ SELL (ถ้ายังไม่ตรงบอกว่าจุดไหน)
+  - [ ] 1. ตกปลาแล้วเปิด Inventory ด้วย Sort Newest: ปลาที่เพิ่งตกอยู่บนสุดและปุ่ม NEW n แสดงเมื่อยังมีไอเทมที่ไม่ได้เปิดดู
+  - [ ] 2. เปลี่ยน Sort เป็น Value แล้วกด NEW n: กริดเลื่อนไปยังไอเทมใหม่ชิ้นแรก
+  - [ ] 3. เปิดการ์ดคันเบ็ดใน Device Emulator 844x390: การ์ดอยู่กลางจอ ปุ่มที่ใช้ได้กดได้ และการแตะด้านนอกปิดการ์ด. จอคอมแสดงการ์ดข้างสล็อต
+  - [ ] 4. เปิด Inventory, Daily Login, Enhance และ Rod Fusion ครั้งแรกบนมือถือ: หน้าต่างขึ้นพอดีจอทันทีและปุ่มปิดอยู่ในพื้นที่ที่กดได้
+  - [ ] 5. เลื่อน Inventory ที่มีอย่างน้อย 100 ชิ้นด้วยเซฟทดสอบ: เลื่อนได้ต่อเนื่องและรายการแสดงครบ
 
-### C33. Bake UI ทั้งหมด + ตรวจ responsive — 2026-11-23  `bake แล้ว รอตรวจ`
+### C33. Bake UI ทั้งหมด + ตรวจ responsive — 2026-11-23  `bake แล้ว รอทดสอบใน Play และ Device Emulator`
 - Bake หน้าจอทั้ง 18 หน้าลง StarterGui ด้วย `node tools/ui/bake.mjs <ชื่อ>` ทีละหน้า (ทั้งชุดเกินขีดจำกัด 200,000 ตัวอักษรของ Studio): AuraReel, CastPopup (ใหม่), Character, Components, DailyLogin, DevPanel, Dialogue, Events, GachaPage, HUD, Inventory, ItemDetail, MainMenu, Menus, Minigame, Modal, StarterPackModal, TideEvent. ไม่มีหน้าไหนถูก Locked.
 - ผลของ bake: หน้าเหล่านี้ตรงกับซอร์สล่าสุดแล้ว เช่น ปุ่มปิดและ overlay ของ Daily Login/Bag Upgrade, ขอบ popup Depth, ItemDetail (ไม่มี 3 socket ล็อก). ต้อง Save place (Ctrl+S) เพื่อเก็บ.
 - ข้อจำกัด: ผมดู Daily Login ใน Edit viewport ได้เฉพาะเลย์เอาต์ที่ bake (ขนาดเต็ม 680x480). การปรับตามจอ (3 โหมด) และ FitToScreen ทำงานตอนรันเท่านั้น จึงต้องตรวจใน Play หรือ Device Emulator.
+- Done when: หน้าจอที่ bake เปิดได้ใน Play และเมนูหลักอ่านได้พร้อมปุ่มปิดที่กดได้ใน Device Emulator ทั้งสองแนว
 - ทดสอบ (คุณ):
   - [ ] 1. กด Ctrl+S ใน Studio แล้วกด Play: HUD, Inventory, Shop, Character, Daily Login, Dialogue เปิดได้ ไม่มี error ใน Output (ดู `[UI] ... is not baked` ต้องไม่เหลือ)
   - [ ] 2. Device Emulator 844x390 (มือถือแนวนอน): เปิดทีละหน้า Inventory, Character, Shop, Store, Daily Login, Quests, Fishdex, Mastery, Enhance, Rod Fusion: หน้าต่างพอดีจอ ปุ่มปิดกดได้ ไม่ตกขอบ ไม่เด้งใหญ่เกินจอก่อนหด
   - [ ] 3. Device Emulator 390x844 (มือถือแนวตั้ง): เปิดหน้าเดิมซ้ำ: Daily Login เป็น 3+3 การ์ด, หน้าอื่นยังอ่านได้ (ไม่เล็กจนอ่านไม่ออก) ถ้าหน้าไหนเล็กเกินไปจดชื่อหน้าส่งมา
   - [ ] 4. จอคอม 1280x720: ทุกหน้าเหมือนเดิม ไม่มีอะไรเปลี่ยนขนาด
+  - [ ] 5. หากพบหน้าที่มีปัญหา ให้สร้าง Ticket ในเว็บ QA: ระบุหน้าที่เปิด ขนาดจอ และอาการที่เห็นให้ทีมทำซ้ำได้
 - วัดจริงใน Studio Play ที่จอ 749x323 (เทียบมือถือแนวนอน): เดิม Store/Aquarium/Mastery/Quests ถูกย่อเหลือ 0.45 อ่านไม่ออก. แก้แล้ว: `Window.Shell` บนจอเตี้ย (สูงใช้งานน้อยกว่า 520) ให้หน้าต่างสูงเท่าจอ หัวข้อและปุ่มปิดอยู่กับที่ เนื้อหาเลื่อนได้ ผลคือ scale ประมาณ 0.78 (เห็นภาพจริงแล้ว: Store อ่านง่าย), Quests ลดความสูงเป็น 500 (scale 0.55), Daily Login แก้การ์ดล้นแถวที่ 2 และป้ายทับข้อความ. ตรวจด้วยภาพแล้วผ่าน: Inventory (มี Highlights, TOP, UP), Store, Quests, Shop, Daily Login. ยังไม่ได้ดูภาพ: Character, Events, Fishdex, Auras, Skills, Mastery, Aquarium, Hub, Gacha, มินิเกม.
 - ตัวช่วยทดสอบ (เฉพาะใน Studio): `ReplicatedStorage.UITest` (BindableFunction) เรียก `:Invoke("Inventory")` เพื่อเปิดเมนูให้สคริปต์ทดสอบวัดขนาด (ชื่อที่รองรับ: Inventory, Character, Shop, Fishdex, Auras, Store, Aquarium, Mastery, Quests, Events, DailyLogin, Skills, Hub, Altar).
-  - [ ] 5. จดหน้าที่ยังมีปัญหา (ชื่อหน้า, อุปกรณ์, อาการ) ลงเป็น Ticket ในเว็บ QA เพื่อให้ Agent แก้ต่อทีละหน้า
 
 ### C34. ปรับ UI และระบบ รอบ 23 พ.ย. — 2026-11-23  `โค้ดเสร็จ รอทดสอบใน Play`
 - Daily Login: ปุ่ม Daily บน HUD (`BtnDaily` ใต้ Stats) แสดงเฉพาะตอนยังไม่รับ check-in วันนี้ มีจุดแดง, รับแล้วซ่อน. Main Menu มี tile Daily (จุดแดงตอนยังไม่รับ). เอาการ์ด Daily ออกจากหน้า Events.
@@ -1239,6 +1239,8 @@
 - [x] ทดสอบโหมดในเครื่อง (ไม่มี config): ตาราง 69 งาน, เปิดงานเห็นขั้นตอน, ผ่าน/ไม่ผ่าน, สร้าง/ปิด Ticket, หน้าระบบเกมและประวัติ
 
 ## บันทึกการอัปเดต
+- 2026-11-23T02:24:51+07:00 — ปรับขั้นตอน QA ของ C23, C29, C30, C32 และ C33 ให้ตรงกับเกมปัจจุบัน พร้อมแยก Stats Codex เป็น C35 เพื่อให้ทดสอบได้ด้วยชุดขั้นตอนของตัวเอง
+- 2026-11-23T02:18:08+07:00 — C23 เพิ่มชั้นสีมิ้นต์โปร่งและตราประทับ CLAIMED บนรางวัลที่รับแล้วทั้ง 6 แบบใน Figma (3792:1019) พร้อมตัวอย่างวันที่ 3 หลังรับ
 - 2026-11-23T02:20:00+07:00 — C34 Line Modifier: เส้นเอ็น Uncommon ขึ้นไปสุ่ม Prefix/Suffix เหมือน Rod, การ์ดแสดงชิป, ข้อความขายบอก line/rod, dev give Lines. ตรวจ check.mjs ผ่าน ยังไม่ทดสอบใน Play
 - 2026-11-23T02:18:00+07:00 — C34 ของ starter (Driftwood Rod, Cotton Line) ขายได้แต่ได้ 0 โคอิน และถือได้ทีละชิ้น (ปุ่มซื้อเป็น Owned)
 - 2026-11-23T02:16:00+07:00 — C34 Gacha Aura Summon: เปลี่ยนปุ่ม < เป็นปุ่ม Close X มาตรฐานมุมขวาบน (รองรับ bake เดิม)
@@ -1253,8 +1255,8 @@
 - 2026-11-23T00:55:47+07:00 — เตรียมไอคอน Stats Codex ในแค็ตตาล็อกและ Main Menu ตรวจ type check และทดสอบตัวสร้างไทล์ใน Studio แล้ว รออนุญาตโฟลเดอร์ assets/ui ใน MCP Permissions สำหรับอัปโหลดรูป
 - 2026-11-23 — C33 bake UI ทั้ง 18 หน้าลง Studio (ทีละหน้า), แก้ปัญหาหน้าต่างเด้งใหญ่ตอนเปิดครั้งแรก (`New.FitToScreen`), Daily Login 3 โหมดตามจอ, Highlights shelf, ขอบ Depth, ลบ stroke popup Depth; รอตรวจใน Play/Device Emulator
 - 2026-11-23 — C32 Responsive menu เฟส 1-3: ป้าย UP/TOP/ขอบเรืองบนสล็อต, Sort Newest + ปุ่ม NEW + `VirtualGrid:ScrollToIndex`, ItemDetail กลางจอบนจอเล็ก; check.mjs ผ่าน ยังไม่ทดสอบใน Play
-- 2026-11-23T00:25:22+07:00 — C32 ใช้ X มาตรฐานและเพิ่มระยะขอบของรายการกับคำอธิบาย Stats Codex ทดสอบระยะด้านล่างใน Studio แล้ว จัดทำแผนตรวจเมนูรวมใน docs/RESPONSIVE_MENU_PLAN.md สำหรับ A9, A17 และ C11
-- 2026-11-22T23:36:49+07:00 — C32 ทำบอร์ด Figma Stats Codex 4 แบบ (3785:25180) และเพิ่ม Searchable Index ในเกมผ่านปุ่มข้อความ Stats Codex ที่ Main Menu ตรวจ type check ทดสอบชุดข้อมูล และทดสอบการเปิด ค้นหา เปลี่ยนแท็บ และปิดใน Studio ผ่าน
+- 2026-11-23T00:25:22+07:00 — C35 ใช้ X มาตรฐานและเพิ่มระยะขอบของรายการกับคำอธิบาย Stats Codex ทดสอบระยะด้านล่างใน Studio แล้ว จัดทำแผนตรวจเมนูรวมใน docs/RESPONSIVE_MENU_PLAN.md สำหรับ A9, A17 และ C11
+- 2026-11-22T23:36:49+07:00 — C35 ทำบอร์ด Figma Stats Codex 4 แบบ (3785:25180) และเพิ่ม Searchable Index ในเกมผ่านปุ่มข้อความ Stats Codex ที่ Main Menu ตรวจ type check ทดสอบชุดข้อมูล และทดสอบการเปิด ค้นหา เปลี่ยนแท็บ และปิดใน Studio ผ่าน
 - 2026-11-22 — C30/C31 ส่วนที่เหลือ: ดรอปคันเบ็ดจากการตกปลาและหีบ (`Items/RodDrop`, `GameConfig.RodDrop`), ราคาขายคืนรวม mod, Guard ด้วย Gems และตรวจระยะ NPC ใน FusionService; check.mjs ผ่าน ยังไม่ทดสอบใน Play
 - 2026-11-22 — C31 Rod Fusion: `Items/Fusion.luau` (กติกา+ราคา), `GameConfig.Fusion`, `FusionService` + remote `FuseRods`, `FusionController` (หน้าต่าง 4 ขั้น) เปิดจาก Old Marlin; check.mjs ผ่าน ยังไม่ทดสอบใน Play
 - 2026-11-22T22:47:43+07:00 — C30 ปรับ Figma Screen 19 (3782:24507) เป็น Base, Material, Type และ Compare แสดงการเลือกและติ๊กออกฝั่งละหนึ่งรายการ พร้อมย้ายพรีวิวและค่าหลอมไปไว้ในขั้น Compare (3783:24832)
