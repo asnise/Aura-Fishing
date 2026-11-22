@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="th">
+<html lang="th" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,22 +7,36 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="bar">
-    <h1>Aura Fishing <span>QA</span></h1>
-    <nav id="nav">
-      <a href="#tasks">งาน</a>
-      <a href="#systems">ระบบเกม</a>
-      <a href="#tickets">Ticket <b id="ticketCount"></b></a>
-      <a href="#log">ประวัติ</a>
-    </nav>
-    <div class="bar-end">
-      <span id="syncInfo" class="muted"></span>
-      <button class="btn icon" id="refreshBtn" title="โหลดข้อมูลล่าสุด" aria-label="โหลดข้อมูลล่าสุด"></button>
-      <button class="btn" id="authBtn"></button>
+  <div class="app">
+    <aside class="sidebar">
+      <nav id="nav">
+        <div class="nav-group">
+          <p class="nav-label">ตรวจงาน</p>
+          <a class="nav-item" href="#tasks"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><span>งานที่ต้องตรวจ</span></a>
+          <a class="nav-item" href="#tickets"><svg viewBox="0 0 24 24"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg><span>Ticket / บั๊ก</span><b id="ticketCount" hidden></b></a>
+        </div>
+        <div class="nav-group">
+          <p class="nav-label">โปรเจกต์</p>
+          <a class="nav-item" href="#ideas"><svg viewBox="0 0 24 24"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.2 1 2V17h6v-.3c0-.8.4-1.5 1-2A7 7 0 0 0 12 2z"/></svg><span>ข้อเสนอ / ไอเดีย</span><b id="ideaCount" hidden></b></a>
+          <a class="nav-item" href="#systems"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg><span>ระบบเกม</span></a>
+          <a class="nav-item" href="#log"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>ประวัติพัฒนา</span></a>
+        </div>
+      </nav>
+    </aside>
+    <div class="workspace">
+      <header class="workspace-bar">
+        <span class="workspace-name" id="workspaceName">QA</span>
+        <div class="workspace-actions">
+          <span class="sync-status" id="syncInfo"></span>
+          <button class="btn icon" id="refreshBtn" title="โหลดข้อมูลล่าสุด" aria-label="โหลดข้อมูลล่าสุด"></button>
+          <button class="btn" id="authBtn"></button>
+          <button class="btn icon" id="themeBtn" title="สลับธีม" aria-label="สลับธีม"></button>
+        </div>
+      </header>
+      <p id="banner" class="banner" hidden></p>
+      <main class="content" id="view"></main>
     </div>
-  </header>
-  <p id="banner" class="banner" hidden></p>
-  <main id="view"></main>
+  </div>
 
   <dialog id="dialog"></dialog>
   <p id="toast" class="toast" hidden></p>

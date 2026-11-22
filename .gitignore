@@ -46,3 +46,6 @@ desktop.ini
 .idea/
 .impeccable/*.cache.json
 *.log
+
+# QA agent credentials
+qa/.agent.env
