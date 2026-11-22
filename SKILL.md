@@ -124,7 +124,7 @@ node qa/tools/post.mjs --title "Session summary 2026-11-22" --category other --b
 node qa/tools/post.mjs --comment I-ABC123 --body "Implemented in X, see task C30"
 ```
 - Categories: `system`, `balance`, `content`, `ui`, `monetize`, `other`.
-- Needs credentials (`qa/.agent.env` with `QA_AGENT_EMAIL` and `QA_AGENT_PASSWORD`, or the same environment variables). **Never print, log, commit, or paste these.** If missing, say so and give the human the command to run instead.
+- Needs a service-account key file: `qa/.agent-key.json` (gitignored) or the path in `QA_AGENT_KEY_FILE`. **Never print, log, commit, or paste its contents.** If it is missing, say so and give the human the command to run instead.
 - A good post has: a title that says what is proposed; body with (1) the problem or opportunity, (2) the proposal, (3) effects on balance / players / other systems, (4) rough effort, (5) the question humans should answer. A report has: what was done, what changed for players, what QA should test first, known risks, what is next.
 - One post per idea. Search `pull.mjs` output first so you do not duplicate. Do not spam: batch small notes into one summary.
 - Posts always start as `proposed`. Status (`discussing`, `approved`, `rejected`, `done`) is decided by humans on the website.
@@ -143,7 +143,7 @@ node qa/tools/post.mjs --comment I-ABC123 --body "Implemented in X, see task C30
 - Do not tick `[x]` in TASKS.md, mark QA results, or close tickets.
 - Do not write to Firestore except through `post.mjs`. Do not change security rules or Firebase config.
 - Do not edit `qadata.json` or `fixes.json` by hand.
-- Do not commit `qa/.agent.env` (it is in `.gitignore`; do not remove that).
+- Do not commit `qa/.agent-key.json` (it is in `.gitignore`; do not remove that).
 - Do not implement ideas that are not `approved`.
 - Do not claim "reported to QA" unless build, commit, and (if allowed) publish actually succeeded. Report failures as they are.
 
@@ -154,8 +154,10 @@ node qa/tools/post.mjs --comment I-ABC123 --body "Implemented in X, see task C30
 | `build.mjs` says no tasks found | Overview checklist lines not in the exact format (section 3.1) |
 | Task shows "no test steps" on the site | Missing `### <ID>.` heading or `- ทดสอบ:` block (section 3.2) |
 | `pull.mjs` prints "qa/ideas is not readable yet" | Firestore rules not published with `ideas`; ask the human to publish `qa/firestore.rules` |
-| `post.mjs` "Agent sign-in failed" | Wrong or missing agent credentials, or Email/Password sign-in not enabled in Firebase |
-| `post.mjs` "Firestore commit failed: 403" | Agent email not in `qa/firestore.rules`, or rules not published |
+| `post.mjs` "No agent key at ..." | Key file missing; human must create it (see `qa/README.md`) |
+| `post.mjs` "Agent key rejected" | Key deleted or malformed; human creates a new key |
+| `post.mjs` "Note: key is from project X" then 403 | Key is from another Google project: grant its service-account email **Cloud Datastore User** in the site project (IAM), and enable the Cloud Firestore API in the key's own project |
+| `post.mjs` "Firestore commit failed: 403" | The service account lacks the role **Cloud Datastore User** (IAM), or Firestore API disabled |
 | Site shows old data | Forgot to commit `qadata.json` or to run the publish command; browsers cache, hard refresh with Ctrl+F5 |
 
 ---
@@ -172,7 +174,7 @@ You work on the Aura Fishing repo. A QA team tests it through a website. Follow 
 - When you finish or change anything a player or tester can notice: update docs/TASKS.md (checklist note, "Done when", numbered "ทดสอบ" steps that say action then expected result, and a timestamped line under "บันทึกการอัปเดต"), run `node qa/tools/build.mjs`, and commit qa/data/qadata.json with it.
 - Publish with `git subtree push --prefix qa origin gh-pages` only if pushing is allowed in this session; otherwise tell the operator the exact command.
 - Never tick [x] in TASKS.md, never mark QA results, never close tickets: only the QA team does. After fixing a ticket run `node qa/tools/fix.mjs <id> "what changed"`.
-- Never implement an idea that is not approved. Post proposals and summary reports with `node qa/tools/post.mjs`. Never print or commit qa/.agent.env.
+- Never implement an idea that is not approved. Post proposals and summary reports with `node qa/tools/post.mjs`. Never print or commit the agent key file (qa/.agent-key.json).
 - Your final message must list the task IDs you changed, what QA should test, and anything blocked. Do not say "reported" unless build, commit and publish really succeeded.
 ```
 

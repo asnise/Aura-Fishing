@@ -1,11 +1,13 @@
-// Let an agent post to the Ideas forum (or comment on a post) using its own Firebase account.
+// Let an agent post to the Ideas forum (or comment on a post) with a Google service-account key.
 //   node qa/tools/post.mjs --title "Co-op fishing" --category system --body "details..." [--status proposed]
 //   node qa/tools/post.mjs --body-file report.md --title "Weekly summary" --category other
 //   node qa/tools/post.mjs --comment I-ABC123 --body "Dev note: implemented in FishingService"
-// Credentials: QA_AGENT_EMAIL / QA_AGENT_PASSWORD, from the environment or from qa/.agent.env (gitignored).
-// Setup: Firebase console > Authentication > Email/Password on, add that user, turn OFF sign-ups,
-// and put the email in qa/firestore.rules. Uses 1 sign-in + 1 Firestore commit (1 write) per call.
+// Key: JSON file at qa/.agent-key.json (gitignored) or the path in QA_AGENT_KEY_FILE. Setup in qa/README.md.
+// A service account is authorized by IAM, not by firestore.rules, so humans keep their email allowlist.
+// Uses 1 token exchange + 1 Firestore commit (1 write) per call.
 import { readFile } from 'node:fs/promises';
+import { createSign } from 'node:crypto';
+import { fileURLToPath } from 'node:url';
 
 const root = new URL('../', import.meta.url);
 const arg = name => { const i = process.argv.indexOf('--' + name); return i > 0 ? process.argv[i + 1] : undefined; };
@@ -21,12 +23,26 @@ export function encode(v) {
   return { mapValue: { fields: Object.fromEntries(Object.entries(v).map(([k, x]) => [k, encode(x)])) } };
 }
 
+// Service-account JWT -> OAuth access token. cloud-platform scope is required for IAM auth to bypass firestore.rules; the account's role (Cloud Datastore User) still limits it to Firestore.
+export async function accessToken(key) {
+  const b64 = o => Buffer.from(JSON.stringify(o)).toString('base64url');
+  const iat = Math.floor(Date.now() / 1000);
+  const unsigned = b64({ alg: 'RS256', typ: 'JWT' }) + '.' + b64({ iss: key.client_email, scope: 'https://www.googleapis.com/auth/cloud-platform', aud: key.token_uri, iat, exp: iat + 600 });
+  const jwt = unsigned + '.' + createSign('RSA-SHA256').update(unsigned).sign(key.private_key, 'base64url');
+  const res = await fetch(key.token_uri, { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams({ grant_type: 'urn:ietf:params:oauth:grant-type:jwt-bearer', assertion: jwt }) });
+  const out = await res.json();
+  if (!res.ok) throw new Error('Agent key rejected: ' + (out.error_description || out.error || res.status));
+  return out.access_token;
+}
+
 async function main() {
-  const env = Object.fromEntries((await readFile(new URL('.agent.env', root), 'utf8').catch(() => '')).split(/\r?\n/).filter(l => l.includes('=')).map(l => [l.slice(0, l.indexOf('=')).trim(), l.slice(l.indexOf('=') + 1).trim()]));
-  const email = process.env.QA_AGENT_EMAIL || env.QA_AGENT_EMAIL;
-  const password = process.env.QA_AGENT_PASSWORD || env.QA_AGENT_PASSWORD;
-  const { apiKey, projectId } = JSON.parse(await readFile(new URL('config.json', root), 'utf8'));
-  if (!email || !password) throw new Error('Set QA_AGENT_EMAIL and QA_AGENT_PASSWORD (env or qa/.agent.env). See header of qa/tools/post.mjs.');
+  const keyPath = process.env.QA_AGENT_KEY_FILE || fileURLToPath(new URL('.agent-key.json', root));
+  const keyText = await readFile(keyPath, 'utf8').catch(() => null);
+  if (!keyText) throw new Error(`No agent key at ${keyPath}. Set it up as described in qa/README.md (or set QA_AGENT_KEY_FILE).`);
+  const key = JSON.parse(keyText);
+  const { projectId } = JSON.parse(await readFile(new URL('config.json', root), 'utf8'));
+  // Cross-project keys work only if the account has Cloud Datastore User on the site's project (see README).
+  if (key.project_id !== projectId) console.error(`Note: key is from project ${key.project_id}, site uses ${projectId}; needs IAM access there.`);
 
   const body = arg('body-file') ? await readFile(arg('body-file'), 'utf8') : arg('body');
   const commentOn = arg('comment');
@@ -37,11 +53,7 @@ async function main() {
   if (!CATEGORIES.includes(category)) throw new Error('--category must be one of ' + CATEGORIES.join(', '));
   if (!STATUSES.includes(status)) throw new Error('--status must be one of ' + STATUSES.join(', '));
 
-  const login = await fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${apiKey}`, {
-    method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email, password, returnSecureToken: true })
-  });
-  if (!login.ok) throw new Error('Agent sign-in failed: ' + ((await login.json()).error?.message || login.status));
-  const { idToken } = await login.json();
+  const idToken = await accessToken(key);
 
   const at = new Date().toISOString();
   const by = 'agent';
