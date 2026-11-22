@@ -1,0 +1,1609 @@
+{
+ "generated": "2026-11-22T09:46:23.783Z",
+ "stage": {
+  "name": "ต้นแบบ Vertical Slice",
+  "summary": "วงจรตกปลาและระบบหลักของออร่าเล่นได้แล้ว งานระบบระยะยาวและการทดสอบมือถือยังอยู่ในแผนพัฒนา"
+ },
+ "systems": [
+  {
+   "id": "fishing",
+   "status": "done",
+   "name": "วงจรตกปลา",
+   "nameEn": "Fishing loop",
+   "summary": "เหวี่ยงเบ็ด รอปลากิน ดึงปลา และเลือกความลึก ใช้ทดสอบต้นแบบได้",
+   "tasks": [
+    "A1",
+    "A5",
+    "A6",
+    "B14"
+   ]
+  },
+  {
+   "id": "inventory-shop",
+   "status": "done",
+   "name": "กระเป๋า ร้านค้า และสมุดปลา",
+   "nameEn": "Inventory, shop and Fishdex",
+   "summary": "กระเป๋าแบบช่อง ร้านขายอุปกรณ์ และสมุดปลาผ่านการทดสอบตามรายการงาน",
+   "tasks": [
+    "B3",
+    "B8",
+    "B12",
+    "C2"
+   ]
+  },
+  {
+   "id": "save",
+   "status": "done",
+   "name": "การบันทึกข้อมูลผู้เล่น",
+   "nameEn": "Player saves",
+   "summary": "บันทึกโปรไฟล์ผู้เล่นผ่าน DataStore",
+   "tasks": [
+    "A11"
+   ]
+  },
+  {
+   "id": "auto",
+   "status": "testing",
+   "name": "ตกออโต้และสมดุลรางวัล",
+   "nameEn": "Auto-fishing and rewards",
+   "summary": "ตกออโต้มีในต้นแบบ งานปรับจังหวะ Hot Streak และผลตอบแทนอยู่ในรอบทดสอบ",
+   "tasks": [
+    "B18",
+    "C12"
+   ]
+  },
+  {
+   "id": "casting",
+   "status": "testing",
+   "name": "กดค้างเหวี่ยงและจุดฟองปลา",
+   "nameEn": "Charge casting and hotspots",
+   "summary": "ระบบเหวี่ยงตามแรงกดและจุด Hotspot มีโค้ดแล้ว รอทดสอบการใช้งานใน Play",
+   "tasks": [
+    "C25",
+    "C26"
+   ]
+  },
+  {
+   "id": "auras",
+   "status": "testing",
+   "name": "กาชา ออร่า และดาว",
+   "nameEn": "Aura rolls, equipping and stars",
+   "summary": "ระบบสุ่มและสวมออร่าทำงานในต้นแบบ หน้ากาชารอบล่าสุด ดาวออร่า และ pity รอทดสอบเพิ่ม",
+   "tasks": [
+    "A8",
+    "A10",
+    "B6",
+    "B22",
+    "C17"
+   ]
+  },
+  {
+   "id": "aquarium",
+   "status": "testing",
+   "name": "ตู้ปลา ไข่มุก และ Mastery",
+   "nameEn": "Aquarium, Pearls and Mastery",
+   "summary": "ตู้ปลาผลิตไข่มุกและสะสมออฟไลน์ ใช้ไข่มุกอัป Mastery มีโค้ดแล้ว",
+   "tasks": [
+    "C14",
+    "C15"
+   ]
+  },
+  {
+   "id": "gear",
+   "status": "testing",
+   "name": "ตีบวกอุปกรณ์",
+   "nameEn": "Gear enhancement",
+   "summary": "ตีบวกคันเบ็ดและสายเบ็ดด้วย Coins รอทดสอบในเกม",
+   "tasks": [
+    "C16"
+   ]
+  },
+  {
+   "id": "rebirth-current",
+   "status": "testing",
+   "name": "Rebirth และสกิลรุ่นปัจจุบัน",
+   "nameEn": "Current Rebirth and skills",
+   "summary": "Rebirth รุ่นปัจจุบันเริ่มที่เลเวล 50 และมีฉายา สกิล Multi-Cast มีระบบฝั่งเกมแล้ว",
+   "tasks": [
+    "C3",
+    "C4"
+   ]
+  },
+  {
+   "id": "events",
+   "status": "testing",
+   "name": "อีเวนต์และรางวัลรายวัน",
+   "nameEn": "Events and daily rewards",
+   "summary": "Naga Tide ปลาขายดี เควสต์ และ Daily Login มีระบบแล้ว รอทดสอบรอบเล่น",
+   "tasks": [
+    "C5",
+    "C7",
+    "C18",
+    "C23"
+   ]
+  },
+  {
+   "id": "store",
+   "status": "testing",
+   "name": "ร้าน Robux และ Gamepasses",
+   "nameEn": "Robux store and passes",
+   "summary": "มีร้านค้า การรับใบเสร็จ บูสต์ และ Starter Pack งานซื้อจริงและ Extra Cast ยังมีรายการรอทดสอบ",
+   "tasks": [
+    "C6",
+    "C13",
+    "C19"
+   ]
+  },
+  {
+   "id": "map",
+   "status": "progress",
+   "name": "แมพและความพร้อมบนมือถือ",
+   "nameEn": "Map and mobile readiness",
+   "summary": "มีแมพต้นแบบ Stilt Boardwalk แล้ว งานแมพจริง โมเดล และทดสอบมือถือยังเปิดอยู่",
+   "tasks": [
+    "B19",
+    "A17",
+    "C9",
+    "C11"
+   ]
+  },
+  {
+   "id": "sound",
+   "status": "planned",
+   "name": "เสียงประกอบ",
+   "nameEn": "Sound effects",
+   "summary": "บันทึกงานระบุว่ายังไม่เริ่มทำเสียงในมินิเกมและกาชา",
+   "tasks": [
+    "C8"
+   ]
+  },
+  {
+   "id": "inventory-rework",
+   "status": "design",
+   "name": "กระเป๋านับปลาทีละตัว",
+   "nameEn": "One fish per inventory slot",
+   "summary": "ข้อสรุปใน report คือเปลี่ยนจากการซ้อนปลาเป็นนับทีละตัว โค้ดปัจจุบันยังรองรับการซ้อนปลา",
+   "tasks": []
+  },
+  {
+   "id": "fish-weight",
+   "status": "design",
+   "name": "ราคาแบบไม่อิงน้ำหนักปลา",
+   "nameEn": "Weight-free fish pricing",
+   "summary": "report สรุปให้เลิกใช้น้ำหนักคำนวณราคาขาย โค้ดปัจจุบันยังใช้ Weight ใน Roll.Value",
+   "tasks": []
+  },
+  {
+   "id": "trading",
+   "status": "design",
+   "name": "ระบบเทรดและไอเทมผูกมัด",
+   "nameEn": "Trading and bound items",
+   "summary": "ตกลงเรื่อง Trade License จำกัด 4 ช่อง ภาษี Coins และไอเทมที่เทรดไม่ได้",
+   "tasks": []
+  },
+  {
+   "id": "rod-fusion",
+   "status": "design",
+   "name": "Mod คันเบ็ดและ Rod Fusion",
+   "nameEn": "Rod mods and fusion",
+   "summary": "กำหนด 2 Prefix กับ 2 Suffix และย้าย Mod ระหว่างคันเบ็ดชนิดเดียวกัน",
+   "tasks": []
+  },
+  {
+   "id": "gem-pacing",
+   "status": "design",
+   "name": "รางวัล Gems และ Luck รอบใหม่",
+   "nameEn": "Revised Gem rewards and Luck",
+   "summary": "ตกลงรับ Gems ตั้งแต่ Uncommon และตั้งเป้าการสุ่มต่อชั่วโมง พร้อมตัวคูณ Luck ของ Gamepass 1.25 เท่า",
+   "tasks": []
+  },
+  {
+   "id": "prestige",
+   "status": "design",
+   "name": "Prestige Tree และเหยื่อข้าม Rebirth",
+   "nameEn": "Prestige tree and rebirth bait",
+   "summary": "กำหนดแต้ม Rebirth สำหรับ Perk 3 สาย การล้างปลา/เหยื่อ และ Rebirth Protected",
+   "tasks": []
+  },
+  {
+   "id": "exploration",
+   "status": "planned",
+   "name": "สำรวจเกาะและสภาพอากาศ",
+   "nameEn": "Island exploration and weather",
+   "summary": "ข้อเสนอใน report ครอบคลุมเรือ เกาะ สภาพอากาศ และปลาธาตุ",
+   "tasks": []
+  }
+ ],
+ "tasks": [
+  {
+   "id": "A1",
+   "group": "A",
+   "title": "วงจรตกปลาหลัก (Prototype core loop)",
+   "titleEn": "Core fishing loop",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "Play → เดินไปขอบเกาะ/ท่าเรือ หันหน้าเข้าน้ำ",
+    "กด CAST → Cast popup ขึ้น → กด CAST! → ควรเห็นทุ่นสีแดงลงน้ำ + ข้อความ \"Waiting… (Xm)\"",
+    "รอจน \"!\" ขึ้น → กด HOOK! ภายใน ~2 วินาที → มินิเกมขึ้น",
+    "ชนะมินิเกม → การ์ดปลาขึ้นกลางจอ, ตัวนับกระเป๋า Bag x/10 เพิ่ม",
+    "หันหน้าออกจากน้ำแล้วกด CAST → ต้องขึ้น \"Face the water to cast!\"",
+    "ตกจนกระเป๋าเต็ม → กด CAST → ต้องขึ้น \"Your bag is full!\"",
+    "กด SELL ALL → หน้าต่างยืนยัน (B1) ขึ้น → กด Sell → เงินเพิ่ม, กระเป๋าว่าง (ProximityPrompt ที่ Fish Merchant ขายทันทีไม่ถาม)",
+    "เมนู Shop → แท็บ Rods → ซื้อ Bamboo Rod (400) → ปุ่มเปลี่ยนเป็น Equipped",
+    "เปิด AUTO → รอ ~9 วินาที → ได้ปลาเอง (ราคา x1.0) → กด AUTO อีกครั้งเพื่อหยุด"
+   ],
+   "rev": "a39b5013"
+  },
+  {
+   "id": "A2",
+   "group": "A",
+   "title": "ธีม UI \"Cozy Lake\"",
+   "titleEn": "Cozy Lake UI theme",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "Play → เปิด Shop / Auras / Fishdex → เทียบกับ Figma section \"Aura Fishing — Cozy Lake Style Guide\" (สี, ฟอนต์, มุมโค้ง)"
+   ],
+   "rev": "5f56347e"
+  },
+  {
+   "id": "A3",
+   "group": "A",
+   "title": "จัดวางหลบ UI ของ Roblox (Safe areas)",
+   "titleEn": "Roblox safe areas",
+   "status": "testing",
+   "note": "โค้ดเสร็จ รอทดสอบ",
+   "steps": [
+    "Play (คอม): Leaderboard มุมขวาบนต้องไม่ทับปุ่มใด ๆ; กดเปิด Chat (มุมซ้ายบน) → บังได้แค่ Stats เท่านั้น",
+    "Test → Device → เลือกมือถือ → Play: จอยซ้ายล่างกับปุ่มกระโดดขวาล่างต้องไม่ทับปุ่ม Bag/Auto/Sell (ปุ่มเหล่านี้ต้องยกขึ้นเหนือปุ่ม Jump)",
+    "เทียบกับ Figma section \"00 · Roblox Safe Areas\"",
+    "หมายเหตุ 2026-11-16: ข้อ 2 บนมือถือแนวนอนไม่ผ่าน (เมนูซ้ายล้นจอ/ทับ thumbstick) → แก้ใน A17 แล้ว ทดสอบใหม่ที่ A17"
+   ],
+   "rev": "4b0e9de8"
+  },
+  {
+   "id": "A4",
+   "group": "A",
+   "title": "HUD Stats แบบ E (Minimal Floating)",
+   "titleEn": "Minimal HUD stats",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "Play → ตกปลา 1 ตัว → ตัวเลข XP และ Coins ต้องเปลี่ยนทันที; เลเวลอัป → Lv. เปลี่ยน + แจ้ง LEVEL UP"
+   ],
+   "rev": "a8ce2efe"
+  },
+  {
+   "id": "A5",
+   "group": "A",
+   "title": "Cast popup + Auto depth",
+   "titleEn": "Casting and auto depth",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "กด CAST → popup: ลาก slider / กด Shallow-Mid-Max → ตัวเลขความลึก, ป้าย zone, \"N species live here\" เปลี่ยนตาม",
+    "กด CAST! → ข้อความ Waiting แสดงความลึกที่เลือก",
+    "เปิด popup อีกครั้ง → ติ๊ก Auto depth → CAST! → ปุ่ม DEPTH แสดง AUTO",
+    "กด CAST ครั้งต่อไป → ต้องเหวี่ยงทันที (ไม่มี popup) และความลึกใน \"Waiting…\" สุ่มเปลี่ยนไปทุกครั้ง",
+    "กดปุ่ม DEPTH → popup ขึ้น → เอาติ๊ก Auto ออก → กลับเป็นแบบเลือกเอง",
+    "ออกเกมแล้วเข้าใหม่ (ถ้าเปิด API Services) → ค่า Auto/ความลึกยังจำไว้"
+   ],
+   "rev": "51a00e56"
+  },
+  {
+   "id": "A6",
+   "group": "A",
+   "title": "มินิเกม Pond Card",
+   "titleEn": "Pond Card minigame",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "Hook ปลา → แผงขึ้น: แท็ก rarity + ความลึก + เวลาถอยหลัง 0:59…",
+    "กดค้าง (คลิก/Space/แตะจอ) → แถบเขียวขึ้น, ปล่อย → แถบลง",
+    "แถบทับปลา → ชิป GOOD สว่าง + มิเตอร์ทองเพิ่ม + ทุ่นเลื่อนขึ้น",
+    "ปล่อยให้หลุด → LOOSE; หลุดนานจนมิเตอร์ต่ำ → SNAP! สีแดง; มิเตอร์หมด → \"The line snapped!\"",
+    "ปลาต้องเป็นสัญลักษณ์เทา ><> (หรือรูป MysteryFish ถ้าอัปโหลดแล้ว) — ห้ามเห็นชนิดปลาก่อนจับได้",
+    "ปรับความยาก/ความเร็ว: src/shared/Config/GameConfig.luau → Minigame (BarLift, BarGravity, GainPerSecond, SnapWarning)"
+   ],
+   "rev": "f183941e"
+  },
+  {
+   "id": "A7",
+   "group": "A",
+   "title": "การ์ดปลาที่ตกได้แบบ Badge",
+   "titleEn": "Fish catch badge",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "ตกปลาแบบมือ 1 ตัว และแบบ Auto 1 ตัว → badge Mode ต้องต่างกัน; ตกแบบไม่หลุดเลย → มี PERFECT"
+   ],
+   "rev": "8ce7ac24"
+  },
+  {
+   "id": "A8",
+   "group": "A",
+   "title": "Aura Gacha — Reel Slot",
+   "titleEn": "Aura Gacha reel",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "ต้องมี Gems ≥ 5 (เริ่มเกมมี 15) → เมนู Auras → ROLL AURA",
+    "ดูลำดับ: SPINNING! → so close… → ชื่อ rarity → การ์ด (orb, ชื่อ, rarity, 1/N, NEW! ที่มุม orb ถ้าเพิ่งได้ครั้งแรก, badge stats)",
+    "ระหว่างหมุน แตะจอ → ต้องข้ามไปผลทันที",
+    "กด ROLL AGAIN → สุ่มต่อ; EQUIP → ออร่าเปลี่ยน (เห็นพาร์ติเคิลรอบตัว)",
+    "เดินไป Aura Altar (วงกลมม่วง) → ProximityPrompt → ต้องเล่นวงล้อแบบเดียวกัน",
+    "ทดสอบ Legendary: Command bar ในโหมด Play (Server) ใส่ gems เยอะ ๆ หรือแก้ Roll.Aura ชั่วคราว → ได้ Legendary → ~3.5 วิ ทุกคนเห็นข้อความ \"X rolled …\"",
+    "Gems ไม่พอ → ขึ้นข้อความ Need 5 Gems"
+   ],
+   "rev": "82643d0a"
+  },
+  {
+   "id": "A9",
+   "group": "A",
+   "title": "หน้าต่างเมนูขนาดคงที่",
+   "titleEn": "Fixed-size menus",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "เปิดแต่ละเมนู → ขนาดหน้าต่างต้องเท่ากัน; Test → Device → มือถือ → Play → หน้าต่างต้องย่อทั้งก้อน (ไม่ล้นจอ ไม่ทับ Top bar)"
+   ],
+   "rev": "1cee750d"
+  },
+  {
+   "id": "A10",
+   "group": "A",
+   "title": "ออร่า VFX + Low FX",
+   "titleEn": "Aura VFX and Low FX",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "Test → Clients and Servers → 2 Players → ทั้งคู่ใส่ออร่า → ผู้เล่น 1 เปิด Auras → Low FX: ON → ไม่เห็นพาร์ติเคิลของผู้เล่น 2 แต่ยังเห็นของตัวเอง"
+   ],
+   "rev": "f9cbdf84"
+  },
+  {
+   "id": "A11",
+   "group": "A",
+   "title": "เซฟข้อมูล (DataStore)",
+   "titleEn": "DataStore saves",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "เปิด API Services (เตรียมข้อ 5) → Play → ตกปลา ขาย ซื้อของ → Stop → Play ใหม่ → ทุกอย่างต้องยังอยู่ • ถ้าไม่เปิด API: Output ต้องมีคำเตือน \"Using a fresh profile\" และเกมยังเล่นได้"
+   ],
+   "rev": "14181e4b"
+  },
+  {
+   "id": "A12",
+   "group": "A",
+   "title": "StudioBridge MCP (Claude สั่งงาน Studio ได้)",
+   "titleEn": "StudioBridge MCP",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "รีสตาร์ท Claude Code → เปิด Studio + plugin AuraStudioBridge (Connected) → บอก Claude \"ใช้ StudioBridge ดู tree ของ StarterGui\" → ต้องได้รายการ; ลอง \"สร้าง Part ใน Workspace\" แล้ว Ctrl+Z ใน Studio ต้องย้อนได้"
+   ],
+   "rev": "9bd642c0"
+  },
+  {
+   "id": "A13",
+   "group": "A",
+   "title": "ไปป์ไลน์ Asset (สไลซ์รูป, Catalog, UIAssets)",
+   "titleEn": "Asset pipeline",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "เปิด assets/art/*_contact.png → รูปตรงชื่อทุกช่อง",
+    "รัน python -I tools/art/sync_ui_assets.py → ขึ้น \"UIAssets.luau regenerated — N/99 assets have ids\" (Claude รัน 2026-11-16: 99/99)",
+    "หลังอัปโหลด (B1) → ตัวเลขต้องเพิ่มตามจำนวนที่ใส่ id"
+   ],
+   "rev": "5f4dc63a"
+  },
+  {
+   "id": "A14",
+   "group": "A",
+   "title": "Figma → Roblox export (FigmaRoblox MCP)",
+   "titleEn": "Figma to Roblox export",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "เปิด relay + plugin (channel aura-fishing) → บอก Claude \"export Modal (14) ด้วย export_to_roblox\" → ดูไฟล์ใหม่ใน Generated → ใช้ StudioBridge mount_ui_module ดูใน Studio"
+   ],
+   "rev": "f9b33729"
+  },
+  {
+   "id": "A16",
+   "group": "A",
+   "title": "แผง \"Aura UI\" ใน Studio (เปิด/แก้หน้าจอได้ง่าย)",
+   "titleEn": "Aura UI panel in Studio",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "ปิด-เปิด Studio → places/AuraFishing.rbxlx → serve.bat + Rojo Connect",
+    "แท็บ Plugins → Aura UI → แผงขึ้นด้านขวา",
+    "คลิก \"05 Shop - Rods\" → เห็นหน้าต่าง Shop กลางจอ ข้อมูลเหมือน Figma, Explorer เลือก StarterGui.Menus.Shop ให้",
+    "ลองแก้ Properties (เช่น BackgroundColor3) → เห็นผลทันที → Ctrl+Z ย้อนได้",
+    "ส่วน \"ล็อกหน้าจอที่แก้เอง\" → กด Menus → เป็น 🔒 → ให้ Claude bake → ต้องขึ้น \"Menus: skipped (Locked)\"",
+    "กด ซ่อนทั้งหมด (ก่อน Save) → ทุกหน้าจอหาย → Ctrl+S"
+   ],
+   "rev": "f40c6375"
+  },
+  {
+   "id": "A18",
+   "group": "A",
+   "title": "Figma plugin แยกโมดูล + ตัวนับการใช้งาน (usage counter)",
+   "titleEn": "Figma plugin modules and usage count",
+   "status": "testing",
+   "note": "โค้ดเสร็จ + ทดสอบนอก Figma ผ่าน รอคุณทดสอบใน Figma",
+   "steps": [],
+   "rev": "1d81136a"
+  },
+  {
+   "id": "A17",
+   "group": "A",
+   "title": "Responsive มือถือแนวนอน (HUD + popup ทุกอัน)",
+   "titleEn": "Landscape mobile layout",
+   "status": "planned",
+   "note": "เลื่อนไปทีหลัง — ใช้ได้แต่ยังไม่สวย; ตอนนี้โฟกัส desktop",
+   "steps": [
+    "Test → Device → เลือกมือถือแนวนอน (เช่น iPhone 14) → Play",
+    "เมนู Shop/Auras/Fishdex/Menu ต้องเป็นแถวแนวนอนที่มุมขวาบน และกดได้ทุกปุ่ม",
+    "Lv./Coins/Gems มุมซ้ายบนเล็กลงพอดี ไม่ทับปุ่ม Roblox (โลโก้/เมนู/แชท)",
+    "AUTO / SELL ALL / Bag อยู่เหนือปุ่มกระโดด ไม่ทับกัน; CAST + DEPTH อยู่กลางล่าง ไม่ทับจอย",
+    "กด CAST → Cast popup ต้องอยู่ในจอทั้งหมด (เห็นปุ่ม CAST! ด้านล่าง)",
+    "Hook ปลา → มินิเกม Pond Card อยู่ในจอทั้งหมด (เห็นชิป LOOSE/GOOD/SNAP!)",
+    "ตกได้ → การ์ดปลาไม่ล้นจอ",
+    "ROLL AURA → วงล้อ + การ์ดผลลัพธ์อยู่ในจอ เห็นปุ่ม EQUIP/ROLL AGAIN/CLOSE",
+    "หมุนจอ/เปลี่ยน Device เป็นแท็บเล็ต และกลับมาโหมดคอม (Device: None) → ทุกอย่างปรับตามเอง, บนคอมเมนูกลับเป็นแนวตั้งซ้ายเหมือนเดิม"
+   ],
+   "rev": "081d28d5"
+  },
+  {
+   "id": "A15",
+   "group": "A",
+   "title": "Figma ดีไซน์ทั้งหมด (Style guide, Components, 17 หน้าจอ, Gacha FINAL, Asset section)",
+   "titleEn": "Figma style guide and screens",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "เปิด Figma หน้า Out Space → ไล่ดูทีละ section → แก้เองได้ (session อื่นจะ patch เฉพาะ node ไม่ทับงานคุณ)"
+   ],
+   "rev": "11168e65"
+  },
+  {
+   "id": "B0",
+   "group": "B",
+   "title": "ปุ่มแบบ Figma (Face + Lip 5px ซ้อนกัน) + ไฮไลต์ราคาใน Modal + การ์ด Equipped สีต่าง",
+   "titleEn": "Figma buttons and item highlights",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "Ctrl+S → Play → ดูปุ่ม CAST / SELL ALL / Shop / Auras / Menu: ขอบล่างโค้งตามมุมเหมือน Figma",
+    "ชี้ปุ่ม → สว่างขึ้นเล็กน้อย; กดค้าง → ปุ่มแบนราบ (ขอบล่างหาย ไม่มีขอบโผล่ด้านบน) ปล่อยแล้วกลับมามีขอบ; ปุ่มยังทำงานเหมือนเดิม",
+    "2a. Shop: ปุ่มราคาแสดงไอคอนเหรียญ + ตัวเลข (ไม่ว่างเปล่า); ซื้อไม่ได้/ติดเลเวล = ปุ่มสีเทาทึบหม่น (T.Disabled #D8D1C4) ตัวเลขเทาเข้ม เหรียญจาง แยกจากสีแถวรายการชัด; ปุ่ม DEPTH ข้าง CAST มีคำ DEPTH + AUTO",
+    "2b. HUD ตรง Figma 01: ชิปเงินมีรูปเหรียญ/เพชร สูง 40, CAST 115×57 + DEPTH 80×57, ขวาล่าง = ชิปกระเป๋า (รูปกระเป๋า + n / cap) + AUTO/SELL ALL 200×57",
+    "ปุ่มที่เปลี่ยนสี/ข้อความ (Shop: Buy→Equip→Equipped, Auras: Equip/Unequip, AUTO: OFF/ON) → สีและข้อความเปลี่ยนถูก ไม่มีข้อความซ้อน",
+    "SELL ALL → \"You'll get X coins\" ตัวเลขเป็นสีทองตัวหนา",
+    "Auras → การ์ดบนสุด (Equipped) สีมิ้นต์ + ป้าย EQUIPPED เขียว; กด > เปลี่ยนหน้า → การ์ดนี้ยังอยู่ (ตั้งใจ: คือออร่าที่ใส่อยู่) แต่ดูต่างจากแถวรายการชัดเจน",
+    "Cast popup และผลสุ่มออร่า (EQUIP / ROLL AGAIN / CLOSE) ปุ่มแสดงถูกต้อง",
+    "เมนูซ้ายตรง Figma 01: ช่องครีม 64×64 + ไอคอน 50 และชื่อตัวขาวขอบเข้มใต้ช่อง (แก้ล่าสุดโดย session UI-conversion); ช่อง Menu พื้นฟ้าอ่อน; ชี้แล้วขยายเล็กน้อย กดแล้วหดลง; กดเปิดหน้าต่างได้เหมือนเดิม (M ยังเปิด Menu)",
+    "เดินออกห่างน้ำ (กลางเกาะ) → CAST + DEPTH + AUTO หายไป; เดินกลับมาริมน้ำ → กลับมาภายใน ~0.3 วิ (ไม่ต้องหันหน้าหาน้ำก่อน)",
+    "ระหว่างรอปลากิน/มินิเกม หรือเปิด AUTO อยู่ → ปุ่มไม่หายแม้เดินออก (ให้กด REEL IN / ปิด AUTO ได้); บนบกกด Space → ไม่เกิดอะไร"
+   ],
+   "rev": "0f43f5eb"
+  },
+  {
+   "id": "B1",
+   "group": "B",
+   "title": "14 Modal (ยืนยัน Sell All)",
+   "titleEn": "Sell All confirmation",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "Explorer → StarterGui.Modal ต้องมีอยู่ (Enabled ปิดไว้ = ปกติ) → ติ๊ก Enabled ดูหน้าตาเทียบ Figma 14 ได้ แล้วปิดกลับก่อน Save",
+    "Play → ตกปลา 2–3 ตัว → กด SELL ALL → หน้าต่างยืนยันขึ้นกลางจอ พื้นหลังมืดลง",
+    "ตัวเลขใน \"You'll get X coins\" ต้องเท่ากับเงินที่เพิ่มจริงหลังขาย",
+    "กด Cancel → หน้าต่างปิด ปลายังอยู่ในกระเป๋า; เปิดอีกครั้งแล้วคลิกพื้นที่มืด → ปิดเหมือนกัน",
+    "กด Sell → ขึ้น \"Sold N fish for X coins!\" และ Bag 0/…",
+    "กระเป๋าว่างแล้วกด SELL ALL → ขึ้น \"Your bag is empty\" (ไม่มีหน้าต่าง)",
+    "Test → Device → มือถือ → Play → หน้าต่างต้องอยู่ในจอทั้งหมด ปุ่มกดได้ไม่โดนปุ่ม Jump บัง"
+   ],
+   "rev": "11ff424d"
+  },
+  {
+   "id": "B2",
+   "group": "B",
+   "title": "07 Auras — Aura Card (Row) + การ์ด Equipped + pager",
+   "titleEn": "Aura cards and paging",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "Play → กด Auras → เทียบกับ Figma 07",
+    "ยังไม่ได้ใส่ออร่า → การ์ดบนสุดขึ้น \"No aura equipped - roll one!\"",
+    "ROLL AURA 1–2 ครั้ง → ปิดการ์ดผล → ออร่าที่ได้แสดงชื่อจริง + x1, ที่ยังไม่ได้เป็น ??? + -",
+    "กด Equip ในแถว → การ์ดบนสุดเปลี่ยนเป็นออร่านั้น + ปุ่มในแถวเป็น Unequip (สีเขียว) → กด Unequip → การ์ดบนกลับเป็น \"No aura equipped\"",
+    "กด > / < → เปลี่ยนหน้า เลขหน้าเปลี่ยน; หน้าสุดท้ายแถวที่ไม่มีข้อมูลต้องซ่อน",
+    "ตัวเลข Gems มุมขวาล่างต้องลดหลัง roll; Low FX กดแล้วข้อความสลับ ON/OFF",
+    "Test → Device → มือถือแนวนอน (เช่น iPhone 14) → Play → หน้าต่างย่อทั้งก้อนให้พอดีจอ ไม่ล้น ไม่ทับ Top bar และกดปุ่ม < > / ปุ่มในแถวได้"
+   ],
+   "rev": "74133dbb"
+  },
+  {
+   "id": "B3",
+   "group": "B",
+   "title": "05/06 Shop — รูปไอเท็ม + pager",
+   "titleEn": "Shop thumbnails and paging",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "Play → Shop → แท็บ Rods: Driftwood Rod = Equipped (เขียว), คันที่เลเวลไม่ถึง = ชื่อสีเทา + ปุ่ม Lv. N, ที่ซื้อได้ = Buy สีทอง (เงินไม่พอ = สีครีม)",
+    "Rods มีมากกว่า 4 รายการ → กด > → เห็นรายการที่ 5 → < กลับ",
+    "เปลี่ยนแท็บ → เลขหน้ากลับเป็น 1 เสมอ",
+    "ซื้อคันใหม่ → ปุ่มเปลี่ยนเป็น Equip (ฟ้า) → กด → เป็น Equipped; ตัวเลข Coins มุมขวาล่างลดทันที",
+    "แท็บ Baits → กด Buy x10 → ชื่อเป็น Worm  x10 → ปุ่ม Use โผล่ → กด Use → ชื่อเป็นสีเขียว + \"(equipped)\" และ Use หายไป",
+    "Test → Device → มือถือแนวนอน (เช่น iPhone 14) → Play → หน้าต่างย่อทั้งก้อนให้พอดีจอ ไม่ล้น ไม่ทับ Top bar และกดปุ่ม < > / ปุ่มในแถวได้"
+   ],
+   "rev": "7ea3d792"
+  },
+  {
+   "id": "B4",
+   "group": "B",
+   "title": "09 Fishdex — การ์ด 3×2 + pager",
+   "titleEn": "Fishdex cards and paging",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "Play → Fishdex → เทียบกับ Figma 09 (3 คอลัมน์ 2 แถว)",
+    "ตกปลาชนิดใหม่ 1 ตัว → เปิด Fishdex → Discovered +1, แถบเขียวยาวขึ้น, การ์ดปลานั้นมีชื่อ + Caught x1 + Best น้ำหนัก",
+    "กด > จนหน้าสุดท้าย (20 ตัว = 4 หน้า) → หน้าสุดท้ายการ์ดที่เกินต้องซ่อน",
+    "Test → Device → มือถือ → การ์ดต้องไม่ล้นหน้าต่าง"
+   ],
+   "rev": "b369e0b8"
+  },
+  {
+   "id": "B5",
+   "group": "B",
+   "title": "12 Main Menu (hub แบบโทรศัพท์)",
+   "titleEn": "Main menu hub",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "ดูหน้าตาโดยไม่ Play: แผง Aura UI → คลิก \"12 Main Menu\" (หรือ node tools/ui/preview.mjs mainmenu) → เทียบ Figma 12 → กด \"ซ่อนทั้งหมด\"",
+    "Play → กดปุ่ม Menu → hub ขึ้นด้านขวาของกลางจอ ไม่ทับ Stats ซ้ายบนและ Leaderboard",
+    "นาฬิกาต้องตรงกับเวลาในเกม (Lighting.ClockTime ตอนนี้ 16:30 → \"16:30\") และไอคอน Day อยู่ในวงขาว",
+    "Gems ≥ 5 → ไอคอน Auras มีจุดแดง; Gems < 5 → ไม่มีจุด",
+    "กด Shop / Auras / Fishdex → hub ปิดแล้วหน้าต่างนั้นเปิด; กด Bag/Quests/Rebirth/Events/Friends/Settings → ขึ้น \"X: coming soon!\"",
+    "กด M เปิด/ปิดได้; กดแท็บ X ด้านขวาของโทรศัพท์ → ปิด",
+    "Test → Device → มือถือ → Play → hub ย่อทั้งก้อน ไม่ล้นจอ",
+    "รูปโปรไฟล์ = รูปหน้า avatar ของคุณ (ถ้าโหลดไม่ได้จะเป็นวงครีม/รูป Pip)"
+   ],
+   "rev": "f12621fa"
+  },
+  {
+   "id": "B10",
+   "group": "B",
+   "title": "ย้ายทุกหน้าจอลง Explorer + Components (prefab)",
+   "titleEn": "Explorer screens and prefab components",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "Ctrl+S → Explorer → StarterGui เห็นครบ 8 ScreenGui; แผง Aura UI มีรายการ 01 HUD, 03 Reel Minigame, 15 Cast Popup, Aura Gacha - Reel Slot, Components (prefabs) → คลิกแล้วเห็นหน้าจอพร้อมข้อมูลตัวอย่าง",
+    "Play → HUD ขึ้นปกติ ตัวเลข Lv/XP/เหรียญ/เพชร/กระเป๋าตรงข้อมูลจริง; เมนูซ้ายเปิด Shop/Auras/Fishdex/Menu ได้",
+    "กด DEPTH → Cast popup ขึ้น: ลาก slider, กด preset, ติ๊ก Auto, กด CAST! → ตกปลาได้; เปิดซ้ำอีกครั้งยังปกติ (แถบโซนสีไม่ซ้อนเพิ่ม)",
+    "ตกปลา → มินิเกม Pond Card ขึ้น เล่นจนจบ → ปิดเอง; ตกตัวที่ 2 ต่อ → มินิเกมเริ่มใหม่สะอาด (แถบ/มิเตอร์รีเซ็ต)",
+    "ได้ปลา → การ์ดปลา (แบบ Figma 04, ดู B11) ขึ้นแล้วหายไป; แจ้งเตือนกลางบนขึ้น/จางหาย",
+    "Auras → ROLL → วงล้อหมุน, เด้งการ์ดผล, EQUIP/ROLL AGAIN/CLOSE ใช้ได้; ROLL ซ้ำ 2–3 ครั้งติดกัน → ไม่มีของค้าง",
+    "ลองแก้ prefab: StarterGui.Components → Sheet → NotifyPill → Sample เปลี่ยนสีพื้น → ตั้ง attribute Locked = true ที่ Components → Play → แจ้งเตือนทุกอันเป็นสีใหม่"
+   ],
+   "rev": "d3d44e4b"
+  },
+  {
+   "id": "B11",
+   "group": "B",
+   "title": "04 Catch Result (การ์ดปลาที่ตกได้ตาม Figma)",
+   "titleEn": "Catch result screen",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "ดูหน้าตาโดยไม่ Play: แผง Aura UI → \"Components (prefabs)\" → การ์ด CatchCard เทียบ Figma 04",
+    "Play → ตกปลาแบบมือ (Manual) → การ์ดขึ้น ~2.6 วินาที: รูปปลาตรงชนิด, ชื่อสีตาม rarity, แถวล่างมี \"Manual x1.5\"",
+    "ตกชนิดที่ไม่เคยได้ → มีป้าย NEW!; ชนิดที่เคยได้แล้ว → ไม่มี",
+    "ตกแบบไม่หลุดเลย → มี badge PERFECT และ \"Perfect +0.25\" ในแถวล่าง",
+    "เปิด AUTO ให้ได้ปลาเอง → badge \"Auto\", ไม่มี \"Manual x1.5\"; ถ้าไม่มี mutation/perfect แถวล่างหายและการ์ดเตี้ยลง",
+    "ได้ปลามี mutation (เช่น Glowing) → ไอคอน mutation ข้าง NEW!, ชื่อ \"Glowing …\", แถวล่างมี \"Glowing x1.8\"",
+    "ตัวเลข 🪙 บนการ์ด = เงินที่ได้ตอนขายปลาตัวนั้น (ดูใน SELL ALL); 💎 ขึ้นเฉพาะตอนได้เพชร",
+    "Test → Device → มือถือแนวนอน → Play → ตกปลา → การ์ดย่อให้พอดีจอ ไม่ล้น"
+   ],
+   "rev": "85d58004"
+  },
+  {
+   "id": "B12",
+   "group": "B",
+   "title": "Fishdex: ปุ่ม Sort + Discovery แสดงแค่ตัวเลข (เกม + Figma 09)",
+   "titleEn": "Fishdex sorting and discovery",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "Ctrl+S → Play → เปิด Menu → Fishdex → แถวบนเห็นชิปไอคอน + N / 20 ทางซ้าย (ไม่มีแถบเขียว) และปุ่ม Sort: Depth ทางขวา หน้าตาเหมือน Figma 09",
+    "ตัวเลขในชิปตรงกับจำนวนปลาที่เคยจับได้ (จับปลาชนิดใหม่ → ตัวเลขเพิ่ม 1 ทันทีขณะหน้าต่างเปิด)",
+    "กด Sort 1 ครั้ง → Sort: Rarity → การ์ดเรียงจากหายากสุด (Mythic/Legendary ก่อน) ไป Common",
+    "กดอีก → Sort: Name → ปลาที่เจอแล้วเรียง A–Z ก่อน แล้วตามด้วย ??? ทั้งหมด (ชื่อไม่หลุด)",
+    "กดอีก → Sort: Caught → ปลาที่จับได้มากสุดอยู่ก่อน, ??? อยู่ท้าย",
+    "กดอีก → Sort: Found → ปลาที่เจอแล้วทั้งหมดอยู่หน้าแรก ๆ, ??? ตามหลัง; กดอีก → กลับเป็น Sort: Depth",
+    "ไปหน้า 2 ด้วยปุ่ม > แล้วกด Sort → pager กลับเป็น 1 / N",
+    "ปุ่ม pager และปุ่ม X ยังอยู่ในกรอบหน้าต่าง ไม่ทับการ์ด"
+   ],
+   "rev": "e0b46bf8"
+  },
+  {
+   "id": "B13",
+   "group": "B",
+   "title": "Main Menu hub: ทุกปุ่มทำงานจริง/แจ้งตามจริง + Config/Features",
+   "titleEn": "Main menu actions",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "Play → กด M (หรือปุ่ม Menu) → กด Bag → หน้าต่าง Inventory เปิด",
+    "กด Shop / Auras / Fishdex → เปิดหน้าต่างนั้น",
+    "กด Quests / Events / Settings → แจ้งข้อความ coming soon ตาม Features; Rebirth → \"Rebirth is coming soon! (unlocks at Lv.100 - you are Lv.N)\"",
+    "กด Friends → ใน Studio แจ้ง \"Invites only work in a live game\"; ในเกมจริง (publish) ขึ้นหน้าชวนเพื่อน",
+    "ตกปลาได้ตัวใหม่ → เปิด Menu → ปุ่ม Bag มีจุดแดง → เปิด Inventory แล้วเปิด Menu อีกครั้ง → จุดหาย (ถ้ากระเป๋าไม่เต็ม)",
+    "ปุ่ม Rebirth มีป้าย Lv.100"
+   ],
+   "rev": "1cf82ae3"
+  },
+  {
+   "id": "B14",
+   "group": "B",
+   "title": "มินิเกม Twin tubes (Figma 03 A2)",
+   "titleEn": "Twin-tube minigame",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "Ctrl+S → Play → ตกปลา → การ์ด 2 หลอดขึ้นกลางจอ หน้าตาเหมือน Figma 03",
+    "กดค้าง → แถบจับลอยขึ้น ปล่อย → จมลง; ทับปลา → หลอดทองเพิ่ม ทุ่นลอยตาม; แถบเป็นสีมิ้นต์",
+    "ปล่อยให้หลุดจากปลา → แถบเป็นสีทอง; ใกล้แพ้ → สีแดง",
+    "ชนะ → ได้ปลา; แพ้ → ปลาหลุด; ตกตัวต่อไป → เริ่มใหม่สะอาด"
+   ],
+   "rev": "b87f5d47"
+  },
+  {
+   "id": "B15",
+   "group": "B",
+   "title": "หน้ารวม Event (E0) แบบ data-driven + การ์ด OPEN",
+   "titleEn": "Events hub",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "Ctrl+S → Play → Main Menu → Events → หน้ารวมการ์ด 4 ใบ: Neon Tide (LIMITED + เวลา), Aura Altar, Naga Boss / Daily Login (SOON จาง กดไม่ได้)",
+    "OPEN ที่ Aura Altar → หน้ากาชาแบบ G1 (ไม่มีเวลา/ไม่มี Milestones); ปุ่ม ROLL AURA ในหน้าต่าง Auras และแท่นบูชาในแมพ → เปิดหน้านี้เหมือนกัน",
+    "ROLL x1 → วงล้อหมุน + การ์ดผล; เพชรลด 5; \"Mythic guaranteed in N\" ลดลง 1",
+    "ROLL x10 → เพชรลด 45; มีอย่างน้อย 1 ตัว Epic ขึ้นไป; เห็นตาราง 10 ผล (G6) + EQUIP BEST / ROLL x10 AGAIN / CLOSE",
+    "ติ๊ก Skip animation → สุ่มแล้วไม่มีวงล้อ; ติ๊ก Auto-roll until Epic+ → สุ่ม x1 ต่อเนื่องจนได้ Epic+ / เพชรหมด / เอาติ๊กออก",
+    "กด ‹ → กลับหน้ารวม; OPEN Neon Tide → เวลา, x2 ที่ Neon Wave/Abyssal Shadow (1/50, 1/2,500), แถว FEATURED, แถบ Milestones N/400",
+    "สุ่มบน Neon Tide ครบ 10 ครั้ง → Milestones มีจุดแดง → View → กด CLAIM ช่อง 10 → +20 gems; กดซ้ำไม่ได้",
+    "pity ของ Neon Tide กับ Aura Altar นับแยกกัน (สุ่มที่หนึ่ง อีกที่ไม่ลด)",
+    "เพชรไม่พอ → ปุ่ม ROLL เป็นสีเทาหม่น"
+   ],
+   "rev": "7ecee065"
+  },
+  {
+   "id": "B16",
+   "group": "B",
+   "title": "คำสั่ง Dev สำหรับทดสอบ (แชท ! + แผง F2)",
+   "titleEn": "Dev commands",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "Ctrl+S → Play → กด F2 → แผงขึ้น → กด \"+1,000 Gems\" → เพชรเพิ่ม + บรรทัด ✓ ใน log",
+    "แชท !give fish GlowEel 3 → แจ้ง [Dev] +3 GlowEel → เปิด Inventory เห็นกอง x3",
+    "pity Altar 99 → เปิด Aura Altar → ROLL x1 → ได้ Mythic",
+    "reset → เซฟกลับเป็นผู้เล่นใหม่ (เหรียญ 0, เพชร 15)",
+    "(เกมจริง) ผู้เล่นที่ไม่ได้อยู่ใน Admins กด F2 / พิมพ์ ! → ไม่มีอะไรเกิดขึ้น"
+   ],
+   "rev": "4208f066"
+  },
+  {
+   "id": "B17",
+   "group": "B",
+   "title": "Skeleton loading ของรูป (ปลา → Mystery Fish, ออร่า → Unknown Aura)",
+   "titleEn": "Image loading placeholders",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "Ctrl+S → Play ครั้งแรกหลังเปิด Studio (cache ยังว่าง) → เปิด Fishdex / Inventory / Shop → ช่องรูปขึ้นเงา Mystery Fish กระพริบสั้นๆ แล้วเปลี่ยนเป็นรูปจริง",
+    "รูปที่โหลดแล้วเปิดซ้ำ → ไม่เห็น skeleton (ขึ้นรูปทันที)"
+   ],
+   "rev": "175a25b5"
+  },
+  {
+   "id": "B18",
+   "group": "B",
+   "title": "Stat ลดเวลารอ Auto Fishing (Auto Wait) บนเบ็ด/เหยื่อ + Highlight สีทอง",
+   "titleEn": "Auto Wait stat",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "Ctrl+S → Play → Shop → Rods → Moonsilver / Naga Scale มีป้ายทอง \"-10% Auto Wait\" / \"-20% Auto Wait\" อยู่หน้าสุด",
+    "Baits → Glow Grub มีป้ายทอง \"-10% Auto Wait\"",
+    "F2 → equip Rods NagaScaleRod → เปิด Auto ริมน้ำ → ได้ปลาเร็วขึ้น (ประมาณทุก 7 วิ แทน 9 วิ)"
+   ],
+   "rev": "84f60786"
+  },
+  {
+   "id": "B19",
+   "group": "B",
+   "title": "แมพหลักใหม่ \"Stilt Boardwalk\" (สะพานไม้ยกสูงบนเสา กลางทะเลกว้าง ไม่มีบ้าน) + ขอบทะเล",
+   "titleEn": "Stilt Boardwalk map",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "Ctrl+S → Play → เกิดบนลานกลาง; เห็น Fish Merchant (ขวาหน้า) + Aura Altar (ซ้ายหน้า)",
+    "เดินไปร้าน → กด E \"Sell All Fish\" ได้; ไปแท่นออร่า → กด E \"Roll Aura\" → เปิดหน้ากาชา Altar",
+    "เดินไปขอบสะพาน/ปลายสะพาน → ปุ่ม Cast ขึ้น → ตกปลาได้",
+    "ว่ายออกไปเรื่อยๆ ผ่านแนวทุ่น → ขึ้นข้อความกระแสน้ำ + โดนดันกลับ ว่ายสู้ไม่ได้",
+    "ปรับขนาด/ระยะ: แก้ตัวเลขบนสุดของ tools/map/boardwalk.luau (DECK, SEA, SOFT, HARD, BUILDINGS) แล้วให้ Claude รันใหม่"
+   ],
+   "rev": "0cf047a8"
+  },
+  {
+   "id": "B6",
+   "group": "B",
+   "title": "Gacha G1 Altar (rates, pity, x1/x10, skip, auto-roll) + ระบบ pity/x10 ฝั่ง server",
+   "titleEn": "Aura Altar and pity",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "Ctrl+S → Play → Main Menu → Events → หน้ารวมการ์ด 4 ใบ: Neon Tide (LIMITED + เวลา), Aura Altar, Naga Boss / Daily Login (SOON จาง กดไม่ได้)",
+    "OPEN ที่ Aura Altar → หน้ากาชาแบบ G1 (ไม่มีเวลา/ไม่มี Milestones); ปุ่ม ROLL AURA ในหน้าต่าง Auras และแท่นบูชาในแมพ → เปิดหน้านี้เหมือนกัน",
+    "ROLL x1 → วงล้อหมุน + การ์ดผล; เพชรลด 5; \"Mythic guaranteed in N\" ลดลง 1",
+    "ROLL x10 → เพชรลด 45; มีอย่างน้อย 1 ตัว Epic ขึ้นไป; เห็นตาราง 10 ผล (G6) + EQUIP BEST / ROLL x10 AGAIN / CLOSE",
+    "ติ๊ก Skip animation → สุ่มแล้วไม่มีวงล้อ; ติ๊ก Auto-roll until Epic+ → สุ่ม x1 ต่อเนื่องจนได้ Epic+ / เพชรหมด / เอาติ๊กออก",
+    "กด ‹ → กลับหน้ารวม; OPEN Neon Tide → เวลา, x2 ที่ Neon Wave/Abyssal Shadow (1/50, 1/2,500), แถว FEATURED, แถบ Milestones N/400",
+    "สุ่มบน Neon Tide ครบ 10 ครั้ง → Milestones มีจุดแดง → View → กด CLAIM ช่อง 10 → +20 gems; กดซ้ำไม่ได้",
+    "pity ของ Neon Tide กับ Aura Altar นับแยกกัน (สุ่มที่หนึ่ง อีกที่ไม่ลด)",
+    "เพชรไม่พอ → ปุ่ม ROLL เป็นสีเทาหม่น"
+   ],
+   "rev": "7ecee065"
+  },
+  {
+   "id": "B7",
+   "group": "B",
+   "title": "11 Dialogue (NPC)",
+   "titleEn": "NPC dialogue",
+   "status": "testing",
+   "note": "โค้ดเสร็จ + bake แล้ว Claude ทดสอบใน Play ผ่าน รอคุณ Ctrl+S + ทดสอบ",
+   "steps": [
+    "Ctrl+S → Play → เดินไปที่ร้าน → ป้ายบอก \"Talk / Old Marlin\" → กด E → กล่องคุยขึ้นด้านล่าง ข้อความพิมพ์ทีละตัว",
+    "Sell All Fish → หน้ายืนยัน → Sell → ได้เงิน Marlin ขอบคุณพร้อมจำนวนเงิน",
+    "Hot fish today? / Just chatting / Browse gear ทำงาน; ปุ่ม X และ Esc ปิดได้; เดินออกไปไกล = ปิดเอง",
+    "ที่แท่นออร่า \"Talk / Sela\" → Open the Altar เปิดหน้ากาชา",
+    "แก้บทพูด/เพิ่มตัวเลือกใน Config/Dialogues.luau ได้เลย (สูงสุด 4 ตัวเลือกต่อ NPC)"
+   ],
+   "rev": "b2cb74d8"
+  },
+  {
+   "id": "B20",
+   "group": "B",
+   "title": "Virtual Grid (Inventory / Aquarium / Mastery / Put in Tank)",
+   "titleEn": "Virtual grid",
+   "status": "testing",
+   "note": "โค้ดเสร็จ รอทดสอบ",
+   "steps": [
+    "หยุด Play เดิม (โค้ดเก่า) → Play ใหม่ → กด B → Inventory ช่องเรียงเหมือนเดิม 5 คอลัมน์ ช่องว่าง \"+\" ครบตามความจุ",
+    "คลิกช่อง → ขอบเลือก + ปุ่ม Sell xN; คลิกซ้ำ = ยกเลิก; สลับแท็บ/Sort แล้วรายการถูก; ขาย/เปิดกล่องแล้วช่องอัปเดตทันที",
+    "กระเป๋าใหญ่ (Dev: เสกกระเป๋า + ปลาเยอะ) → เลื่อนลงสุด/ขึ้นสุด ไม่มีช่องว่างหาย ไม่มีช่องซ้อนกัน",
+    "Aquarium: การ์ดปลา (กด = เอาออก), Add fish, Expand (เฉพาะช่องแรกกดได้) ทำงานเหมือนเดิม",
+    "Put in Tank: แตะการ์ด +1, MAX/CLR, CONFIRM; เลื่อนลงแล้วแตะ ต้องเลือกปลาตัวที่แตะจริง",
+    "Mastery: ปุ่ม UPGRADE เปลี่ยนเป็นสีเขียวทันทีที่ Pearls พอ; MAX แสดงถูก; ข้อความ \"now → next\" ยาวยังย่อให้พอดี",
+    "มือถือแนวนอน (หน้าต่างถูกย่อด้วย UIScale) → เลื่อน grid แล้วการ์ดขึ้นครบ ไม่โผล่ช้า"
+   ],
+   "rev": "74d2c6be"
+  },
+  {
+   "id": "B21",
+   "group": "B",
+   "title": "Item Detail Card + Inventory v2 (แท็บด้านข้างเป็นไอคอน, Rod/Line/Aura เป็นไอเท็ม, Bag เป็นอัปเกรด)",
+   "titleEn": "Item Detail and Inventory v2",
+   "status": "testing",
+   "note": "ครบทุกส่วนในเกมแล้ว (Inventory, การ์ด, Shop, Fishdex, Character, Aura Dex) Claude ทดสอบใน Play ผ่าน รอคุณ Ctrl+S + ทดสอบส่วนที่เหลือ",
+   "steps": [],
+   "rev": "4a13e14b"
+  },
+  {
+   "id": "B22",
+   "group": "B",
+   "title": "Gacha page ใหม่ = Figma concept D \"Glass Card\" + ส่วนจาก E1",
+   "titleEn": "Gacha page redesign",
+   "status": "testing",
+   "note": "แก้กรอบเลือกหมวด ใช้ช่อง Item Slot ของ Inventory และเปิด Aura Altar จาก HUD แล้ว ทดสอบผ่าน Studio Bridge",
+   "steps": [
+    "Play → เปิด Events → กด OPEN ที่ Neon Tide → หน้า Aura Summon เต็มจอ ซ้ายมีการ์ด Neon Tide (เลือกอยู่, ขอบหนา) และ Aura Altar",
+    "กดการ์ด Aura Altar → ชื่อ/คำอธิบาย/ออร่าเด่น/ภาพขวาเปลี่ยน, กล่อง Milestones หายไป (Altar ไม่มี milestone)",
+    "ROLL x1 → reveal เล่น → Gems ลด 5, ข้อความ pity ลดลง 1; ROLL x10 → ลด 45 แล้วขึ้นหน้าสรุป x10",
+    "ติ๊ก Skip animation → สุ่มแล้วไม่มี reveal; ติ๊ก Auto-roll → สุ่มเองจนได้ Epic+ (กดอีกครั้งเพื่อหยุด)",
+    "Rates → popup อัตราจริง, กด X หรือนอกกรอบปิด; Shop และชิป Gems → เปิด Store แท็บ Gems; กดออร่าเด่นใน Info Card → Item Card ของออร่านั้น",
+    "5b. ROLL x1 → หน้า Gacha หายไป เห็นแค่ลูกแก้วตกลงแท่น วงแหวนชาร์จ สีไล่ไปทางสีความหายาก → ระเบิดแสง → การ์ดผลลัพธ์ → CLOSE แล้วหน้า Gacha กลับมา; แตะจอระหว่างชาร์จ = ข้ามไปการ์ดทันที",
+    "กด Tokens ที่ toggle → แจ้ง coming soon และยังเลือก Gems อยู่",
+    "Test → Device → มือถือแนวนอน → หน้าย่อพอดีจอ ไม่มีอะไรล้น"
+   ],
+   "rev": "e3b0c09d"
+  },
+  {
+   "id": "B8",
+   "group": "B",
+   "title": "13 Inventory",
+   "titleEn": "Inventory",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "Ctrl+S → Play ด้วยเซฟเดิมที่มีปลาในกระเป๋า → ปลาเก่ายังอยู่ (รวมเป็นกอง) ตัวเลข HUD กระเป๋าเป็น ช่องที่ใช้ / ช่องทั้งหมด",
+    "กดชิปกระเป๋า หรือกด B → หน้าต่าง Inventory ขึ้น; แท็บ All / Fish / Bait / Treasure กรองถูก; ช่องว่างเป็น \"+\"",
+    "ตกปลาชนิดเดิมหลายตัว → รวมเป็น xN ในช่องเดียว; ครบ 10 ขึ้นช่องใหม่; ตัวใหม่มีป้าย NEW จนกว่าจะเปิดหน้าต่าง",
+    "คลิกช่องปลา → ปุ่มซ้ายล่างเป็น \"Sell xN (เหรียญ)\" → กด → ได้เงินตามที่แสดง ช่องหาย",
+    "SELL ALL → ยืนยัน → ขายเฉพาะปลา (กล่องสมบัติยังอยู่)",
+    "ตกปลาเรื่อย ๆ จนได้กล่อง (โอกาส 3%) → แจ้ง \"Bonus: Treasure Chest!\" → แท็บ Treasure → คลิก → Open → ได้รางวัล (เหรียญ/เพชร/Shrimp x3)",
+    "ใช้ช่องจนเต็ม (Starter Pouch 6 ช่อง) แล้วตกชนิดใหม่ → แจ้ง \"Bag full - the fish was released\"; ทุกกองเต็มด้วย → กด CAST แล้วขึ้น \"Your bag is full!\"",
+    "แท็บ Bait → คลิกเหยื่อ → Use → กลายเป็น Equipped (ปุ่มเทาหม่น)",
+    "Shop → แท็บ Bags → คำอธิบายเป็น \"N slots\""
+   ],
+   "rev": "e4dfebbf"
+  },
+  {
+   "id": "B9",
+   "group": "B",
+   "title": "G6 x10 Summary",
+   "titleEn": "Ten-roll summary",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [
+    "Ctrl+S → Play → Main Menu → Events → หน้ารวมการ์ด 4 ใบ: Neon Tide (LIMITED + เวลา), Aura Altar, Naga Boss / Daily Login (SOON จาง กดไม่ได้)",
+    "OPEN ที่ Aura Altar → หน้ากาชาแบบ G1 (ไม่มีเวลา/ไม่มี Milestones); ปุ่ม ROLL AURA ในหน้าต่าง Auras และแท่นบูชาในแมพ → เปิดหน้านี้เหมือนกัน",
+    "ROLL x1 → วงล้อหมุน + การ์ดผล; เพชรลด 5; \"Mythic guaranteed in N\" ลดลง 1",
+    "ROLL x10 → เพชรลด 45; มีอย่างน้อย 1 ตัว Epic ขึ้นไป; เห็นตาราง 10 ผล (G6) + EQUIP BEST / ROLL x10 AGAIN / CLOSE",
+    "ติ๊ก Skip animation → สุ่มแล้วไม่มีวงล้อ; ติ๊ก Auto-roll until Epic+ → สุ่ม x1 ต่อเนื่องจนได้ Epic+ / เพชรหมด / เอาติ๊กออก",
+    "กด ‹ → กลับหน้ารวม; OPEN Neon Tide → เวลา, x2 ที่ Neon Wave/Abyssal Shadow (1/50, 1/2,500), แถว FEATURED, แถบ Milestones N/400",
+    "สุ่มบน Neon Tide ครบ 10 ครั้ง → Milestones มีจุดแดง → View → กด CLAIM ช่อง 10 → +20 gems; กดซ้ำไม่ได้",
+    "pity ของ Neon Tide กับ Aura Altar นับแยกกัน (สุ่มที่หนึ่ง อีกที่ไม่ลด)",
+    "เพชรไม่พอ → ปุ่ม ROLL เป็นสีเทาหม่น"
+   ],
+   "rev": "7ecee065"
+  },
+  {
+   "id": "C1",
+   "group": "C",
+   "title": "อัปโหลดรูปขึ้น Roblox",
+   "titleEn": "Upload art to Roblox",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
+   "steps": [],
+   "rev": "7611f7cd"
+  },
+  {
+   "id": "C2",
+   "group": "C",
+   "title": "ตัดสินใจ data model ของ Inventory",
+   "titleEn": "Inventory data model",
+   "status": "done",
+   "note": "ตัดสินใจแล้ว 2026-11-17",
+   "steps": [],
+   "rev": "b2a16174"
+  },
+  {
+   "id": "C3",
+   "group": "C",
+   "title": "Rebirth + ฉายา (GDD 7.2) — ย้ายไป Lv.50",
+   "titleEn": "Rebirth and titles",
+   "status": "testing",
+   "note": "โค้ดเสร็จ รอทดสอบ",
+   "steps": [],
+   "rev": "0b215329"
+  },
+  {
+   "id": "C4",
+   "group": "C",
+   "title": "สกิล Keen Eye / Quick Hands / Multi-Cast (GDD 7.1)",
+   "titleEn": "Skills and Multi-Cast",
+   "status": "testing",
+   "note": "โค้ดเสร็จ + หน้าต่าง Skills แล้ว (ปุ่ม SKILLS ในหน้าต่าง Character) รอทดสอบ",
+   "steps": [],
+   "rev": "b2a6bfba"
+  },
+  {
+   "id": "C5",
+   "group": "C",
+   "title": "อีเวนต์ Naga Tide (จุดสุ่มในทะเล ตกในวง = ลุ้นปลาพิเศษ, คนแห่มา = โอกาสสูงขึ้น)",
+   "titleEn": "Naga Tide event",
+   "status": "testing",
+   "note": "โค้ด HUD Cozy Lake เสร็จแล้ว รอทดสอบใน Play",
+   "steps": [],
+   "rev": "ca38a5f0"
+  },
+  {
+   "id": "C6",
+   "group": "C",
+   "title": "Gamepasses (Infinite Bag 349, Auto-Fish Pro 249, VIP 149, Extra Cast)",
+   "titleEn": "Gamepasses",
+   "status": "testing",
+   "note": "โค้ดเสร็จ + ป้ายชื่อ VIP เหนือหัว + ร้าน Store แล้ว รอทดสอบ — Extra Cast รอสร้าง pass บนเว็บ",
+   "steps": [],
+   "rev": "3c79080d"
+  },
+  {
+   "id": "C7",
+   "group": "C",
+   "title": "เควสต์รายวัน",
+   "titleEn": "Daily quests",
+   "status": "testing",
+   "note": "โค้ดเสร็จ + หน้าต่างเควสต์แล้ว รอทดสอบ",
+   "steps": [],
+   "rev": "07ae3f53"
+  },
+  {
+   "id": "C8",
+   "group": "C",
+   "title": "เสียง (SFX) ตามจุดที่ระบุใน storyboard gacha/มินิเกม",
+   "titleEn": "Minigame and gacha sound effects",
+   "status": "planned",
+   "note": "ยังไม่เริ่ม",
+   "steps": [],
+   "rev": "19a1047e"
+  },
+  {
+   "id": "C9",
+   "group": "C",
+   "title": "แมพจริง + โมเดลปลา/คันเบ็ด",
+   "titleEn": "Final map and models",
+   "status": "planned",
+   "note": "ยังไม่เริ่ม",
+   "steps": [],
+   "rev": "19a1047e"
+  },
+  {
+   "id": "C10",
+   "group": "C",
+   "title": "เครดิต Font Awesome (FaLock, CC BY 4.0)",
+   "titleEn": "Font Awesome credits",
+   "status": "testing",
+   "note": "โค้ดเสร็จ รอทดสอบ",
+   "steps": [],
+   "rev": "0b215329"
+  },
+  {
+   "id": "C11",
+   "group": "C",
+   "title": "ทดสอบมือถือจริง + ปรับขนาดปุ่ม",
+   "titleEn": "Mobile device checks",
+   "status": "planned",
+   "note": "ยังไม่เริ่ม",
+   "steps": [],
+   "rev": "19a1047e"
+  },
+  {
+   "id": "C12",
+   "group": "C",
+   "title": "Balance Pass 1 (ราคา ×10, Auto 14 วิ, Hot Streak, XP, โซนลึก, ย้ายเซฟ)",
+   "titleEn": "Balance pass 1",
+   "status": "testing",
+   "note": "โค้ดเสร็จ + ป้าย Streak บนปุ่ม CAST แล้ว รอทดสอบ",
+   "steps": [],
+   "rev": "d28d7a8b"
+  },
+  {
+   "id": "C13",
+   "group": "C",
+   "title": "ระบบรับเงิน Robux (ProcessReceipt, ใบเสร็จ, เช็ค Gamepass)",
+   "titleEn": "Robux receipts and pass checks",
+   "status": "testing",
+   "note": "โค้ดเสร็จ รอทดสอบ + รอ ID จากเว็บ Roblox",
+   "steps": [],
+   "rev": "be61b1e1"
+  },
+  {
+   "id": "C14",
+   "group": "C",
+   "title": "บ่อปลา (Aquarium) + Pearls + ออฟไลน์",
+   "titleEn": "Aquarium and offline Pearls",
+   "status": "testing",
+   "note": "โค้ดเสร็จ + หน้าจอ Aquarium/Put in Tank/popup ออฟไลน์แล้ว รอทดสอบ",
+   "steps": [],
+   "rev": "6a1a52fb"
+  },
+  {
+   "id": "C15",
+   "group": "C",
+   "title": "Mastery (อัปถาวรด้วย Pearls)",
+   "titleEn": "Pearl-funded Mastery",
+   "status": "testing",
+   "note": "โค้ดเสร็จ + หน้าต่างตาม Figma แล้ว รอคุณทดสอบ (ใช้ไอคอนชุดใหม่แล้ว)",
+   "steps": [],
+   "rev": "378756a0"
+  },
+  {
+   "id": "C16",
+   "group": "C",
+   "title": "Gear Enhance +1…+10",
+   "titleEn": "Gear enhancement",
+   "status": "testing",
+   "note": "โค้ดเสร็จ + ENHANCE ในการ์ดไอเท็ม + ป้าย +N บนช่อง/รูป Shop แล้ว รอทดสอบ",
+   "steps": [],
+   "rev": "05316d7d"
+  },
+  {
+   "id": "C17",
+   "group": "C",
+   "title": "ดาวออร่า 1–5 stars + Star Token + pity ใหม่ + หน้าต่าง Aura Dex (C17 Figma) + แสดง Star Token (HUD, Aura Index, Altar, ItemDetail)",
+   "titleEn": "Aura stars, tokens and pity",
+   "status": "testing",
+   "note": "โค้ดเสร็จ + bake ใน StarterGui แล้ว รอทดสอบใน Play",
+   "steps": [],
+   "rev": "4660ed17"
+  },
+  {
+   "id": "C18",
+   "group": "C",
+   "title": "ปลาขายดีประจำชั่วโมงที่ร้าน",
+   "titleEn": "Hourly Hot Fish",
+   "status": "testing",
+   "note": "โค้ดเสร็จ + ป้าย HOT บนกองปลา, บรรทัด Hot fish bonus ใน Sell All, ป้าย HOT FISH ที่ Merchant แล้ว รอทดสอบ",
+   "steps": [],
+   "rev": "8c3c5596"
+  },
+  {
+   "id": "C19",
+   "group": "C",
+   "title": "Dev Products (Starter Pack, Gems, Boost 2x) + Modal เสนอขาย Starter Pack (Figma 3546:36782)",
+   "titleEn": "Developer products and Starter Pack",
+   "status": "testing",
+   "note": "Gems, Boosts และ Packs เป็นรายการใน Store แล้ว กด Buy ที่ Starter Pack เพื่อเปิด Modal พรีวิวของแถมก่อนซื้อ ปุ่มราคาใช้ไอคอน Robux ใหม่ รอทดสอบซื้อจริงใน Play",
+   "steps": [],
+   "rev": "acbfeca8"
+  },
+  {
+   "id": "C20",
+   "group": "C",
+   "title": "มินิเกม: Catch Bar เริ่มตรงตำแหน่งปลา + ช่วงพักตอนเริ่ม",
+   "titleEn": "Minigame start behavior",
+   "status": "testing",
+   "note": "โค้ดเสร็จ รอทดสอบ",
+   "steps": [],
+   "rev": "0b215329"
+  },
+  {
+   "id": "C21",
+   "group": "C",
+   "title": "คอนเทนต์ใหม่จากรูปที่อัปโหลดแล้ว (ปลา 8, ออร่า 10, คันเบ็ด 2, สาย 2, เหยื่อ 4)",
+   "titleEn": "New fish, auras and equipment",
+   "status": "testing",
+   "note": "โค้ดเสร็จ รอทดสอบ",
+   "steps": [
+    "Shop แท็บ Lines / Baits / Rods: ของใหม่มีรูป ราคา และล็อกเลเวลถูก; กดรูป = การ์ดไอเท็ม",
+    "ใส่ Abyss Line → ปุ่ม DEPTH ตั้งได้ถึง 600m; Star Line → 1000m",
+    "ตกที่ 500-1000m → ได้ปลาใหม่ (Fishdex ขึ้นเป็น x / 30)",
+    "หน้ากาชา: รายการอัตรามี 15 ออร่า เรียงจากง่ายไปยาก; Aura Dex 15 ตัว",
+    "ถ้าราคา/สเตตไม่ถูกใจ บอก Claude หรือแก้ใน Config ได้เลย"
+   ],
+   "rev": "c63f5d7b"
+  },
+  {
+   "id": "C22",
+   "group": "C",
+   "title": "FishingZone / PlayArea ใช้เฉพาะใน Workspace (แมพสำรองใน ServerStorage ไม่นับ)",
+   "titleEn": "Fishing zones and map boundaries",
+   "status": "testing",
+   "note": "โค้ดเสร็จ ตรวจ logic ใน Studio แล้ว รอทดสอบ Play ใหม่",
+   "steps": [
+    "หยุด Play แล้ว Play ใหม่ -> ตกปลาที่ท่าเรือปกติได้เหมือนเดิม (ปุ่ม CAST ขึ้นเมื่ออยู่ใกล้น้ำ)",
+    "F2 event start -> วง Naga Tide เกิดบนผิวน้ำของแมพจริง ไม่ลอยกลางอากาศ",
+    "ว่ายออกไปไกล -> กระแสน้ำผลักกลับที่ขอบแมพเดิม"
+   ],
+   "rev": "81645b82"
+  },
+  {
+   "id": "C23",
+   "group": "C",
+   "title": "Daily Login ปฏิทินของขวัญ 7 วัน (Streak, เคลมรางวัล, เชื่อมการ์ด Events)",
+   "titleEn": "Daily login rewards",
+   "status": "testing",
+   "note": "โค้ดเสร็จ + bake แล้ว รอทดสอบใน Play",
+   "steps": [
+    "Ctrl+S → Play → เปิดโทรศัพท์ Main Menu → Events → การ์ด Daily Login ขึ้นแท็ก DAILY และกด OPEN ได้",
+    "หน้าต่าง Daily Login เปิดขึ้นมา แสดง Streak: 1 Day, ปุ่ม CLAIM DAY 1 สีเขียวมินต์",
+    "กด CLAIM DAY 1 → ได้รับ 1,000 Coins, สถานะเปลี่ยนเป็น CLAIMED, ปุ่มเปลี่ยนเป็น CLAIMED TODAY สีเทา",
+    "กดปุ่ม X หรือคลิก Backdrop พื้นหลังสีดำ → หน้าต่างปิดลงอย่างเรียบร้อย"
+   ],
+   "rev": "0f3952a5"
+  },
+  {
+   "id": "C24",
+   "group": "C",
+   "title": "Core Menu Manager (แบ่งชั้นหน้าต่าง ไม่เปิดซ้อนมั่ว, ซ้อนได้เฉพาะที่กำหนด)",
+   "titleEn": "Core menu manager",
+   "status": "testing",
+   "note": "โค้ดเสร็จ ทดสอบใน Play บางส่วนผ่าน — M2-M4 โค้ดเสร็จ รอทดสอบ — งานต่อ M1, M5, M6 ใน docs/MENU_MANAGER.md",
+   "steps": [
+    "Play → B (กระเป๋า) → C (ตัวละคร): กระเป๋าต้องปิดเอง",
+    "ในหน้าตัวละครกด SKILLS: หน้า Skills ซ้อนบน, ปิด Skills แล้วกลับมาหน้าตัวละคร",
+    "กระเป๋า → แท็บ Auras → AURA DEX ซ้อนบน; ROLL AURA เปิดหน้ากาชาซ้อนบนกระเป๋า",
+    "เปิดหน้าต่างไหนอยู่ก็ได้แล้วกด M: เหลือแค่ Main Menu",
+    "คุยกับ Old Marlin ขณะเปิดกระเป๋า: กระเป๋าปิด, Browse gear เปิด Shop และกล่องคุยปิด",
+    "(M2) เปิด Aquarium → กดช่อง + : หน้า Put in Tank ซ้อนบนบ่อ; กด < Tank หรือ X → กลับมาหน้าบ่อ; เลือกปลาแล้ว CONFIRM → กลับมาหน้าบ่อและเห็นปลาที่ใส่",
+    "(M3) ใช้จอย: เปิดหน้าต่างใดก็ได้แล้วกด B → ปิดแค่ตัวบนสุด (Skills บน Character กด B = เหลือ Character); คุย NPC แล้วกด Esc → กล่องคุยปิด",
+    "(M4) Events → OPEN ที่แบนเนอร์กาชา → กดปิด/ลูกศรกลับ → กลับมาหน้า Events; Events → การ์ด Daily Login / การ์ดเปิด Shop → Events ปิดเอง เหลือหน้าที่เปิดอันเดียว; Main Menu → กดรูปตัวละคร → เปิด Character และ Main Menu ปิด; หน้ากาชา → ปุ่มซื้อ Gems → เปิด Store และหน้ากาชาปิด"
+   ],
+   "rev": "b76095a2"
+  },
+  {
+   "id": "C25",
+   "group": "C",
+   "title": "เหวี่ยงเบ็ดใหม่: กดค้าง + Perfect Cast + ระยะเหวี่ยงตามคัน + ตัวปรับความลึกบน HUD",
+   "titleEn": "Charge casting and Perfect Cast",
+   "status": "testing",
+   "note": "โค้ดเสร็จ + bake + Figma แล้ว รอทดสอบใน Play",
+   "steps": [
+    "Ctrl+S → Play → เดินไปริมน้ำ: ไม่มีปุ่ม CAST กลางจอ, มีตัวปรับ DEPTH เหนือ AUTO; กด + / - และกดค้าง ตัวเลขเปลี่ยน ไม่เกินความลึกสาย",
+    "หันกล้องไปที่น้ำ คลิกค้าง: แถบพลังขึ้นลง, วงเล็งสีฟ้าบนน้ำวิ่งใกล้-ไกล, ตัวละครหันตามกล้อง",
+    "ปล่อยตอนเข็มอยู่ช่วงทอง: ขึ้น PERFECT! ทุ่นลอยโค้งลงน้ำ แล้วเข้าสถานะ Waiting ตามปกติ (\"!\" → คลิก → มินิเกม)",
+    "คลิกสั้น ๆ: เหวี่ยงระยะกลางทันที ไม่มีแถบพลัง",
+    "หันกล้องไปบนบกแล้วเหวี่ยง: วงเล็งเทา, ทุ่นตกพื้นแล้วม้วนกลับ, ขึ้น \"Cast into the water!\" (ลองเหวี่ยงขณะเดินริมฝั่งด้วย: ถ้าเห็นทุ่นลงน้ำแต่ขึ้นข้อความนี้ = server เห็นตำแหน่งช้ากว่า แจ้ง Claude)",
+    "หันไปทางน้ำ กด AUTO: ตกเองซ้ำ ๆ; เดินออกไปไกล → Auto หยุด; หันไปบนบกแล้วกด AUTO → ไม่เริ่ม มีข้อความเตือน",
+    "ใส่คันที่ดีกว่า (เช่น Coral): เหวี่ยงค้างสุดได้ไกลกว่าคันเริ่ม; หน้ารายละเอียดคันมี Cast Range",
+    "มือถือ (Studio Device Emulator): ปุ่มกลม CAST ข้างปุ่มกระโดด กดค้าง/ปล่อยเหวี่ยงได้, ระหว่างรอปลาปุ่มเป็น REEL IN / HOOK!; ปุ่ม Bag/DEPTH/AUTO/SELL ไม่ทับปุ่มกระโดด"
+   ],
+   "rev": "4bfee68b"
+  },
+  {
+   "id": "C26",
+   "group": "C",
+   "title": "จุดฟองปลา (Hotspot): เหวี่ยงลงวงฟองได้ Luck +50%",
+   "titleEn": "Fishing hotspots",
+   "status": "testing",
+   "note": "โค้ดเสร็จ + Figma แล้ว รอทดสอบใน Play",
+   "steps": [
+    "Ctrl+S → Play → ยืนริมน้ำรอสักพัก (ไม่เกิน ~10 วินาที): มีวงทองฟองผุดในน้ำใกล้ ๆ",
+    "กดค้างเล็งเข้าวง: วงเล็งเปลี่ยนเป็นสีทอง มีป้าย HOTSPOT; ปล่อย → ขึ้น \"HOTSPOT! +50% luck...\" แล้วตกปลาตามปกติ การ์ดปลามีป้าย HOTSPOT",
+    "เหวี่ยงลงวงเดิมอีกครั้ง → วงหายไป (ใช้ครบ 2 ครั้ง)",
+    "รอ ~1 นาที: วงที่ไม่มีคนใช้หายเองแล้วโผล่ที่ใหม่",
+    "เปิด AUTO ขณะหันไปทางวง: ไม่ได้โบนัส (ไม่มีข้อความ HOTSPOT)",
+    "ได้ทั้ง PERFECT (มินิเกมไม่หลุดเลย) และ HOTSPOT ในครั้งเดียว: การ์ดปลาแสดงครบ 4 ป้าย kg / Manual / PERFECT / HOTSPOT"
+   ],
+   "rev": "044787d4"
+  },
+  {
+   "id": "C27",
+   "group": "C",
+   "title": "Store ไม่มีรายการ + spinner โหลด + แจ้งเตือนอยู่บนสุด + Enhance popup + Figma ตรงกับเกม",
+   "titleEn": "Store loading and notification fixes",
+   "status": "testing",
+   "note": "โค้ดเสร็จ รอทดสอบใน Play",
+   "steps": [
+    "Ctrl+S → Play → Main Menu → Store: เห็นการ์ด Passes 4 ใบ, ไม่มีฉากดำด้านหลัง; สลับแท็บ Gems/Boosts/Packs มีรายการครบ; ปุ่มราคาอาจหมุนแวบหนึ่งก่อนขึ้นราคา",
+    "ถ้า Store ยังว่าง: ดู Output หาบรรทัด [Store] ... tab failed: แล้วส่งมา",
+    "เปิด Store หรือหน้าต่างใดก็ได้ แล้วกด SELL ALL / ทำอะไรที่มีแจ้งเตือน: ข้อความแจ้งเตือนอยู่เหนือหน้าต่าง ไม่โดนบัง",
+    "กระเป๋า → คันเบ็ดที่มี → ENHANCE: ขึ้น popup Enhance (รูป, +N > +N+1, สเตตัสก่อน/หลัง, ราคา); Cancel = ไม่เสียเงิน; กดปุ่มราคา = อัปเลเวล",
+    "Aquarium → แตะปลาในบ่อ: Modal \"Return to Bag\" ปุ่มเป็นสีส้ม",
+    "รูปที่โหลดช้า (เช่นเปิด Fishdex ครั้งแรก): เห็นวงหมุนเทาบนช่องรูประหว่างโหลด"
+   ],
+   "rev": "32f9c16f"
+  },
+  {
+   "id": "C28",
+   "group": "C",
+   "title": "Window core (Window.Shell) + \"!\" ปลากินเบ็ดบนหัวตัวละคร",
+   "titleEn": "Window shell and bite indicator",
+   "status": "testing",
+   "note": "โค้ดเสร็จ รอทดสอบใน Play",
+   "steps": [
+    "Ctrl+S → Play → ตกปลาจนขึ้น \"!\": เห็น \"!\" เด้งเหนือหัว (มีวงสีตามความหายาก) ไม่มีแถบ \"!\" กลางล่าง; คลิกแล้วหายไปเข้ามินิเกม",
+    "เปิด Store / Aquarium / Mastery / Quests / Settings (Credits) ทีละอัน: หน้าต่างขึ้นถูก, ปุ่ม X ปิดได้, เปิดอันใหม่แล้วอันเก่าปิดเอง",
+    "Aquarium → + → Put in Tank ซ้อนบนบ่อ ปิดแล้วกลับบ่อ; Character → SKILLS เปิดได้",
+    "กระเป๋า → คันเบ็ด → ENHANCE: popup ขึ้นเหนือการ์ด, Cancel ปิดได้"
+   ],
+   "rev": "cb2ee6db"
+  }
+ ],
+ "history": [
+  {
+   "at": "2026-11-22T18:30:00+07:00",
+   "text": "เปลี่ยน Web Dashboard เป็นเว็บ QA (qa/): deploy GitHub Pages, ทีม QA ตรวจงาน/แจ้ง Ticket เก็บใน Firebase Firestore, agent อัปเดตผ่าน node qa/tools/build.mjs; ลบ dashboard/ ออกแล้ว"
+  },
+  {
+   "at": "2026-11-22T17:30:00+07:00",
+   "text": "Dashboard: แยกหน้า \"สถานะงาน\" เป็น 2 หน้า ระบบเกม (#systems) และ QA (#qa) เอาปุ่ม Collapse ออก"
+  },
+  {
+   "at": "2026-11-22T17:00:00+07:00",
+   "text": "Dashboard: Dark theme โทน GitHub, badge สีทึบมีขอบให้ตัดกับพื้นแถว, ปุ่มแก้ไข/ลบ/Quick Pass/Review เปลี่ยนเป็นไอคอน"
+  },
+  {
+   "at": "2026-11-22T16:15:00+07:00",
+   "text": "อัปเดตข้อมูล QA ลง Google Sheet ครบ 69 รายการจริง และแยกคอลัมน์ ID (A1, B0...), Section (หมวด A, B, C) และ Task Name ออกจากกันในตาราง QA พร้อมตัวกรองหมวดงาน"
+  },
+  {
+   "at": "2026-11-22T16:05:00+07:00",
+   "text": "ปรับปรุง Web Dashboard: เปลี่ยนธีมเป็น Medical Palette, แยกฟอร์มแก้ไขค่า (Edit Modal), เพิ่มระบบตรวจงานและบันทึกเวลา QA พร้อมซิงก์ Google Sheets Web App และเพิ่มปุ่ม Collapse / Expand พับเก็บแผงระบบเกมและ QA Tracker ได้อิสระ"
+  },
+  {
+   "at": "2026-11-22T14:02:33+07:00",
+   "text": "Web Dashboard ใช้สี Cozy Lake และ UI ไทย–อังกฤษ เพิ่มเมนูกลุ่ม Tuning หน้าสถานะงาน และประวัติการพัฒนาจาก TASKS.md และ report"
+  },
+  {
+   "at": "2026-11-22T02:39:31+07:00",
+   "text": "ปรับ Web Balance Dashboard ให้ใช้ตารางตามชีต แยกสคริปต์ตามระบบ และทดสอบการเชื่อม Sheets แบบจำลอง"
+  },
+  {
+   "at": "2026-11-22T01:30+07:00",
+   "text": "เพิ่มกฎป้องกันการกักตุนไอเทมเควส (Anti-Stockpiling & Bound on Use): ไอเทมที่ติดแท็ก [Rebirth Protected] จะกลายเป็น Bound ทันทีห้ามเทรด; เหยื่อที่ถูกกดใช้งานแม้ 1 ครั้งจะติด Bound ทันที; ป้องกันไม่ให้พ่อค้าหรือคนรับจ้างเควสดอง Super Rare ข้ามรอบ Rebirth (หาแล้วต้องรีบขาย ไม่งั้นจะหายเมื่อ Rebirth หรือถ้าล็อกไว้ก็จะขายไม่ได้)"
+  },
+  {
+   "at": "2026-11-22T01:22+07:00",
+   "text": "ปรับโครงสร้างระบบเหยื่อ Rebirth และ Taxonomy ไอเทม: เหยื่อที่ซื้อด้วยเงินจะหายหมดเมื่อ Rebirth, เหยื่อไม่จำกัด (Unlimited Bait) มาจากเควสยาวแบบ Blox Fruits มีเตือนก่อนหายตอน Rebirth สามารถจ่ายเงินล็อกแท็ก [Rebirth Protected] เพื่อเก็บข้ามรอบได้; กำหนด Taxonomy ไอเทม 7 หมวด (ปลา, เหยื่อ, หีบ, เบ็ด, สาย, ออร่า, Consumables ยาบัฟ/กล่องสุ่ม/วัตถุดิบแปรรูปปลา)"
+  },
+  {
+   "at": "2026-11-22T01:15+07:00",
+   "text": "เพิ่มเติมกฎ Bound/Unbound: ไอเทมที่ได้รับจากการแจกฟรี, โค้ดของขวัญ (Giveaways), หรือรางวัล Season Rewards ทั้งหมดจะถูกตั้งเป็น Bound ถาวร ไม่สามารถนำไปเทรดได้ในทุกกรณี ป้องกันการปั๊มไอดีมาฟาร์มของรางวัลไปขายต่อ"
+  },
+  {
+   "at": "2026-11-22T01:10+07:00",
+   "text": "สรุปข้อตกลง Game Design 6 ข้อร่วมกับ Game Director: 1) Gamepass Luck x1.25 เท่า 2) ระบบเทรดจำกัด 4 ชิ้น ต้องมี Trade License, ห้ามเทรดออร่า, เทรดเฉพาะปลา/เบ็ด/เหยื่อ, มีระบบ Bound/Unbound และเสียภาษี Coins (Gold Sink) 3) ระบบ Mod เบ็ด (Uncommon+ มี 2 Prefix + 2 Suffix) และระบบ Rod Fusion สลับ Mod ได้เฉพาะเบ็ดชนิดเดียวกัน 4) อัตรา Gems: ปลา Uncommon+ ได้ 1 Gem; ตกมือสุ่มได้ 50 ครั้ง/ชม., ออโต้สุ่มได้ 25-30 ครั้ง/ชม. 5) Rebirth ใช้ Prestige Tree (RP), ล้างปลาในตู้และเหยื่อทั่วไป (แจ้งเตือนขายเป็น Coins), คันเบ็ดและเหยื่อเควสถาวรไม่หาย 6) ระเบียบ AI Workflow: AI ทุกตัวต้องสรุปงานและลง Timestamp ใน docs เสมอ — บันทึกลง docs/DESIGN_DECISIONS_2026-11-21.md เรียบร้อย"
+  },
+  {
+   "at": "2026-11-21",
+   "text": "ประชุมออกแบบเกมและเทียบกับระบบในโค้ด ครอบคลุมข้อสรุปเรื่องน้ำหนักปลา กระเป๋า การเทรด และการพัฒนา Rebirth"
+  },
+  {
+   "at": "2026-11-21",
+   "text": "Game Design Math: docs/economy/game_design_math/AuraFishing_GameDesignMath.xlsx (22 ชีต สูตรสดครบ: Constants, Rarities, Fish, Fish Odds, Mutations, Sell Value, Progression, Items, Enhance, Mastery, Skills, Rebirth, Stats Calculator, Fishing Loop, Reel Minigame, Aquarium, Auras, Gacha, Monetization, Economy Totals, Live Content) พร้อม CSV ค่าล้วนใน csv/ สร้างจาก Config จริงด้วย node tools/balance_sheet/build.mjs (ต้องมี luau + python) สูตรตรวจกับโค้ดเกม 122 จุดผ่านหมด (Roll.Value, AuraRates, Mastery, Enhance, Stats.Compute, XP, Rebirth, ความน่าจะเป็นปลา) ยังไม่ได้เปิดใน Google Sheets จริง"
+  },
+  {
+   "at": "2026-11-21",
+   "text": "Aura Reveal: วง Eclipse rim และ Shockwave ใช้ภาพวงที่ export จาก Figma 3717:1434 (เส้น 5px + แสงเรือง, auras/fx_ring, ภาพขาว tint ตามสีระดับ rarity) แทน UIStroke เส้นขอบขยายตามวงเหมือน Figma หน้า reveal แสดงเฉพาะ Item Card Detail + ข้อความ Tap to close (ซ่อนแถบล่าง) ผ่าน node tools/check.mjs ดูวงใน Play แล้ว ยังไม่ได้ดูครบทั้งแอนิเมชันและสี Mythic"
+  },
+  {
+   "at": "2026-11-21",
+   "text": "บูสต์ที่ทำงานอยู่เป็นชิปสีส้มเล็ก (ไอคอน + เวลา เช่น 31:34) วางข้างลูกศรของลิ้นชักสกุลเงิน ไม่ซ่อนในลิ้นชักแล้ว ตามแบบ Boost ใน Figma 3766:5984 ผ่าน node tools/check.mjs ดูใน Play แล้ว"
+  },
+  {
+   "at": "2026-11-21",
+   "text": "HUD สกุลเงินแบบ Core + drawer (Figma Currency HUD Options 3766:5875 แบบ 3): Coins กับ Gems แสดงตลอด ปุ่มลูกศรเปิดลิ้นชักที่มี Pearls, Star Tokens และบูสต์ที่ทำงานอยู่ ปิดเองใน 6 วินาที มีจุดสีบนลูกศรเมื่อมีบูสต์ (HUDController + EconomyController ย้ายชิป Pearls เข้าลิ้นชัก) ผ่าน node tools/check.mjs เปิดดูใน Play แล้วทั้งปิดและเปิด ยังไม่ได้ทดสอบกดลูกศรจริง"
+  },
+  {
+   "at": "2026-11-21",
+   "text": "HUD ปุ่มวงกลมเป็นแผ่นดำโปร่ง (fill 25%, ขอบ 5px 10%) ตาม Figma 3760:5656: Sell All เป็นไอคอน ui/status/sell_bag ซ้ายล่างของ CAST (PC อยู่ซ้าย Depth), CAST สลับภาพตามสถานะ (hook_cast / reel_in / hook_catch ตัดจาก assets/ui/Reel In and Hook Fishing Icons.png, อัปโหลดผ่าน Studio) REELING กับ AUTO ยังเป็นข้อความ Figma: ตั้งชื่อปุ่ม Btn Cast/Sell/Depth/Auto และคัดลอก dock + Tide ไป 01 HUD, 04 Catch Result, Economy HUD ผ่าน node tools/check.mjs ผู้ใช้รายงานเหวี่ยงเบ็ดไม่ได้ ยังหาสาเหตุไม่เจอ (server รับ Cast ได้, ปุ่มรับ input, HUD เปลี่ยนสถานะ) ต้องดูอาการจริงบนมือถือ"
+  },
+  {
+   "at": "2026-11-21",
+   "text": "ปุ่ม CAST มือถือเป็นวงกลมพร้อมภาพ hook charm จาก Figma 3760:5762 (อัปโหลดผ่าน Studio ได้ ui/icons/hook_cast = rbxassetid://111371126675038, ลง assets/catalog.json และ UIAssets.luau) สถานะอื่น (REEL IN, HOOK!, REELING, AUTO) ยังแสดงข้อความ ดูใน Play แล้วภาพโหลดและเป็นวงกลม ยังไม่ได้ทดสอบกดเหวี่ยงจริงบนมือถือ"
+  },
+  {
+   "at": "2026-11-21",
+   "text": "HUD แบบเกมมือถือตาม Figma 3760:5656: Bag + Sell All ซ้อนมุมขวา, ปุ่ม Depth (ทุ่น, ไม่มีเลข) และ Auto (ui/icons/auto_pro, สีเขียวเมื่อเปิด) เป็นวงกลม 88 ข้างปุ่ม Jump, CAST ย้ายไป 172/78 จากมุม dock ใช้ scale เดียวกับคลัสเตอร์อื่น แก้โมดัล Starter Pack ใหญ่เกินบนมือถือ (UIScale ที่ bake ไว้ไม่มี listener จึงเรียก New.FitWindow ตอนรัน, Depth popup ทำเหมือนกัน) ผ่าน node tools/check.mjs ดูใน Play: dock ตอนอยู่บนบกและโมดัลพอดีจอ ยังไม่ได้ดูตอนอยู่ใกล้น้ำ (Auto + CAST) และไม่ได้ใช้ภาพ hook ของปุ่ม CAST เพราะยังไม่มี asset id"
+  },
+  {
+   "at": "2026-11-21",
+   "text": "Depth บน HUD เปลี่ยนเป็นปุ่มไอคอนทุ่น (ui/status/bobber) + ค่าความลึก กดแล้วเปิด Depth popup (UI/CastPopup.luau, builder UI/Screens/CastPopup.luau) มีเลขใหญ่, ป้ายโซน, สไลเดอร์สีตามโซน, preset Shallow/Mid/Max และจำนวนสายพันธุ์ ไม่มีสวิตช์ Auto depth และปุ่ม CAST เพราะเหวี่ยงด้วยการกดค้างในโลก (C25) ปรับ dock HUD เป็น 336 กว้าง ปุ่ม Auto/Sell มี padding 12 และยก dock บนมือถือเหนือ CAST เพิ่มการ์ด Tide และ dock ใหม่ใน Figma HUD (3492:16667) ผ่าน node tools/check.mjs เปิด popup ใน Play ได้ ยังไม่ได้ทดสอบกด preset และลากสไลเดอร์ และยังไม่ได้ bake (สร้างตอนรันพร้อมคำเตือน) รัน node tools/ui/bake.mjs CastPopup"
+  },
+  {
+   "at": "2026-11-21",
+   "text": "Starter Pack: แตะแถวของรางวัลเพื่อเปิด Item Detail (Bait, Rod) ส่วน Gems แตะเพื่อสลับคำอธิบายบรรทัดเดียว ลด DisplayOrder ของโมดัลเป็น 25 ให้การ์ดอยู่ด้านบน เพิ่มชีต 19_shop_packs_2 (9 แพ็ก) ใน tools/art/sheets.json และสร้าง prompt ใหม่ใน docs/ART_PROMPTS.md ผ่าน node tools/check.mjs ยังไม่ได้ทดสอบใน Play"
+  },
+  {
+   "at": "2026-11-21",
+   "text": "บันทึกกติกา UI native ใน AGENTS.md ห้ามเพิ่มฉากดำหรือฉากมืดหลังเมนูและโมดัลจนกว่าจะมีคำสั่งเปลี่ยน C14 ใช้พื้นที่รับอินพุตโปร่งใสแทน"
+  },
+  {
+   "at": "2026-11-21",
+   "text": "Gacha มือถือแนวนอนจัดปุ่มในพื้นที่ปลอดภัยของ Roblox, HUD แสดง 2x Coins / 2x Pearls พร้อมนับถอยหลัง, C14 Quantity ใช้จาก Aquarium และ Inventory TANK, Daily Quests ใช้ไอคอน Gems ทั้งยอดและรางวัล เอาฉากดำออก และรวม Milestone เป็นการ์ดเดียวที่นับเควสต์ที่เคลม ผ่านการทดสอบ Studio Bridge และ node tools/check.mjs"
+  },
+  {
+   "at": "2026-11-21",
+   "text": "แยกป้าย Hot Fish ขึ้นเหนือชื่อ Fish Merchant 12 px กันคลิกทะลุระหว่างเปิดหรือกดปิดเมนู และปิด Fish Result ทันทีเมื่อเริ่มเหวี่ยงเบ็ดรอบใหม่ ทดสอบทั้งสามกรณีผ่าน Studio Bridge"
+  },
+  {
+   "at": "2026-11-21",
+   "text": "ใช้ Eclipse จาก Figma ใน Aura Reveal, bake AuraReel และตรวจ Legendary / Mythic ใน Studio Play ด้วยโปรไฟล์จำลอง จังหวะพื้นดำ Sparkle สี rarity และ Item Card ตรง flow ทดสอบต่อด้วย ROLL x10 แล้วกด SEE ALL 10 เพื่อดูผลครบเมื่อโปรไฟล์โหลดตามปกติ"
+  },
+  {
+   "at": "2026-11-21",
+   "text": "รวมหน้าต่างที่ออกแบบไว้ใน [Designed Game Menus](https://www.figma.com/design/givb0hmQYmmaOy7p7DGtb2/Ro-Offline?node-id=3752-5142) และผูก CoreGui Guide ทั้ง 36 จุดกับ [component set สองขนาด](https://www.figma.com/design/givb0hmQYmmaOy7p7DGtb2/Ro-Offline?node-id=3752-5168)"
+  },
+  {
+   "at": "2026-11-21",
+   "text": "เปลี่ยนฉากของ [บอร์ด Aura Reveal Motion](https://www.figma.com/design/givb0hmQYmmaOy7p7DGtb2/Ro-Offline?node-id=3717-1180) ทั้ง 8 เฟรมเป็นพื้นดำ fade in จากโปร่งใสที่ 0.36 วินาที"
+  },
+  {
+   "at": "2026-11-21",
+   "text": "แก้ [บอร์ด Aura Reveal Motion](https://www.figma.com/design/givb0hmQYmmaOy7p7DGtb2/Ro-Offline?node-id=3717-1180) ทั้ง 8 เฟรมให้ใช้ Sparkle และ rarity Overlay จาก Option 5 เอา shape ดาวและภาพ Aura Art ออก เปลี่ยนแบบที่ 4 เป็น Afterglow Pulse"
+  },
+  {
+   "at": "2026-11-21",
+   "text": "เพิ่ม [บอร์ด Aura Reveal Motion](https://www.figma.com/design/givb0hmQYmmaOy7p7DGtb2/Ro-Offline?node-id=3717-1180) เทียบ Halo Burst, Eclipse, Ten Sparks และ Hero Silhouette ทั้ง Legendary/Mythic และเพิ่มแท็บ Workbench กับ Agent Handoff ในปลั๊กอิน Figma local"
+  },
+  {
+   "at": "2026-11-21",
+   "text": "MCP local เปลี่ยนไปใช้ตัวเปิด stdio ที่สลับ server worker หลัง TypeScript rebuild ผ่าน รอคำสั่งที่กำลังทำงานและแจ้ง client ให้โหลดรายการเครื่องมือใหม่"
+  },
+  {
+   "at": "2026-11-21",
+   "text": "Figma Option 5: ทำ [Aura Reveal Motion](https://www.figma.com/design/givb0hmQYmmaOy7p7DGtb2/Ro-Offline?node-id=3713-622) สำหรับ Solar Flare (Epic) ที่ 3.2 วินาที ตรวจจาก MP4 ที่ Figma export แล้ว เพิ่มคำสั่ง Motion และ watch mode ใน MCP local ทดสอบโดยเพิ่มคำสั่งชั่วคราวแล้วเรียกได้ผ่าน relay เดิม"
+  },
+  {
+   "at": "2026-11-20",
+   "text": "มุมโค้งไม่ mask: ClipsDescendants ตัดแค่สี่เหลี่ยม ไม่ตามมุมโค้ง → เปลี่ยนเป็น CanvasGroup (New.Panel({ Clip = true }), Window.Shell({ Clip = true })): แถบพลังเหวี่ยงเบ็ด (HUD, bake แล้ว), popup Pearl ตอนเข้าเกม (Offline reward), Enhance popup, Quests, Starter Pack (bake แล้ว), กรอบรูปการ์ด Events (bake แล้ว); กฎใน docs/UI_STYLE.md. ทดสอบ: Ctrl+S → Play → กดค้างเหวี่ยง: สีส้มในหลอดโค้งตามหลอดทั้งบนล่าง; เข้าเกมใหม่ (มี Pearl ออฟไลน์): แถบล่างสีทรายโค้งตามมุมหน้าต่าง; Enhance / Starter Pack / Events ก็เช่นกัน"
+  },
+  {
+   "at": "2026-11-20",
+   "text": "ปรับ pop: เปลี่ยนจาก Elastic (เด้งหลายทีเหมือนค้าง) เป็น Back Out 0.25 วิ เริ่มที่ 70% = ป๊อปทีเดียวจบ (New.luau POP_INFO / POP_FROM)"
+  },
+  {
+   "at": "2026-11-20",
+   "text": "Transition elastic pop ทุกอย่างที่แสดง: New.Pop (ขยาย 0.5 → 1 แบบเด้ง 0.55 วิ); หน้าต่าง/ป๊อปอัปที่ใช้ FitToScreen/FitWindow/Window.Shell เด้งเองเมื่อเปิด (Store, Aquarium, Mastery, Quests, Credits, Enhance, Inventory, Character, Events, Main Menu, Shop/Fishdex/Aura Index, Modal, Starter Pack, Dialogue, Minigame, Offline reward); เรียกเองที่ Gacha, Daily Login, Item Card, การ์ดปลา, toast แจ้งเตือน; กฎใน docs/UI_STYLE.md. ทดสอบ: Ctrl+S → Play → เปิดหน้าต่าง/ป๊อปอัปต่าง ๆ ทุกอันเด้งตอนโผล่ ไม่ค้างขนาดผิด และย่อขยายตามจอยังถูกหลังเด้งจบ (ลองย่อหน้าต่าง Studio)"
+  },
+  {
+   "at": "2026-11-20",
+   "text": "Pager อยู่มุมซ้ายล่างทุกหน้าต่าง: Fishdex เดิมอยู่กลาง → ย้ายซ้าย (เกม Screens/Menus.luau bake แล้ว + Figma 09 Fishdex); Shop และ Aura Index อยู่ซ้ายอยู่แล้ว; กฎเขียนไว้ใน docs/UI_STYLE.md. ทดสอบ: Ctrl+S → Play → Fishdex: ปุ่ม < 1 / N > อยู่มุมซ้ายล่างตรงกับ Shop"
+  },
+  {
+   "at": "2026-11-20",
+   "text": "C28: Window.Shell แกนกลางหน้าต่าง (Store, Aquarium, Mastery, Quests, Credits, Enhance, Window.Create), \"!\" ปลากินเบ็ดบนหัวตัวละคร; check ผ่าน, ทดสอบเปิด/ปิดทุกหน้าต่างในโหมดแก้ไขแล้ว, ยังไม่ได้ทดสอบใน Play"
+  },
+  {
+   "at": "2026-11-20",
+   "text": "Figma: ลบดีไซน์ที่เกมยังไม่มี (Materials, Lock ปลา, Get More, Boost rings, การ์ดปลา economy, Sell All แยกรายการ, Enhance MAX, Shop with Enhance) ตามที่คุณเลือก"
+  },
+  {
+   "at": "2026-11-20",
+   "text": "C27: แก้ Store ว่าง (ลบ StarterGui.Store/QuestsGui ที่ค้าง + สร้างใน PlayerGui เท่านั้น + pcall ต่อแท็บ), เอาฉากดำ Store ออก, New.Spinner (Store/ปุ่มราคา/รูปกำลังโหลด), แจ้งเตือน DisplayOrder 100, Enhance popup ใหม่, แก้สีปุ่ม Return to Bag; Figma ปรับให้ตรงเกม (Aquarium, ลบ C14/C18 Inventory + 07 Auras + จอเก่า 08/12/13/Reel Slot G1-G5/E1/C17, ของค้าง C25 ใน 00/03/04/Economy 1, Enhance, Notifications, Loading states); check ผ่าน, ทดสอบ render Store/Enhance ในโหมดแก้ไขแล้ว, ยังไม่ได้ทดสอบใน Play"
+  },
+  {
+   "at": "2026-11-20",
+   "text": "C26 ป้าย HOTSPOT บนการ์ดปลา: Figma 04 · Catch Result เพิ่มป้ายทองต่อจาก PERFECT (docs/figma/hotspot.py part 2); แก้บั๊กในเกม: prefab CatchCard มีช่องป้ายแค่ 3 ช่อง ป้ายที่ 4 ไม่ขึ้น → เพิ่มเป็น 4 ช่อง, bake Components แล้ว"
+  },
+  {
+   "at": "2026-11-20",
+   "text": "C26 จุดฟองปลา Hotspot: HotspotService (วงทองฟองใกล้ผู้เล่นริมน้ำ, Luck +50% เมื่อเหวี่ยงเองลงวง, ใช้ได้ 2 ครั้ง), วงเล็งทอง + ป้าย, ป้ายบนการ์ดปลา; Figma อัปเดต (docs/figma/hotspot.py); check ผ่าน, ทดสอบใน Studio แล้วว่า Config โหลดได้และสุ่มจุดในน้ำของ StarterBay ได้, ยังไม่ได้ทดสอบใน Play"
+  },
+  {
+   "at": "2026-11-20",
+   "text": "C25 เหวี่ยงเบ็ดใหม่: กดค้างเล็งด้วยกล้อง + แถบพลัง + Perfect Cast + stat CastRange, ตัวปรับความลึกบน HUD แทน Cast Popup (ลบแล้ว), ปุ่ม CAST มือถือ, Auto ใช้ทิศกล้องและหยุดเมื่อเดินออก; Figma 01 · HUD อัปเดต (docs/figma/cast_rework.py); bake HUD แล้ว, check ผ่าน, ยังไม่ได้ทดสอบใน Play"
+  },
+  {
+   "at": "2026-11-20",
+   "text": "Aquarium การ์ดล็อก: ปุ่ม Expand ตัดคำ \"EXPAND\" ออก เหลือแค่เหรียญ + ราคา (ใหญ่ขึ้น อยู่กลางปุ่ม) ใน AquariumScreen.createLocked (สร้างด้วยโค้ด ไม่ต้อง bake) ทดสอบ: Play → เปิด Aquarium → เลื่อนไปการ์ดล็อก ปุ่มทองมีแค่ราคา กดแล้วยังขยายได้ เงินไม่พอปุ่มเป็นสีเทา"
+  },
+  {
+   "at": "2026-11-20",
+   "text": "B22 Drop rates: รายการโดนตัดขอบ (กรอบทองของออร่า featured + scrollbar ทับขอบขวา) → เพิ่ม UIPadding ใน RatesPopup.Panel.List (บน/ล่าง/ซ้าย 4, ขวา 12), bake GachaPage แล้ว รอ Ctrl+S + ทดสอบ: กาชา → Rates → เลื่อนดู แถวทองไม่โดนตัด ขอบขวาไม่ชน scrollbar"
+  },
+  {
+   "at": "2026-11-20",
+   "text": "C24 M2-M4: Put in Tank ซ้อนบน Aquarium (StackOn), ปุ่ม gamepad B = MenuManager.CloseTop() (BindBackKey ใน Main.client; Esc ปิดกล่องคุย NPC ย้ายมาที่เดียวกัน), ลบการปิดหน้าต่างด้วยมือ 6 จุด + ctx.closeHub ของ Events; check ผ่าน รอทดสอบใน Play"
+  },
+  {
+   "at": "2026-11-20",
+   "text": "Gacha (Aura Summon) Redesign v2 ใน Figma ตาม ref เกมกาชา: section ใหม่ \"Gacha Redesign v2 — 4 concepts (refs)\" (3660:55300, x 33000 y 2400) — A Banner Rail, B Editorial Codex, C Poster Strips, D Glass Card; ใช้แค่รูปที่มีอยู่ (gacha_bg_cosmic/celestial/cozy, ลูกแก้วออร่า, ไอคอนสถานะ) และตัวเลขจริงจาก Config/AuraBanners (5 Gems/ครั้ง, x10 = 45 Gems การันตี Rare+, pity Legendary 100 / Mythic 300, Neon Tide rate-up); ไม่แตะ section 8 concepts เดิม (3646:54500); สคริปต์ docs/figma/gacha_redesign.py; ตรวจภาพแล้ว (แก้ชื่อซ้อนปุ่มใน A, ขอบสีซ้อนใน B) ภาพ docs/figma/gacha_redesign_v2.png; รอเลือกแบบ; ยังไม่แตะโค้ดเกม"
+  },
+  {
+   "at": "2026-11-20",
+   "text": "แยก Gacha Splash 6 ภาพไป assets/art/auras_Art/ และกู้ไอคอนเดิม 6 ภาพใน assets/art/auras/ จากแบ็กอัป"
+  },
+  {
+   "at": "2026-11-20",
+   "text": "Gacha Redesign v2: เหลือตัวเลือก A Banner Rail / D Glass Card (ลบ B, C และ section 4 แบบเดิม 3660:55300) → section ใหม่ \"Gacha Redesign v2 — A / D\" (3660:55808); แยกรูป 2 ชุดชัดเจน: ไอคอนเล็ก = ลูกแก้ว art/auras/* (ทุกออร่า), ภาพใหญ่/ตกแต่ง = ภาพวาด art/auras_Art/* (6 ออร่า: AbyssalShadow, CelestialLeviathan, DragonEmperor, LotusNaga, NebulaKoi, SerpentOfTheVoid) ไม่ใช้แทนกัน; เติมรูปใหม่จากโฟลเดอร์ที่คุณแก้แล้ว (ลูกแก้วถูกต้อง), ภาพ docs/figma/gacha_redesign_v2.png; ยังไม่แตะโค้ดเกม"
+  },
+  {
+   "at": "2026-11-20",
+   "text": "Gacha v2 (A/D): ปุ่ม ROLL x1 / ROLL x10 กลับมาใช้สไตล์ปุ่มเดียวกับทั้งเกม (ปุ่มแบน + ขอบล่าง 5px, x1 สีม่วง Gem, x10 สีทอง, มุม 18) และทำราคาให้ชัด: ชื่อปุ่มซ้าย + แคปซูลราคาสีขอบล่าง ไอคอน Gem 26px ตัวเลข 20px, ป้าย RARE+ ติดมุมขวาบนของ x10; แทนเฉพาะแถวปุ่ม (3662:56131, 3662:56146) ไม่แตะส่วนอื่น; ภาพ docs/figma/gacha_roll_buttons.png"
+  },
+  {
+   "at": "2026-11-20",
+   "text": "Gacha v2 (A/D) รอบ 3 → section ใหม่ 3662:56161: ชิป Gems / Star Tokens ไม่มีปุ่ม + แล้ว (กดชิปเปิด Top Up อยู่แล้ว); การ์ดแบนเนอร์ใช้ลูกแก้วออร่าปกติ (art/auras); D เปลี่ยนแท็บซ้ายเป็นการ์ดแบนเนอร์แบบ A; ภาพวาด auras_Art ใช้เฉพาะภาพหลักด้านขวา (เอาเงาตกแต่งอื่นออก); ภาพ docs/figma/gacha_redesign_v2.png; ยังไม่แตะโค้ดเกม"
+  },
+  {
+   "at": "2026-11-20",
+   "text": "Gacha v2 แบบ D: Info Card padding 5 (บน/ล่าง) / 10 (ซ้าย/ขวา) ตามที่สั่ง, เนื้อหาข้างในชิดตาม padding เดียวกัน — node ใหม่ 3662:56405"
+  },
+  {
+   "at": "2026-11-20",
+   "text": "Gacha v2 (A/D): เพิ่ม toggle เลือกจ่ายด้วย Gems / Star Tokens เหนือปุ่ม Roll (ตัวที่เลือก = สีส้ม coral) เป็นโหนดใหม่อย่างเดียว ไม่แตะของที่คุณแก้ — A 3662:56450, D 3662:56457; ภาพ docs/figma/gacha_pay_toggle.png. ยังไม่ได้กำหนดราคาสุ่มด้วย Star Token และปุ่ม Roll ยังแสดงราคา Gems (ยังไม่มีในโค้ด/Config)"
+  },
+  {
+   "at": "2026-11-20",
+   "text": "B22 Gacha page ใหม่ตาม Figma concept D + ส่วนจาก E1 (Mythic pity, Milestones, Skip, Auto-roll) ทั้งใน Figma และในโค้ด (UI/Screens/GachaPage.luau, UI/GachaPage.luau, GachaPageController.luau); เพิ่ม ui/gacha_bg_* + auras_Art/* ลง catalog (ยังไม่อัปโหลด); check ผ่าน; ยังไม่ได้ bake / ทดสอบเพราะ Studio ไม่ได้เปิด"
+  },
+  {
+   "at": "2026-11-20",
+   "text": "B22 bake GachaPage ลง Studio แล้ว (ผ่าน StudioBridge --http-only), ภาพ edit mode ตรง Figma D; ยังไม่ได้ทดสอบ Play (Roblox Studio MCP ไม่เชื่อม) และยังไม่ได้เซฟ place. หมายเหตุ: tools/ui/preview.mjs ใช้ไม่ได้แล้ว (สคริปต์ยาวเกิน 200,000 ตัวอักษร) — ปัญหาเดิม ไม่เกี่ยวกับงานนี้"
+  },
+  {
+   "at": "2026-11-20",
+   "text": "B22 รอบ 2: ออกแบบท่าสุ่ม 4 แบบใน Figma (3664:56516) คุณเลือกแบบ 1 Altar Charge → ทำในเกมแล้ว (แทน Reel Slot เดิม, การ์ดผลลัพธ์เหมือนเดิม); หน้า Gacha: เอา History ออก, ออร่าเด่นเปิด Item Card, Options มุม 10, ซ่อนหน้า Gacha ระหว่างสุ่ม (แก้ UI ทะลุ); bake แล้ว check ผ่าน; ยังไม่ได้ทดสอบ Play และยังไม่ได้เซฟ place"
+  },
+  {
+   "at": "2026-11-20",
+   "text": "B22 รอบ 3: หน้าต่างสุ่ม Altar Charge ทำตาม Figma แบบ 1 ที่คุณแก้ (ไม่มี Rays, แถบผลลัพธ์, Item Card ข้างภาพ, ขนาด 1920x1080) — check ผ่าน, bake แล้ว, ภาพ edit mode ตรงแบบ; ยังไม่ได้ทดสอบ Play"
+  },
+  {
+   "at": "2026-11-20",
+   "text": "B22 รอบ 4: Hero/ป้ายชื่อแสดงแค่ออร่าเด่นของตู้; x10 ปุ่ม SEE ALL 10 ไปหน้าสรุปทั้ง 10 (แก้บั๊ก Roll again = x1); เตรียมรูปอัปโหลด 8 รูป + check_orbs/ 6 รูปสำรอง; check ผ่าน; ยังไม่ได้ทดสอบ Play (Studio plugin หลุดจาก bridge)"
+  },
+  {
+   "at": "2026-11-20",
+   "text": "B22: อัปโหลดรูป Gacha 8 รูปแล้ว, แปลงเป็น image id ครบ 8/8, UIAssets 202/203; AbyssalShadow ภาพวาดยังไม่ขึ้น (รอตรวจ); ลูกแก้วเดิม 6 ตัวถูกต้อง ลบ check_orbs/"
+  },
+  {
+   "at": "2026-11-19",
+   "text": "C24 Core Menu Manager: UI/MenuManager.luau (ชั้น Hub/Main/Dialogue/Popup/Modal + StackOn), ต่อเข้าทุกหน้าต่าง, คู่มือ + งานส่งต่อ docs/MENU_MANAGER.md; แก้ Remotes.luau IsEdit ที่ทำให้ client โหลดไม่ขึ้น"
+  },
+  {
+   "at": "2026-11-19",
+   "text": "docs/AGENT_PROMPTS.md: prompt แบบเคร่งครัดสำหรับ Codex / Antigravity / agent อื่น + แม่แบบข้อความสั่งงาน"
+  },
+  {
+   "at": "2026-11-19",
+   "text": "คู่มือสำหรับ Agent อื่น (Codex / Antigravity): docs/AGENT_PLAYBOOK.md (วิธีอ่านคำสั่ง, ลำดับความสำคัญ, ขั้นตอนทำงาน, เครื่องมือ, ข้อผิดพลาดที่เคยเจอ) + docs/AGENT_RUNBOOKS.md (ขั้นตอนทีละงาน: Part A โค้ด 11 แบบ, Part B ออกแบบ Figma D1-D7); ลิงก์จาก AGENTS.md"
+  },
+  {
+   "at": "2026-11-19",
+   "text": "B7 NPC Dialogue: Old Marlin (ร้าน) + Sela (แท่นออร่า) ตาม Figma 11, Config/Dialogues, prompt เปลี่ยนเป็น Talk; ทดสอบใน Play ผ่าน (ดู B7)"
+  },
+  {
+   "at": "2026-11-19",
+   "text": "C22: FishingZone / PlayArea ใช้เฉพาะของใน Workspace (แมพสำรองใน ServerStorage ไม่มีผลอีกต่อไป)"
+  },
+  {
+   "at": "2026-11-19",
+   "text": "เลือก Gem Tracker (แบบ 06) ใน Figma ลบแบบอื่น เพิ่ม Chance จาก Config, ป้าย 3 / 5, ปุ่มเปลี่ยนหน้า และ Prototype เปิด Item Card เดิมเฉพาะ Aura ที่ปลดล็อกแล้ว"
+  },
+  {
+   "at": "2026-11-19",
+   "text": "นำ Aura Index (Gem Tracker Figma 3611:54189) เข้าเกม: แบนเนอร์ความคืบหน้า Gems earned, กริดการ์ด 6 ช่อง (2x3), การ์ดปลดล็อกแสดง State/Chance/Gems Awarded, การ์ดล็อกแสดง ???/First find/แม่กุญแจ, ปุ่ม Go to Altar, bake ใน StarterGui.Menus แล้ว"
+  },
+  {
+   "at": "2026-11-19",
+   "text": "เก็บไอคอน Golden Koi ที่ assets/art/fish/GoldenKoi.png และลงทะเบียน fish/GoldenKoi ใน catalog แล้ว อัปโหลดแล้วและอ่าน Image ID 109436578580598 จาก Decal ใน Studio สำเร็จ ซิงก์เข้า UIAssets.luau แล้ว"
+  },
+  {
+   "at": "2026-11-19",
+   "text": "Inventory แสดงช่องว่างทุกหมวด และล้าง NEW เป็นรายกองเมื่อกด หรือเมื่อรูปโหลดแล้วและช่องอยู่ในพื้นที่ที่เห็นอย่างน้อย 75% ต่อเนื่อง 0.6 วินาที"
+  },
+  {
+   "at": "2026-11-19",
+   "text": "แก้ภาพ Skeleton ค้างทับไอคอนที่โหลดแล้วใน HUD และ Store/Shop โดยยกเลิกภาพชั่วคราวเมื่อโหลดสำเร็จ เปลี่ยนรูป หรือหมดเวลารอ"
+  },
+  {
+   "at": "2026-11-19",
+   "text": "Inventory: แถวสุดท้ายเติมช่องฟอง (empty placeholder) จนครบแถวเสมอ แม้กระเป๋าเต็ม — InventoryController.luau; ยังไม่ได้ทดสอบใน Play"
+  },
+  {
+   "at": "2026-11-19",
+   "text": "C5 Naga Tide HUD: อัปเกรดหน้าต่างลอยด้านบนเป็น Cozy Lake เต็มรูปแบบ (Controllers/TideEventController.luau: การ์ด 480x76, ขอบมน 18px, ไอคอน Naga Hatchling, ชิปเวลานับถอยหลัง M:SS, ป้ายทิศทาง+ระยะทาง, ป้ายจำนวนคนตก, แถบเรืองแสงสีเขียวมินต์เมื่ออยู่ในวง IN TIDE: +50% LUCK, และช่อง LOOT พรีวิวปลาพิเศษ Naga Hatchling / Coral Seahorse) — ผ่าน check.mjs สะอาด 100% ไร้ error และไร้อักขระต้องห้าม"
+  },
+  {
+   "at": "2026-11-19",
+   "text": "C23 Daily Login: ระบบของขวัญล็อกอิน 7 วันพร้อมหน้าต่าง Cozy Lake 680x480 (Config/DailyLogin.luau, Shared/DailyLogin.luau, Services/DailyLoginService.luau, UI/Screens/DailyLogin.luau, Controllers/DailyLoginController.luau, UI/EventActions/DailyLogin.luau, remote ClaimDailyLogin) — รางวัล 7 วัน (Coins, Worms, Gems, Glow Grubs, Pearls, Squid Baits, Day 7 Grand Reward 50 Gems), ระบบนับ Streak และตรวจสิทธิ์รายวันรีเซ็ตเที่ยงคืน UTC, ปลดล็อคการ์ด Daily Login ใน Events hub, bake ลง StarterGui แล้ว — ผ่าน check.mjs สะอาด 100% ไร้ error และไร้อักขระต้องห้าม"
+  },
+  {
+   "at": "2026-11-19",
+   "text": "สร้างภาพ Gacha Splash Art ของ Celestial Leviathan (Mythic 5-Star Tidal Guardian) ที่ assets/art/auras/CelestialLeviathan-splash.png"
+  },
+  {
+   "at": "2026-11-19",
+   "text": "Gacha Pure Aura VFX: สร้างออร่า PNG โปร่งใส 6 ภาพ ฉากหลัง 3 ภาพ และภาพแท็บ 3 ภาพจาก docs/GACHA_ART_PROMPTS.md เก็บไฟล์ก่อนแทนที่และภาพตัวละครรุ่นเดิมใน build/gacha-art-pre-vfx/"
+  },
+  {
+   "at": "2026-11-18",
+   "text": "Aura Index: ทำ Figma แบบกริด 6 แบบ พร้อมตัวอย่างปลดล็อกและรับ Gems เมื่อเจอครั้งแรก รอเลือกแบบและยืนยันจำนวนรางวัล"
+  },
+  {
+   "at": "2026-11-18",
+   "text": "C21 คอนเทนต์ใหม่จากรูปที่อัปโหลดแล้ว: ปลา 8, ออร่า 10, คันเบ็ด 2, สาย 2, เหยื่อ 4; Starter Bay ลึก 1000m (ดู C21)"
+  },
+  {
+   "at": "2026-11-18",
+   "text": "งานเล็ก: แก้ HUD ซ้อนตอนตัวละครโหลดช้า (Baked.Get รอ 60 วิ + ลบตัวซ้ำ), bake CastPopup ใหม่, Main Menu 13 ไทล์ + ป้าย VIP (Figma Economy 7), ชิปกระเป๋า HUD แสดง Inf"
+  },
+  {
+   "at": "2026-11-18",
+   "text": "UI ค้างของ Economy: ป้าย Streak (C12), ป้ายชื่อ VIP (C6), +N (C16), HOT + ป้าย Merchant + Hot bonus (C18), หน้าต่าง Skills (C4), กาชา pity 2 แถว/อัตรา %/Star Token (C17), ดาวใน Aura Dex; อัปเดตสถานะภาพรวม C4–C19 ให้ตรงของจริง"
+  },
+  {
+   "at": "2026-11-18",
+   "text": "B21 รอบ 2: การ์ดไอเท็มใน Shop + Fishdex, ไอคอนราคาในปุ่มการ์ด, หน้าต่าง Character (C / รูปโปรไฟล์ Main Menu), Aura Dex (ปุ่มในแท็บ Auras), Shop Bags ไม่ให้กลับไปกระเป๋าเล็ก, UI/ItemSlots.luau. bake Inventory/ItemDetail/Character แล้ว ทดสอบใน Play ผ่าน (ดู B21)"
+  },
+  {
+   "at": "2026-11-18",
+   "text": "B21 ในเกม: Inventory v2 (แท็บคั่นหนังสือ, 600x480, ช่อง 72) + Item Card (UI/ItemDetail, ใช้ remote เดิมทั้งหมด ไม่เพิ่ม field เซฟ) + Bag Upgrade (ladder, ขั้นสุดท้าย = Infinite Bag pass) + server กันกระเป๋าเล็กลง; แท็บ Auras แสดงเฉพาะที่มี (ตามที่คุณขอ). check ผ่าน รอ bake + ทดสอบ (ดู B21)"
+  },
+  {
+   "at": "2026-11-18",
+   "text": "B20 Virtual Grid: UI/VirtualGrid.luau (แนวคิด Global Visualizer: สร้างเฉพาะช่องที่มองเห็น + pool/rebind) ใช้กับ Inventory, Aquarium, Mastery, Put in Tank แทนการลบ/สร้างการ์ดใหม่ทุก refresh. ทดสอบ edit mode: 500 ชิ้น = 30 view. รอทดสอบใน Play (ดู B20)"
+  },
+  {
+   "at": "2026-11-18",
+   "text": "A18 เฟส 1: compact reads (depth/fields/maxNodes ใน get_node_info / get_nodes_info / read_my_design, เล็กลง ~10 เท่า), tool ใหม่ find_nodes, batch อ้างผล \"$N.path\" + brief, figma.commitUndo() ต่อคำสั่ง (batch = undo 1 ครั้ง), error แนะนำชื่อคำสั่ง/วิธีหา id, ตัวนับเก็บ avgKB. ทดสอบ: ดูข้อ 6-7 ใน A18"
+  },
+  {
+   "at": "2026-11-18",
+   "text": "A18 รอบ 3: แผง Selection ในปลั๊กอิน (ชื่อ / ชนิด / id / path, ปุ่ม Copy id, Copy all, คลิกชื่อ = ซูมไป) + โน้ตต่อโหนด (พิมพ์ในแผงหรือ Agent ใช้ set_node_note) — get_selection คืน path, size, text, image, note ด้วย; Agent ใช้ชื่อ + โน้ต ไม่ต้องวิเคราะห์รูป. ทดสอบ: เปิดปลั๊กอินใหม่ → คลิก layer ใน Figma → แผงขึ้นชื่อ+id ทันที → พิมพ์โน้ต กด Enter → บอก Claude \"get_selection\" ต้องเห็นโน้ตนั้น"
+  },
+  {
+   "at": "2026-11-18",
+   "text": "A18 รอบ 2 (ความเร็ว): log ของ relay/MCP เหลือบรรทัดเดียว (เดิมพิมพ์ JSON เต็มรวม base64 หลาย MB), ตัดการรอคงที่ (scan_text_nodes เดิมแฟลชสีส้ม + รอ 0.1-0.5 วิ/โหนด), export_to_roblox ดึงรูปพร้อมกัน 4 รูป, MCP join ห้องเองหลัง relay รีสตาร์ท, แก้บั๊กผลลัพธ์ 0/false ค้าง 30 วิ, เพิ่ม batch_commands (หลายคำสั่งในรอบเดียว) + list_plugin_commands. พบว่า relay ที่รันอยู่เป็นของ upstream (bunx) ไม่ใช่ของ fork"
+  },
+  {
+   "at": "2026-11-18",
+   "text": "A18: Figma plugin แยกเป็นโมดูล (src/cursor_mcp_plugin/src/core + commands/* 13 กลุ่ม, UI ui/), build ด้วย build.mjs (esbuild) → code.js/ui.html; คำสั่งครบ 51 ตัวเท่าเดิม + list_commands; ตัวนับการใช้งานเป็นตัวเลข (relay + MCP server → usage/*.json, tool get_usage_stats, bun run usage), สคริปต์ Python ส่งชื่อ py:<script>; เอกสาร HANDOFF.md / AGENTS.md rules / README plugin. รอทดสอบใน Figma"
+  },
+  {
+   "at": "2026-11-18",
+   "text": "เพิ่มปลาใหม่ Golden Koi: ระดับ Legendary, ความลึก 0-40m, BaseValue 12000, น้ำหนัก 3-10 kg, Difficulty 7, Pattern Erratic ลงใน Config/Fish.luau — Type check Luau สะอาด 100% ไร้ error ตามกฎ Fast Code-First Workflow และไม่มีอักขระต้องห้ามตามกฎ Strict Character Rule"
+  },
+  {
+   "at": "2026-11-18",
+   "text": "C14 Offline reward popup ปรับให้ตรงตาม Figma เป๊ะ: กรอบหน้าต่าง Modal 520px ขอบมน 36px, รูปภาพ offline_reward 110x110, หัวข้อ \"While you were away\", เวลาที่หายไป (Away Xh Xm พร้อมแจ้ง capped at N h เมื่อชนเพดาน), แถบยอด Pearls สีม่วง 8C6FD6 ขนาด 38px พร้อมไอคอน pearl, แถบเตือน Cap full pill สีแดงสำหรับแจ้งเตือนเพดาน, Footer สี Sand พร้อมปุ่ม COLLECT สีเขียวมินต์ T.Good และปุ่ม x2 Boost (เมื่อมีสิทธิ์); ทดสอบได้ทันทีด้วยคำสั่ง Dev \"!offline 2h\" ใน Roblox Studio — Type check สะอาด 100% ไร้ error"
+  },
+  {
+   "at": "2026-11-18",
+   "text": "C15 หน้าต่าง Mastery ทำตาม Figma \"Economy · 3 Mastery\" (UI/MasteryScreen.luau, แทนหน้าต่าง Window kit เดิม): การ์ด 352×92 2 คอลัมน์, ปุ่ม UPGRADE/ราคา Pearls/MAX, หัว Pearls สด + /s + Total Lv.; ตัวเลขโบนัสแบบสั้น (+22% → +23%, ตัวคูณ Reel Power/Pearl Rate/Sell Mult แสดงเป็น %, Offline Cap เป็นชั่วโมง/นาที); export ไอคอน 4 อันจาก Figma ลง catalog (รออัปโหลด). เพิ่ม tools/check.bat (node tools/check.mjs) = rojo sourcemap + luau-lsp (error = ไม่ผ่าน, lint = เตือน) + หาอักขระต้องห้าม (✓ • อีโมจิ) ในสตริงที่ผู้เล่นเห็น — คำสั่งเดียวจบ"
+  },
+  {
+   "at": "2026-11-18",
+   "text": "Global vector icons (§5) ลบแถบ Tinted และ Export ไอคอน: ลบ Frame Tinted ใน Figma ออกตามคำสั่งเพื่อความกระชับสะอาดตา และ Export ไอคอน 64px PNG ทั้ง 12 ตัว (icon_star, icon_star_empty, icon_arrow_up, icon_flame, icon_infinity, icon_timer, icon_info, icon_lock, icon_robux, icon_clover, icon_bar, icon_reel) เก็บไว้ใน assets/ui-global/ ครบทั้งหมด"
+  },
+  {
+   "at": "2026-11-18",
+   "text": "C14 แก้ไขและปรับแต่ง Offline reward popup ให้ทำงานได้จริงและหน้าตาตรง Figma 100%: แก้ไขฟังก์ชัน offlinePopup ใน EconomyController.luau ให้ TextLabel ทุกชิ้นมี Size และ AutomaticSize ชัดเจน, ฟอนต์ Fredoka One (หัวข้อ 26px, ยอด Pearls 40px) และ Nunito Bold (Away time 16px), แถบเตือน Cap full pill สีแดงและ Footer ใช้สี PanelLight (#F3E9D8) ถูกต้องตามธีมแทนสีเทา, ปุ่ม COLLECT สีเขียวมินต์ 354x54 และปุ่ม x2 Boost สีม่วง 82x54 วางเรียงข้างกันพร้อมไอคอน boost_pearls สไตล์ Figma, กด x2 จะ PromptProduct(\"BoostPearls\") ทันทีหากยังไม่มี Boost — ทดสอบ Capture หน้าจอใน Roblox Studio ทั้งแบบปกติและแบบชนเพดาน (Capped) ผ่านสวยงาม 100% ไร้ error และไร้อักขระต้องห้าม"
+  },
+  {
+   "at": "2026-11-18",
+   "text": "Global vector icons (§5) Export และอัปโหลดขึ้น Roblox สมบูรณ์: Export ภาพบอร์ดลง docs/figma/shots/global_vector_icons.png, Export ไอคอน 64px PNG ทั้ง 12 ตัว, ลงทะเบียน assets/catalog.json, อัปโหลดขึ้น Roblox Asset Server ผ่าน Roblox Studio MCP ได้ rbxassetid:// ครบ 100% ทั้ง 12 ไอคอน พร้อมซิงค์ UIAssets.luau (175/175 มี asset id ครบทั้งหมด) — ตรวจสอบ tools/check.mjs ผ่าน 100%"
+  },
+  {
+   "at": "2026-11-18",
+   "text": "C7 สร้าง Section ตัวเลือกหน้าจอ Daily Quests 3 แบบใน Figma: สร้าง Section \"C7 · Daily Quests — 3 Design Layouts (Pick One)\" (Node 3588:41853) บน Page \"Out Space\" (x 25000, y 2000) ผ่าน JSON Builder ของ Plugin ใหม่ (120+ โหนด สร้างเสร็จใน 4 วินาที, เติมรูป 20 ช่องอัตโนมัติ) เพื่อทดสอบงานใหญ่: Option 1 Classic Cozy Deck (760x610 แถบ Milestone 1/3, 2/3, 3/3 พร้อมการ์ด 3 สถานะ In Progress/Claimable/Claimed), Option 2 Adventure Journal (840x610 แบบแบ่งฝั่ง Quest List + Grand Mega Chest), Option 3 Full Flow Preview (หน้าต่างเควสต์คู่กับป๊อปอัปฉลอง Quest Reward Claimed 520x390) — ไร้อักขระต้องห้าม 100%"
+  },
+  {
+   "at": "2026-11-18",
+   "text": "C7 นำ Option 1 (Classic Cozy Deck) เข้าสู่โค้ดเกมจริงสมบูรณ์: สร้าง UI/QuestsScreen.luau ขนาด 760x610 ตาม Figma เป๊ะ (Header แสดง Title, ResetsIn timer, Gems chip, ปุ่มปิดสีแดง; Milestone Track 1/3, 2/3, 3/3 Daily Chests; Quest Cards 3 แถบแบ่ง 3 สถานะ In Progress, Claimable, Claimed); สร้าง Controllers/QuestController.luau ผูก RemoteFunc ClaimQuest และ DataController; ผูกปุ่ม Quests ใน Main Menu และเปิดใช้งานใน Features.Quests.Enabled = true — ตรวจสอบ node tools/check.mjs สะอาด 0 error ไร้อักขระต้องห้าม และเรนเดอร์ใน Roblox Studio สำเร็จ 100%"
+  },
+  {
+   "at": "2026-11-18",
+   "text": "แก้ HUD Stats ซ้อนกัน + หน้า Daily Quests ให้ตรง Figma (3588:41856 Option 1). สาเหตุ: label ที่ใช้ AutomaticSize วัดความกว้างก่อนฟอนต์ Fredoka/Nunito โหลดเสร็จ จึงแคบเกิน (\"Lv.100\" ทับข้อความ XP, \"Daily Quests\" ทับป้ายเวลา) → เพิ่ม New.FitTextWidth (วัดด้วย TextService ด้วยฟอนต์จริง) ใช้กับ Level/XP ใน HUD และป้ายข้อความทุกอันใน Quests; การ์ดเควสใช้ UIFlexItem Fill ในช่องข้อมูล (เดิมกว้างตายตัว 1,-260 ทำให้ปุ่ม CLAIM / IN PROGRESS ล้นขอบการ์ด); ขนาดตาม Figma: Header 57, ปุ่ม X 73x57 r16, ชื่อเควส/Daily Chest Progress 20px, ช่องว่างโหนดหีบ 12, ป้ายรางวัล/สถานะสูง 26, ขอบการ์ด 2px (เคลมแล้ว 1px). ตรวจใน Studio: ปุ่ม CLAIM จบที่ 16px จากขอบการ์ด, Lv.100 กับ XP ห่าง 10px. ทดสอบ: Play → ดู HUD มุมซ้ายบน \"Lv.xx\" ต้องไม่ทับ \"xxx / xxx XP\" → เปิด Daily Quests → ชื่อ \"Daily Quests\" ไม่ทับป้าย \"Resets in\", ปุ่ม CLAIM และป้าย IN PROGRESS อยู่ในกรอบการ์ดทุกใบ"
+  },
+  {
+   "at": "2026-11-18",
+   "text": "B21 ออกแบบ Item Detail Card 8 แบบ (A Classic, B Hero, C Rarity Band, D Compact, E Compare Table, F Trading Card, G Wide Split, H Bubble) + Inventory v2 6 แบบ (1 Rail Inside, 2 Bookmark Tabs, 3 Docked Detail, 4 Right Drawer, 5 Labelled + Filters, 6 Backpack Bar) + หน้าต่าง Bag Upgrade ใน Figma section 18A/18B (x 27200) — สคริปต์ docs/figma/item_detail.py; เพิ่ม prompt รูปชีต 17 (ไอคอนแท็บ Inventory) และ 18 (ไอคอน Mastery) ใน docs/ART_PROMPTS.md; ยังไม่แตะโค้ดเกม"
+  },
+  {
+   "at": "2026-11-18",
+   "text": "B21 เลือก Inventory แบบ 2 (Bookmark Tabs) ทำต่อเป็น FINAL ขนาดเล็กลง 600x480 + การ์ด A ปุ่มสูงคงที่ 48; Bag Upgrade ขั้นสุดท้าย Bottomless Bag = Robux เท่านั้น (Infinite Bag pass 349); สร้าง 17 · Character ใหม่ (Rod/Line/Bait/Aura ไม่มี Bag, ใช้ Item Card) — Figma 3598:46643 + 3599:48078, สคริปต์ docs/figma/inventory_final.py + send_blocks.py; ยังไม่แตะโค้ดเกม"
+  },
+  {
+   "at": "2026-11-18",
+   "text": "ตัดรูปชีต 17 (ไอคอนแท็บ) + 18 (ไอคอน Mastery) ลง assets/art/ui/tabs|mastery, เพิ่ม 18 คีย์ใน catalog/UIAssets (ยังไม่อัปโหลด, ชุดพร้อมอัปโหลดที่ assets/upload/2026-11-18_icons/); ใส่รูปใน Figma ทุก section ใหม่ + การ์ด Mastery 7 สาย; แท็บที่คั่นหนังสือยื่นออกมากขึ้น (50x42) ให้เห็นไอคอนเต็ม; ออกแบบช่องว่างไม่มี + 6 แบบ (Recessed, Dashed, Silhouette, Numbered, Bubbles, Glass) + ช่อง Get More แบบใหม่ — section 3599:48461, สคริปต์ docs/figma/empty_slots.py"
+  },
+  {
+   "at": "2026-11-18",
+   "text": "ช่องว่างแบบ 5 Bubbles: Figma (18 FINAL, 17 Character, component Item Slot State=Empty) + ในเกม Make.ItemSlot เลิกใช้ \"+\" เป็นฟอง 3 เม็ด, bake Components/Inventory แล้ว (ต้องกด Ctrl+S เซฟ place)"
+  },
+  {
+   "at": "2026-11-18",
+   "text": "แปลงรูปชีต 17/18 ทั้ง 18 รายการเป็น Image ID และผูกไอคอนกับ Inventory, Character, Bag Upgrade, Modifiers และ Mastery. เกณฑ์ผ่านคือรูปโหลดครบในหน้าจอที่ระบุด้านบน"
+  },
+  {
+   "at": "2026-11-18",
+   "text": "Store ใช้ไอคอน Robux คู่กับราคาในปุ่มสินค้าที่ซื้อได้ทั้ง Passes, Gems และ Boosts & Packs และแสดง OWNED / BOUGHT / SOON สำหรับปุ่มสถานะ"
+  },
+  {
+   "at": "2026-11-18",
+   "text": "จัดชั้นไอคอนเหนือของตกแต่งในช่องไอเท็มและรางวัล Gacha, โปสเตอร์ Events, แท็บ Inventory และปุ่มราคา Store"
+  },
+  {
+   "at": "2026-11-18",
+   "text": "แก้ Bookmark Tabs ให้ตรง Figma FINAL โดยเรียงเงา, แท็บ, และแผงหน้าต่างจากหลังมาหน้า"
+  }
+ ],
+ "fixes": {}
+}
