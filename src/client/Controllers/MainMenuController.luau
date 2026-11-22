@@ -17,6 +17,7 @@ local Shared = ReplicatedStorage:WaitForChild("Shared")
 local Registry = require(Shared.Registry)
 local Inventory = require(Shared.Inventory)
 local Rebirth = require(Shared.Rebirth)
+local DailyLogin = require(Shared.DailyLogin)
 local Remotes = require(Shared.Remotes)
 
 local New = require(script.Parent.Parent.UI.New)
@@ -24,6 +25,8 @@ local Baked = require(script.Parent.Parent.UI.Baked)
 local MenuManager = require(script.Parent.Parent.UI.MenuManager)
 local Modal = require(script.Parent.Parent.UI.Modal)
 local Credits = require(script.Parent.Parent.UI.Credits)
+local StatsCodex = require(script.Parent.Parent.UI.StatsCodex)
+local MainMenuScreen = require(script.Parent.Parent.UI.Screens.MainMenu)
 local HUD = require(script.Parent.HUDController)
 local DataController = require(script.Parent.DataController)
 
@@ -79,12 +82,16 @@ local ACTIONS: { [string]: () -> () } = {
 	Quests = function()
 		HUD.QuestsRequested:Fire()
 	end,
+	DailyLogin = function()
+		HUD.DailyLoginRequested:Fire()
+	end,
 	Friends = invite,
 	Events = function()
 		HUD.EventsRequested:Fire()
 	end,
 	-- C10: no real settings yet - the tile opens "Settings & Credits" (licence credits + where Low FX is)
 	Settings = Credits.Open,
+	StatsCodex = StatsCodex.Open,
 	-- C3: confirm, then the server checks the level again and resets
 	Rebirth = function()
 		local profile = DataController.Profile
@@ -195,6 +202,11 @@ local function refreshData(profile: any)
 	if vip then
 		vip.Visible = profile.Passes ~= nil and profile.Passes.VIP ~= nil
 	end
+	-- Daily Login: red dot while today's check-in is unclaimed
+	local dl = refs.Tiles.DailyLogin
+	if dl and dl:FindFirstChild("Dot") then
+		dl.Dot.Visible = DailyLogin.GetState(profile).CanClaim
+	end
 	-- Quests: dot when daily quests exist and have unclaimed rewards (system not built yet)
 	local q = refs.Tiles.Quests
 	if q and q:FindFirstChild("Dot") then
@@ -222,6 +234,8 @@ local function ensure()
 	end)
 	refs.Tiles = {}
 	local grid = Baked.Find(hub, "Glass/Phone/Grid")
+	MainMenuScreen.EnsureCodexTile(grid)
+	MainMenuScreen.EnsureDailyTile(grid)
 	if not grid:FindFirstChild("Mastery") then
 		local quests = grid:FindFirstChild("Quests")
 		if quests and quests:IsA("GuiButton") then

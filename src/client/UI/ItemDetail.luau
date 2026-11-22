@@ -31,6 +31,7 @@ local New = require(script.Parent.New)
 local Baked = require(script.Parent.Baked)
 local MenuManager = require(script.Parent.MenuManager)
 local EnhancePopup = require(script.Parent.EnhancePopup)
+local Modal = require(script.Parent.Modal)
 local SetItemSlot = (require(script.Parent.Screens:WaitForChild("Components")) :: any).SetItemSlot
 
 local T = New.Theme
@@ -41,6 +42,7 @@ ItemDetail.Hidden = Signal.new() -- () card closed (any window that opened it cl
 -- Info = true: opened from a catalogue (Shop / Fishdex), so a bait you have none of still shows (Get from).
 export type Item = { Kind: string, Id: string, UUID: string?, Info: boolean? }
 
+local Screen_INNER = 248 -- card width 280 minus padding
 local CATEGORY = { Rod = "Rods", Line = "Lines", Bait = "Baits" }
 local GAP = 12 -- card to slot
 local MARGIN = 8
@@ -51,6 +53,7 @@ local refs: any = nil
 local current: Item? = nil
 local anchorObj: GuiObject? = nil
 local centered = false
+local compactMode = false -- small screen: the card is centred with an input shield behind it
 local busy = false
 local handlers: { [number]: (() -> ())? } = {}
 
@@ -164,18 +167,6 @@ local function shopSource(def: any): any
 	return { Icon = if def.Currency == "Gems" then "ui/status/gem" else "ui/status/coin", Text = table.concat(parts, " - ") }
 end
 
--- Prefix / Suffix mods of a rod as badges ("Sharp +0.1 Luck").
-local function modBadges(gear: any): { any }
-	local out = {}
-	for _, list in { gear.Prefixes or {}, gear.Suffixes or {} } do
-		for _, mod in list do
-			local def = Registry.StatDefs[mod.Stat]
-			table.insert(out, { Text = `{mod.Name} {if def then Format.Stat(mod.Stat, def, mod.Value) else tostring(mod.Value)}`, Color = T.Gem })
-		end
-	end
-	return out
-end
-
 local function gearModel(profile: any, item: Item): any
 	local cat = CATEGORY[item.Kind]
 	local def = Registry.Equipment[cat].Items[item.Id]
@@ -199,9 +190,6 @@ local function gearModel(profile: any, item: Item): any
 		table.insert(meta, { Text = `+{lv}`, Color = T.Gem })
 	end
 	if gear then
-		for _, b in modBadges(gear) do
-			table.insert(meta, b)
-		end
 		if Inventory.IsBound(gear) then
 			table.insert(meta, { Text = "Bound", TextColor = T.SubText })
 		end
@@ -214,7 +202,7 @@ local function gearModel(profile: any, item: Item): any
 		Stats = statBadges(Enhance.ScaledStats(def.Stats, lv)),
 		Desc = def.Description,
 		Meta = meta,
-		Modifiers = item.Kind == "Rod" and owned,
+		Mods = if (item.Kind == "Rod" or item.Kind == "Line") and gear then { Prefixes = gear.Prefixes or {}, Suffixes = gear.Suffixes or {} } else nil,
 		Owned = owned,
 		Actions = {},
 	}
@@ -228,7 +216,7 @@ local function gearModel(profile: any, item: Item): any
 		if Enhance.CanEnhance(cat, item.Id) then
 			local coins = Enhance.Cost(cat, item.Id, lv)
 			table.insert(m.Actions, if coins
-				then { Text = "ENHANCE", CostIcon = "ui/status/enhance", Cost = short(coins), Color = T.Gold, Run = function()
+				then { Text = "ENHANCE", Color = T.Gem, Run = function()
 					-- C16: preview +N -> +N+1 and the stat changes first (Figma Enhance popup)
 					EnhancePopup.Open({ Name = def.Name, Icon = `equipment/{item.Id}`, State = Enhance.State(gear) }, function()
 						simple("Enhance", uuid)
@@ -237,9 +225,24 @@ local function gearModel(profile: any, item: Item): any
 				else { Text = `MAX +{lv}`, Color = T.Disabled })
 		end
 		local value = Inventory.SellValue(gear, 1)
-		if not equipped and value > 0 then
+		if not equipped and (value > 0 or def.Price == 0) then
 			table.insert(m.Actions, { Text = "SELL", CostIcon = "ui/status/coin", Cost = short(value), Color = T.Gold, Run = function()
-				simple("SellItem", uuid)
+				local invested = Inventory.Investment(gear)
+				if not invested then
+					simple("SellItem", uuid)
+					return
+				end
+				-- Enhance or mods would be lost: ask first
+				Modal.Confirm({
+					Title = `Sell {def.Name} {invested}?`,
+					Message = `You will get {New.Highlight(Format.Number(value) .. " coins", T.GoldLip)}. The {invested} on this {string.lower(item.Kind)} is lost for good.`,
+					ConfirmText = "Sell",
+					ConfirmColor = T.Gold,
+					Icon = "ui/status/sell_bag",
+					IconColor = T.Gold,
+				}, function()
+					simple("SellItem", uuid, true)
+				end)
 			end })
 		end
 	else
@@ -504,6 +507,9 @@ local MODELS = {
 
 -- View ---------------------------------------------------------------------------------------------
 
+local squeezedExtra = 0 -- height of Desc/Meta hidden on short screens (0 = shown)
+local descWanted, metaWanted = false, false
+
 local function fitBody()
 	local screen = gui.AbsoluteSize
 	if screen.X <= MARGIN * 2 or screen.Y <= MARGIN * 2 then
@@ -512,15 +518,39 @@ local function fitBody()
 	local compact = screen.Y < 500 or screen.X < 600
 	local height = math.min(screen.Y - MARGIN * 2, if compact then screen.Y * 0.78 else screen.Y)
 	local availableWidth = screen.X - MARGIN * 2
-	local scale = math.min(if compact then 0.875 else 1, availableWidth / refs.Card.Size.X.Offset)
 	local displayedScale = refs.Scale.Scale
-	local naturalHeight = math.round(refs.BodyLayout.AbsoluteContentSize.Y / displayedScale)
+	local measured = math.round(refs.BodyLayout.AbsoluteContentSize.Y / displayedScale)
 	local footer = if refs.Actions.Visible then refs.Actions.AbsoluteSize.Y / displayedScale + refs.CardLayout.Padding.Offset else 0
 	local padding = refs.Padding.PaddingTop.Offset + refs.Padding.PaddingBottom.Offset
-	local bodyHeight = math.min(naturalHeight, math.max(0, math.floor(height / scale - footer - padding)))
+	-- The card never scrolls. Too tall: scale the whole card down (floor 0.5); if that would be unreadably small
+	-- (under 0.7) the secondary text (description, badges) is dropped first so the rest stays large.
+	local full = measured + squeezedExtra
+	local fitFull = height / math.max(1, full + footer + padding)
+	if squeezedExtra == 0 and fitFull < 0.7 and (descWanted or metaWanted) then
+		local gap = refs.BodyLayout.Padding.Offset
+		for _, pair in { { refs.Desc, descWanted }, { refs.Meta, metaWanted } } do
+			if pair[2] then
+				squeezedExtra += math.round(pair[1].AbsoluteSize.Y / displayedScale) + gap
+				pair[1].Visible = false
+			end
+		end
+	elseif squeezedExtra > 0 and fitFull >= 0.7 then
+		refs.Desc.Visible = descWanted
+		refs.Meta.Visible = metaWanted
+		squeezedExtra = 0
+	end
+	local naturalHeight = full - squeezedExtra
+	local fitScale = height / math.max(1, naturalHeight + footer + padding)
+	local scale = math.max(0.5, math.min(if compact then 0.875 else 1, availableWidth / refs.Card.Size.X.Offset, fitScale))
 	refs.Scale.Scale = scale
-	refs.Body.Size = UDim2.new(1, 6, 0, bodyHeight)
-	refs.Body.ScrollingEnabled = bodyHeight < naturalHeight
+	refs.Body.Size = UDim2.new(1, 6, 0, naturalHeight)
+end
+
+-- Phones and short or narrow screens have no room beside the pressed slot: centre the card instead.
+local function compactScreen(): boolean
+	local camera = workspace.CurrentCamera
+	local vp = if camera then camera.ViewportSize else Vector2.new(1280, 720)
+	return vp.X < 900 or vp.Y < 480
 end
 
 local function ensure()
@@ -548,21 +578,49 @@ local function ensure()
 		GetIcon = Baked.Find(card, "GetFrom/Row/Icon"),
 		GetLabel = Baked.Find(card, "GetFrom/Row/Label"),
 	}
+	-- transparent catcher behind the card (compact screens): tap outside the card closes it
+	refs.Shield = New("TextButton", { Name = "Shield", Size = UDim2.fromScale(1, 1), BackgroundTransparency = 1, Text = "", AutoButtonColor = false, Visible = false, ZIndex = 0, Parent = gui })
+	refs.Shield.Activated:Connect(function()
+		ItemDetail.Hide()
+	end)
 	refs.CardLayout = card:FindFirstChildOfClass("UIListLayout")
 	refs.Padding = card:FindFirstChildOfClass("UIPadding")
 	refs.Scale = card:FindFirstChildOfClass("UIScale") or New("UIScale", { Parent = card })
-	refs.Body = New("ScrollingFrame", {
+	-- Modifiers block (Figma "Mod options" D, Chips): 2 prefix + 2 suffix pills that wrap; "+" = empty slot.
+	-- Built here so an older bake works too.
+	for _, c in refs.Modifiers:GetChildren() do
+		c:Destroy()
+	end
+	refs.Modifiers.Size = UDim2.fromOffset(Screen_INNER, 0)
+	refs.Modifiers.AutomaticSize = Enum.AutomaticSize.Y
+	New("UIListLayout", { FillDirection = Enum.FillDirection.Horizontal, Wraps = true, Padding = UDim.new(0, 6), SortOrder = Enum.SortOrder.LayoutOrder, Parent = refs.Modifiers })
+	refs.ModChips = { Prefix = {}, Suffix = {} }
+	for si, kind in { "Prefix", "Suffix" } do
+		for i = 1, 2 do
+			refs.ModChips[kind][i] = New.Text({
+				Name = kind .. i,
+				Size = UDim2.fromOffset(0, 24),
+				AutomaticSize = Enum.AutomaticSize.X,
+				BackgroundTransparency = 0, -- New.Text is transparent by default: the chip colour must show
+				BackgroundColor3 = T.PanelLight,
+				Text = "",
+				TextSize = 13,
+				LayoutOrder = si * 10 + i,
+				Parent = refs.Modifiers,
+				[New.Children] = { New.Pill(), New("UIPadding", { PaddingLeft = UDim.new(0, 10), PaddingRight = UDim.new(0, 10) }) },
+			})
+			refs.ModChips[kind][i].TextScaled = false
+			refs.ModChips[kind][i].FontFace = T.FontBadge
+			refs.ModChips[kind][i].AutomaticSize = Enum.AutomaticSize.X
+		end
+	end
+	-- A plain Frame, not a ScrollingFrame: those always clip, which cut the corner of the picture slot.
+	refs.Body = New("Frame", {
 		Name = "Body",
 		Size = UDim2.new(1, 6, 0, 0),
 		LayoutOrder = 1,
 		BackgroundTransparency = 1,
 		BorderSizePixel = 0,
-		CanvasSize = UDim2.new(),
-		AutomaticCanvasSize = Enum.AutomaticSize.Y,
-		ScrollingDirection = Enum.ScrollingDirection.Y,
-		ScrollBarThickness = 3,
-		ScrollBarImageColor3 = T.SubText,
-		ClipsDescendants = true,
 		Parent = card,
 	})
 	refs.BodyLayout = refs.CardLayout:Clone()
@@ -574,6 +632,11 @@ local function ensure()
 	for i = 1, 3 do
 		local b = Baked.Find(refs.Actions, "Buttons/A" .. i)
 		refs.Buttons[i] = b
+		local rowLayout = b.Parent:FindFirstChildOfClass("UIListLayout")
+		if rowLayout then
+			rowLayout.Wraps = true -- a third button drops to its own row
+			b.Parent.AutomaticSize = Enum.AutomaticSize.Y
+		end
 		local face = b:FindFirstChild("Face")
 		local lbl = face and face:FindFirstChild("Label")
 		if lbl then
@@ -637,11 +700,30 @@ local function render(m: any)
 	end
 	refs.Stats.Visible = #m.Stats > 0
 	New.SetBadges(refs.Stats, m.Stats)
-	refs.Desc.Visible = m.Desc ~= nil and m.Desc ~= ""
+	squeezedExtra = 0
+	descWanted = m.Desc ~= nil and m.Desc ~= ""
+	metaWanted = #m.Meta > 0
+	refs.Desc.Visible = descWanted
 	refs.Desc.Text = m.Desc or ""
-	refs.Meta.Visible = #m.Meta > 0
+	refs.Meta.Visible = metaWanted
 	New.SetBadges(refs.Meta, m.Meta)
-	refs.Modifiers.Visible = m.Modifiers == true
+	refs.Modifiers.Visible = m.Mods ~= nil and (#m.Mods.Prefixes + #m.Mods.Suffixes) > 0 -- no mods, no block
+	if m.Mods then
+		local limits = Registry.GameConfig.Inventory
+		for kind, list in { Prefix = m.Mods.Prefixes, Suffix = m.Mods.Suffixes } do
+			local tint = if kind == "Prefix" then T.Sky else T.Gem
+			local max = if kind == "Prefix" then limits.MaxPrefixes else limits.MaxSuffixes
+			for i, chip in refs.ModChips[kind] do
+				local mod = list[i]
+				chip.Visible = mod ~= nil and i <= max -- empty slots are not shown
+				if mod then
+					chip.BackgroundColor3 = if mod.Value < 0 then T.Bad else tint -- red = cursed (negative) roll
+					chip.TextColor3 = Color3.new(1, 1, 1)
+					chip.Text = `{mod.Name}  {Format.Mod(mod.Stat, Registry.StatDefs, mod.Value)}`
+				end
+			end
+		end
+	end
 	refs.Actions.Visible = m.Owned and #m.Actions > 0
 	for i, b in refs.Buttons do
 		local a = m.Actions[i]
@@ -654,13 +736,21 @@ local function render(m: any)
 			local cost = face and face:FindFirstChild("Cost")
 			local withCost = cost ~= nil and a.Cost ~= nil
 			b.Text = if withCost then "" else a.Text
-			-- width by ratio: a "LABEL | icon cost" button gets 1.6 shares, a plain one 1
+			-- Rows of at most two buttons (never squeezed): 1 = full width, 2 = side by side, 3 = two then one full
+			-- width. In a pair a button with a cost gets 1.6 shares, a plain one 1.
 			local flex = b:FindFirstChildOfClass("UIFlexItem")
 			if flex then
-				flex.FlexMode = Enum.UIFlexMode.Custom
-				flex.GrowRatio = if a.Cost ~= nil then 1.6 else 1
-				flex.ShrinkRatio = 1
-				b.Size = UDim2.fromOffset(0, b.Size.Y.Offset)
+				flex.FlexMode = Enum.UIFlexMode.None
+			end
+			local n = #m.Actions
+			local height = b.Size.Y.Offset
+			if n == 1 or (n == 3 and i == 3) then
+				b.Size = UDim2.new(1, 0, 0, height)
+			else
+				local wa = if m.Actions[1].Cost ~= nil then 1.6 else 1
+				local wb = if m.Actions[2].Cost ~= nil then 1.6 else 1
+				local f = (if i == 1 then wa else wb) / (wa + wb)
+				b.Size = UDim2.new(f, -8 * f, 0, height)
 			end
 			if cost then
 				cost.Visible = withCost
@@ -694,7 +784,7 @@ function ItemDetail.Place()
 	local ap, as = a.AbsolutePosition, a.AbsoluteSize
 	if centered then
 		refs.Nub.Visible = false
-		local y = math.max(MARGIN, math.min((screen.Y - size.Y) / 2, ap.Y - size.Y - GAP))
+		local y = if compactMode then math.max(MARGIN, (screen.Y - size.Y) / 2) else math.max(MARGIN, math.min((screen.Y - size.Y) / 2, ap.Y - size.Y - GAP))
 		refs.Card.Position = UDim2.fromOffset(math.max(MARGIN, (screen.X - size.X) / 2), y)
 		return
 	end
@@ -732,8 +822,9 @@ function ItemDetail.Show(item: Item, anchor: GuiObject, centerOnScreen: boolean?
 	ensure()
 	current = item
 	anchorObj = anchor
-	centered = centerOnScreen == true
-	refs.Body.CanvasPosition = Vector2.zero
+	compactMode = centerOnScreen ~= true and compactScreen()
+	centered = centerOnScreen == true or compactMode
+	refs.Shield.Visible = compactMode
 	gui.Enabled = true
 	ItemDetail.Refresh()
 end
@@ -742,6 +833,10 @@ function ItemDetail.Hide()
 	current = nil
 	anchorObj = nil
 	centered = false
+	compactMode = false
+	if refs and refs.Shield then
+		refs.Shield.Visible = false
+	end
 	if gui then
 		gui.Enabled = false
 	end

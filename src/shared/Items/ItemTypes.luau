@@ -26,8 +26,9 @@ export type ItemDef = {
 export type ModEntry = {
 	Id: string,
 	Name: string,
-	Stat: string,
-	Value: number,
+	Stat: string, -- StatDefs key, or Max<key> = Cap Breaker (raises that stat's maximum)
+	Value: number, -- can be negative (cursed)
+	Rarity: string?,
 }
 
 -- One bag entry. Kind = "Fish" | "Rod" | "Line" | "Treasure".

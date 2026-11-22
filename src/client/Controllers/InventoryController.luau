@@ -21,6 +21,7 @@ local Shared = ReplicatedStorage:WaitForChild("Shared")
 local Registry = require(Shared.Registry)
 local Remotes = require(Shared.Remotes)
 local Inventory = require(Shared.Inventory)
+local Stats = require(Shared.Stats)
 local Format = require(Shared.Util.Format)
 
 local UI = script.Parent.Parent.UI
@@ -41,7 +42,7 @@ local T = New.Theme
 local InventoryController = {}
 
 local TAB_W = InventoryScreen.TabWidth
-local BAG_SORTS = { "Value", "Rarity", "Weight", "Name" }
+local BAG_SORTS = { "Newest", "Value", "Rarity", "Weight", "Name" } -- Newest first: what you just got is on top
 local GEAR_SORTS = { "Rarity", "Name" }
 local GEAR = { Rods = { Kind = "Rod", Cat = "Rods" }, Lines = { Kind = "Line", Cat = "Lines" } }
 local EMPTY = { Kind = "Empty" }
@@ -61,6 +62,8 @@ local visibleSince: { [string]: number } = {}
 local lastScan = 0
 local grid: any = nil
 local footerAction: (() -> ())? = nil
+local shelfH = 0 -- height of the Highlights shelf above the grid (0 = hidden)
+local firstNewIndex: number? = nil -- index (in the shown list) of the first unseen item
 
 local function newToken(stack: any): string?
 	local token = stack and stack.New
@@ -161,7 +164,9 @@ local function sortEntries(out: { any })
 	local mode = sortMode()
 	table.sort(out, function(a, b)
 		local ka, kb
-		if mode == "Value" then
+		if mode == "Newest" then
+			ka, kb = a.Order or 0, b.Order or 0 -- later in the bag = newer
+		elseif mode == "Value" then
 			ka, kb = a.Value or 0, b.Value or 0
 		elseif mode == "Rarity" then
 			ka, kb = rarityTier(a.Rarity), rarityTier(b.Rarity)
@@ -181,9 +186,14 @@ end
 local function bagEntries(profile: any, kind: string?): { any }
 	local mult = sellMultiplier()
 	local out = {}
+	local baseValues = nil
 	for i, s in profile.Bag do
 		if kind == nil or s.Kind == kind then
 			local name, rarity, icon = Inventory.Describe(s)
+			local isGear = s.Kind == "Rod" or s.Kind == "Line"
+			if isGear and not baseValues then
+				baseValues = Stats.Compute(profile).Values
+			end
 			table.insert(out, {
 				Key = `bag|{s.UUID}`,
 				Kind = s.Kind,
@@ -200,6 +210,9 @@ local function bagEntries(profile: any, kind: string?): { any }
 				Order = i,
 				Equipped = Inventory.IsWorn(profile, s),
 				Plus = s.Enhance,
+				Tier = rarityTier(rarity),
+				Upgrade = isGear and ItemSlots.IsUpgrade(profile, s, baseValues) or false,
+				GodRoll = isGear and ItemSlots.IsGodRoll(s) or false,
 			})
 		end
 	end
@@ -252,14 +265,15 @@ end
 
 local function openUpgrade()
 	local profile = DataController.Profile
-	if not profile or Inventory.IsInfinite(profile) then
+	if not profile then
 		return
 	end
 	local ladder = Inventory.BagLadder()
-	local curCap = Inventory.Capacity(profile)
+	local curCap = Inventory.BagCapacity(profile.Equipped.Bags) -- the coin ladder, whatever the Infinite pass says
+	local owned = Inventory.IsInfinite(profile)
 	local nextId = Inventory.NextBag(profile)
 	local u = refs.UpgradeRefs
-	-- ladder: shop bags + Bottomless (Infinite Bag pass); the next step gets a sky ring
+	-- ladder: shop bags (coins) + Bottomless at the end (Infinite Bag pass, a separate Robux purchase); next step = sky ring
 	for i = 1, 6 do
 		local tier = u.Ladder:FindFirstChild("Tier" .. i)
 		if tier then
@@ -279,15 +293,17 @@ local function openUpgrade()
 				New.SetImageKey(tier.Icon, "equipment/BottomlessBag", T.Gem)
 				tier.Cap.Text = "Inf"
 				if ring then
-					ring.Color = if nextId == nil then T.SkyLip else T.Track
+					ring.Color = if owned then T.Good else T.Track
 				end
 			end
 		end
 	end
-	local pass = Registry.Products and Registry.Products.Passes and Registry.Products.Passes.InfiniteBag
-	if nextId then
+	-- Two buttons only (Cancel / Upgrade). The Infinite Bag pass is sold in the Store, not here:
+	-- owning it, or reaching the top of the coin ladder, turns UPGRADE into a disabled MAX.
+	if nextId and not owned then
 		local bag = Registry.Equipment.Bags.Items[nextId]
-		u.Slots.Text = `{curCap} slots -> {New.Highlight(tostring(bag.Capacity) .. " slots", T.GoodLip)}`
+		u.Slots.Text = `{curCap} slots  ->  {New.Highlight(tostring(bag.Capacity) .. " slots", T.GoodLip)}`
+		New.SetImageKey(u.Icon, `equipment/{nextId}`, T.Gold)
 		local locked = bag.RequiredLevel and profile.Level < bag.RequiredLevel
 		u.Note.Text = if locked
 			then `{bag.Name} needs level {bag.RequiredLevel}.`
@@ -305,14 +321,14 @@ local function openUpgrade()
 			end
 		end
 	else
-		u.Slots.Text = `{curCap} slots -> {New.Highlight("Unlimited", T.GoodLip)}`
-		u.Note.Text = "The last bag is Robux only. Bottomless Bag = Infinite Bag pass: never fill your bag again."
-		u.Confirm.Text = `GET  R$ {pass and pass.Price or 349}`
-		New.SetButtonColor(u.Confirm, T.Good)
-		refs.UpgradeAction = function()
-			Remotes.Event("PromptPass"):FireServer("InfiniteBag")
-			closeUpgrade()
-		end
+		New.SetImageKey(u.Icon, if owned then "equipment/BottomlessBag" else `equipment/{profile.Equipped.Bags}`, if owned then T.Gem else T.Gold)
+		u.Slots.Text = if owned then New.Highlight("Unlimited slots", T.GoodLip) else `{curCap} slots  (max)`
+		u.Note.Text = if owned
+			then "Max bag reached. Your bag will never fill up again."
+			else "This is the biggest bag coins can buy. Get the Infinite Bag in the Store."
+		u.Confirm.Text = "MAX"
+		New.SetButtonColor(u.Confirm, T.Disabled, T.DisabledText)
+		refs.UpgradeAction = nil
 	end
 	refs.Upgrade.Visible = true
 end
@@ -328,6 +344,76 @@ local function selectEntry(e: any, view: GuiObject)
 		ItemDetail.Show({ Kind = e.Kind, Id = e.Id, UUID = e.UUID }, view)
 	end
 	grid:Refresh()
+end
+
+-- Scrolls the grid to an entry and opens its card (Highlights shelf).
+local function focusEntry(e: any, index: number)
+	grid:ScrollToIndex(index, "center")
+	task.defer(function()
+		RunService.Heartbeat:Wait()
+		RunService.Heartbeat:Wait()
+		local found = nil
+		grid:ForEachVisible(function(view, item)
+			if item.Key == e.Key then
+				found = view
+			end
+		end)
+		if found and selected ~= e.Key then
+			selectEntry(e, found)
+		end
+	end)
+end
+
+-- Up to 6 notable items above the grid: tap one to jump to it. Hidden when nothing is notable.
+local SHELF_H = 56
+local SHELF_ENABLED = false
+local function updateShelf(entries: { any })
+	local list = {}
+	-- Highlights shelf removed by request; flip SHELF_ENABLED to bring it back.
+	if SHELF_ENABLED and (tab == "All" or tab == "Fish" or tab == "Rods" or tab == "Lines" or tab == "Treasure") then
+		for i, e in entries do
+			if e.Kind ~= "Bait" and e.Kind ~= "Aura" then
+				local p = ItemSlots.NotablePriority(e, newToken(e.Stack) ~= nil)
+				if p > 0 then
+					table.insert(list, { E = e, P = p, I = i })
+				end
+			end
+		end
+		table.sort(list, function(a, b)
+			if a.P ~= b.P then
+				return a.P > b.P
+			end
+			return a.I < b.I
+		end)
+	end
+	local shown = math.min(#list, 6)
+	shelfH = if shown > 0 then SHELF_H else 0
+	local shelf = refs.Shelf
+	shelf.Visible = shown > 0
+	for _, c in shelf.Row:GetChildren() do
+		if c:IsA("GuiButton") then
+			c:Destroy()
+		end
+	end
+	for k = 1, shown do
+		local item = list[k]
+		local rarity = item.E.Rarity and Registry.Rarities[item.E.Rarity]
+		local b = New("TextButton", {
+			Name = "Pick" .. k,
+			Size = UDim2.fromOffset(44, 44),
+			BackgroundColor3 = Color3.new(1, 1, 1),
+			Text = "",
+			AutoButtonColor = false,
+			LayoutOrder = k,
+			Parent = shelf.Row,
+			[New.Children] = { New.Corner(12), New.Stroke(if rarity then rarity.Color else T.Track, 2) },
+		})
+		New.Image({ Key = item.E.Icon, Fallback = T.PanelLight, AnchorPoint = Vector2.new(0.5, 0.5), Position = UDim2.fromScale(0.5, 0.5), Size = UDim2.fromOffset(36, 36), Parent = b })
+		New.ApplyImages(b)
+		b.Activated:Connect(function()
+			focusEntry(item.E, item.I)
+		end)
+	end
 end
 
 local function setTab(name: string)
@@ -384,6 +470,7 @@ local function ensure()
 	local root = Baked.Find(gui, "Root")
 	local w = Baked.Find(root, "Window")
 	local up = Baked.Find(gui, "BagUpgrade")
+	up.BackgroundTransparency = 1 -- no black overlay (older bakes still have it)
 	refs = {
 		Root = root,
 		Window = w,
@@ -402,6 +489,7 @@ local function ensure()
 		FooterSecondary = Baked.Find(w, "Footer"):FindFirstChild("Secondary"), -- nil on an older bake
 		Upgrade = up,
 		UpgradeRefs = {
+			Icon = Baked.Find(up, "Panel/Icon"),
 			Slots = Baked.Find(up, "Panel/Slots"),
 			Ladder = Baked.Find(up, "Panel/Ladder"),
 			Note = Baked.Find(up, "Panel/Note"),
@@ -439,6 +527,45 @@ local function ensure()
 		end
 	end)
 	refs.UpgradeButton.Activated:Connect(openUpgrade)
+	-- "NEW n" pill over the grid: one tap scrolls to the first item you have not looked at yet
+	refs.GridY0 = refs.Grid.Position.Y.Offset
+	refs.Shelf = New("Frame", {
+		Name = "Shelf",
+		Position = UDim2.fromOffset(refs.Grid.Position.X.Offset, refs.GridY0),
+		Size = UDim2.fromOffset(refs.Grid.Size.X.Offset, SHELF_H - 6),
+		BackgroundTransparency = 1,
+		Visible = false,
+		ZIndex = 5,
+		Parent = refs.Window,
+	})
+	local shelfLabel = New.Text({ Name = "Label", Size = UDim2.fromOffset(78, 44), Text = "Highlights", TextSize = 12, TextColor3 = T.SubText, TextXAlignment = Enum.TextXAlignment.Left, ZIndex = 5, Parent = refs.Shelf })
+	shelfLabel.TextScaled = false
+	New("Frame", {
+		Name = "Row",
+		Position = UDim2.fromOffset(84, 0),
+		Size = UDim2.new(1, -84, 0, 44),
+		BackgroundTransparency = 1,
+		ZIndex = 5,
+		Parent = refs.Shelf,
+		[New.Children] = { New("UIListLayout", { FillDirection = Enum.FillDirection.Horizontal, Padding = UDim.new(0, 8), VerticalAlignment = Enum.VerticalAlignment.Center, SortOrder = Enum.SortOrder.LayoutOrder }) },
+	})
+	refs.NewJump = New.Button({
+		Name = "NewJump",
+		AnchorPoint = Vector2.new(0.5, 0),
+		Position = UDim2.fromOffset(refs.Grid.Position.X.Offset + refs.Grid.Size.X.Offset / 2, refs.Grid.Position.Y.Offset + 4),
+		Size = UDim2.fromOffset(104, 30),
+		Text = "NEW",
+		TextSize = 14,
+		BackgroundColor3 = T.Sky,
+		Visible = false,
+		ZIndex = 30,
+		Parent = refs.Window,
+	})
+	refs.NewJump.Activated:Connect(function()
+		if firstNewIndex and grid then
+			grid:ScrollToIndex(firstNewIndex, "center")
+		end
+	end)
 	Baked.Find(up, "Panel/Buttons/Cancel").Activated:Connect(closeUpgrade)
 	refs.UpgradeRefs.Confirm.Activated:Connect(function()
 		local h = refs.UpgradeAction
@@ -515,7 +642,8 @@ local function updateFooter(profile: any, entries: { any })
 	local show = tab == "Fish" or tab == "Auras"
 	refs.Footer.Visible = show
 	local h = if show then InventoryScreen.GridH.WithFooter else InventoryScreen.GridH.Full
-	refs.Grid.Size = UDim2.fromOffset(refs.Grid.Size.X.Offset, h)
+	refs.Grid.Size = UDim2.fromOffset(refs.Grid.Size.X.Offset, h - shelfH)
+	refs.Grid.Position = UDim2.new(refs.Grid.Position.X.Scale, refs.Grid.Position.X.Offset, 0, refs.GridY0 + shelfH)
 	footerAction = nil
 	if refs.FooterSecondary then
 		refs.FooterSecondary.Visible = tab == "Auras"
@@ -552,10 +680,21 @@ function InventoryController.Refresh()
 	refs.Max.Text = if infinite then "/ Inf" else `/ {cap}`
 	refs.Used.TextColor3 = if full then T.Bad else T.Text
 	refs.Max.TextColor3 = if full then T.Bad else refs.MaxColor
-	refs.UpgradeButton.Visible = not infinite
+	refs.UpgradeButton.Visible = true -- also at the top: opens the "MAX" view
 
 	updateTabs(profile)
 	local entries = entriesFor(profile, tab)
+	-- unseen items: the NEW pill jumps to the first one
+	local newCount = 0
+	firstNewIndex = nil
+	for i, e in entries do
+		if newToken(e.Stack) then
+			newCount += 1
+			firstNewIndex = firstNewIndex or i
+		end
+	end
+	refs.NewJump.Visible = newCount > 0
+	refs.NewJump.Text = `NEW {newCount}`
 	refs.Category.Text = tab
 	local isBag = tab == "All" or tab == "Fish" or tab == "Treasure"
 	refs.CountLabel.Text = if tab == "All" or isBag
@@ -578,7 +717,9 @@ function InventoryController.Refresh()
 		end
 	end
 
+	updateShelf(entries)
 	updateFooter(profile, entries)
+	refs.NewJump.Position = UDim2.fromOffset(refs.Grid.Position.X.Offset + refs.Grid.Size.X.Offset / 2, refs.GridY0 + shelfH + 4)
 	local viewportSlots = grid:CountFitting(refs.Grid.Size.Y.Offset)
 	local emptySlots = if infinite then viewportSlots - #entries else cap - used
 	for _ = 1, emptySlots do

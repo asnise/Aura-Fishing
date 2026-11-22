@@ -53,6 +53,10 @@ function Screen.Build(): ScreenGui
 		Parent = gui,
 	})
 	New.Shadow(window, "slice_shadow_modal")
+	local edge = window:FindFirstChildOfClass("UIStroke")
+	if edge then
+		edge:Destroy() -- no outline on the Depth popup
+	end
 	New.FitToScreen(window)
 
 	-- Header: bobber icon + title + close
@@ -96,7 +100,7 @@ function Screen.Build(): ScreenGui
 		BackgroundColor3 = Color3.new(1, 1, 1),
 		ZIndex = 5,
 		Parent = holder,
-		[New.Children] = { New.Pill(), New.Stroke(T.Track, 2) },
+		[New.Children] = { New.Pill() },
 	})
 
 	-- Scale labels

@@ -4,10 +4,11 @@
 --   profile.Bag = { Item, ... }            one entry = one slot (Items/ItemTypes). Plain records with a UUID.
 --   Fish, Rods and Lines never stack: every one keeps its own weight / mutation / tags / value / mods.
 --   Treasure chests stack up to GameConfig.Inventory.TreasureStackMax (same Id + same Bound).
---   Baits stay in profile.Consumables.Baits, Bags in profile.Owned.Bags (neither uses a slot).
+--   Baits stay in profile.Consumables.Baits (one slot per bait type you have). Bags (profile.Owned.Bags) and
+--   Auras do not use slots.
 --
---   profile.Equipped.Rods / .Lines = UUID of a bag entry. The WORN rod and line stay in profile.Bag but
---   do not use a slot (Used). Equipped.Bags / .Baits = Config/Equipment item id, as before.
+--   Everything counts: fish, rods, lines (the worn ones too), chests and bait types. Only Auras are outside the bag.
+--   profile.Equipped.Rods / .Lines = UUID of a bag entry. Equipped.Bags / .Baits = Config/Equipment item id.
 --
 -- Capacity = equipped bag's Capacity (slots), or the Infinite Bag pass. The bag is a permanent upgrade ladder.
 
@@ -17,6 +18,7 @@ local Registry = require(script.Parent.Parent.Registry)
 local HotFish = require(script.Parent.Parent.HotFish)
 local Enhance = require(script.Parent.Parent.Enhance)
 local ItemTypes = require(script.Parent.ItemTypes)
+local ModifierRoll = require(script.Parent.ModifierRoll)
 
 export type Item = ItemTypes.Item
 
@@ -84,8 +86,9 @@ function Inventory.NewTreasure(treasureId: string): Item
 	return { UUID = Inventory.NewUUID(), Id = treasureId, Kind = "Treasure", Count = 1 }
 end
 
--- A fresh Rod or Line. Gifts (Exclusive) are Bound: no trade, no sell. Empty mod lists are ready for rolling/fusion.
-function Inventory.NewGear(categoryId: string, itemId: string): Item
+-- A fresh Rod or Line. Gifts (Exclusive) are Bound: no trade, no sell. dropProfile (Config/ModifierDefs.Profiles)
+-- rolls the Prefix / Suffix mods of an Uncommon or better rod or line; none = empty lists (starter rods, gifts).
+function Inventory.NewGear(categoryId: string, itemId: string, dropProfile: string?): Item
 	local def = Registry.Equipment[categoryId].Items[itemId]
 	local item: Item = { UUID = Inventory.NewUUID(), Id = itemId, Kind = GEAR_KIND[categoryId], Enhance = 0 }
 	if def.Exclusive then
@@ -93,9 +96,14 @@ function Inventory.NewGear(categoryId: string, itemId: string): Item
 		item.Tradable = false
 		item.Sellable = false
 	end
-	if categoryId == "Rods" then
+	if categoryId == "Rods" or categoryId == "Lines" then
 		item.Prefixes = {}
 		item.Suffixes = {}
+		if dropProfile and not def.Exclusive and Registry.Rarities[Registry.GearRarity(categoryId, itemId)].Tier >= 2 then
+			local rolled = ModifierRoll.RollModifiers(dropProfile)
+			item.Prefixes = rolled.Prefixes
+			item.Suffixes = rolled.Suffixes
+		end
 	end
 	return item
 end
@@ -165,7 +173,7 @@ function Inventory.Find(profile: any, uuid: any): (Item?, number?)
 	return nil, nil
 end
 
--- True for the rod / line that is being worn (they do not use a slot).
+-- True for the rod / line that is being worn (it cannot be sold).
 function Inventory.IsWorn(profile: any, item: Item): boolean
 	local cat = GEAR_CATEGORY[item.Kind]
 	return cat ~= nil and profile.Equipped[cat] == item.UUID
@@ -200,14 +208,19 @@ function Inventory.CountGear(profile: any, categoryId: string, itemId: string): 
 	return n
 end
 
-function Inventory.Used(profile: any): number
+-- Bait types you hold (count > 0): each one is a slot, however many you carry.
+function Inventory.BaitTypes(profile: any): number
 	local n = 0
-	for _, item in profile.Bag do
-		if not Inventory.IsWorn(profile, item) then
+	for _, count in (profile.Consumables and profile.Consumables.Baits) or {} do
+		if count > 0 then
 			n += 1
 		end
 	end
 	return n
+end
+
+function Inventory.Used(profile: any): number
+	return #profile.Bag + Inventory.BaitTypes(profile)
 end
 
 function Inventory.Free(profile: any): number
@@ -322,7 +335,36 @@ function Inventory.SellValue(item: Item, sellMultiplier: number, noHot: boolean?
 	if not def or not meta or not meta.IsSellable or item.Sellable == false or def.Currency ~= "Coins" then
 		return 0
 	end
-	return math.floor((def.Price + enhanceSpent(item)) * CFG.GearSellFraction)
+	-- mods add value by rarity (CFG.ModSellBonus, share of the base price)
+	local modBonus = 0
+	local function addBonus(list: { ItemTypes.ModEntry }?)
+		if list then
+			for _, mod in list do
+				modBonus += CFG.ModSellBonus[mod.Rarity or "Common"] or 0
+			end
+		end
+	end
+	addBonus(item.Prefixes)
+	addBonus(item.Suffixes)
+	return math.floor((def.Price * (1 + modBonus) + enhanceSpent(item)) * CFG.GearSellFraction)
+end
+
+-- Gear you have put work into (Enhance, mods) is never sold or destroyed without asking first.
+-- Returns what would be lost ("+10", "2 mods", "+3 and 1 mod"), or nil for plain items.
+function Inventory.Investment(item: Item): string?
+	local mods = #(item.Prefixes or {}) + #(item.Suffixes or {})
+	local plus = item.Enhance or 0
+	if plus <= 0 and mods <= 0 then
+		return nil
+	end
+	local parts = {}
+	if plus > 0 then
+		table.insert(parts, `+{plus}`)
+	end
+	if mods > 0 then
+		table.insert(parts, `{mods} mod{if mods == 1 then "" else "s"}`)
+	end
+	return table.concat(parts, " and ")
 end
 
 -- nil = can be sold, otherwise the reason (worn gear, bound, chests...).
@@ -330,7 +372,9 @@ function Inventory.SellBlock(profile: any, item: Item): string?
 	if Inventory.IsWorn(profile, item) then
 		return "Take it off first"
 	end
-	if item.Kind ~= "Fish" and Inventory.SellValue(item, 1) <= 0 then
+	-- free starter Rods / Lines can be thrown away for 0 coins; everything else needs a sell value
+	local gearKind = item.Kind == "Rod" or item.Kind == "Line"
+	if item.Kind ~= "Fish" and Inventory.SellValue(item, 1) <= 0 and not (gearKind and item.Sellable ~= false) then
 		return "This item can't be sold"
 	end
 	return nil

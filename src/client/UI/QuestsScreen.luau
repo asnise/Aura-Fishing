@@ -89,7 +89,7 @@ function QuestsScreen.Create(callbacks: QuestsScreenCallbacks)
 	local cardsHolder: Frame? = nil
 
 	-- shell = Window core (ScreenGui in PlayerGui, panel, scale, open/close/register); header + X are its own
-	local shell = Window.Shell({ Name = "Quests", WindowName = "WindowDailyQuests", Close = false, Padding = 0, Radius = 24, DisplayOrder = 15, Clip = true })
+	local shell = Window.Shell({ Name = "Quests", WindowName = "WindowDailyQuests", Close = false, Padding = 0, Radius = 24, DisplayOrder = 15, Clip = true, Size = Vector2.new(760, 500) })
 	gui = shell.Gui
 	local card = shell.Frame
 	card.Active = true

@@ -75,7 +75,7 @@ type Command = { Usage: string, Run: (Player, any, { string }) -> string }
 local COMMANDS: { [string]: Command } = {}
 
 COMMANDS.give = {
-	Usage = "give gems|coins|pearls <n> | give bait <id> <n> | give chest <id> <n> | give fish <id> <n> [mutation] | give aura <id> [n]",
+	Usage = "give gems|coins|pearls <n> | give rods <id> [profile] | give bait <id> <n> | give chest <id> <n> | give fish <id> <n> [mutation] | give aura <id> [n]",
 	Run = function(player, data, a)
 		local kind = string.lower(a[1] or "")
 		if kind == "gems" or kind == "coins" or kind == "pearls" then
@@ -103,6 +103,27 @@ COMMANDS.give = {
 				end
 			end
 			return `+{given} {id}` .. (if given < n then " (bag full)" else "")
+		elseif kind == "rods" or kind == "rod" or kind == "lines" or kind == "line" then
+			-- give Rods|Lines <id> [Shop|Fishing|DeepSea|BossRaid|QuestPure]: a rod / line with rolled mods (not equipped)
+			local gearCat = if string.sub(kind, 1, 4) == "line" then "Lines" else "Rods"
+			local id = findId(Registry.Equipment[gearCat].Items, a[2])
+			local profile = findId(Registry.ModifierDefs.Profiles, a[3]) or "Shop"
+			if not id then
+				return "unknown item"
+			end
+			local rod = Inventory.NewGear(gearCat, id, profile)
+			Inventory.Add(data, rod, true)
+			local parts = {}
+			local function describe(list: { any }?)
+				if list then
+					for _, m in list do
+						table.insert(parts, `{m.Name} {string.format("%+.3f", m.Value)} {m.Stat}`)
+					end
+				end
+			end
+			describe(rod.Prefixes)
+			describe(rod.Suffixes)
+			return `+1 {id} ({profile}): ` .. (if #parts > 0 then table.concat(parts, ", ") else "no mods")
 		elseif kind == "fish" then
 			local id = findId(Registry.Fish, a[2])
 			if not id then
@@ -248,10 +269,13 @@ COMMANDS.equip = {
 -- Robux testing without buying (C13)
 COMMANDS.grant = {
 	Usage = "grant pass <VIP|AutoFishPro|InfiniteBag>",
-	Run = function(player, _, args)
+	Run = function(player, data, args)
 		local key = findId(Registry.Products.Passes, args[2])
 		if string.lower(args[1] or "") ~= "pass" or not key then
 			return "usage: grant pass <id>"
+		end
+		if data.DevMutedPasses then
+			data.DevMutedPasses[key] = nil
 		end
 		MonetizationService.SetPass(player, key, "Dev")
 		return `{key} granted (Dev)`
@@ -260,13 +284,16 @@ COMMANDS.grant = {
 
 COMMANDS.revoke = {
 	Usage = "revoke pass <id>",
-	Run = function(player, _, args)
+	Run = function(player, data, args)
 		local key = findId(Registry.Products.Passes, args[2])
 		if string.lower(args[1] or "") ~= "pass" or not key then
 			return "usage: revoke pass <id>"
 		end
+		-- muted: a pass you really bought is not switched back on at the next join ("grant pass" lifts it)
+		data.DevMutedPasses = data.DevMutedPasses or {}
+		data.DevMutedPasses[key] = true
 		MonetizationService.SetPass(player, key, nil)
-		return `{key} revoked`
+		return `{key} revoked (stays off after rejoin; grant pass to restore)`
 	end,
 }
 

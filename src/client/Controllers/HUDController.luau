@@ -19,12 +19,14 @@ local Signal = require(Shared.Util.Signal)
 local Inventory = require(Shared.Inventory)
 local Boosts = require(Shared.Boosts)
 local FishingSpot = require(Shared.FishingSpot)
+local DailyLogin = require(Shared.DailyLogin)
 
 local New = require(script.Parent.Parent.UI.New)
 local Baked = require(script.Parent.Parent.UI.Baked)
 local Components = require(script.Parent.Parent.UI.Components)
 local HUDScreen = require(script.Parent.Parent.UI.Screens.HUD)
 local Modal = require(script.Parent.Parent.UI.Modal)
+local MakeTile = (require(script.Parent.Parent.UI.Screens:WaitForChild("Components")) :: any).Make.MenuTile
 local CastPopup = require(script.Parent.Parent.UI.CastPopup) -- Depth popup
 local DataController = require(script.Parent.DataController)
 
@@ -295,6 +297,34 @@ function HUD.Init()
 	end
 
 	local top = find("Stats")
+	-- Daily Login lives on the main screen: a pill under the currencies with a red dot while a gift waits
+	if not top:FindFirstChild("BtnDaily") then
+		local daily = New("TextButton", {
+			Name = "BtnDaily",
+			Size = UDim2.fromOffset(0, 34),
+			AutomaticSize = Enum.AutomaticSize.X,
+			BackgroundColor3 = T.Panel,
+			Text = "",
+			AutoButtonColor = false,
+			LayoutOrder = 3,
+			Parent = top,
+			[New.Children] = {
+				New.Pill(),
+				New.Stroke(T.Track, 2),
+				New("UIPadding", { PaddingLeft = UDim.new(0, 8), PaddingRight = UDim.new(0, 14) }),
+				New("UIListLayout", { FillDirection = Enum.FillDirection.Horizontal, Padding = UDim.new(0, 6), VerticalAlignment = Enum.VerticalAlignment.Center, SortOrder = Enum.SortOrder.LayoutOrder }),
+			},
+		}) :: TextButton
+		New.Image({ Name = "Icon", Key = "ui/icons/daily_login", Fallback = T.TintButter, Size = UDim2.fromOffset(24, 24), LayoutOrder = 1, Parent = daily })
+		local label = New.Text({ Name = "Label", Size = UDim2.fromOffset(0, 20), AutomaticSize = Enum.AutomaticSize.X, Text = "Daily", TextSize = 14, TextColor3 = T.Text, LayoutOrder = 2, Parent = daily })
+		label.TextScaled = false
+		New("Frame", { Name = "Dot", AnchorPoint = Vector2.new(0.5, 0.5), Position = UDim2.new(1, -2, 0, 4), Size = UDim2.fromOffset(14, 14), BackgroundColor3 = T.Bad, Visible = false, ZIndex = 10, Parent = daily, [New.Children] = { New.Pill(), New("UIStroke", { Color = Color3.new(1, 1, 1), Thickness = 2 }) } })
+		New.ApplyImages(daily)
+		daily.Activated:Connect(function()
+			HUD.DailyLoginRequested:Fire()
+		end)
+		refs.DotDaily = daily.Dot
+	end
 	local refreshBoosts = bindBoosts(top, gui)
 	refs.Level = find("Stats/LevelRow/Level")
 	refs.XPText = find("Stats/LevelRow/XP")
@@ -546,8 +576,39 @@ function HUD.Init()
 		end)
 	end)
 
-	-- Side menu tiles (Shop / Auras / Fishdex open windows, Menu = Main Menu hub, also key M)
+	-- Side menu = the 5 shortcuts that matter while fishing, each with a red dot when something waits:
+	--   Bag (new item / full), Shop, Auras (can roll), Quests (reward to claim), Menu = hub (daily login to claim).
+	-- Fishdex and the rest live in the hub. Missing tiles / dots are created here so an older bake still works.
 	local menu = find("SideMenu")
+	local SIDE = { { "Bag", "ui/icons/bag" }, { "Shop", "ui/icons/shop" }, { "Auras", "ui/icons/auras" }, { "Quests", "ui/icons/quests" }, { "Menu", "equipment/StarterPouch", T.TintSky } }
+	local old = menu:FindFirstChild("BtnFishdex")
+	if old then
+		old:Destroy()
+	end
+	for i, m in SIDE do
+		local b = menu:FindFirstChild("Btn" .. m[1])
+		if not b then
+			b = MakeTile(m[1], m[2], m[3])
+			b.Parent = menu
+			New.ApplyImages(b)
+		end
+		b.LayoutOrder = i
+		if not b.Tile:FindFirstChild("Dot") then
+			New("Frame", {
+				Name = "Dot",
+				AnchorPoint = Vector2.new(0.5, 0.5),
+				Position = UDim2.new(1, -4, 0, 4),
+				Size = UDim2.fromOffset(16, 16),
+				BackgroundColor3 = T.Bad,
+				Visible = false,
+				ZIndex = 10,
+				Parent = b.Tile,
+				[New.Children] = { New.Pill(), New("UIStroke", { Color = Color3.new(1, 1, 1), Thickness = 2 }) },
+			})
+		end
+		refs["Dot" .. m[1]] = b.Tile.Dot
+	end
+	refs.QuestsTile = menu:FindFirstChild("BtnQuests")
 	for _, b in menu:GetChildren() do
 		if b:IsA("GuiButton") then
 			Components.HookTile(b)
@@ -555,8 +616,10 @@ function HUD.Init()
 			b.Activated:Connect(function()
 				if name == "Menu" then
 					HUD.HubRequested:Fire()
-				elseif name == "Mastery" then
-					HUD.MasteryRequested:Fire()
+				elseif name == "Bag" then
+					HUD.InventoryRequested:Fire()
+				elseif name == "Quests" then
+					HUD.QuestsRequested:Fire()
 				elseif name == "Auras" then
 					HUD.BannerRequested:Fire("Altar")
 				else
@@ -613,7 +676,7 @@ function HUD.Init()
 		-- side menu: vertical column under the stats (PC) / horizontal row top-right (phone)
 		local count = 0
 		for _, b in menu:GetChildren() do
-			if b:IsA("GuiButton") then
+			if b:IsA("GuiButton") and b.Visible then
 				count += 1
 			end
 		end
@@ -655,7 +718,36 @@ function HUD.Init()
 		refs.Bag.Text = if Inventory.IsInfinite(profile) then `{used} / Inf` else `{used} / {cap}` -- Infinite Bag: "Inf", same as the Inventory pill
 		refs.Bag.TextColor3 = if Inventory.IsFull(profile) then T.Bad else T.Text
 		HUD.RefreshDepthButton()
+		HUD.RefreshDots(profile)
 	end)
+
+	-- Studio only: lets a test script open any menu (ReplicatedStorage.UITest:Invoke("Inventory")) to measure it
+	if game:GetService("RunService"):IsStudio() then
+		local bf = Instance.new("BindableFunction")
+		bf.Name = "UITest"
+		bf.OnInvoke = function(name: string)
+			local fire = {
+				Inventory = function() HUD.InventoryRequested:Fire() end,
+				Character = function() HUD.CharacterRequested:Fire() end,
+				Shop = function() HUD.MenuRequested:Fire("Shop") end,
+				Fishdex = function() HUD.MenuRequested:Fire("Fishdex") end,
+				Auras = function() HUD.MenuRequested:Fire("Auras") end,
+				Store = function() HUD.StoreRequested:Fire() end,
+				Aquarium = function() HUD.AquariumRequested:Fire() end,
+				Mastery = function() HUD.MasteryRequested:Fire() end,
+				Quests = function() HUD.QuestsRequested:Fire() end,
+				Events = function() HUD.EventsRequested:Fire() end,
+				DailyLogin = function() HUD.DailyLoginRequested:Fire() end,
+				Skills = function() HUD.SkillsRequested:Fire() end,
+				Hub = function() HUD.HubRequested:Fire() end,
+				Altar = function() HUD.BannerRequested:Fire("Altar") end,
+			}
+			if fire[name] then
+				fire[name]()
+			end
+		end
+		bf.Parent = game:GetService("ReplicatedStorage")
+	end
 
 	Remotes.Event("Notify").OnClientEvent:Connect(function(text, color)
 		HUD.Notify(text, color)
@@ -663,6 +755,37 @@ function HUD.Init()
 	Remotes.Event("CatchResult").OnClientEvent:Connect(function(result)
 		HUD.ShowCatch(result)
 	end)
+end
+
+-- Red dots on the side menu shortcuts (what is waiting for the player).
+function HUD.RefreshDots(profile: any)
+	local function set(name: string, on: boolean)
+		local d = refs["Dot" .. name]
+		if d then
+			d.Visible = on
+		end
+	end
+	local newItem = false
+	for _, s in profile.Bag do
+		if s.New then
+			newItem = true
+			break
+		end
+	end
+	set("Bag", newItem or Inventory.IsFull(profile))
+	set("Auras", profile[Registry.GameConfig.AuraRollCurrency] >= Registry.GameConfig.AuraRollCost)
+	local questsOn = Registry.Features.Quests.Enabled
+	if refs.QuestsTile then
+		refs.QuestsTile.Visible = questsOn
+	end
+	set("Quests", questsOn and profile.Quests ~= nil and profile.Quests.Unclaimed == true)
+	local canClaimDaily = DailyLogin.GetState(profile).CanClaim
+	set("Daily", canClaimDaily)
+	-- the Daily pill only shows while today's check-in is unclaimed
+	local dailyBtn = refs.DotDaily and refs.DotDaily.Parent
+	if dailyBtn then
+		dailyBtn.Visible = canClaimDaily
+	end
 end
 
 return HUD

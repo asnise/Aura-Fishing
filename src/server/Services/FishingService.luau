@@ -23,6 +23,7 @@ local Roll = require(Shared.Roll)
 local Inventory = require(Shared.Inventory)
 local FishingSpot = require(Shared.FishingSpot)
 local HotFish = require(Shared.HotFish)
+local RodDrop = require(Shared.Items.RodDrop)
 local Signal = require(Shared.Util.Signal)
 
 local DataService = require(script.Parent.DataService)
@@ -108,6 +109,20 @@ local function rollTreasure(data: any, depth: number, luck: number, chanceMult: 
 		end
 	end
 	return nil
+end
+
+-- A rod with rolled mods can come up with a catch (GameConfig.RodDrop). Needs a free slot. Returns the rod or nil.
+local function rollRodDrop(data: any, depth: number, luck: number, isAuto: boolean, hotspot: boolean): any
+	local c = GameConfig.RodDrop
+	local chance = c.Chance * (1 + luck * c.LuckScale) * (if isAuto then GameConfig.AutoTreasureMultiplier else 1)
+	if rng:NextNumber() >= chance or Inventory.IsFull(data) then
+		return nil
+	end
+	local rod = RodDrop.Create(RodDrop.ProfileFor(depth, hotspot), data.Level, rng)
+	if rod then
+		Inventory.Add(data, rod)
+	end
+	return rod
 end
 
 local function rootOf(player: Player): BasePart?
@@ -272,6 +287,11 @@ local function award(player: Player, fishId: string, mult: number, mode: string,
 	if not isBonus then
 		consumeBait(data)
 	end
+	local rodFound = if stack and not isBonus then rollRodDrop(data, depth or 0, stats.Values.Luck, isAuto, hotspot == true) else nil
+	if rodFound then
+		local mods = #(rodFound.Prefixes or {}) + #(rodFound.Suffixes or {})
+		Remotes.Event("Notify"):FireClient(player, `You found a {Registry.Equipment.Rods.Items[rodFound.Id].Name} with {mods} mod{if mods == 1 then "" else "s"}!`, Color3.fromRGB(176, 124, 240))
+	end
 	local treasure = if stack and not isBonus then rollTreasure(data, depth or 0, stats.Values.Luck, if isAuto then GameConfig.AutoTreasureMultiplier else 1) else nil
 
 	local dex = data.Fishdex[fishId]
@@ -344,6 +364,7 @@ local function award(player: Player, fishId: string, mult: number, mode: string,
 		BagCapacity = bagCapacity(data),
 		Kept = stack ~= nil, -- false: bag full, the fish was released (still counts for Fishdex/XP)
 		Treasure = treasure, -- bonus chest id or nil
+		RodDrop = if rodFound then rodFound.Id else nil, -- a rod came up with this catch (Notify also tells the player)
 		Bonus = bonus, -- Multi-Cast bonus fish: { {Entry, Value, New, Gems, Kept} } (their Gems are in Gems too)
 	})
 	if streak > 0 then

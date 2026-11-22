@@ -100,9 +100,18 @@ function Screen.StyleDepthButton(depth: any)
 	round(depth)
 	depth.BackgroundColor3 = BLACK
 	depth.BackgroundTransparency = 0.75
+	-- same edge as the AUTO / SELL plates (Border mode, 5px, 90% clear): one stroke, never two
 	local edge = depth:FindFirstChildOfClass("UIStroke")
-	if edge then
-		edge.Color, edge.Thickness, edge.Transparency = BLACK, 5, 0.9
+	if not edge then
+		edge = New("UIStroke", { Parent = depth }) :: UIStroke
+	end
+	edge.Name = "Plate"
+	edge.Color, edge.Thickness, edge.Transparency = BLACK, 5, 0.9
+	edge.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	for _, other in depth:GetChildren() do
+		if other:IsA("UIStroke") and other ~= edge then
+			other:Destroy()
+		end
 	end
 	circleIcon(depth, "ui/status/bobber", T.TintSky)
 	depth.Value.Visible = false -- the popup shows the number; HUDController still keeps the text current
@@ -244,7 +253,7 @@ function Screen.Build(): ScreenGui
 		[New.Children] = { New("UIListLayout", { Name = "List", Padding = UDim.new(0, 10), SortOrder = Enum.SortOrder.LayoutOrder }) },
 	})
 	scale(menu)
-	for i, m in { { "Shop", "ui/icons/shop" }, { "Auras", "ui/icons/auras" }, { "Fishdex", "ui/icons/fishdex" }, { "Menu", "equipment/StarterPouch", T.TintSky } } do
+	for i, m in { { "Bag", "ui/icons/bag" }, { "Shop", "ui/icons/shop" }, { "Auras", "ui/icons/auras" }, { "Quests", "ui/icons/quests" }, { "Menu", "equipment/StarterPouch", T.TintSky } } do
 		local tile = Make.MenuTile(m[1], m[2], m[3])
 		tile.LayoutOrder = i
 		tile.Parent = menu

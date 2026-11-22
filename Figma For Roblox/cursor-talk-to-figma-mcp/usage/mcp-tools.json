@@ -1,15 +1,17 @@
 {
   "schema": 1,
   "kind": "mcp-tools",
-  "updatedAt": "2026-11-20T18:11:52.503Z",
+  "updatedAt": "2026-11-22T19:04:43.365Z",
   "totals": {
-    "calls": 4,
-    "ok": 4,
-    "errors": 0
+    "calls": 127,
+    "ok": 123,
+    "errors": 4
   },
   "byAgent": {
     "mcp:codex-motion-verification": 1,
-    "mcp:codex-live-figma": 3
+    "mcp:codex-live-figma": 3,
+    "mcp:claude-code": 70,
+    "mcp:codex-mcp-client": 53
   },
   "items": {
     "motion_keyframes": {
@@ -27,16 +29,193 @@
       }
     },
     "join_channel": {
+      "calls": 10,
+      "ok": 10,
+      "errors": 0,
+      "totalMs": 53,
+      "avgMs": 5,
+      "maxMs": 14,
+      "firstUsed": "2026-11-20T18:11:48.690Z",
+      "lastUsed": "2026-11-22T19:01:49.339Z",
+      "byAgent": {
+        "mcp:codex-live-figma": 1,
+        "mcp:claude-code": 6,
+        "mcp:codex-mcp-client": 3
+      }
+    },
+    "get_node_info": {
+      "calls": 7,
+      "ok": 7,
+      "errors": 0,
+      "totalMs": 304,
+      "avgMs": 43,
+      "maxMs": 104,
+      "firstUsed": "2026-11-22T14:18:17.570Z",
+      "lastUsed": "2026-11-22T14:52:27.243Z",
+      "byAgent": {
+        "mcp:claude-code": 7
+      }
+    },
+    "set_multiple_text_contents": {
       "calls": 1,
       "ok": 1,
       "errors": 0,
-      "totalMs": 2,
-      "avgMs": 2,
-      "maxMs": 2,
-      "firstUsed": "2026-11-20T18:11:48.690Z",
-      "lastUsed": "2026-11-20T18:11:48.690Z",
+      "totalMs": 61,
+      "avgMs": 61,
+      "maxMs": 61,
+      "firstUsed": "2026-11-22T14:21:24.256Z",
+      "lastUsed": "2026-11-22T14:21:24.256Z",
       "byAgent": {
-        "mcp:codex-live-figma": 1
+        "mcp:claude-code": 1
+      }
+    },
+    "export_node_as_image": {
+      "calls": 19,
+      "ok": 19,
+      "errors": 0,
+      "totalMs": 1726,
+      "avgMs": 91,
+      "maxMs": 184,
+      "firstUsed": "2026-11-22T14:21:24.353Z",
+      "lastUsed": "2026-11-22T15:29:52.224Z",
+      "byAgent": {
+        "mcp:claude-code": 19
+      }
+    },
+    "batch_commands": {
+      "calls": 32,
+      "ok": 30,
+      "errors": 2,
+      "totalMs": 56183,
+      "avgMs": 1873,
+      "maxMs": 37685,
+      "firstUsed": "2026-11-22T14:37:19.939Z",
+      "lastUsed": "2026-11-22T19:04:43.365Z",
+      "byAgent": {
+        "mcp:claude-code": 20,
+        "mcp:codex-mcp-client": 12
+      },
+      "lastError": "[{\"type\":\"text\",\"text\":\"Error running batch: Request to Figma timed out\"}]"
+    },
+    "find_nodes": {
+      "calls": 21,
+      "ok": 20,
+      "errors": 1,
+      "totalMs": 5138,
+      "avgMs": 257,
+      "maxMs": 916,
+      "firstUsed": "2026-11-22T14:48:20.405Z",
+      "lastUsed": "2026-11-22T19:02:26.171Z",
+      "byAgent": {
+        "mcp:claude-code": 11,
+        "mcp:codex-mcp-client": 10
+      },
+      "lastError": "[{\"type\":\"text\",\"text\":\"Error finding nodes: find_nodes needs at least one of: name, type, text\"}]"
+    },
+    "clone_node": {
+      "calls": 1,
+      "ok": 1,
+      "errors": 0,
+      "totalMs": 68,
+      "avgMs": 68,
+      "maxMs": 68,
+      "firstUsed": "2026-11-22T14:48:36.803Z",
+      "lastUsed": "2026-11-22T14:48:36.803Z",
+      "byAgent": {
+        "mcp:claude-code": 1
+      }
+    },
+    "get_nodes_info": {
+      "calls": 24,
+      "ok": 23,
+      "errors": 1,
+      "totalMs": 2369,
+      "avgMs": 103,
+      "maxMs": 577,
+      "firstUsed": "2026-11-22T14:51:15.251Z",
+      "lastUsed": "2026-11-22T19:04:15.420Z",
+      "byAgent": {
+        "mcp:claude-code": 1,
+        "mcp:codex-mcp-client": 23
+      },
+      "lastError": "[{\"type\":\"text\",\"text\":\"Error getting nodes info: Error executing command\"}]"
+    },
+    "list_plugin_commands": {
+      "calls": 1,
+      "ok": 1,
+      "errors": 0,
+      "totalMs": 5,
+      "avgMs": 5,
+      "maxMs": 5,
+      "firstUsed": "2026-11-22T14:51:19.016Z",
+      "lastUsed": "2026-11-22T14:51:19.016Z",
+      "byAgent": {
+        "mcp:claude-code": 1
+      }
+    },
+    "delete_node": {
+      "calls": 2,
+      "ok": 2,
+      "errors": 0,
+      "totalMs": 29,
+      "avgMs": 15,
+      "maxMs": 18,
+      "firstUsed": "2026-11-22T14:51:53.474Z",
+      "lastUsed": "2026-11-22T14:57:07.358Z",
+      "byAgent": {
+        "mcp:claude-code": 2
+      }
+    },
+    "get_local_components": {
+      "calls": 1,
+      "ok": 1,
+      "errors": 0,
+      "totalMs": 15181,
+      "avgMs": 15181,
+      "maxMs": 15181,
+      "firstUsed": "2026-11-22T14:52:08.673Z",
+      "lastUsed": "2026-11-22T14:52:08.673Z",
+      "byAgent": {
+        "mcp:claude-code": 1
+      }
+    },
+    "get_selection": {
+      "calls": 1,
+      "ok": 1,
+      "errors": 0,
+      "totalMs": 7,
+      "avgMs": 7,
+      "maxMs": 7,
+      "firstUsed": "2026-11-22T15:34:14.915Z",
+      "lastUsed": "2026-11-22T15:34:14.915Z",
+      "byAgent": {
+        "mcp:codex-mcp-client": 1
+      }
+    },
+    "get_document_info": {
+      "calls": 3,
+      "ok": 3,
+      "errors": 0,
+      "totalMs": 80,
+      "avgMs": 27,
+      "maxMs": 54,
+      "firstUsed": "2026-11-22T15:39:12.357Z",
+      "lastUsed": "2026-11-22T19:02:28.646Z",
+      "byAgent": {
+        "mcp:codex-mcp-client": 3
+      }
+    },
+    "get_reactions": {
+      "calls": 1,
+      "ok": 1,
+      "errors": 0,
+      "totalMs": 25,
+      "avgMs": 25,
+      "maxMs": 25,
+      "firstUsed": "2026-11-22T15:42:36.148Z",
+      "lastUsed": "2026-11-22T15:42:36.148Z",
+      "byAgent": {
+        "mcp:codex-mcp-client": 1
       }
     }
   }

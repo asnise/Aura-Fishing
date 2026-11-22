@@ -204,6 +204,13 @@ def art_index():
     for s in sheets:
         for name, desc in s["items"]:
             out[f"{s['folder']}/{name}"] = {"file": f"assets/art/{s['folder']}/{name}.png", "sheet": s["id"], "desc": desc}
+    out["ui/icons/statscodex"] = {
+        "file": "assets/ui/Magical Lavender Fishing Codex.png",
+        "sheet": "",
+        "desc": "Lavender fishing book for the Stats Codex Main Menu tile",
+        "size": [1254, 1254],
+        "used_by": ["Main Menu (Stats Codex)"],
+    }
     return out
 
 
@@ -231,8 +238,8 @@ def main():
         catalog["global"][aid] = {**globals_files[aid], "size": [w, h], "tintable": tint, "note": note, "rbxassetid": None,
                                   "used_by": sorted(usage_global.get(aid, []))}
     for key, info in sorted(arts.items()):
-        used = sorted(usage_art.get(key, []))
-        catalog["art"][key] = {**info, "size": [512, 512], "rbxassetid": None, "used_by": used, "global": len(used) > 1}
+        used = sorted(set(info.get("used_by", [])) | usage_art.get(key, set()))
+        catalog["art"][key] = {"size": [512, 512], **info, "rbxassetid": None, "used_by": used, "global": len(used) > 1}
     # keep previously filled asset ids
     cat_path = os.path.join(ROOT, "assets", "catalog.json")
     if os.path.exists(cat_path):

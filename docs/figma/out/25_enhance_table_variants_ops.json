@@ -1,0 +1,5605 @@
+[
+ {
+  "pageId": "3465:14993",
+  "replaceName": "C16 · Enhance Progression Table — 3 Design Layouts (Pick One)",
+  "tree": {
+   "type": "SECTION",
+   "name": "C16 · Enhance Progression Table — 3 Design Layouts (Pick One)",
+   "fill": "FBF7EF",
+   "x": 28400,
+   "y": 3784,
+   "children": [
+    {
+     "type": "TEXT",
+     "text": "C16 · Enhance Progression Table — 3 UI Layout Variants",
+     "textStyle": "Aura Fishing/Display",
+     "color": {
+      "var": "cozy/text"
+     },
+     "name": "Title",
+     "x": 60,
+     "y": 40
+    },
+    {
+     "type": "TEXT",
+     "text": "Compare 3 UI layouts for adding a progression comparison table to Screen C16 (Enhance popup 3539:29395). Shows Coral Rod +0…+10 stat growth (+4% compound), costs, and milestones. No checkmarks, bullets, or emojis.",
+     "textStyle": "Aura Fishing/Body",
+     "color": {
+      "var": "cozy/subtext"
+     },
+     "name": "Sub",
+     "x": 60,
+     "y": 96,
+     "w": 2200
+    },
+    {
+     "name": "Screen C16-A · Dual-Panel Modal (Split View)",
+     "layout": "V",
+     "gap": 12,
+     "x": 60,
+     "y": 180,
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "C16-A · Dual-Panel Modal (Split View)",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "name": "Screen C16-A Dual Panel",
+       "w": 1280,
+       "h": 720,
+       "radius": 0,
+       "clip": true,
+       "children": [
+        {
+         "name": "World [skip]",
+         "w": 1280,
+         "h": 720,
+         "x": 0,
+         "y": 0,
+         "fill": {
+          "grad": [
+           "DDF5EE",
+           "A8DCD8"
+          ],
+          "angle": 90
+         },
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Water",
+           "w": 1280,
+           "h": 300,
+           "x": 0,
+           "y": 420,
+           "fill": {
+            "hex": "9AD4F5",
+            "opacity": 0.35
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Island",
+           "w": 560,
+           "h": 130,
+           "x": 360,
+           "y": 370,
+           "fill": {
+            "hex": "7FD3B0",
+            "opacity": 0.55
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Island Top",
+           "w": 360,
+           "h": 70,
+           "x": 460,
+           "y": 372,
+           "fill": {
+            "hex": "4FAF8A",
+            "opacity": 0.35
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Dim",
+           "w": 1280,
+           "h": 720,
+           "x": 0,
+           "y": 0,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          }
+         ]
+        },
+        {
+         "name": "Dual-Panel Enhance Modal",
+         "layout": "H",
+         "gap": 24,
+         "pad": [
+          28,
+          32,
+          28,
+          32
+         ],
+         "w": 860,
+         "radius": 32,
+         "clip": true,
+         "fill": {
+          "var": "cozy/panel"
+         },
+         "stroke": {
+          "var": "cozy/track"
+         },
+         "strokeW": 2,
+         "effects": [
+          {
+           "color": "3D4B5C",
+           "a": 0.1,
+           "y": 6,
+           "blur": 18
+          }
+         ],
+         "x": 210,
+         "y": 95,
+         "cross": "CENTER",
+         "children": [
+          {
+           "name": "Left Panel (Upgrade Step)",
+           "layout": "V",
+           "gap": 10,
+           "w": 310,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Equipment Pic",
+             "w": 100,
+             "h": 100,
+             "radius": 20,
+             "fill": "FFFFFF",
+             "stroke": {
+              "var": "cozy/track"
+             },
+             "strokeW": 2,
+             "layout": "H",
+             "main": "CENTER",
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img equipment/CoralRod",
+               "w": 84,
+               "h": 84
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "Coral Rod",
+             "textStyle": "Aura Fishing/Title",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Title",
+             "align": "CENTER",
+             "w": 290
+            },
+            {
+             "name": "Levels",
+             "layout": "H",
+             "gap": 8,
+             "cross": "CENTER",
+             "main": "CENTER",
+             "children": [
+              {
+               "name": "Pill +3",
+               "layout": "H",
+               "gap": 5,
+               "pad": [
+                5,
+                12,
+                5,
+                10
+               ],
+               "radius": 999,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/sky-lip"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+3",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/on-accent"
+                 },
+                 "name": "Label"
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "→",
+               "textStyle": "Aura Fishing/Title",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Arrow"
+              },
+              {
+               "name": "Pill +4",
+               "layout": "H",
+               "gap": 5,
+               "pad": [
+                5,
+                12,
+                5,
+                10
+               ],
+               "radius": 999,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/mint-lip"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+4",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/on-accent"
+                 },
+                 "name": "Label"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Stat Box",
+             "layout": "V",
+             "gap": 8,
+             "pad": 12,
+             "radius": 14,
+             "fill": {
+              "var": "cozy/sand"
+             },
+             "fillW": true,
+             "children": [
+              {
+               "name": "Cmp Luck",
+               "layout": "H",
+               "gap": 8,
+               "fillW": true,
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "Luck",
+                 "textStyle": "Aura Fishing/Small",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Label",
+                 "w": 100
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+16.9%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 15,
+                 "color": "3D4B5C",
+                 "name": "From"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "→",
+                 "textStyle": "Aura Fishing/Small",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Arrow"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+17.5%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 15,
+                 "color": "4FAF8A",
+                 "name": "To"
+                },
+                {
+                 "name": "Diff",
+                 "layout": "H",
+                 "pad": [
+                  1,
+                  6,
+                  1,
+                  6
+                 ],
+                 "radius": 6,
+                 "fill": {
+                  "hex": "EAF8F2",
+                  "opacity": 1.0
+                 },
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "+0.6%",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "4FAF8A",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Cmp Reel Power",
+               "layout": "H",
+               "gap": 8,
+               "fillW": true,
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "Reel Power",
+                 "textStyle": "Aura Fishing/Small",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Label",
+                 "w": 100
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+0.34",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 15,
+                 "color": "3D4B5C",
+                 "name": "From"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "→",
+                 "textStyle": "Aura Fishing/Small",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Arrow"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+0.35",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 15,
+                 "color": "4FAF8A",
+                 "name": "To"
+                },
+                {
+                 "name": "Diff",
+                 "layout": "H",
+                 "pad": [
+                  1,
+                  6,
+                  1,
+                  6
+                 ],
+                 "radius": 6,
+                 "fill": {
+                  "hex": "EAF8F2",
+                  "opacity": 1.0
+                 },
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "+0.01",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "4FAF8A",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Cmp Catch Bar",
+               "layout": "H",
+               "gap": 8,
+               "fillW": true,
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "Catch Bar",
+                 "textStyle": "Aura Fishing/Small",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Label",
+                 "w": 100
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+5.6%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 15,
+                 "color": "3D4B5C",
+                 "name": "From"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "→",
+                 "textStyle": "Aura Fishing/Small",
+                 "color": {
+                  "var": "cozy/subtext"
+                 },
+                 "name": "Arrow"
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+5.8%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 15,
+                 "color": "4FAF8A",
+                 "name": "To"
+                },
+                {
+                 "name": "Diff",
+                 "layout": "H",
+                 "pad": [
+                  1,
+                  6,
+                  1,
+                  6
+                 ],
+                 "radius": 6,
+                 "fill": {
+                  "hex": "EAF8F2",
+                  "opacity": 1.0
+                 },
+                 "children": [
+                  {
+                   "type": "TEXT",
+                   "text": "+0.2%",
+                   "font": {
+                    "family": "Fredoka One",
+                    "style": "Regular"
+                   },
+                   "size": 12,
+                   "color": "4FAF8A",
+                   "name": "Value"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Materials Note",
+             "layout": "H",
+             "gap": 8,
+             "cross": "CENTER",
+             "pad": [
+              4,
+              8,
+              4,
+              8
+             ],
+             "opacity": 0.65,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img materials/enhance_stone",
+               "w": 22,
+               "h": 22
+              },
+              {
+               "type": "TEXT",
+               "text": "x2 Enhance Stone (Phase 2: +6+)",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Label"
+              }
+             ]
+            },
+            {
+             "name": "Buttons",
+             "layout": "H",
+             "gap": 10,
+             "fillW": true,
+             "main": "CENTER",
+             "children": [
+              {
+               "type": "INSTANCE",
+               "ref": "3487:4298",
+               "variant": "Style=Ghost",
+               "texts": {
+                "Label": "Cancel"
+               },
+               "name": "Btn Cancel",
+               "fillW": true
+              },
+              {
+               "name": "Btn Buy",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                8,
+                14,
+                11,
+                14
+               ],
+               "radius": 16,
+               "cross": "CENTER",
+               "main": "CENTER",
+               "fill": {
+                "var": "cozy/gold"
+               },
+               "stroke": {
+                "var": "cozy/gold-lip"
+               },
+               "strokeSides": {
+                "b": 5
+               },
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/status/coin",
+                 "w": 22,
+                 "h": 22
+                },
+                {
+                 "type": "TEXT",
+                 "text": "4.0k",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 20,
+                 "color": "FFFFFF",
+                 "name": "Price"
+                }
+               ],
+               "w": 118
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "RECT",
+           "name": "Divider",
+           "w": 2,
+           "h": 460,
+           "fill": {
+            "var": "cozy/track"
+           }
+          },
+          {
+           "name": "Right Panel (Progression Ladder)",
+           "layout": "V",
+           "gap": 8,
+           "w": 460,
+           "children": [
+            {
+             "name": "Header Line",
+             "layout": "H",
+             "fillW": true,
+             "main": "SPACE_BETWEEN",
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "Enhance Progression (+0 to +10)",
+               "textStyle": "Aura Fishing/Heading",
+               "color": {
+                "var": "cozy/text"
+               },
+               "name": "Title"
+              },
+              {
+               "name": "Pill Max +48% Total",
+               "layout": "H",
+               "gap": 5,
+               "pad": [
+                5,
+                12,
+                5,
+                10
+               ],
+               "radius": 999,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/sand"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "Max +48% Total",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/gold-lip"
+                 },
+                 "name": "Label"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Progression Table",
+             "layout": "V",
+             "gap": 2,
+             "w": 440,
+             "radius": 12,
+             "pad": 6,
+             "fill": {
+              "var": "cozy/panel"
+             },
+             "stroke": {
+              "var": "cozy/track"
+             },
+             "strokeW": 2,
+             "children": [
+              {
+               "name": "Table Header",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                6,
+                8,
+                6,
+                8
+               ],
+               "radius": 8,
+               "fill": {
+                "var": "cozy/sand"
+               },
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "LV",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "H_Lv",
+                 "w": 34
+                },
+                {
+                 "type": "TEXT",
+                 "text": "MULT",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "H_Mult",
+                 "w": 42
+                },
+                {
+                 "type": "TEXT",
+                 "text": "LUCK",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "H_Luck",
+                 "w": 54
+                },
+                {
+                 "type": "TEXT",
+                 "text": "REEL",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "H_Reel",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "BAR",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "H_Bar",
+                 "w": 52
+                },
+                {
+                 "type": "TEXT",
+                 "text": "COST",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "H_Cost",
+                 "w": 68
+                },
+                {
+                 "type": "TEXT",
+                 "text": "STATUS",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "H_Status",
+                 "w": 72,
+                 "align": "CENTER"
+                }
+               ]
+              },
+              {
+               "name": "Row +0",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                4,
+                8,
+                4,
+                8
+               ],
+               "h": 28,
+               "radius": 8,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/panel"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+0",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "7A8A99",
+                 "name": "Lv",
+                 "w": 34
+                },
+                {
+                 "type": "TEXT",
+                 "text": "1.00x",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Mult",
+                 "w": 42
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+15.0%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Luck",
+                 "w": 54
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+0.30",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Reel",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+5.0%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Bar",
+                 "w": 52
+                },
+                {
+                 "type": "TEXT",
+                 "text": "Base",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Cost",
+                 "w": 68
+                },
+                {
+                 "name": "StatusBox",
+                 "layout": "H",
+                 "main": "CENTER",
+                 "w": 72,
+                 "children": [
+                  {
+                   "name": "Badge Locked",
+                   "layout": "H",
+                   "pad": [
+                    2,
+                    6,
+                    2,
+                    6
+                   ],
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/track"
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "Base",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 11,
+                     "color": "9AA5B1",
+                     "name": "Text"
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Row +1",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                4,
+                8,
+                4,
+                8
+               ],
+               "h": 28,
+               "radius": 8,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/panel"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+1",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "7A8A99",
+                 "name": "Lv",
+                 "w": 34
+                },
+                {
+                 "type": "TEXT",
+                 "text": "1.04x",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Mult",
+                 "w": 42
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+15.6%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Luck",
+                 "w": 54
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+0.31",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Reel",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+5.2%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Bar",
+                 "w": 52
+                },
+                {
+                 "type": "TEXT",
+                 "text": "1.2k",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Cost",
+                 "w": 68
+                },
+                {
+                 "name": "StatusBox",
+                 "layout": "H",
+                 "main": "CENTER",
+                 "w": 72,
+                 "children": [
+                  {
+                   "name": "Badge Locked",
+                   "layout": "H",
+                   "pad": [
+                    2,
+                    6,
+                    2,
+                    6
+                   ],
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/track"
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "Done",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 11,
+                     "color": "9AA5B1",
+                     "name": "Text"
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Row +2",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                4,
+                8,
+                4,
+                8
+               ],
+               "h": 28,
+               "radius": 8,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/panel"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+2",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "7A8A99",
+                 "name": "Lv",
+                 "w": 34
+                },
+                {
+                 "type": "TEXT",
+                 "text": "1.08x",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Mult",
+                 "w": 42
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+16.2%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Luck",
+                 "w": 54
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+0.32",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Reel",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+5.4%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Bar",
+                 "w": 52
+                },
+                {
+                 "type": "TEXT",
+                 "text": "1.8k",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Cost",
+                 "w": 68
+                },
+                {
+                 "name": "StatusBox",
+                 "layout": "H",
+                 "main": "CENTER",
+                 "w": 72,
+                 "children": [
+                  {
+                   "name": "Badge Locked",
+                   "layout": "H",
+                   "pad": [
+                    2,
+                    6,
+                    2,
+                    6
+                   ],
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/track"
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "Done",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 11,
+                     "color": "9AA5B1",
+                     "name": "Text"
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Row +3",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                4,
+                8,
+                4,
+                8
+               ],
+               "h": 28,
+               "radius": 8,
+               "cross": "CENTER",
+               "fill": {
+                "hex": "EBF5FB",
+                "opacity": 1.0
+               },
+               "stroke": {
+                "var": "cozy/sky-lip"
+               },
+               "strokeW": 1.5,
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+3",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "2B6CB0",
+                 "name": "Lv",
+                 "w": 34
+                },
+                {
+                 "type": "TEXT",
+                 "text": "1.12x",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Mult",
+                 "w": 42
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+16.9%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "2B6CB0",
+                 "name": "Luck",
+                 "w": 54
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+0.34",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "2B6CB0",
+                 "name": "Reel",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+5.6%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "2B6CB0",
+                 "name": "Bar",
+                 "w": 52
+                },
+                {
+                 "type": "TEXT",
+                 "text": "2.7k",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "2B6CB0",
+                 "name": "Cost",
+                 "w": 68
+                },
+                {
+                 "name": "StatusBox",
+                 "layout": "H",
+                 "main": "CENTER",
+                 "w": 72,
+                 "children": [
+                  {
+                   "name": "Badge Current",
+                   "layout": "H",
+                   "pad": [
+                    2,
+                    8,
+                    2,
+                    8
+                   ],
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/sky-lip"
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "CURRENT",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 11,
+                     "color": "FFFFFF",
+                     "name": "Text"
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Row +4",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                4,
+                8,
+                4,
+                8
+               ],
+               "h": 28,
+               "radius": 8,
+               "cross": "CENTER",
+               "fill": {
+                "hex": "EAF8F2",
+                "opacity": 1.0
+               },
+               "stroke": {
+                "var": "cozy/mint-lip"
+               },
+               "strokeW": 1.5,
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+4",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "23784F",
+                 "name": "Lv",
+                 "w": 34
+                },
+                {
+                 "type": "TEXT",
+                 "text": "1.17x",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Mult",
+                 "w": 42
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+17.5%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "23784F",
+                 "name": "Luck",
+                 "w": 54
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+0.35",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "23784F",
+                 "name": "Reel",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+5.8%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "23784F",
+                 "name": "Bar",
+                 "w": 52
+                },
+                {
+                 "type": "TEXT",
+                 "text": "4.0k",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "23784F",
+                 "name": "Cost",
+                 "w": 68
+                },
+                {
+                 "name": "StatusBox",
+                 "layout": "H",
+                 "main": "CENTER",
+                 "w": 72,
+                 "children": [
+                  {
+                   "name": "Badge Next",
+                   "layout": "H",
+                   "pad": [
+                    2,
+                    8,
+                    2,
+                    8
+                   ],
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/mint-lip"
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "NEXT",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 11,
+                     "color": "FFFFFF",
+                     "name": "Text"
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Row +5",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                4,
+                8,
+                4,
+                8
+               ],
+               "h": 28,
+               "radius": 8,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/panel"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+5",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "3D4B5C",
+                 "name": "Lv",
+                 "w": 34
+                },
+                {
+                 "type": "TEXT",
+                 "text": "1.22x",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Mult",
+                 "w": 42
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+18.2%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Luck",
+                 "w": 54
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+0.36",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Reel",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+6.1%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Bar",
+                 "w": 52
+                },
+                {
+                 "type": "TEXT",
+                 "text": "6.1k",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Cost",
+                 "w": 68
+                },
+                {
+                 "name": "StatusBox",
+                 "layout": "H",
+                 "main": "CENTER",
+                 "w": 72,
+                 "children": [
+                  {
+                   "name": "Badge Locked",
+                   "layout": "H",
+                   "pad": [
+                    2,
+                    6,
+                    2,
+                    6
+                   ],
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/track"
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "Locked",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 11,
+                     "color": "9AA5B1",
+                     "name": "Text"
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Row +6",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                4,
+                8,
+                4,
+                8
+               ],
+               "h": 28,
+               "radius": 8,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/panel"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+6",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "3D4B5C",
+                 "name": "Lv",
+                 "w": 34
+                },
+                {
+                 "type": "TEXT",
+                 "text": "1.27x",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Mult",
+                 "w": 42
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+19.0%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Luck",
+                 "w": 54
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+0.38",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Reel",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+6.3%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Bar",
+                 "w": 52
+                },
+                {
+                 "type": "TEXT",
+                 "text": "9.1k +2S",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Cost",
+                 "w": 68
+                },
+                {
+                 "name": "StatusBox",
+                 "layout": "H",
+                 "main": "CENTER",
+                 "w": 72,
+                 "children": [
+                  {
+                   "name": "Badge Locked",
+                   "layout": "H",
+                   "pad": [
+                    2,
+                    6,
+                    2,
+                    6
+                   ],
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/track"
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "Locked",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 11,
+                     "color": "9AA5B1",
+                     "name": "Text"
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Row +7",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                4,
+                8,
+                4,
+                8
+               ],
+               "h": 28,
+               "radius": 8,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/panel"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+7",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "3D4B5C",
+                 "name": "Lv",
+                 "w": 34
+                },
+                {
+                 "type": "TEXT",
+                 "text": "1.32x",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Mult",
+                 "w": 42
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+19.7%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Luck",
+                 "w": 54
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+0.39",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Reel",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+6.6%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Bar",
+                 "w": 52
+                },
+                {
+                 "type": "TEXT",
+                 "text": "13.7k +3S",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Cost",
+                 "w": 68
+                },
+                {
+                 "name": "StatusBox",
+                 "layout": "H",
+                 "main": "CENTER",
+                 "w": 72,
+                 "children": [
+                  {
+                   "name": "Badge Locked",
+                   "layout": "H",
+                   "pad": [
+                    2,
+                    6,
+                    2,
+                    6
+                   ],
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/track"
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "Locked",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 11,
+                     "color": "9AA5B1",
+                     "name": "Text"
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Row +8",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                4,
+                8,
+                4,
+                8
+               ],
+               "h": 28,
+               "radius": 8,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/panel"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+8",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "3D4B5C",
+                 "name": "Lv",
+                 "w": 34
+                },
+                {
+                 "type": "TEXT",
+                 "text": "1.37x",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Mult",
+                 "w": 42
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+20.5%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Luck",
+                 "w": 54
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+0.41",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Reel",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+6.8%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Bar",
+                 "w": 52
+                },
+                {
+                 "type": "TEXT",
+                 "text": "20.5k +4S",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Cost",
+                 "w": 68
+                },
+                {
+                 "name": "StatusBox",
+                 "layout": "H",
+                 "main": "CENTER",
+                 "w": 72,
+                 "children": [
+                  {
+                   "name": "Badge Locked",
+                   "layout": "H",
+                   "pad": [
+                    2,
+                    6,
+                    2,
+                    6
+                   ],
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/track"
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "Locked",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 11,
+                     "color": "9AA5B1",
+                     "name": "Text"
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Row +9",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                4,
+                8,
+                4,
+                8
+               ],
+               "h": 28,
+               "radius": 8,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/panel"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+9",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "3D4B5C",
+                 "name": "Lv",
+                 "w": 34
+                },
+                {
+                 "type": "TEXT",
+                 "text": "1.42x",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Mult",
+                 "w": 42
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+21.3%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Luck",
+                 "w": 54
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+0.43",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Reel",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+7.1%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Bar",
+                 "w": 52
+                },
+                {
+                 "type": "TEXT",
+                 "text": "30.8k +5S",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Cost",
+                 "w": 68
+                },
+                {
+                 "name": "StatusBox",
+                 "layout": "H",
+                 "main": "CENTER",
+                 "w": 72,
+                 "children": [
+                  {
+                   "name": "Badge Locked",
+                   "layout": "H",
+                   "pad": [
+                    2,
+                    6,
+                    2,
+                    6
+                   ],
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/track"
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "Locked",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 11,
+                     "color": "9AA5B1",
+                     "name": "Text"
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Row +10",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                4,
+                8,
+                4,
+                8
+               ],
+               "h": 28,
+               "radius": 8,
+               "cross": "CENTER",
+               "fill": {
+                "hex": "FEF8E7",
+                "opacity": 1.0
+               },
+               "stroke": {
+                "var": "cozy/gold"
+               },
+               "strokeW": 1.5,
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+10",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "9C6805",
+                 "name": "Lv",
+                 "w": 34
+                },
+                {
+                 "type": "TEXT",
+                 "text": "1.48x",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Mult",
+                 "w": 42
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+22.2%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "9C6805",
+                 "name": "Luck",
+                 "w": 54
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+0.44",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "9C6805",
+                 "name": "Reel",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+7.4%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "9C6805",
+                 "name": "Bar",
+                 "w": 52
+                },
+                {
+                 "type": "TEXT",
+                 "text": "MAX",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "9C6805",
+                 "name": "Cost",
+                 "w": 68
+                },
+                {
+                 "name": "StatusBox",
+                 "layout": "H",
+                 "main": "CENTER",
+                 "w": 72,
+                 "children": [
+                  {
+                   "name": "Badge Max",
+                   "layout": "H",
+                   "pad": [
+                    2,
+                    8,
+                    2,
+                    8
+                   ],
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/gold"
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "PEAK",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 11,
+                     "color": "FFFFFF",
+                     "name": "Text"
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "[skip] Roblox CoreGui (guide)",
+         "w": 1280,
+         "h": 720,
+         "x": 0,
+         "y": 0,
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Top Bar",
+           "w": 1280,
+           "h": 58,
+           "x": 0,
+           "y": 0,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Roblox Menu Btn",
+           "w": 44,
+           "h": 44,
+           "x": 12,
+           "y": 7,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Chat Btn",
+           "w": 44,
+           "h": 44,
+           "x": 64,
+           "y": 7,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          },
+          {
+           "type": "TEXT",
+           "text": "ROBLOX TOP BAR (58px)  —  keep clear",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 124,
+           "y": 22
+          },
+          {
+           "type": "RECT",
+           "name": "Chat Window (when open)",
+           "w": 380,
+           "h": 210,
+           "x": 8,
+           "y": 64,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.04
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "CHAT WINDOW (desktop, when open)",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 20,
+           "y": 248
+          },
+          {
+           "type": "RECT",
+           "name": "Leaderboard",
+           "w": 236,
+           "h": 170,
+           "x": 1032,
+           "y": 64,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.06
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "LEADERBOARD (leaderstats)",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 1044,
+           "y": 210
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Mobile Thumbstick",
+           "w": 150,
+           "h": 150,
+           "x": 50,
+           "y": 510,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "MOBILE THUMBSTICK",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 62,
+           "y": 668
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Mobile Jump",
+           "w": 96,
+           "h": 96,
+           "x": 1120,
+           "y": 550,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "MOBILE JUMP",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 1122,
+           "y": 660
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Screen C16-B · Tabbed Switcher (540px Modal)",
+     "layout": "V",
+     "gap": 12,
+     "x": 1400,
+     "y": 180,
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "C16-B · Tabbed Switcher (540px Modal)",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "name": "Screen C16-B Tabbed",
+       "w": 1280,
+       "h": 720,
+       "radius": 0,
+       "clip": true,
+       "children": [
+        {
+         "name": "World [skip]",
+         "w": 1280,
+         "h": 720,
+         "x": 0,
+         "y": 0,
+         "fill": {
+          "grad": [
+           "DDF5EE",
+           "A8DCD8"
+          ],
+          "angle": 90
+         },
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Water",
+           "w": 1280,
+           "h": 300,
+           "x": 0,
+           "y": 420,
+           "fill": {
+            "hex": "9AD4F5",
+            "opacity": 0.35
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Island",
+           "w": 560,
+           "h": 130,
+           "x": 360,
+           "y": 370,
+           "fill": {
+            "hex": "7FD3B0",
+            "opacity": 0.55
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Island Top",
+           "w": 360,
+           "h": 70,
+           "x": 460,
+           "y": 372,
+           "fill": {
+            "hex": "4FAF8A",
+            "opacity": 0.35
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Dim",
+           "w": 1280,
+           "h": 720,
+           "x": 0,
+           "y": 0,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          }
+         ]
+        },
+        {
+         "name": "Enhance · Tabbed Table View",
+         "layout": "V",
+         "w": 540,
+         "radius": 36,
+         "clip": true,
+         "fill": {
+          "var": "cozy/panel"
+         },
+         "stroke": {
+          "var": "cozy/track"
+         },
+         "strokeW": 2,
+         "effects": [
+          {
+           "color": "3D4B5C",
+           "a": 0.1,
+           "y": 6,
+           "blur": 18
+          }
+         ],
+         "children": [
+          {
+           "name": "Body",
+           "layout": "V",
+           "gap": 10,
+           "pad": [
+            34,
+            40,
+            26,
+            40
+           ],
+           "fillW": true,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Tabs",
+             "layout": "H",
+             "gap": 8,
+             "fillW": true,
+             "children": [
+              {
+               "type": "INSTANCE",
+               "ref": "3487:4298",
+               "variant": "Style=Ghost",
+               "texts": {
+                "Label": "Step Upgrade"
+               },
+               "name": "Btn Tab Step",
+               "fillW": true
+              },
+              {
+               "type": "INSTANCE",
+               "ref": "3487:4298",
+               "variant": "Style=Primary",
+               "texts": {
+                "Label": "Progression Table"
+               },
+               "name": "Btn Tab Table",
+               "fillW": true
+              }
+             ]
+            },
+            {
+             "name": "Summary Bar",
+             "layout": "H",
+             "gap": 10,
+             "pad": [
+              6,
+              12,
+              6,
+              12
+             ],
+             "radius": 12,
+             "fill": {
+              "var": "cozy/sand"
+             },
+             "cross": "CENTER",
+             "fillW": true,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img equipment/CoralRod",
+               "w": 28,
+               "h": 28
+              },
+              {
+               "type": "TEXT",
+               "text": "Coral Rod",
+               "textStyle": "Aura Fishing/Heading",
+               "color": {
+                "var": "cozy/text"
+               },
+               "name": "ItemName"
+              },
+              {
+               "name": "Pill +3 Current",
+               "layout": "H",
+               "gap": 5,
+               "pad": [
+                5,
+                12,
+                5,
+                10
+               ],
+               "radius": 999,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/sky-lip"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+3 Current",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/on-accent"
+                 },
+                 "name": "Label"
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "+16.9% Luck  |  +0.34 Reel Power",
+               "textStyle": "Aura Fishing/Small",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Stats"
+              }
+             ]
+            },
+            {
+             "name": "Table Box",
+             "layout": "V",
+             "gap": 2,
+             "fillW": true,
+             "pad": 6,
+             "radius": 14,
+             "fill": {
+              "var": "cozy/panel"
+             },
+             "stroke": {
+              "var": "cozy/track"
+             },
+             "strokeW": 2,
+             "children": [
+              {
+               "name": "Table Header",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                5,
+                8,
+                5,
+                8
+               ],
+               "radius": 8,
+               "fill": {
+                "var": "cozy/sand"
+               },
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "LEVEL",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 11,
+                 "color": "7A8A99",
+                 "name": "H_Lv",
+                 "w": 32
+                },
+                {
+                 "type": "TEXT",
+                 "text": "MULT",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 11,
+                 "color": "7A8A99",
+                 "name": "H_Mult",
+                 "w": 42
+                },
+                {
+                 "type": "TEXT",
+                 "text": "LUCK",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 11,
+                 "color": "7A8A99",
+                 "name": "H_Luck",
+                 "w": 54
+                },
+                {
+                 "type": "TEXT",
+                 "text": "REEL",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 11,
+                 "color": "7A8A99",
+                 "name": "H_Reel",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "BAR",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 11,
+                 "color": "7A8A99",
+                 "name": "H_Bar",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "COST",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 11,
+                 "color": "7A8A99",
+                 "name": "H_Cost",
+                 "w": 64
+                },
+                {
+                 "type": "TEXT",
+                 "text": "STATUS",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 11,
+                 "color": "7A8A99",
+                 "name": "H_Status",
+                 "w": 66,
+                 "align": "CENTER"
+                }
+               ]
+              },
+              {
+               "name": "Row +0",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                3,
+                8,
+                3,
+                8
+               ],
+               "h": 27,
+               "radius": 6,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/panel"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+0",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Lv",
+                 "w": 32
+                },
+                {
+                 "type": "TEXT",
+                 "text": "1.00x",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Mult",
+                 "w": 42
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+15.0%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Luck",
+                 "w": 54
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+0.30",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Reel",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+5.0%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Bar",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "Base",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Cost",
+                 "w": 64
+                },
+                {
+                 "name": "StatusBox",
+                 "layout": "H",
+                 "main": "CENTER",
+                 "w": 66,
+                 "children": [
+                  {
+                   "name": "Badge Locked",
+                   "layout": "H",
+                   "pad": [
+                    2,
+                    6,
+                    2,
+                    6
+                   ],
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/track"
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "Base",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 11,
+                     "color": "9AA5B1",
+                     "name": "Text"
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Row +1",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                3,
+                8,
+                3,
+                8
+               ],
+               "h": 27,
+               "radius": 6,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/panel"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+1",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Lv",
+                 "w": 32
+                },
+                {
+                 "type": "TEXT",
+                 "text": "1.04x",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Mult",
+                 "w": 42
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+15.6%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Luck",
+                 "w": 54
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+0.31",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Reel",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+5.2%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Bar",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "1.2k",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Cost",
+                 "w": 64
+                },
+                {
+                 "name": "StatusBox",
+                 "layout": "H",
+                 "main": "CENTER",
+                 "w": 66,
+                 "children": [
+                  {
+                   "name": "Badge Locked",
+                   "layout": "H",
+                   "pad": [
+                    2,
+                    6,
+                    2,
+                    6
+                   ],
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/track"
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "Done",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 11,
+                     "color": "9AA5B1",
+                     "name": "Text"
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Row +2",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                3,
+                8,
+                3,
+                8
+               ],
+               "h": 27,
+               "radius": 6,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/panel"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+2",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Lv",
+                 "w": 32
+                },
+                {
+                 "type": "TEXT",
+                 "text": "1.08x",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Mult",
+                 "w": 42
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+16.2%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Luck",
+                 "w": 54
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+0.32",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Reel",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+5.4%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Bar",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "1.8k",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Cost",
+                 "w": 64
+                },
+                {
+                 "name": "StatusBox",
+                 "layout": "H",
+                 "main": "CENTER",
+                 "w": 66,
+                 "children": [
+                  {
+                   "name": "Badge Locked",
+                   "layout": "H",
+                   "pad": [
+                    2,
+                    6,
+                    2,
+                    6
+                   ],
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/track"
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "Done",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 11,
+                     "color": "9AA5B1",
+                     "name": "Text"
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Row +3",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                3,
+                8,
+                3,
+                8
+               ],
+               "h": 27,
+               "radius": 6,
+               "cross": "CENTER",
+               "fill": {
+                "hex": "EBF5FB",
+                "opacity": 1.0
+               },
+               "stroke": {
+                "var": "cozy/sky-lip"
+               },
+               "strokeW": 1.5,
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+3",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "2B6CB0",
+                 "name": "Lv",
+                 "w": 32
+                },
+                {
+                 "type": "TEXT",
+                 "text": "1.12x",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Mult",
+                 "w": 42
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+16.9%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "2B6CB0",
+                 "name": "Luck",
+                 "w": 54
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+0.34",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "2B6CB0",
+                 "name": "Reel",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+5.6%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "2B6CB0",
+                 "name": "Bar",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "2.7k",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "2B6CB0",
+                 "name": "Cost",
+                 "w": 64
+                },
+                {
+                 "name": "StatusBox",
+                 "layout": "H",
+                 "main": "CENTER",
+                 "w": 66,
+                 "children": [
+                  {
+                   "name": "Badge Current",
+                   "layout": "H",
+                   "pad": [
+                    2,
+                    8,
+                    2,
+                    8
+                   ],
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/sky-lip"
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "CURRENT",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 11,
+                     "color": "FFFFFF",
+                     "name": "Text"
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Row +4",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                3,
+                8,
+                3,
+                8
+               ],
+               "h": 27,
+               "radius": 6,
+               "cross": "CENTER",
+               "fill": {
+                "hex": "EAF8F2",
+                "opacity": 1.0
+               },
+               "stroke": {
+                "var": "cozy/mint-lip"
+               },
+               "strokeW": 1.5,
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+4",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "23784F",
+                 "name": "Lv",
+                 "w": 32
+                },
+                {
+                 "type": "TEXT",
+                 "text": "1.17x",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Mult",
+                 "w": 42
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+17.5%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "23784F",
+                 "name": "Luck",
+                 "w": 54
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+0.35",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "23784F",
+                 "name": "Reel",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+5.8%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "23784F",
+                 "name": "Bar",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "4.0k",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "23784F",
+                 "name": "Cost",
+                 "w": 64
+                },
+                {
+                 "name": "StatusBox",
+                 "layout": "H",
+                 "main": "CENTER",
+                 "w": 66,
+                 "children": [
+                  {
+                   "name": "Badge Next",
+                   "layout": "H",
+                   "pad": [
+                    2,
+                    8,
+                    2,
+                    8
+                   ],
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/mint-lip"
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "NEXT",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 11,
+                     "color": "FFFFFF",
+                     "name": "Text"
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Row +5",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                3,
+                8,
+                3,
+                8
+               ],
+               "h": 27,
+               "radius": 6,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/panel"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+5",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Lv",
+                 "w": 32
+                },
+                {
+                 "type": "TEXT",
+                 "text": "1.22x",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Mult",
+                 "w": 42
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+18.2%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Luck",
+                 "w": 54
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+0.36",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Reel",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+6.1%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Bar",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "6.1k",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Cost",
+                 "w": 64
+                },
+                {
+                 "name": "StatusBox",
+                 "layout": "H",
+                 "main": "CENTER",
+                 "w": 66,
+                 "children": [
+                  {
+                   "name": "Badge Locked",
+                   "layout": "H",
+                   "pad": [
+                    2,
+                    6,
+                    2,
+                    6
+                   ],
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/track"
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "Locked",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 11,
+                     "color": "9AA5B1",
+                     "name": "Text"
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Row +6",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                3,
+                8,
+                3,
+                8
+               ],
+               "h": 27,
+               "radius": 6,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/panel"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+6",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Lv",
+                 "w": 32
+                },
+                {
+                 "type": "TEXT",
+                 "text": "1.27x",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Mult",
+                 "w": 42
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+19.0%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Luck",
+                 "w": 54
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+0.38",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Reel",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+6.3%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Bar",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "9.1k +2S",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Cost",
+                 "w": 64
+                },
+                {
+                 "name": "StatusBox",
+                 "layout": "H",
+                 "main": "CENTER",
+                 "w": 66,
+                 "children": [
+                  {
+                   "name": "Badge Locked",
+                   "layout": "H",
+                   "pad": [
+                    2,
+                    6,
+                    2,
+                    6
+                   ],
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/track"
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "Locked",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 11,
+                     "color": "9AA5B1",
+                     "name": "Text"
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Row +7",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                3,
+                8,
+                3,
+                8
+               ],
+               "h": 27,
+               "radius": 6,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/panel"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+7",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Lv",
+                 "w": 32
+                },
+                {
+                 "type": "TEXT",
+                 "text": "1.32x",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Mult",
+                 "w": 42
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+19.7%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Luck",
+                 "w": 54
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+0.39",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Reel",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+6.6%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Bar",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "13.7k +3S",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Cost",
+                 "w": 64
+                },
+                {
+                 "name": "StatusBox",
+                 "layout": "H",
+                 "main": "CENTER",
+                 "w": 66,
+                 "children": [
+                  {
+                   "name": "Badge Locked",
+                   "layout": "H",
+                   "pad": [
+                    2,
+                    6,
+                    2,
+                    6
+                   ],
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/track"
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "Locked",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 11,
+                     "color": "9AA5B1",
+                     "name": "Text"
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Row +8",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                3,
+                8,
+                3,
+                8
+               ],
+               "h": 27,
+               "radius": 6,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/panel"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+8",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Lv",
+                 "w": 32
+                },
+                {
+                 "type": "TEXT",
+                 "text": "1.37x",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Mult",
+                 "w": 42
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+20.5%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Luck",
+                 "w": 54
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+0.41",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Reel",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+6.8%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Bar",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "20.5k +4S",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Cost",
+                 "w": 64
+                },
+                {
+                 "name": "StatusBox",
+                 "layout": "H",
+                 "main": "CENTER",
+                 "w": 66,
+                 "children": [
+                  {
+                   "name": "Badge Locked",
+                   "layout": "H",
+                   "pad": [
+                    2,
+                    6,
+                    2,
+                    6
+                   ],
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/track"
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "Locked",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 11,
+                     "color": "9AA5B1",
+                     "name": "Text"
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Row +9",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                3,
+                8,
+                3,
+                8
+               ],
+               "h": 27,
+               "radius": 6,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/panel"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+9",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Lv",
+                 "w": 32
+                },
+                {
+                 "type": "TEXT",
+                 "text": "1.42x",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Mult",
+                 "w": 42
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+21.3%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Luck",
+                 "w": 54
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+0.43",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Reel",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+7.1%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Bar",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "30.8k +5S",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "3D4B5C",
+                 "name": "Cost",
+                 "w": 64
+                },
+                {
+                 "name": "StatusBox",
+                 "layout": "H",
+                 "main": "CENTER",
+                 "w": 66,
+                 "children": [
+                  {
+                   "name": "Badge Locked",
+                   "layout": "H",
+                   "pad": [
+                    2,
+                    6,
+                    2,
+                    6
+                   ],
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/track"
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "Locked",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 11,
+                     "color": "9AA5B1",
+                     "name": "Text"
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Row +10",
+               "layout": "H",
+               "gap": 6,
+               "pad": [
+                3,
+                8,
+                3,
+                8
+               ],
+               "h": 27,
+               "radius": 6,
+               "cross": "CENTER",
+               "fill": {
+                "hex": "FEF8E7",
+                "opacity": 1.0
+               },
+               "stroke": {
+                "var": "cozy/gold"
+               },
+               "strokeW": 1.5,
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+10",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "9C6805",
+                 "name": "Lv",
+                 "w": 32
+                },
+                {
+                 "type": "TEXT",
+                 "text": "1.48x",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "7A8A99",
+                 "name": "Mult",
+                 "w": 42
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+22.2%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "9C6805",
+                 "name": "Luck",
+                 "w": 54
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+0.44",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "9C6805",
+                 "name": "Reel",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+7.4%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "9C6805",
+                 "name": "Bar",
+                 "w": 48
+                },
+                {
+                 "type": "TEXT",
+                 "text": "MAX",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 12,
+                 "color": "9C6805",
+                 "name": "Cost",
+                 "w": 64
+                },
+                {
+                 "name": "StatusBox",
+                 "layout": "H",
+                 "main": "CENTER",
+                 "w": 66,
+                 "children": [
+                  {
+                   "name": "Badge Max",
+                   "layout": "H",
+                   "pad": [
+                    2,
+                    8,
+                    2,
+                    8
+                   ],
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/gold"
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "PEAK",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 11,
+                     "color": "FFFFFF",
+                     "name": "Text"
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Footer",
+           "layout": "H",
+           "gap": 16,
+           "pad": [
+            16,
+            32,
+            20,
+            32
+           ],
+           "fillW": true,
+           "main": "CENTER",
+           "fill": {
+            "var": "cozy/sand"
+           },
+           "children": [
+            {
+             "type": "INSTANCE",
+             "ref": "3487:4298",
+             "variant": "Style=Ghost",
+             "texts": {
+              "Label": "Close"
+             },
+             "name": "Btn Close",
+             "fillW": true
+            },
+            {
+             "name": "Btn Upgrade Now",
+             "layout": "H",
+             "gap": 6,
+             "pad": [
+              8,
+              14,
+              11,
+              14
+             ],
+             "radius": 16,
+             "cross": "CENTER",
+             "main": "CENTER",
+             "fill": {
+              "var": "cozy/gold"
+             },
+             "stroke": {
+              "var": "cozy/gold-lip"
+             },
+             "strokeSides": {
+              "b": 5
+             },
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "UPGRADE TO +4",
+               "font": {
+                "family": "Fredoka One",
+                "style": "Regular"
+               },
+               "size": 14,
+               "color": "FFFFFF",
+               "name": "Text"
+              },
+              {
+               "name": "Cost",
+               "layout": "H",
+               "gap": 4,
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "RECT",
+                 "name": "Img ui/status/coin",
+                 "w": 18,
+                 "h": 18
+                },
+                {
+                 "type": "TEXT",
+                 "text": "4.0k",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 16,
+                 "color": "FFFFFF",
+                 "name": "Value"
+                }
+               ]
+              }
+             ],
+             "w": 190
+            }
+           ]
+          }
+         ],
+         "x": 370,
+         "y": 80
+        },
+        {
+         "name": "[skip] Roblox CoreGui (guide)",
+         "w": 1280,
+         "h": 720,
+         "x": 0,
+         "y": 0,
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Top Bar",
+           "w": 1280,
+           "h": 58,
+           "x": 0,
+           "y": 0,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Roblox Menu Btn",
+           "w": 44,
+           "h": 44,
+           "x": 12,
+           "y": 7,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Chat Btn",
+           "w": 44,
+           "h": 44,
+           "x": 64,
+           "y": 7,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          },
+          {
+           "type": "TEXT",
+           "text": "ROBLOX TOP BAR (58px)  —  keep clear",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 124,
+           "y": 22
+          },
+          {
+           "type": "RECT",
+           "name": "Chat Window (when open)",
+           "w": 380,
+           "h": 210,
+           "x": 8,
+           "y": 64,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.04
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "CHAT WINDOW (desktop, when open)",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 20,
+           "y": 248
+          },
+          {
+           "type": "RECT",
+           "name": "Leaderboard",
+           "w": 236,
+           "h": 170,
+           "x": 1032,
+           "y": 64,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.06
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "LEADERBOARD (leaderstats)",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 1044,
+           "y": 210
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Mobile Thumbstick",
+           "w": 150,
+           "h": 150,
+           "x": 50,
+           "y": 510,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "MOBILE THUMBSTICK",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 62,
+           "y": 668
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Mobile Jump",
+           "w": 96,
+           "h": 96,
+           "x": 1120,
+           "y": 550,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "MOBILE JUMP",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 1122,
+           "y": 660
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Screen C16-C · Milestone Ladder (Compact 500px)",
+     "layout": "V",
+     "gap": 12,
+     "x": 2740,
+     "y": 180,
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "C16-C · Milestone Ladder (Compact 500px)",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "name": "Screen C16-C Milestone",
+       "w": 1280,
+       "h": 720,
+       "radius": 0,
+       "clip": true,
+       "children": [
+        {
+         "name": "World [skip]",
+         "w": 1280,
+         "h": 720,
+         "x": 0,
+         "y": 0,
+         "fill": {
+          "grad": [
+           "DDF5EE",
+           "A8DCD8"
+          ],
+          "angle": 90
+         },
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Water",
+           "w": 1280,
+           "h": 300,
+           "x": 0,
+           "y": 420,
+           "fill": {
+            "hex": "9AD4F5",
+            "opacity": 0.35
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Island",
+           "w": 560,
+           "h": 130,
+           "x": 360,
+           "y": 370,
+           "fill": {
+            "hex": "7FD3B0",
+            "opacity": 0.55
+           }
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Island Top",
+           "w": 360,
+           "h": 70,
+           "x": 460,
+           "y": 372,
+           "fill": {
+            "hex": "4FAF8A",
+            "opacity": 0.35
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Dim",
+           "w": 1280,
+           "h": 720,
+           "x": 0,
+           "y": 0,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          }
+         ]
+        },
+        {
+         "name": "Enhance · Milestone Ladder",
+         "layout": "V",
+         "w": 500,
+         "radius": 36,
+         "clip": true,
+         "fill": {
+          "var": "cozy/panel"
+         },
+         "stroke": {
+          "var": "cozy/track"
+         },
+         "strokeW": 2,
+         "effects": [
+          {
+           "color": "3D4B5C",
+           "a": 0.1,
+           "y": 6,
+           "blur": 18
+          }
+         ],
+         "children": [
+          {
+           "name": "Body",
+           "layout": "V",
+           "gap": 10,
+           "pad": [
+            34,
+            40,
+            26,
+            40
+           ],
+           "fillW": true,
+           "cross": "CENTER",
+           "children": [
+            {
+             "name": "Picture",
+             "w": 96,
+             "h": 96,
+             "radius": 20,
+             "fill": "FFFFFF",
+             "stroke": {
+              "var": "cozy/track"
+             },
+             "strokeW": 2,
+             "layout": "H",
+             "main": "CENTER",
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img equipment/CoralRod",
+               "w": 80,
+               "h": 80
+              }
+             ]
+            },
+            {
+             "type": "TEXT",
+             "text": "Enhance Coral Rod",
+             "textStyle": "Aura Fishing/Title",
+             "color": {
+              "var": "cozy/text"
+             },
+             "name": "Title",
+             "align": "CENTER",
+             "w": 440
+            },
+            {
+             "name": "Levels",
+             "layout": "H",
+             "gap": 8,
+             "cross": "CENTER",
+             "children": [
+              {
+               "name": "Pill +3",
+               "layout": "H",
+               "gap": 5,
+               "pad": [
+                5,
+                12,
+                5,
+                10
+               ],
+               "radius": 999,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/sky-lip"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+3",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/on-accent"
+                 },
+                 "name": "Label"
+                }
+               ]
+              },
+              {
+               "type": "TEXT",
+               "text": "→",
+               "textStyle": "Aura Fishing/Title",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Arrow"
+              },
+              {
+               "name": "Pill +4",
+               "layout": "H",
+               "gap": 5,
+               "pad": [
+                5,
+                12,
+                5,
+                10
+               ],
+               "radius": 999,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/mint-lip"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+4",
+                 "textStyle": "Aura Fishing/Caption",
+                 "color": {
+                  "var": "cozy/on-accent"
+                 },
+                 "name": "Label"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Milestone Ladder Table",
+             "layout": "V",
+             "gap": 4,
+             "pad": 8,
+             "radius": 14,
+             "fill": {
+              "var": "cozy/sand"
+             },
+             "fillW": true,
+             "children": [
+              {
+               "name": "Milestone Header",
+               "layout": "H",
+               "gap": 8,
+               "pad": [
+                4,
+                10,
+                4,
+                10
+               ],
+               "cross": "CENTER",
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "MILESTONE",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 11,
+                 "color": "7A8A99",
+                 "name": "H_Mile",
+                 "w": 95
+                },
+                {
+                 "type": "TEXT",
+                 "text": "LUCK",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 11,
+                 "color": "7A8A99",
+                 "name": "H_Luck",
+                 "w": 58
+                },
+                {
+                 "type": "TEXT",
+                 "text": "REEL",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 11,
+                 "color": "7A8A99",
+                 "name": "H_Reel",
+                 "w": 54
+                },
+                {
+                 "type": "TEXT",
+                 "text": "BAR",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 11,
+                 "color": "7A8A99",
+                 "name": "H_Bar",
+                 "w": 54
+                },
+                {
+                 "type": "TEXT",
+                 "text": "STATUS",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 11,
+                 "color": "7A8A99",
+                 "name": "H_Status",
+                 "w": 68,
+                 "align": "CENTER"
+                }
+               ]
+              },
+              {
+               "name": "Row +0 Base",
+               "layout": "H",
+               "gap": 8,
+               "pad": [
+                7,
+                10,
+                7,
+                10
+               ],
+               "radius": 10,
+               "cross": "CENTER",
+               "fill": {
+                "var": "cozy/panel"
+               },
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+0 Base",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "7A8A99",
+                 "name": "Milestone",
+                 "w": 95
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+15.0%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "7A8A99",
+                 "name": "Luck",
+                 "w": 58
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+0.30",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "7A8A99",
+                 "name": "Reel",
+                 "w": 54
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+5.0%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "7A8A99",
+                 "name": "Bar",
+                 "w": 54
+                },
+                {
+                 "name": "StatusBox",
+                 "layout": "H",
+                 "main": "CENTER",
+                 "w": 68,
+                 "children": [
+                  {
+                   "name": "Badge Locked",
+                   "layout": "H",
+                   "pad": [
+                    2,
+                    6,
+                    2,
+                    6
+                   ],
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/track"
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "Base",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 11,
+                     "color": "9AA5B1",
+                     "name": "Text"
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Row +3 Current",
+               "layout": "H",
+               "gap": 8,
+               "pad": [
+                7,
+                10,
+                7,
+                10
+               ],
+               "radius": 10,
+               "cross": "CENTER",
+               "fill": {
+                "hex": "EBF5FB",
+                "opacity": 1.0
+               },
+               "stroke": {
+                "var": "cozy/sky-lip"
+               },
+               "strokeW": 1.5,
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+3 Current",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "2B6CB0",
+                 "name": "Milestone",
+                 "w": 95
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+16.9%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "2B6CB0",
+                 "name": "Luck",
+                 "w": 58
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+0.34",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "2B6CB0",
+                 "name": "Reel",
+                 "w": 54
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+5.6%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "2B6CB0",
+                 "name": "Bar",
+                 "w": 54
+                },
+                {
+                 "name": "StatusBox",
+                 "layout": "H",
+                 "main": "CENTER",
+                 "w": 68,
+                 "children": [
+                  {
+                   "name": "Badge Current",
+                   "layout": "H",
+                   "pad": [
+                    2,
+                    8,
+                    2,
+                    8
+                   ],
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/sky-lip"
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "CURRENT",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 11,
+                     "color": "FFFFFF",
+                     "name": "Text"
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Row +4 Next",
+               "layout": "H",
+               "gap": 8,
+               "pad": [
+                7,
+                10,
+                7,
+                10
+               ],
+               "radius": 10,
+               "cross": "CENTER",
+               "fill": {
+                "hex": "EAF8F2",
+                "opacity": 1.0
+               },
+               "stroke": {
+                "var": "cozy/mint-lip"
+               },
+               "strokeW": 1.5,
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+4 Next",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "23784F",
+                 "name": "Milestone",
+                 "w": 95
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+17.5%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "23784F",
+                 "name": "Luck",
+                 "w": 58
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+0.35",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "23784F",
+                 "name": "Reel",
+                 "w": 54
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+5.8%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "23784F",
+                 "name": "Bar",
+                 "w": 54
+                },
+                {
+                 "name": "StatusBox",
+                 "layout": "H",
+                 "main": "CENTER",
+                 "w": 68,
+                 "children": [
+                  {
+                   "name": "Badge Next",
+                   "layout": "H",
+                   "pad": [
+                    2,
+                    8,
+                    2,
+                    8
+                   ],
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/mint-lip"
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "NEXT",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 11,
+                     "color": "FFFFFF",
+                     "name": "Text"
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Row +10 Peak Max",
+               "layout": "H",
+               "gap": 8,
+               "pad": [
+                7,
+                10,
+                7,
+                10
+               ],
+               "radius": 10,
+               "cross": "CENTER",
+               "fill": {
+                "hex": "FEF8E7",
+                "opacity": 1.0
+               },
+               "stroke": {
+                "var": "cozy/gold"
+               },
+               "strokeW": 1.5,
+               "children": [
+                {
+                 "type": "TEXT",
+                 "text": "+10 Peak Max",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "9C6805",
+                 "name": "Milestone",
+                 "w": 95
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+22.2%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "9C6805",
+                 "name": "Luck",
+                 "w": 58
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+0.44",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "9C6805",
+                 "name": "Reel",
+                 "w": 54
+                },
+                {
+                 "type": "TEXT",
+                 "text": "+7.4%",
+                 "font": {
+                  "family": "Fredoka One",
+                  "style": "Regular"
+                 },
+                 "size": 13,
+                 "color": "9C6805",
+                 "name": "Bar",
+                 "w": 54
+                },
+                {
+                 "name": "StatusBox",
+                 "layout": "H",
+                 "main": "CENTER",
+                 "w": 68,
+                 "children": [
+                  {
+                   "name": "Badge Max",
+                   "layout": "H",
+                   "pad": [
+                    2,
+                    8,
+                    2,
+                    8
+                   ],
+                   "radius": 999,
+                   "fill": {
+                    "var": "cozy/gold"
+                   },
+                   "children": [
+                    {
+                     "type": "TEXT",
+                     "text": "PEAK",
+                     "font": {
+                      "family": "Fredoka One",
+                      "style": "Regular"
+                     },
+                     "size": 11,
+                     "color": "FFFFFF",
+                     "name": "Text"
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Toggle Note",
+             "layout": "H",
+             "gap": 6,
+             "cross": "CENTER",
+             "children": [
+              {
+               "type": "TEXT",
+               "text": "Tap any row to preview or view full +0…+10 table",
+               "font": {
+                "family": "Fredoka One",
+                "style": "Regular"
+               },
+               "size": 12,
+               "color": "7A8A99",
+               "name": "Note"
+              }
+             ]
+            },
+            {
+             "name": "Materials",
+             "layout": "H",
+             "gap": 8,
+             "cross": "CENTER",
+             "opacity": 0.65,
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img materials/enhance_stone",
+               "w": 24,
+               "h": 24
+              },
+              {
+               "type": "TEXT",
+               "text": "x2 Enhance Stone (phase 2: +6 and up)",
+               "textStyle": "Aura Fishing/Caption",
+               "color": {
+                "var": "cozy/subtext"
+               },
+               "name": "Label"
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Footer",
+           "layout": "H",
+           "gap": 16,
+           "pad": [
+            16,
+            32,
+            20,
+            32
+           ],
+           "fillW": true,
+           "main": "CENTER",
+           "fill": {
+            "var": "cozy/sand"
+           },
+           "children": [
+            {
+             "type": "INSTANCE",
+             "ref": "3487:4298",
+             "variant": "Style=Ghost",
+             "texts": {
+              "Label": "Cancel"
+             },
+             "name": "Btn Cancel",
+             "fillW": true
+            },
+            {
+             "name": "Btn Buy",
+             "layout": "H",
+             "gap": 6,
+             "pad": [
+              8,
+              14,
+              11,
+              14
+             ],
+             "radius": 16,
+             "cross": "CENTER",
+             "main": "CENTER",
+             "fill": {
+              "var": "cozy/gold"
+             },
+             "stroke": {
+              "var": "cozy/gold-lip"
+             },
+             "strokeSides": {
+              "b": 5
+             },
+             "children": [
+              {
+               "type": "RECT",
+               "name": "Img ui/status/coin",
+               "w": 22,
+               "h": 22
+              },
+              {
+               "type": "TEXT",
+               "text": "4.0k",
+               "font": {
+                "family": "Fredoka One",
+                "style": "Regular"
+               },
+               "size": 20,
+               "color": "FFFFFF",
+               "name": "Price"
+              }
+             ],
+             "w": 118
+            }
+           ]
+          }
+         ],
+         "x": 390,
+         "y": 70
+        },
+        {
+         "name": "[skip] Roblox CoreGui (guide)",
+         "w": 1280,
+         "h": 720,
+         "x": 0,
+         "y": 0,
+         "children": [
+          {
+           "type": "RECT",
+           "name": "Top Bar",
+           "w": 1280,
+           "h": 58,
+           "x": 0,
+           "y": 0,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Roblox Menu Btn",
+           "w": 44,
+           "h": 44,
+           "x": 12,
+           "y": 7,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          },
+          {
+           "type": "RECT",
+           "name": "Chat Btn",
+           "w": 44,
+           "h": 44,
+           "x": 64,
+           "y": 7,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.28
+           }
+          },
+          {
+           "type": "TEXT",
+           "text": "ROBLOX TOP BAR (58px)  —  keep clear",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 124,
+           "y": 22
+          },
+          {
+           "type": "RECT",
+           "name": "Chat Window (when open)",
+           "w": 380,
+           "h": 210,
+           "x": 8,
+           "y": 64,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.04
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "CHAT WINDOW (desktop, when open)",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 20,
+           "y": 248
+          },
+          {
+           "type": "RECT",
+           "name": "Leaderboard",
+           "w": 236,
+           "h": 170,
+           "x": 1032,
+           "y": 64,
+           "radius": 12,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.06
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "LEADERBOARD (leaderstats)",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 1044,
+           "y": 210
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Mobile Thumbstick",
+           "w": 150,
+           "h": 150,
+           "x": 50,
+           "y": 510,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "MOBILE THUMBSTICK",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 62,
+           "y": 668
+          },
+          {
+           "type": "ELLIPSE",
+           "name": "Mobile Jump",
+           "w": 96,
+           "h": 96,
+           "x": 1120,
+           "y": 550,
+           "fill": {
+            "hex": "3D4B5C",
+            "opacity": 0.07
+           },
+           "stroke": {
+            "hex": "3D4B5C",
+            "opacity": 0.25
+           },
+           "strokeW": 1.5
+          },
+          {
+           "type": "TEXT",
+           "text": "MOBILE JUMP",
+           "textStyle": "Aura Fishing/Caption",
+           "color": {
+            "var": "cozy/subtext"
+           },
+           "name": "Label",
+           "x": 1122,
+           "y": 660
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Enhance Formula & Math Rules",
+     "layout": "V",
+     "gap": 10,
+     "pad": 24,
+     "radius": 24,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 2,
+     "effects": [
+      {
+       "color": "3D4B5C",
+       "a": 0.1,
+       "y": 6,
+       "blur": 18
+      }
+     ],
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "Enhance Formula & Math Rules",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "type": "TEXT",
+       "text": "Exact compound stat growth and coin sink formulas used in Aura Fishing economy.",
+       "textStyle": "Aura Fishing/Small",
+       "color": {
+        "var": "cozy/subtext"
+       },
+       "name": "Desc",
+       "w": 592
+      },
+      {
+       "name": "Body",
+       "layout": "V",
+       "gap": 14,
+       "children": [
+        {
+         "name": "Rules List",
+         "layout": "V",
+         "gap": 10,
+         "children": [
+          {
+           "type": "TEXT",
+           "text": "1. Stat Multiplier: Stat = Base * (1.04 ^ level). Each level gives +4% compound stat boost (+48.0% total at +10).",
+           "textStyle": "Aura Fishing/Small",
+           "color": {
+            "var": "cozy/text"
+           }
+          },
+          {
+           "type": "TEXT",
+           "text": "2. Affected Stats: Luck, Reel Power, Catch Bar Size, Resilience (Rod stats scaled simultaneously).",
+           "textStyle": "Aura Fishing/Small",
+           "color": {
+            "var": "cozy/text"
+           }
+          },
+          {
+           "type": "TEXT",
+           "text": "3. Upgrade Cost: math.floor(Price * 0.1 * 1.5 ^ level). Costs scale exponentially (1.2k -> 46.1k for Coral Rod).",
+           "textStyle": "Aura Fishing/Small",
+           "color": {
+            "var": "cozy/text"
+           }
+          },
+          {
+           "type": "TEXT",
+           "text": "4. Phase 2 Materials: Enhancing from +6 to +10 requires Enhance Stones (x2, x3, x4, x5, x6).",
+           "textStyle": "Aura Fishing/Small",
+           "color": {
+            "var": "cozy/text"
+           }
+          },
+          {
+           "type": "TEXT",
+           "text": "5. Safety Guarantee: Enhancing NEVER breaks or downgrades items. It is 100% permanent progression.",
+           "textStyle": "Aura Fishing/Small",
+           "color": {
+            "var": "cozy/text"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "w": 640,
+     "x": 60,
+     "y": 980
+    },
+    {
+     "name": "UX Layout Comparison & Recommendations",
+     "layout": "V",
+     "gap": 10,
+     "pad": 24,
+     "radius": 24,
+     "fill": {
+      "var": "cozy/panel"
+     },
+     "stroke": {
+      "var": "cozy/track"
+     },
+     "strokeW": 2,
+     "effects": [
+      {
+       "color": "3D4B5C",
+       "a": 0.1,
+       "y": 6,
+       "blur": 18
+      }
+     ],
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "UX Layout Comparison & Recommendations",
+       "textStyle": "Aura Fishing/Title",
+       "color": {
+        "var": "cozy/text"
+       },
+       "name": "Title"
+      },
+      {
+       "type": "TEXT",
+       "text": "Trade-offs for the 3 progression table designs to guide player experience and UI implementation.",
+       "textStyle": "Aura Fishing/Small",
+       "color": {
+        "var": "cozy/subtext"
+       },
+       "name": "Desc",
+       "w": 692
+      },
+      {
+       "name": "Body",
+       "layout": "V",
+       "gap": 14,
+       "children": [
+        {
+         "name": "Comparison List",
+         "layout": "V",
+         "gap": 10,
+         "children": [
+          {
+           "type": "TEXT",
+           "text": "Option A (Dual-Panel Modal, 860x540): Best for PC / Tablet. Immediate visibility of current step and entire +0…+10 ladder side-by-side with zero clicks.",
+           "textStyle": "Aura Fishing/Small",
+           "color": {
+            "var": "cozy/text"
+           }
+          },
+          {
+           "type": "TEXT",
+           "text": "Option B (Tabbed Modal, 540x560): Keeps existing compact popup size. Switch tabs to inspect full ladder; includes quick upgrade button directly inside table.",
+           "textStyle": "Aura Fishing/Small",
+           "color": {
+            "var": "cozy/text"
+           }
+          },
+          {
+           "type": "TEXT",
+           "text": "Option C (Milestone Ladder, 500x560): Best for Mobile! Shows only the 4 key milestones (+0 Base, +3 Current, +4 Next, +10 Peak) without overwhelming screen space.",
+           "textStyle": "Aura Fishing/Small",
+           "color": {
+            "var": "cozy/text"
+           }
+          },
+          {
+           "type": "TEXT",
+           "text": "Recommendation: Implement Option C as standard mobile view, with an expandable table sheet (Option B/A) for deeper inspection.",
+           "textStyle": "Aura Fishing/Small",
+           "color": {
+            "var": "cozy/text"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "w": 740,
+     "x": 740,
+     "y": 980
+    }
+   ]
+  }
+ }
+]

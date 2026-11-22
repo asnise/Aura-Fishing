@@ -106,7 +106,7 @@ end
 function MasteryScreen.Create(handlers: { [string]: any }): any
 	local screen: any = {}
 	-- shell (ScreenGui in PlayerGui, panel, title, X, open/close/register) = Window core
-	local shell = Window.Shell({ Name = "Mastery", Title = "Mastery", WindowName = "Window Mastery" })
+	local shell = Window.Shell({ Name = "Mastery", Title = "Mastery", WindowName = "Window Mastery", ScrollOnShort = true })
 	local gui, win = shell.Gui, shell.Frame
 	local rendered = false
 	shell.OnOpen = function()

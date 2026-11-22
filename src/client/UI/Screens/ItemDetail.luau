@@ -9,7 +9,7 @@
 --     Stats     wrapping badge row (Badge1..8)
 --     Desc      wrapped body text
 --     Meta      wrapping pill row (Badge1..5): xN, kg, HOT xN, Equipped, +N, chance
---     Modifiers Rods only: Label, Socket1..3 (locked), Spacer, Soon pill
+--     Modifiers Rods only: filled at runtime with PREFIX (2) and SUFFIX (2) rows
 --     Actions   Line (2px top rule), Buttons (A1..A3, 48 high, share the width)
 --     GetFrom   not owned only: Line, Title "Get from", Icon, Label
 --     Nub       small rotated square on the left or right edge, points at the slot
@@ -117,46 +117,16 @@ local function head(card: Frame)
 	end
 end
 
+-- Empty container: UI/ItemDetail builds the PREFIX / SUFFIX rows (Figma 3778:897) when it runs.
 local function modifiers(card: Frame)
-	local row = New("Frame", {
+	New("Frame", {
 		Name = "Modifiers",
-		Size = UDim2.fromOffset(INNER, 30),
+		Size = UDim2.fromOffset(INNER, 0),
+		AutomaticSize = Enum.AutomaticSize.Y,
 		BackgroundTransparency = 1,
 		LayoutOrder = 6,
 		Parent = card,
-		[New.Children] = { hlist(6) },
 	})
-	New.Text({ Name = "Label", Size = UDim2.fromOffset(0, 18), AutomaticSize = Enum.AutomaticSize.X, Text = "Modifiers", TextColor3 = T.SubText, TextSize = 12, LayoutOrder = 1, Parent = row })
-	for i = 1, 3 do
-		local s = New("Frame", {
-			Name = "Socket" .. i,
-			Size = UDim2.fromOffset(30, 30),
-			BackgroundColor3 = T.PanelLight,
-			LayoutOrder = 1 + i,
-			Parent = row,
-			[New.Children] = { New.Pill(), New.Stroke(T.Track, 2) },
-		})
-		New.Image({
-			Name = "Lock",
-			Key = "ui/mastery/locked",
-			Fallback = T.Track,
-			AnchorPoint = Vector2.new(0.5, 0.5),
-			Position = UDim2.fromScale(0.5, 0.5),
-			Size = UDim2.fromOffset(14, 14),
-			ImageTransparency = 0.5,
-			Parent = s,
-		})
-	end
-	New("Frame", {
-		Name = "Spacer",
-		Size = UDim2.fromOffset(1, 1),
-		BackgroundTransparency = 1,
-		LayoutOrder = 10,
-		Parent = row,
-		[New.Children] = { New("UIFlexItem", { FlexMode = Enum.UIFlexMode.Fill }) },
-	})
-	local soon = New.BadgeSlots(1, { Name = "Soon", Size = UDim2.fromOffset(0, 21), AutomaticSize = Enum.AutomaticSize.X, LayoutOrder = 11, Parent = row })
-	New.SetBadges(soon, { { Text = "Soon", TextColor = T.SubText } })
 end
 
 -- Button content "LABEL | icon value" on one line (Figma act48). Hidden; UI/ItemDetail shows it (and
@@ -225,10 +195,11 @@ local function actions(card: Frame)
 	local row = New("Frame", {
 		Name = "Buttons",
 		Size = UDim2.fromOffset(INNER, 48),
+		AutomaticSize = Enum.AutomaticSize.Y,
 		BackgroundTransparency = 1,
 		LayoutOrder = 1,
 		Parent = a,
-		[New.Children] = { hlist(8) },
+		[New.Children] = { hlist(8, true) },
 	})
 	for i, s in { { "EQUIP", T.Good }, { "ENHANCE  1.2k", T.Gold }, { "TANK", T.Sky } } do
 		local b = New.Button({

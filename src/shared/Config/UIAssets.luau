@@ -214,6 +214,7 @@ local UIAssets = {
 		["ui/icons/reel_in"] = "rbxassetid://76400978628676",
 		["ui/icons/hook_catch"] = "rbxassetid://108973559278048",
 		["auras/fx_ring"] = "rbxassetid://133919159070204",
+		["ui/icons/statscodex"] = "rbxassetid://122180566876353",
 	},
 }
 

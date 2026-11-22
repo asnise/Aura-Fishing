@@ -2,7 +2,7 @@
 
 **เอกสารอ้างอิง:** การประชุมและข้อสรุปโดย Game Director  
 **ผู้บันทึก:** ฟลอร่า (Flora - Secretary & System Architect)  
-**อัปเดตล่าสุด (Timestamp):** 2026-11-22T14:02:33+07:00
+**อัปเดตล่าสุด (Timestamp):** 2026-11-23T01:35:29+07:00
 
 ---
 
@@ -20,6 +20,12 @@
 ---
 
 ## รายละเอียดเชิงลึกรายข้อ (Detailed Specifications)
+
+- 2026-11-23T01:35:29+07:00 — ใช้ภาพ Magical Lavender Fishing Codex เป็นไอคอน Stats Codex ใน Main Menu อัปโหลดและผูก Image Asset ID `122180566876353` แล้ว
+
+- 2026-11-23T00:25:22+07:00 — Stats Codex ใช้ปุ่มปิดร่วมของ `Window.Shell` และเพิ่มระยะขอบทั้งสองส่วนที่เลื่อนดูได้ แผนตรวจ responsive ของเมนูทั้งหมดอยู่ที่ [แผนตรวจ Responsive ของเมนู](RESPONSIVE_MENU_PLAN.md)
+
+- 2026-11-22T23:36:49+07:00 — เลือก A. Searchable Index จาก [บอร์ด Stats Codex](https://www.figma.com/design/givb0hmQYmmaOy7p7DGtb2/Ro-Offline?node-id=3785-25180) สำหรับเมนูแยกใน Main Menu ใช้ปุ่มข้อความ Stats Codex ผู้เล่นค้นและอ่านคำอธิบาย Stats, Rod Mods และ Item Attributes ได้ในหน้าต่างเดียว
 
 ### 1. ตัวคูณค่า Luck ของ Gamepass
 - **ตัวเลขสรุป:** กำหนดที่ **x1.25 เท่า**
@@ -56,6 +62,7 @@
   - เมื่อกดยืนยัน คันรอง (Sub Item) จะสลายไป
   - มีโอกาสเกิดความล้มเหลวหรือเสียหาย (Failure Chance)
   - **การสืบทอด:** ระดับการตีบวก (+Enhance) หรือ Enchant ของคันรองจะไม่ตามมา จะคงอยู่เฉพาะของคันหลัก (Base) เท่านั้น
+- **แบบหน้าจอ 2026-11-22T22:47:43+07:00** — [Screen 19 - Rod Fusion steps](https://www.figma.com/design/givb0hmQYmmaOy7p7DGtb2/Ro-Offline?node-id=3782-24507) ให้เลือกคันหลัก ตามด้วยคันวัตถุดิบชนิดเดียวกัน แล้วเลือก Prefix หรือ Suffix ขั้น Compare เทียบช่องคันหลักกับ Mod ของคันวัตถุดิบ เมื่อติ๊กเลือกหนึ่งรายการ ตัวอื่นในฝั่งนั้นจะถูกปิดจนกว่าจะติ๊กตัวเดิมออก เปิดปุ่ม FUSE เมื่อเลือกครบทั้งสองฝั่ง พร้อมแสดงพรีวิวและค่าใช้จ่าย ระบบในเกมรอพัฒนา
 
 ### 4. อัตราการแจก Gems และความถี่การสุ่มออร่า (Aura Roll Economy)
 - **ดรอปพื้นฐาน:** ปลาตั้งแต่ระดับ **Uncommon ขึ้นไป** จะการันตีได้อย่างน้อย **1 Gem** ต่อตัว
@@ -105,3 +112,8 @@
 - 2026-11-22T14:02:33+07:00 — Dashboard คงพื้นขาว ใช้คอรัลและฟ้าตาม Cozy Lake แยกหมวด Tuning ออกจากมุมมองงาน สถานะระบบอ้างอิง project.json และบันทึกเวลาอ่านจาก TASKS.md
 
 - 2026-11-22 — Item rework (ตามแผน `docs/ITEM_REWORK_PLAN.md`) ข้อตกลงที่ใช้จริง: 1) ปลา, คันเบ็ด, สายเบ็ดเป็นไอเทมเดี่ยวมี UUID ใน Bag ไม่รวมกอง (หีบสมบัติรวมได้ 5) 2) ของที่สวมอยู่ (คันเบ็ด, สายเบ็ด) ไม่กินช่อง ของสำรองกินช่อง กระเป๋าและเหยื่อไม่กินช่อง 3) ขายคืนคันเบ็ด/สายเบ็ด 40% ของราคาซื้อ + เหรียญที่ลง Enhance (ป้องกันซื้อแล้วขายเอากำไร), ของราคา 0 และของ Bound ขายไม่ได้ 4) ความจุกระเป๋าใหม่ 10 / 16 / 24 / 36 / 50 + Infinite เพราะปลาไม่รวมกองแล้ว 5) ผู้เล่นซื้อคันใหม่แล้วสวมให้อัตโนมัติเมื่อดีกว่าคันที่สวมอยู่ ถ้าไม่ดีกว่าเก็บไว้ใน Bag (ไว้ทำ Fusion ภายหลัง) 6) เซฟ v6 ล้างไอเทมเก่า คงสกุลเงิน เลเวล สกิล รีเบิร์ธ สมุดปลา Gamepass 7) ยังไม่ทำ: สุ่ม Mod, Rod Fusion, เทรดจริง
+- 2026-11-22T22:20:00+07:00 — ออกแบบสเปกระบบ Modifier (Prefix / Suffix) ฉบับสมบูรณ์ใน `docs/MODIFIER_SYSTEM_SPEC.md` และเตรียมเอกสารส่งต่อใน `docs/HANDOFF_MODIFIERS.md` (เฉพาะไฟล์ .md ไม่แตะสคริปต์): รองรับการสุ่ม 1-2 ช่องตาม Drop Conditions, แคตตาล็อก Attribute 6 ระดับ Rarity, กลไกสุ่มค่าตัวเลข -N ถึง +N (มีทั้งค่าบวกและค่าลบ/Cursed Roll) และระบบพิเศษ Stat Max Cap Breaker ขยายเพดานสเตตัสสูงสุด (CatchBarSize, Resilience, AutoSpeed, FishStability, BiteSpeed) สเกลตาม Rarity ตั้งแต่ Rare ถึง Mythic พร้อม Absolute Safety Ceiling เพื่อคุมสมดุลมินิเกม
+- 2026-11-22 — ค่าใช้จ่ายและโอกาสล้มเหลวของ Rod Fusion: ดู `docs/ROD_FUSION_COST.md` (Coins ตามราคาคัน x ความหายากของ Mod, Pearls เฉพาะ Epic ขึ้นไป, โอกาสล้มเหลว 0-40%, Guard ด้วย Gems เป็นตัวเลือก)
+- 2026-11-22 — Rod Fusion: ล้มเหลว 5% ตายตัว ล้มเหลวแล้วหายแค่คัน Material (ไม่หัก Coins/Pearls) UI แสดงบรรทัดเตือน 5% FAIL ก่อน FUSE และหน้าผล FUSION FAILED (Figma 3782:24507) รายละเอียดใน `docs/ROD_FUSION_COST.md`
+- 2026-11-22 — C16 Enhance Popup Main Design: ยืนยันใช้แบบ Attribute Comparison Table (`3788:26962` ในหน้า Out Space) เป็นดีไซน์หลักสำหรับ C16 Enhance Popup แสดงตาราง Before (+3) สีฟ้าอ่อน, After (+4) สีเขียวมิ้นต์อ่อน, ป้าย Gain สีเขียว และตัวเชื่อมบอกขั้นเป็น Clean Chevron (>)
+- 2026-11-22 — Store Pass Card "OWNED" State Standard: แทนที่ป้าย Pill ลอยๆ ใต้คำอธิบาย ให้เปลี่ยนมาใช้ Global Button Component ในสถานะ Disabled (ขนาดมาตรฐาน 118 × 48 px, ข้อความ "OWNED", สี Theme.Disabled / Lip) เพื่อคงตำแหน่ง Action Slot และ Baseline ของการ์ดใน Store ให้เท่ากันทุกใบ

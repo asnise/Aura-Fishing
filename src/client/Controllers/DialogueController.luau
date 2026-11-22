@@ -3,7 +3,7 @@
 -- Config/Dialogues. Opened by the server when a world ProximityPrompt is used (RemoteEvent "OpenDialogue").
 --   Line text types in (MaxVisibleGraphemes); tapping the box shows the whole line at once.
 --   Choices run Config actions: SellAll (same confirm as the HUD SELL ALL), HotFish, Banner (gacha page),
---   Menu (Shop / Auras / Fishdex), Say, Talk (next chat line). Close: X, Escape, or walking away.
+--   Menu (Shop / Auras / Fishdex), Fusion (Rod Fusion window), Say, Talk (next chat line). Close: X, Escape, or walking away.
 
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -167,6 +167,8 @@ local function run(action: any)
 		GachaPageController.Open(action.Banner) -- MenuManager closes the dialogue
 	elseif kind == "Menu" then
 		HUD.MenuRequested:Fire(action.Menu) -- MenuManager closes the dialogue
+	elseif kind == "Fusion" then
+		require(script.Parent.FusionController).Open() -- Rod Fusion window; MenuManager closes the dialogue
 	elseif kind == "Say" then
 		say(fill(action.Line))
 	elseif kind == "Talk" then

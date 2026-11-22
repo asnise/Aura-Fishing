@@ -59,6 +59,8 @@ Talk to the user in Thai; code, identifiers and comments in English.
   Chip component icons: `--root 3487:4313 --set "Type=Coins/Icon=ui/status/coin" ...`. Art Library section lives at x=7100 on page Out Space.
 
 ## Handoff / assets
+- **Items, Modifiers, Rod Fusion (latest, start here): `docs/HANDOFF_ITEMS_MODS_FUSION.md`**.
+- **Item rework + Bag Upgrade handoff: `docs/HANDOFF_ITEM_REWORK.md`** (UUID items, save v6, open tasks).
 - **Latest full handoff (any agent): `docs/HANDOFF_ANTIGRAVITY.md`** — state after C3–C19, rules (Figma first, rates per second), next tasks, Figma node ids.
 - Next-conversation brief: **`docs/HANDOFF_UI.md`** (screen status, conversion rules, tools, open decisions).
 - Asset catalog: `assets/catalog.json` + `docs/ASSET_CATALOG.md`; ids in code via `Shared.Config.UIAssets` (generated). Upload then `tools/art/sync_ui_assets.py`.

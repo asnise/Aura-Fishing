@@ -134,6 +134,11 @@ local function ensure()
 		return Baked.Find(g, path)
 	end
 	New.FitWindow(find("Window")) -- a baked UIScale has no listeners
+	for _, d in g:GetDescendants() do
+		if d:IsA("UIStroke") then
+			d:Destroy() -- no outlines on the Depth popup (older bakes still have them)
+		end
+	end
 	refs = {
 		Shield = find("Shield"),
 		Close = find("Window/Header/Close"),

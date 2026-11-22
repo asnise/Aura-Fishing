@@ -795,7 +795,18 @@ function GachaPage.Bind(screenGui: any, context: any)
 		end
 	end)
 
-	cv.TopBar.Back.Activated:Connect(function()
+	-- older bakes still have the "<" Back button: swap it for the standard red X in the top-right corner
+	local old = cv.TopBar:FindFirstChild("Back")
+	if old then
+		old:Destroy()
+		cv.TopBar.Title.Position = UDim2.fromOffset(0, 4)
+		cv.TopBar.Size = UDim2.fromOffset(1150, 40)
+	end
+	local closeBtn = cv:FindFirstChild("Close")
+	if not closeBtn then
+		closeBtn = New.Button({ Name = "Close", AnchorPoint = Vector2.new(1, 0), Position = UDim2.new(1, -16, 0, 8), Size = UDim2.fromOffset(73, 57), Text = "X", TextSize = 22, BackgroundColor3 = T.Bad, ZIndex = 25, Parent = cv })
+	end
+	closeBtn.Activated:Connect(function()
 		GachaPage.Stop()
 		ctx.back()
 	end)

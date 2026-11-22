@@ -26,6 +26,13 @@ local T = New.Theme
 
 local Window = {}
 
+-- Phones in landscape: the ScreenGui is shorter than 520 (below the top bar).
+function Window.IsShortScreen(): boolean
+	local camera = workspace.CurrentCamera
+	local vp = if camera then camera.ViewportSize else Vector2.new(1280, 720)
+	return vp.Y - game:GetService("GuiService"):GetGuiInset().Y < 520
+end
+
 local LAYER_ORDER = { Hub = 20, Main = 10, Dialogue = 14, Popup = 30, Modal = 50 }
 
 function Window.Shell(opts: { [string]: any }): any
@@ -72,6 +79,59 @@ function Window.Shell(opts: { [string]: any }): any
 	end
 	w.Gui = gui
 	w.Frame = frame
+
+	-- Short screens (phones in landscape): a 760x610 design would be scaled to ~0.45 and unreadable. With
+	-- opts.ScrollOnShort = true (list-like windows such as Aquarium) the window gets the height of the screen, the
+	-- title and close button stay put, and the content scrolls. Store never scrolls: it pages (StoreScreen).
+	local camera = workspace.CurrentCamera
+	local vp = if camera then camera.ViewportSize else Vector2.new(1280, 720)
+	vp = Vector2.new(vp.X, vp.Y - game:GetService("GuiService"):GetGuiInset().Y) -- the ScreenGui starts below the top bar
+	if vp.Y < 520 and opts.ScrollOnShort == true and not opts.AutoHeight and opts.Close ~= false and size.Y > 380 then
+		local HEADER = 64
+		local designInner = size.Y - pad * 2
+		frame.Size = UDim2.fromOffset(size.X, math.min(size.Y, math.floor((vp.Y - 48) / 0.78)))
+		local scroller = New("ScrollingFrame", {
+			Name = "Scroller",
+			Position = UDim2.fromOffset(0, HEADER),
+			Size = UDim2.new(1, 0, 1, -HEADER),
+			BackgroundTransparency = 1,
+			BorderSizePixel = 0,
+			ScrollBarThickness = 4,
+			ScrollingDirection = Enum.ScrollingDirection.Y,
+			CanvasSize = UDim2.fromOffset(0, designInner - HEADER),
+			Parent = frame,
+		})
+		local inner = New("Frame", {
+			Name = "Inner",
+			Position = UDim2.fromOffset(0, -HEADER),
+			Size = UDim2.new(1, 0, 0, designInner),
+			BackgroundTransparency = 1,
+			Parent = scroller,
+		})
+		local function keep(c: Instance): boolean
+			return not c:IsA("GuiObject") or c == scroller or c == w.TitleLabel or c == w.CloseButton or c.Name == "Loading"
+		end
+		local function adopt()
+			for _, c in frame:GetChildren() do
+				if not keep(c) then
+					c.Parent = inner
+				end
+			end
+		end
+		w.Inner = inner
+		w.Adopt = adopt
+		-- the builders add their content right after Shell returns, so adopt on the next frame and for late additions
+		frame.ChildAdded:Connect(function(c)
+			if not keep(c) then
+				task.defer(function()
+					if c.Parent == frame then
+						c.Parent = inner
+					end
+				end)
+			end
+		end)
+		task.defer(adopt)
+	end
 
 	function w.Open(...)
 		MenuManager.WillOpen(opts.Name)

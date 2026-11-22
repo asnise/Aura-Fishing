@@ -289,7 +289,7 @@ local function bagUpgrade(gui: ScreenGui)
 		Name = "BagUpgrade",
 		Size = UDim2.fromScale(1, 1),
 		BackgroundColor3 = Color3.new(0, 0, 0),
-		BackgroundTransparency = 0.55,
+		BackgroundTransparency = 1, -- no black overlay (still blocks clicks behind)
 		Text = "",
 		AutoButtonColor = false,
 		Visible = false,

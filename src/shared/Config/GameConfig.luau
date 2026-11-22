@@ -72,14 +72,40 @@ local GameConfig = {
 
 	-- Inventory (bag, Item rework): capacity = number of SLOTS (Bags.Capacity). One slot = one item.
 	-- Fish and Rods/Lines never stack (each has its own UUID, weight, mutation, mods); only chests stack.
-	-- The rod and line you wear do not use a slot; spare ones do. Baits and Bags never use a slot.
+	-- Fish, rods, lines (the worn ones too), chests and bait types (one slot per type) all use a slot. Auras and Bags do not.
 	Inventory = {
 		TreasureStackMax = 5,
 		TreasureLuckScale = 0.5, -- drop chance *= 1 + Luck * this
 		InfiniteBagSlots = 999, -- capacity with the Infinite Bag pass (C6); UI shows it as "Inf"
 		GearSellFraction = 0.4, -- selling a Rod/Line pays this share of (buy price + coins spent on Enhance)
-		MaxPrefixes = 2, -- Rod mods (rolling / fusion come later)
+		MaxPrefixes = 2, -- Rod mods
 		MaxSuffixes = 2,
+		-- A mod adds this share of the rod's base sell-back value (before the 40%), by rarity.
+		ModSellBonus = { Common = 0, Uncommon = 0.05, Rare = 0.15, Epic = 0.4, Legendary = 0.9, Mythic = 2 } :: { [string]: number },
+	},
+
+	-- Rods found while fishing (Items/RodDrop): chance per catch, raised by Luck; Auto catches roll AutoTreasureMultiplier
+	-- of it. Deep water (DeepDepth m) or a hotspot uses the DeepSea mod table, otherwise Fishing.
+	RodDrop = {
+		Chance = 0.004,
+		LuckScale = 0.5,
+		DeepDepth = 200,
+	},
+
+	-- Rod Fusion (docs/ROD_FUSION_COST.md): move one mod from a Material rod onto a Base rod (same model).
+	-- Coins = rod Price * FeeFraction * RarityMult[mod] * (CapBreakerMult if Cap Breaker) * slot factor
+	-- (CursedDiscount when the replaced mod is negative, EmptySlotMult for a free slot). Pearls: Epic and up.
+	-- FailChance: only the Material rod is lost (nothing is charged).
+	Fusion = {
+		FeeFraction = 0.25,
+		RarityMult = { Common = 1, Uncommon = 1.5, Rare = 2.5, Epic = 4, Legendary = 7, Mythic = 12 } :: { [string]: number },
+		CapBreakerMult = 1.5,
+		CursedDiscount = 0.5,
+		EmptySlotMult = 0.6,
+		PearlCost = { Epic = 300, Legendary = 1500, Mythic = 8000 } :: { [string]: number },
+		FailChance = 0.05,
+		GuardGems = { Rare = 20, Epic = 40, Legendary = 80, Mythic = 150 } :: { [string]: number }, -- optional: pay Gems for a sure success
+		NpcRange = 40, -- studs from Old Marlin
 	},
 
 	-- Boosts (C19, Dev Products): profile.Boosts[id] = os.time() when it ends. Real time (keeps

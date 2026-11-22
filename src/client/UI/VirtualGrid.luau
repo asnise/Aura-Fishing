@@ -19,7 +19,7 @@
 -- grid:NotifyChanged(i)      rebind one cell if it is visible
 -- grid:ItemOf(view)          -> item, index   (use from click handlers connected in Create)
 -- grid:ForEachVisible(fn)    fn(view, item, index, kind) for live per-frame updates (Tick)
--- grid:ScrollToTop() / grid:ScrollTo(i)
+-- grid:ScrollToTop() / grid:ScrollTo(i) / grid:ScrollToIndex(i, align)   align = "start" (default) | "center"
 -- grid.Content               Frame holding the views (sized to the full collection height)
 --
 -- Rules (same as the Unity package): keep state in your data, not on views (views move between indices);
@@ -305,6 +305,21 @@ function VirtualGrid:ScrollTo(index: number)
 	local contentTop = (self.Content.AbsolutePosition.Y - self.Scroll.AbsolutePosition.Y) / scale + self.Scroll.CanvasPosition.Y / scale
 	local y = (contentTop + row * (self.Cell.Y + self.Gap.Y)) * scale
 	self.Scroll.CanvasPosition = Vector2.new(self.Scroll.CanvasPosition.X, math.max(0, y))
+end
+
+-- Scrolls so item `index` is in view. "center" puts its row in the middle of the viewport (clamped to the canvas).
+function VirtualGrid:ScrollToIndex(index: number, align: string?)
+	if not self.Scroll then
+		return
+	end
+	self:ScrollTo(index)
+	if align == "center" then
+		local scale = self:_scale()
+		local viewport = self.Scroll.AbsoluteWindowSize.Y
+		local y = self.Scroll.CanvasPosition.Y - (viewport - self.Cell.Y * scale) / 2
+		local maxY = math.max(0, self.Scroll.AbsoluteCanvasSize.Y - viewport)
+		self.Scroll.CanvasPosition = Vector2.new(self.Scroll.CanvasPosition.X, math.clamp(y, 0, maxY))
+	end
 end
 
 function VirtualGrid:Destroy()

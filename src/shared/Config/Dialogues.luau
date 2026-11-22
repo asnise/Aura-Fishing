@@ -13,6 +13,7 @@
 --                 "HotFish"              say which fish sell for more this hour
 --                 "Banner", Banner = id  open a gacha page (Config/AuraBanners)
 --                 "Menu", Menu = name    open a menu window (Shop / Auras / Fishdex)
+--                 "Fusion"               open the Rod Fusion window (Marlin)
 --                 "Say", Line = text     answer with one line
 --                 "Talk"                 next line from Talk
 
@@ -49,7 +50,7 @@ local Dialogues: { [string]: Npc } = {
 			{ Label = "Sell All Fish", Icon = "icon_fish", Action = { Kind = "SellAll" } },
 			{ Label = "Hot fish today?", Icon = "icon_flame", Action = { Kind = "HotFish" } },
 			{ Label = "Browse gear", Icon = "icon_reel", Action = { Kind = "Menu", Menu = "Shop" } },
-			{ Label = "Just chatting", Icon = "icon_chat", Action = { Kind = "Talk" } },
+			{ Label = "Fuse rods", Icon = "icon_star", Action = { Kind = "Fusion" } }, -- replaced "Just chatting" (4 choices max in the bake)
 		},
 	},
 	Sela = {

@@ -160,7 +160,9 @@ end
 local function shopCategories(): { string }
 	local cats = {}
 	for id in Registry.Equipment do
-		table.insert(cats, id)
+		if id ~= "Bags" then -- bags are bought in the Inventory Bag Upgrade popup
+			table.insert(cats, id)
+		end
 	end
 	table.sort(cats)
 	return cats
@@ -254,9 +256,13 @@ local function fillShop(profile: any)
 			title.Text = item.Name .. (if copies > 0 then `  x{copies}` else "") .. (if isWorn then "  (worn)" else "")
 			title.TextColor3 = if isWorn then T.GoodLip else T.Text
 			row.Sub.Text = sub
-			if item.RequiredLevel and profile.Level < item.RequiredLevel then
+			if item.Price == 0 and copies > 0 then
+				-- the free starter rod / line: one is enough, the button is disabled once you have it
+				setButton(row.Action, "Owned", T.Disabled, nil)
+				row.Action.TextColor3 = T.DisabledText
+			elseif item.RequiredLevel and profile.Level < item.RequiredLevel then
 				title.TextColor3 = T.SubText
-				row.Sub.Text = sub .. "  |  " .. price
+				row.Sub.Text = sub .. "  -  " .. price
 				setButton(row.Action, `Lv. {item.RequiredLevel}`, T.Disabled, nil)
 				row.Action.TextColor3 = T.DisabledText
 			else
@@ -283,7 +289,7 @@ local function fillShop(profile: any)
 				end)
 			elseif item.RequiredLevel and profile.Level < item.RequiredLevel then
 				title.TextColor3 = T.SubText
-				row.Sub.Text = sub .. "  |  " .. price
+				row.Sub.Text = sub .. "  -  " .. price
 				setButton(row.Action, `Lv. {item.RequiredLevel}`, T.Disabled, nil)
 				row.Action.TextColor3 = T.DisabledText
 			else
@@ -297,7 +303,7 @@ local function fillShop(profile: any)
 			local count = profile.Consumables[catId][itemId] or 0
 			title.Text = `{item.Name}  x{count}` .. (if equipped then "  (equipped)" else "")
 			title.TextColor3 = if equipped then T.GoodLip else T.Text
-			row.Sub.Text = sub .. "  |  " .. `pack of {item.BuyAmount}`
+			row.Sub.Text = sub .. "  -  " .. `pack of {item.BuyAmount}`
 			local afford = (profile[item.Currency] or 0) >= item.Price
 			setPriceButton(row.Action, item.Price, item.Currency, afford, function()
 				ctx.invoke("Buy", catId, itemId)

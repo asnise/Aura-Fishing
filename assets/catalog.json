@@ -2804,6 +2804,20 @@
    "rbxassetid": "rbxassetid://133919159070204",
    "used_by": [],
    "global": false
+  },
+  "ui/icons/statscodex": {
+   "file": "assets/ui/Magical Lavender Fishing Codex.png",
+   "sheet": "",
+   "desc": "Lavender fishing book for the Stats Codex Main Menu tile",
+   "size": [
+    1254,
+    1254
+   ],
+   "rbxassetid": "rbxassetid://122180566876353",
+   "used_by": [
+    "Main Menu (Stats Codex)"
+   ],
+   "global": false
   }
  },
  "components": {

@@ -15,6 +15,7 @@ local ORDER: { ModuleScript } = {
 	Services.ProgressionService,
 	Services.FishingService,
 	Services.ShopService,
+	Services.FusionService,
 	Services.AuraService,
 	Services.MonetizationService,
 	Services.AquariumService,

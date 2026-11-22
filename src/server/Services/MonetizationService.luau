@@ -91,7 +91,12 @@ local function refreshPasses(player: Player, data: any)
 		player:SetAttribute("Pass_" .. key, true)
 	end
 	for key, pass in Products.Passes do
-		if pass.PassId > 0 then
+		if data.DevMutedPasses and data.DevMutedPasses[key] then
+			-- Dev "revoke pass": a really bought pass stays switched off for testing until "grant pass"
+			if data.Passes[key] ~= nil then
+				MonetizationService.SetPass(player, key, nil)
+			end
+		elseif pass.PassId > 0 then
 			local owns = ownsOnRoblox(player, pass.PassId)
 			if not player.Parent then
 				return

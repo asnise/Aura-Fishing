@@ -221,6 +221,7 @@
 | `ui/icons/reel_in` | — (library only) |  |
 | `ui/icons/hook_catch` | — (library only) |  |
 | `auras/fx_ring` | — (library only) |  |
+| `ui/icons/statscodex` | Main Menu (Stats Codex) |  |
 
 ## 3. Figma components (rebuild these as Roblox templates / `UI/New` helpers)
 

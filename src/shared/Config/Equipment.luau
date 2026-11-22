@@ -2,7 +2,7 @@
 -- Shop equipment. Every category uses the same shape so the shop UI and ShopService
 -- handle new categories/items automatically.
 --
--- Rods / Lines        : bought any number of times; every purchase is its own item (UUID) in the bag, one worn.
+-- Rods / Lines        : bought any number of times (the free starter one only once); every purchase is its own item (UUID) in the bag, one worn.
 --                       Sell back for GameConfig.Inventory.GearSellFraction of the price (+ Enhance coins).
 -- Bags                : permanent capacity upgrades (ladder), one equipped, never use a slot.
 -- Baits               : consumable stacks (BuyAmount per purchase), one bait slot equipped,

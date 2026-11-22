@@ -93,7 +93,7 @@ end
 function AquariumScreen.Create(handlers: { [string]: any }): any
 	local screen: any = {}
 	-- shell (ScreenGui in PlayerGui, panel, title, X, open/close/register) = Window core
-	local shell = Window.Shell({ Name = "Aquarium", Title = "Aquarium", WindowName = "Window Aquarium" })
+	local shell = Window.Shell({ Name = "Aquarium", Title = "Aquarium", WindowName = "Window Aquarium", ScrollOnShort = true })
 	local gui, win = shell.Gui, shell.Frame
 	local rendered = false
 	shell.OnOpen = function()

@@ -1067,22 +1067,31 @@ function New.FitToScreen(obj: GuiObject, margin: number?): UIScale
 	local busy = false
 	local popping = false
 	local target = 1
-	local function fit()
-		if busy or popping then
-			return
-		end
+	local popToken: any = nil
+	-- the scale that makes the window fit the screen, or nil while it has no layout yet (first open)
+	local function measure(): number?
 		local screen = obj:FindFirstAncestorOfClass("ScreenGui")
 		if not screen then
-			return
+			return nil
 		end
 		local s = scale.Scale
 		local w, h = obj.AbsoluteSize.X / s, obj.AbsoluteSize.Y / s
 		local avail = screen.AbsoluteSize
 		if w <= 0 or h <= 0 or avail.X <= 0 then
+			return nil
+		end
+		return math.clamp(math.min((avail.X - pad * 2) / w, (avail.Y - pad * 2) / h), 0.4, 1)
+	end
+	local function fit()
+		if busy or popping then
+			return
+		end
+		local t = measure()
+		if not t then
 			return
 		end
 		busy = true
-		target = math.clamp(math.min((avail.X - pad * 2) / w, (avail.Y - pad * 2) / h), 0.4, 1)
+		target = t
 		scale.Scale = target
 		busy = false
 	end
@@ -1093,21 +1102,41 @@ function New.FitToScreen(obj: GuiObject, margin: number?): UIScale
 		end
 		if popTween then
 			popTween:Cancel()
+			popTween = nil
 		end
-		popping = false
-		fit() -- current fit scale first, then animate up to it
+		-- A window that opens for the first time (phones especially) has no layout yet: hide it at a tiny scale,
+		-- wait until it can be measured, then pop up to the right size. Never show it at full size first.
+		local token = {}
+		popToken = token
 		popping = true
-		scale.Scale = target * POP_FROM
-		local tw = game:GetService("TweenService"):Create(scale, POP_INFO, { Scale = target })
-		popTween = tw
-		tw.Completed:Connect(function(state)
-			if popTween == tw and state == Enum.PlaybackState.Completed then
-				popping = false
-				popTween = nil
-				fit()
+		scale.Scale = 0.05
+		task.spawn(function()
+			local t = measure()
+			local frames = 0
+			while not t and frames < 15 do
+				game:GetService("RunService").RenderStepped:Wait()
+				if popToken ~= token then
+					return
+				end
+				frames += 1
+				t = measure()
 			end
+			if popToken ~= token then
+				return
+			end
+			target = t or target
+			scale.Scale = target * POP_FROM
+			local tw = game:GetService("TweenService"):Create(scale, POP_INFO, { Scale = target })
+			popTween = tw
+			tw.Completed:Connect(function(state)
+				if popTween == tw and state == Enum.PlaybackState.Completed then
+					popping = false
+					popTween = nil
+					fit() -- content that grew while popping (auto-height windows)
+				end
+			end)
+			tw:Play()
 		end)
-		tw:Play()
 	end
 	popFns[obj] = pop
 	obj:GetPropertyChangedSignal("Visible"):Connect(function()

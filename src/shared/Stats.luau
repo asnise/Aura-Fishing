@@ -26,6 +26,9 @@ export type StatSource = {
 	Mutations: { [string]: number }?,
 }
 
+-- Cap Breaker mods can raise a stat's maximum, never beyond these (keeps the minigame playable).
+local ABSOLUTE_MAX: { [string]: number } = { Resilience = 0.95, AutoSpeed = 0.85, CatchBarSize = 0.75 }
+
 local Stats = {}
 
 function Stats.Collect(profile: any): { StatSource }
@@ -90,6 +93,7 @@ function Stats.Compute(profile: any, extraSources: { StatSource }?): ComputedSta
 		values[name] = def.Base
 	end
 	local mutationBonus: { [string]: number } = {}
+	local capBonus: { [string]: number } = {} -- Max<Stat> mods: raise that stat's maximum
 
 	local sources = Stats.Collect(profile)
 	if extraSources then
@@ -101,7 +105,12 @@ function Stats.Compute(profile: any, extraSources: { StatSource }?): ComputedSta
 	for _, source in sources do
 		if source.Stats then
 			for stat, v in source.Stats do
-				values[stat] = (values[stat] or 0) + v
+				local target = if string.sub(stat, 1, 3) == "Max" then string.sub(stat, 4) else nil
+				if target and Registry.StatDefs[target] then
+					capBonus[target] = (capBonus[target] or 0) + v
+				else
+					values[stat] = (values[stat] or 0) + v
+				end
 			end
 		end
 		if source.Mutations then
@@ -117,7 +126,11 @@ function Stats.Compute(profile: any, extraSources: { StatSource }?): ComputedSta
 			v = math.max(def.Min, v)
 		end
 		if def.Max then
-			v = math.min(def.Max, v)
+			local limit = def.Max + (capBonus[name] or 0)
+			if ABSOLUTE_MAX[name] then
+				limit = math.min(ABSOLUTE_MAX[name], limit)
+			end
+			v = math.min(math.max(limit, def.Min or 0), v)
 		end
 		values[name] = v
 	end

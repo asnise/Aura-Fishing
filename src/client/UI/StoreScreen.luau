@@ -84,43 +84,34 @@ local function buyButton(kind: string, id: number, fallback: number, onClick: ()
 	return btn
 end
 
-local function ownedPill(label: string?): Frame
-	return New("Frame", {
-		Name = "Pill OWNED",
-		Size = UDim2.fromOffset(74, 28),
-		BackgroundColor3 = Color3.fromRGB(79, 175, 138),
-		[New.Children] = {
-			New.Corner(999),
-			New("TextLabel", {
-				Size = UDim2.fromScale(1, 1),
-				BackgroundTransparency = 1,
-				Text = label or "OWNED",
-				TextColor3 = WHITE,
-				FontFace = T.FontBadge,
-				TextSize = New.FigmaSize(T.FontBadge, 12),
-			}),
-		},
+-- Disabled button indicating owned state (keeps full button footprint for clean grid alignment).
+local function ownedButton(label: string?): TextButton
+	local btn = New.Button({
+		Name = "Btn Owned",
+		Size = UDim2.fromOffset(88, 46),
+		BackgroundColor3 = T.Disabled,
+		TextColor3 = T.DisabledText,
+		Text = label or "OWNED",
+		MaxTextSize = 16,
+		Active = false,
 	})
+	btn.AutoButtonColor = false
+	return btn
 end
 
-local function comingSoonPill(): Frame
-	return New("Frame", {
-		Name = "Pill COMING SOON",
-		Size = UDim2.fromOffset(118, 28),
-		BackgroundColor3 = T.PanelLight,
-		[New.Children] = {
-			New.Corner(999),
-			New.Stroke(T.Track, 1.5),
-			New("TextLabel", {
-				Size = UDim2.fromScale(1, 1),
-				BackgroundTransparency = 1,
-				Text = "COMING SOON",
-				TextColor3 = T.SubText,
-				FontFace = T.FontBadge,
-				TextSize = New.FigmaSize(T.FontBadge, 12),
-			}),
-		},
+-- Disabled button indicating coming soon state.
+local function comingSoonButton(): TextButton
+	local btn = New.Button({
+		Name = "Btn Coming Soon",
+		Size = UDim2.fromOffset(118, 46),
+		BackgroundColor3 = T.Disabled,
+		TextColor3 = T.DisabledText,
+		Text = "COMING SOON",
+		MaxTextSize = 13,
+		Active = false,
 	})
+	btn.AutoButtonColor = false
+	return btn
 end
 
 local function badgePill(text: string): Frame
@@ -153,7 +144,7 @@ function StoreScreen.Create(opts: { OnGachaRates: (() -> ())? }?): any
 
 
 	-- shell (ScreenGui in PlayerGui, panel, title, X, open/close/register) = Window core
-	local shell = Window.Shell({ Name = "Store", Title = "Store", WindowName = "Window Store" })
+	local shell = Window.Shell({ Name = "Store", Title = "Store", WindowName = "Window Store", Size = if Window.IsShortScreen() then Vector2.new(760, 440) else nil })
 	local gui, win = shell.Gui, shell.Frame
 	screen.Gui = gui
 
@@ -365,15 +356,15 @@ function StoreScreen.Create(opts: { OnGachaRates: (() -> ())? }?): any
 			})
 
 			if item.ComingSoon then
-				local pill = comingSoonPill()
-				pill.AnchorPoint = Vector2.new(0, 0.5)
-				pill.Position = UDim2.new(0, 0, 0.5, 0)
-				pill.Parent = actionRow
+				local btn = comingSoonButton()
+				btn.AnchorPoint = Vector2.new(0, 0.5)
+				btn.Position = UDim2.new(0, 0, 0.5, 0)
+				btn.Parent = actionRow
 			elseif isOwned then
-				local pill = ownedPill()
-				pill.AnchorPoint = Vector2.new(0, 0.5)
-				pill.Position = UDim2.new(0, 0, 0.5, 0)
-				pill.Parent = actionRow
+				local btn = ownedButton()
+				btn.AnchorPoint = Vector2.new(0, 0.5)
+				btn.Position = UDim2.new(0, 0, 0.5, 0)
+				btn.Parent = actionRow
 			else
 				local btn = buyButton("Pass", passId, pDef and pDef.Price or item.DefaultPrice, function()
 					Remotes.Event("PromptPass"):FireServer(item.Key)
@@ -594,7 +585,7 @@ function StoreScreen.Create(opts: { OnGachaRates: (() -> ())? }?): any
 
 		local action
 		if bought then
-			action = ownedPill("BOUGHT")
+			action = ownedButton("BOUGHT")
 		else
 			action = New.Button({
 				Name = "Btn Buy",
@@ -632,12 +623,75 @@ function StoreScreen.Create(opts: { OnGachaRates: (() -> ())? }?): any
 		}))
 	end
 
+	-- Short screens: the Store never scrolls. Cards are split into pages with < and > buttons instead.
+	local storePage = 1
+	local function paginate()
+		if not Window.IsShortScreen() then
+			return
+		end
+		local container = content:FindFirstChild("Grid") or content:FindFirstChild("Product List")
+		if not container then
+			return
+		end
+		local kids = {}
+		for _, c in container:GetChildren() do
+			if c:IsA("GuiObject") then
+				table.insert(kids, c)
+			end
+		end
+		table.sort(kids, function(a, b)
+			return a.LayoutOrder < b.LayoutOrder
+		end)
+		local columns = if container:FindFirstChildOfClass("UIGridLayout") then 2 else 1
+		local rowH, gap = 0, if columns > 1 then 12 else 0
+		for _, k in kids do
+			rowH = math.max(rowH, k.Size.Y.Offset)
+		end
+		local contentH = 440 - 44 - 142 -- design height - window padding - header and tabs
+		local rowsFit = math.max(1, math.floor((contentH - 52 + gap) / (rowH + gap)))
+		local perPage = rowsFit * columns
+		local pages = math.max(1, math.ceil(#kids / perPage))
+		storePage = math.clamp(storePage, 1, pages)
+		for i, k in kids do
+			k.Visible = i > (storePage - 1) * perPage and i <= storePage * perPage
+		end
+		if pages <= 1 then
+			return
+		end
+		container.Size = UDim2.new(1, 0, 1, -52)
+		local bar = New("Frame", {
+			Name = "Pager",
+			AnchorPoint = Vector2.new(0.5, 1),
+			Position = UDim2.new(0.5, 0, 1, 0),
+			Size = UDim2.fromOffset(220, 44),
+			BackgroundTransparency = 1,
+			Parent = content,
+			[New.Children] = { New("UIListLayout", { FillDirection = Enum.FillDirection.Horizontal, Padding = UDim.new(0, 12), HorizontalAlignment = Enum.HorizontalAlignment.Center, VerticalAlignment = Enum.VerticalAlignment.Center, SortOrder = Enum.SortOrder.LayoutOrder }) },
+		})
+		local function step(delta: number)
+			storePage = math.clamp(storePage + delta, 1, pages)
+			screen.Render(lastProfile, nil)
+		end
+		local prev = New.Button({ Name = "Prev", Size = UDim2.fromOffset(64, 40), Text = "<", TextSize = 20, BackgroundColor3 = if storePage > 1 then T.PanelLight else T.Disabled, LayoutOrder = 1, Parent = bar })
+		New.Text({ Name = "Page", Size = UDim2.fromOffset(56, 40), Text = `{storePage} / {pages}`, TextSize = 16, TextColor3 = T.SubText, LayoutOrder = 2, Parent = bar })
+		local nextB = New.Button({ Name = "Next", Size = UDim2.fromOffset(64, 40), Text = ">", TextSize = 20, BackgroundColor3 = if storePage < pages then T.PanelLight else T.Disabled, LayoutOrder = 3, Parent = bar })
+		prev.Activated:Connect(function()
+			step(-1)
+		end)
+		nextB.Activated:Connect(function()
+			step(1)
+		end)
+	end
+
 	local renderers = { Passes = renderPasses, Gems = renderGems, Boosts = renderBoosts, Packs = renderPacks }
 	function screen.Render(profile: any, _stats: any)
 		lastProfile = profile
 		clearContent()
 		updateTabStyles()
 		local ok, err = pcall(renderers[currentTab])
+		if ok then
+			pcall(paginate)
+		end
 		if not ok then
 			warn(`[Store] {currentTab} tab failed: {err}`)
 			clearContent()
@@ -647,6 +701,7 @@ function StoreScreen.Create(opts: { OnGachaRates: (() -> ())? }?): any
 
 	function screen.SetTab(tab: string)
 		currentTab = tab
+		storePage = 1
 		if lastProfile then
 			screen.Render(lastProfile, nil)
 		end

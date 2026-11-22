@@ -36,7 +36,7 @@ local FUNCTIONS = {
 	"Buy", -- (categoryId, itemId) -> ok, message
 	"Equip", -- (categoryId, itemId | uuid for Rods/Lines) -> ok, message
 	"SellAll", -- () -> ok, message   (fish only; chests, rods and lines stay)
-	"SellItem", -- (uuid) -> ok, message   sell one fish or one spare Rod / Line
+	"SellItem", -- (uuid, confirmed?) -> ok, message   sell one fish or one spare Rod / Line (+N or modded gear needs confirmed = true)
 	"OpenTreasure", -- (uuid) -> ok, message, reward { Kind, Amount?, Id? }   open one chest
 	"OpenAllTreasure", -- (uuid) -> ok, message, rewardSummary   open entire chest stack
 	"RollAura", -- () -> ok, auraId | message   (legacy x1 on the Altar banner)
@@ -51,6 +51,7 @@ local FUNCTIONS = {
 	"SetSetting", -- (key, value) -> ok
 	"PutInTank", -- ({ {Id, Mutation, Count} }) -> { ok, reason?, Aquarium = State }   all or nothing
 	"TakeFromTank", -- (uid) -> { ok, reason?, Aquarium = State }   fish goes back to the bag
+	"FuseRods", -- (baseUuid, materialUuid, "Prefixes"|"Suffixes", baseSlot, materialSlot, guard?) -> ok, message, { Success, Coins, Pearls, Gems }   Rod Fusion
 	"Enhance", -- (uuid) -> ok, message, state = Enhance.State   one Rod/Line item +1
 	"UpgradeMastery", -- (trackId) -> { ok, reason?, Tracks = Mastery.Tracks(profile), Pearls }
 	"BuyTankSlot", -- () -> { ok, reason?, Aquarium = State }   Coins, price = Aquarium.NextSlotPrice

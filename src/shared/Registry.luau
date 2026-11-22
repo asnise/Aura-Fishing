@@ -28,6 +28,7 @@ local TideEventsCfg = require(Config.TideEvents)
 local Credits = require(Config.Credits)
 local Dialogues = require(Config.Dialogues)
 local DailyLoginCfg = require(Config.DailyLogin)
+local ModifierDefs = require(Config.ModifierDefs)
 
 local Registry = {
 	Rarities = Rarities,
@@ -54,6 +55,7 @@ local Registry = {
 	Credits = Credits,
 	Dialogues = Dialogues,
 	DailyLogin = DailyLoginCfg,
+	ModifierDefs = ModifierDefs,
 }
 
 local errors: { string } = {}
@@ -128,9 +130,11 @@ for id, t in Treasures do
 	check(t.DropChance >= 0 and t.DropChance < 1, `{w}: DropChance must be 0..1`)
 	check(#t.Rewards > 0, `{w}: needs Rewards`)
 	for i, r in t.Rewards do
-		check(r.Kind == "Coins" or r.Kind == "Gems" or r.Kind == "Bait", `{w}.Rewards[{i}]: Kind must be Coins|Gems|Bait`)
+		check(r.Kind == "Coins" or r.Kind == "Gems" or r.Kind == "Bait" or r.Kind == "Rod", `{w}.Rewards[{i}]: Kind must be Coins|Gems|Bait|Rod`)
 		check(r.Weight > 0, `{w}.Rewards[{i}]: Weight must be > 0`)
-		if r.Kind == "Bait" then
+		if r.Kind == "Rod" then
+			check(r.Profile ~= nil and ModifierDefs.Profiles[r.Profile] ~= nil, `{w}.Rewards[{i}]: unknown mod Profile '{tostring(r.Profile)}'`)
+		elseif r.Kind == "Bait" then
 			check(r.Id ~= nil and Equipment.Baits.Items[r.Id] ~= nil, `{w}.Rewards[{i}]: unknown bait '{tostring(r.Id)}'`)
 		else
 			check(type(r.Min) == "number" and type(r.Max) == "number" and r.Min <= r.Max, `{w}.Rewards[{i}]: needs Min <= Max`)
@@ -194,7 +198,7 @@ for i, d in DailyLoginCfg.Days do
 end
 
 -- B7 NPC dialogue
-local DIALOGUE_KINDS = { SellAll = true, HotFish = true, Banner = true, Menu = true, Say = true, Talk = true }
+local DIALOGUE_KINDS = { SellAll = true, HotFish = true, Banner = true, Menu = true, Fusion = true, Say = true, Talk = true }
 for id, npc in Dialogues do
 	local w = `Dialogues.{id}`
 	check(type(npc.Name) == "string" and npc.Name ~= "", `{w}: needs Name`)
@@ -205,7 +209,7 @@ for id, npc in Dialogues do
 	for i, c in npc.Choices do
 		local cw = `{w}.Choices[{i}]`
 		local k = c.Action and c.Action.Kind
-		check(DIALOGUE_KINDS[k or ""] == true, `{cw}: Action.Kind must be SellAll|HotFish|Banner|Menu|Say|Talk`)
+		check(DIALOGUE_KINDS[k or ""] == true, `{cw}: Action.Kind must be SellAll|HotFish|Banner|Menu|Fusion|Say|Talk`)
 		if k == "Banner" then
 			check(AuraBanners[c.Action.Banner or ""] ~= nil, `{cw}: Action.Banner must be an AuraBanners id`)
 		elseif k == "Menu" then
@@ -429,11 +433,41 @@ for catId, cat in Equipment do
 			IsStackable = cat.Kind == "Consumable",
 			MaxStack = if cat.Kind == "Consumable" then 9999 else 1,
 			IsTradable = not gift,
-			IsSellable = sellable and not gift and item.Currency == "Coins" and item.Price > 0,
+			IsSellable = sellable and not gift and item.Currency == "Coins",
 			Bound = if gift then "Bound" else "Unbound",
 			Equipment = catId,
 		})
 	end
+end
+-- Rod modifiers (Config/ModifierDefs)
+local modIds: { [string]: boolean } = {}
+local allMods: { any } = {}
+for _, m in ModifierDefs.Prefixes do
+	table.insert(allMods, m)
+end
+for _, m in ModifierDefs.Suffixes do
+	table.insert(allMods, m)
+end
+do
+	for _, m in allMods do
+		local w = `ModifierDefs.{m.Id}`
+		check(not modIds[m.Id], `{w}: duplicate id`)
+		modIds[m.Id] = true
+		local capTarget = if string.sub(m.Stat, 1, 3) == "Max" then StatDefs[string.sub(m.Stat, 4)] else nil
+		if capTarget then
+			check(capTarget.Max ~= nil, `{w}: Cap Breaker '{m.Stat}' needs a stat that has a Max`)
+		else
+			check(StatDefs[m.Stat] ~= nil, `{w}: unknown stat '{m.Stat}'`)
+		end
+		check(Rarities[m.Rarity] ~= nil, `{w}: unknown Rarity '{m.Rarity}'`)
+		check(m.Min < m.Max, `{w}: Min must be below Max`)
+		check(capTarget == nil or Rarities[m.Rarity] == nil or Rarities[m.Rarity].Tier >= 3, `{w}: Cap Breakers must be Rare or higher`)
+	end
+end
+for name, p in ModifierDefs.Profiles do
+	local w = `ModifierDefs.Profiles.{name}`
+	check(#p.PrefixSlots == 3 and #p.SuffixSlots == 3, `{w}: slot weights need 3 numbers (0, 1, 2 slots)`)
+	check(Rarities[p.Floor] ~= nil and Rarities[p.Ceiling] ~= nil, `{w}: unknown Floor / Ceiling rarity`)
 end
 if #errors > 0 then
 	error("[Registry] Content errors:\n  " .. table.concat(errors, "\n  "))

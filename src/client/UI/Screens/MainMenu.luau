@@ -8,6 +8,8 @@ local New = require(script.Parent.Parent.New)
 local T = New.Theme
 
 local Screen = { Name = "MainMenu" }
+local CODEX_TILE = { Id = "StatsCodex", Label = "Stats Codex", Tint = T.OnAccent }
+local DAILY_TILE = { Id = "DailyLogin", Label = "Daily", Tint = T.TintButter, Icon = "ui/icons/daily_login" }
 
 -- Tile order = Figma grid order (Economy 7 "Main Menu hub": 13 tiles, 4 per row). Tint = icon circle
 -- colour; Icon overrides the default key ui/icons/<id lowercased>.
@@ -25,6 +27,8 @@ Screen.Tiles = {
 	{ Id = "Events", Tint = T.TintPeach },
 	{ Id = "Friends", Tint = T.TintSky },
 	{ Id = "Settings", Tint = T.TintSand },
+	CODEX_TILE,
+	DAILY_TILE,
 }
 local COLS = 4
 local TILE_W, TILE_H = 84, 94 -- 4 x 84 = 336 (grid width), 4 rows x 94 = 376 (fits the 379 grid)
@@ -45,17 +49,7 @@ local function dot(parent: Instance, name: string, x: number, y: number)
 	})
 end
 
-local function tile(grid: Instance, i: number, def: any)
-	local col, row = (i - 1) % COLS, (i - 1) // COLS
-	local b = New("TextButton", {
-		Name = def.Id,
-		Position = UDim2.fromOffset(col * TILE_W, row * TILE_H),
-		Size = UDim2.fromOffset(TILE_W, TILE_H),
-		BackgroundTransparency = 1,
-		Text = "",
-		AutoButtonColor = false,
-		Parent = grid,
-	})
+local function populateTile(b: TextButton, def: any)
 	local circle = New("Frame", {
 		Name = "Circle",
 		Position = UDim2.fromOffset((TILE_W - CIRCLE) / 2, 6),
@@ -68,7 +62,7 @@ local function tile(grid: Instance, i: number, def: any)
 		Name = "Icon",
 		Key = def.Icon or ("ui/icons/" .. string.lower(def.Id)),
 		Fallback = def.Tint,
-		FallbackText = string.sub(def.Id, 1, 1),
+		FallbackText = def.Label or string.sub(def.Id, 1, 1),
 		AnchorPoint = Vector2.new(0.5, 0.5),
 		Position = UDim2.fromScale(0.5, 0.5),
 		Size = UDim2.fromOffset(48, 48),
@@ -100,10 +94,44 @@ local function tile(grid: Instance, i: number, def: any)
 		Name = "Label",
 		Position = UDim2.fromOffset(0, 74),
 		Size = UDim2.fromOffset(TILE_W, 18),
-		Text = def.Id,
+		Text = def.Label or def.Id,
 		TextSize = 13,
 		Parent = b,
 	})
+end
+
+local function tile(grid: Instance, i: number, def: any)
+	local col, row = (i - 1) % COLS, (i - 1) // COLS
+	local b = New("TextButton", {
+		Name = def.Id,
+		Position = UDim2.fromOffset(col * TILE_W, row * TILE_H),
+		Size = UDim2.fromOffset(TILE_W, TILE_H),
+		BackgroundTransparency = 1,
+		Text = "",
+		AutoButtonColor = false,
+		Parent = grid,
+	})
+	populateTile(b, def)
+end
+
+function Screen.EnsureCodexTile(grid: ScrollingFrame)
+	local existing = grid:FindFirstChild(CODEX_TILE.Id)
+	if not existing then
+		tile(grid, table.find(Screen.Tiles, CODEX_TILE) :: number, CODEX_TILE)
+	elseif existing:IsA("TextButton") then
+		local oldTextTile = existing:FindFirstChild("TextTile")
+		if oldTextTile then
+			oldTextTile:Destroy()
+			populateTile(existing, CODEX_TILE)
+		end
+	end
+end
+
+-- Older bakes have no Daily tile: add it at its grid slot.
+function Screen.EnsureDailyTile(grid: ScrollingFrame)
+	if not grid:FindFirstChild(DAILY_TILE.Id) then
+		tile(grid, table.find(Screen.Tiles, DAILY_TILE) :: number, DAILY_TILE)
+	end
 end
 
 function Screen.Build(): ScreenGui

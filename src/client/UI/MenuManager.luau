@@ -80,6 +80,54 @@ local function prune()
 	end
 end
 
+-- Full-screen black backdrop behind every full menu (Main / Hub layers). It ignores the top bar and the device
+-- safe area, so it always covers the whole screen. Sits just under the lowest open menu.
+local backdrop: ScreenGui? = nil
+local function updateBackdrop()
+	local low: number? = nil
+	for _, name in opened do
+		local d = defs[name]
+		if d and (d.Layer == "Main" or d.Layer == "Hub") then
+			local gui = d.Gui and d.Gui()
+			local order = if gui and gui:IsA("ScreenGui") then gui.DisplayOrder else (if d.Layer == "Hub" then 20 else 10)
+			low = if low then math.min(low, order) else order
+		end
+	end
+	if not low then
+		if backdrop then
+			backdrop.Enabled = false
+		end
+		return
+	end
+	if not backdrop then
+		local player = game:GetService("Players").LocalPlayer
+		local pg = player and player:FindFirstChildOfClass("PlayerGui")
+		if not pg then
+			return
+		end
+		local g = Instance.new("ScreenGui")
+		g.Name = "MenuBackdrop"
+		g.ResetOnSpawn = false
+		g.IgnoreGuiInset = true
+		g.ScreenInsets = Enum.ScreenInsets.None
+		g.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+		local f = Instance.new("TextButton") -- a button so taps do not fall through to the world
+		f.Name = "Black"
+		f.Size = UDim2.fromScale(1, 1)
+		f.BackgroundColor3 = Color3.new(0, 0, 0)
+		f.BackgroundTransparency = 0.35
+		f.BorderSizePixel = 0
+		f.Text = ""
+		f.AutoButtonColor = false
+		f.Parent = g
+		g.Parent = pg
+		backdrop = g
+	end
+	local bd = backdrop :: ScreenGui
+	bd.DisplayOrder = math.max(1, low - 1)
+	bd.Enabled = true
+end
+
 local function restack()
 	local depth = 0
 	for _, name in opened do
@@ -92,6 +140,7 @@ local function restack()
 			depth += 1
 		end
 	end
+	updateBackdrop()
 end
 
 -- Close one screen through its own controller (which then reports back with Closed).

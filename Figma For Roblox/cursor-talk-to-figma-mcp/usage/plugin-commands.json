@@ -1,125 +1,138 @@
 {
   "schema": 1,
   "kind": "plugin-commands",
-  "updatedAt": "2026-11-20T22:03:32.559Z",
+  "updatedAt": "2026-11-22T19:04:43.359Z",
   "totals": {
-    "calls": 3318,
-    "ok": 3278,
-    "errors": 40
+    "calls": 3970,
+    "ok": 3913,
+    "errors": 57
   },
   "byAgent": {
-    "unknown": 62,
+    "unknown": 84,
     "claude-check": 7,
     "perf": 3,
-    "figma-run": 471,
-    "py:figma_images": 144,
+    "figma-run": 496,
+    "py:figma_images": 233,
     "phase1-test": 12,
     "claude-quest": 1,
     "ui-session": 1452,
     "codex": 703,
-    "claude": 449,
+    "claude": 489,
     "mcp:codex-motion-verification": 1,
     "mcp:codex-live-figma": 2,
-    "codex-eclipse": 11
+    "codex-eclipse": 11,
+    "mcp:claude-code": 269,
+    "mcp:codex-mcp-client": 207
   },
   "items": {
     "get_document_info": {
-      "calls": 24,
-      "ok": 23,
+      "calls": 28,
+      "ok": 27,
       "errors": 1,
-      "totalMs": 655355,
-      "avgMs": 28494,
+      "totalMs": 655415,
+      "avgMs": 24275,
       "maxMs": 654935,
       "firstUsed": "2026-11-17T19:22:18.628Z",
-      "lastUsed": "2026-11-20T18:56:08.652Z",
+      "lastUsed": "2026-11-22T19:02:28.633Z",
       "byAgent": {
         "unknown": 7,
-        "figma-run": 9,
+        "figma-run": 10,
         "codex": 7,
-        "claude": 1
+        "claude": 1,
+        "mcp:codex-mcp-client": 3
       },
       "lastError": "timeout (no response)",
-      "sized": 18,
-      "totalKB": 47.1,
+      "sized": 22,
+      "totalKB": 57.4,
       "maxKB": 3.3,
       "avgKB": 2.6
     },
     "get_node_info": {
-      "calls": 233,
-      "ok": 227,
+      "calls": 263,
+      "ok": 257,
       "errors": 6,
-      "totalMs": 682543,
-      "avgMs": 3007,
+      "totalMs": 687291,
+      "avgMs": 2674,
       "maxMs": 649316,
       "firstUsed": "2026-11-17T19:22:22.968Z",
-      "lastUsed": "2026-11-20T22:03:32.559Z",
+      "lastUsed": "2026-11-22T17:32:12.418Z",
       "byAgent": {
-        "unknown": 44,
+        "unknown": 52,
         "perf": 1,
         "phase1-test": 7,
         "claude-quest": 1,
         "ui-session": 7,
         "figma-run": 23,
         "codex": 78,
-        "claude": 72
+        "claude": 73,
+        "mcp:claude-code": 18,
+        "mcp:codex-mcp-client": 3
       },
       "lastError": "Error executing command",
-      "sized": 166,
-      "totalKB": 7121.4,
-      "maxKB": 2005.8,
-      "avgKB": 42.9
+      "sized": 189,
+      "totalKB": 11213.5,
+      "maxKB": 2304.6,
+      "avgKB": 59.3
     },
     "get_selection": {
-      "calls": 10,
-      "ok": 9,
+      "calls": 14,
+      "ok": 13,
       "errors": 1,
-      "totalMs": 643441,
-      "avgMs": 71493,
+      "totalMs": 643451,
+      "avgMs": 49496,
       "maxMs": 643385,
       "firstUsed": "2026-11-18T05:14:56.218Z",
-      "lastUsed": "2026-11-20T18:56:08.650Z",
+      "lastUsed": "2026-11-22T16:53:48.652Z",
       "byAgent": {
         "claude-check": 2,
-        "codex": 8
+        "codex": 8,
+        "mcp:codex-mcp-client": 1,
+        "figma-run": 2,
+        "unknown": 1
       },
       "lastError": "timeout (no response)",
-      "sized": 5,
-      "totalKB": 2.1,
+      "sized": 9,
+      "totalKB": 3.5,
       "maxKB": 0.5,
       "avgKB": 0.4
     },
     "batch": {
-      "calls": 42,
-      "ok": 41,
+      "calls": 80,
+      "ok": 79,
       "errors": 1,
-      "totalMs": 113328,
-      "avgMs": 2764,
-      "maxMs": 47939,
+      "totalMs": 358074,
+      "avgMs": 4533,
+      "maxMs": 177304,
       "firstUsed": "2026-11-18T05:15:05.554Z",
-      "lastUsed": "2026-11-20T18:56:08.649Z",
+      "lastUsed": "2026-11-22T19:04:43.325Z",
       "byAgent": {
         "claude-check": 1,
         "phase1-test": 2,
-        "codex": 39
+        "codex": 39,
+        "mcp:claude-code": 25,
+        "mcp:codex-mcp-client": 12,
+        "claude": 1
       },
-      "sized": 38,
-      "totalKB": 217.6,
+      "sized": 76,
+      "totalKB": 308.2,
       "maxKB": 32.1,
-      "avgKB": 5.7,
+      "avgKB": 4.1,
       "lastError": "timeout (no response)"
     },
     "set_node_note": {
-      "calls": 3,
-      "ok": 3,
+      "calls": 11,
+      "ok": 11,
       "errors": 0,
-      "totalMs": 11,
-      "avgMs": 4,
-      "maxMs": 6,
+      "totalMs": 38,
+      "avgMs": 3,
+      "maxMs": 12,
       "firstUsed": "2026-11-18T05:15:05.556Z",
-      "lastUsed": "2026-11-20T17:44:12.106Z",
+      "lastUsed": "2026-11-22T19:04:43.359Z",
       "byAgent": {
         "claude-check": 2,
-        "codex": 1
+        "codex": 1,
+        "mcp:codex-mcp-client": 7,
+        "mcp:claude-code": 1
       }
     },
     "get_node_note": {
@@ -136,137 +149,149 @@
       }
     },
     "get_roblox_tree": {
-      "calls": 125,
-      "ok": 122,
-      "errors": 3,
-      "totalMs": 39045,
-      "avgMs": 320,
+      "calls": 133,
+      "ok": 129,
+      "errors": 4,
+      "totalMs": 41737,
+      "avgMs": 324,
       "maxMs": 1674,
       "firstUsed": "2026-11-18T05:15:06.662Z",
-      "lastUsed": "2026-11-20T19:41:41.221Z",
+      "lastUsed": "2026-11-22T16:56:58.304Z",
       "byAgent": {
         "perf": 1,
-        "py:figma_images": 11,
+        "py:figma_images": 19,
         "ui-session": 29,
         "figma-run": 82,
         "codex-eclipse": 2
       },
-      "sized": 120,
-      "totalKB": 18416.9,
+      "sized": 127,
+      "totalKB": 19679.1,
       "maxKB": 655.1,
-      "avgKB": 153.5,
-      "lastError": "Error executing command"
+      "avgKB": 155,
+      "lastError": "Nothing selected. Select a frame in Figma or pass nodeId."
     },
     "export_node_as_image": {
-      "calls": 93,
-      "ok": 81,
+      "calls": 132,
+      "ok": 120,
       "errors": 12,
-      "totalMs": 805502,
-      "avgMs": 9944,
+      "totalMs": 815481,
+      "avgMs": 6796,
       "maxMs": 567677,
       "firstUsed": "2026-11-18T05:15:08.375Z",
-      "lastUsed": "2026-11-20T22:02:23.956Z",
+      "lastUsed": "2026-11-22T17:32:12.666Z",
       "byAgent": {
         "perf": 1,
-        "unknown": 3,
+        "unknown": 14,
         "ui-session": 20,
         "figma-run": 39,
         "codex": 6,
         "claude": 23,
-        "codex-eclipse": 1
+        "codex-eclipse": 1,
+        "mcp:claude-code": 28
       },
-      "sized": 77,
-      "totalKB": 48037.6,
+      "sized": 116,
+      "totalKB": 56712.9,
       "maxKB": 10248.2,
-      "avgKB": 623.9,
+      "avgKB": 488.9,
       "lastError": "timeout (no response)"
     },
     "build_tree": {
-      "calls": 210,
-      "ok": 203,
-      "errors": 7,
-      "totalMs": 196721,
-      "avgMs": 969,
-      "maxMs": 94859,
+      "calls": 312,
+      "ok": 296,
+      "errors": 16,
+      "totalMs": 446367,
+      "avgMs": 1508,
+      "maxMs": 119979,
       "firstUsed": "2026-11-18T06:31:23.223Z",
-      "lastUsed": "2026-11-20T21:26:38.798Z",
+      "lastUsed": "2026-11-22T19:04:43.326Z",
       "byAgent": {
-        "figma-run": 35,
+        "figma-run": 57,
         "ui-session": 144,
         "codex": 22,
-        "claude": 9
+        "claude": 25,
+        "mcp:claude-code": 19,
+        "mcp:codex-mcp-client": 45
       },
-      "lastError": "in remove: Removing this node is not allowed",
-      "sized": 181,
-      "totalKB": 39.7,
+      "lastError": "in set_primaryAxisAlignItems: Property \"primaryAxisAlignItems\" failed validation: Invalid option: expected one of \"MIN\"|\"MAX\"|\"CENTER\"|\"SPACE_BETWEEN\"|\"SPACE_AROUND\"|\"SPACE_EVENLY\"",
+      "sized": 210,
+      "totalKB": 54.2,
       "maxKB": 0.7,
-      "avgKB": 0.2
+      "avgKB": 0.3
     },
     "set_image_fill": {
-      "calls": 1397,
-      "ok": 1397,
+      "calls": 1478,
+      "ok": 1478,
       "errors": 0,
-      "totalMs": 74054,
-      "avgMs": 53,
+      "totalMs": 76001,
+      "avgMs": 51,
       "maxMs": 2678,
       "firstUsed": "2026-11-18T06:31:29.197Z",
-      "lastUsed": "2026-11-20T14:08:23.689Z",
+      "lastUsed": "2026-11-22T16:56:59.137Z",
       "byAgent": {
-        "py:figma_images": 127,
+        "py:figma_images": 208,
         "ui-session": 1237,
         "figma-run": 33
       },
-      "sized": 1377,
-      "totalKB": 413.1,
+      "sized": 1458,
+      "totalKB": 437.4,
       "maxKB": 0.3,
       "avgKB": 0.3
     },
     "set_text_content": {
-      "calls": 18,
-      "ok": 17,
-      "errors": 1,
-      "totalMs": 13710,
-      "avgMs": 806,
+      "calls": 46,
+      "ok": 44,
+      "errors": 2,
+      "totalMs": 14140,
+      "avgMs": 321,
       "maxMs": 13488,
       "firstUsed": "2026-11-18T06:44:37.980Z",
-      "lastUsed": "2026-11-19T19:59:09.169Z",
+      "lastUsed": "2026-11-22T16:39:41.712Z",
       "byAgent": {
         "unknown": 1,
-        "codex": 17
+        "codex": 17,
+        "mcp:claude-code": 21,
+        "mcp:codex-mcp-client": 7
       },
-      "lastError": "Unable to establish connection to Figma after 10 seconds. Please check your internet connection."
+      "lastError": "Unable to establish connection to Figma after 10 seconds. Please check your internet connection.",
+      "sized": 1,
+      "totalKB": 0.3,
+      "maxKB": 0.3,
+      "avgKB": 0.3
     },
     "set_stroke_color": {
-      "calls": 1,
-      "ok": 1,
+      "calls": 8,
+      "ok": 8,
       "errors": 0,
-      "totalMs": 8,
-      "avgMs": 8,
-      "maxMs": 8,
+      "totalMs": 73,
+      "avgMs": 9,
+      "maxMs": 11,
       "firstUsed": "2026-11-18T06:44:44.459Z",
-      "lastUsed": "2026-11-18T06:44:44.459Z",
+      "lastUsed": "2026-11-22T14:51:45.338Z",
       "byAgent": {
-        "unknown": 1
+        "unknown": 1,
+        "mcp:claude-code": 7
       }
     },
     "find_nodes": {
-      "calls": 73,
-      "ok": 71,
-      "errors": 2,
-      "totalMs": 22774,
-      "avgMs": 321,
+      "calls": 115,
+      "ok": 112,
+      "errors": 3,
+      "totalMs": 33361,
+      "avgMs": 298,
       "maxMs": 2897,
       "firstUsed": "2026-11-18T07:53:14.611Z",
-      "lastUsed": "2026-11-20T21:58:41.192Z",
+      "lastUsed": "2026-11-22T19:02:58.686Z",
       "byAgent": {
         "phase1-test": 2,
         "codex": 35,
-        "claude": 36
+        "claude": 36,
+        "mcp:claude-code": 26,
+        "mcp:codex-mcp-client": 16
       },
-      "sized": 42,
-      "totalKB": 64,
-      "maxKB": 7.2,
-      "avgKB": 1.5,
+      "sized": 77,
+      "totalKB": 350.3,
+      "maxKB": 60.6,
+      "avgKB": 4.5,
       "lastError": "find_nodes needs at least one of: name, type, text"
     },
     "get_node_inf": {
@@ -284,19 +309,21 @@
       "lastError": "Unknown command: get_node_inf. Did you mean: get_node_info, get_nodes_info, get_document_info, get_node_note, get_selection? list_commands shows all."
     },
     "patch_nodes": {
-      "calls": 59,
-      "ok": 59,
+      "calls": 73,
+      "ok": 73,
       "errors": 0,
-      "totalMs": 9972,
-      "avgMs": 169,
+      "totalMs": 10651,
+      "avgMs": 146,
       "maxMs": 3848,
       "firstUsed": "2026-11-18T12:10:51.848Z",
-      "lastUsed": "2026-11-20T22:02:23.593Z",
+      "lastUsed": "2026-11-22T16:41:45.545Z",
       "byAgent": {
         "ui-session": 15,
         "figma-run": 11,
         "codex": 29,
-        "claude": 4
+        "claude": 5,
+        "mcp:claude-code": 6,
+        "mcp:codex-mcp-client": 7
       },
       "sized": 31,
       "totalKB": 9.8,
@@ -321,35 +348,39 @@
       "avgKB": 0.3
     },
     "clone_node": {
-      "calls": 140,
-      "ok": 140,
+      "calls": 172,
+      "ok": 172,
       "errors": 0,
-      "totalMs": 1297,
+      "totalMs": 1614,
       "avgMs": 9,
       "maxMs": 356,
       "firstUsed": "2026-11-18T17:09:53.187Z",
-      "lastUsed": "2026-11-20T22:02:23.580Z",
+      "lastUsed": "2026-11-22T19:04:43.353Z",
       "byAgent": {
         "codex": 81,
-        "claude": 59
+        "claude": 59,
+        "mcp:claude-code": 10,
+        "mcp:codex-mcp-client": 22
       },
-      "sized": 59,
-      "totalKB": 11.8,
-      "maxKB": 0.2,
+      "sized": 60,
+      "totalKB": 12.1,
+      "maxKB": 0.3,
       "avgKB": 0.2
     },
     "set_parent": {
-      "calls": 190,
-      "ok": 189,
+      "calls": 231,
+      "ok": 230,
       "errors": 1,
-      "totalMs": 804,
-      "avgMs": 4,
+      "totalMs": 1039,
+      "avgMs": 5,
       "maxMs": 54,
       "firstUsed": "2026-11-18T17:09:53.189Z",
-      "lastUsed": "2026-11-20T21:26:39.582Z",
+      "lastUsed": "2026-11-22T19:04:43.355Z",
       "byAgent": {
         "codex": 134,
-        "claude": 56
+        "claude": 56,
+        "mcp:claude-code": 8,
+        "mcp:codex-mcp-client": 33
       },
       "lastError": "Parent node not found with ID: [object Object] (get a valid id from get_selection or find_nodes)",
       "sized": 56,
@@ -358,20 +389,23 @@
       "avgKB": 0.3
     },
     "resize_node": {
-      "calls": 175,
-      "ok": 175,
+      "calls": 207,
+      "ok": 207,
       "errors": 0,
-      "totalMs": 1022,
-      "avgMs": 6,
+      "totalMs": 1116,
+      "avgMs": 5,
       "maxMs": 339,
       "firstUsed": "2026-11-18T17:09:53.190Z",
-      "lastUsed": "2026-11-20T21:26:39.576Z",
+      "lastUsed": "2026-11-22T19:04:43.357Z",
       "byAgent": {
         "codex": 86,
-        "claude": 89
+        "claude": 103,
+        "mcp:claude-code": 9,
+        "unknown": 2,
+        "mcp:codex-mcp-client": 7
       },
-      "sized": 89,
-      "totalKB": 17.9,
+      "sized": 91,
+      "totalKB": 18.5,
       "maxKB": 0.3,
       "avgKB": 0.2
     },
@@ -394,19 +428,21 @@
       "avgKB": 0.3
     },
     "rename_node": {
-      "calls": 38,
-      "ok": 38,
+      "calls": 50,
+      "ok": 50,
       "errors": 0,
-      "totalMs": 135,
-      "avgMs": 4,
+      "totalMs": 141,
+      "avgMs": 3,
       "maxMs": 34,
       "firstUsed": "2026-11-18T17:22:51.820Z",
-      "lastUsed": "2026-11-20T20:56:12.256Z",
+      "lastUsed": "2026-11-22T15:45:01.760Z",
       "byAgent": {
         "codex": 10,
         "figma-run": 1,
         "py:figma_images": 6,
-        "claude": 21
+        "claude": 21,
+        "mcp:claude-code": 2,
+        "mcp:codex-mcp-client": 10
       },
       "sized": 28,
       "totalKB": 5.9,
@@ -433,57 +469,60 @@
       "avgKB": 0.2
     },
     "get_reactions": {
-      "calls": 2,
-      "ok": 2,
+      "calls": 3,
+      "ok": 3,
       "errors": 0,
-      "totalMs": 80,
-      "avgMs": 40,
+      "totalMs": 101,
+      "avgMs": 34,
       "maxMs": 54,
       "firstUsed": "2026-11-18T17:29:06.376Z",
-      "lastUsed": "2026-11-18T17:32:11.012Z",
+      "lastUsed": "2026-11-22T15:42:36.146Z",
       "byAgent": {
-        "codex": 2
+        "codex": 2,
+        "mcp:codex-mcp-client": 1
       },
-      "sized": 2,
-      "totalKB": 1.9,
+      "sized": 3,
+      "totalKB": 2.1,
       "maxKB": 1.7,
-      "avgKB": 1
+      "avgKB": 0.7
     },
     "delete_node": {
-      "calls": 14,
-      "ok": 14,
+      "calls": 46,
+      "ok": 46,
       "errors": 0,
-      "totalMs": 487,
-      "avgMs": 35,
+      "totalMs": 572,
+      "avgMs": 12,
       "maxMs": 189,
       "firstUsed": "2026-11-19T06:59:18.739Z",
-      "lastUsed": "2026-11-20T22:02:23.986Z",
+      "lastUsed": "2026-11-22T15:50:16.539Z",
       "byAgent": {
         "unknown": 4,
-        "claude": 10
+        "claude": 10,
+        "mcp:claude-code": 32
       },
-      "sized": 14,
-      "totalKB": 2.8,
+      "sized": 16,
+      "totalKB": 3.2,
       "maxKB": 0.2,
       "avgKB": 0.2
     },
     "delete_multiple_nodes": {
-      "calls": 2,
-      "ok": 2,
+      "calls": 3,
+      "ok": 3,
       "errors": 0,
-      "totalMs": 674,
-      "avgMs": 337,
+      "totalMs": 802,
+      "avgMs": 267,
       "maxMs": 606,
       "firstUsed": "2026-11-19T06:59:33.289Z",
-      "lastUsed": "2026-11-19T08:40:28.916Z",
+      "lastUsed": "2026-11-22T16:17:22.699Z",
       "byAgent": {
         "unknown": 1,
-        "figma-run": 1
+        "figma-run": 1,
+        "mcp:claude-code": 1
       },
-      "sized": 2,
-      "totalKB": 4.1,
+      "sized": 3,
+      "totalKB": 5.9,
       "maxKB": 2.6,
-      "avgKB": 2.1
+      "avgKB": 2
     },
     "create_rectangle": {
       "calls": 33,
@@ -504,33 +543,36 @@
       "avgKB": 0.3
     },
     "create_text": {
-      "calls": 80,
-      "ok": 80,
-      "errors": 0,
-      "totalMs": 928,
-      "avgMs": 12,
-      "maxMs": 64,
+      "calls": 91,
+      "ok": 89,
+      "errors": 2,
+      "totalMs": 2194,
+      "avgMs": 25,
+      "maxMs": 259,
       "firstUsed": "2026-11-19T07:07:44.880Z",
-      "lastUsed": "2026-11-19T09:32:24.301Z",
+      "lastUsed": "2026-11-22T14:37:40.900Z",
       "byAgent": {
-        "figma-run": 80
+        "figma-run": 80,
+        "mcp:claude-code": 11
       },
       "sized": 80,
       "totalKB": 49.4,
       "maxKB": 0.7,
-      "avgKB": 0.6
+      "avgKB": 0.6,
+      "lastError": "$13.id: there is no item 13 before this one"
     },
     "create_frame": {
-      "calls": 32,
-      "ok": 32,
+      "calls": 38,
+      "ok": 38,
       "errors": 0,
-      "totalMs": 269,
-      "avgMs": 8,
-      "maxMs": 13,
+      "totalMs": 468,
+      "avgMs": 12,
+      "maxMs": 140,
       "firstUsed": "2026-11-19T07:07:45.227Z",
-      "lastUsed": "2026-11-19T08:41:36.416Z",
+      "lastUsed": "2026-11-22T14:37:33.816Z",
       "byAgent": {
-        "figma-run": 32
+        "figma-run": 32,
+        "mcp:claude-code": 6
       },
       "sized": 32,
       "totalKB": 21.8,
@@ -555,53 +597,58 @@
       "avgKB": 0.3
     },
     "get_nodes_info": {
-      "calls": 21,
-      "ok": 21,
-      "errors": 0,
-      "totalMs": 7596,
-      "avgMs": 362,
+      "calls": 46,
+      "ok": 45,
+      "errors": 1,
+      "totalMs": 9886,
+      "avgMs": 220,
       "maxMs": 2636,
       "firstUsed": "2026-11-19T08:10:23.895Z",
-      "lastUsed": "2026-11-20T18:56:41.698Z",
+      "lastUsed": "2026-11-22T19:04:15.417Z",
       "byAgent": {
         "figma-run": 5,
-        "codex": 16
+        "codex": 16,
+        "mcp:claude-code": 2,
+        "mcp:codex-mcp-client": 23
       },
-      "sized": 19,
-      "totalKB": 7682.7,
+      "sized": 43,
+      "totalKB": 8325.2,
       "maxKB": 1892.4,
-      "avgKB": 404.4
+      "avgKB": 193.6,
+      "lastError": "Error executing command"
     },
     "list_commands": {
-      "calls": 7,
-      "ok": 7,
+      "calls": 8,
+      "ok": 8,
       "errors": 0,
-      "totalMs": 27,
+      "totalMs": 30,
       "avgMs": 4,
       "maxMs": 14,
       "firstUsed": "2026-11-19T19:58:47.598Z",
-      "lastUsed": "2026-11-20T20:02:58.399Z",
+      "lastUsed": "2026-11-22T14:51:19.014Z",
       "byAgent": {
         "codex": 5,
-        "claude": 2
+        "claude": 2,
+        "mcp:claude-code": 1
       },
-      "sized": 7,
-      "totalKB": 9.6,
+      "sized": 8,
+      "totalKB": 11,
       "maxKB": 1.4,
       "avgKB": 1.4
     },
     "set_layout_mode": {
-      "calls": 13,
-      "ok": 13,
+      "calls": 14,
+      "ok": 14,
       "errors": 0,
-      "totalMs": 229,
-      "avgMs": 18,
+      "totalMs": 236,
+      "avgMs": 17,
       "maxMs": 94,
       "firstUsed": "2026-11-19T19:59:09.068Z",
-      "lastUsed": "2026-11-20T20:28:53.799Z",
+      "lastUsed": "2026-11-22T14:48:28.944Z",
       "byAgent": {
         "codex": 10,
-        "claude": 3
+        "claude": 3,
+        "mcp:claude-code": 1
       },
       "sized": 3,
       "totalKB": 0.6,
@@ -609,29 +656,33 @@
       "avgKB": 0.2
     },
     "set_item_spacing": {
-      "calls": 10,
-      "ok": 10,
+      "calls": 18,
+      "ok": 18,
       "errors": 0,
-      "totalMs": 23,
+      "totalMs": 39,
       "avgMs": 2,
       "maxMs": 9,
       "firstUsed": "2026-11-19T19:59:09.069Z",
-      "lastUsed": "2026-11-19T19:59:09.176Z",
+      "lastUsed": "2026-11-22T15:51:46.299Z",
       "byAgent": {
-        "codex": 10
+        "codex": 10,
+        "mcp:claude-code": 1,
+        "claude": 7
       }
     },
     "set_layout_sizing": {
-      "calls": 7,
-      "ok": 7,
+      "calls": 24,
+      "ok": 24,
       "errors": 0,
-      "totalMs": 7,
-      "avgMs": 1,
-      "maxMs": 3,
+      "totalMs": 50,
+      "avgMs": 2,
+      "maxMs": 10,
       "firstUsed": "2026-11-19T19:59:09.076Z",
-      "lastUsed": "2026-11-19T19:59:09.172Z",
+      "lastUsed": "2026-11-22T15:50:53.349Z",
       "byAgent": {
-        "codex": 7
+        "codex": 7,
+        "mcp:claude-code": 9,
+        "mcp:codex-mcp-client": 8
       }
     },
     "set_padding": {
@@ -807,6 +858,67 @@
       "totalKB": 0.2,
       "maxKB": 0.2,
       "avgKB": 0.2
+    },
+    "set_multiple_text_contents": {
+      "calls": 1,
+      "ok": 1,
+      "errors": 0,
+      "totalMs": 57,
+      "avgMs": 57,
+      "maxMs": 57,
+      "firstUsed": "2026-11-22T14:21:24.254Z",
+      "lastUsed": "2026-11-22T14:21:24.254Z",
+      "byAgent": {
+        "mcp:claude-code": 1
+      },
+      "sized": 1,
+      "totalKB": 0.9,
+      "maxKB": 0.9,
+      "avgKB": 0.9
+    },
+    "set_fill_color": {
+      "calls": 23,
+      "ok": 21,
+      "errors": 2,
+      "totalMs": 81,
+      "avgMs": 4,
+      "maxMs": 13,
+      "firstUsed": "2026-11-22T14:48:53.115Z",
+      "lastUsed": "2026-11-22T16:20:31.343Z",
+      "byAgent": {
+        "mcp:claude-code": 23
+      },
+      "lastError": "cannot convert to object"
+    },
+    "get_local_components": {
+      "calls": 1,
+      "ok": 1,
+      "errors": 0,
+      "totalMs": 15176,
+      "avgMs": 15176,
+      "maxMs": 15176,
+      "firstUsed": "2026-11-22T14:52:08.669Z",
+      "lastUsed": "2026-11-22T14:52:08.669Z",
+      "byAgent": {
+        "mcp:claude-code": 1
+      },
+      "sized": 1,
+      "totalKB": 70,
+      "maxKB": 70,
+      "avgKB": 70
+    },
+    "set_axis_align": {
+      "calls": 2,
+      "ok": 2,
+      "errors": 0,
+      "totalMs": 2,
+      "avgMs": 1,
+      "maxMs": 1,
+      "firstUsed": "2026-11-22T15:38:53.385Z",
+      "lastUsed": "2026-11-22T15:45:01.773Z",
+      "byAgent": {
+        "mcp:codex-mcp-client": 2
+      }
     }
   }
 }

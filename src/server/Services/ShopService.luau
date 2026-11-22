@@ -14,6 +14,7 @@ local Format = require(Shared.Util.Format)
 local Enhance = require(Shared.Enhance)
 local Signal = require(Shared.Util.Signal)
 local Boosts = require(Shared.Boosts)
+local RodDrop = require(Shared.Items.RodDrop)
 local HotFish = require(Shared.HotFish)
 local HttpService = game:GetService("HttpService")
 
@@ -58,8 +59,16 @@ function ShopService.Buy(player: Player, categoryId: any, itemId: any): (boolean
 	if categoryId == "Bags" and Inventory.BagCapacity(itemId) <= Inventory.BagCapacity(data.Equipped.Bags) then
 		return false, "You already have a bigger bag"
 	end
+	-- The free starter rod / line: one is enough (it sells for 0 coins, you can only hold one at a time).
+	if isGear and item.Price == 0 and Inventory.CountGear(data, categoryId, itemId) > 0 then
+		return false, "You already have it"
+	end
 	-- Rods and Lines can be bought again and again; every purchase is its own item and needs a bag slot.
 	if isGear and Inventory.IsFull(data) then
+		return false, "Bag full - sell something first"
+	end
+	-- a bait you do not have yet takes a slot (more of a bait you have does not)
+	if cat.Kind == "Consumable" and (data.Consumables[categoryId][itemId] or 0) <= 0 and Inventory.IsFull(data) then
 		return false, "Bag full - sell something first"
 	end
 	if data[item.Currency] < item.Price then
@@ -68,7 +77,7 @@ function ShopService.Buy(player: Player, categoryId: any, itemId: any): (boolean
 	data[item.Currency] -= item.Price
 
 	if isGear then
-		local bought = Inventory.NewGear(categoryId, itemId)
+		local bought = Inventory.NewGear(categoryId, itemId, "Shop")
 		Inventory.Add(data, bought, true)
 		-- A better piece is worn right away; a copy of something you already outgrow stays in the bag.
 		local worn = Inventory.Worn(data, categoryId)
@@ -192,7 +201,7 @@ function ShopService.SellAll(player: Player): (boolean, string)
 end
 
 -- Sells one bag item by UUID: a fish, or a spare Rod / Line (never the one you wear).
-function ShopService.SellItem(player: Player, uuid: any): (boolean, string)
+function ShopService.SellItem(player: Player, uuid: any, confirmed: any): (boolean, string)
 	local data = DataService.Get(player)
 	local item = data and Inventory.Find(data, uuid)
 	if not data or not item or (item.Kind ~= "Fish" and item.Kind ~= "Rod" and item.Kind ~= "Line") then
@@ -201,6 +210,11 @@ function ShopService.SellItem(player: Player, uuid: any): (boolean, string)
 	local block = Inventory.SellBlock(data, item)
 	if block then
 		return false, block
+	end
+	-- enhanced / modded gear: the client asks first and sends confirmed = true
+	local invested = Inventory.Investment(item)
+	if invested and confirmed ~= true then
+		return false, `Confirm to sell: it has {invested}`
 	end
 	local total = Inventory.SellValue(item, Stats.Compute(data).Values.SellMultiplier * Boosts.Multiplier(data, "Coins"))
 	Inventory.Remove(data, uuid)
@@ -228,6 +242,23 @@ local function rollReward(t: any, totalWeight: number): any
 		end
 	end
 	return t.Rewards[#t.Rewards]
+end
+
+-- A Rod reward: the rod goes into the bag; with no free slot it is paid as its sell value instead.
+-- Returns rodName, coinsPaid (coinsPaid > 0 = bag was full).
+local function giveRod(data: any, reward: any): (string, number)
+	local rod = RodDrop.Create(reward.Profile :: string, data.Level, rng)
+	if not rod then
+		return "rod", 0
+	end
+	local name = Registry.Equipment.Rods.Items[rod.Id].Name
+	if Inventory.Add(data, rod) then
+		return name, 0
+	end
+	local coins = Inventory.SellValue(rod, 1)
+	data.Coins += coins
+	data.Lifetime.CoinsEarned += coins
+	return name, coins
 end
 
 -- Opens one chest of a treasure stack and pays one reward rolled by Weight (Config/Treasures).
@@ -258,6 +289,10 @@ function ShopService.OpenTreasure(player: Player, uuid: any): (boolean, string, 
 		end
 		msg = `{t.Name}: +{Format.Number(amount)} {string.lower(reward.Kind)}!`
 		out = { Kind = reward.Kind, Amount = amount }
+	elseif reward.Kind == "Rod" then
+		local name, paid = giveRod(data, reward)
+		msg = if paid > 0 then `{t.Name}: {name} (bag full, sold for {Format.Number(paid)} coins)` else `{t.Name}: a {name} with mods!`
+		out = { Kind = "Rod", Amount = 1 }
 	else
 		local id = reward.Id :: string
 		local baits = data.Consumables.Baits
@@ -284,6 +319,7 @@ function ShopService.OpenAllTreasure(player: Player, uuid: any): (boolean, strin
 	local earnedCoins = 0
 	local earnedGems = 0
 	local earnedBaits: { [string]: number } = {}
+	local earnedRods, rodNotes = 0, 0
 
 	for _ = 1, count do
 		local reward = rollReward(t, totalWeight)
@@ -291,6 +327,10 @@ function ShopService.OpenAllTreasure(player: Player, uuid: any): (boolean, strin
 			earnedCoins += rng:NextInteger(reward.Min :: number, reward.Max :: number)
 		elseif reward.Kind == "Gems" then
 			earnedGems += rng:NextInteger(reward.Min :: number, reward.Max :: number)
+		elseif reward.Kind == "Rod" then
+			local _, paid = giveRod(data, reward)
+			earnedRods += 1
+			rodNotes += if paid > 0 then 1 else 0
 		else
 			local id = reward.Id :: string
 			earnedBaits[id] = (earnedBaits[id] or 0) + (reward.Count or 1)
@@ -323,6 +363,9 @@ function ShopService.OpenAllTreasure(player: Player, uuid: any): (boolean, strin
 	for id, amt in earnedBaits do
 		local bDef = Registry.Equipment.Baits.Items[id]
 		table.insert(summaryParts, `+{amt} {bDef and bDef.Name or id}`)
+	end
+	if earnedRods > 0 then
+		table.insert(summaryParts, `+{earnedRods} rod{if earnedRods == 1 then "" else "s"}{if rodNotes > 0 then " (some sold, bag full)" else ""}`)
 	end
 
 	local msg = `{t.Name} x{count}: {table.concat(summaryParts, ", ")}!`
@@ -394,11 +437,11 @@ function ShopService.Init()
 		end
 		return ShopService.SellAll(player)
 	end
-	Remotes.Func("SellItem").OnServerInvoke = function(player, uuid)
+	Remotes.Func("SellItem").OnServerInvoke = function(player, uuid, confirmed)
 		if throttled(player) then
 			return false, "Slow down"
 		end
-		return ShopService.SellItem(player, uuid)
+		return ShopService.SellItem(player, uuid, confirmed)
 	end
 	Remotes.Func("OpenTreasure").OnServerInvoke = function(player, uuid)
 		if throttled(player) then

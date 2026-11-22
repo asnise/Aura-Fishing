@@ -14,6 +14,7 @@ local ORDER: { ModuleScript } = {
 	Controllers.CharacterController,
 	Controllers.SkillsController,
 	Controllers.GachaPageController,
+	Controllers.FusionController,
 	Controllers.DialogueController,
 	Controllers.EventController,
 	Controllers.DailyLoginController,

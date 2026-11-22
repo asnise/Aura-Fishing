@@ -7,7 +7,7 @@
 --     Bg (ui/gacha_bg_celestial, Crop), Floor (white -> lilac gradient, bottom 1/6)
 --     Canvas (1280x720, UIScale "Scale")
 --       Glow0..2, Hero (auras_Art/<id>, or the orb when the aura has no illustration)
---       TopBar     Back, Title, Chips (Gems, StarTokens: buttons, open Top Up)
+--       TopBar     Title, Chips (Gems, StarTokens: buttons, open Top Up)
 --       Rail       ScrollingFrame of BannerCard clones (Templates)
 --       InfoCard   Ribbon/Label, Title, Stars, Timer (Icon, Text), Desc, Featured (Inventory item slots -> Item Card), PityNote (Icon, Text)
 --       PityMythic Label, Value, Bar/Fill (hard pity; hidden when the banner has none)
@@ -558,22 +558,10 @@ function Screen.SetBannerCard(c: any, info: { [string]: any })
 end
 
 local function topBar(cv: Frame)
-	local bar = abs("TopBar", 16, 70, 1248, 40, cv)
-	local back = New("TextButton", {
-		Name = "Back",
-		Size = UDim2.fromOffset(56, 40),
-		BackgroundColor3 = NAVY,
-		BackgroundTransparency = 0.45,
-		Text = "<",
-		TextColor3 = WHITE,
-		FontFace = T.Font,
-		TextSize = New.FigmaSize(T.Font, 24),
-		AutoButtonColor = true,
-		Parent = bar,
-		[New.Children] = { New.Corner(14), New("UIStroke", { Color = WHITE, Transparency = 0.7, Thickness = 1.5, ApplyStrokeMode = Enum.ApplyStrokeMode.Border }) },
-	})
-	local _ = back
-	local title = label("Title", "Aura Summon", T.Font, 26, WHITE, { Position = UDim2.fromOffset(68, 4) })
+	local bar = abs("TopBar", 16, 70, 1150, 40, cv)
+	-- standard window close button (same as every menu), top-right corner
+	New.Button({ Name = "Close", AnchorPoint = Vector2.new(1, 0), Position = UDim2.new(1, -16, 0, 8), Size = UDim2.fromOffset(73, 57), Text = "X", TextSize = 22, BackgroundColor3 = T.Bad, ZIndex = 25, Parent = cv })
+	local title = label("Title", "Aura Summon", T.Font, 26, WHITE, { Position = UDim2.fromOffset(0, 4) })
 	outline(title)
 	title.Parent = bar
 	local chips = New("Frame", {

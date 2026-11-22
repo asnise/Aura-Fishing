@@ -59,15 +59,6 @@ local Events: { [string]: Event } = {
 			Body = "Every hour at :00 and :30 (UTC) a patch of glowing water appears in the sea for 5 minutes. Fish with your bobber inside it: +50% Luck and a chance at a Naga Hatchling. The more anglers fish there together, the better the chance!",
 		},
 	},
-	DailyLogin = {
-		Art = { Top = Color3.fromRGB(251, 234, 184), Bottom = Color3.fromRGB(255, 220, 207), Color = Color3.fromRGB(242, 181, 68) },
-		Title = "Daily Login",
-		Subtitle = "Claim free rewards every day",
-		Icon = "ui/icons/quests",
-		Order = 4,
-		Tag = "DAILY",
-		Action = { Kind = "DailyLogin" },
-	},
 }
 
 return Events
