@@ -260,7 +260,15 @@ local function award(player: Player, fishId: string, mult: number, mode: string,
 		Mutation = Roll.Mutation(stats.Values.MutationChance, stats.MutationBonus, rng),
 		Mult = mult,
 	}
-	local stack = Inventory.AddFish(data, fishId, entry.Mutation, entry.Weight, Roll.Value(entry, 1))
+	local tags = { if isAuto then "Auto" else "Manual" }
+	if perfect then
+		table.insert(tags, "Perfect")
+	end
+	if hotspot then
+		table.insert(tags, "Hotspot")
+	end
+	-- Fish never stack: one fish = one bag slot with its own weight, mutation, tags and value (nil = bag full).
+	local stack = Inventory.AddFish(data, fishId, entry.Mutation, entry.Weight, Roll.Value(entry, 1), tags)
 	if not isBonus then
 		consumeBait(data)
 	end

@@ -15,7 +15,6 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Shared = ReplicatedStorage:WaitForChild("Shared")
 local Registry = require(Shared.Registry)
 local Inventory = require(Shared.Inventory)
-local Roll = require(Shared.Roll)
 local Remotes = require(Shared.Remotes)
 local Signal = require(Shared.Util.Signal)
 
@@ -24,19 +23,22 @@ local GameConfig = Registry.GameConfig
 local DataService = {}
 DataService.ProfileLoaded = Signal.new() -- (player, profile)
 
-local SCHEMA_VERSION = 5 -- 5: skill points for levels already reached; 2: Bag = inventory stacks (shared/Inventory.luau); 3: coin values x10 (Balance Pass 1); 4: aura dupes -> Star Tokens, 2 pity counters
+local SCHEMA_VERSION = 6 -- 6: Item rework (Bag = UUID items, Rods/Lines are bag items, item data reset); 5: skill points for levels already reached; 2: Bag = inventory stacks (shared/Inventory.luau); 3: coin values x10 (Balance Pass 1); 4: aura dupes -> Star Tokens, 2 pity counters
 
 local function buildTemplate()
+	-- Rods and Lines are bag items (granted per profile by ensureGear: every item needs its own UUID).
 	local owned = {}
 	local equipped = {}
 	local consumables = {}
 	for catId, cat in Registry.Equipment do
 		if cat.Kind == "Permanent" then
-			local starter = Registry.StarterItem(catId)
-			owned[catId] = {}
-			if starter then
-				owned[catId][starter] = true
-				equipped[catId] = starter
+			if not Inventory.IsGearCategory(catId) then
+				local starter = Registry.StarterItem(catId)
+				owned[catId] = {}
+				if starter then
+					owned[catId][starter] = true
+					equipped[catId] = starter
+				end
 			end
 		else
 			consumables[catId] = {}
@@ -55,7 +57,7 @@ local function buildTemplate()
 		Consumables = consumables,
 		Auras = { Owned = {}, Equipped = nil, TotalRolls = 0, Stars = {}, StarTokens = 0 }, -- Owned[id] = 1 (dupes -> StarTokens)
 		Gacha = { Pity = {}, PityHard = {}, Pulls = {}, Claimed = {} }, -- per banner id (Config/AuraBanners)
-		Bag = {},
+		Bag = {}, -- Items (shared/Items/ItemContainer): fish, spare + worn rods/lines, chests
 		Fishdex = {},
 		Settings = { LowFX = false, TargetDepth = 10, AutoDepth = false },
 		Lifetime = { Caught = 0, CoinsEarned = 0, PearlsEarned = 0 },
@@ -65,8 +67,7 @@ local function buildTemplate()
 		Quests = { Day = -1, List = {}, Unclaimed = false }, -- daily quests (QuestService, Shared/Quests)
 		DailyLogin = { Streak = 0, LastClaimDay = -1, Day = 1 }, -- 7-day daily login calendar
 		Mastery = {}, -- [trackId] = level (Config/Mastery); kept through Rebirth
-		Enhance = {}, -- [categoryId][itemId] = level (Gear Enhance, GameConfig.Enhance)
-		Aquarium = { Slots = GameConfig.Aquarium.StartSlots, Fish = {} }, -- Fish = { {Uid, Id, Mutation, Weight, Value} }
+		Aquarium = { Slots = GameConfig.Aquarium.StartSlots, Fish = {} }, -- Fish = bag fish items (same record, UUID kept)
 		LastOnline = 0, -- os.time() at the last save (offline Pearls on next join); 0 = never
 		-- Robux (MonetizationService): Passes[id] = "Owned" (Roblox says so) | "Dev" (granted by a dev command)
 		Passes = {},
@@ -104,6 +105,49 @@ local RENAMED_FISH = {
 	SunScaleSardine = "SunscaleSardine", -- 2026-11-17: id now matches its art key fish/SunscaleSardine
 }
 
+-- Every profile wears one rod and one line (bag items with their own UUID). Starter ones are created
+-- per profile because the template is shared by every new player.
+local function ensureGear(data: any)
+	for _, catId in { "Rods", "Lines" } do
+		if not Inventory.Worn(data, catId) then
+			local starter = Registry.StarterItem(catId)
+			if starter then
+				local item = Inventory.NewGear(catId, starter)
+				table.insert(data.Bag, item)
+				data.Equipped[catId] = item.UUID
+			end
+		end
+	end
+end
+
+-- Item rework (schema 6): the old stack bag, owned/equipped ids and tank fish cannot be converted
+-- (fish lost their per-fish data in stacks). Coins, Gems, Pearls, levels, skills, rebirths, Fishdex and
+-- Game Passes stay. Gifts that cost Robux (Exclusive gear) are given back as Bound items.
+local function resetItemsV6(data: any)
+	local regrant = {}
+	for _, catId in { "Rods", "Lines" } do
+		for itemId in (data.Owned and data.Owned[catId]) or {} do
+			local def = Registry.Equipment[catId].Items[itemId]
+			if def and def.Exclusive then
+				table.insert(regrant, { catId, itemId })
+			end
+		end
+	end
+	local baitEquipped = data.Equipped and data.Equipped.Baits
+	data.Bag = {}
+	data.Owned = deepCopy(TEMPLATE.Owned)
+	data.Equipped = deepCopy(TEMPLATE.Equipped)
+	if baitEquipped and Registry.Equipment.Baits.Items[baitEquipped] then
+		data.Equipped.Baits = baitEquipped
+	end
+	data.Enhance = nil
+	data.Aquarium.Fish = {}
+	ensureGear(data)
+	for _, g in regrant do
+		table.insert(data.Bag, Inventory.NewGear(g[1], g[2]))
+	end
+end
+
 local function sanitize(data: any)
 	for old, new in RENAMED_FISH do
 		if data.Fishdex[old] then
@@ -115,38 +159,17 @@ local function sanitize(data: any)
 			if e.Id == old then
 				e.Id = new
 			end
-			if e.Fish == old then
-				e.Fish = new
+		end
+		for _, e in data.Aquarium.Fish do
+			if e.Id == old then
+				e.Id = new
 			end
 		end
 	end
-	for catId, cat in Registry.Equipment do
-		if data.Equipped[catId] and not cat.Items[data.Equipped[catId]] then
-			data.Equipped[catId] = Registry.StarterItem(catId)
-		end
-	end
-	if data.Auras.Equipped and not Registry.Auras[data.Auras.Equipped] then
-		data.Auras.Equipped = nil
-	end
-	local bagFromV1 = false
-	if (data.Version or 1) < 2 then
-		Inventory.MigrateV1(data, function(e)
-			return Roll.Value(e, 1)
-		end)
-		data.Version = 2
-		bagFromV1 = true -- stack values were just computed from the current (x10) config
-	end
-	if data.Version < 3 then
+	if (data.Version or 1) < 3 then
 		-- Balance Pass 1: every coin value/price is x10. Scale what the player already has, once.
 		data.Coins = math.floor((data.Coins or 0) * 10)
 		data.Lifetime.CoinsEarned = math.floor((data.Lifetime.CoinsEarned or 0) * 10)
-		if not bagFromV1 then
-			for _, st in data.Bag do
-				if st.Kind == "Fish" and st.Value then
-					st.Value *= 10
-				end
-			end
-		end
 		data.Version = 3
 	end
 	if data.Version < 4 then
@@ -173,17 +196,16 @@ local function sanitize(data: any)
 		data.Skills.Points += math.max(0, (data.Level or 1) - 1) * Registry.Skills.PointsPerLevel
 		data.Version = 5
 	end
+	if data.Version < 6 then
+		resetItemsV6(data)
+		data.Version = 6
+	end
+	if data.Auras.Equipped and not Registry.Auras[data.Auras.Equipped] then
+		data.Auras.Equipped = nil
+	end
 	for id in data.Skills.Levels do
 		if not Registry.Skills.List[id] then
 			data.Skills.Levels[id] = nil
-		end
-	end
-	for catId, items in data.Enhance do
-		local cat = Registry.Equipment[catId]
-		for itemId in items do
-			if not cat or not cat.Items[itemId] then
-				items[itemId] = nil
-			end
 		end
 	end
 	for id in data.Mastery do
@@ -191,24 +213,52 @@ local function sanitize(data: any)
 			data.Mastery[id] = nil
 		end
 	end
+
+	-- Bag items: keep only ones whose content still exists; fix up fields a hand edit could break.
+	local seen: { [string]: boolean } = {}
+	local function validFish(f: any): boolean
+		return type(f) == "table" and Registry.Fish[f.Id] ~= nil and (f.Mutation == nil or Registry.Mutations[f.Mutation] ~= nil)
+	end
+	local function claimUUID(item: any)
+		if type(item.UUID) ~= "string" or seen[item.UUID] then
+			item.UUID = Inventory.NewUUID()
+		end
+		seen[item.UUID] = true
+	end
 	local tank = {}
 	for _, f in data.Aquarium.Fish do
-		if Registry.Fish[f.Id] and (f.Mutation == nil or Registry.Mutations[f.Mutation]) then
+		if validFish(f) and f.Kind == "Fish" then
+			claimUUID(f)
 			table.insert(tank, f)
 		end
 	end
 	data.Aquarium.Fish = tank
 	local bag = {}
 	for _, s in data.Bag do
-		local known = if s.Kind == "Fish" then Registry.Fish[s.Id] ~= nil elseif s.Kind == "Treasure" then Registry.Treasures[s.Id] ~= nil else false
-		if known and (s.Count or 0) > 0 then
-			if s.New == true then
-				Inventory.MarkNew(s) -- preserve unread items from older saves
+		local known = false
+		if s.Kind == "Fish" then
+			known = validFish(s)
+		elseif s.Kind == "Treasure" then
+			known = Registry.Treasures[s.Id] ~= nil and (s.Count or 0) > 0
+		elseif s.Kind == "Rod" or s.Kind == "Line" then
+			local cat = Inventory.GearCategory(s.Kind)
+			known = cat ~= nil and Registry.Equipment[cat].Items[s.Id] ~= nil
+			if known then
+				s.Enhance = math.clamp(math.floor(s.Enhance or 0), 0, Registry.GameConfig.Enhance.MaxLevel)
 			end
+		end
+		if known then
+			claimUUID(s)
 			table.insert(bag, s)
 		end
 	end
 	data.Bag = bag
+	for catId, cat in Registry.Equipment do
+		if not Inventory.IsGearCategory(catId) and data.Equipped[catId] and not cat.Items[data.Equipped[catId]] then
+			data.Equipped[catId] = Registry.StarterItem(catId)
+		end
+	end
+	ensureGear(data)
 end
 
 local store: DataStore? = nil
@@ -298,7 +348,9 @@ end
 -- Dev tool (DevService "!reset"): replace the profile with a fresh template. Saved on the next autosave.
 function DataService.Reset(player: Player)
 	if profiles[player] then
-		profiles[player] = deepCopy(TEMPLATE)
+		local fresh = deepCopy(TEMPLATE)
+		sanitize(fresh) -- starter rod + line with their own UUIDs
+		profiles[player] = fresh
 		dirty[player] = true
 	end
 end

@@ -21,6 +21,7 @@ local Remotes = require(Shared.Remotes)
 local Signal = require(Shared.Util.Signal)
 local ProductTypes = require(Shared.Config.Products)
 local Boosts = require(Shared.Boosts)
+local Inventory = require(Shared.Inventory)
 
 local DataService = require(script.Parent.DataService)
 
@@ -128,7 +129,28 @@ local function giveReward(data: any, r: ProductTypes.Reward, sign: number, chang
 		-- rollback (sign -1) takes the same seconds back off the end time
 		Boosts.Add(data, r.Id :: string, amount)
 	elseif r.Kind == "Item" then
-		local owned = data.Owned[r.Category :: string]
+		local category = r.Category :: string
+		if Inventory.IsGearCategory(category) then
+			-- Rods / Lines are bag items: a gift is Bound (no trade, no sell), given once, never refused for a full bag.
+			local kind = Inventory.GearKind(category)
+			for i, s in data.Bag do
+				if s.Kind == kind and s.Id == r.Id then
+					if sign < 0 and changed then
+						table.remove(data.Bag, i)
+						if data.Equipped[category] == s.UUID then
+							data.Equipped[category] = nil -- DataService.sanitize / next load wears a starter again
+						end
+					end
+					return sign < 0 and changed == true
+				end
+			end
+			if sign > 0 then
+				Inventory.Add(data, Inventory.NewGear(category, r.Id :: string), true)
+				return true
+			end
+			return false
+		end
+		local owned = data.Owned[category]
 		if sign > 0 then
 			local had = owned[r.Id :: string] == true
 			owned[r.Id :: string] = true

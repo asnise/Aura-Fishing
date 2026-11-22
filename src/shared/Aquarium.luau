@@ -2,7 +2,8 @@
 -- Aquarium (C14). Shared by server (authoritative) and client (UI), like Inventory.
 --
 --   profile.Aquarium = { Slots = n, Fish = { TankFish, ... } }   one fish = one slot
---   TankFish = { Uid, Id, Mutation?, Weight, Value }   Value = coins it is worth when taken back out
+--   TankFish = the bag fish item itself (Items/ItemTypes: UUID, Id, Mutation?, Weight, Value, Tags?) - moving a
+--   fish between bag and tank keeps everything, Value = coins it is worth when taken back out
 --   profile.Pearls   = float, grows by Aquarium.Rate(profile) per minute (also offline, capped)
 --
 -- Numbers: GameConfig.Aquarium. Stats: PearlRate (multiplier), OfflineCapHours.
@@ -14,7 +15,7 @@ local Format = require(script.Parent.Util.Format)
 
 local CFG = Registry.GameConfig.Aquarium
 
-export type TankFish = { Uid: string, Id: string, Mutation: string?, Weight: number, Value: number }
+export type TankFish = { UUID: string, Id: string, Mutation: string?, Weight: number, Value: number, Tags: { string }? }
 
 -- What the UI shows (contract agreed with the UI session, docs/HANDOFF_ECONOMY_UI.md).
 export type State = {
@@ -69,7 +70,7 @@ function Aquarium.State(profile: any, stats: Stats.ComputedStats?): State
 	for _, f in profile.Aquarium.Fish do
 		local rate = Aquarium.FishRate(f.Id, f.Mutation, pr)
 		total += rate
-		table.insert(fish, { Uid = f.Uid, Id = f.Id, Mutation = f.Mutation, Weight = f.Weight, Rate = rate })
+		table.insert(fish, { Uid = f.UUID, Id = f.Id, Mutation = f.Mutation, Weight = f.Weight, Rate = rate })
 	end
 	return {
 		Slots = profile.Aquarium.Slots,

@@ -107,31 +107,26 @@ end
 
 -- PUT IN TANK ----------------------------------------------------------------
 
--- Takes one fish (Id + Mutation) out of the bag, returns { Weight, Value } or nil.
-local function takeOneFromBag(data: any, fishId: string, mutation: string?): (number?, number?)
-	for i = #data.Bag, 1, -1 do
-		local s = data.Bag[i]
-		if s.Kind == "Fish" and s.Id == fishId and s.Mutation == mutation and s.Count > 0 then
-			local value = (s.Value or 0) / s.Count
-			local fish = Registry.Fish[fishId]
-			-- Stacks only keep the heaviest weight: the last fish gets it, others the species average.
-			local weight = if s.Count == 1 then (s.Best or fish.Weight[1]) else math.min(s.Best or math.huge, (fish.Weight[1] + fish.Weight[2]) / 2)
-			s.Count -= 1
-			s.Value = (s.Value or 0) - value
-			if s.Count <= 0 then
-				table.remove(data.Bag, i)
-			end
-			return weight, value
+-- Takes one fish (Id + Mutation) out of the bag and returns it with weight, mutation, tags and value intact.
+-- The least valuable matching fish goes first, so the best ones stay for selling.
+local function takeOneFromBag(data: any, fishId: string, mutation: string?): any?
+	local pick, pickIndex
+	for i, s in data.Bag do
+		if s.Kind == "Fish" and s.Id == fishId and s.Mutation == mutation and (not pick or (s.Value or 0) < (pick.Value or 0)) then
+			pick, pickIndex = s, i
 		end
 	end
-	return nil, nil
+	if pick then
+		table.remove(data.Bag, pickIndex)
+	end
+	return pick
 end
 
 local function countInBag(data: any, fishId: string, mutation: string?): number
 	local n = 0
 	for _, s in data.Bag do
 		if s.Kind == "Fish" and s.Id == fishId and s.Mutation == mutation then
-			n += s.Count
+			n += 1
 		end
 	end
 	return n
@@ -184,14 +179,11 @@ local function putInTank(player: Player, list: any): Result
 	for _, key in order do
 		local w = wanted[key]
 		for _ = 1, w.Count do
-			local weight, value = takeOneFromBag(data, w.Id, w.Mutation)
-			table.insert(data.Aquarium.Fish, {
-				Uid = DataService.NextUid(player),
-				Id = w.Id,
-				Mutation = w.Mutation,
-				Weight = weight :: number,
-				Value = value :: number,
-			})
+			local fish = takeOneFromBag(data, w.Id, w.Mutation)
+			if fish then
+				fish.New = nil
+				table.insert(data.Aquarium.Fish, fish)
+			end
 		end
 	end
 	DataService.MarkDirty(player)
@@ -205,7 +197,7 @@ local function takeFromTank(player: Player, uid: any): Result
 	end
 	local index
 	for i, f in data.Aquarium.Fish do
-		if f.Uid == uid then
+		if f.UUID == uid then
 			index = i
 			break
 		end
@@ -214,12 +206,12 @@ local function takeFromTank(player: Player, uid: any): Result
 		return fail("That fish is not in your tank")
 	end
 	local f = data.Aquarium.Fish[index]
-	if not Inventory.CanAdd(data, "Fish", f.Id, f.Mutation) then
+	if Inventory.IsFull(data) then
 		return fail("Your bag is full")
 	end
 	settle(player)
 	table.remove(data.Aquarium.Fish, index)
-	Inventory.AddFish(data, f.Id, f.Mutation, f.Weight, f.Value)
+	Inventory.Add(data, f)
 	DataService.MarkDirty(player)
 	return okState(data)
 end

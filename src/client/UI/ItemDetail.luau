@@ -1,15 +1,16 @@
 --!nonstrict
 -- Item Card popover (B21, Figma 18B option A). One card for every item kind, opened from any slot:
 --   ItemDetail.Show(item, anchor)   item = { Kind = "Rod"|"Line"|"Aura"|"Fish"|"Bait"|"Treasure"|"Bag"|"Species", Id,
---                                   Index?, Info? }  (Species = Fishdex entry; Info = opened from a catalogue)
---                                   (Index = bag slot for Fish / Treasure stacks), anchor = the pressed GuiObject
+--                                   UUID?, Info? }  (Species = Fishdex entry; Info = opened from a catalogue)
+--                                   (UUID = the bag item for Fish / Treasure / Rod / Line; a Rod or Line without
+--                                   UUID is a catalogue card), anchor = the pressed GuiObject
 --   ItemDetail.Hide(), ItemDetail.IsShowing(), ItemDetail.Refresh() (re-reads the profile; hides the card
 --   if the item is gone, e.g. a stack was sold)
 -- Placement: right of the anchor; flips to the left when there is no room; clamped to the screen.
 -- Owned items get the Actions row (buttons per kind); not owned gear shows "Get from" (info only).
 -- The baked ItemDetail layout is fitted to the viewport at runtime, with Actions below the scroll area.
 -- Server calls use the existing remotes
--- (Equip, Enhance, EquipAura, StarUpAura, SellStack, PutInTank, OpenTreasure).
+-- (Equip, Enhance, EquipAura, StarUpAura, SellItem, PutInTank, OpenTreasure).
 -- Needs ItemDetail.Init({ Profile, Stats, Notify, Changed }) once (from InventoryController) so this UI
 -- module does not require controllers.
 
@@ -38,7 +39,7 @@ local ItemDetail = {}
 ItemDetail.Hidden = Signal.new() -- () card closed (any window that opened it clears its selection)
 
 -- Info = true: opened from a catalogue (Shop / Fishdex), so a bait you have none of still shows (Get from).
-export type Item = { Kind: string, Id: string, Index: number?, Info: boolean? }
+export type Item = { Kind: string, Id: string, UUID: string?, Info: boolean? }
 
 local CATEGORY = { Rod = "Rods", Line = "Lines", Bait = "Baits" }
 local GAP = 12 -- card to slot
@@ -60,15 +61,8 @@ local function rarityColor(id: string?): Color3
 	return if r then r.Color else T.Track
 end
 
--- Equipment has no rarity: rank by shop order (1 = Common ... 5+ = Legendary); exclusives = Rare.
 local function gearRarity(cat: string, id: string): string
-	local item = Registry.Equipment[cat].Items[id]
-	if item.Exclusive then
-		return "Rare"
-	end
-	local ladder = { "Common", "Uncommon", "Rare", "Epic", "Legendary" }
-	local rank = table.find(Registry.SortedItems(cat), id) or 1
-	return ladder[math.clamp(rank, 1, #ladder)]
+	return Registry.GearRarity(cat, id)
 end
 
 local function statBadges(stats: { [string]: number }?, mutations: { [string]: number }?): { any }
@@ -170,15 +164,32 @@ local function shopSource(def: any): any
 	return { Icon = if def.Currency == "Gems" then "ui/status/gem" else "ui/status/coin", Text = table.concat(parts, " - ") }
 end
 
+-- Prefix / Suffix mods of a rod as badges ("Sharp +0.1 Luck").
+local function modBadges(gear: any): { any }
+	local out = {}
+	for _, list in { gear.Prefixes or {}, gear.Suffixes or {} } do
+		for _, mod in list do
+			local def = Registry.StatDefs[mod.Stat]
+			table.insert(out, { Text = `{mod.Name} {if def then Format.Stat(mod.Stat, def, mod.Value) else tostring(mod.Value)}`, Color = T.Gem })
+		end
+	end
+	return out
+end
+
 local function gearModel(profile: any, item: Item): any
 	local cat = CATEGORY[item.Kind]
 	local def = Registry.Equipment[cat].Items[item.Id]
 	if not def then
 		return nil
 	end
-	local owned = profile.Owned[cat] and profile.Owned[cat][item.Id] == true
-	local equipped = profile.Equipped[cat] == item.Id
-	local lv = Enhance.Level(profile, cat, item.Id)
+	-- item.UUID = a bag item; none = a catalogue card (Shop), which you may not own
+	local gear = if item.UUID then Inventory.Find(profile, item.UUID) else nil
+	if item.UUID and (not gear or gear.Id ~= item.Id) then
+		return nil
+	end
+	local owned = gear ~= nil
+	local equipped = gear ~= nil and profile.Equipped[cat] == gear.UUID
+	local lv = Enhance.Level(gear)
 	local rarity = gearRarity(cat, item.Id)
 	local meta = {}
 	if equipped then
@@ -186,6 +197,14 @@ local function gearModel(profile: any, item: Item): any
 	end
 	if lv > 0 then
 		table.insert(meta, { Text = `+{lv}`, Color = T.Gem })
+	end
+	if gear then
+		for _, b in modBadges(gear) do
+			table.insert(meta, b)
+		end
+		if Inventory.IsBound(gear) then
+			table.insert(meta, { Text = "Bound", TextColor = T.SubText })
+		end
 	end
 	local m = {
 		Icon = `equipment/{item.Id}`,
@@ -199,22 +218,29 @@ local function gearModel(profile: any, item: Item): any
 		Owned = owned,
 		Actions = {},
 	}
-	if owned then
+	if gear then
+		local uuid = gear.UUID
 		table.insert(m.Actions, if equipped
 			then { Text = "EQUIPPED", Color = T.Disabled }
 			else { Text = "EQUIP", Color = T.Good, Run = function()
-				simple("Equip", cat, item.Id)
+				simple("Equip", cat, uuid)
 			end })
 		if Enhance.CanEnhance(cat, item.Id) then
 			local coins = Enhance.Cost(cat, item.Id, lv)
 			table.insert(m.Actions, if coins
 				then { Text = "ENHANCE", CostIcon = "ui/status/enhance", Cost = short(coins), Color = T.Gold, Run = function()
 					-- C16: preview +N -> +N+1 and the stat changes first (Figma Enhance popup)
-					EnhancePopup.Open({ Name = def.Name, Icon = `equipment/{item.Id}`, State = Enhance.State(profile, cat, item.Id) }, function()
-						simple("Enhance", cat, item.Id)
+					EnhancePopup.Open({ Name = def.Name, Icon = `equipment/{item.Id}`, State = Enhance.State(gear) }, function()
+						simple("Enhance", uuid)
 					end)
 				end }
 				else { Text = `MAX +{lv}`, Color = T.Disabled })
+		end
+		local value = Inventory.SellValue(gear, 1)
+		if not equipped and value > 0 then
+			table.insert(m.Actions, { Text = "SELL", CostIcon = "ui/status/coin", Cost = short(value), Color = T.Gold, Run = function()
+				simple("SellItem", uuid)
+			end })
 		end
 	else
 		m.GetFrom = shopSource(def)
@@ -337,16 +363,19 @@ local function auraModel(profile: any, item: Item): any
 end
 
 local function fishModel(profile: any, item: Item): any
-	local s = item.Index and profile.Bag[item.Index]
+	local s = item.UUID and Inventory.Find(profile, item.UUID)
 	if not s or s.Kind ~= "Fish" or s.Id ~= item.Id then
 		return nil
 	end
 	local f = Registry.Fish[s.Id]
 	local name, rarity = Inventory.Describe(s)
 	local value = Inventory.SellValue(s, sellMultiplier())
-	local meta = { { Text = `x{s.Count}` } }
-	if (s.Best or 0) > 0 then
-		table.insert(meta, { Text = string.format("%.1f kg", s.Best), TextColor = T.SubText })
+	local meta = {}
+	if (s.Weight or 0) > 0 then
+		table.insert(meta, { Text = string.format("%.2f kg", s.Weight) })
+	end
+	for _, tag in s.Tags or {} do
+		table.insert(meta, { Text = tag, TextColor = T.SubText, Color = if tag == "Perfect" then T.Gold elseif tag == "Hotspot" then T.Sky else nil })
 	end
 	local hot = HotFish.Mult(s.Id)
 	if hot > 1 then
@@ -356,7 +385,10 @@ local function fishModel(profile: any, item: Item): any
 	if mut then
 		table.insert(meta, { Text = mut.Name, Color = mut.Color })
 	end
-	local index = item.Index
+	if Inventory.IsBound(s) then
+		table.insert(meta, { Text = "Bound", TextColor = T.SubText })
+	end
+	local uuid = s.UUID
 	return {
 		Icon = `fish/{s.Id}`,
 		Rarity = rarity,
@@ -368,7 +400,7 @@ local function fishModel(profile: any, item: Item): any
 		Owned = true,
 		Actions = {
 			{ Text = "SELL", CostIcon = "ui/status/coin", Cost = short(value), Color = T.Gold, Run = function()
-				simple("SellStack", index)
+				simple("SellItem", uuid)
 			end },
 			{ Text = "TANK", Color = T.Sky, Run = function()
 				ItemDetail.Hide()
@@ -416,13 +448,13 @@ local function baitModel(profile: any, item: Item): any
 end
 
 local function treasureModel(profile: any, item: Item): any
-	local s = item.Index and profile.Bag[item.Index]
+	local s = item.UUID and Inventory.Find(profile, item.UUID)
 	if not s or s.Kind ~= "Treasure" or s.Id ~= item.Id then
 		return nil
 	end
 	local def = Registry.Treasures[s.Id]
 	local name, rarity, icon = Inventory.Describe(s)
-	local index = item.Index
+	local uuid = s.UUID
 	return {
 		Icon = icon,
 		Rarity = rarity,
@@ -437,7 +469,7 @@ local function treasureModel(profile: any, item: Item): any
 				Text = "OPEN",
 				Color = T.Accent,
 				Run = function()
-					local ok, msg = call("OpenTreasure", index)
+					local ok, msg = call("OpenTreasure", uuid)
 					if msg then
 						deps.Notify(tostring(msg), if ok then T.Gold else T.Bad)
 					end
@@ -448,7 +480,7 @@ local function treasureModel(profile: any, item: Item): any
 				Text = "OPEN ALL",
 				Color = T.Accent,
 				Run = function()
-					local ok, msg = call("OpenAllTreasure", index)
+					local ok, msg = call("OpenAllTreasure", uuid)
 					if msg then
 						deps.Notify(tostring(msg), if ok then T.Gold else T.Bad)
 					end

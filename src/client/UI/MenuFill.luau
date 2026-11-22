@@ -14,7 +14,7 @@ local New = require(script.Parent.New)
 local MenusScreen = require(script.Parent.Screens.Menus)
 local ItemDetail = require(script.Parent.ItemDetail)
 local ItemSlots = require(script.Parent.ItemSlots)
-local Enhance = require(ReplicatedStorage.Shared.Enhance)
+local Inventory = require(ReplicatedStorage.Shared.Inventory)
 local _AuraStars = require(ReplicatedStorage.Shared.AuraStars)
 
 local T = New.Theme
@@ -206,7 +206,8 @@ local function fillShop(profile: any)
 	for _, id in Registry.SortedItems(catId) do
 		-- Exclusive items (Starter Pack rod...) only show once owned
 		local it = cat.Items[id]
-		if not it.Exclusive or (cat.Kind == "Permanent" and profile.Owned[catId][id]) then
+		local have = if Inventory.IsGearCategory(catId) then Inventory.CountGear(profile, catId, id) > 0 else (cat.Kind == "Permanent" and profile.Owned[catId][id] == true)
+		if not it.Exclusive or have then
 			table.insert(items, id)
 		end
 	end
@@ -230,7 +231,8 @@ local function fillShop(profile: any)
 		end
 		-- C16: +N on owned, enhanced rods / lines
 		ItemSlots.PlusBadge(row.Picture, row.Picture.AbsoluteSize.Y > 0 and row.Picture.AbsoluteSize.Y or 56)
-		ItemSlots.SetPlus(row.Picture, if profile.Owned[catId] and profile.Owned[catId][itemId] then Enhance.Level(profile, catId, itemId) else nil)
+		local worn = Inventory.Worn(profile, catId)
+		ItemSlots.SetPlus(row.Picture, if worn and worn.Id == itemId then worn.Enhance else nil)
 		local sub = statsText(item.Stats)
 		if item.Capacity then
 			sub = `{item.Capacity} slots` .. (if sub ~= "" then ", " .. sub else "")
@@ -245,7 +247,25 @@ local function fillShop(profile: any)
 		row.Use.Visible = false
 		ctx.handlers[row.Use] = nil
 
-		if cat.Kind == "Permanent" then
+		if Inventory.IsGearCategory(catId) then
+			-- Rods / Lines: buy as many as you like (every one is its own bag item); wear them from the Inventory
+			local copies = Inventory.CountGear(profile, catId, itemId)
+			local isWorn = worn ~= nil and worn.Id == itemId
+			title.Text = item.Name .. (if copies > 0 then `  x{copies}` else "") .. (if isWorn then "  (worn)" else "")
+			title.TextColor3 = if isWorn then T.GoodLip else T.Text
+			row.Sub.Text = sub
+			if item.RequiredLevel and profile.Level < item.RequiredLevel then
+				title.TextColor3 = T.SubText
+				row.Sub.Text = sub .. "  |  " .. price
+				setButton(row.Action, `Lv. {item.RequiredLevel}`, T.Disabled, nil)
+				row.Action.TextColor3 = T.DisabledText
+			else
+				local afford = (profile[item.Currency] or 0) >= item.Price
+				setPriceButton(row.Action, item.Price, item.Currency, afford, function()
+					ctx.invoke("Buy", catId, itemId)
+				end)
+			end
+		elseif cat.Kind == "Permanent" then
 			local owned = profile.Owned[catId][itemId]
 			title.Text = item.Name
 			row.Sub.Text = sub

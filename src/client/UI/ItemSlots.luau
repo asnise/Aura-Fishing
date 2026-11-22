@@ -1,10 +1,10 @@
 --!nonstrict
 -- Shared item lists + 72px grid cells for the Inventory (B21) and Character (17 v2) windows.
 --   ItemSlots.GearRarity(cat, id)     rarity id for a Rod/Line/Bag (equipment has none: rank by shop order)
---   ItemSlots.Gear(profile, cat)      owned Rods / Lines as entries (Kind "Rod" / "Line")
+--   ItemSlots.Gear(profile, cat)      Rods / Lines in the bag as entries (Kind "Rod" / "Line", one per item)
 --   ItemSlots.Auras(profile)          owned auras (Kind "Aura") - auras are normal items, no locked slots
 --   ItemSlots.Baits(profile)          baits with count > 0 (Kind "Bait")
---   entry = { Key, Kind, Id, Name, Rarity?, Icon, Order, Count?, Equipped?, Color?, Index?, Stack?, Mutation?, Value? }
+--   entry = { Key, Kind, Id, UUID?, Name, Rarity?, Icon, Order, Count?, Equipped?, Color?, Stack?, Mutation?, Value?, Plus? }
 --   ItemSlots.NewCell(onPress)        holder Frame with the Components ItemSlot (84px) scaled to 72;
 --                                     onPress(holder) on click. Use as VirtualGrid Create.
 --   ItemSlots.Bind(holder, entry, selectedKey, isNew?)   fill a cell (Empty entries -> bubbles)
@@ -12,7 +12,7 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local Registry = require(ReplicatedStorage:WaitForChild("Shared").Registry)
-local Enhance = require(ReplicatedStorage.Shared.Enhance)
+local Inventory = require(ReplicatedStorage.Shared.Inventory)
 local HotFish = require(ReplicatedStorage.Shared.HotFish)
 
 local New = require(script.Parent.New)
@@ -25,34 +25,29 @@ local ItemSlots = {}
 
 ItemSlots.Size = 72
 local COMPONENT_SLOT = 84 -- Components sheet ItemSlot size
-local KIND = { Rods = "Rod", Lines = "Line" }
 
 function ItemSlots.GearRarity(cat: string, id: string): string
-	local item = Registry.Equipment[cat].Items[id]
-	if item.Exclusive then
-		return "Rare"
-	end
-	local ladder = { "Common", "Uncommon", "Rare", "Epic", "Legendary" }
-	local rank = table.find(Registry.SortedItems(cat), id) or 1
-	return ladder[math.clamp(rank, 1, #ladder)]
+	return Registry.GearRarity(cat, id)
 end
 
 function ItemSlots.Gear(profile: any, cat: string): { any }
 	local out = {}
-	local kind = KIND[cat] or cat
-	for _, id in Registry.SortedItems(cat) do
-		if profile.Owned[cat] and profile.Owned[cat][id] then
-			local item = Registry.Equipment[cat].Items[id]
+	local kind = Inventory.GearKind(cat)
+	for i, gear in profile.Bag do
+		local item = if gear.Kind == kind then Registry.Equipment[cat].Items[gear.Id] else nil
+		if item then
 			table.insert(out, {
-				Key = `{kind}|{id}`,
+				Key = `{kind}|{gear.UUID}`,
 				Kind = kind,
-				Id = id,
+				Id = gear.Id,
+				UUID = gear.UUID,
+				Stack = gear,
 				Name = item.Name,
-				Rarity = ItemSlots.GearRarity(cat, id),
-				Icon = `equipment/{id}`,
-				Order = item.Order,
-				Equipped = profile.Equipped[cat] == id,
-				Plus = Enhance.Level(profile, cat, id), -- C16: +N badge
+				Rarity = ItemSlots.GearRarity(cat, gear.Id),
+				Icon = `equipment/{gear.Id}`,
+				Order = item.Order * 1000 + i,
+				Equipped = profile.Equipped[cat] == gear.UUID,
+				Plus = gear.Enhance or 0, -- C16: +N badge
 			})
 		end
 	end

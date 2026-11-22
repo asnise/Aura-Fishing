@@ -451,7 +451,7 @@ renderPicker = function()
 				groups[key] = { Key = key, Id = s.Id, Mutation = s.Mutation, Count = 0 }
 				table.insert(order, key)
 			end
-			groups[key].Count += s.Count
+			groups[key].Count += 1 -- fish never stack: one bag item = one fish
 		end
 	end
 	table.sort(order, function(a, b)

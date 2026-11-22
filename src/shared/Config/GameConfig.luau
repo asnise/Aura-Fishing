@@ -70,12 +70,16 @@ local GameConfig = {
 		StartFishRange = { 0.3, 0.7 }, -- where the fish appears (0 = bottom, 1 = top)
 	},
 
-	-- Inventory (bag): capacity = number of SLOTS (Bags.Capacity). One slot = one stack.
+	-- Inventory (bag, Item rework): capacity = number of SLOTS (Bags.Capacity). One slot = one item.
+	-- Fish and Rods/Lines never stack (each has its own UUID, weight, mutation, mods); only chests stack.
+	-- The rod and line you wear do not use a slot; spare ones do. Baits and Bags never use a slot.
 	Inventory = {
-		FishStackMax = 10, -- same species + same mutation stack together
 		TreasureStackMax = 5,
 		TreasureLuckScale = 0.5, -- drop chance *= 1 + Luck * this
-		InfiniteBagSlots = 999, -- capacity with the Infinite Bag pass (C6); UI shows it as "∞"
+		InfiniteBagSlots = 999, -- capacity with the Infinite Bag pass (C6); UI shows it as "Inf"
+		GearSellFraction = 0.4, -- selling a Rod/Line pays this share of (buy price + coins spent on Enhance)
+		MaxPrefixes = 2, -- Rod mods (rolling / fusion come later)
+		MaxSuffixes = 2,
 	},
 
 	-- Boosts (C19, Dev Products): profile.Boosts[id] = os.time() when it ends. Real time (keeps

@@ -1,7 +1,7 @@
 --!strict
 -- Gear Enhance (C16), shared by server and client. Numbers: GameConfig.Enhance.
---   profile.Enhance = { [categoryId] = { [itemId] = level } }   (missing = +0)
--- Stats.Collect uses Enhance.ScaledStats for every equipped item, so the +N shows in all stat UI.
+--   Item rework: the level lives on each Rod / Line bag item (item.Enhance, missing = +0), not per config id.
+-- Stats.Collect uses Enhance.ScaledStats for the worn rod and line, so the +N shows in all stat UI.
 -- Requires only Registry (Stats requires this module).
 
 local Registry = require(script.Parent.Registry)
@@ -26,9 +26,8 @@ function Enhance.IsCategory(categoryId: string): boolean
 	return table.find(CFG.Categories, categoryId) ~= nil
 end
 
-function Enhance.Level(profile: any, categoryId: string, itemId: string): number
-	local cat = profile.Enhance and profile.Enhance[categoryId]
-	return (cat and cat[itemId]) or 0
+function Enhance.Level(item: any?): number
+	return if item then item.Enhance or 0 else 0
 end
 
 -- Item stats at an Enhance level.
@@ -72,20 +71,22 @@ function Enhance.Cost(categoryId: string, itemId: string, level: number): (numbe
 	return coins, CFG.PearlCosts[level + 1]
 end
 
-function Enhance.State(profile: any, categoryId: string, itemId: string): ItemState?
-	if not Enhance.CanEnhance(categoryId, itemId) then
+-- item = a Rod / Line bag item (Items/ItemTypes).
+function Enhance.State(item: any): ItemState?
+	local categoryId = if item.Kind == "Rod" then "Rods" elseif item.Kind == "Line" then "Lines" else nil
+	if not categoryId or not Enhance.CanEnhance(categoryId, item.Id) then
 		return nil
 	end
-	local item = Registry.Equipment[categoryId].Items[itemId]
-	local lv = Enhance.Level(profile, categoryId, itemId)
-	local coins, pearls = Enhance.Cost(categoryId, itemId, lv)
+	local def = Registry.Equipment[categoryId].Items[item.Id]
+	local lv = Enhance.Level(item)
+	local coins, pearls = Enhance.Cost(categoryId, item.Id, lv)
 	return {
 		Level = lv,
 		MaxLevel = CFG.MaxLevel,
 		Coins = coins,
 		Pearls = pearls,
-		Stats = Enhance.ScaledStats(item.Stats, lv),
-		NextStats = if coins then Enhance.ScaledStats(item.Stats, lv + 1) else nil,
+		Stats = Enhance.ScaledStats(def.Stats, lv),
+		NextStats = if coins then Enhance.ScaledStats(def.Stats, lv + 1) else nil,
 	}
 end
 

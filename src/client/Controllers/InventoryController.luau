@@ -41,7 +41,7 @@ local T = New.Theme
 local InventoryController = {}
 
 local TAB_W = InventoryScreen.TabWidth
-local BAG_SORTS = { "Value", "Rarity", "Count", "Name" }
+local BAG_SORTS = { "Value", "Rarity", "Weight", "Name" }
 local GEAR_SORTS = { "Rarity", "Name" }
 local GEAR = { Rods = { Kind = "Rod", Cat = "Rods" }, Lines = { Kind = "Line", Cat = "Lines" } }
 local EMPTY = { Kind = "Empty" }
@@ -61,10 +61,6 @@ local visibleSince: { [string]: number } = {}
 local lastScan = 0
 local grid: any = nil
 local footerAction: (() -> ())? = nil
-
-local function stackKey(s: any): string
-	return `{s.Kind}|{s.Id}|{s.Mutation or ""}`
-end
 
 local function newToken(stack: any): string?
 	local token = stack and stack.New
@@ -158,8 +154,8 @@ local function call(name: string, ...: any): (any, any, any)
 end
 
 -- Entries ------------------------------------------------------------------------------------------
--- entry = { Key, Kind (Fish/Treasure/Bait/Rod/Line/Aura), Id, Index?, Stack?, Count?, Name, Rarity, Icon,
---           Value?, Order?, Equipped?, Color? }
+-- entry = { Key, Kind (Fish/Treasure/Bait/Rod/Line/Aura), Id, UUID?, Stack?, Count?, Name, Rarity, Icon,
+--           Value?, Weight?, Order?, Equipped?, Color?, Plus? }   (one entry per bag item)
 
 local function sortEntries(out: { any })
 	local mode = sortMode()
@@ -169,8 +165,8 @@ local function sortEntries(out: { any })
 			ka, kb = a.Value or 0, b.Value or 0
 		elseif mode == "Rarity" then
 			ka, kb = rarityTier(a.Rarity), rarityTier(b.Rarity)
-		elseif mode == "Count" then
-			ka, kb = a.Count or 0, b.Count or 0
+		elseif mode == "Weight" then
+			ka, kb = a.Weight or 0, b.Weight or 0
 		end
 		if ka ~= nil and ka ~= kb then
 			return ka > kb
@@ -189,18 +185,21 @@ local function bagEntries(profile: any, kind: string?): { any }
 		if kind == nil or s.Kind == kind then
 			local name, rarity, icon = Inventory.Describe(s)
 			table.insert(out, {
-				Key = `bag|{i}|{stackKey(s)}`,
+				Key = `bag|{s.UUID}`,
 				Kind = s.Kind,
 				Id = s.Id,
-				Index = i,
+				UUID = s.UUID,
 				Stack = s,
 				Mutation = s.Mutation,
-				Count = s.Count,
+				Count = s.Count, -- chests only; fish / gear never show a count
+				Weight = s.Weight,
 				Name = name,
 				Rarity = rarity,
 				Icon = icon,
 				Value = Inventory.SellValue(s, mult),
 				Order = i,
+				Equipped = Inventory.IsWorn(profile, s),
+				Plus = s.Enhance,
 			})
 		end
 	end
@@ -326,7 +325,7 @@ local function selectEntry(e: any, view: GuiObject)
 		ItemDetail.Hide()
 	else
 		selected = e.Key
-		ItemDetail.Show({ Kind = e.Kind, Id = e.Id, Index = e.Index }, view)
+		ItemDetail.Show({ Kind = e.Kind, Id = e.Id, UUID = e.UUID }, view)
 	end
 	grid:Refresh()
 end
@@ -559,9 +558,8 @@ function InventoryController.Refresh()
 	local entries = entriesFor(profile, tab)
 	refs.Category.Text = tab
 	local isBag = tab == "All" or tab == "Fish" or tab == "Treasure"
-	refs.CountLabel.Text = if tab == "All"
+	refs.CountLabel.Text = if tab == "All" or isBag
 		then `{#entries} item{if #entries == 1 then "" else "s"}`
-		elseif isBag then `{#entries} stack{if #entries == 1 then "" else "s"}`
 		else `{#entries} owned`
 	refs.SortLabel.Text = `Sort: {sortMode()}`
 

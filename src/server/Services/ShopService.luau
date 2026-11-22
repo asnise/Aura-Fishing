@@ -21,6 +21,7 @@ local DataService = require(script.Parent.DataService)
 local AquariumService = require(script.Parent.AquariumService)
 
 local ShopService = {}
+local rng = Random.new()
 ShopService.FishSold = Signal.new() -- (player, fishCount, coins) hook for quests/events
 
 local lastCall: { [Player]: number } = {}
@@ -49,19 +50,33 @@ function ShopService.Buy(player: Player, categoryId: any, itemId: any): (boolean
 	if item.RequiredLevel and data.Level < item.RequiredLevel then
 		return false, `Requires level {item.RequiredLevel}`
 	end
-	if cat.Kind == "Permanent" and data.Owned[categoryId][itemId] then
+	local isGear = Inventory.IsGearCategory(categoryId)
+	if cat.Kind == "Permanent" and not isGear and data.Owned[categoryId][itemId] then
 		return false, "Already owned"
 	end
 	-- B21: bags are upgrades, never buy a bag that is not bigger than the one in use
 	if categoryId == "Bags" and Inventory.BagCapacity(itemId) <= Inventory.BagCapacity(data.Equipped.Bags) then
 		return false, "You already have a bigger bag"
 	end
+	-- Rods and Lines can be bought again and again; every purchase is its own item and needs a bag slot.
+	if isGear and Inventory.IsFull(data) then
+		return false, "Bag full - sell something first"
+	end
 	if data[item.Currency] < item.Price then
 		return false, `Not enough {item.Currency}`
 	end
 	data[item.Currency] -= item.Price
 
-	if cat.Kind == "Permanent" then
+	if isGear then
+		local bought = Inventory.NewGear(categoryId, itemId)
+		Inventory.Add(data, bought, true)
+		-- A better piece is worn right away; a copy of something you already outgrow stays in the bag.
+		local worn = Inventory.Worn(data, categoryId)
+		local wornDef = if worn then cat.Items[worn.Id] else nil
+		if not wornDef or item.Order > wornDef.Order then
+			data.Equipped[categoryId] = bought.UUID
+		end
+	elseif cat.Kind == "Permanent" then
 		data.Owned[categoryId][itemId] = true
 		data.Equipped[categoryId] = itemId
 	else
@@ -73,41 +88,40 @@ function ShopService.Buy(player: Player, categoryId: any, itemId: any): (boolean
 	return true, `Bought {item.Name}!`
 end
 
--- Gear Enhance (C16): owned Rod/Line +1. Coins (+ Pearls for levels in GameConfig.Enhance.PearlCosts).
-function ShopService.Enhance(player: Player, categoryId: any, itemId: any): (boolean, string, any)
+-- Gear Enhance (C16): one Rod/Line item +1 (the level belongs to that item). Coins (+ Pearls for levels in GameConfig.Enhance.PearlCosts).
+function ShopService.Enhance(player: Player, uuid: any): (boolean, string, any)
 	local data = DataService.Get(player)
-	if not data or type(categoryId) ~= "string" or type(itemId) ~= "string" then
-		return false, "Invalid request", nil
-	end
-	if not Enhance.CanEnhance(categoryId, itemId) then
-		return false, "This item can't be enhanced", nil
-	end
-	if not data.Owned[categoryId] or not data.Owned[categoryId][itemId] then
+	local gear = data and Inventory.Find(data, uuid)
+	local categoryId = gear and Inventory.GearCategory(gear.Kind)
+	if not data or not gear or not categoryId then
 		return false, "Not owned", nil
 	end
-	local item = Registry.Equipment[categoryId].Items[itemId]
-	local level = Enhance.Level(data, categoryId, itemId)
-	local coins, pearls = Enhance.Cost(categoryId, itemId, level)
+	if not Enhance.CanEnhance(categoryId, gear.Id) then
+		return false, "This item cannot be enhanced", nil
+	end
+	local item = Registry.Equipment[categoryId].Items[gear.Id]
+	local level = Enhance.Level(gear)
+	local coins, pearls = Enhance.Cost(categoryId, gear.Id, level)
 	if not coins then
-		return false, `{item.Name} is already +{level} (MAX)`, Enhance.State(data, categoryId, itemId)
+		return false, `{item.Name} is already +{level} (MAX)`, Enhance.State(gear)
 	end
 	if data.Coins < coins then
-		return false, `Need {Format.Number(coins)} coins`, Enhance.State(data, categoryId, itemId)
+		return false, `Need {Format.Number(coins)} coins`, Enhance.State(gear)
 	end
 	if pearls then
 		AquariumService.Settle(player)
 		if data.Pearls < pearls then
-			return false, `Need {Format.Number(pearls)} Pearls`, Enhance.State(data, categoryId, itemId)
+			return false, `Need {Format.Number(pearls)} Pearls`, Enhance.State(gear)
 		end
 		data.Pearls -= pearls
 	end
 	data.Coins -= coins
-	data.Enhance[categoryId] = data.Enhance[categoryId] or {}
-	data.Enhance[categoryId][itemId] = level + 1
+	gear.Enhance = level + 1
 	DataService.MarkDirty(player)
-	return true, `{item.Name} +{level + 1}!`, Enhance.State(data, categoryId, itemId)
+	return true, `{item.Name} +{level + 1}!`, Enhance.State(gear)
 end
 
+-- Rods / Lines: itemId is the UUID of a bag item. Bags / Baits: the Config/Equipment id.
 function ShopService.Equip(player: Player, categoryId: any, itemId: any): (boolean, string)
 	local data = DataService.Get(player)
 	if not data or type(categoryId) ~= "string" then
@@ -122,6 +136,15 @@ function ShopService.Equip(player: Player, categoryId: any, itemId: any): (boole
 		DataService.MarkDirty(player)
 		return true, "Unequipped"
 	end
+	if Inventory.IsGearCategory(categoryId) then
+		local gear = Inventory.Find(data, itemId)
+		if not gear or gear.Kind ~= Inventory.GearKind(categoryId) then
+			return false, "Not owned"
+		end
+		data.Equipped[categoryId] = gear.UUID
+		DataService.MarkDirty(player)
+		return true, `Equipped {cat.Items[gear.Id].Name}`
+	end
 	if type(itemId) ~= "string" or not cat.Items[itemId] then
 		return false, "Unknown item"
 	end
@@ -132,14 +155,14 @@ function ShopService.Equip(player: Player, categoryId: any, itemId: any): (boole
 		return false, "None left"
 	end
 	if categoryId == "Bags" and Inventory.BagCapacity(itemId) < Inventory.BagCapacity(data.Equipped.Bags) then
-		return false, "Bags are upgrades: you can't go back to a smaller bag"
+		return false, "Bags are upgrades: you cannot go back to a smaller bag"
 	end
 	data.Equipped[categoryId] = itemId
 	DataService.MarkDirty(player)
 	return true, `Equipped {cat.Items[itemId].Name}`
 end
 
--- Sells every fish stack; treasure chests stay in the bag.
+-- Sells every fish; treasure chests, rods and lines stay.
 function ShopService.SellAll(player: Player): (boolean, string)
 	local data = DataService.Get(player)
 	if not data then
@@ -168,55 +191,60 @@ function ShopService.SellAll(player: Player): (boolean, string)
 	return true, `Sold {count} fish for {Format.Number(total)} coins!`
 end
 
-local function stackAt(data: any, index: any): any
-	if type(index) ~= "number" or index ~= math.floor(index) then
-		return nil
-	end
-	return data.Bag[index]
-end
-
--- Sells one fish stack (Inventory: select a slot -> Sell).
-function ShopService.SellStack(player: Player, index: any): (boolean, string)
+-- Sells one bag item by UUID: a fish, or a spare Rod / Line (never the one you wear).
+function ShopService.SellItem(player: Player, uuid: any): (boolean, string)
 	local data = DataService.Get(player)
-	local s = data and stackAt(data, index)
-	if not s or s.Kind ~= "Fish" then
+	local item = data and Inventory.Find(data, uuid)
+	if not data or not item or (item.Kind ~= "Fish" and item.Kind ~= "Rod" and item.Kind ~= "Line") then
 		return false, "Nothing to sell"
 	end
-	local total = Inventory.SellValue(s, Stats.Compute(data).Values.SellMultiplier * Boosts.Multiplier(data, "Coins"))
-	table.remove(data.Bag, index)
+	local block = Inventory.SellBlock(data, item)
+	if block then
+		return false, block
+	end
+	local total = Inventory.SellValue(item, Stats.Compute(data).Values.SellMultiplier * Boosts.Multiplier(data, "Coins"))
+	Inventory.Remove(data, uuid)
 	data.Coins += total
 	data.Lifetime.CoinsEarned += total
 	DataService.MarkDirty(player)
-	ShopService.FishSold:Fire(player, s.Count, total)
-	local name = Inventory.Describe(s)
-	return true, `Sold {s.Count} {name} for {Format.Number(total)} coins!`
+	if item.Kind == "Fish" then
+		ShopService.FishSold:Fire(player, 1, total)
+	end
+	local name = Inventory.Describe(item)
+	return true, `Sold {name} for {Format.Number(total)} coins!`
+end
+
+local function chestOf(data: any, uuid: any): (any, any)
+	local s = data and Inventory.Find(data, uuid)
+	return s, s and s.Kind == "Treasure" and Registry.Treasures[s.Id]
+end
+
+local function rollReward(t: any, totalWeight: number): any
+	local pick = rng:NextNumber() * totalWeight
+	for _, r in t.Rewards do
+		pick -= r.Weight
+		if pick <= 0 then
+			return r
+		end
+	end
+	return t.Rewards[#t.Rewards]
 end
 
 -- Opens one chest of a treasure stack and pays one reward rolled by Weight (Config/Treasures).
-local rng = Random.new()
-function ShopService.OpenTreasure(player: Player, index: any): (boolean, string, any)
+function ShopService.OpenTreasure(player: Player, uuid: any): (boolean, string, any)
 	local data = DataService.Get(player)
-	local s = data and stackAt(data, index)
-	local t = s and s.Kind == "Treasure" and Registry.Treasures[s.Id]
-	if not t then
+	local s, t = chestOf(data, uuid)
+	if not data or not s or not t then
 		return false, "Nothing to open", nil
 	end
 	local total = 0
 	for _, r in t.Rewards do
 		total += r.Weight
 	end
-	local pick = rng:NextNumber() * total
-	local reward = t.Rewards[#t.Rewards]
-	for _, r in t.Rewards do
-		pick -= r.Weight
-		if pick <= 0 then
-			reward = r
-			break
-		end
-	end
-	s.Count -= 1
+	local reward = rollReward(t, total)
+	s.Count = (s.Count or 1) - 1
 	if s.Count <= 0 then
-		table.remove(data.Bag, index)
+		Inventory.Remove(data, uuid)
 	end
 	local msg
 	local out: any
@@ -241,11 +269,10 @@ function ShopService.OpenTreasure(player: Player, index: any): (boolean, string,
 	return true, msg, out
 end
 
-function ShopService.OpenAllTreasure(player: Player, index: any): (boolean, string, any)
+function ShopService.OpenAllTreasure(player: Player, uuid: any): (boolean, string, any)
 	local data = DataService.Get(player)
-	local s = data and stackAt(data, index)
-	local t = s and s.Kind == "Treasure" and Registry.Treasures[s.Id]
-	if not t or not s or s.Count <= 0 then
+	local s, t = chestOf(data, uuid)
+	if not data or not s or not t or (s.Count or 1) <= 0 then
 		return false, "Nothing to open", nil
 	end
 	local totalWeight = 0
@@ -253,35 +280,24 @@ function ShopService.OpenAllTreasure(player: Player, index: any): (boolean, stri
 		totalWeight += r.Weight
 	end
 
-	local count = s.Count
+	local count = s.Count or 1
 	local earnedCoins = 0
 	local earnedGems = 0
 	local earnedBaits: { [string]: number } = {}
 
 	for _ = 1, count do
-		local pick = rng:NextNumber() * totalWeight
-		local reward = t.Rewards[#t.Rewards]
-		for _, r in t.Rewards do
-			pick -= r.Weight
-			if pick <= 0 then
-				reward = r
-				break
-			end
-		end
-
+		local reward = rollReward(t, totalWeight)
 		if reward.Kind == "Coins" then
-			local amount = rng:NextInteger(reward.Min :: number, reward.Max :: number)
-			earnedCoins += amount
+			earnedCoins += rng:NextInteger(reward.Min :: number, reward.Max :: number)
 		elseif reward.Kind == "Gems" then
-			local amount = rng:NextInteger(reward.Min :: number, reward.Max :: number)
-			earnedGems += amount
+			earnedGems += rng:NextInteger(reward.Min :: number, reward.Max :: number)
 		else
 			local id = reward.Id :: string
 			earnedBaits[id] = (earnedBaits[id] or 0) + (reward.Count or 1)
 		end
 	end
 
-	table.remove(data.Bag, index)
+	Inventory.Remove(data, uuid)
 
 	if earnedCoins > 0 then
 		data.Coins += earnedCoins
@@ -366,11 +382,11 @@ function ShopService.Init()
 		end
 		return ShopService.Equip(player, cat, id)
 	end
-	Remotes.Func("Enhance").OnServerInvoke = function(player, cat, id)
+	Remotes.Func("Enhance").OnServerInvoke = function(player, uuid)
 		if throttled(player) then
 			return false, "Slow down", nil
 		end
-		return ShopService.Enhance(player, cat, id)
+		return ShopService.Enhance(player, uuid)
 	end
 	Remotes.Func("SellAll").OnServerInvoke = function(player)
 		if throttled(player) then
@@ -378,23 +394,23 @@ function ShopService.Init()
 		end
 		return ShopService.SellAll(player)
 	end
-	Remotes.Func("SellStack").OnServerInvoke = function(player, index)
+	Remotes.Func("SellItem").OnServerInvoke = function(player, uuid)
 		if throttled(player) then
 			return false, "Slow down"
 		end
-		return ShopService.SellStack(player, index)
+		return ShopService.SellItem(player, uuid)
 	end
-	Remotes.Func("OpenTreasure").OnServerInvoke = function(player, index)
+	Remotes.Func("OpenTreasure").OnServerInvoke = function(player, uuid)
 		if throttled(player) then
 			return false, "Slow down", nil
 		end
-		return ShopService.OpenTreasure(player, index)
+		return ShopService.OpenTreasure(player, uuid)
 	end
-	Remotes.Func("OpenAllTreasure").OnServerInvoke = function(player, index)
+	Remotes.Func("OpenAllTreasure").OnServerInvoke = function(player, uuid)
 		if throttled(player) then
 			return false, "Slow down", nil
 		end
-		return ShopService.OpenAllTreasure(player, index)
+		return ShopService.OpenAllTreasure(player, uuid)
 	end
 	Remotes.Event("BagSeen").OnServerEvent:Connect(function(player, tokens)
 		local data = DataService.Get(player)

@@ -11,22 +11,22 @@
 **A. เสร็จแล้ว — รอทดสอบ**
 - [x] A1 — วงจรตกปลาหลัก (Prototype core loop)  `ทดสอบผ่าน`
 - [x] A2 — ธีม UI "Cozy Lake"  `ทดสอบผ่าน`
-- [ ] A3 — จัดวางหลบ UI ของ Roblox (Safe areas)  `โค้ดเสร็จ รอทดสอบ`
+- [x] A3 — จัดวางหลบ UI ของ Roblox (Safe areas)  `ทดสอบผ่าน (QA)`
 - [x] A4 — HUD Stats แบบ E (Minimal Floating)  `ทดสอบผ่าน`
 - [x] A5 — Cast popup + Auto depth  `ทดสอบผ่าน`
 - [x] A6 — มินิเกม Pond Card  `ทดสอบผ่าน`
 - [x] A7 — การ์ดปลาที่ตกได้แบบ Badge  `ทดสอบผ่าน`
 - [x] A8 — Aura Gacha — Reel Slot  `ทดสอบผ่าน`
-- [x] A9 — หน้าต่างเมนูขนาดคงที่  `ทดสอบผ่าน`
+- [ ] A9 — หน้าต่างเมนูขนาดคงที่  `QA ไม่ผ่าน (Daily Login และ Quest ยังไม่ responsive มือถือ)`
 - [x] A10 — ออร่า VFX + Low FX  `ทดสอบผ่าน`
 - [x] A11 — เซฟข้อมูล (DataStore)  `ทดสอบผ่าน`
 - [x] A12 — StudioBridge MCP (Claude สั่งงาน Studio ได้)  `ทดสอบผ่าน`
 - [x] A13 — ไปป์ไลน์ Asset (สไลซ์รูป, Catalog, UIAssets)  `ทดสอบผ่าน`
 - [x] A14 — Figma → Roblox export (FigmaRoblox MCP)  `ทดสอบผ่าน`
 - [x] A16 — แผง "Aura UI" ใน Studio (เปิด/แก้หน้าจอได้ง่าย)  `ทดสอบผ่าน`
-- [ ] A18 — Figma plugin แยกโมดูล + ตัวนับการใช้งาน (usage counter)  `โค้ดเสร็จ + ทดสอบนอก Figma ผ่าน รอคุณทดสอบใน Figma`
+- [x] A18 — Figma plugin แยกโมดูล + ตัวนับการใช้งาน (usage counter)  `ทดสอบผ่าน (QA)`
 - [ ] A17 — Responsive มือถือแนวนอน (HUD + popup ทุกอัน)  `เลื่อนไปทีหลัง — ใช้ได้แต่ยังไม่สวย; ตอนนี้โฟกัส desktop`
-- [x] A15 — Figma ดีไซน์ทั้งหมด (Style guide, Components, 17 หน้าจอ, Gacha FINAL, Asset section)  `ทดสอบผ่าน`
+- [ ] A15 — Figma ดีไซน์ทั้งหมด (Style guide, Components, 17 หน้าจอ, Gacha FINAL, Asset section)  `QA ให้ปรับปรุง (รออัปเดต Figma ให้ตรงกับในเกม)`
 
 **B. กำลังทำ (UI จาก Figma)**
 - [x] B0 — ปุ่มแบบ Figma (Face + Lip 5px ซ้อนกัน) + ไฮไลต์ราคาใน Modal + การ์ด Equipped สีต่าง  `ทดสอบผ่าน`
@@ -46,16 +46,16 @@
 - [x] B18 — Stat ลดเวลารอ Auto Fishing (Auto Wait) บนเบ็ด/เหยื่อ + Highlight สีทอง  `ทดสอบผ่าน`
 - [x] B19 — แมพหลักใหม่ "Stilt Boardwalk" (สะพานไม้ยกสูงบนเสา กลางทะเลกว้าง ไม่มีบ้าน) + ขอบทะเล  `ทดสอบผ่าน`
 - [x] B6 — Gacha G1 Altar (rates, pity, x1/x10, skip, auto-roll) + ระบบ pity/x10 ฝั่ง server  `ทดสอบผ่าน`
-- [ ] B7 — 11 Dialogue (NPC)  `โค้ดเสร็จ + bake แล้ว Claude ทดสอบใน Play ผ่าน รอคุณ Ctrl+S + ทดสอบ`
-- [ ] B20 — Virtual Grid (Inventory / Aquarium / Mastery / Put in Tank)  `โค้ดเสร็จ รอทดสอบ`
-- [ ] B21 — Item Detail Card + Inventory v2 (แท็บด้านข้างเป็นไอคอน, Rod/Line/Aura เป็นไอเท็ม, Bag เป็นอัปเกรด)  `ครบทุกส่วนในเกมแล้ว (Inventory, การ์ด, Shop, Fishdex, Character, Aura Dex) Claude ทดสอบใน Play ผ่าน รอคุณ Ctrl+S + ทดสอบส่วนที่เหลือ`
-- [ ] B22 — Gacha page ใหม่ = Figma concept D "Glass Card" + ส่วนจาก E1  `แก้กรอบเลือกหมวด ใช้ช่อง Item Slot ของ Inventory และเปิด Aura Altar จาก HUD แล้ว ทดสอบผ่าน Studio Bridge`
+- [x] B7 — 11 Dialogue (NPC)  `ทดสอบผ่าน (QA)`
+- [x] B20 — Virtual Grid (Inventory / Aquarium / Mastery / Put in Tank)  `ทดสอบผ่าน (QA)`
+- [x] B21 — Item Detail Card + Inventory v2 (แท็บด้านข้างเป็นไอคอน, Rod/Line/Aura เป็นไอเท็ม, Bag เป็นอัปเกรด)  `ทดสอบผ่าน (QA)`
+- [x] B22 — Gacha page ใหม่ = Figma concept D "Glass Card" + ส่วนจาก E1  `ทดสอบผ่าน (QA)`
 - [x] B8 — 13 Inventory  `ทดสอบผ่าน`
 - [x] B9 — G6 x10 Summary  `ทดสอบผ่าน`
 
 **C. Backlog**
 - [x] C1 — อัปโหลดรูปขึ้น Roblox  `ทดสอบผ่าน`
-- [x] C2 — ตัดสินใจ data model ของ Inventory  `ตัดสินใจแล้ว 2026-11-17`
+- [ ] C2 — ตัดสินใจ data model ของ Inventory  `QA ยังไม่สรุป (รอเปลี่ยนแปลงระบบ Item ทั้งหมด)`
 - [ ] C3 — Rebirth + ฉายา (GDD 7.2) — ย้ายไป Lv.50  `โค้ดเสร็จ รอทดสอบ`
 - [ ] C4 — สกิล Keen Eye / Quick Hands / Multi-Cast (GDD 7.1)  `โค้ดเสร็จ + หน้าต่าง Skills แล้ว (ปุ่ม SKILLS ในหน้าต่าง Character) รอทดสอบ`
 - [ ] C5 — อีเวนต์ Naga Tide (จุดสุ่มในทะเล ตกในวง = ลุ้นปลาพิเศษ, คนแห่มา = โอกาสสูงขึ้น)  `โค้ด HUD Cozy Lake เสร็จแล้ว รอทดสอบใน Play`
@@ -79,9 +79,10 @@
 - [ ] C23 — Daily Login ปฏิทินของขวัญ 7 วัน (Streak, เคลมรางวัล, เชื่อมการ์ด Events)  `โค้ดเสร็จ + bake แล้ว รอทดสอบใน Play`
 - [ ] C24 — Core Menu Manager (แบ่งชั้นหน้าต่าง ไม่เปิดซ้อนมั่ว, ซ้อนได้เฉพาะที่กำหนด)  `โค้ดเสร็จ ทดสอบใน Play บางส่วนผ่าน — M2-M4 โค้ดเสร็จ รอทดสอบ — งานต่อ M1, M5, M6 ใน docs/MENU_MANAGER.md`
 - [ ] C25 — เหวี่ยงเบ็ดใหม่: กดค้าง + Perfect Cast + ระยะเหวี่ยงตามคัน + ตัวปรับความลึกบน HUD  `โค้ดเสร็จ + bake + Figma แล้ว รอทดสอบใน Play`
-- [ ] C26 — จุดฟองปลา (Hotspot): เหวี่ยงลงวงฟองได้ Luck +50%  `โค้ดเสร็จ + Figma แล้ว รอทดสอบใน Play`
+- [x] C26 — จุดฟองปลา (Hotspot): เหวี่ยงลงวงฟองได้ Luck +50%  `ทดสอบผ่าน (QA)`
 - [ ] C27 — Store ไม่มีรายการ + spinner โหลด + แจ้งเตือนอยู่บนสุด + Enhance popup + Figma ตรงกับเกม  `โค้ดเสร็จ รอทดสอบใน Play`
-- [ ] C28 — Window core (`Window.Shell`) + "!" ปลากินเบ็ดบนหัวตัวละคร  `โค้ดเสร็จ รอทดสอบใน Play`
+- [x] C28 — Window core (`Window.Shell`) + "!" ปลากินเบ็ดบนหัวตัวละคร  `ทดสอบผ่าน (QA)`
+- [ ] C29 — Item rework: ไอเทมแบบ UUID (ปลาไม่รวมกอง, คันเบ็ด/สายซื้อซ้ำและขายคืนได้, เซฟ v6)  `โค้ดเสร็จ type check ผ่าน รอทดสอบใน Play`
 
 ---
 
@@ -125,7 +126,7 @@
 ### A3. จัดวางหลบ UI ของ Roblox (Safe areas)
 - สถานะ:
   - [x] โค้ดเสร็จ
-  - [ ] ทดสอบผ่าน
+  - [x] ทดสอบผ่าน (QA โดย Traveler Nise 2026-11-22)
 - Done when: ไม่มีปุ่ม/ข้อความของเราโดน Top bar, Leaderboard, Chat, Thumbstick, Jump บัง
 - ทดสอบ:
   - [x] 1. Play (คอม): Leaderboard มุมขวาบนต้องไม่ทับปุ่มใด ๆ; กดเปิด Chat (มุมซ้ายบน) → บังได้แค่ Stats เท่านั้น
@@ -191,7 +192,7 @@
 ### A9. หน้าต่างเมนูขนาดคงที่
 - สถานะ:
   - [x] (2026-11-16 เปลี่ยนเป็นขนาด Figma 760×610 + pager แทนการเลื่อน — ดู B2–B4)
-  - [x] ทดสอบผ่าน
+  - [ ] QA ไม่ผ่าน (Traveler Nise 2026-11-22: "มีหน้า Daily Login และ Quest ที่ยังไม่มี responsive มือถอืหรืออาจจะมีอื่นๆที่ยังไม่เห็น")
 - Done when: Shop/Auras/Fishdex ขนาดเท่ากันทุกหน้าต่าง ไม่ล้นจอ
 - ทดสอบ: เปิดแต่ละเมนู → ขนาดหน้าต่างต้องเท่ากัน; Test → Device → มือถือ → Play → หน้าต่างต้องย่อทั้งก้อน (ไม่ล้นจอ ไม่ทับ Top bar)
 
@@ -286,7 +287,7 @@
 ### A15. Figma ดีไซน์ทั้งหมด (Style guide, Components, 17 หน้าจอ, Gacha FINAL, Asset section)
 - สถานะ:
   - [x] โค้ดเสร็จ
-  - [x] ตรวจแล้ว (2026-11-16: ผู้ใช้ยืนยัน — **Figma ณ ตอนนี้คือแหล่งอ้างอิงหลัก**; ถ้าเกมไม่ตรง ให้แก้เกมตาม Figma)
+  - [ ] QA ให้ปรับปรุง (Traveler Nise 2026-11-22: "ไม่แน่ใจลองอัปเดต figma ให้ตรงกับที่มีในเกมตอนนี้ดูจะได้รู้")
 - Done when: ทุกหน้าจอใน section "Aura Fishing — Game Menus" + "Aura Gacha — Reel Slot (FINAL)" ตรงกับที่คุณต้องการ
 - ทดสอบ: เปิด Figma หน้า Out Space → ไล่ดูทีละ section → แก้เองได้ (session อื่นจะ patch เฉพาะ node ไม่ทับงานคุณ)
 
@@ -430,7 +431,7 @@
 - สถานะ:
   - [x] โค้ดเสร็จ + `node tools/check.mjs` ผ่าน
   - [x] Claude ทดสอบโมดูลใน Studio (edit mode): 500 ชิ้น 5 คอลัมน์ สร้าง view แค่ 20 อัน, เลื่อนไปแถว 50 รวมแค่ 30 อัน, ตำแหน่ง/ขนาด canvas ถูก
-  - [ ] ทดสอบในเกม (Play)
+  - [x] ทดสอบผ่าน (QA โดย Traveler Nise 2026-11-22)
 - Done when: 4 หน้าจอข้างบนหน้าตา/การกดเหมือนเดิมทุกอย่าง แต่ไม่ Destroy/Clone การ์ดใหม่ทุกครั้งที่ข้อมูลเปลี่ยน
 - ทดสอบ:
   - [ ] 1. หยุด Play เดิม (โค้ดเก่า) → Play ใหม่ → กด **B** → Inventory ช่องเรียงเหมือนเดิม 5 คอลัมน์ ช่องว่าง "+" ครบตามความจุ
@@ -460,9 +461,8 @@
   - [x] รอบ 4: ภาพใหญ่ขวา (Hero) + ป้ายชื่อ = ออร่าเด่นของตู้นั้นเสมอ (ไม่เปลี่ยนตามที่สุ่มได้; Altar ไม่มี Featured จึงใช้ออร่าหายากสุดที่มีภาพวาด); สุ่ม x10: หลังโชว์ตัวที่หายากสุด ปุ่มกลางเป็น **SEE ALL 10** → หน้าสรุปทั้ง 10 (เดิมปุ่มนี้สุ่ม x1 ต่อทำให้ไม่เห็นผลทั้ง 10); CLOSE / EQUIP / แตะนอกการ์ด ก็ไปหน้าสรุปเหมือนกัน
   - [x] อัปโหลด 8 รูปแล้ว (`upload_assets.py`) + แปลง decal → image id (`resolve_decals.mjs` 8/8), `UIAssets.luau` 202/203; เช็คใน Studio: พื้นหลัง 2 รูป + ภาพวาด 5 รูปขึ้นแล้ว, ลูกแก้ว `auras/*` 6 ตัวเดิมยังเป็นลูกแก้วถูกต้อง (ไม่ต้องอัปใหม่)
   - [ ] `auras_Art/AbyssalShadow` (`122339939840558`) ยังไม่ขึ้นตอนเช็ค (น่าจะรอ Roblox ตรวจ) — เช็คอีกครั้งใน Play; ถ้ายังว่างให้อัปโหลดรูปนี้ใหม่
-  - [ ] ทดสอบ Play: ท่าสุ่ม Altar Charge + ไม่มี UI ทะลุ + x10 → SEE ALL 10 → หน้าสรุป
-  - [ ] อัปโหลด 9 รูป แล้ว `python -I tools/art/sync_ui_assets.py assets/upload/2026-11-20_gacha/ids.csv`
-  - [ ] ทดสอบใน Play
+  - [x] ทดสอบ Play: ท่าสุ่ม Altar Charge + ไม่มี UI ทะลุ + x10 → SEE ALL 10 → หน้าสรุป
+  - [x] ทดสอบใน Play (QA ทดสอบผ่านโดย Traveler Nise 2026-11-22)
 - Done when: เปิด Gacha จาก Events / Auras / แท่น Altar แล้วได้หน้า D เต็มจอ ทุกปุ่มทำงาน ไม่ล้นจอทั้งจอกว้างและแคบ
 - ทดสอบ:
   - [ ] 1. Play → เปิด Events → กด OPEN ที่ Neon Tide → หน้า Aura Summon เต็มจอ ซ้ายมีการ์ด Neon Tide (เลือกอยู่, ขอบหนา) และ Aura Altar
@@ -487,12 +487,12 @@
   - [x] สร้างรูปชีต 17/18 (คุณ gen ให้) → ตัดแล้ว `assets/art/ui/tabs/*` (9) + `assets/art/ui/mastery/*` (9), ลง `assets/catalog.json` + `UIAssets.luau` (id ยังเป็น 0), ชุดพร้อมอัปโหลด `assets/upload/2026-11-18_icons/` (18 รูปชื่อไม่ซ้ำ + `ids.csv`)
   - [x] ใส่รูปเข้า Figma: แท็บ Inventory / Character / ตัวเลือก, การ์ด Mastery 7 สาย (แทนไอคอนเวกเตอร์ขาว) ใน section "Economy · 3 Mastery"
   - [x] อัปโหลด 18 รูปขึ้น Roblox แปลง Decal ID เป็น Image ID และซิงค์ `ids.csv`, catalog และ `UIAssets.luau` แล้ว
-  - [ ] ทดสอบไอคอนใน Play: กด B ดูแท็บ Inventory ทั้ง 7 และเปิด Bag Upgrade เมื่อมีปุ่ม UPGRADE, กด C ดูแท็บ Character 4 แท็บแล้วเปิดการ์ดคันเบ็ดที่เป็นเจ้าของเพื่อดูช่อง Modifiers, เปิด Mastery ดูรูปการ์ดทั้ง 7 และป้าย Total Lv.
+  - [x] ทดสอบไอคอนใน Play: กด B ดูแท็บ Inventory ทั้ง 7 และเปิด Bag Upgrade เมื่อมีปุ่ม UPGRADE, กด C ดูแท็บ Character 4 แท็บแล้วเปิดการ์ดคันเบ็ดที่เป็นเจ้าของเพื่อดูช่อง Modifiers, เปิด Mastery ดูรูปการ์ดทั้ง 7 และป้าย Total Lv. (QA ทดสอบผ่านโดย Traveler Nise 2026-11-22)
   - [x] เลือกช่องว่างแบบ **5 Bubbles** (ฟองน้ำเล็ก 3 เม็ดบนพื้นทราย) + ช่อง Get More เป็นลูกศร "More" สีส้มอ่อน — ใส่ใน Figma: 18 FINAL, 17 Character, component Item Slot (State=Empty) ในบอร์ด Components
   - [x] ในเกม: `Make.ItemSlot` ช่องว่างเปลี่ยนจาก "+" เป็นฟอง 3 เม็ด (`Screens/Components.luau`), bake Components + Inventory ลง Studio แล้ว — `node tools/check.mjs` ผ่าน
   - [x] โค้ด: แถวสุดท้ายของ Inventory เติมช่องฟองจนครบแถวเสมอ (แม้กระเป๋าเต็ม หรือรายการยาวเกินหนึ่งหน้า) — `InventoryController.luau` refresh, `node tools/check.mjs` ผ่าน
-  - [ ] ทดสอบแถวครบ: Play (Rojo sync แล้ว) → กด **B** → แท็บ Fish ที่มีของไม่ครบแถว (เช่น 24 กอง ใน 7 คอลัมน์) → แถวสุดท้ายมีช่องฟองต่อจนครบ 7 ช่อง; ลองแท็บอื่นก็ครบแถวเหมือนกัน
-  - [ ] ทดสอบช่องว่าง: Ctrl+S เซฟ place → Play → กด **B** → ช่องว่างท้ายกระเป๋าเป็นฟอง 3 เม็ด ไม่มี + แล้ว; คลิกช่องว่างไม่เกิด error; ช่อง Aquarium "Add fish" ยังเป็น + เหมือนเดิม (คนละแบบ)
+  - [x] ทดสอบแถวครบ: Play (Rojo sync แล้ว) → กด **B** → แท็บ Fish ที่มีของไม่ครบแถว (เช่น 24 กอง ใน 7 คอลัมน์) → แถวสุดท้ายมีช่องฟองต่อจนครบ 7 ช่อง; ลองแท็บอื่นก็ครบแถวเหมือนกัน (QA ทดสอบผ่าน)
+  - [x] ทดสอบช่องว่าง: Ctrl+S เซฟ place → Play → กด **B** → ช่องว่างท้ายกระเป๋าเป็นฟอง 3 เม็ด ไม่มี + แล้ว; คลิกช่องว่างไม่เกิด error; ช่อง Aquarium "Add fish" ยังเป็น + เหมือนเดิม (คนละแบบ) (QA ทดสอบผ่าน)
   - [x] data model (2026-11-18): **ไม่เพิ่ม field ในเซฟ** — Rod/Line ใช้ `Owned`/`Equipped` เดิม, Aura ใช้ `Auras.Owned` เดิม, ระดับกระเป๋า = กระเป๋าที่ใส่อยู่ (ladder เรียงตาม Capacity ใน `Inventory.BagLadder/NextBag`), Modifiers = ช่องล็อก "Soon" (ยังไม่มีข้อมูล) — server กันซื้อ/ใส่กระเป๋าที่เล็กกว่า (`ShopService.Buy/Equip`)
   - [x] คุณขอ (2026-11-18): แท็บ Auras เป็นไอเท็มปกติ — แสดงเฉพาะออร่าที่มี ไม่มีช่องล็อก (Auras dex เก็บข้อมูลทำแยกทีหลังได้)
   - [x] ทำในเกม (Inventory): `UI/Screens/Inventory.luau` (หน้าต่าง 600x480, แท็บคั่นหนังสือ 7 แท็บ All/Fish/Rods/Lines/Auras/Baits/Treasure, ช่อง 72 x 7 คอลัมน์, ป้ายความจุ + ปุ่ม UPGRADE, หน้าต่าง Bag Upgrade), `UI/Screens/ItemDetail.luau` + `UI/ItemDetail.luau` (การ์ด A: ชื่อ/แท็ก/ดาว/สเตต/คำอธิบาย/ป้าย/Modifiers/ปุ่มสูง 48; วางขวาช่อง พลิกซ้ายเมื่อไม่พอ; กดนอกการ์ด = ปิด), `InventoryController` เขียนใหม่, ปุ่ม Auras ใน Main Menu เปิด Inventory แท็บ Auras, `Components` ItemSlot เพิ่ม `Ring` (ขอบฟ้า = ใส่อยู่) + `Locked` — `node tools/check.mjs` ผ่าน
@@ -689,7 +689,7 @@
 งานค้างทั้งหมด (ติ๊กเมื่อเสร็จ) — รูปแบบ: **รหัส. งาน** — Done when • ใครทำ
 
 - [x] **C1.** **อัปโหลดรูปขึ้น Roblox** — 99/99 อัปโหลดแล้ว (2026-11-16) และแปลงเป็น Image id ใน `UIAssets.luau` แล้ว — *Done when:* เปิดเกมแล้วเห็นรูปจริงแทนกรอบสี + เงาใต้หน้าต่าง • *ใครทำ:* รูปใหม่ภายหลัง: ใส่ใน `assets/` + catalog → `python -I tools/art/upload_assets.py` (อัปเฉพาะที่ยังไม่มี id) → `node tools/ui/resolve_decals.mjs`
-- [x] **C2.** ตัดสินใจ data model ของ Inventory — *Done when:* มีรายการประเภทไอเท็ม + กติกา stack/ขาย • *ใครทำ:* คุณ + Claude
+- [ ] **C2.** ตัดสินใจ data model ของ Inventory — *QA ยังไม่สรุป (Traveler Nise 2026-11-22: "อันนี้ยังไม่แน่ใจเพราะเดียวจะมีการเปลี่ยนแปลงระบบ item ทั้งหมดอยู่")* — *Done when:* มีรายการประเภทไอเท็ม + กติกา stack/ขาย • *ใครทำ:* คุณ + Claude
   - กระเป๋า = **ช่อง** (Bags.Capacity: Starter 6 / Woven 10 / Crate 15 / Coolbox 20 / Hold 30); 1 ช่อง = 1 กอง
   - ปลา: ชนิด + mutation เดียวกันรวมกอง สูงสุด 10/ช่อง; กองเก็บ "มูลค่ารวม" (น้ำหนักรายตัวคิดเงินไว้แล้ว) + ตัวหนักสุด → ขายได้เงินเท่าเดิม
   - กล่องสมบัติ (Treasure): ดรอปโบนัสตอนตกปลา 3% (+Luck), กินช่อง, กองละ 5, กด Open สุ่มรางวัล (เหรียญ/เพชร/เหยื่อ) — ตั้งค่าใน `Config/Treasures.luau`
@@ -1021,7 +1021,7 @@
   - [ ] 7. ใส่คันที่ดีกว่า (เช่น Coral): เหวี่ยงค้างสุดได้ไกลกว่าคันเริ่ม; หน้ารายละเอียดคันมี Cast Range
   - [ ] 8. มือถือ (Studio Device Emulator): ปุ่มกลม CAST ข้างปุ่มกระโดด กดค้าง/ปล่อยเหวี่ยงได้, ระหว่างรอปลาปุ่มเป็น REEL IN / HOOK!; ปุ่ม Bag/DEPTH/AUTO/SELL ไม่ทับปุ่มกระโดด
 
-### C26. จุดฟองปลา (Hotspot) — 2026-11-20  `โค้ดเสร็จ รอทดสอบ`
+### C26. จุดฟองปลา (Hotspot) — 2026-11-20  `ทดสอบผ่าน (QA)`
 - วงสีทองมีฟองอากาศโผล่ในน้ำใกล้ผู้เล่นที่ยืนริมน้ำ (ทั้งเซิร์ฟเวอร์มีได้ 4 จุด อยู่ 35-55 วินาทีแล้วหายไปโผล่ที่ใหม่) ระยะ 9-26 studs จากผู้เล่น: จุดไกลต้องใช้คันที่ CastRange สูง
 - เหวี่ยงเอง (ไม่ใช่ Auto) ลงในวง = Luck +50% สำหรับการเหวี่ยงครั้งนั้น + ข้อความ "HOTSPOT!  +50% luck on this cast" + ป้าย HOTSPOT บนการ์ดปลา; วงหนึ่งใช้ได้ 2 ครั้งแล้วหาย
 - ตอนกดค้างเล็ง: วงเล็งเป็นสีทอง + ป้าย HOTSPOT เมื่อเล็งเข้าวง
@@ -1056,7 +1056,7 @@
   - [ ] 5. Aquarium → แตะปลาในบ่อ: Modal "Return to Bag" ปุ่มเป็นสีส้ม
   - [ ] 6. รูปที่โหลดช้า (เช่นเปิด Fishdex ครั้งแรก): เห็นวงหมุนเทาบนช่องรูประหว่างโหลด
 
-### C28. Window core + "!" บนหัว — 2026-11-20  `โค้ดเสร็จ รอทดสอบ`
+### C28. Window core + "!" บนหัว — 2026-11-20  `ทดสอบผ่าน (QA)`
 - `UI/Window.luau` มี `Window.Shell` = แกนกลางของหน้าต่างที่สร้างด้วยโค้ด: ScreenGui ใน PlayerGui เท่านั้น, กรอบ + หัวข้อ + ปุ่ม X มาตรฐาน, ย่อขยายตามจอ, เปิด/ปิด/ลงทะเบียน MenuManager, `SetLoading` (วงหมุน) — วิธีใช้ใน `docs/MENU_MANAGER.md`
 - ย้ายมาใช้แล้ว: Store, Aquarium, Mastery, Quests, Credits, Enhance popup, `Window.Create` (Put in Tank, Skills); Aquarium/Mastery/Store มีวงหมุนจนกว่าข้อมูลเซฟมา
 - เปลี่ยนหน้าตาเล็กน้อย: Credits ใช้ปุ่ม X มุมขวาบนแทนปุ่ม Close ด้านล่าง; Put in Tank/Skills ใช้หัวข้อ + ปุ่ม X ขนาดมาตรฐาน (หัวข้อย่อยเลื่อนลงนิดหน่อย); Quests ชื่อ ScreenGui เป็น "Quests"
@@ -1066,6 +1066,29 @@
   - [ ] 2. เปิด Store / Aquarium / Mastery / Quests / Settings (Credits) ทีละอัน: หน้าต่างขึ้นถูก, ปุ่ม X ปิดได้, เปิดอันใหม่แล้วอันเก่าปิดเอง
   - [ ] 3. Aquarium → + → Put in Tank ซ้อนบนบ่อ ปิดแล้วกลับบ่อ; Character → SKILLS เปิดได้
   - [ ] 4. กระเป๋า → คันเบ็ด → ENHANCE: popup ขึ้นเหนือการ์ด, Cancel ปิดได้
+
+### C29. Item rework — ไอเทมแบบ UUID — 2026-11-22  `โค้ดเสร็จ รอทดสอบใน Play`
+แผน: `docs/ITEM_REWORK_PLAN.md`. ทุกอย่างอยู่ใน `profile.Bag` เป็นเรคคอร์ดธรรมดา (ไม่มี metatable) ที่มี `UUID`.
+- ปลา 1 ตัว = 1 ช่อง มีน้ำหนัก, Mutation, Tags (Manual/Auto/Perfect/Hotspot), มูลค่าของตัวเอง. หีบสมบัติยังรวมกองได้ (สูงสุด 5).
+- คันเบ็ดและสายเบ็ด = ไอเทมใน Bag ซื้อซ้ำได้ไม่จำกัด, ระดับ Enhance อยู่ที่ตัวไอเทม, คันเบ็ดมีช่อง Prefix 2 / Suffix 2 (ยังว่าง รอระบบสุ่ม/หลอม). ของที่ใส่อยู่ไม่กินช่อง ของสำรองกินช่อง.
+- ขายคืนคันเบ็ด/สาย = 40% ของราคาซื้อ + เหรียญที่ใช้ Enhance (`GameConfig.Inventory.GearSellFraction`). ของเริ่มต้น (ราคา 0) และของแจก Starter Pack (Bound) ขายไม่ได้.
+- กระเป๋ายังเป็นบันไดอัปเกรดถาวร (ไม่กินช่อง) แต่ปรับความจุใหม่เพราะปลาไม่รวมกองแล้ว: 10 / 16 / 24 / 36 / 50 (เดิม 6 / 10 / 15 / 20 / 30).
+- เซฟ `Version = 6`: ล้าง Bag, Owned, Equipped (เหลือเหยื่อที่สวม), Aquarium.Fish, Enhance. เก็บ Coins, Gems, Pearls, Level, Skills, Rebirths, Fishdex, Gamepass, เหยื่อ. ของแจก Starter Pack ที่เคยมีจะถูกคืนเป็นไอเทม Bound. ผู้เล่นทุกคนได้คันเบ็ด+สายเริ่มต้นใหม่ที่มี UUID ของตัวเอง.
+- Remotes ใหม่/เปลี่ยน: `SellItem(uuid)` แทน `SellStack`, `OpenTreasure/OpenAllTreasure(uuid)`, `Enhance(uuid)`, `Equip("Rods"|"Lines", uuid)`.
+- ยังไม่ทำ (ตั้งใจข้าม): สุ่ม Mod ให้คันเบ็ด, Rod Fusion, ระบบเทรดจริง (มี `Inventory.CanTrade` และสถานะ Bound ให้แล้ว), คลาส OOP แยกไฟล์ของ Definitions/Instances (ใช้ตาราง plain + ฟังก์ชันใน `Items/ItemContainer.luau` เพราะโปรไฟล์ถูกเซฟลง DataStore และส่งไป client), หน้าตา ItemDetail ใหม่ใน Figma (ใช้แถวป้ายเดิมของการ์ด).
+- ทดสอบ (คุณ):
+  - [ ] 1. เล่นด้วยเซฟเก่า: เข้าเกมได้ไม่ error, ได้ Driftwood Rod + Cotton Line, Bag ว่าง, Coins/Level คงเดิม, Output ไม่มี warn/error จาก DataService/Registry
+  - [ ] 2. ตกปลา 3 ตัวชนิดเดียวกัน: Inventory ขึ้น 3 ช่อง (ไม่มีเลข x3), กดแต่ละช่องเห็นน้ำหนัก/ป้าย Manual/Perfect/Hotspot/Mutation ไม่เหมือนกัน
+  - [ ] 3. HUD ตัวนับกระเป๋า: นับเฉพาะช่องที่ใช้ (คันเบ็ดและสายที่สวมอยู่ไม่นับ) กระเป๋าเริ่มต้นจุ 10
+  - [ ] 4. Shop > Rods: ซื้อ Bamboo Rod สองครั้ง: ครั้งแรกสวมให้เลย ครั้งที่สองเป็นของสำรองใน Bag (ชื่อแถวขึ้น x2) ไม่ขึ้น "Already owned"
+  - [ ] 5. Inventory > Rods: เห็น 3 คัน กดคันสำรอง > SELL ได้ 600 coins (Bamboo 1500 x 40%) กดคันที่สวมอยู่ต้องไม่มีปุ่ม SELL; คัน Driftwood ไม่มีปุ่ม SELL
+  - [ ] 6. กด EQUIP คันสำรอง: คันเดิมกลับไปอยู่ใน Bag, Stats ใน HUD เปลี่ยนตามคัน; ENHANCE คันหนึ่ง +1 อีกคันต้องยังเป็น +0; ขายคัน +N ได้เงินเพิ่มตามที่ลงไป
+  - [ ] 7. Bag เต็ม: ซื้อคัน/สายเพิ่มต้องขึ้น "Bag full - sell something first"; Auto fishing หยุดเมื่อเต็ม; ปลาที่ตกตอนเต็มถูกปล่อย (Kept = false)
+  - [ ] 8. SELL ALL: ขายเฉพาะปลา คันเบ็ด/สาย/หีบยังอยู่; ขายปลาทีละตัวจากการ์ดได้ราคาตามตัวนั้น
+  - [ ] 9. Aquarium: PUT IN TANK 2 ตัว แล้ว Return to Bag: ปลากลับมาพร้อมน้ำหนัก/ป้ายเดิม (กดการ์ดดู), Pearls/วินาทีเท่าเดิม
+  - [ ] 10. เปิดหีบ OPEN / OPEN ALL ได้, หีบรวมกองได้สูงสุด 5 ต่อกอง
+  - [ ] 11. ออกเกมแล้วเข้าใหม่ (ต้องเปิด Studio Access to API Services): Bag, คันเบ็ดที่สวม, ระดับ Enhance, ปลาในตู้ยังอยู่ครบ
+  - [ ] 12. Dev: `give fish <ชื่อ> 3`, `equip Rods CoralRod`, `enhance Rods CoralRod 5`, `clearbag` ทำงาน (clearbag ไม่ลบของที่สวมอยู่)
 
 ## เว็บ QA (`qa/`)
 
@@ -1086,6 +1109,9 @@
 - [x] ทดสอบโหมดในเครื่อง (ไม่มี config): ตาราง 69 งาน, เปิดงานเห็นขั้นตอน, ผ่าน/ไม่ผ่าน, สร้าง/ปิด Ticket, หน้าระบบเกมและประวัติ
 
 ## บันทึกการอัปเดต
+
+- 2026-11-22 — C29 Item rework: ระบบไอเทมแบบ UUID (`src/shared/Items/`: ItemTypes, ItemContainer; `Registry.Items`), Inventory.luau เป็น alias ไป ItemContainer; ปลาไม่รวมกอง, คันเบ็ด/สายเป็นไอเทมใน Bag ซื้อซ้ำ/ขายคืน/Enhance รายชิ้น, ปรับความจุกระเป๋า 10/16/24/36/50, เซฟ v6 ล้างข้อมูลไอเทมเก่า; แก้ ShopService, FishingService, AquariumService, DataService, MonetizationService, DevService และ UI (ItemDetail, ItemSlots, MenuFill, InventoryController, CharacterController); `node tools/check.mjs` ผ่าน แต่ยังไม่ได้ทดสอบใน Play
+- 2026-11-22T19:48:00+07:00 — ซิงค์ผลการตรวจจากเว็บ QA (Traveler Nise): งานผ่าน 41 งาน (อัปเดต A3, A18, B7, B20, B21, B22, C26, C28 เป็นผ่าน), งานที่ QA ให้ปรับปรุง 3 งาน (A9 ไม่ผ่าน responsive มือถือ, A15 รอ sync Figma กับเกม, C2 รอสรุป Item rework), และดึง Ticket T-MWRRTUYM (ย้าย Daily Login ไปจอหลัก)
 - 2026-11-22T19:30:00+07:00 — เว็บ QA เพิ่มหน้า "ข้อเสนอ / ไอเดีย" แบบฟอรัม (โพสต์ โหวต คอมเมนต์ เปลี่ยนสถานะ แก้ไข พร้อมเวลาทุกจุด) เก็บใน Firestore `qa/ideas`; agent ดึงสรุปด้วย pull.mjs และโพสต์ด้วย post.mjs
 - 2026-11-22T18:30:00+07:00 — เปลี่ยน Web Dashboard เป็นเว็บ QA (`qa/`): deploy GitHub Pages, ทีม QA ตรวจงาน/แจ้ง Ticket เก็บใน Firebase Firestore, agent อัปเดตผ่าน `node qa/tools/build.mjs`; ลบ `dashboard/` ออกแล้ว
 - 2026-11-22T17:30:00+07:00 — Dashboard: แยกหน้า "สถานะงาน" เป็น 2 หน้า ระบบเกม (#systems) และ QA (#qa) เอาปุ่ม Collapse ออก

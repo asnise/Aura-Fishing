@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-22T10:28:23.388Z",
+ "generated": "2026-11-22T14:03:44.203Z",
  "stage": {
   "name": "ต้นแบบ Vertical Slice",
   "summary": "วงจรตกปลาและระบบหลักของออร่าเล่นได้แล้ว งานระบบระยะยาวและการทดสอบมือถือยังอยู่ในแผนพัฒนา"
@@ -252,15 +252,15 @@
    "group": "A",
    "title": "จัดวางหลบ UI ของ Roblox (Safe areas)",
    "titleEn": "Roblox safe areas",
-   "status": "testing",
-   "note": "โค้ดเสร็จ รอทดสอบ",
+   "status": "done",
+   "note": "ทดสอบผ่าน (QA)",
    "steps": [
     "Play (คอม): Leaderboard มุมขวาบนต้องไม่ทับปุ่มใด ๆ; กดเปิด Chat (มุมซ้ายบน) → บังได้แค่ Stats เท่านั้น",
     "Test → Device → เลือกมือถือ → Play: จอยซ้ายล่างกับปุ่มกระโดดขวาล่างต้องไม่ทับปุ่ม Bag/Auto/Sell (ปุ่มเหล่านี้ต้องยกขึ้นเหนือปุ่ม Jump)",
     "เทียบกับ Figma section \"00 · Roblox Safe Areas\"",
     "หมายเหตุ 2026-11-16: ข้อ 2 บนมือถือแนวนอนไม่ผ่าน (เมนูซ้ายล้นจอ/ทับ thumbstick) → แก้ใน A17 แล้ว ทดสอบใหม่ที่ A17"
    ],
-   "rev": "4b0e9de8"
+   "rev": "4a432c5a"
   },
   {
    "id": "A4",
@@ -343,12 +343,12 @@
    "group": "A",
    "title": "หน้าต่างเมนูขนาดคงที่",
    "titleEn": "Fixed-size menus",
-   "status": "done",
-   "note": "ทดสอบผ่าน",
+   "status": "progress",
+   "note": "QA ไม่ผ่าน (Daily Login และ Quest ยังไม่ responsive มือถือ)",
    "steps": [
     "เปิดแต่ละเมนู → ขนาดหน้าต่างต้องเท่ากัน; Test → Device → มือถือ → Play → หน้าต่างต้องย่อทั้งก้อน (ไม่ล้นจอ ไม่ทับ Top bar)"
    ],
-   "rev": "1cee750d"
+   "rev": "438b4378"
   },
   {
    "id": "A10",
@@ -434,10 +434,10 @@
    "group": "A",
    "title": "Figma plugin แยกโมดูล + ตัวนับการใช้งาน (usage counter)",
    "titleEn": "Figma plugin modules and usage count",
-   "status": "testing",
-   "note": "โค้ดเสร็จ + ทดสอบนอก Figma ผ่าน รอคุณทดสอบใน Figma",
+   "status": "done",
+   "note": "ทดสอบผ่าน (QA)",
    "steps": [],
-   "rev": "1d81136a"
+   "rev": "451ea31c"
   },
   {
    "id": "A17",
@@ -464,12 +464,12 @@
    "group": "A",
    "title": "Figma ดีไซน์ทั้งหมด (Style guide, Components, 17 หน้าจอ, Gacha FINAL, Asset section)",
    "titleEn": "Figma style guide and screens",
-   "status": "done",
-   "note": "ทดสอบผ่าน",
+   "status": "progress",
+   "note": "QA ให้ปรับปรุง (รออัปเดต Figma ให้ตรงกับในเกม)",
    "steps": [
     "เปิด Figma หน้า Out Space → ไล่ดูทีละ section → แก้เองได้ (session อื่นจะ patch เฉพาะ node ไม่ทับงานคุณ)"
    ],
-   "rev": "11168e65"
+   "rev": "a9e7f1ef"
   },
   {
    "id": "B0",
@@ -772,8 +772,8 @@
    "group": "B",
    "title": "11 Dialogue (NPC)",
    "titleEn": "NPC dialogue",
-   "status": "testing",
-   "note": "โค้ดเสร็จ + bake แล้ว Claude ทดสอบใน Play ผ่าน รอคุณ Ctrl+S + ทดสอบ",
+   "status": "done",
+   "note": "ทดสอบผ่าน (QA)",
    "steps": [
     "Ctrl+S → Play → เดินไปที่ร้าน → ป้ายบอก \"Talk / Old Marlin\" → กด E → กล่องคุยขึ้นด้านล่าง ข้อความพิมพ์ทีละตัว",
     "Sell All Fish → หน้ายืนยัน → Sell → ได้เงิน Marlin ขอบคุณพร้อมจำนวนเงิน",
@@ -781,15 +781,15 @@
     "ที่แท่นออร่า \"Talk / Sela\" → Open the Altar เปิดหน้ากาชา",
     "แก้บทพูด/เพิ่มตัวเลือกใน Config/Dialogues.luau ได้เลย (สูงสุด 4 ตัวเลือกต่อ NPC)"
    ],
-   "rev": "b2cb74d8"
+   "rev": "95f22aeb"
   },
   {
    "id": "B20",
    "group": "B",
    "title": "Virtual Grid (Inventory / Aquarium / Mastery / Put in Tank)",
    "titleEn": "Virtual grid",
-   "status": "testing",
-   "note": "โค้ดเสร็จ รอทดสอบ",
+   "status": "done",
+   "note": "ทดสอบผ่าน (QA)",
    "steps": [
     "หยุด Play เดิม (โค้ดเก่า) → Play ใหม่ → กด B → Inventory ช่องเรียงเหมือนเดิม 5 คอลัมน์ ช่องว่าง \"+\" ครบตามความจุ",
     "คลิกช่อง → ขอบเลือก + ปุ่ม Sell xN; คลิกซ้ำ = ยกเลิก; สลับแท็บ/Sort แล้วรายการถูก; ขาย/เปิดกล่องแล้วช่องอัปเดตทันที",
@@ -799,25 +799,25 @@
     "Mastery: ปุ่ม UPGRADE เปลี่ยนเป็นสีเขียวทันทีที่ Pearls พอ; MAX แสดงถูก; ข้อความ \"now → next\" ยาวยังย่อให้พอดี",
     "มือถือแนวนอน (หน้าต่างถูกย่อด้วย UIScale) → เลื่อน grid แล้วการ์ดขึ้นครบ ไม่โผล่ช้า"
    ],
-   "rev": "74d2c6be"
+   "rev": "0bc2a705"
   },
   {
    "id": "B21",
    "group": "B",
    "title": "Item Detail Card + Inventory v2 (แท็บด้านข้างเป็นไอคอน, Rod/Line/Aura เป็นไอเท็ม, Bag เป็นอัปเกรด)",
    "titleEn": "Item Detail and Inventory v2",
-   "status": "testing",
-   "note": "ครบทุกส่วนในเกมแล้ว (Inventory, การ์ด, Shop, Fishdex, Character, Aura Dex) Claude ทดสอบใน Play ผ่าน รอคุณ Ctrl+S + ทดสอบส่วนที่เหลือ",
+   "status": "done",
+   "note": "ทดสอบผ่าน (QA)",
    "steps": [],
-   "rev": "4a13e14b"
+   "rev": "451ea31c"
   },
   {
    "id": "B22",
    "group": "B",
    "title": "Gacha page ใหม่ = Figma concept D \"Glass Card\" + ส่วนจาก E1",
    "titleEn": "Gacha page redesign",
-   "status": "testing",
-   "note": "แก้กรอบเลือกหมวด ใช้ช่อง Item Slot ของ Inventory และเปิด Aura Altar จาก HUD แล้ว ทดสอบผ่าน Studio Bridge",
+   "status": "done",
+   "note": "ทดสอบผ่าน (QA)",
    "steps": [
     "Play → เปิด Events → กด OPEN ที่ Neon Tide → หน้า Aura Summon เต็มจอ ซ้ายมีการ์ด Neon Tide (เลือกอยู่, ขอบหนา) และ Aura Altar",
     "กดการ์ด Aura Altar → ชื่อ/คำอธิบาย/ออร่าเด่น/ภาพขวาเปลี่ยน, กล่อง Milestones หายไป (Altar ไม่มี milestone)",
@@ -828,7 +828,7 @@
     "กด Tokens ที่ toggle → แจ้ง coming soon และยังเลือก Gems อยู่",
     "Test → Device → มือถือแนวนอน → หน้าย่อพอดีจอ ไม่มีอะไรล้น"
    ],
-   "rev": "e3b0c09d"
+   "rev": "953b5cac"
   },
   {
    "id": "B8",
@@ -885,10 +885,10 @@
    "group": "C",
    "title": "ตัดสินใจ data model ของ Inventory",
    "titleEn": "Inventory data model",
-   "status": "done",
-   "note": "ตัดสินใจแล้ว 2026-11-17",
+   "status": "progress",
+   "note": "QA ยังไม่สรุป (รอเปลี่ยนแปลงระบบ Item ทั้งหมด)",
    "steps": [],
-   "rev": "b2a16174"
+   "rev": "c0b0da66"
   },
   {
    "id": "C3",
@@ -1158,8 +1158,8 @@
    "group": "C",
    "title": "จุดฟองปลา (Hotspot): เหวี่ยงลงวงฟองได้ Luck +50%",
    "titleEn": "Fishing hotspots",
-   "status": "testing",
-   "note": "โค้ดเสร็จ + Figma แล้ว รอทดสอบใน Play",
+   "status": "done",
+   "note": "ทดสอบผ่าน (QA)",
    "steps": [
     "Ctrl+S → Play → ยืนริมน้ำรอสักพัก (ไม่เกิน ~10 วินาที): มีวงทองฟองผุดในน้ำใกล้ ๆ",
     "กดค้างเล็งเข้าวง: วงเล็งเปลี่ยนเป็นสีทอง มีป้าย HOTSPOT; ปล่อย → ขึ้น \"HOTSPOT! +50% luck...\" แล้วตกปลาตามปกติ การ์ดปลามีป้าย HOTSPOT",
@@ -1168,7 +1168,7 @@
     "เปิด AUTO ขณะหันไปทางวง: ไม่ได้โบนัส (ไม่มีข้อความ HOTSPOT)",
     "ได้ทั้ง PERFECT (มินิเกมไม่หลุดเลย) และ HOTSPOT ในครั้งเดียว: การ์ดปลาแสดงครบ 4 ป้าย kg / Manual / PERFECT / HOTSPOT"
    ],
-   "rev": "044787d4"
+   "rev": "ddefe90d"
   },
   {
    "id": "C27",
@@ -1192,18 +1192,45 @@
    "group": "C",
    "title": "Window core (Window.Shell) + \"!\" ปลากินเบ็ดบนหัวตัวละคร",
    "titleEn": "Window shell and bite indicator",
-   "status": "testing",
-   "note": "โค้ดเสร็จ รอทดสอบใน Play",
+   "status": "done",
+   "note": "ทดสอบผ่าน (QA)",
    "steps": [
     "Ctrl+S → Play → ตกปลาจนขึ้น \"!\": เห็น \"!\" เด้งเหนือหัว (มีวงสีตามความหายาก) ไม่มีแถบ \"!\" กลางล่าง; คลิกแล้วหายไปเข้ามินิเกม",
     "เปิด Store / Aquarium / Mastery / Quests / Settings (Credits) ทีละอัน: หน้าต่างขึ้นถูก, ปุ่ม X ปิดได้, เปิดอันใหม่แล้วอันเก่าปิดเอง",
     "Aquarium → + → Put in Tank ซ้อนบนบ่อ ปิดแล้วกลับบ่อ; Character → SKILLS เปิดได้",
     "กระเป๋า → คันเบ็ด → ENHANCE: popup ขึ้นเหนือการ์ด, Cancel ปิดได้"
    ],
-   "rev": "cb2ee6db"
+   "rev": "cb7c0bd0"
+  },
+  {
+   "id": "C29",
+   "group": "C",
+   "title": "Item rework: ไอเทมแบบ UUID (ปลาไม่รวมกอง, คันเบ็ด/สายซื้อซ้ำและขายคืนได้, เซฟ v6)",
+   "titleEn": "",
+   "status": "testing",
+   "note": "โค้ดเสร็จ type check ผ่าน รอทดสอบใน Play",
+   "steps": [
+    "เล่นด้วยเซฟเก่า: เข้าเกมได้ไม่ error, ได้ Driftwood Rod + Cotton Line, Bag ว่าง, Coins/Level คงเดิม, Output ไม่มี warn/error จาก DataService/Registry",
+    "ตกปลา 3 ตัวชนิดเดียวกัน: Inventory ขึ้น 3 ช่อง (ไม่มีเลข x3), กดแต่ละช่องเห็นน้ำหนัก/ป้าย Manual/Perfect/Hotspot/Mutation ไม่เหมือนกัน",
+    "HUD ตัวนับกระเป๋า: นับเฉพาะช่องที่ใช้ (คันเบ็ดและสายที่สวมอยู่ไม่นับ) กระเป๋าเริ่มต้นจุ 10",
+    "Shop > Rods: ซื้อ Bamboo Rod สองครั้ง: ครั้งแรกสวมให้เลย ครั้งที่สองเป็นของสำรองใน Bag (ชื่อแถวขึ้น x2) ไม่ขึ้น \"Already owned\"",
+    "Inventory > Rods: เห็น 3 คัน กดคันสำรอง > SELL ได้ 600 coins (Bamboo 1500 x 40%) กดคันที่สวมอยู่ต้องไม่มีปุ่ม SELL; คัน Driftwood ไม่มีปุ่ม SELL",
+    "กด EQUIP คันสำรอง: คันเดิมกลับไปอยู่ใน Bag, Stats ใน HUD เปลี่ยนตามคัน; ENHANCE คันหนึ่ง +1 อีกคันต้องยังเป็น +0; ขายคัน +N ได้เงินเพิ่มตามที่ลงไป",
+    "Bag เต็ม: ซื้อคัน/สายเพิ่มต้องขึ้น \"Bag full - sell something first\"; Auto fishing หยุดเมื่อเต็ม; ปลาที่ตกตอนเต็มถูกปล่อย (Kept = false)",
+    "SELL ALL: ขายเฉพาะปลา คันเบ็ด/สาย/หีบยังอยู่; ขายปลาทีละตัวจากการ์ดได้ราคาตามตัวนั้น",
+    "Aquarium: PUT IN TANK 2 ตัว แล้ว Return to Bag: ปลากลับมาพร้อมน้ำหนัก/ป้ายเดิม (กดการ์ดดู), Pearls/วินาทีเท่าเดิม",
+    "เปิดหีบ OPEN / OPEN ALL ได้, หีบรวมกองได้สูงสุด 5 ต่อกอง",
+    "ออกเกมแล้วเข้าใหม่ (ต้องเปิด Studio Access to API Services): Bag, คันเบ็ดที่สวม, ระดับ Enhance, ปลาในตู้ยังอยู่ครบ",
+    "Dev: give fish <ชื่อ> 3, equip Rods CoralRod, enhance Rods CoralRod 5, clearbag ทำงาน (clearbag ไม่ลบของที่สวมอยู่)"
+   ],
+   "rev": "54300878"
   }
  ],
  "history": [
+  {
+   "at": "2026-11-22T19:48:00+07:00",
+   "text": "ซิงค์ผลการตรวจจากเว็บ QA (Traveler Nise): งานผ่าน 41 งาน (อัปเดต A3, A18, B7, B20, B21, B22, C26, C28 เป็นผ่าน), งานที่ QA ให้ปรับปรุง 3 งาน (A9 ไม่ผ่าน responsive มือถือ, A15 รอ sync Figma กับเกม, C2 รอสรุป Item rework), และดึง Ticket T-MWRRTUYM (ย้าย Daily Login ไปจอหลัก)"
+  },
   {
    "at": "2026-11-22T19:30:00+07:00",
    "text": "เว็บ QA เพิ่มหน้า \"ข้อเสนอ / ไอเดีย\" แบบฟอรัม (โพสต์ โหวต คอมเมนต์ เปลี่ยนสถานะ แก้ไข พร้อมเวลาทุกจุด) เก็บใน Firestore qa/ideas; agent ดึงสรุปด้วย pull.mjs และโพสต์ด้วย post.mjs"
@@ -1251,6 +1278,10 @@
   {
    "at": "2026-11-22T01:10+07:00",
    "text": "สรุปข้อตกลง Game Design 6 ข้อร่วมกับ Game Director: 1) Gamepass Luck x1.25 เท่า 2) ระบบเทรดจำกัด 4 ชิ้น ต้องมี Trade License, ห้ามเทรดออร่า, เทรดเฉพาะปลา/เบ็ด/เหยื่อ, มีระบบ Bound/Unbound และเสียภาษี Coins (Gold Sink) 3) ระบบ Mod เบ็ด (Uncommon+ มี 2 Prefix + 2 Suffix) และระบบ Rod Fusion สลับ Mod ได้เฉพาะเบ็ดชนิดเดียวกัน 4) อัตรา Gems: ปลา Uncommon+ ได้ 1 Gem; ตกมือสุ่มได้ 50 ครั้ง/ชม., ออโต้สุ่มได้ 25-30 ครั้ง/ชม. 5) Rebirth ใช้ Prestige Tree (RP), ล้างปลาในตู้และเหยื่อทั่วไป (แจ้งเตือนขายเป็น Coins), คันเบ็ดและเหยื่อเควสถาวรไม่หาย 6) ระเบียบ AI Workflow: AI ทุกตัวต้องสรุปงานและลง Timestamp ใน docs เสมอ — บันทึกลง docs/DESIGN_DECISIONS_2026-11-21.md เรียบร้อย"
+  },
+  {
+   "at": "2026-11-22",
+   "text": "C29 Item rework: ระบบไอเทมแบบ UUID (src/shared/Items/: ItemTypes, ItemContainer; Registry.Items), Inventory.luau เป็น alias ไป ItemContainer; ปลาไม่รวมกอง, คันเบ็ด/สายเป็นไอเทมใน Bag ซื้อซ้ำ/ขายคืน/Enhance รายชิ้น, ปรับความจุกระเป๋า 10/16/24/36/50, เซฟ v6 ล้างข้อมูลไอเทมเก่า; แก้ ShopService, FishingService, AquariumService, DataService, MonetizationService, DevService และ UI (ItemDetail, ItemSlots, MenuFill, InventoryController, CharacterController); node tools/check.mjs ผ่าน แต่ยังไม่ได้ทดสอบใน Play"
   },
   {
    "at": "2026-11-21",
@@ -1595,14 +1626,6 @@
   {
    "at": "2026-11-18",
    "text": "แปลงรูปชีต 17/18 ทั้ง 18 รายการเป็น Image ID และผูกไอคอนกับ Inventory, Character, Bag Upgrade, Modifiers และ Mastery. เกณฑ์ผ่านคือรูปโหลดครบในหน้าจอที่ระบุด้านบน"
-  },
-  {
-   "at": "2026-11-18",
-   "text": "Store ใช้ไอคอน Robux คู่กับราคาในปุ่มสินค้าที่ซื้อได้ทั้ง Passes, Gems และ Boosts & Packs และแสดง OWNED / BOUGHT / SOON สำหรับปุ่มสถานะ"
-  },
-  {
-   "at": "2026-11-18",
-   "text": "จัดชั้นไอคอนเหนือของตกแต่งในช่องไอเท็มและรางวัล Gacha, โปสเตอร์ Events, แท็บ Inventory และปุ่มราคา Store"
   }
  ],
  "fixes": {}

@@ -2,7 +2,9 @@
 -- Shop equipment. Every category uses the same shape so the shop UI and ShopService
 -- handle new categories/items automatically.
 --
--- Rods / Lines / Bags : permanent purchases, one equipped per category.
+-- Rods / Lines        : bought any number of times; every purchase is its own item (UUID) in the bag, one worn.
+--                       Sell back for GameConfig.Inventory.GearSellFraction of the price (+ Enhance coins).
+-- Bags                : permanent capacity upgrades (ladder), one equipped, never use a slot.
 -- Baits               : consumable stacks (BuyAmount per purchase), one bait slot equipped,
 --                       one unit consumed per successful catch.
 -- Order               : sort order in the shop; first item (Price = 0) is the starter item.
@@ -15,7 +17,7 @@ export type Item = {
 	Order: number,
 	Stats: { [string]: number },
 	Description: string?,
-	Capacity: number?, -- Bags only: number of inventory SLOTS (a slot holds a stack)
+	Capacity: number?, -- Bags only: number of inventory SLOTS (one slot = one item)
 	BuyAmount: number?, -- Baits only
 	RequiredLevel: number?,
 	Exclusive: string?, -- not sold in the Shop; only from this source (e.g. "StarterPack"). Hidden until owned.
@@ -60,11 +62,11 @@ local Equipment: { [string]: Category } = {
 		DisplayName = "Bags",
 		Kind = "Permanent",
 		Items = {
-			StarterPouch = { Name = "Starter Pouch", Price = 0, Currency = "Coins", Order = 1, Capacity = 6, Stats = {} },
-			WovenBasket = { Name = "Woven Basket", Price = 800, Currency = "Coins", Order = 2, Capacity = 10, Stats = {} },
-			Crate = { Name = "Fish Crate", Price = 6000, Currency = "Coins", Order = 3, Capacity = 15, Stats = {} },
-			Coolbox = { Name = "Ice Coolbox", Price = 40000, Currency = "Coins", Order = 4, Capacity = 20, Stats = {} },
-			Hold = { Name = "Ship's Hold", Price = 250000, Currency = "Coins", Order = 5, Capacity = 30, Stats = {} },
+			StarterPouch = { Name = "Starter Pouch", Price = 0, Currency = "Coins", Order = 1, Capacity = 10, Stats = {} },
+			WovenBasket = { Name = "Woven Basket", Price = 800, Currency = "Coins", Order = 2, Capacity = 16, Stats = {} },
+			Crate = { Name = "Fish Crate", Price = 6000, Currency = "Coins", Order = 3, Capacity = 24, Stats = {} },
+			Coolbox = { Name = "Ice Coolbox", Price = 40000, Currency = "Coins", Order = 4, Capacity = 36, Stats = {} },
+			Hold = { Name = "Ship's Hold", Price = 250000, Currency = "Coins", Order = 5, Capacity = 50, Stats = {} },
 		},
 	},
 	Baits = {

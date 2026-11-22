@@ -113,7 +113,7 @@ COMMANDS.give = {
 			local rng = Random.new()
 			for _ = 1, n do
 				local entry = { Uid = "dev", Fish = id, Weight = Roll.Weight(id, rng), Mutation = mut, Mult = 1 }
-				if Inventory.AddFish(data, id, mut, entry.Weight, Roll.Value(entry, 1)) then
+				if Inventory.AddFish(data, id, mut, entry.Weight, Roll.Value(entry, 1), { "Manual" }) then
 					given += 1
 					local dex = data.Fishdex[id] or { Count = 0, Best = 0 }
 					dex.Count += 1
@@ -231,6 +231,12 @@ COMMANDS.equip = {
 		if not id then
 			return "unknown item"
 		end
+		if Inventory.IsGearCategory(cat) then
+			local gear = Inventory.NewGear(cat, id) -- a new item each time (own UUID)
+			Inventory.Add(data, gear, true)
+			data.Equipped[cat] = gear.UUID
+			return `Equipped {cat}.{id} (new item)`
+		end
 		if data.Owned[cat] then
 			data.Owned[cat][id] = true
 		end
@@ -333,9 +339,22 @@ COMMANDS.enhance = {
 			return COMMANDS.enhance.Usage
 		end
 		local lv = math.clamp(num(a[3], 1), 0, Registry.GameConfig.Enhance.MaxLevel)
-		data.Owned[catId][itemId] = true
-		data.Enhance[catId] = data.Enhance[catId] or {}
-		data.Enhance[catId][itemId] = if lv > 0 then lv else nil
+		local kind = Inventory.GearKind(catId)
+		if not kind then
+			return COMMANDS.enhance.Usage
+		end
+		local gear
+		for _, s in data.Bag do
+			if s.Kind == kind and s.Id == itemId then
+				gear = s
+				break
+			end
+		end
+		if not gear then
+			gear = Inventory.NewGear(catId, itemId)
+			Inventory.Add(data, gear, true)
+		end
+		gear.Enhance = lv
 		return `{itemId} +{lv}`
 	end,
 }
@@ -483,8 +502,14 @@ COMMANDS.event = {
 COMMANDS.clearbag = {
 	Usage = "clearbag",
 	Run = function(_, data)
-		data.Bag = {}
-		return "Bag cleared"
+		local keep = {}
+		for _, s in data.Bag do
+			if Inventory.IsWorn(data, s) then
+				table.insert(keep, s)
+			end
+		end
+		data.Bag = keep
+		return "Bag cleared (worn rod and line stay)"
 	end,
 }
 

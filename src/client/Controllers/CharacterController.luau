@@ -12,6 +12,7 @@ local UserInputService = game:GetService("UserInputService")
 
 local Shared = ReplicatedStorage:WaitForChild("Shared")
 local Registry = require(Shared.Registry)
+local Inventory = require(Shared.Inventory)
 local Format = require(Shared.Util.Format)
 
 local UI = script.Parent.Parent.UI
@@ -67,9 +68,9 @@ end
 local function equippedItem(profile: any, kind: string): any
 	if kind == "Rod" or kind == "Line" then
 		local cat = if kind == "Rod" then "Rods" else "Lines"
-		local id = profile.Equipped[cat]
+		local id = Inventory.EquippedId(profile, cat)
 		local item = id and Registry.Equipment[cat].Items[id]
-		return item and { Kind = kind, Id = id, Icon = `equipment/{id}`, Name = item.Name, Rarity = ItemSlots.GearRarity(cat, id) }
+		return item and { Kind = kind, Id = id, UUID = profile.Equipped[cat], Icon = `equipment/{id}`, Name = item.Name, Rarity = ItemSlots.GearRarity(cat, id) }
 	elseif kind == "Bait" then
 		local id = profile.Equipped.Baits
 		local item = id and Registry.Equipment.Baits.Items[id]
@@ -140,7 +141,7 @@ local function show(item: any, anchor: GuiObject, key: string)
 		ItemDetail.Hide()
 	else
 		selected = key
-		ItemDetail.Show({ Kind = item.Kind, Id = item.Id }, anchor)
+		ItemDetail.Show({ Kind = item.Kind, Id = item.Id, UUID = item.UUID }, anchor)
 	end
 	if grid then
 		grid:Refresh()

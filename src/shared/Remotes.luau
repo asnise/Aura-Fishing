@@ -26,7 +26,7 @@ local EVENTS = {
 	"ReelResult", -- (token, success, perfect)
 	"CancelFishing", -- ()
 	"SetAuto", -- (enabled)
-	"BagSeen", -- ({newToken}) acknowledges the displayed or clicked bag stacks
+	"BagSeen", -- ({newToken}) acknowledges the displayed or clicked bag items
 	"PromptPass", -- (passKey) open the Roblox buy dialog for a Game Pass (Config/Products.Passes)
 	"PromptProduct", -- (productKey) open the Roblox buy dialog for a Developer Product
 	"OpenDialogue", -- (npcId) server -> client: a world NPC prompt was used (Config/Dialogues, B7)
@@ -34,11 +34,11 @@ local EVENTS = {
 
 local FUNCTIONS = {
 	"Buy", -- (categoryId, itemId) -> ok, message
-	"Equip", -- (categoryId, itemId) -> ok, message
-	"SellAll", -- () -> ok, message   (fish only; treasure chests stay)
-	"SellStack", -- (slotIndex) -> ok, message   sell one fish stack
-	"OpenTreasure", -- (slotIndex) -> ok, message, reward { Kind, Amount?, Id? }   open one chest
-	"OpenAllTreasure", -- (slotIndex) -> ok, message, rewardSummary   open entire chest stack
+	"Equip", -- (categoryId, itemId | uuid for Rods/Lines) -> ok, message
+	"SellAll", -- () -> ok, message   (fish only; chests, rods and lines stay)
+	"SellItem", -- (uuid) -> ok, message   sell one fish or one spare Rod / Line
+	"OpenTreasure", -- (uuid) -> ok, message, reward { Kind, Amount?, Id? }   open one chest
+	"OpenAllTreasure", -- (uuid) -> ok, message, rewardSummary   open entire chest stack
 	"RollAura", -- () -> ok, auraId | message   (legacy x1 on the Altar banner)
 	"PullAura", -- (bannerId, count 1|10) -> ok, results {auraId, isNew}[] | message, equippedId?
 	"ClaimMilestone", -- (bannerId, pulls) -> ok, message
@@ -51,7 +51,7 @@ local FUNCTIONS = {
 	"SetSetting", -- (key, value) -> ok
 	"PutInTank", -- ({ {Id, Mutation, Count} }) -> { ok, reason?, Aquarium = State }   all or nothing
 	"TakeFromTank", -- (uid) -> { ok, reason?, Aquarium = State }   fish goes back to the bag
-	"Enhance", -- (categoryId, itemId) -> ok, message, state = Enhance.State   owned Rods/Lines +1
+	"Enhance", -- (uuid) -> ok, message, state = Enhance.State   one Rod/Line item +1
 	"UpgradeMastery", -- (trackId) -> { ok, reason?, Tracks = Mastery.Tracks(profile), Pearls }
 	"BuyTankSlot", -- () -> { ok, reason?, Aquarium = State }   Coins, price = Aquarium.NextSlotPrice
 	"ClaimDailyLogin", -- () -> ok, message, state = DailyLoginState   claim today's daily reward

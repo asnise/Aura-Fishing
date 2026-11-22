@@ -385,4 +385,72 @@ function Registry.DepthZoneFor(depth: number)
 	return DepthZones[#DepthZones]
 end
 
+-- Item definitions (Layer 1, Items/ItemTypes) ---------------------------------------------------
+-- Built once from Config/Fish, Config/Equipment and Config/Treasures. Plain tables, never saved.
+-- Gear has no Rarity in config: it is ranked by shop order (Exclusive = Rare).
+local GEAR_LADDER = { "Common", "Uncommon", "Rare", "Epic", "Legendary" }
+local EQUIPMENT_CATEGORY = { Rods = "Rod", Lines = "Line", Bags = "Bag", Baits = "Bait" }
+
+function Registry.GearRarity(categoryId: string, itemId: string): string
+	local item = Equipment[categoryId].Items[itemId]
+	if item.Exclusive then
+		return "Rare"
+	end
+	local rank = table.find(Registry.SortedItems(categoryId), itemId) or 1
+	return GEAR_LADDER[math.clamp(rank, 1, #GEAR_LADDER)]
+end
+
+local defs: { [string]: any } = {}
+Registry.Items = defs
+
+local function addDef(def: any)
+	check(defs[def.Id] == nil, `Items: id '{def.Id}' is used by two items`)
+	defs[def.Id] = def
+end
+
+for id, f in Fish do
+	addDef({ Id = id, Name = f.Name, Description = "", Category = "Fish", Rarity = f.Rarity, Icon = `fish/{id}`, BasePrice = f.BaseValue, IsStackable = false, MaxStack = 1, IsTradable = true, IsSellable = true, Bound = "Unbound" })
+end
+for id, t in Treasures do
+	addDef({ Id = id, Name = t.Name, Description = "", Category = "Treasure", Rarity = t.Rarity, Icon = t.Icon, BasePrice = 0, IsStackable = true, MaxStack = GameConfig.Inventory.TreasureStackMax, IsTradable = true, IsSellable = false, Bound = "Unbound" })
+end
+for catId, cat in Equipment do
+	for id, item in cat.Items do
+		local gift = item.Exclusive ~= nil
+		local sellable = catId == "Rods" or catId == "Lines"
+		addDef({
+			Id = id,
+			Name = item.Name,
+			Description = item.Description or "",
+			Category = EQUIPMENT_CATEGORY[catId] or catId,
+			Rarity = if cat.Kind == "Permanent" then Registry.GearRarity(catId, id) else "Common",
+			Icon = `equipment/{id}`,
+			BasePrice = item.Price,
+			IsStackable = cat.Kind == "Consumable",
+			MaxStack = if cat.Kind == "Consumable" then 9999 else 1,
+			IsTradable = not gift,
+			IsSellable = sellable and not gift and item.Currency == "Coins" and item.Price > 0,
+			Bound = if gift then "Bound" else "Unbound",
+			Equipment = catId,
+		})
+	end
+end
+if #errors > 0 then
+	error("[Registry] Content errors:\n  " .. table.concat(errors, "\n  "))
+end
+
+function Registry.GetItem(id: string): any?
+	return defs[id]
+end
+
+function Registry.GetItemsByCategory(category: string): { any }
+	local out = {}
+	for _, def in defs do
+		if def.Category == category then
+			table.insert(out, def)
+		end
+	end
+	return out
+end
+
 return Registry
