@@ -1,6 +1,9 @@
 {
-  "apiKey": "YOUR_API_KEY",
-  "authDomain": "YOUR_PROJECT.firebaseapp.com",
-  "projectId": "YOUR_PROJECT",
-  "appId": "YOUR_APP_ID"
+  "apiKey": "AIzaSyAwcD37SwZW-urZABPlbLow6CalelW30_I",
+  "authDomain": "global-data-lite.firebaseapp.com",
+  "projectId": "global-data-lite",
+  "storageBucket": "global-data-lite.firebasestorage.app",
+  "messagingSenderId": "196331411583",
+  "appId": "1:196331411583:web:628d6c1de70a945ae3474a",
+  "measurementId": "G-NYTGDXB6WB"
 }
