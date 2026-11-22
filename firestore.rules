@@ -2,16 +2,16 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
     // Three QA documents. Anyone can read (the page and agents' pull.mjs need it);
-    // only the listed accounts can write. Replace the example emails before publishing.
-    // Google sign-in accounts must have a verified email. The agent account (Email/Password provider,
-    // created by you in the console with sign-ups disabled) is allowed without verification.
+    // only the listed Google accounts (verified email) can write. Replace the example emails
+    // before publishing. Agents use a service-account key (IAM) and bypass these rules.
+    // Do not add request.resource.size here: it exists only in Storage rules and makes every
+    // Firestore write fail. Firestore already caps a document at 1 MiB.
     match /qa/{doc} {
       allow read: if doc in ['state', 'tickets', 'ideas'];
       allow write: if doc in ['state', 'tickets', 'ideas']
         && request.auth != null
-        && (request.auth.token.email_verified == true || request.auth.token.firebase.sign_in_provider == 'password')
-        && request.auth.token.email in ['qa1@example.com', 'qa2@example.com', 'agent@example.com']
-        && request.resource.size < 900000;
+        && request.auth.token.email_verified == true
+        && request.auth.token.email in ['qa1@example.com', 'qa2@example.com'];
     }
   }
 }
