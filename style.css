@@ -190,3 +190,14 @@ dialog .field { margin-bottom: 10px; }
 .history { margin: 0; padding: 0; list-style: none; font-size: 13px; }
 .history li { padding: 4px 0; border-top: 1px solid var(--line); }
 .history time { margin-right: 6px; color: var(--muted); font: 12px var(--mono); }
+
+/* vote summary on idea cards */
+.votes { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin: 8px 0 4px; }
+.vote { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border: 1px solid color-mix(in srgb, currentColor 45%, transparent); border-radius: 5px; font-size: 13px; font-weight: 600; }
+.vote b { font-size: 15px; font-variant-numeric: tabular-nums; }
+.vote.up { background: var(--done-bg); color: var(--done-ink); }
+.vote.down { background: var(--fail-bg); color: var(--fail-ink); }
+.vote-bar { display: flex; flex: 1 1 120px; max-width: 240px; height: 8px; overflow: hidden; border-radius: 4px; background: var(--plan-bg); }
+.vote-bar i { display: block; height: 100%; }
+.vote-bar i.up { background: var(--done-ink); }
+.vote-bar i.down { background: var(--fail-ink); }

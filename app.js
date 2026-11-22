@@ -21,6 +21,8 @@ const ICON = {
   plus: icon('<line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>'),
   pass: icon('<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>'),
   fail: icon('<circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/>'),
+  up: icon('<path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>'),
+  down: icon('<path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17"/>'),
   theme: icon('<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>'),
   login: icon('<path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/>')
 };
@@ -285,6 +287,17 @@ function ticketsPage() {
 // ---------- ideas (forum-style proposals) ----------
 const voteKey = () => (user?.email || user?.name || 'local').replace(/[.#$/[\]]/g, '_');
 const score = idea => Object.values(idea.votes || {}).reduce((sum, v) => sum + v, 0);
+const tally = idea => { const v = Object.values(idea.votes || {}); return { up: v.filter(x => x > 0).length, down: v.filter(x => x < 0).length }; };
+// Agree / disagree counts with a split bar, shown on every idea card.
+const voteSummary = idea => {
+  const { up, down } = tally(idea);
+  const total = up + down;
+  return `<div class="votes">
+    <span class="vote up">${ICON.up} เห็นด้วย <b>${up}</b></span>
+    <span class="vote down">${ICON.down} ไม่เห็นด้วย <b>${down}</b></span>
+    <span class="vote-bar" title="${total ? Math.round((up / total) * 100) + '% เห็นด้วย' : 'ยังไม่มีโหวต'}">${total ? `<i class="up" style="width:${(up / total) * 100}%"></i><i class="down" style="width:${(down / total) * 100}%"></i>` : ''}</span>
+  </div>`;
+};
 const lastActivity = idea => idea.updatedAt || idea.at || '';
 
 function ideasPage() {
@@ -319,8 +332,9 @@ function ideasPage() {
       ${list.map(([id, i]) => `
         <article class="idea" data-idea="${esc(id)}" tabindex="0">
           <header><span class="idea-title">${esc(i.title)}</span><span>${badge(i.status, IDEA_STATUS[i.status] || i.status)} ${badge('cat', IDEA_CATEGORY[i.category] || i.category)}</span></header>
+          ${voteSummary(i)}
           <p class="idea-excerpt">${esc((i.body || '').slice(0, 180))}${(i.body || '').length > 180 ? '...' : ''}</p>
-          <small class="muted">${esc(i.by)} · โพสต์ ${when(i.at)}${i.updatedAt && i.updatedAt !== i.at ? ` · แก้ไขล่าสุด ${when(i.updatedAt)}` : ''} · โหวต ${score(i) > 0 ? '+' : ''}${score(i)} · ${(i.comments || []).length} ความเห็น</small>
+          <small class="muted">${esc(i.by)} · โพสต์ ${when(i.at)}${i.updatedAt && i.updatedAt !== i.at ? ` · แก้ไขล่าสุด ${when(i.updatedAt)}` : ''} · ${(i.comments || []).length} ความเห็น</small>
         </article>`).join('') || '<p class="empty muted" style="padding:27px;text-align:center">ยังไม่มีโพสต์ที่ตรงกับตัวกรอง</p>'}
     </section>`;
 }
@@ -432,8 +446,7 @@ function openIdea(id) {
   const i = ideas.items[id];
   if (!i) return;
   const mine = (i.votes || {})[voteKey()] || 0;
-  const ups = Object.values(i.votes || {}).filter(v => v > 0).length;
-  const downs = Object.values(i.votes || {}).filter(v => v < 0).length;
+  const { up: ups, down: downs } = tally(i);
   showDialog(`
     <form method="dialog">
       ${loginNotice()}
@@ -442,8 +455,8 @@ function openIdea(id) {
       <p class="muted">${esc(i.by)} · โพสต์ ${when(i.at)}${i.updatedAt && i.updatedAt !== i.at ? ` · แก้ไขล่าสุด ${when(i.updatedAt)}` : ''}</p>
       <div class="comment idea-body">${esc(i.body)}</div>
       <div class="row">
-        <button class="btn ${mine > 0 ? 'pass' : ''}" type="button" data-vote="1" ${canWrite() ? '' : 'disabled'}>เห็นด้วย ${ups}</button>
-        <button class="btn ${mine < 0 ? 'fail' : ''}" type="button" data-vote="-1" ${canWrite() ? '' : 'disabled'}>ไม่เห็นด้วย ${downs}</button>
+        <button class="btn ${mine > 0 ? 'pass' : ''}" type="button" data-vote="1" ${canWrite() ? '' : 'disabled'}>${ICON.up} เห็นด้วย ${ups}</button>
+        <button class="btn ${mine < 0 ? 'fail' : ''}" type="button" data-vote="-1" ${canWrite() ? '' : 'disabled'}>${ICON.down} ไม่เห็นด้วย ${downs}</button>
         <label class="field" style="flex-direction:row;align-items:center;gap:8px;margin:0 0 0 auto">สถานะ
           <select data-idea-status ${canWrite() ? '' : 'disabled'}>${Object.entries(IDEA_STATUS).map(([k, v]) => `<option value="${k}"${k === i.status ? ' selected' : ''}>${v}</option>`).join('')}</select></label>
       </div>
