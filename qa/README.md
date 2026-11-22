@@ -25,7 +25,14 @@ Agent:
 - `node qa/tools/pull.mjs` พิมพ์สรุป: ไอเดียที่รอเคาะ (พร้อมคะแนนโหวตและความเห็นล่าสุด) และที่อนุมัติแล้วแต่ยังไม่ได้ทำ
 - โพสต์สรุป/รายงานขึ้นฟอรัม: `node qa/tools/post.mjs --title "หัวข้อ" --category system --body "รายละเอียด"` (หรือ `--body-file report.md`)
 - ตอบในโพสต์: `node qa/tools/post.mjs --comment I-XXXX --body "ทำแล้วใน ..."`
-- ต้องมีบัญชีของ agent (ตั้งครั้งเดียว): Authentication > Sign-in method > เปิด **Email/Password** > Users > Add user (เช่น `agent@yourdomain`) แล้ว **ปิด sign-ups** (Settings > User actions) ใส่อีเมลนี้ใน `qa/firestore.rules` แล้ว Publish และสร้างไฟล์ `qa/.agent.env` (ถูก gitignore) ที่มี `QA_AGENT_EMAIL=...` กับ `QA_AGENT_PASSWORD=...`
+- ต้องมี **key ของ agent** (ตั้งครั้งเดียว ไม่ต้องใช้อีเมล/รหัสผ่าน และไม่ต้องแก้ rules):
+  1. เปิด https://console.cloud.google.com เลือกโปรเจกต์เดียวกับ Firebase (`global-data-lite`)
+  2. IAM & Admin > Service Accounts > **Create service account** ตั้งชื่อ `qa-agent` > Create and continue
+  3. ที่ "Grant this service account access" เลือก role **Cloud Datastore User** (เขียน Firestore ได้อย่างเดียว) > Done
+  4. กดเข้า `qa-agent` > แท็บ **Keys** > Add key > Create new key > **JSON** > Create จะได้ไฟล์ดาวน์โหลด
+  5. ย้ายไฟล์ไปไว้ที่ `qa/.agent-key.json` (ถูก gitignore) หรือเก็บที่อื่นแล้วตั้งตัวแปร `QA_AGENT_KEY_FILE=<path>`
+  6. ทดสอบ: `node qa/tools/post.mjs --title "ทดสอบ" --body "โพสต์จาก agent"` ต้องขึ้น `Posted I-...` และเห็นโพสต์ในเว็บ
+  - key นี้ผ่านสิทธิ์ IAM ไม่ผ่าน `firestore.rules` ใครได้ไฟล์ไปเขียน Firestore ของโปรเจกต์ได้ ห้าม commit ห้ามวางในแชท/โพสต์ ถ้าหลุดให้ลบ key ใน Keys แล้วสร้างใหม่
 
 **ถ้าเคย Publish rules ไปแล้ว ต้อง Publish ใหม่** ให้มี `ideas` (ไม่งั้นหน้าไอเดียว่างและโพสต์ไม่ได้)
 

@@ -49,3 +49,5 @@ desktop.ini
 
 # QA agent credentials
 qa/.agent.env
+qa/.agent-key.json
+*-firebase-adminsdk-*.json
