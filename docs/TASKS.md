@@ -17,7 +17,7 @@
 - [x] A6 — มินิเกม Pond Card  `ทดสอบผ่าน`
 - [x] A7 — การ์ดปลาที่ตกได้แบบ Badge  `ทดสอบผ่าน`
 - [x] A8 — Aura Gacha — Reel Slot  `ทดสอบผ่าน`
-- [ ] A9 — หน้าต่างเมนูขนาดคงที่  `QA ไม่ผ่าน (Daily Login และ Quest ยังไม่ responsive มือถือ)`
+- [ ] A9 — หน้าต่างเมนูขนาดคงที่  `รอทดสอบขนาด Upgrade Bag บนมือถือ ผล QA เดิมอยู่ในรายละเอียด`
 - [x] A10 — ออร่า VFX + Low FX  `ทดสอบผ่าน`
 - [x] A11 — เซฟข้อมูล (DataStore)  `ทดสอบผ่าน`
 - [x] A12 — StudioBridge MCP (Claude สั่งงาน Studio ได้)  `ทดสอบผ่าน`
@@ -76,7 +76,7 @@
 - [ ] C20 — มินิเกม: Catch Bar เริ่มตรงตำแหน่งปลา + ช่วงพักตอนเริ่ม  `โค้ดเสร็จ รอทดสอบ`
 - [ ] C21 — คอนเทนต์ใหม่จากรูปที่อัปโหลดแล้ว (ปลา 8, ออร่า 10, คันเบ็ด 2, สาย 2, เหยื่อ 4)  `โค้ดเสร็จ รอทดสอบ`
 - [ ] C22 — FishingZone / PlayArea ใช้เฉพาะใน Workspace (แมพสำรองใน ServerStorage ไม่นับ)  `โค้ดเสร็จ ตรวจ logic ใน Studio แล้ว รอทดสอบ Play ใหม่`
-- [ ] C23 — Daily Login ปฏิทินของขวัญ 7 วัน (HUD และ Main Menu)  `โค้ดเสร็จ รอทดสอบการเปิดและรับรางวัล มี Figma ใหม่ 6 แบบรอเลือก`
+- [ ] C23 — Daily Login ปฏิทินของขวัญ 7 วัน (HUD และ Main Menu)  `เลือก B Grand Shelf และ bake แล้ว รอทดสอบรับรางวัลใน Play`
 - [ ] C24 — Core Menu Manager (แบ่งชั้นหน้าต่าง ไม่เปิดซ้อนมั่ว, ซ้อนได้เฉพาะที่กำหนด)  `โค้ดเสร็จ ทดสอบใน Play บางส่วนผ่าน — M2-M4 โค้ดเสร็จ รอทดสอบ — งานต่อ M1, M5, M6 ใน docs/MENU_MANAGER.md`
 - [ ] C25 — เหวี่ยงเบ็ดใหม่: กดค้าง + Perfect Cast + ระยะเหวี่ยงตามคัน + ตัวปรับความลึกบน HUD  `โค้ดเสร็จ + bake + Figma แล้ว รอทดสอบใน Play`
 - [x] C26 — จุดฟองปลา (Hotspot): เหวี่ยงลงวงฟองได้ Luck +50%  `ทดสอบผ่าน (QA)`
@@ -86,9 +86,14 @@
 - [ ] C30 — ระบบ Modifier เบ็ด (Prefix/Suffix) สุ่มค่า -N~+N, Stat Max Cap Breaker และ Rarity  `โค้ดเสร็จ รอทดสอบการสุ่ม สเตตัส และการดรอปคันเบ็ดใน Play`
 - [ ] C31 — Rod Fusion (หลอม mod ข้ามคันเบ็ดรุ่นเดียวกัน, เปิดที่ Old Marlin)  `โค้ดเสร็จ type check ผ่าน รอทดสอบใน Play`
 - [ ] C32 — Responsive menu และการค้นหาไอเทมใหม่ใน Inventory  `โค้ดเสร็จ รอทดสอบปุ่ม NEW และ Item Detail บนมือถือ เฟส 4 ยังไม่ได้ตรวจ`
-- [ ] C33 — Bake UI ทั้ง 18 หน้าลง Studio + ตรวจ responsive มือถือ  `bake ครบ 18 หน้า รอทดสอบใน Play และ Device Emulator`
+- [ ] C33 — Bake UI ทั้ง 18 หน้าลง Studio + ตรวจ responsive มือถือ  `รอทดสอบใน Device Emulator รวมขนาด Upgrade Bag และระยะขอบป้ายสถานะตกปลา`
 - [ ] C34 — ปรับ UI รอบ 23 พ.ย. (Daily บน HUD/Main Menu, Store แบ่งหน้า, Item Card ไม่ scroll, Enhance มือถือ, พื้นดำเต็มจอ, Gacha Close, Line Modifier, ของฟรีขายได้ 0 โคอิน)  `โค้ดเสร็จ check.mjs ผ่าน รอทดสอบใน Play`
 - [ ] C35 — Stats Codex (Main Menu)  `โค้ดเสร็จ รอทดสอบการค้นหาและการอ่านคำอธิบายบนจอแนวตั้ง`
+
+- [x] C36 — ภาพต้นทาง Aura VFX ชุดแรก  `ตรวจ PNG ครบ 5 ชีตต่อออร่า`
+- [x] C37 — พรีวิว Aura VFX รอบตัวละคร 3 ออร่า  `ทดสอบใน Chrome แล้ว`
+- [x] C38 — ทิศทางภาพและพรีวิว Aura VFX ก่อนเจนชีต  `จัดพรอมป์และพรีวิว 15 ออร่า`
+- [x] C39 — Aura Particle Editor และ Studio Importer สำหรับโปรเจกต์ 3 ออร่า  `ทดสอบนำเข้าใน Studio`
 
 ---
 
@@ -199,8 +204,13 @@
 - สถานะ:
   - [x] (2026-11-16 เปลี่ยนเป็นขนาด Figma 760×610 + pager แทนการเลื่อน — ดู B2–B4)
   - [ ] QA ไม่ผ่าน (Traveler Nise 2026-11-22: "มีหน้า Daily Login และ Quest ที่ยังไม่มี responsive มือถอืหรืออาจจะมีอื่นๆที่ยังไม่เห็น")
-- Done when: Shop/Auras/Fishdex ขนาดเท่ากันทุกหน้าต่าง ไม่ล้นจอ
-- ทดสอบ: เปิดแต่ละเมนู → ขนาดหน้าต่างต้องเท่ากัน; Test → Device → มือถือ → Play → หน้าต่างต้องย่อทั้งก้อน (ไม่ล้นจอ ไม่ทับ Top bar)
+  - [ ] รอ QA ตรวจขนาด Upgrade Bag หลังปรับให้ย่อตามพื้นที่จอ
+- Done when: บนมือถือแนวนอน Shop, Aura Dex และ Fishdex ย่อตามจอ และเห็นกรอบ Upgrade Bag พร้อมปุ่มด้านล่างครบ
+- ทดสอบ:
+  - [ ] 1. ใน Roblox Studio เปิด Test → Device Emulator เลือกมือถือแนวนอน 844×390 แล้วกด Play
+  - [ ] 2. กดไอคอนกระเป๋าเพื่อเปิด Inventory แล้วแตะปุ่ม UPGRADE ข้างตัวเลขความจุด้านบน: เห็นกรอบ Upgrade Bag ครบทั้งกรอบพร้อมปุ่ม Cancel และ UPGRADE หรือ MAX แตะ Cancel แล้วกลับไปที่ Inventory
+  - [ ] 3. เปิด Shop จาก HUD, Aura Dex จาก Inventory → Auras และ Fishdex จาก Menu: แต่ละหน้าต่างอยู่ในจอและกดปิดได้
+  - [ ] 4. กลับไปโหมดคอม (Device: None) แล้วเปิด Upgrade Bag ซ้ำ: หน้าต่างใช้ขนาดเต็มตามปกติและกด Cancel ได้
 
 ### A10. ออร่า VFX + Low FX
 - สถานะ:
@@ -962,9 +972,9 @@
   - [ ] 3. ว่ายออกไปไกล -> กระแสน้ำผลักกลับที่ขอบแมพเดิม
 
 ### C23. Daily Login (ปฏิทินของขวัญ 7 วัน) — 2026-11-19
-- [บอร์ด Figma Daily Login 6 แบบ](https://www.figma.com/design/givb0hmQYmmaOy7p7DGtb2/Ro-Offline?node-id=3792-1019) บนหน้า Out Space เลือกได้ระหว่าง A Reward Calendar, B 7-Day Reward Trail, C Today Spotlight, D Reward Ledger, E Grand Reward Spotlight และ F Pocket Calendar
-- [x] **Done when (Figma)** — ทุกแบบแสดงรางวัลครบ 7 วันด้วยไอคอนเดิม วันที่ 1–2 ที่รับแล้วมีชั้นสีมิ้นต์โปร่งและตรา CLAIMED ทับการ์ด วันที่ 3 ในตัวอย่างหลักพร้อมรับ และใต้บอร์ดมีตัวอย่างการ์ดวันที่ 3 หลังรับคู่กับปุ่ม CLAIMED TODAY ตรวจแล้วว่าตราเว้นพื้นที่ให้ชื่อและจำนวนรางวัลครบทั้ง 6 แบบ
-- หน้าต่าง Cozy Lake 680x480 ขอบมน 24px: ชิป Streak วันล็อกอินต่อเนื่อง, ชิปเวลานับถอยหลังรีเซ็ตเที่ยงคืน UTC, การ์ดของรางวัล 7 วัน (แถวแรกวันที่ 1-4, แถวล่างวันที่ 5-6 และวันที่ 7 Grand Reward ขนาดใหญ่สีทอง), ปุ่มกดรับ CLAIM DAY N สีเขียวมินต์
+- [บอร์ด Figma Daily Login แบบ Cozy Lake](https://www.figma.com/design/givb0hmQYmmaOy7p7DGtb2/Ro-Offline?node-id=3794-1650) บนหน้า Out Space มี 6 แบบ ได้แก่ A Reward Tray, B Grand Shelf, C Today's Gift, D Streak Path, E Reward Cards และ F Pocket Calendar
+- [x] **Done when (Figma)** — ทั้ง 6 แบบใช้ปุ่มจาก Components ของเกมและไอคอนรางวัลเดิมครบ 7 วัน วันที่ 1–2 มีชั้นครีมโปร่งและตรามิ้นต์ CLAIMED ทับบริเวณรูป วันที่ 3 แสดง READY และวันที่ 4–7 แสดง LOCKED ตัวอย่างหลังรับวันที่ 3 อยู่ใต้บอร์ดคู่กับปุ่ม CLAIMED TODAY ตรวจขอบเขตเลเยอร์และระยะระหว่างข้อความในทุกแบบแล้ว
+- เลือก [B. Grand Shelf](https://www.figma.com/design/givb0hmQYmmaOy7p7DGtb2/Ro-Offline?node-id=3794-1753) และ bake ลง StarterGui แล้ว จอกว้างใช้หน้าต่าง 744x486 วันที่ 1–6 อยู่สองแถวฝั่งซ้ายและวันที่ 7 อยู่ฝั่งขวา มือถือแนวตั้งย้ายวันที่ 7 ลงด้านล่าง การ์ดที่รับแล้วมีชั้นสีโปร่งและเครื่องหมายถูกทับการ์ด
 - ไฟล์: `Config/DailyLogin.luau`, `Shared/DailyLogin.luau`, `Services/DailyLoginService.luau`, `UI/Screens/DailyLogin.luau` (bake แล้ว), `Controllers/DailyLoginController.luau` และ remote `ClaimDailyLogin`. เปิดปฏิทินจากปุ่ม Daily บน HUD หรือไทล์ Daily ใน Main Menu
 - ของรางวัล: วันที่ 1 (1,000 Coins), วันที่ 2 (15 Worms), วันที่ 3 (15 Gems), วันที่ 4 (10 Glow Grubs), วันที่ 5 (500 Pearls), วันที่ 6 (10 Squid Baits), วันที่ 7 (50 Gems)
 - ป้องกันการกดเคลมซ้ำฝั่ง server, บันทึกสถิติ Streak และรีเซ็ตอัตโนมัติหากขาดการล็อกอินเกิน 1 วัน
@@ -972,7 +982,7 @@
 - ทดสอบ:
   - [ ] 1. กด Play ด้วยเซฟทดสอบใหม่ แล้วกด Daily บน HUD: ปุ่มมีจุดแดงและเปิดปฏิทิน 7 วันพร้อมปุ่ม CLAIM DAY 1
   - [ ] 2. กด X แล้วเปิด Main Menu > Daily: ไทล์มีจุดแดงและเปิดปฏิทินเดียวกัน
-  - [ ] 3. กด CLAIM DAY 1: Coins เพิ่ม 1,000 การ์ดวันที่ 1 แสดง CLAIMED และปุ่มเปลี่ยนเป็น CLAIMED TODAY
+  - [ ] 3. กด CLAIM DAY 1: Coins เพิ่ม 1,000 การ์ดวันที่ 1 มีเครื่องหมายถูกทับการ์ดและปุ่มเปลี่ยนเป็น CLAIMED TODAY
   - [ ] 4. ปิดปฏิทินและเปิดใหม่จาก Main Menu > Daily: ปุ่ม Daily บน HUD กับจุดแดงบนไทล์หายไป ปุ่ม CLAIMED TODAY ไม่จ่ายรางวัลซ้ำเมื่อกด
 
 ### B7. 11 Dialogue (NPC) — 2026-11-19
@@ -1186,17 +1196,19 @@
   - [ ] 4. เปิด Inventory, Daily Login, Enhance และ Rod Fusion ครั้งแรกบนมือถือ: หน้าต่างขึ้นพอดีจอทันทีและปุ่มปิดอยู่ในพื้นที่ที่กดได้
   - [ ] 5. เลื่อน Inventory ที่มีอย่างน้อย 100 ชิ้นด้วยเซฟทดสอบ: เลื่อนได้ต่อเนื่องและรายการแสดงครบ
 
-### C33. Bake UI ทั้งหมด + ตรวจ responsive — 2026-11-23  `bake แล้ว รอทดสอบใน Play และ Device Emulator`
+### C33. Bake UI ทั้งหมด + ตรวจ responsive — 2026-11-23  `รอทดสอบ Upgrade Bag และป้ายสถานะตกปลาใน Device Emulator`
 - Bake หน้าจอทั้ง 18 หน้าลง StarterGui ด้วย `node tools/ui/bake.mjs <ชื่อ>` ทีละหน้า (ทั้งชุดเกินขีดจำกัด 200,000 ตัวอักษรของ Studio): AuraReel, CastPopup (ใหม่), Character, Components, DailyLogin, DevPanel, Dialogue, Events, GachaPage, HUD, Inventory, ItemDetail, MainMenu, Menus, Minigame, Modal, StarterPackModal, TideEvent. ไม่มีหน้าไหนถูก Locked.
 - ผลของ bake: หน้าเหล่านี้ตรงกับซอร์สล่าสุดแล้ว เช่น ปุ่มปิดและ overlay ของ Daily Login/Bag Upgrade, ขอบ popup Depth, ItemDetail (ไม่มี 3 socket ล็อก). ต้อง Save place (Ctrl+S) เพื่อเก็บ.
 - ข้อจำกัด: ผมดู Daily Login ใน Edit viewport ได้เฉพาะเลย์เอาต์ที่ bake (ขนาดเต็ม 680x480). การปรับตามจอ (3 โหมด) และ FitToScreen ทำงานตอนรันเท่านั้น จึงต้องตรวจใน Play หรือ Device Emulator.
-- Done when: หน้าจอที่ bake เปิดได้ใน Play และเมนูหลักอ่านได้พร้อมปุ่มปิดที่กดได้ใน Device Emulator ทั้งสองแนว
+- Done when: หน้าจอที่ bake เปิดได้ใน Play เมนูหลักอ่านได้พร้อมปุ่มปิดที่กดได้ใน Device Emulator ทั้งสองแนว และป้ายสถานะตกปลามีช่องว่างระหว่างข้อความกับขอบบนมือถือ
 - ทดสอบ (คุณ):
   - [ ] 1. กด Ctrl+S ใน Studio แล้วกด Play: HUD, Inventory, Shop, Character, Daily Login, Dialogue เปิดได้ ไม่มี error ใน Output (ดู `[UI] ... is not baked` ต้องไม่เหลือ)
   - [ ] 2. Device Emulator 844x390 (มือถือแนวนอน): เปิดทีละหน้า Inventory, Character, Shop, Store, Daily Login, Quests, Fishdex, Mastery, Enhance, Rod Fusion: หน้าต่างพอดีจอ ปุ่มปิดกดได้ ไม่ตกขอบ ไม่เด้งใหญ่เกินจอก่อนหด
   - [ ] 3. Device Emulator 390x844 (มือถือแนวตั้ง): เปิดหน้าเดิมซ้ำ: Daily Login เป็น 3+3 การ์ด, หน้าอื่นยังอ่านได้ (ไม่เล็กจนอ่านไม่ออก) ถ้าหน้าไหนเล็กเกินไปจดชื่อหน้าส่งมา
   - [ ] 4. จอคอม 1280x720: ทุกหน้าเหมือนเดิม ไม่มีอะไรเปลี่ยนขนาด
-  - [ ] 5. หากพบหน้าที่มีปัญหา ให้สร้าง Ticket ในเว็บ QA: ระบุหน้าที่เปิด ขนาดจอ และอาการที่เห็นให้ทีมทำซ้ำได้
+  - [ ] 5. กลับไปมือถือแนวนอน 844×390 แล้วเปิด Inventory → UPGRADE ข้างความจุ: เห็นขอบล่างของ Upgrade Bag และปุ่มทั้งสองครบ จากนั้นกด Cancel
+  - [ ] 6. ยืนริมน้ำ แตะ AUTO แล้วดูป้าย `Auto fishing...` กลางจอด้านล่าง: เห็นข้อความครบและมีช่องว่างทุกด้าน ปิด AUTO แล้วเหวี่ยงเบ็ดด้วย CAST เพื่อดูว่าป้าย `Waiting...` มีช่องว่างเช่นกัน
+  - [ ] 7. หากพบหน้าที่มีปัญหา ให้สร้าง Ticket ในเว็บ QA: ระบุหน้าที่เปิด ขนาดจอ และอาการที่เห็นให้ทีมทำซ้ำได้
 - วัดจริงใน Studio Play ที่จอ 749x323 (เทียบมือถือแนวนอน): เดิม Store/Aquarium/Mastery/Quests ถูกย่อเหลือ 0.45 อ่านไม่ออก. แก้แล้ว: `Window.Shell` บนจอเตี้ย (สูงใช้งานน้อยกว่า 520) ให้หน้าต่างสูงเท่าจอ หัวข้อและปุ่มปิดอยู่กับที่ เนื้อหาเลื่อนได้ ผลคือ scale ประมาณ 0.78 (เห็นภาพจริงแล้ว: Store อ่านง่าย), Quests ลดความสูงเป็น 500 (scale 0.55), Daily Login แก้การ์ดล้นแถวที่ 2 และป้ายทับข้อความ. ตรวจด้วยภาพแล้วผ่าน: Inventory (มี Highlights, TOP, UP), Store, Quests, Shop, Daily Login. ยังไม่ได้ดูภาพ: Character, Events, Fishdex, Auras, Skills, Mastery, Aquarium, Hub, Gacha, มินิเกม.
 - ตัวช่วยทดสอบ (เฉพาะใน Studio): `ReplicatedStorage.UITest` (BindableFunction) เรียก `:Invoke("Inventory")` เพื่อเปิดเมนูให้สคริปต์ทดสอบวัดขนาด (ชื่อที่รองรับ: Inventory, Character, Shop, Fishdex, Auras, Store, Aquarium, Mastery, Quests, Events, DailyLogin, Skills, Hub, Altar).
 
@@ -1210,6 +1222,8 @@
 - Inventory: เอาแถบ Highlights, ป้าย UP/TOP และขอบเรืองความหายากออก (`SHELF_ENABLED = false`). ป้าย NEW ยังอยู่.
 - ของ starter (Driftwood Rod, Cotton Line): ขายได้แต่ได้ 0 โคอิน, ถือได้ทีละชิ้น (ปุ่มซื้อเป็น Owned).
 - Line Modifier (`docs/LINE_MODIFIER_SYSTEM_SPEC.md`): Line สุ่ม Prefix/Suffix เหมือน Rod (Uncommon ขึ้นไป), ชิปบนการ์ด, ข้อความขายบอก line/rod, dev `give Lines <id> [profile]`. ราคาขายใช้สูตรเดิมของเกม (40%).
+- Store Passes เป็นรายการ (Figma C6b node `3796:2876`): แถวสูง 88 (รูป ชื่อ สรรพคุณบรรทัดเดียว ปุ่มราคา/OWNED/COMING SOON ชิดขวา).
+- แก้บั๊กหน้าดำค้างหลังเปิดแล้วปิด Gacha ทันที: `GachaPageController.ensure` สร้างหน้าซ้ำ 2 ชุด (Init กับ Open เรียกพร้อมกัน) และ `MenuManager` เช็กพื้นดำตามสถานะจริงทุก 0.15 วินาที.
 - ทดสอบ (คุณ):
   - [ ] 1. Daily: ยังไม่รับ: HUD มีปุ่ม Daily จุดแดง และ Main Menu มี tile Daily จุดแดง. กดรับแล้ว ปุ่มบน HUD หาย จุดใน Main Menu หาย.
   - [ ] 2. จอมือถือแนวนอน: เปิด Store ทุกแท็บ ไม่มีแถบเลื่อน มีปุ่ม < > เปลี่ยนหน้าได้.
@@ -1219,6 +1233,49 @@
   - [ ] 6. Gacha: ปุ่ม X แดงมุมขวาบน กดแล้วกลับ ชิป Gems ไม่ชนปุ่ม.
   - [ ] 7. ขาย Driftwood Rod ที่ไม่ได้สวม: ได้ 0 โคอิน ของหาย ในร้านปุ่มเป็น Owned ตอนมีอยู่.
   - [ ] 8. `give Lines HempLine Shop` แล้วดูการ์ด: มีชิป Prefix/Suffix. สวมแล้วสเตตัสเพิ่ม. ขายแล้วได้เงินตามโบนัส mod.
+
+### C36. ภาพต้นทาง Aura VFX ชุดแรก
+
+- **สถานะ** ตรวจภาพต้นทางครบ 15 ชีต
+- **Done when** Tidal Bloom, Moonlit Ripple และ Nebula Koi มี PNG ขาวบนดำ 5 ชีตตามชื่อในพรอมป์ของแต่ละโฟลเดอร์
+- ทดสอบ:
+  - [ ] 1. เปิดไฟล์ `01` ถึง `05` ในแต่ละโฟลเดอร์ใต้ `assets/vfx/aura` แล้วเทียบชื่อกับพรอมป์ประจำออร่า
+  - [ ] 2. เปิด `01`, `02` และ `04` ตรวจว่ามี 16 เฟรมเรียงเป็น 4x4 และเปิด `05` ตรวจว่ามีรูปทรงครบ 4 ช่อง
+  - [ ] 3. วางภาพ `03` ต่อกันแนวนอนสองครั้งเพื่อตรวจว่าปลายแถบวนเข้าหากัน
+
+### C37. พรีวิว Aura VFX รอบตัวละคร
+
+- **สถานะ** เปิดไฟล์ HTML โดยตรงและทดสอบ Tier 1–3 ใน Chrome แล้ว
+- **Done when** Tidal Bloom, Moonlit Ripple และ Nebula Koi ใช้ภาพจากโฟลเดอร์ของตนเพื่อแสดงระลอกน้ำบนพื้น แกนหมอกหนึ่งอันลอยจากกลางเท้าและอนุภาครอบหุ่น และแถบออร่าครบวงรอบเอวที่ Tier 3
+- ทดสอบ:
+  - [ ] 1. เปิด `preview.html` ในแต่ละโฟลเดอร์ใต้ `assets/vfx/aura` แล้วสลับ Tier 1, 2 และ 3 ดูว่าแกนหมอกจาก `01_core` เต้นเป็นจังหวะและขึ้นตรงกลางหุ่นหนึ่งอันในทุก Tier
+  - [ ] 2. ที่ Tier 3 หมุนมุมกล้องให้เห็นแถบโคจรผ่านหน้าและหลังหุ่น โดย Nebula Koi เห็นปลาคาร์ปเคลื่อนไปตามสายน้ำ
+  - [ ] 3. ลากหรือกดปุ่มลูกศรเพื่อเปลี่ยนมุมมอง จากนั้นกดพักภาพและเล่นต่อ
+
+### C38. ทิศทางภาพและพรีวิว Aura VFX ก่อนเจนชีต
+
+- **สถานะ** ปรับพรอมป์ 75 ชีตและพรีวิวทั้ง 15 ออร่า
+- **Done when** แกน 01 นิ่งด้านขนาดและเฟดในลูป ระลอก 02 กับอนุภาค 05 แผ่จากกลางเท้า และ Tier 3 มีริ้วตามโคจรเพิ่มจากสายหลัก
+- ทดสอบ:
+  - [ ] 1. เปิด [พรีวิวรวม](../assets/vfx/aura/preview.html) และสลับจาก Sparkling Dew ไป Nebula Koi และ Celestial Leviathan เทียบขนาดระลอกและจำนวนริ้วใน Tier 3
+  - [ ] 2. เล่น Tidal Bloom, Moonlit Ripple และ Nebula Koi จนครบรอบ ดูแกน 01 เฟดและระลอกน้ำแผ่จนถึงขอบวง
+  - [ ] 3. เปิดลิงก์พรอมป์ของออร่าที่เลือก ตรวจบทบาทและชื่อไฟล์ของชีต 01–05 ตามทิศทางภาพก่อนเจน
+
+### C39. Aura Particle Editor
+
+- **สถานะ** ใช้งานผ่าน Windows launcher และพรีวิวใน Chrome
+- **Done when** เปิดและเซฟ JSON ได้ แก้หรือทำสำเนาเลเยอร์ เปลี่ยนชีตจากแท็บ Sheet ปรับ Flipbook ส่งออกเฟรม กลับทิศลากกล้องแนวตั้ง เห็นการแก้ไฟล์ที่เปิดอยู่จากภายนอก และนำเลเยอร์พร้อม Asset ID เข้า Studio
+- ทดสอบ:
+  - [ ] 1. เปิด `build/aura-particle-editor/AuraParticleEditor.exe` แล้วเลือก Tidal Bloom ใน Examples
+  - [ ] 2. เลือก Fixed core plume กด Duplicate ปรับ Speed แล้วใช้ Save As บันทึกเป็นไฟล์ทดสอบ เปิดไฟล์นั้นแล้วตรวจว่าค่าที่แก้ยังอยู่
+  - [ ] 3. เปิด Sheet เลือกเฟรมและกด Export frame PNG ตรวจว่าภาพที่ส่งออกตรงกับช่องที่เลือก
+  - [ ] 4. รันคำสั่ง project add ตามคู่มือกับ JSON ทดสอบที่เปิดอยู่ ตรวจว่าเลเยอร์ใหม่ปรากฏในแอป
+  - [ ] 5. เลือก Core ที่ทำสำเนา เปิด Sheet แล้วกด Change sheet เลือก PNG ใหม่ ตรวจที่ Frame preview และดูว่า Rows, Columns และ FPS ตรงกับค่าก่อนเปลี่ยน
+  - [ ] 6. ลากบนฉากพรีวิวขึ้นและลง ตรวจว่ามุมกล้องหมุนสวนทิศกับบิลด์ก่อนหน้า จากนั้นกด Reset view
+  - [ ] 7. เปิด Local Plugin Aura Importer ในเพลสที่เชื่อม Rojo เลือก project.json ของ Tidal Bloom แล้วดูว่ารายการภาพกับ Aura ID ถูกต้อง
+  - [ ] 8. เลือก PNG ที่อ้างในรายการ เลือกเจ้าของภาพ แล้วกด Upload PNGs ดูสถานะ Linked และตรวจด้วยการเลือกไฟล์เดิมซ้ำ
+  - [ ] 9. กด Import aura ตรวจโมเดลใน ReplicatedStorage.AuraVFX แล้วสวมออร่าใน Play ดู Core, Flipbook รอบพื้น และ Ribbon
+  - [ ] 10. กลับโหมด Edit แล้วนำเข้า Aura ID เดิม ตรวจว่าอัปเดตโมเดลใบเดิมและ Undo ได้
 
 ## เว็บ QA (`qa/`)
 
@@ -1239,6 +1296,19 @@
 - [x] ทดสอบโหมดในเครื่อง (ไม่มี config): ตาราง 69 งาน, เปิดงานเห็นขั้นตอน, ผ่าน/ไม่ผ่าน, สร้าง/ปิด Ticket, หน้าระบบเกมและประวัติ
 
 ## บันทึกการอัปเดต
+- 2026-11-23T14:51:33+07:00 — C39 เพิ่ม Local Plugin Aura Particle Importer รับ project.json จับคู่ PNG แปลง Luma เป็น Alpha อัปโหลดและจำ ID ตามเจ้าของภาพ วางโมเดลใน ReplicatedStorage.AuraVFX แล้วเล่น Sprite, Emitter และ Ribbon จากค่าที่นำเข้า
+- 2026-11-23T14:26:01+07:00 — C39 เพิ่มขั้นตอนนำงานจาก Particle Editor ไป Roblox Studio ในคู่มือ ตั้งแต่ PNG โปร่งใสและ Asset ID จนถึงตำแหน่ง Model ใน ReplicatedStorage.AuraVFX ตามการโหลดของ AuraService
+- 2026-11-23T13:43:29+07:00 — C39 เพิ่ม Aura Particle Editor แบบ Node.js และ TypeScript พร้อมตัวเปิด Windows, JSON Schema, CLI และโหลดการแก้ไฟล์จากภายนอก แปลง Tidal Bloom, Moonlit Ripple และ Nebula Koi เป็น project.json ทดสอบ Duplicate ปรับความเร็ว เซฟ และส่งออกเฟรมใน Chrome แล้ว
+- 2026-11-23T13:12:26+07:00 — C37 รวมหน้า HTML ของ Tidal Bloom, Moonlit Ripple และ Nebula Koi ไว้ที่ preview.html ออร่าละไฟล์ ทดสอบเปิดตรงและสลับ Tier ใน Chrome แล้ว
+- 2026-11-23T06:03:51+07:00 — C38 อ้างอิง Dark Arcane เพื่อปรับจังหวะแกนเฟด ระลอกแผ่ออก และริ้วโคจรซ้อน ทั้ง 15 ออร่ามีพรีวิวและพรอมป์ 5 ชีต ออร่าที่ยังรอภาพใช้เท็กซ์เจอร์น้ำเดิมสำหรับลองจังหวะ
+- 2026-11-23T05:48:52+07:00 — C37 ปรับ 01 core ของพรีวิวทั้งสามออร่าเป็นแกนเดียวปะทุจากกลางเท้า ให้ 05 เป็นอนุภาคลอยรอบหุ่น
+- 2026-11-23T05:38:59+07:00 — C37 แก้พรีวิว Tidal Bloom, Moonlit Ripple และ Nebula Koi ให้ระลอกน้ำอยู่ระดับเท้าและใช้ Orbital Strip เต็มแถบรอบเอวหุ่นที่ Tier 3 ทดสอบเปิดไฟล์โดยตรง สลับ Tier หมุน และพักภาพใน Chrome แล้ว
+- 2026-11-23T05:08:16+07:00 — C36 เจนภาพต้นทาง Tidal Bloom, Moonlit Ripple และ Nebula Koi ทีละชีต ครบ 15 ชีต เซฟในโฟลเดอร์ประจำออร่าและตรวจกริดกับขอบแถบวนแล้ว
+- 2026-11-23T04:18:15+07:00 — ทำ [พรีวิว Dark Arcane Aura](../assets/vfx/aura/sample/dark-arcane-preview.html) จากภาพต้นฉบับในโฟลเดอร์ sample เปิด HTML ในเบราว์เซอร์แล้วลองสลับ Tier 1–3 ลากหมุนมุมกล้อง และกดพักภาพหรือเล่นต่อ
+- 2026-11-23T03:47:02+07:00 — C23 นำ [B. Grand Shelf](https://www.figma.com/design/givb0hmQYmmaOy7p7DGtb2/Ro-Offline?node-id=3794-1753) ลง Daily Login และ bake ใน Studio แล้ว ตรวจเลย์เอาต์ในสำเนา Edit ด้วยขนาดเดสก์ท็อป มือถือแนวตั้งและแนวนอน Type check ผ่าน รอทดสอบการรับจริงใน Play
+- 2026-11-23T02:40:00+07:00 — C34 Store Passes เป็นรายการ (Figma C6b) และแก้พื้นดำค้างหลังเปิดแล้วปิด Gacha (สร้างหน้าซ้ำ 2 ชุด + MenuManager เช็กสถานะจริง). ตรวจใน Play แล้ว
+- 2026-11-23T02:33:25+07:00 — C23 ออกแบบ Daily Login ใหม่ 6 แบบตามธีม Cozy Lake ใน [บอร์ด Figma](https://www.figma.com/design/givb0hmQYmmaOy7p7DGtb2/Ro-Offline?node-id=3794-1650) ใช้ปุ่มและไอคอนจากเกม ตรา CLAIMED ทับบริเวณรูป และมีตัวอย่างปุ่ม CLAIMED TODAY รอเลือกแบบ
+- 2026-11-23T02:33:18+07:00 — A9/C33 ปรับ Upgrade Bag ให้ย่อตามพื้นที่ปลอดภัยของจอ และเพิ่มระยะขอบป้ายสถานะตกปลาบน HUD พร้อมขั้นตอนตรวจซ้ำใน Device Emulator
 - 2026-11-23T02:24:51+07:00 — ปรับขั้นตอน QA ของ C23, C29, C30, C32 และ C33 ให้ตรงกับเกมปัจจุบัน พร้อมแยก Stats Codex เป็น C35 เพื่อให้ทดสอบได้ด้วยชุดขั้นตอนของตัวเอง
 - 2026-11-23T02:18:08+07:00 — C23 เพิ่มชั้นสีมิ้นต์โปร่งและตราประทับ CLAIMED บนรางวัลที่รับแล้วทั้ง 6 แบบใน Figma (3792:1019) พร้อมตัวอย่างวันที่ 3 หลังรับ
 - 2026-11-23T02:20:00+07:00 — C34 Line Modifier: เส้นเอ็น Uncommon ขึ้นไปสุ่ม Prefix/Suffix เหมือน Rod, การ์ดแสดงชิป, ข้อความขายบอก line/rod, dev give Lines. ตรวจ check.mjs ผ่าน ยังไม่ทดสอบใน Play
@@ -1496,3 +1566,10 @@
 - 2026-11-22 01:30 — เพิ่มกฎป้องกันการกักตุนไอเทมเควส (Anti-Stockpiling & Bound on Use): ไอเทมที่ติดแท็ก [Rebirth Protected] จะกลายเป็น Bound ทันทีห้ามเทรด; เหยื่อที่ถูกกดใช้งานแม้ 1 ครั้งจะติด Bound ทันที; ป้องกันไม่ให้พ่อค้าหรือคนรับจ้างเควสดอง Super Rare ข้ามรอบ Rebirth (หาแล้วต้องรีบขาย ไม่งั้นจะหายเมื่อ Rebirth หรือถ้าล็อกไว้ก็จะขายไม่ได้)
 - 2026-11-22 22:20 — C30 เตรียมงานระบบ Modifier (Prefix / Suffix) ในเอกสาร .md ส่งต่อ Coding Agent: เขียนสเปกละเอียดใน `docs/MODIFIER_SYSTEM_SPEC.md` และคู่มือส่งต่องานใน `docs/HANDOFF_MODIFIERS.md` (เฉพาะไฟล์ .md ไม่แก้ไขสคริปต์ใน src); วางโครงสร้าง Catalog ออฟชั่นแยก 6 Rarity, ระบบสุ่ม 1-2 ช่องตาม Drop Profile, สุ่มค่าตัวเลข -N~+N, และระบบพิเศษ Stat Max Cap Breaker ขยายเพดานสเตตัสสูงสุด (CatchBarSize, Resilience, AutoSpeed, FishStability, BiteSpeed) สเกลตั้งแต่ Rare ถึง Mythic พร้อม Absolute Safety Ceiling คุมสมดุลเกม — `node tools/check.mjs` ผ่าน 100% ไร้ error และไร้อักขระต้องห้าม
 - 2026-11-23 02:00 — ออกแบบระบบ Line Modifier (Prefix / Suffix สำหรับเส้นเอ็นเบ็ด): จัดทำเอกสาร `docs/LINE_MODIFIER_SYSTEM_SPEC.md` เพื่อสร้างวงจรเศรษฐกิจการซื้อ-ขายเอ็นเบ็ด (Buy/Sell Loop) ใช้ฐานข้อมูล ModifierDefs เดียวกันกับ Rod 100% (แชร์ Prefixes, Suffixes, Cap Breakers, Drop Profiles) รองรับการสุ่มออฟชั่นตอนซื้อใน Shop และเปิดกล่องสมบัติ, คิดโบนัสราคาขายคืนตาม ModSellBonus, รวมสเตตัส Rod + Line ใน Stats.Compute อัตโนมัติ, วางแผนงาน 4 ขั้นตอนสำหรับ Coding Agent — `node tools/check.mjs` ผ่าน 100%
+- 2026-11-23 03:22 — แก้ไข Full-card Claimed Overlay และจัดระเบียบ Figma Section `3794:1650` ใหม่ทั้งหมด:
+  1) เปลี่ยน Overlay สถานะ Claimed ให้ครอบคลุม **เต็มพื้นที่ทั้งการ์ด (Full Card)** ทุกตัวเลือก (Option A, B, C, D, E, F และ After Claiming Day 3) คลุมทั้งหัววัน รูปไอคอนเวล และตัวเลขรางวัล พร้อม Vector SVG Green Checkmark Badge (`#70DE43`) กึ่งกลางการ์ด นำ overlay เดิมในช่องไอคอนออกทั้งหมด
+  2) ปลดล็อค auto-layout ที่กรอบบอร์ดหลัก `3794:1650` (ขนาด 1800 x 2340) และจัดระเบียบตำแหน่ง 2 คอลัมน์ 4 แถวใหม่ทั้งหมด: เว้นช่องไฟระหว่างแถว 64px และช่องไฟระหว่างคอลัมน์ 104px (Col 1 x: 3718, Col 2 x: 4558) จัดการ์ด After Claiming และข้อความหัวบอร์ดให้ตรงแนว ไร้การทับซ้อน 100% — `node tools/check.mjs` ผ่านฉลุย
+- 2026-11-23 — Daily Login แบบ B "Grand Shelf" (`3794:1753`) เปลี่ยนการ์ดวันทั้ง 7 เป็นสไตล์ปฏิทินแบบ F (แถบหัว + หมุดสมุด + ตัวการ์ดสีครีม, วันที่รับแล้ว = ทับสีเข้ม + เครื่องหมายถูก) แต่ใช้สีธีมเกม: หัวปกติ Sky Lip #6BB3DE, วันนี้ coral, Day 7 ทอง, เครื่องหมายถูกสี mint — แทนเฉพาะการ์ด 7 ใบ ไม่แตะส่วนอื่น; สคริปต์ `docs/figma/daily_login_b_calendar.py`, ภาพ `docs/figma/daily_login_b_calendar.png`; ยังไม่แตะโค้ดเกม
+- 2026-11-23 — จัดเตรียมโฟลเดอร์และสเปก Markdown สำหรับ Aura VFX ทั้ง 15 ออร่าในเกม (`assets/vfx/aura/*`): เขียนเอกสารกำกับสเปกครบทั้ง 15 ออร่า (SparklingDew, TidalBloom, KelpWhisper, CoralHeart, NeonWave, MoonlitRipple, StormCurrent, SolarFlare, FrostPearl, NebulaKoi, AbyssalShadow, LotusNaga, SerpentOfTheVoid, DragonEmperor, CelestialLeviathan) โดยแต่ละโฟลเดอร์ประกอบด้วย README.md, prompt_layer_*_vfx.md (Prompt สำหรับ AI Image Gen แยก 5 เลเยอร์), และ pipeline_spec_*_vfx.md (พารามิเตอร์ Particle ใน Roblox Studio); คุมโทนออร่าให้อยู่ในธีม Cozy Fantasy Fishing ไม่เวอร์วังเกินเกม พร้อมคู่มือ AURA_VFX_PIPELINE_GUIDE.md และแคตตาล็อกหลัก เพื่อส่งต่อให้ AI Agent สร้างภาพต่อ — ตรวจสอบไม่มีอักขระต้องห้าม และ Luau Type Check สะอาด 100%
+- 2026-11-23 — ปรับปรุงสเปกและพรีวิว HTML ของ 3 ออร่า (`TidalBloom`, `MoonlitRipple`, `NebulaKoi`): เขียนระบุรายละเอียดหน้าที่ของทุกไฟล์ Texture ใน `pipeline_spec_*_vfx.md` อย่างเจาะจง (แยกย่อยทั้ง 4 ช่องใน Static Atlas 2x2, ระบุเลเยอร์ควัน/คลื่น/ริบบิ้น/แฟลร์, และตาราง Render Order 0-7 ครบทุกชิ้น); ยกเครื่องโค้ดพรีวิว HTML5 Canvas ให้แสดงพฤติกรรมเฉพาะตัวของแต่ละออร่าจริง (กลีบดอกไม้แกว่งตัวแบบ Sinusoidal Sway, ฟองคลื่นแตก, หยดน้ำสะท้อนแสงจันทร์, วิญญาณปลาคาร์ปว่ายวนในวงโคจร, และตัดเอฟเฟกต์ Ink มืดแบบ Dark Arcane ออกทั้งหมด) — ผ่าน impeccable detect 0 findings และ check.mjs สะอาด 100%
+- 2026-11-23 — จัดระเบียบ Assets ใน Roblox Studio: สร้างโฟลเดอร์ `ReplicatedStorage.Assets` ใน DataModel แยกหมวดหมู่เป็นระเบียบครบทั้ง 208 รายการ (Icons 63, Items 36, Auras 25, Fish 37, UI 38, NPC 9) โดยแต่ละชิ้นเป็น Decal พร้อมพรีวิวรูปภาพ Texture ในหน้าต่าง Properties และมี Attributes ระบุ AssetId, Category, SubCategory ชัดเจน; สร้างสคริปต์ `tools/art/build_assets_tree.py` และ `tools/art/setup_assets_tree.luau` รันผ่าน StudioBridge อัปเดตโครงสร้างอัตโนมัติ — ผ่าน check.mjs สะอาด 100% ไร้ error และไร้อักขระต้องห้าม
