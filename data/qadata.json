@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23T10:36:44.622Z",
+ "generated": "2026-11-23T19:09:57.815Z",
  "stage": {
   "name": "ต้นแบบ Vertical Slice",
   "summary": "ระบบหลักสมบูรณ์ (วงจรตกปลา, Item Rework v6, Mod เบ็ดและสาย, Rod Fusion, Menu Manager, Daily Login B และ Stats Codex) อยู่ในรอบทดสอบ QA และ Mobile Responsive"
@@ -999,12 +999,12 @@
   {
    "id": "C8",
    "group": "C",
-   "title": "เสียง (SFX) ตามจุดที่ระบุใน storyboard gacha/มินิเกม",
+   "title": "เสียง (SFX) และระบบเสียงในเกม",
    "titleEn": "Minigame and gacha sound effects",
-   "status": "planned",
-   "note": "ยังไม่เริ่ม",
+   "status": "testing",
+   "note": "โค้ดเสร็จ + อัปโหลดเสียงแล้ว (25/25 ไฟล์) พร้อม Hook ตกปลา มินิเกม Gacha และ UI รอทดสอบใน Studio",
    "steps": [],
-   "rev": "19a1047e"
+   "rev": "281da6a3"
   },
   {
    "id": "C9",
@@ -1464,9 +1464,102 @@
     "กลับโหมด Edit แล้วนำเข้า Aura ID เดิม ตรวจว่าอัปเดตโมเดลใบเดิมและ Undo ได้"
    ],
    "rev": "cb6f8c8d"
+  },
+  {
+   "id": "C40",
+   "group": "C",
+   "title": "Patch Note Card แบบโพยกระดาษโทนอุ่น",
+   "titleEn": "",
+   "status": "done",
+   "note": "ทดสอบพรีวิวและ PNG ใน Chrome",
+   "steps": [
+    "เปิด tools/patch-note-card/index.html แล้วดูหัวเรื่องบนหน้ากระดาษ โพยติดเทปใส และวงกลมโปร่งหน้ารายการ",
+    "กดแก้ไขเนื้อหา เลือกสีจากชุดสี Tag ของ C29 / SAVE V6 แล้วตรวจว่าเปลี่ยนเฉพาะหมวดนั้น",
+    "ลองสุ่มใน Portrait, Banner และ Square ดูว่าสติกเกอร์เปลี่ยนขนาดและตำแหน่งโดยไม่บังข้อความ แล้วใส่ Seed เดิมเพื่อเรียกแบบเดิม",
+    "กดบันทึก PNG (2x) แล้วกดคัดลอกรูปเพื่อนำไปวางในแอปที่รับภาพ ตรวจว่าสี Tag และสติกเกอร์ตรงกับพรีวิว"
+   ],
+   "rev": "f96ccbcb"
+  },
+  {
+   "id": "C41",
+   "group": "C",
+   "title": "Trade ระหว่างผู้เล่นและไอเทม Bound",
+   "titleEn": "",
+   "status": "testing",
+   "note": "ตั้ง PassId แล้ว รอทดสอบ Play สองผู้เล่น",
+   "steps": [
+    "รัน luau tools/test-trade.luau จำลองเซฟสำเร็จฝั่งเดียว ACK หาย การเข้าใหม่ และการหลุดระหว่างเซฟ ตรวจ UUID จำนวนเหยื่อ และภาษี",
+    "ตรวจใน Studio Edit ว่าเลือกของ Bound ไม่ได้ ใบอนุญาต ภาษี และความจุกระเป๋าถูกตรวจ และ Main Menu มีปุ่ม Trade จากนั้นเรียก TradeAction และ DataService กับ DataStore จำลอง ให้ผู้รับเซฟไม่สำเร็จแล้วเข้าใหม่สองครั้ง ตรวจว่าของและภาษีถูกบันทึกครั้งเดียว",
+    "ในสำเนาเกมทดสอบ เปิด Studio แบบ Server & Clients จำนวน 2 คน ให้คนแรกใช้ grant pass TradeLicense จาก Dev Panel และให้ทั้งสองคนมีปลาและ Coins สำหรับทดสอบ",
+    "คนแรกเปิด Main Menu > Trade > INVITE คนที่สองกด ACCEPT ใส่ของรวมกัน 4 ชิ้น ลองใส่ชิ้นที่ 5 ยืนยันหนึ่งฝั่งแล้วเปลี่ยนข้อเสนอ ตรวจว่าทั้งคู่ต้องยืนยันใหม่",
+    "ยืนยันทั้งสองฝั่ง ตรวจ UUID / Mod / Mutation และ Coins จากทั้งคู่ แล้วออกเข้าใหม่ ตรวจว่าของอยู่กับผู้รับและภาษีถูกหักครั้งเดียว",
+    "ซื้อ Worm หรือ Shrimp ตอนยังไม่ได้สวม ตรวจว่าเพิ่มเข้า Trade ได้ จากนั้นสวมแล้วถอด ตรวจว่ากองเดิมขึ้น Bound และเสนอไม่ได้ ลองซ้ำกับเหยื่อ Daily Login และคันเบ็ดของ Starter Pack",
+    "ตรวจใน Studio Edit ว่าการ์ด Trade License อยู่หน้าท้ายของ Store > Passes ทั้งเดสก์ท็อปและจอสั้น แสดงราคาจาก Marketplace จำลอง ส่งคีย์ซื้อถูกต้อง และแสดง OWNED เมื่อมีพาส"
+   ],
+   "rev": "0201c034"
   }
  ],
  "history": [
+  {
+   "at": "2026-11-24T02:15:00+07:00",
+   "text": "C8 ระบบเสียงและ SFX: ออกแบบและเชื่อมต่อระบบเสียงครบวงจร (1) จัดทำคู่มือ Prompt สำหรับ ElevenLabs SFX ใน docs/ELEVENLABS_SFX_PROMPTS.md พร้อมสคริปต์อัปโหลด tools/audio/upload_sfx.py รองรับทั้ง .wav/.mp3 อัปโหลดผ่าน Open Cloud อัตโนมัติ (2) ปรับแต่งเสียง Gacha เป็น Altar Charge & Eclipse Reveal ตามระบบใหม่ (3) เชื่อมต่อเสียงง้างคันเบ็ดวนลูป cast_charge และเสียงจังหวะ Perfect (cast_perfect) สำหรับการเหวี่ยงเบ็ดและมินิเกม (4) ผูกเสียง UI ตอนเปิดการ์ดผลลัพธ์ปลา (ui_open + catch/catch_rare) และตอนสลับแท็บ Category ใน Inventory (ui_click) (5) ผูกเสียง coin ให้เล่นครอบคลุมทั้งตอนเสียตังซื้อของ/อัปเกรด/ตีบวก และตอนขายปลา ตรวจสอบผ่าน tools/check.mjs เรียบร้อย"
+  },
+  {
+   "at": "2026-11-24",
+   "text": "เพิ่มหน้าโหลดก่อนเข้าเกม (src/first/Loading.client.luau, ReplicatedFirst): หลอด progress + ข้อความขั้นตอน (images, sounds, music, save) ดีไซน์ชั่วคราว ออกแบบใน Figma ทีหลัง ทดสอบ: restart scripts\\serve.bat แล้วกด Play ต้องเห็นหน้าโหลดจนหลอดเต็มแล้วเฟดหาย ผ่าน tools/check.mjs ยังไม่ได้ทดสอบใน Studio"
+  },
+  {
+   "at": "2026-11-23T23:32:00+07:00",
+   "text": "ออกแบบทำนอง BGM เพลงที่ 7 Boardwalk Cafe Lofi สไตล์เดินเข้าคาเฟ่ตกปลาสายๆ ชิลล์ๆ ไม่ต้องคิดอะไร บันทึกใน docs/bgm/07_boardwalk_cafe_lofi.md, BGM_MASTER_PROMPTS.md และเพิ่มคีย์ bgm_cafe ใน Config/Sounds.luau ผ่าน tools/check.mjs เรียบร้อย"
+  },
+  {
+   "at": "2026-11-23T23:22:00+07:00",
+   "text": "ออกแบบทำนอง BGM เพิ่มอีก 2 เพลงตามสไตล์ Rivers in the Desert (Persona 5) และ Back to the Drawing Board (FFXIV Arcadion M2) บันทึกใน docs/bgm/05_abyssal_desperado.md, 06_honey_buzz_fever.md, BGM_MASTER_PROMPTS.md และเพิ่มคีย์ bgm_boss_abyss, bgm_frenzy_fever ใน Config/Sounds.luau ผ่าน type check และ tools/check.mjs เรียบร้อย"
+  },
+  {
+   "at": "2026-11-23T23:15:00+07:00",
+   "text": "ออกแบบทำนอง BGM 4 เพลง (Cozy/Lofi 2 เพลง, ตื่นเต้น/สนุก 2 เพลง) พร้อมเขียน Master Prompt และเอกสารแยกรายเพลงใน docs/bgm/ และ docs/BGM_MASTER_PROMPTS.md และเพิ่มคีย์ bgm_aquarium, bgm_tide, bgm_battle ใน Config/Sounds.luau ผ่าน type check และ tools/check.mjs เรียบร้อย"
+  },
+  {
+   "at": "2026-11-23T21:58:01+07:00",
+   "text": "C41 ขยาย Your inventory ใน Figma เป็น 4 คอลัมน์ × 3 แถว ลดความกว้าง Offer และจัดสองช่องต่อฝั่ง ถอดป้าย Total และตรวจครบ 6 เฟรม"
+  },
+  {
+   "at": "2026-11-23T21:49:47+07:00",
+   "text": "C41 ปรับ Figma Trade เป็นกริดและ Item Card เดิม เพิ่มช่องว่าง Bubbles ใช้สีทรายอ่อนใน Offer และทำตัวอย่างมุมมองตอนเลื่อน Inventory ตรวจครบ 6 เฟรมและบันทึกข้อกำหนด VirtualGrid สำหรับ Roblox"
+  },
+  {
+   "at": "2026-11-23T21:27:30+07:00",
+   "text": "C41 ปรับไอคอนปุ่ม Trade ใน MainMenuScreen ให้ใช้ ui/icons/trade_license และตั้งค่าอัปเดตอัตโนมัติใน EnsureTradeTile พร้อม Bake ลง StarterGui.MainMenu ใน Studio เรียบร้อย"
+  },
+  {
+   "at": "2026-11-23T21:18:40+07:00",
+   "text": "C41 ไดคัตไอคอน Trade License จากภาพ cell 3 ทำพื้นหลังโปร่งใส 512x512 บันทึกเข้า assets/art/ui/icons/trade_license.png ลงทะเบียนใน catalog.json ผูกเข้ากับการ์ด Trade License ใน StoreScreen และตั้งค่าเตรียมอัปโหลด Roblox Open Cloud"
+  },
+  {
+   "at": "2026-11-23T21:09:29+07:00",
+   "text": "C41 ทำบอร์ด Trade 4 แบบใน Figma Out Space ใช้ภาพและคอมโพเนนต์ Cozy Lake เดิม ตรวจครบทั้งสี่หน้าต่างและภาพ 15 ช่อง รอเลือกแบบ"
+  },
+  {
+   "at": "2026-11-23T20:45:33+07:00",
+   "text": "C41 เพิ่ม Trade License หน้า Passes ของ Store ใช้ปุ่มซื้อและสถานะ OWNED เดิม เพิ่มการแบ่งหน้าเมื่อการ์ดเกินพื้นที่ ตรวจเดสก์ท็อปและจอสั้นใน Studio Edit แล้ว"
+  },
+  {
+   "at": "2026-11-23T20:31:04+07:00",
+   "text": "C41 ผูก Trade License กับ Game Pass 2092411225 ตรวจชื่อ เจ้าของ และสถานะเปิดขายผ่าน Roblox Studio แล้ว ใช้ราคาที่อ่านได้ 75 Robux เป็นราคาสำรอง"
+  },
+  {
+   "at": "2026-11-23T20:15:32+07:00",
+   "text": "C41 เพิ่มหน้าต่าง Trade และกติกา Bound ใช้รายการเทรดถาวรและสิทธิ์เขียนเซฟรายเซิร์ฟเวอร์เพื่อกู้คืนกรณีเซฟไม่ครบ ผ่านเทสต์จำลองและตรวจสิทธิ์ใน Studio Edit รอทดสอบ Play สองผู้เล่นและตั้ง PassId"
+  },
+  {
+   "at": "2026-11-23T19:32:47+07:00",
+   "text": "ตรวจความพร้อมระบบเทรดจากโค้ด พบฐานไอเทม UUID และตัวตรวจ Inventory.CanTrade แล้ว ส่วนหน้าต่างและขั้นตอนยืนยันเทรด Trade License ภาษี Coins และการโอนที่กู้คืนได้เมื่อเซฟไม่ครบยังต้องพัฒนา"
+  },
+  {
+   "at": "2026-11-23T18:57:23+07:00",
+   "text": "C40 ปรับ Patch Note Card เป็นโพยกระดาษโทนอุ่นติดเทปใส เพิ่มชุดสี Tag รายหมวดและวงกลมโปร่งหน้ารายการ ทดสอบสุ่มสติกเกอร์ 90 แบบในสามสัดส่วน รวมถึงบันทึกและส่งข้อมูล PNG 2x ให้ Clipboard API เมื่อเปิด HTML โดยตรง"
+  },
   {
    "at": "2026-11-23T14:51:33+07:00",
    "text": "C39 เพิ่ม Local Plugin Aura Particle Importer รับ project.json จับคู่ PNG แปลง Luma เป็น Alpha อัปโหลดและจำ ID ตามเจ้าของภาพ วางโมเดลใน ReplicatedStorage.AuraVFX แล้วเล่น Sprite, Emitter และ Ribbon จากค่าที่นำเข้า"
@@ -1582,6 +1675,10 @@
   {
    "at": "2026-11-23",
    "text": "อัปเดตระบบเกมรอบ 23 พ.ย.: Item rework v6, Mod เบ็ดและสาย, Rod Fusion, Stats Codex, ปรับปรุง MenuManager/UI มือถือ, จัดระเบียบ Assets 208 ชิ้น และสเปก Aura VFX ครบ 15 ออร่า"
+  },
+  {
+   "at": "2026-11-23",
+   "text": "C41 ทำหน้าต่าง Trade เป็นกริดตาม Figma (TradeController, ItemDetail Trade mode, MaxPerSide=2) ผ่าน tools/check.mjs ยังไม่ได้ทดสอบใน Play"
   },
   {
    "at": "2026-11-23",
@@ -1802,70 +1899,6 @@
   {
    "at": "2026-11-20",
    "text": "Figma: ลบดีไซน์ที่เกมยังไม่มี (Materials, Lock ปลา, Get More, Boost rings, การ์ดปลา economy, Sell All แยกรายการ, Enhance MAX, Shop with Enhance) ตามที่คุณเลือก"
-  },
-  {
-   "at": "2026-11-20",
-   "text": "C27: แก้ Store ว่าง (ลบ StarterGui.Store/QuestsGui ที่ค้าง + สร้างใน PlayerGui เท่านั้น + pcall ต่อแท็บ), เอาฉากดำ Store ออก, New.Spinner (Store/ปุ่มราคา/รูปกำลังโหลด), แจ้งเตือน DisplayOrder 100, Enhance popup ใหม่, แก้สีปุ่ม Return to Bag; Figma ปรับให้ตรงเกม (Aquarium, ลบ C14/C18 Inventory + 07 Auras + จอเก่า 08/12/13/Reel Slot G1-G5/E1/C17, ของค้าง C25 ใน 00/03/04/Economy 1, Enhance, Notifications, Loading states); check ผ่าน, ทดสอบ render Store/Enhance ในโหมดแก้ไขแล้ว, ยังไม่ได้ทดสอบใน Play"
-  },
-  {
-   "at": "2026-11-20",
-   "text": "C26 ป้าย HOTSPOT บนการ์ดปลา: Figma 04 · Catch Result เพิ่มป้ายทองต่อจาก PERFECT (docs/figma/hotspot.py part 2); แก้บั๊กในเกม: prefab CatchCard มีช่องป้ายแค่ 3 ช่อง ป้ายที่ 4 ไม่ขึ้น → เพิ่มเป็น 4 ช่อง, bake Components แล้ว"
-  },
-  {
-   "at": "2026-11-20",
-   "text": "C26 จุดฟองปลา Hotspot: HotspotService (วงทองฟองใกล้ผู้เล่นริมน้ำ, Luck +50% เมื่อเหวี่ยงเองลงวง, ใช้ได้ 2 ครั้ง), วงเล็งทอง + ป้าย, ป้ายบนการ์ดปลา; Figma อัปเดต (docs/figma/hotspot.py); check ผ่าน, ทดสอบใน Studio แล้วว่า Config โหลดได้และสุ่มจุดในน้ำของ StarterBay ได้, ยังไม่ได้ทดสอบใน Play"
-  },
-  {
-   "at": "2026-11-20",
-   "text": "C25 เหวี่ยงเบ็ดใหม่: กดค้างเล็งด้วยกล้อง + แถบพลัง + Perfect Cast + stat CastRange, ตัวปรับความลึกบน HUD แทน Cast Popup (ลบแล้ว), ปุ่ม CAST มือถือ, Auto ใช้ทิศกล้องและหยุดเมื่อเดินออก; Figma 01 · HUD อัปเดต (docs/figma/cast_rework.py); bake HUD แล้ว, check ผ่าน, ยังไม่ได้ทดสอบใน Play"
-  },
-  {
-   "at": "2026-11-20",
-   "text": "Aquarium การ์ดล็อก: ปุ่ม Expand ตัดคำ \"EXPAND\" ออก เหลือแค่เหรียญ + ราคา (ใหญ่ขึ้น อยู่กลางปุ่ม) ใน AquariumScreen.createLocked (สร้างด้วยโค้ด ไม่ต้อง bake) ทดสอบ: Play → เปิด Aquarium → เลื่อนไปการ์ดล็อก ปุ่มทองมีแค่ราคา กดแล้วยังขยายได้ เงินไม่พอปุ่มเป็นสีเทา"
-  },
-  {
-   "at": "2026-11-20",
-   "text": "B22 Drop rates: รายการโดนตัดขอบ (กรอบทองของออร่า featured + scrollbar ทับขอบขวา) → เพิ่ม UIPadding ใน RatesPopup.Panel.List (บน/ล่าง/ซ้าย 4, ขวา 12), bake GachaPage แล้ว รอ Ctrl+S + ทดสอบ: กาชา → Rates → เลื่อนดู แถวทองไม่โดนตัด ขอบขวาไม่ชน scrollbar"
-  },
-  {
-   "at": "2026-11-20",
-   "text": "C24 M2-M4: Put in Tank ซ้อนบน Aquarium (StackOn), ปุ่ม gamepad B = MenuManager.CloseTop() (BindBackKey ใน Main.client; Esc ปิดกล่องคุย NPC ย้ายมาที่เดียวกัน), ลบการปิดหน้าต่างด้วยมือ 6 จุด + ctx.closeHub ของ Events; check ผ่าน รอทดสอบใน Play"
-  },
-  {
-   "at": "2026-11-20",
-   "text": "Gacha (Aura Summon) Redesign v2 ใน Figma ตาม ref เกมกาชา: section ใหม่ \"Gacha Redesign v2 — 4 concepts (refs)\" (3660:55300, x 33000 y 2400) — A Banner Rail, B Editorial Codex, C Poster Strips, D Glass Card; ใช้แค่รูปที่มีอยู่ (gacha_bg_cosmic/celestial/cozy, ลูกแก้วออร่า, ไอคอนสถานะ) และตัวเลขจริงจาก Config/AuraBanners (5 Gems/ครั้ง, x10 = 45 Gems การันตี Rare+, pity Legendary 100 / Mythic 300, Neon Tide rate-up); ไม่แตะ section 8 concepts เดิม (3646:54500); สคริปต์ docs/figma/gacha_redesign.py; ตรวจภาพแล้ว (แก้ชื่อซ้อนปุ่มใน A, ขอบสีซ้อนใน B) ภาพ docs/figma/gacha_redesign_v2.png; รอเลือกแบบ; ยังไม่แตะโค้ดเกม"
-  },
-  {
-   "at": "2026-11-20",
-   "text": "แยก Gacha Splash 6 ภาพไป assets/art/auras_Art/ และกู้ไอคอนเดิม 6 ภาพใน assets/art/auras/ จากแบ็กอัป"
-  },
-  {
-   "at": "2026-11-20",
-   "text": "Gacha Redesign v2: เหลือตัวเลือก A Banner Rail / D Glass Card (ลบ B, C และ section 4 แบบเดิม 3660:55300) → section ใหม่ \"Gacha Redesign v2 — A / D\" (3660:55808); แยกรูป 2 ชุดชัดเจน: ไอคอนเล็ก = ลูกแก้ว art/auras/* (ทุกออร่า), ภาพใหญ่/ตกแต่ง = ภาพวาด art/auras_Art/* (6 ออร่า: AbyssalShadow, CelestialLeviathan, DragonEmperor, LotusNaga, NebulaKoi, SerpentOfTheVoid) ไม่ใช้แทนกัน; เติมรูปใหม่จากโฟลเดอร์ที่คุณแก้แล้ว (ลูกแก้วถูกต้อง), ภาพ docs/figma/gacha_redesign_v2.png; ยังไม่แตะโค้ดเกม"
-  },
-  {
-   "at": "2026-11-20",
-   "text": "Gacha v2 (A/D): ปุ่ม ROLL x1 / ROLL x10 กลับมาใช้สไตล์ปุ่มเดียวกับทั้งเกม (ปุ่มแบน + ขอบล่าง 5px, x1 สีม่วง Gem, x10 สีทอง, มุม 18) และทำราคาให้ชัด: ชื่อปุ่มซ้าย + แคปซูลราคาสีขอบล่าง ไอคอน Gem 26px ตัวเลข 20px, ป้าย RARE+ ติดมุมขวาบนของ x10; แทนเฉพาะแถวปุ่ม (3662:56131, 3662:56146) ไม่แตะส่วนอื่น; ภาพ docs/figma/gacha_roll_buttons.png"
-  },
-  {
-   "at": "2026-11-20",
-   "text": "Gacha v2 (A/D) รอบ 3 → section ใหม่ 3662:56161: ชิป Gems / Star Tokens ไม่มีปุ่ม + แล้ว (กดชิปเปิด Top Up อยู่แล้ว); การ์ดแบนเนอร์ใช้ลูกแก้วออร่าปกติ (art/auras); D เปลี่ยนแท็บซ้ายเป็นการ์ดแบนเนอร์แบบ A; ภาพวาด auras_Art ใช้เฉพาะภาพหลักด้านขวา (เอาเงาตกแต่งอื่นออก); ภาพ docs/figma/gacha_redesign_v2.png; ยังไม่แตะโค้ดเกม"
-  },
-  {
-   "at": "2026-11-20",
-   "text": "Gacha v2 แบบ D: Info Card padding 5 (บน/ล่าง) / 10 (ซ้าย/ขวา) ตามที่สั่ง, เนื้อหาข้างในชิดตาม padding เดียวกัน — node ใหม่ 3662:56405"
-  },
-  {
-   "at": "2026-11-20",
-   "text": "Gacha v2 (A/D): เพิ่ม toggle เลือกจ่ายด้วย Gems / Star Tokens เหนือปุ่ม Roll (ตัวที่เลือก = สีส้ม coral) เป็นโหนดใหม่อย่างเดียว ไม่แตะของที่คุณแก้ — A 3662:56450, D 3662:56457; ภาพ docs/figma/gacha_pay_toggle.png. ยังไม่ได้กำหนดราคาสุ่มด้วย Star Token และปุ่ม Roll ยังแสดงราคา Gems (ยังไม่มีในโค้ด/Config)"
-  },
-  {
-   "at": "2026-11-20",
-   "text": "B22 Gacha page ใหม่ตาม Figma concept D + ส่วนจาก E1 (Mythic pity, Milestones, Skip, Auto-roll) ทั้งใน Figma และในโค้ด (UI/Screens/GachaPage.luau, UI/GachaPage.luau, GachaPageController.luau); เพิ่ม ui/gacha_bg_* + auras_Art/* ลง catalog (ยังไม่อัปโหลด); check ผ่าน; ยังไม่ได้ bake / ทดสอบเพราะ Studio ไม่ได้เปิด"
-  },
-  {
-   "at": "2026-11-20",
-   "text": "B22 bake GachaPage ลง Studio แล้ว (ผ่าน StudioBridge --http-only), ภาพ edit mode ตรง Figma D; ยังไม่ได้ทดสอบ Play (Roblox Studio MCP ไม่เชื่อม) และยังไม่ได้เซฟ place. หมายเหตุ: tools/ui/preview.mjs ใช้ไม่ได้แล้ว (สคริปต์ยาวเกิน 200,000 ตัวอักษร) — ปัญหาเดิม ไม่เกี่ยวกับงานนี้"
   }
  ],
  "fixes": {}
