@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moonlit Ripple Aura | Aura Fishing</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: #080a14;
+      color: #eef3ff;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    main { width: min(1100px, 100% - 32px); margin: clamp(20px, 4vh, 48px) auto; }
+    header { display: flex; align-items: end; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+    h1 { margin: 4px 0 0; font-size: clamp(26px, 5vw, 46px); line-height: 1.1; letter-spacing: -.035em; color: #d6e4ff; }
+    .project { margin: 0; color: #9ab3e6; font-size: 13px; }
+    button {
+      min-height: 44px;
+      padding: 8px 14px;
+      border: 1px solid #28375e;
+      border-radius: 9px;
+      background: #0f162c;
+      color: inherit;
+      font: inherit;
+      cursor: pointer;
+    }
+    button:hover { background: #192548; }
+    button:disabled { opacity: .6; cursor: default; }
+    button[aria-pressed="true"] { border-color: #c8dcff; background: #1f2f5c; }
+    #toggle { flex-shrink: 0; font-size: 13px; }
+    .stage {
+      position: relative;
+      height: clamp(300px, 67vh, 670px);
+      overflow: hidden;
+      border: 1px solid #28375e;
+      border-radius: 16px;
+      background: radial-gradient(ellipse at 50% 57%, #141f3d 0%, #0c1328 49%, #080b18 83%);
+    }
+    canvas { display: block; width: 100%; height: 100%; touch-action: none; cursor: grab; }
+    canvas:active { cursor: grabbing; }
+    canvas:focus-visible { outline: 2px solid #c8dcff; outline-offset: -3px; }
+    #status { position: absolute; inset: 0; display: grid; place-items: center; margin: 0; padding: 16px; text-align: center; pointer-events: none; }
+    #status[hidden] { display: none; }
+    .hint { position: absolute; right: 16px; bottom: 12px; margin: 0; color: #b4c8f5; font-size: 12px; pointer-events: none; }
+    .tiers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 10px; }
+    .tier { text-align: left; }
+    .tier strong, .tier span { display: block; }
+    .tier span { margin-top: 2px; color: #cbd9f8; font-size: 12px; }
+    @media (max-width: 420px) { .stage { height: min(55vh, 440px); min-height: 270px; } .tier { padding-inline: 8px; } }
+  </style>
+</head>
+<body data-aura="MoonlitRipple">
+  <main>
+    <header>
+      <div>
+        <p class="project">Aura Fishing - Rare Aura</p>
+        <h1>Moonlit Ripple Aura</h1>
+      </div>
+      <button type="button" id="toggle" disabled>พักภาพ</button>
+    </header>
+    <div class="stage">
+      <canvas id="scene" tabindex="0" aria-label="ตัวอย่างออร่า Moonlit Ripple ลากหรือกดปุ่มลูกศรเพื่อหมุนมุมมอง"></canvas>
+      <p id="status" role="status">กำลังโหลดภาพออร่า Moonlit Ripple</p>
+      <p class="hint" aria-hidden="true">ลากเพื่อหมุนมุมมอง</p>
+    </div>
+    <div class="tiers" role="group" aria-label="ระดับออร่า">
+      <button type="button" class="tier" data-tier="1" aria-pressed="false" disabled><strong>Tier 1</strong><span>ระลอกน้ำ หมอกแสงจันทร์ และหยดน้ำ</span></button>
+      <button type="button" class="tier" data-tier="2" aria-pressed="false" disabled><strong>Tier 2</strong><span>เพิ่มประกายเพชรและแสงสีเงิน</span></button>
+      <button type="button" class="tier" data-tier="3" aria-pressed="true" disabled><strong>Tier 3</strong><span>เพิ่มวงสายน้ำสีเงินรอบเอว</span></button>
+    </div>
+  </main>
+  <script src="../aura-preview.js"></script>
+</body>
+</html>

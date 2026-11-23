@@ -2818,6 +2818,20 @@
     "Main Menu (Stats Codex)"
    ],
    "global": false
+  },
+  "ui/icons/trade_license": {
+   "file": "assets/art/ui/icons/trade_license.png",
+   "sheet": "",
+   "desc": "a cream trade license card with a gold border, two circling mint and coral fish, and a gold star medal with lavender ribbons",
+   "size": [
+    512,
+    512
+   ],
+   "used_by": [
+    "Economy · Store (Trade License)"
+   ],
+   "global": false,
+   "rbxassetid": "rbxassetid://138860484872786"
   }
  },
  "components": {

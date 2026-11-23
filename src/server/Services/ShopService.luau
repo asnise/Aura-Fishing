@@ -10,6 +10,7 @@ local Registry = require(Shared.Registry)
 local Remotes = require(Shared.Remotes)
 local Stats = require(Shared.Stats)
 local Inventory = require(Shared.Inventory)
+local BaitBinding = require(Shared.Items.BaitBinding)
 local Format = require(Shared.Util.Format)
 local Enhance = require(Shared.Enhance)
 local Signal = require(Shared.Util.Signal)
@@ -88,6 +89,12 @@ function ShopService.Buy(player: Player, categoryId: any, itemId: any): (boolean
 	elseif cat.Kind == "Permanent" then
 		data.Owned[categoryId][itemId] = true
 		data.Equipped[categoryId] = itemId
+	elseif categoryId == "Baits" then
+		BaitBinding.Add(data, itemId, item.BuyAmount or 1)
+		if not Registry.GameConfig.Trade.TradableBaits[itemId] then
+			data.Equipped.Baits = itemId
+			BaitBinding.Bind(data, itemId)
+		end
 	else
 		local stack = data.Consumables[categoryId]
 		stack[itemId] = (stack[itemId] or 0) + (item.BuyAmount or 1)
@@ -141,6 +148,10 @@ function ShopService.Equip(player: Player, categoryId: any, itemId: any): (boole
 		return false, "Unknown category"
 	end
 	if itemId == nil and cat.Kind == "Consumable" then
+		local baitId = data.Equipped.Baits
+		if categoryId == "Baits" and baitId then
+			BaitBinding.Bind(data, baitId)
+		end
 		data.Equipped[categoryId] = nil
 		DataService.MarkDirty(player)
 		return true, "Unequipped"
@@ -167,11 +178,14 @@ function ShopService.Equip(player: Player, categoryId: any, itemId: any): (boole
 		return false, "Bags are upgrades: you cannot go back to a smaller bag"
 	end
 	data.Equipped[categoryId] = itemId
+	if categoryId == "Baits" then
+		BaitBinding.Bind(data, itemId)
+	end
 	DataService.MarkDirty(player)
 	return true, `Equipped {cat.Items[itemId].Name}`
 end
 
--- Sells every fish; treasure chests, rods and lines stay.
+-- Sells eligible fish, keeping bound fish and other items in the bag.
 function ShopService.SellAll(player: Player): (boolean, string)
 	local data = DataService.Get(player)
 	if not data then
@@ -185,7 +199,7 @@ function ShopService.SellAll(player: Player): (boolean, string)
 	local hotBonus = Inventory.HotBonus(data, mult)
 	local keep = {}
 	for _, s in data.Bag do
-		if s.Kind ~= "Fish" then
+		if s.Kind ~= "Fish" or Inventory.SellBlock(data, s) then
 			table.insert(keep, s)
 		end
 	end
@@ -246,13 +260,16 @@ end
 
 -- A Rod reward: the rod goes into the bag; with no free slot it is paid as its sell value instead.
 -- Returns rodName, coinsPaid (coinsPaid > 0 = bag was full).
-local function giveRod(data: any, reward: any): (string, number)
+local function giveRod(data: any, reward: any, bound: boolean): (string, number)
 	local rod = RodDrop.Create(reward.Profile :: string, data.Level, rng)
 	if not rod then
 		return "rod", 0
 	end
 	local name = Registry.Equipment.Rods.Items[rod.Id].Name
-	if Inventory.Add(data, rod) then
+	if bound then
+		rod.Bound = "Bound"
+	end
+	if Inventory.Add(data, rod, bound) then
 		return name, 0
 	end
 	local coins = Inventory.SellValue(rod, 1)
@@ -269,6 +286,7 @@ function ShopService.OpenTreasure(player: Player, uuid: any): (boolean, string, 
 		return false, "Nothing to open", nil
 	end
 	local total = 0
+	local bound = Inventory.IsBound(s)
 	for _, r in t.Rewards do
 		total += r.Weight
 	end
@@ -290,13 +308,12 @@ function ShopService.OpenTreasure(player: Player, uuid: any): (boolean, string, 
 		msg = `{t.Name}: +{Format.Number(amount)} {string.lower(reward.Kind)}!`
 		out = { Kind = reward.Kind, Amount = amount }
 	elseif reward.Kind == "Rod" then
-		local name, paid = giveRod(data, reward)
+		local name, paid = giveRod(data, reward, bound)
 		msg = if paid > 0 then `{t.Name}: {name} (bag full, sold for {Format.Number(paid)} coins)` else `{t.Name}: a {name} with mods!`
 		out = { Kind = "Rod", Amount = 1 }
 	else
 		local id = reward.Id :: string
-		local baits = data.Consumables.Baits
-		baits[id] = (baits[id] or 0) + (reward.Count or 1)
+		BaitBinding.Add(data, id, reward.Count or 1, bound)
 		msg = `{t.Name}: +{reward.Count or 1} {Registry.Equipment.Baits.Items[id].Name}!`
 		out = { Kind = "Bait", Id = id, Amount = reward.Count or 1 }
 	end
@@ -316,6 +333,7 @@ function ShopService.OpenAllTreasure(player: Player, uuid: any): (boolean, strin
 	end
 
 	local count = s.Count or 1
+	local bound = Inventory.IsBound(s)
 	local earnedCoins = 0
 	local earnedGems = 0
 	local earnedBaits: { [string]: number } = {}
@@ -328,7 +346,7 @@ function ShopService.OpenAllTreasure(player: Player, uuid: any): (boolean, strin
 		elseif reward.Kind == "Gems" then
 			earnedGems += rng:NextInteger(reward.Min :: number, reward.Max :: number)
 		elseif reward.Kind == "Rod" then
-			local _, paid = giveRod(data, reward)
+			local _, paid = giveRod(data, reward, bound)
 			earnedRods += 1
 			rodNotes += if paid > 0 then 1 else 0
 		else
@@ -347,8 +365,7 @@ function ShopService.OpenAllTreasure(player: Player, uuid: any): (boolean, strin
 		data.Gems += earnedGems
 	end
 	for id, amt in earnedBaits do
-		local baits = data.Consumables.Baits
-		baits[id] = (baits[id] or 0) + amt
+		BaitBinding.Add(data, id, amt, bound)
 	end
 
 	DataService.MarkDirty(player)
@@ -468,6 +485,8 @@ function ShopService.Init()
 		end
 		if key == "LowFX" and type(value) == "boolean" then
 			data.Settings.LowFX = value
+		elseif (key == "MusicVolume" or key == "SFXVolume") and type(value) == "number" and value == value then
+			data.Settings[key] = math.clamp(value, 0, 1)
 		elseif key == "AutoDepth" and type(value) == "boolean" then
 			data.Settings.AutoDepth = value
 		elseif key == "TargetDepth" and type(value) == "number" and value == value then

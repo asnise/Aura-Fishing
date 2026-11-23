@@ -331,7 +331,13 @@ function AquariumScreen.Create(handlers: { [string]: any }): any
 	end
 
 	-- every frame: live Pearls total + total rate
+	local lastWhole = -1
 	function screen.Tick(pearlsNow: number, ratePerMin: number)
+		local whole = math.floor(pearlsNow)
+		if lastWhole >= 0 and whole > lastWhole and gui.Enabled then
+			New.Sfx("pearl_tick") -- each whole Pearl earned while the window is open
+		end
+		lastWhole = whole
 		pearlsValue.Text = Aquarium.FormatPearls(pearlsNow)
 		rateValue.Text = Aquarium.FormatRate(ratePerMin)
 	end

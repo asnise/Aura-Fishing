@@ -36,6 +36,7 @@ local ItemSlots = require(UI.ItemSlots)
 local HUD = require(script.Parent.HUDController)
 local DataController = require(script.Parent.DataController)
 local GachaPageController = require(script.Parent.GachaPageController)
+local SoundController = require(script.Parent.SoundController)
 
 local T = New.Theme
 
@@ -421,6 +422,7 @@ local function setTab(name: string)
 		return
 	end
 	tab = name
+	SoundController.Play("ui_click")
 	table.clear(visibleSince)
 	selected = nil
 	ItemDetail.Hide()
@@ -471,6 +473,7 @@ local function ensure()
 	local w = Baked.Find(root, "Window")
 	local up = Baked.Find(gui, "BagUpgrade")
 	up.BackgroundTransparency = 1 -- no black overlay (older bakes still have it)
+	New.FitToScreen(Baked.Find(up, "Panel"), 24)
 	refs = {
 		Root = root,
 		Window = w,

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aura VFX | Aura Fishing</title>
+  <style>
+    :root { color-scheme: light; font-family: "Segoe UI", Tahoma, sans-serif; color: #3d4b5c; background: #edf5f1; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    main { width: min(1210px, 100% - 32px); margin: clamp(16px, 4vh, 44px) auto; }
+    header { display: flex; justify-content: space-between; align-items: end; gap: 12px; margin-bottom: 18px; }
+    p, h1, h2 { margin: 0; }
+    h1 { font-size: clamp(29px, 5vw, 48px); line-height: 1.07; letter-spacing: -.04em; }
+    h2 { font-size: 23px; line-height: 1.15; }
+    .project, #aura-rarity, #aura-source { font-size: 13px; font-weight: 650; }
+    a { color: #315f75; text-underline-offset: 3px; }
+    .reference { padding: 8px 0; text-align: right; }
+    .layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(230px, .35fr); gap: 14px; align-items: start; }
+    .stage { position: relative; height: clamp(320px, 66vh, 660px); overflow: hidden; border: 1px solid #304754; border-radius: 18px; background: #101e29; }
+    canvas { display: block; width: 100%; height: 100%; touch-action: none; cursor: grab; }
+    canvas:active { cursor: grabbing; }
+    #status { position: absolute; inset: 0; display: grid; place-items: center; padding: 16px; color: #f2faf8; pointer-events: none; }
+    #status[hidden] { display: none; }
+    .controls { position: absolute; left: 12px; right: 12px; bottom: 12px; display: flex; justify-content: space-between; align-items: center; gap: 8px; pointer-events: none; }
+    .controls button { pointer-events: auto; background: #14252f; border-color: #3d6670; color: #effaf5; }
+    .controls p { font-size: 12px; color: #dceee7; text-align: right; }
+    aside { display: grid; gap: 10px; padding: 16px; border: 1px solid #e6dccb; border-radius: 18px; background: #fff8ec; }
+    label { font-size: 13px; font-weight: 650; }
+    select, button { font: inherit; min-height: 44px; border: 1px solid #d6cdbe; border-radius: 11px; padding: 8px 12px; color: inherit; }
+    select { width: 100%; background: #fffdf7; }
+    button { cursor: pointer; background: #fff8ec; }
+    button:disabled { opacity: .6; cursor: default; }
+    button:focus-visible, select:focus-visible, canvas:focus-visible { outline: 2px solid #569bb9; outline-offset: -2px; }
+    #aura-art { display: block; width: 100%; height: clamp(115px, 23vh, 210px); object-fit: contain; }
+    #aura-rarity { color: #4c6c73; }
+    #aura-intent { font-size: 14px; line-height: 1.65; }
+    #aura-source { color: #556753; }
+    .tiers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; margin-top: 9px; }
+    .tier { text-align: left; padding: 9px 11px; }
+    .tier strong, .tier span { display: block; }
+    .tier span { margin-top: 2px; font-size: 12px; }
+    .tier[aria-pressed="true"] { background: #cdeadd; border-color: #7db49f; }
+    @media (max-width: 680px) {
+      .layout { grid-template-columns: 1fr; }
+      .stage { height: clamp(300px, 52vh, 500px); }
+      aside { grid-row: 1; grid-template-columns: minmax(0, 1fr) 85px; align-items: start; }
+      aside > :not(#aura-art) { grid-column: 1; }
+      #aura-art { grid-column: 2; grid-row: 1 / span 5; height: 90px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div><p class="project">Aura Fishing</p><h1>Aura VFX</h1></div>
+      <a class="reference" href="sample/dark-arcane-preview.html">ตัวอย่าง Dark Arcane</a>
+    </header>
+    <div class="layout">
+      <div>
+        <div class="stage">
+          <canvas id="scene" tabindex="0" aria-label="ตัวอย่างออร่ารอบหุ่น"></canvas>
+          <p id="status" role="status">กำลังโหลดเท็กซ์เจอร์</p>
+          <div class="controls">
+            <button type="button" id="toggle" disabled>พักภาพ</button>
+            <p>ลากเพื่อหมุนมุมมอง</p>
+          </div>
+        </div>
+        <div class="tiers" role="group" aria-label="ระดับออร่า">
+          <button type="button" class="tier" data-tier="1" aria-pressed="false" disabled><strong>Tier 1</strong><span>แกนและระลอก</span></button>
+          <button type="button" class="tier" data-tier="2" aria-pressed="false" disabled><strong>Tier 2</strong><span>ระลอกซ้อนและประกาย</span></button>
+          <button type="button" class="tier" data-tier="3" aria-pressed="true" disabled><strong>Tier 3</strong><span>สายหลักและริ้วตาม</span></button>
+        </div>
+      </div>
+      <aside aria-label="รายละเอียดออร่า">
+        <label for="aura-choice">เลือกออร่า</label>
+        <select id="aura-choice"></select>
+        <img id="aura-art" alt="">
+        <p id="aura-rarity"></p>
+        <h2 id="aura-name"></h2>
+        <p id="aura-intent"></p>
+        <p id="aura-source"></p>
+        <a id="aura-prompt">พรอมป์แยก 5 ชีต</a>
+      </aside>
+    </div>
+  </main>
+  <script src="aura-preview.js"></script>
+</body>
+</html>

@@ -1,0 +1,492 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Aura Particle Editor project",
+  "type": "object",
+  "required": [
+    "version"
+  ],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "name": {
+      "$ref": "#/$defs/label"
+    },
+    "duration": {
+      "$ref": "#/$defs/duration"
+    },
+    "loop": {
+      "type": "boolean"
+    },
+    "scene": {
+      "$ref": "#/$defs/scene"
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/asset"
+      }
+    },
+    "layers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/layer"
+      }
+    }
+  },
+  "$defs": {
+    "label": {
+      "type": "string",
+      "minLength": 1
+    },
+    "color": {
+      "type": "string",
+      "pattern": "^#[0-9a-fA-F]{6}$"
+    },
+    "duration": {
+      "type": "number",
+      "minimum": 0.1,
+      "maximum": 600
+    },
+    "camera": {
+      "type": "object",
+      "properties": {
+        "yaw": {
+          "type": "number",
+          "minimum": -100000,
+          "maximum": 100000
+        },
+        "pitch": {
+          "type": "number",
+          "minimum": 0.03,
+          "maximum": 1.45
+        },
+        "zoom": {
+          "type": "number",
+          "minimum": 0.2,
+          "maximum": 8
+        }
+      }
+    },
+    "scene": {
+      "type": "object",
+      "properties": {
+        "background": {
+          "$ref": "#/$defs/color"
+        },
+        "glow": {
+          "$ref": "#/$defs/color"
+        },
+        "grid": {
+          "type": "boolean"
+        },
+        "mannequin": {
+          "type": "boolean"
+        },
+        "camera": {
+          "$ref": "#/$defs/camera"
+        }
+      }
+    },
+    "asset": {
+      "type": "object",
+      "required": [
+        "id",
+        "path"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/label"
+        },
+        "name": {
+          "$ref": "#/$defs/label"
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Path to a local image, relative to this project JSON when possible."
+        },
+        "matte": {
+          "enum": [
+            "luma",
+            "rgba"
+          ]
+        }
+      }
+    },
+    "rect": {
+      "type": "object",
+      "required": [
+        "width",
+        "height"
+      ],
+      "properties": {
+        "x": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 65536
+        },
+        "y": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 65536
+        },
+        "width": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 65536
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 65536
+        }
+      }
+    },
+    "sheet": {
+      "type": "object",
+      "properties": {
+        "columns": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 64
+        },
+        "rows": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 64
+        },
+        "margin": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4096
+        },
+        "gap": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4096
+        },
+        "crop": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/rect"
+            }
+          ]
+        },
+        "first": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4095
+        },
+        "last": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4095
+        },
+        "fps": {
+          "type": "number",
+          "minimum": 0.1,
+          "maximum": 240
+        },
+        "mode": {
+          "enum": [
+            "loop",
+            "once",
+            "pingpong",
+            "fixed"
+          ]
+        },
+        "reverse": {
+          "type": "boolean"
+        },
+        "normalize": {
+          "type": "boolean"
+        }
+      }
+    },
+    "timing": {
+      "type": "object",
+      "properties": {
+        "start": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 600
+        },
+        "duration": {
+          "type": "number",
+          "minimum": 0.01,
+          "maximum": 600
+        },
+        "speed": {
+          "type": "number",
+          "minimum": 0.01,
+          "maximum": 100
+        },
+        "offset": {
+          "type": "number",
+          "minimum": -600,
+          "maximum": 600
+        },
+        "fadeIn": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 600
+        },
+        "fadeOut": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 600
+        }
+      }
+    },
+    "sprite": {
+      "type": "object",
+      "properties": {
+        "plane": {
+          "enum": [
+            "billboard",
+            "ground"
+          ]
+        },
+        "scaleStart": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 30
+        },
+        "scaleEnd": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 30
+        },
+        "depthBias": {
+          "type": "number",
+          "minimum": -1000,
+          "maximum": 1000
+        }
+      }
+    },
+    "emitter": {
+      "type": "object",
+      "properties": {
+        "rate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 600
+        },
+        "lifetime": {
+          "type": "number",
+          "minimum": 0.01,
+          "maximum": 60
+        },
+        "speed": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 250
+        },
+        "spread": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 360
+        },
+        "radius": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 250
+        },
+        "direction": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "number",
+            "minimum": -250,
+            "maximum": 250
+          }
+        },
+        "gravity": {
+          "type": "number",
+          "minimum": -250,
+          "maximum": 250
+        },
+        "drag": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 30
+        },
+        "spin": {
+          "type": "number",
+          "minimum": -3600,
+          "maximum": 3600
+        },
+        "sizeEnd": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 30
+        },
+        "seed": {
+          "type": "integer",
+          "minimum": -2147483648,
+          "maximum": 2147483647
+        },
+        "randomFrame": {
+          "type": "boolean"
+        },
+        "radial": {
+          "type": "boolean"
+        },
+        "burst": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 600
+        }
+      }
+    },
+    "ribbon": {
+      "type": "object",
+      "properties": {
+        "radius": {
+          "type": "number",
+          "minimum": 0.001,
+          "maximum": 250
+        },
+        "tilt": {
+          "type": "number",
+          "minimum": -360,
+          "maximum": 360
+        },
+        "arc": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 360
+        },
+        "speed": {
+          "type": "number",
+          "minimum": -3600,
+          "maximum": 3600
+        },
+        "phase": {
+          "type": "number",
+          "minimum": -36000,
+          "maximum": 36000
+        },
+        "scroll": {
+          "type": "number",
+          "minimum": -100,
+          "maximum": 100
+        },
+        "taper": {
+          "type": "boolean"
+        }
+      }
+    },
+    "layer": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/label"
+        },
+        "name": {
+          "$ref": "#/$defs/label"
+        },
+        "kind": {
+          "enum": [
+            "sprite",
+            "emitter",
+            "ribbon"
+          ]
+        },
+        "assetId": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/label"
+            }
+          ]
+        },
+        "visible": {
+          "type": "boolean"
+        },
+        "tier": {
+          "enum": [
+            1,
+            2,
+            3
+          ]
+        },
+        "position": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "number",
+            "minimum": -1000,
+            "maximum": 1000
+          }
+        },
+        "size": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "number",
+            "minimum": 0.001,
+            "maximum": 1000
+          }
+        },
+        "anchor": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "number",
+            "minimum": -4,
+            "maximum": 4
+          }
+        },
+        "rotation": {
+          "type": "number",
+          "minimum": -36000,
+          "maximum": 36000
+        },
+        "color": {
+          "$ref": "#/$defs/color"
+        },
+        "opacity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "blend": {
+          "enum": [
+            "screen",
+            "add",
+            "normal"
+          ]
+        },
+        "sheet": {
+          "$ref": "#/$defs/sheet"
+        },
+        "timing": {
+          "$ref": "#/$defs/timing"
+        },
+        "sprite": {
+          "$ref": "#/$defs/sprite"
+        },
+        "emitter": {
+          "$ref": "#/$defs/emitter"
+        },
+        "ribbon": {
+          "$ref": "#/$defs/ribbon"
+        }
+      }
+    }
+  }
+}

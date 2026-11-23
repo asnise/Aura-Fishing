@@ -1,0 +1,469 @@
+/* Aura Fishing - Cozy Lake UI Stylesheet */
+
+:root {
+  --scene-sand: #F1E2D2;
+  --panel-cream: #FFF9ED;
+  --panel-sand: #F3E9D8;
+  --border-track: #E4CFB7;
+  --text-primary: #514238;
+  --text-muted: #765D4D;
+
+  --accent-coral: #FF9E80;
+  --lip-coral: #E07A5C;
+
+  --accent-honey: #EAC6A3;
+  --lip-honey: #CBA783;
+
+  --accent-sand: #F3E9D8;
+  --lip-sand: #D9CEBA;
+
+  --accent-bad: #C5705C;
+  --lip-bad: #995045;
+
+  --font-display: "Fredoka", "IBM Plex Sans Thai", sans-serif;
+  --font-body: "Nunito", "IBM Plex Sans Thai", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--scene-sand);
+  color: var(--text-primary);
+  height: 100vh;
+  overflow: hidden;
+  user-select: none;
+}
+
+.dock-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto minmax(0, 1fr);
+  height: 100vh;
+  position: relative;
+}
+
+/* --------------------------------------------------------------------------
+   Top Game Control Bar
+   -------------------------------------------------------------------------- */
+.game-topbar {
+  grid-area: 1 / 1;
+  background-color: var(--panel-cream);
+  border-bottom: 2px solid var(--border-track);
+  min-height: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px clamp(12px, 2vw, 24px);
+  box-shadow: 0 4px 12px rgba(61, 75, 92, 0.06);
+  z-index: 20;
+}
+
+.bar-left {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.game-logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  background-color: var(--scene-sand);
+  color: #895735;
+  padding: 6px 14px;
+  border-radius: 12px;
+  border: 2px solid var(--border-track);
+  letter-spacing: 0.04em;
+}
+
+.bar-title {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.bar-center {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.bar-right {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+/* --------------------------------------------------------------------------
+   Cozy Lake Buttons (Soft 4px Bottom Lip)
+   -------------------------------------------------------------------------- */
+.btn-cozy {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 18px 12px 18px;
+  border-radius: 14px;
+  border: 2px solid var(--border-track);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.06s ease, box-shadow 0.06s ease;
+}
+
+.btn-cozy:active {
+  transform: translateY(3px);
+}
+
+.btn-coral {
+  background-color: var(--accent-coral);
+  color: #241108;
+  box-shadow: 0 4px 0 var(--lip-coral);
+}
+.btn-coral:active {
+  box-shadow: 0 1px 0 var(--lip-coral);
+}
+
+.btn-save {
+  background-color: var(--accent-honey);
+  color: #523826;
+  box-shadow: 0 4px 0 var(--lip-honey);
+}
+.btn-save:active {
+  box-shadow: 0 1px 0 var(--lip-honey);
+}
+
+.btn-sand {
+  background-color: var(--panel-sand);
+  color: var(--text-primary);
+  box-shadow: 0 4px 0 var(--lip-sand);
+}
+.btn-sand:active {
+  box-shadow: 0 1px 0 var(--lip-sand);
+}
+
+.btn-full {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Seed Input Wrap */
+.seed-input-wrap {
+  display: flex;
+  align-items: center;
+  background-color: var(--panel-sand);
+  border: 2px solid var(--border-track);
+  border-radius: 12px;
+  padding: 4px 10px;
+  gap: 8px;
+}
+
+.seed-input-wrap label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.seed-input-wrap input {
+  background: transparent;
+  border: none;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+  width: 108px;
+  outline: none;
+}
+
+/* Ratio Pill Buttons */
+.pill-group {
+  display: flex;
+  background-color: var(--panel-sand);
+  border: 2px solid var(--border-track);
+  border-radius: 14px;
+  padding: 3px;
+  gap: 2px;
+}
+
+.pill-btn {
+  background: transparent;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+  padding: 6px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+
+.pill-btn.active {
+  background-color: var(--panel-cream);
+  color: var(--text-primary);
+  box-shadow: 0 2px 4px rgba(61, 75, 92, 0.08);
+}
+
+/* --------------------------------------------------------------------------
+   Viewport & Card Canvas
+   -------------------------------------------------------------------------- */
+.viewport {
+  grid-area: 2 / 1;
+  --preview-pad: clamp(10px, 2vw, 26px);
+  container-type: size;
+  display: flex;
+  overflow: auto;
+  padding: var(--preview-pad);
+}
+
+.canvas-shadow-wrap {
+  margin: auto;
+  border-radius: 22px;
+  box-shadow: 0 18px 45px rgba(32, 60, 68, 0.2), 0 4px 12px rgba(32, 60, 68, 0.1);
+  background-color: var(--panel-cream);
+  display: flex;
+}
+
+#boardCanvas {
+  display: block;
+  border-radius: inherit;
+  max-height: 100cqh;
+  max-width: 100cqw;
+  object-fit: contain;
+}
+
+/* --------------------------------------------------------------------------
+   Slide-out Content Drawer
+   -------------------------------------------------------------------------- */
+.content-drawer {
+  grid-area: 2 / 1;
+  justify-self: end;
+  width: min(400px, 100%);
+  background-color: var(--panel-cream);
+  border-left: 2px solid var(--border-track);
+  box-shadow: -8px 0 24px rgba(61, 75, 92, 0.12);
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  transform: translateX(100%);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.25s;
+  z-index: 30;
+}
+
+.content-drawer.open {
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.drawer-header {
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-bottom: 2px solid var(--border-track);
+}
+
+.drawer-header h3 {
+  font-family: var(--font-display);
+  font-size: 17px;
+  color: var(--text-primary);
+}
+
+.btn-close-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--accent-bad);
+  border: 2px solid var(--lip-bad);
+  color: #FFFFFF;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 0 var(--lip-bad);
+}
+
+.btn-close-circle:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+.drawer-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.drawer-divider {
+  height: 1px;
+  background-color: var(--border-track);
+}
+
+.field-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field-cols {
+  display: flex;
+  gap: 12px;
+}
+
+.field-cols .field-row {
+  flex: 1;
+  min-width: 0;
+}
+
+.tag-palette {
+  border: 0;
+}
+
+.tag-palette legend {
+  margin-bottom: 6px;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.tag-swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag-swatch {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.tag-swatch input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.tag-swatch span {
+  display: block;
+  height: 100%;
+  background-color: var(--tag-color);
+  border: 3px solid var(--panel-cream);
+  border-radius: 10px;
+}
+
+.tag-swatch input:checked + span {
+  outline: 2px solid var(--text-primary);
+}
+
+.tag-swatch input:focus-visible + span {
+  outline: 2px solid var(--text-primary);
+  outline-offset: 2px;
+}
+
+.field-row label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.field-row input,
+.field-row textarea {
+  font-family: var(--font-body);
+  font-size: 13px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 2px solid var(--border-track);
+  background-color: #FFFFFF;
+  color: var(--text-primary);
+  outline: none;
+}
+
+.field-row input:focus,
+.field-row textarea:focus {
+  border-color: var(--lip-coral);
+}
+
+.sections-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.section-card-editor {
+  background-color: var(--panel-sand);
+  border: 2px solid var(--border-track);
+  border-radius: 14px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.section-card-editor textarea {
+  min-height: 56px;
+  resize: vertical;
+}
+
+.sec-box-style {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  background-color: var(--panel-cream);
+  border: 2px solid var(--border-track);
+  border-radius: 8px;
+  padding: 6px 8px;
+  outline: none;
+  cursor: pointer;
+}
+
+.sec-box-style:focus {
+  border-color: var(--lip-coral);
+}
+
+/* Toast Bubble */
+.toast-bubble {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(90px);
+  background-color: var(--panel-cream);
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: 14px;
+  border: 2px solid var(--border-track);
+  box-shadow: 0 6px 18px rgba(61, 75, 92, 0.16);
+  padding: 10px 24px;
+  border-radius: 20px;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 100;
+  pointer-events: none;
+}
+
+.toast-bubble.show {
+  transform: translateX(-50%) translateY(0);
+}

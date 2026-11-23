@@ -21,6 +21,7 @@ local Remotes = require(Shared.Remotes)
 local Stats = require(Shared.Stats)
 local Roll = require(Shared.Roll)
 local Inventory = require(Shared.Inventory)
+local BaitBinding = require(Shared.Items.BaitBinding)
 local FishingSpot = require(Shared.FishingSpot)
 local HotFish = require(Shared.HotFish)
 local RodDrop = require(Shared.Items.RodDrop)
@@ -208,12 +209,8 @@ end
 
 local function consumeBait(data: any)
 	local baitId = data.Equipped.Baits
-	if not baitId then
-		return
-	end
-	local stack = data.Consumables.Baits
-	if stack[baitId] and stack[baitId] > 0 then
-		stack[baitId] -= 1
+	if baitId then
+		BaitBinding.Consume(data, baitId)
 	end
 end
 

@@ -1,0 +1,527 @@
+{
+  "version": 1,
+  "name": "Moonlit Ripple",
+  "duration": 6,
+  "loop": true,
+  "scene": {
+    "background": "#0c111f",
+    "glow": "#243353",
+    "grid": true,
+    "mannequin": true,
+    "camera": {
+      "yaw": 0.42,
+      "pitch": 0.41,
+      "zoom": 1
+    }
+  },
+  "assets": [
+    {
+      "id": "core",
+      "name": "Core flipbook",
+      "path": "01_core_moonbeam_mist_4x4.png",
+      "matte": "luma"
+    },
+    {
+      "id": "ripple",
+      "name": "Ground flipbook",
+      "path": "02_ground_lunar_concentric_ripple_4x4.png",
+      "matte": "luma"
+    },
+    {
+      "id": "strip",
+      "name": "Orbital strip",
+      "path": "03_orbital_silver_halo_strip.png",
+      "matte": "luma"
+    },
+    {
+      "id": "glint",
+      "name": "Glint flipbook",
+      "path": "04_moonlit_diamond_glints_4x4.png",
+      "matte": "luma"
+    },
+    {
+      "id": "motes",
+      "name": "Particle atlas",
+      "path": "05_silver_droplets_atlas_2x2.png",
+      "matte": "luma"
+    },
+    {
+      "id": "rim",
+      "name": "Water rim",
+      "path": "fx_ring.png",
+      "matte": "rgba"
+    },
+    {
+      "id": "trail",
+      "name": "Water ribbon",
+      "path": "03_orbital_silver_halo_strip.png",
+      "matte": "luma"
+    }
+  ],
+  "layers": [
+    {
+      "id": "ground-pulse",
+      "name": "Expanding ground ripple",
+      "assetId": "ripple",
+      "visible": true,
+      "tier": 1,
+      "position": [
+        0,
+        0.025,
+        0
+      ],
+      "size": [
+        4.75,
+        4.75
+      ],
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "rotation": 0,
+      "color": "#c8dcff",
+      "opacity": 0.95,
+      "blend": "screen",
+      "sheet": {
+        "columns": 4,
+        "rows": 4,
+        "crop": null,
+        "margin": 0,
+        "gap": 0,
+        "first": 0,
+        "last": 15,
+        "fps": 14,
+        "mode": "loop",
+        "reverse": false,
+        "normalize": false
+      },
+      "timing": {
+        "start": 0,
+        "duration": 6,
+        "speed": 1,
+        "offset": 0.44,
+        "fadeIn": 0.18,
+        "fadeOut": 0.3
+      },
+      "kind": "sprite",
+      "sprite": {
+        "plane": "ground",
+        "scaleStart": 0.28,
+        "scaleEnd": 1.02,
+        "depthBias": 0
+      }
+    },
+    {
+      "id": "ground-echo",
+      "name": "Accent ripple",
+      "assetId": "ripple",
+      "visible": true,
+      "tier": 2,
+      "position": [
+        0,
+        0.038,
+        0
+      ],
+      "size": [
+        3.8949999999999996,
+        3.8949999999999996
+      ],
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "rotation": 0,
+      "color": "#829fff",
+      "opacity": 0.49,
+      "blend": "screen",
+      "sheet": {
+        "columns": 4,
+        "rows": 4,
+        "crop": null,
+        "margin": 0,
+        "gap": 0,
+        "first": 0,
+        "last": 15,
+        "fps": 14,
+        "mode": "loop",
+        "reverse": false,
+        "normalize": false
+      },
+      "timing": {
+        "start": 0.18,
+        "duration": 6,
+        "speed": 0.92,
+        "offset": 0.39,
+        "fadeIn": 0.2,
+        "fadeOut": 0.3
+      },
+      "kind": "sprite",
+      "sprite": {
+        "plane": "ground",
+        "scaleStart": 0.4,
+        "scaleEnd": 1,
+        "depthBias": 0
+      }
+    },
+    {
+      "id": "ground-rim",
+      "name": "Fine water rim",
+      "assetId": "rim",
+      "visible": true,
+      "tier": 2,
+      "position": [
+        0,
+        0.044,
+        0
+      ],
+      "size": [
+        3.04,
+        3.04
+      ],
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "rotation": 0,
+      "color": "#c8dcff",
+      "opacity": 0.32,
+      "blend": "screen",
+      "sheet": {
+        "columns": 1,
+        "rows": 1,
+        "crop": null,
+        "margin": 0,
+        "gap": 0,
+        "first": 0,
+        "last": 0,
+        "fps": 14,
+        "mode": "loop",
+        "reverse": false,
+        "normalize": false
+      },
+      "timing": {
+        "start": 0,
+        "duration": 6,
+        "speed": 1,
+        "offset": 0,
+        "fadeIn": 0.15,
+        "fadeOut": 0.35
+      },
+      "kind": "sprite",
+      "sprite": {
+        "plane": "ground",
+        "scaleStart": 1,
+        "scaleEnd": 1,
+        "depthBias": 0
+      }
+    },
+    {
+      "id": "drifting-motes",
+      "name": "Drifting particles",
+      "assetId": "motes",
+      "visible": true,
+      "tier": 1,
+      "position": [
+        0,
+        0.5,
+        0
+      ],
+      "size": [
+        0.26,
+        0.26
+      ],
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "rotation": 0,
+      "color": "#c8dcff",
+      "opacity": 0.9,
+      "blend": "screen",
+      "sheet": {
+        "columns": 2,
+        "rows": 2,
+        "crop": null,
+        "margin": 0,
+        "gap": 0,
+        "first": 0,
+        "last": 0,
+        "fps": 12,
+        "mode": "loop",
+        "reverse": false,
+        "normalize": false
+      },
+      "timing": {
+        "start": 0,
+        "duration": 6,
+        "speed": 1,
+        "offset": 0.63,
+        "fadeIn": 0.2,
+        "fadeOut": 0.37
+      },
+      "kind": "emitter",
+      "emitter": {
+        "rate": 10,
+        "lifetime": 1.6,
+        "speed": 0.74,
+        "spread": 50,
+        "radius": 0.74,
+        "direction": [
+          0,
+          1,
+          0
+        ],
+        "gravity": 0.04,
+        "drag": 0.15,
+        "spin": 22,
+        "sizeEnd": 0.52,
+        "seed": 19,
+        "randomFrame": true,
+        "radial": false,
+        "burst": 0
+      }
+    },
+    {
+      "id": "outward-spray",
+      "name": "Outward water spray",
+      "assetId": "motes",
+      "visible": true,
+      "tier": 2,
+      "position": [
+        0,
+        0.1,
+        0
+      ],
+      "size": [
+        0.21,
+        0.21
+      ],
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "rotation": 0,
+      "color": "#829fff",
+      "opacity": 0.8,
+      "blend": "screen",
+      "sheet": {
+        "columns": 2,
+        "rows": 2,
+        "crop": null,
+        "margin": 0,
+        "gap": 0,
+        "first": 2,
+        "last": 3,
+        "fps": 12,
+        "mode": "loop",
+        "reverse": false,
+        "normalize": false
+      },
+      "timing": {
+        "start": 0,
+        "duration": 6,
+        "speed": 1,
+        "offset": 0.31,
+        "fadeIn": 0.12,
+        "fadeOut": 0.42
+      },
+      "kind": "emitter",
+      "emitter": {
+        "rate": 5.5,
+        "lifetime": 1.12,
+        "speed": 2.1375,
+        "spread": 50,
+        "radius": 0.13,
+        "direction": [
+          1,
+          0.36,
+          0
+        ],
+        "gravity": -1.18,
+        "drag": 0.49,
+        "spin": 36,
+        "sizeEnd": 0.4,
+        "seed": 23,
+        "randomFrame": true,
+        "radial": true,
+        "burst": 10
+      }
+    },
+    {
+      "id": "specular-glints",
+      "name": "Short glints",
+      "assetId": "glint",
+      "visible": true,
+      "tier": 2,
+      "position": [
+        0,
+        1.15,
+        0
+      ],
+      "size": [
+        0.42,
+        0.42
+      ],
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "rotation": 0,
+      "color": "#ffffff",
+      "opacity": 0.79,
+      "blend": "screen",
+      "sheet": {
+        "columns": 4,
+        "rows": 4,
+        "crop": null,
+        "margin": 0,
+        "gap": 0,
+        "first": 0,
+        "last": 15,
+        "fps": 30,
+        "mode": "once",
+        "reverse": false,
+        "normalize": false
+      },
+      "timing": {
+        "start": 0,
+        "duration": 6,
+        "speed": 1,
+        "offset": 0.31,
+        "fadeIn": 0.06,
+        "fadeOut": 0.17
+      },
+      "kind": "emitter",
+      "emitter": {
+        "rate": 5,
+        "lifetime": 0.52,
+        "speed": 0.65,
+        "spread": 50,
+        "radius": 1.1,
+        "direction": [
+          0,
+          1,
+          0
+        ],
+        "gravity": 0,
+        "drag": 0.08,
+        "spin": 22,
+        "sizeEnd": 0.8,
+        "seed": 33,
+        "randomFrame": false,
+        "radial": false,
+        "burst": 0
+      }
+    },
+    {
+      "id": "main-orbit",
+      "name": "Main water orbit",
+      "assetId": "strip",
+      "visible": true,
+      "tier": 3,
+      "position": [
+        0,
+        2.48,
+        0
+      ],
+      "size": [
+        1,
+        2.57610597594363
+      ],
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "rotation": 0,
+      "color": "#c8dcff",
+      "opacity": 0.84,
+      "blend": "screen",
+      "sheet": {
+        "columns": 1,
+        "rows": 1,
+        "crop": null,
+        "margin": 0,
+        "gap": 0,
+        "first": 0,
+        "last": 0,
+        "fps": 14,
+        "mode": "loop",
+        "reverse": false,
+        "normalize": false
+      },
+      "timing": {
+        "start": 0,
+        "duration": 6,
+        "speed": 1,
+        "offset": 0,
+        "fadeIn": 0.22,
+        "fadeOut": 0.3
+      },
+      "kind": "ribbon",
+      "ribbon": {
+        "radius": 1.64,
+        "tilt": 20,
+        "arc": 360,
+        "speed": 26,
+        "phase": 0,
+        "scroll": 0,
+        "taper": false
+      }
+    },
+    {
+      "id": "lower-trail",
+      "name": "Lower companion trail",
+      "assetId": "trail",
+      "visible": true,
+      "tier": 3,
+      "position": [
+        0,
+        2.22,
+        0
+      ],
+      "size": [
+        1,
+        1.32
+      ],
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "rotation": 0,
+      "color": "#829fff",
+      "opacity": 0.66,
+      "blend": "screen",
+      "sheet": {
+        "columns": 1,
+        "rows": 1,
+        "crop": null,
+        "margin": 0,
+        "gap": 0,
+        "first": 0,
+        "last": 0,
+        "fps": 14,
+        "mode": "loop",
+        "reverse": false,
+        "normalize": false
+      },
+      "timing": {
+        "start": 0,
+        "duration": 6,
+        "speed": 1,
+        "offset": 0,
+        "fadeIn": 0.15,
+        "fadeOut": 0.2
+      },
+      "kind": "ribbon",
+      "ribbon": {
+        "radius": 1.8204,
+        "tilt": -22,
+        "arc": 148,
+        "speed": 20.8,
+        "phase": -90,
+        "scroll": 0,
+        "taper": true
+      }
+    }
+  ]
+}

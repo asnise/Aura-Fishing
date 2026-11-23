@@ -7,6 +7,7 @@ local Shared = ReplicatedStorage:WaitForChild("Shared")
 local Registry = require(Shared.Registry)
 local Remotes = require(Shared.Remotes)
 local DailyLogin = require(Shared.DailyLogin)
+local BaitBinding = require(Shared.Items.BaitBinding)
 
 local DataService = require(script.Parent.DataService)
 
@@ -42,9 +43,7 @@ function DailyLoginService.Claim(player: Player): (boolean, string, any?)
 		profile.Lifetime.PearlsEarned = (profile.Lifetime.PearlsEarned or 0) + reward.Amount
 	elseif reward.Kind == "Bait" then
 		if reward.Id then
-			local baits = profile.Consumables.Baits or {}
-			profile.Consumables.Baits = baits
-			baits[reward.Id] = (baits[reward.Id] or 0) + reward.Amount
+			BaitBinding.Add(profile, reward.Id, reward.Amount, true)
 		end
 	end
 

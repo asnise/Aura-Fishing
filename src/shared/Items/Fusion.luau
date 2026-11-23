@@ -31,9 +31,14 @@ local function isCapBreaker(stat: string): boolean
 	return string.sub(stat, 1, 3) == "Max" and Registry.StatDefs[string.sub(stat, 4)] ~= nil
 end
 
--- Materials a Base rod can use: same rod model, not the same item, not worn.
+-- A bound Material can only transfer its mod to a bound Base rod.
 function Fusion.CanUseAsMaterial(profile: any, base: ItemTypes.Item, material: ItemTypes.Item): boolean
-	return base.Kind == "Rod" and material.Kind == "Rod" and base.Id == material.Id and base.UUID ~= material.UUID and not Inventory.IsWorn(profile, material)
+	return base.Kind == "Rod"
+		and material.Kind == "Rod"
+		and base.Id == material.Id
+		and base.UUID ~= material.UUID
+		and not Inventory.IsWorn(profile, material)
+		and (not Inventory.IsBound(material) or Inventory.IsBound(base))
 end
 
 function Fusion.ModList(rod: ItemTypes.Item, kind: string): { ItemTypes.ModEntry }
@@ -67,7 +72,7 @@ function Fusion.Plan(profile: any, base: ItemTypes.Item, material: ItemTypes.Ite
 		return nil, "Choose Prefix or Suffix"
 	end
 	if not Fusion.CanUseAsMaterial(profile, base, material) then
-		return nil, "The Material rod must be the same rod and not worn"
+		return nil, "Use an unworn matching rod. Bound Material requires a Bound Base."
 	end
 	if type(baseIndex) ~= "number" or baseIndex % 1 ~= 0 or baseIndex < 1 or baseIndex > Fusion.MaxSlots(kind) then
 		return nil, "Pick a slot on the Base rod"

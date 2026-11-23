@@ -8,6 +8,7 @@
 -- Adding a new saved field: add it to TEMPLATE. Existing saves get it automatically (Reconcile).
 
 local DataStoreService = game:GetService("DataStoreService")
+local HttpService = game:GetService("HttpService")
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -15,15 +16,18 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Shared = ReplicatedStorage:WaitForChild("Shared")
 local Registry = require(Shared.Registry)
 local Inventory = require(Shared.Inventory)
+local BaitBinding = require(Shared.Items.BaitBinding)
 local Remotes = require(Shared.Remotes)
 local Signal = require(Shared.Util.Signal)
+local ProfileLease = require(script.Parent.ProfileLease)
+local TradeJournal = require(script.Parent.TradeJournal)
 
 local GameConfig = Registry.GameConfig
 
 local DataService = {}
 DataService.ProfileLoaded = Signal.new() -- (player, profile)
 
-local SCHEMA_VERSION = 6 -- 6: Item rework (Bag = UUID items, Rods/Lines are bag items, item data reset); 5: skill points for levels already reached; 2: Bag = inventory stacks (shared/Inventory.luau); 3: coin values x10 (Balance Pass 1); 4: aura dupes -> Star Tokens, 2 pity counters
+local SCHEMA_VERSION = 7 -- 7: bound bait counts; 6: UUID items; 5: retrospective skill points.
 
 local function buildTemplate()
 	-- Rods and Lines are bag items (granted per profile by ensureGear: every item needs its own UUID).
@@ -55,11 +59,12 @@ local function buildTemplate()
 		Owned = owned,
 		Equipped = equipped,
 		Consumables = consumables,
+		BoundBaits = {}, -- bound portion of each Consumables.Baits stack
 		Auras = { Owned = {}, Equipped = nil, TotalRolls = 0, Stars = {}, StarTokens = 0 }, -- Owned[id] = 1 (dupes -> StarTokens)
 		Gacha = { Pity = {}, PityHard = {}, Pulls = {}, Claimed = {} }, -- per banner id (Config/AuraBanners)
 		Bag = {}, -- Items (shared/Items/ItemContainer): fish, spare + worn rods/lines, chests
 		Fishdex = {},
-		Settings = { LowFX = false, TargetDepth = 10, AutoDepth = false },
+		Settings = { LowFX = false, TargetDepth = 10, AutoDepth = false, MusicVolume = Registry.Sounds.Buses.Music.Default, SFXVolume = Registry.Sounds.Buses.SFX.Default },
 		Lifetime = { Caught = 0, CoinsEarned = 0, PearlsEarned = 0 },
 		NextUid = 1,
 		Pearls = 0, -- Aquarium currency (float; UI floors it)
@@ -200,6 +205,16 @@ local function sanitize(data: any)
 		resetItemsV6(data)
 		data.Version = 6
 	end
+	if data.Version < 7 then
+		BaitBinding.Migrate(data)
+		-- Existing fishing and milestone chests could have merged into the same stack.
+		for _, item in data.Bag do
+			if item.Kind == "Treasure" and not Inventory.IsBound(item) then
+				item.Bound = "Bound"
+			end
+		end
+		data.Version = 7
+	end
 	if data.Auras.Equipped and not Registry.Auras[data.Auras.Equipped] then
 		data.Auras.Equipped = nil
 	end
@@ -259,81 +274,158 @@ local function sanitize(data: any)
 		end
 	end
 	ensureGear(data)
+	if data.Equipped.Baits then
+		BaitBinding.Bind(data, data.Equipped.Baits)
+	end
 end
 
-local store: DataStore? = nil
-local storeOk, storeErr = pcall(function()
-	store = DataStoreService:GetDataStore(GameConfig.DataStoreName)
-end)
-if not storeOk then
-	warn("[DataService] DataStore unavailable, running without saves:", storeErr)
+local function getStore(name: string): DataStore?
+	local ok, store = pcall(function()
+		return DataStoreService:GetDataStore(name)
+	end)
+	if not ok then
+		warn("[DataService] DataStore unavailable:", store)
+		return nil
+	end
+	return store
 end
 
-local profiles: { [Player]: any } = {}
-local dirty: { [Player]: boolean } = {}
-local loaded: { [Player]: boolean } = {}
+local store = getStore(GameConfig.DataStoreName)
+local journalStore = getStore(GameConfig.DataStoreName .. "_Trade_v1")
+local inStudio = RunService:IsStudio()
+local studioMemory = false
+local realStorageUsed = false
+local probingStudioStorage = false
+local memoryProfiles: { [string]: any } = {}
+local memoryJournal: { [string]: any } = {}
+local closing = false
+
+local SAVE_INTERVAL = math.min(GameConfig.AutosaveInterval, 45)
+local LEASE_DURATION = SAVE_INTERVAL * 3
+local MAX_TRADE_PROFILE_BYTES = 4_000_000 -- Leave room below the DataStore value limit.
+type Session = {
+	Token: string,
+	Data: any,
+	Dirty: boolean,
+	Trade: string?,
+	Writes: number,
+	Saving: boolean,
+	Leaving: boolean,
+}
+local sessions: { [Player]: Session } = {}
 
 local function key(player: Player): string
 	return "Player_" .. player.UserId
 end
 
-local function load(player: Player): any
-	if not store then
-		return deepCopy(TEMPLATE)
+local function update(dataStore: DataStore?, memory: { [string]: any }, id: string, transform: (any) -> any): (boolean, any)
+	if studioMemory then
+		local ok, value = pcall(transform, deepCopy(memory[id]))
+		if not ok then
+			warn(`[DataService] In-memory update failed for {id}: {value}`)
+			return false, nil
+		end
+		if value ~= nil then
+			memory[id] = deepCopy(value)
+		end
+		return true, deepCopy(value)
 	end
-	for attempt = 1, 4 do
+	if not dataStore then
+		return false, nil
+	end
+	for attempt = 1, 3 do
 		local ok, result = pcall(function()
-			return (store :: DataStore):GetAsync(key(player))
+			return dataStore:UpdateAsync(id, transform)
 		end)
 		if ok then
-			return result or deepCopy(TEMPLATE)
+			realStorageUsed = true
+			return true, result
 		end
-		warn(`[DataService] load attempt {attempt} failed for {player.Name}: {result}`)
-		if RunService:IsStudio() then
-			-- Usually "Studio access to API services" is off. Play without saving.
-			warn("[DataService] Studio: enable Game Settings > Security > 'Studio Access to API Services' to test saving. Using a fresh profile.")
-			store = nil
-			return deepCopy(TEMPLATE)
+		warn(`[DataService] UpdateAsync failed for {id}: {result}`)
+		if inStudio and not realStorageUsed and dataStore == store then
+			break
 		end
-		task.wait(attempt)
+		if attempt < 3 then
+			task.wait(attempt)
+		end
 	end
-	return nil
+	return false, nil
 end
 
-local function save(player: Player): boolean
-	local data = profiles[player]
-	if not data or not loaded[player] then
+function DataService.UpdateTradeJournal(id: string, transform: (any) -> any): (boolean, any)
+	return update(journalStore, memoryJournal, id, transform)
+end
+
+local function updateProfile(player: Player, transform: (any) -> any): (boolean, any)
+	return update(store, memoryProfiles, key(player), transform)
+end
+
+local function releaseLease(player: Player, token: string)
+	updateProfile(player, function(current)
+		if ProfileLease.Owns(current, token) then
+			current.ServerLease = nil
+			return current
+		end
+		return nil
+	end)
+end
+
+local function renew(data: any, token: string): any
+	data.ServerLease = { Token = token, ExpiresAt = os.time() + LEASE_DURATION }
+	return data
+end
+
+local function currentData(data: any): any
+	data.ServerLease = nil
+	return data
+end
+
+local function save(player: Player, release: boolean?): boolean
+	local session = sessions[player]
+	if not session or session.Trade or (session.Leaving and not release) then
 		return false
 	end
-	data.LastOnline = os.time()
-	if not store then
-		return true -- Studio without API access: nothing to persist
+	session.Writes += 1
+	while session.Saving do
+		task.wait()
 	end
-	local copy = deepCopy(data)
-	for attempt = 1, 3 do
-		local ok, err = pcall(function()
-			(store :: DataStore):UpdateAsync(key(player), function()
-				return copy
-			end)
-		end)
-		if ok then
-			return true
+	session.Saving = true
+	session.Data.LastOnline = os.time()
+	local snapshot = deepCopy(session.Data)
+	local ok, saved = updateProfile(player, function(current)
+		if not ProfileLease.CanWrite(current, session.Token, nil) then
+			return nil
 		end
-		warn(`[DataService] save attempt {attempt} failed for {player.Name}: {err}`)
-		task.wait(attempt)
+		if release then
+			return snapshot
+		end
+		return renew(snapshot, session.Token)
+	end)
+	session.Saving = false
+	session.Writes -= 1
+	if ok and not saved and not session.Leaving then
+		session.Leaving = true
+		sessions[player] = nil
+		player:Kick("Your save is active on another server. Please rejoin.")
 	end
-	return false
+	return ok and saved ~= nil
+end
+
+local function releaseSession(player: Player)
+	save(player, true)
+	sessions[player] = nil
 end
 
 function DataService.Get(player: Player): any
-	return profiles[player]
+	local session = sessions[player]
+	return if session and not session.Trade and not session.Leaving then session.Data else nil
 end
 
 function DataService.WaitFor(player: Player): any
-	while player.Parent and not profiles[player] do
+	while player.Parent and not DataService.Get(player) do
 		task.wait()
 	end
-	return profiles[player]
+	return DataService.Get(player)
 end
 
 -- Saves right away (yields). true = the save is stored. Used before confirming a Robux receipt.
@@ -342,45 +434,196 @@ function DataService.SaveNow(player: Player): boolean
 end
 
 function DataService.MarkDirty(player: Player)
-	dirty[player] = true
+	local session = sessions[player]
+	if session then
+		session.Dirty = true
+	end
+end
+
+function DataService.TradeAvailable(): boolean
+	return not closing and (studioMemory or (store ~= nil and journalStore ~= nil))
+end
+
+function DataService.LockTrade(first: Player, second: Player, record: TradeJournal.Record): (boolean, string?)
+	local a, b = sessions[first], sessions[second]
+	if not DataService.TradeAvailable() or not a or not b
+		or a.Trade or a.Leaving or a.Writes > 0 or b.Trade or b.Leaving or b.Writes > 0
+	then
+		return false, "A save is in progress. Confirm again in a moment."
+	end
+	local committed = table.clone(record)
+	committed.Status = "Committed"
+	for i, session in { a, b } do
+		local projected = deepCopy(session.Data)
+		projected.PendingTrade = record.Id
+		TradeJournal.Settle(projected, record.Offers[i].UserId, committed)
+		renew(projected, session.Token)
+		local ok, encoded = pcall(HttpService.JSONEncode, HttpService, projected)
+		if not ok or #encoded > MAX_TRADE_PROFILE_BYTES then
+			return false, "The resulting inventory exceeds the save limit."
+		end
+	end
+	a.Trade = record.Id
+	b.Trade = record.Id
+	return true
+end
+
+function DataService.PrepareTrade(player: Player, id: string): boolean
+	local session = sessions[player]
+	if not session or session.Trade ~= id or session.Leaving then
+		return false
+	end
+	local snapshot = deepCopy(session.Data)
+	snapshot.PendingTrade = id
+	snapshot.LastOnline = os.time()
+	local ok, saved = updateProfile(player, function(current)
+		if not ProfileLease.CanWrite(current, session.Token, nil) and not ProfileLease.CanWrite(current, session.Token, id) then
+			return nil
+		end
+		return renew(snapshot, session.Token)
+	end)
+	return ok and saved ~= nil
+end
+
+local function settle(player: Player, token: string, record: TradeJournal.Record, abortedSnapshot: any?): (boolean, any)
+	return updateProfile(player, function(current)
+		if not ProfileLease.Owns(current, token) or (current.PendingTrade and current.PendingTrade ~= record.Id) then
+			return nil
+		end
+		if record.Status == "Committed" and not current.PendingTrade and current.LastTrade ~= record.Id then
+			return nil
+		end
+		-- In a live session, an abort also keeps progress that preceded a failed prepare.
+		local data = if record.Status == "Aborted" and abortedSnapshot then abortedSnapshot else current
+		if record.Status == "Aborted" then
+			data.PendingTrade = record.Id
+		end
+		return renew(TradeJournal.Settle(data, player.UserId, record), token)
+	end)
+end
+
+local function closeOfflineTrade(player: Player, session: Session, id: string)
+	local snapshot = deepCopy(session.Data)
+	snapshot.LastOnline = os.time()
+	updateProfile(player, function(current)
+		return ProfileLease.CloseTrade(current, session.Token, id, snapshot)
+	end)
+	sessions[player] = nil
+end
+
+function DataService.FinishTrade(player: Player, id: string, record: TradeJournal.Record?): boolean
+	local session = sessions[player]
+	if not session or session.Trade ~= id or session.Leaving then
+		return true
+	end
+	if record then
+		local ok, saved = settle(player, session.Token, record, deepCopy(session.Data))
+		if session.Leaving then
+			return true
+		end
+		if not ok then
+			return false
+		end
+		if not saved then
+			sessions[player] = nil
+			if player.Parent then
+				player:Kick("Your trade will be recovered on rejoin.")
+			end
+			return true
+		end
+		session.Data = currentData(saved)
+	end
+	session.Trade = nil
+	session.Dirty = true
+	return true
 end
 
 -- Dev tool (DevService "!reset"): replace the profile with a fresh template. Saved on the next autosave.
 function DataService.Reset(player: Player)
-	if profiles[player] then
+	local session = sessions[player]
+	if session and DataService.Get(player) and session.Writes == 0 then
 		local fresh = deepCopy(TEMPLATE)
 		sanitize(fresh) -- starter rod + line with their own UUIDs
-		profiles[player] = fresh
-		dirty[player] = true
+		session.Data = fresh
+		session.Dirty = true
 	end
 end
 
 function DataService.NextUid(player: Player): string
-	local data = profiles[player]
+	local data = DataService.Get(player)
 	local uid = tostring(data.NextUid)
 	data.NextUid += 1
 	return uid
+end
+
+local function load(player: Player, token: string): any
+	local function claim(current)
+		return ProfileLease.Claim(current or deepCopy(TEMPLATE), token, os.time(), LEASE_DURATION)
+	end
+	for attempt = 1, 8 do
+		if not player.Parent or closing then
+			return nil
+		end
+		while probingStudioStorage do
+			task.wait()
+		end
+		local probe = inStudio and not realStorageUsed and not studioMemory
+		if probe then
+			probingStudioStorage = true
+		end
+		local ok, saved = updateProfile(player, claim)
+		if probe then
+			if not ok then
+				warn("[DataService] Studio API services unavailable. Using in-memory saves for this play session.")
+				studioMemory = true
+			end
+			probingStudioStorage = false
+			if studioMemory then
+				ok, saved = updateProfile(player, claim)
+			end
+		end
+		if ok and saved then
+			return saved
+		end
+		if attempt < 8 then
+			task.wait(2)
+		end
+	end
+	return nil
 end
 
 function DataService.Init()
 	local sync = Remotes.Event("DataSync")
 
 	local function onPlayerAdded(player: Player)
-		local data = load(player)
-		if not player.Parent then
-			return
+		local token = Inventory.NewUUID()
+		local data = load(player, token)
+		if data and data.PendingTrade then
+			local record = TradeJournal.Decide(DataService.UpdateTradeJournal, data.PendingTrade, false)
+			if record then
+				local _, recovered = settle(player, token, record, nil)
+				data = recovered
+			else
+				data = nil
+			end
 		end
 		if not data then
-			player:Kick("Could not load your data. Please rejoin.")
+			if player.Parent then
+				player:Kick("Could not load or recover your save. Please rejoin.")
+			end
+			task.spawn(releaseLease, player, token)
 			return
 		end
+		if not player.Parent or closing then
+			releaseLease(player, token)
+			return
+		end
+		currentData(data)
 		local version = data.Version or 1 -- read before reconcile fills Version from the template
 		reconcile(data, TEMPLATE)
 		data.Version = version
 		sanitize(data)
-		profiles[player] = data
-		loaded[player] = true
-		dirty[player] = true
+		sessions[player] = { Token = token, Data = data, Dirty = true, Writes = 0, Saving = false, Leaving = false }
 
 		local ls = Instance.new("Folder")
 		ls.Name = "leaderstats"
@@ -396,9 +639,7 @@ function DataService.Init()
 	end
 
 	Remotes.Event("ClientReady").OnServerEvent:Connect(function(player)
-		if profiles[player] then
-			dirty[player] = true
-		end
+		DataService.MarkDirty(player)
 	end)
 
 	Players.PlayerAdded:Connect(onPlayerAdded)
@@ -406,32 +647,38 @@ function DataService.Init()
 		task.spawn(onPlayerAdded, p)
 	end
 
-	Players.PlayerRemoving:Connect(function(player)
-		save(player)
-		profiles[player] = nil
-		dirty[player] = nil
-		loaded[player] = nil
-	end)
+	local function leave(player: Player)
+		local session = sessions[player]
+		if session and not session.Leaving then
+			session.Leaving = true
+			if session.Trade then
+				closeOfflineTrade(player, session, session.Trade)
+			else
+				releaseSession(player)
+			end
+		end
+	end
+	Players.PlayerRemoving:Connect(leave)
 
 	game:BindToClose(function()
-		if RunService:IsStudio() and not store then
-			return
+		closing = true
+		for player in sessions do
+			task.spawn(leave, player)
 		end
-		local threads = {}
-		for _, p in Players:GetPlayers() do
-			table.insert(threads, task.spawn(save, p))
+		local deadline = os.clock() + 25
+		while next(sessions) and os.clock() < deadline do
+			task.wait(0.2)
 		end
-		task.wait(3)
 	end)
 
 	-- Replicate dirty profiles (batched, max ~10 per second per player).
 	task.spawn(function()
 		while true do
 			task.wait(0.1)
-			for player, isDirty in dirty do
-				if isDirty and profiles[player] then
-					dirty[player] = false
-					local data = profiles[player]
+			for player, session in sessions do
+				if session.Dirty and not session.Trade and not session.Leaving then
+					session.Dirty = false
+					local data = session.Data
 					local ls = player:FindFirstChild("leaderstats")
 					if ls then
 						(ls:FindFirstChild("Coins") :: IntValue).Value = data.Coins;
@@ -446,7 +693,7 @@ function DataService.Init()
 	-- Autosave
 	task.spawn(function()
 		while true do
-			task.wait(GameConfig.AutosaveInterval)
+			task.wait(SAVE_INTERVAL)
 			for _, p in Players:GetPlayers() do
 				task.spawn(save, p)
 			end

@@ -17,6 +17,7 @@ local MenuManager = require(UI.MenuManager)
 local AuraReel = require(UI.AuraReel)
 local GachaPage = require(UI.GachaPage)
 local HUD = require(script.Parent.HUDController)
+local SoundController = require(script.Parent.SoundController)
 local DataController = require(script.Parent.DataController)
 
 local T = New.Theme
@@ -44,6 +45,11 @@ local ctx = {
 		HUD.Notify(text, color)
 	end,
 	playReveal = function(auraId: string, opts: any)
+		local aura = Registry.Auras[auraId]
+		local tier = aura and Registry.Rarities[aura.Rarity] and Registry.Rarities[aura.Rarity].Tier or 1
+		SoundController.Play("gacha_buildup")
+		local result = if tier >= 5 then "gacha_legendary" elseif tier >= 4 then "gacha_epic" else "gacha_common"
+		task.delay(1.2, SoundController.Play, result) -- after the build-up
 		AuraReel.Play(auraId, opts)
 	end,
 	reelPlaying = function(): boolean
@@ -79,18 +85,32 @@ local ctx = {
 	end,
 }
 
+local ensuring = false
 local function ensure()
+	-- Init and the first Open both call this and Baked.Get can yield: without the guard two copies of the page get
+	-- built and the one the controller does not track stays on screen.
+	while ensuring do
+		task.wait()
+	end
 	if gui then
 		return
 	end
-	gui = Baked.Get("GachaPage")
-	gui.Enabled = false
-	local w = Baked.Find(gui, "Window")
-	w.Visible = true
-	for _, path in { "Canvas/Rail", "Canvas/InfoCard/PityNote", "Canvas/RollBar/Roll1", "Canvas/Options/Auto", "Canvas/PayToggle/Tokens", "RatesPopup/Panel/List", "MilestonesPopup/Panel/Grid", "Summary/Panel/Grid" } do
-		Baked.Find(w, path) -- fail early with a clear message if the baked screen is outdated (concept D layout)
+	ensuring = true
+	local ok, err = pcall(function()
+		local built = Baked.Get("GachaPage")
+		built.Enabled = false
+		gui = built
+		local w = Baked.Find(gui, "Window")
+		w.Visible = true
+		for _, path in { "Canvas/Rail", "Canvas/InfoCard/PityNote", "Canvas/RollBar/Roll1", "Canvas/Options/Auto", "Canvas/PayToggle/Tokens", "RatesPopup/Panel/List", "MilestonesPopup/Panel/Grid", "Summary/Panel/Grid" } do
+			Baked.Find(w, path) -- fail early with a clear message if the baked screen is outdated (concept D layout)
+		end
+		GachaPage.Bind(gui, ctx) -- scales the 1280x720 canvas itself
+	end)
+	ensuring = false
+	if not ok then
+		error(err, 0)
 	end
-	GachaPage.Bind(gui, ctx) -- scales the 1280x720 canvas itself
 end
 
 local function bannerOpen(b: any): boolean

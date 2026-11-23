@@ -82,8 +82,8 @@ function Inventory.NewFish(fishId: string, mutation: string?, weight: number, va
 	return { UUID = Inventory.NewUUID(), Id = fishId, Kind = "Fish", Mutation = mutation, Weight = weight, Value = value, Tags = tags }
 end
 
-function Inventory.NewTreasure(treasureId: string): Item
-	return { UUID = Inventory.NewUUID(), Id = treasureId, Kind = "Treasure", Count = 1 }
+function Inventory.NewTreasure(treasureId: string, bound: boolean?): Item
+	return { UUID = Inventory.NewUUID(), Id = treasureId, Kind = "Treasure", Count = 1, Bound = if bound then "Bound" else nil }
 end
 
 -- A fresh Rod or Line. Gifts (Exclusive) are Bound: no trade, no sell. dropProfile (Config/ModifierDefs.Profiles)
@@ -275,8 +275,8 @@ function Inventory.AddFish(profile: any, fishId: string, mutation: string?, weig
 	return Inventory.Add(profile, Inventory.NewFish(fishId, mutation, weight, value, tags))
 end
 
-function Inventory.AddTreasure(profile: any, treasureId: string): Item?
-	return Inventory.Add(profile, Inventory.NewTreasure(treasureId))
+function Inventory.AddTreasure(profile: any, treasureId: string, bound: boolean?): Item?
+	return Inventory.Add(profile, Inventory.NewTreasure(treasureId, bound))
 end
 
 -- Removes the whole entry (returns it) or nil.
@@ -293,12 +293,12 @@ end
 
 function Inventory.IsBound(item: Item): boolean
 	local def = Registry.Items[item.Id]
-	return (item.Bound or (def and def.Bound) or "Unbound") ~= "Unbound"
+	return (def ~= nil and def.Bound ~= "Unbound") or (item.Bound ~= nil and item.Bound ~= "Unbound")
 end
 
 function Inventory.CanTrade(profile: any, item: Item): (boolean, string?)
 	local def = Registry.Items[item.Id]
-	if not def or not def.IsTradable or item.Tradable == false then
+	if not def or def.Category ~= item.Kind or not def.IsTradable or item.Tradable == false then
 		return false, "This item cannot be traded."
 	end
 	if Inventory.IsBound(item) then
@@ -325,6 +325,9 @@ end
 -- Coins for selling one bag entry (0 = cannot be sold). Fish: Value * sellMultiplier * hot fish bonus
 -- (noHot skips it). Rod/Line: fixed share of what was paid, no multiplier (no money printer).
 function Inventory.SellValue(item: Item, sellMultiplier: number, noHot: boolean?): number
+	if Inventory.IsBound(item) or item.Sellable == false then
+		return 0
+	end
 	if item.Kind == "Fish" then
 		local hot = if noHot then 1 else HotFish.Mult(item.Id)
 		return math.floor((item.Value or 0) * sellMultiplier * hot + 0.5)
@@ -332,7 +335,7 @@ function Inventory.SellValue(item: Item, sellMultiplier: number, noHot: boolean?
 	local cat = GEAR_CATEGORY[item.Kind]
 	local def = cat and Registry.Equipment[cat].Items[item.Id]
 	local meta = Registry.Items[item.Id]
-	if not def or not meta or not meta.IsSellable or item.Sellable == false or def.Currency ~= "Coins" then
+	if not def or not meta or not meta.IsSellable or def.Currency ~= "Coins" then
 		return 0
 	end
 	-- mods add value by rarity (CFG.ModSellBonus, share of the base price)
@@ -369,12 +372,15 @@ end
 
 -- nil = can be sold, otherwise the reason (worn gear, bound, chests...).
 function Inventory.SellBlock(profile: any, item: Item): string?
+	if Inventory.IsBound(item) or item.Sellable == false then
+		return "This item can't be sold"
+	end
 	if Inventory.IsWorn(profile, item) then
 		return "Take it off first"
 	end
 	-- free starter Rods / Lines can be thrown away for 0 coins; everything else needs a sell value
 	local gearKind = item.Kind == "Rod" or item.Kind == "Line"
-	if item.Kind ~= "Fish" and Inventory.SellValue(item, 1) <= 0 and not (gearKind and item.Sellable ~= false) then
+	if item.Kind ~= "Fish" and Inventory.SellValue(item, 1) <= 0 and not gearKind then
 		return "This item can't be sold"
 	end
 	return nil
@@ -384,7 +390,7 @@ end
 function Inventory.HotBonus(profile: any, sellMultiplier: number): number
 	local bonus = 0
 	for _, s in profile.Bag do
-		if s.Kind == "Fish" then
+		if s.Kind == "Fish" and not Inventory.SellBlock(profile, s) then
 			bonus += Inventory.SellValue(s, sellMultiplier) - Inventory.SellValue(s, sellMultiplier, true)
 		end
 	end
@@ -395,7 +401,7 @@ end
 function Inventory.SellAllPreview(profile: any, sellMultiplier: number): (number, number, number)
 	local total, count, mutated = 0, 0, 0
 	for _, s in profile.Bag do
-		if s.Kind == "Fish" then
+		if s.Kind == "Fish" and not Inventory.SellBlock(profile, s) then
 			total += Inventory.SellValue(s, sellMultiplier)
 			count += 1
 			if s.Mutation then

@@ -14,6 +14,7 @@
 local MarketplaceService = game:GetService("MarketplaceService")
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local RunService = game:GetService("RunService")
 
 local Shared = ReplicatedStorage:WaitForChild("Shared")
 local Registry = require(Shared.Registry)
@@ -22,6 +23,7 @@ local Signal = require(Shared.Util.Signal)
 local ProductTypes = require(Shared.Config.Products)
 local Boosts = require(Shared.Boosts)
 local Inventory = require(Shared.Inventory)
+local BaitBinding = require(Shared.Items.BaitBinding)
 
 local DataService = require(script.Parent.DataService)
 
@@ -98,12 +100,15 @@ local function refreshPasses(player: Player, data: any)
 			end
 		elseif pass.PassId > 0 then
 			local owns = ownsOnRoblox(player, pass.PassId)
-			if not player.Parent then
+			local live = DataService.WaitFor(player)
+			if not live then
 				return
 			end
+			data = live
 			if owns == true and data.Passes[key] ~= "Owned" then
 				MonetizationService.SetPass(player, key, "Owned")
-			elseif owns == false and data.Passes[key] == "Owned" then
+			elseif owns == false and data.Passes[key] == "Owned" and not RunService:IsStudio() then
+				-- Studio purchases are simulated: Roblox never reports them as owned, so only live servers revoke
 				MonetizationService.SetPass(player, key, nil) -- refunded / removed
 			end
 		end
@@ -128,8 +133,11 @@ local function giveReward(data: any, r: ProductTypes.Reward, sign: number, chang
 		data.Coins += amount
 		data.Lifetime.CoinsEarned += amount
 	elseif r.Kind == "Bait" then
-		local stack = data.Consumables.Baits
-		stack[r.Id :: string] = math.max(0, (stack[r.Id :: string] or 0) + amount)
+		if amount > 0 then
+			BaitBinding.Add(data, r.Id :: string, amount, true)
+		else
+			BaitBinding.RemoveBound(data, r.Id :: string, -amount)
+		end
 	elseif r.Kind == "Boost" then
 		-- rollback (sign -1) takes the same seconds back off the end time
 		Boosts.Add(data, r.Id :: string, amount)
@@ -150,7 +158,9 @@ local function giveReward(data: any, r: ProductTypes.Reward, sign: number, chang
 				end
 			end
 			if sign > 0 then
-				Inventory.Add(data, Inventory.NewGear(category, r.Id :: string), true)
+				local gear = Inventory.NewGear(category, r.Id :: string)
+				gear.Bound = "Bound"
+				Inventory.Add(data, gear, true)
 				return true
 			end
 			return false
@@ -266,7 +276,7 @@ function MonetizationService.Init()
 
 	MarketplaceService.PromptGamePassPurchaseFinished:Connect(function(player, passId, purchased)
 		local key = passByRobloxId[passId]
-		if purchased and key then
+		if purchased and key and DataService.WaitFor(player) then
 			MonetizationService.SetPass(player, key, "Owned")
 			notify(player, `Thanks! {Products.Passes[key].Name} is now active.`, GOOD)
 		end

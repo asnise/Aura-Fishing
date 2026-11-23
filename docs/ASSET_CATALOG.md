@@ -222,6 +222,7 @@
 | `ui/icons/hook_catch` | — (library only) |  |
 | `auras/fx_ring` | — (library only) |  |
 | `ui/icons/statscodex` | Main Menu (Stats Codex) |  |
+| `ui/icons/trade_license` | Economy · Store (Trade License) |  |
 
 ## 3. Figma components (rebuild these as Roblox templates / `UI/New` helpers)
 

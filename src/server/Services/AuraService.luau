@@ -12,6 +12,7 @@ local Registry = require(Shared.Registry)
 local Remotes = require(Shared.Remotes)
 local Roll = require(Shared.Roll)
 local Inventory = require(Shared.Inventory)
+local BaitBinding = require(Shared.Items.BaitBinding)
 local Format = require(Shared.Util.Format)
 local AuraStars = require(Shared.AuraStars)
 local Signal = require(Shared.Util.Signal)
@@ -282,12 +283,12 @@ function AuraService.ClaimMilestone(player: Player, bannerId: any, pulls: any): 
 		msg = `+{m.Amount} {string.lower(m.Kind)}`
 	elseif m.Kind == "Bait" then
 		local id = m.Id :: string
-		data.Consumables.Baits[id] = (data.Consumables.Baits[id] or 0) + (m.Amount or 1)
+		BaitBinding.Add(data, id, m.Amount or 1, true)
 		msg = `+{m.Amount or 1} {Registry.Equipment.Baits.Items[id].Name}`
 	elseif m.Kind == "Treasure" then
 		local given = 0
 		for _ = 1, m.Amount or 1 do
-			if Inventory.AddTreasure(data, m.Id :: string) then
+			if Inventory.AddTreasure(data, m.Id :: string, true) then
 				given += 1
 			end
 		end

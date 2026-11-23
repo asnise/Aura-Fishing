@@ -352,7 +352,7 @@ function Screen.Build(): ScreenGui
 		Size = UDim2.new(0.6, 0, 0, 200),
 		BackgroundTransparency = 1,
 		Parent = gui,
-		[New.Children] = { New("UIListLayout", { Padding = UDim.new(0, 2), HorizontalAlignment = Enum.HorizontalAlignment.Center, SortOrder = Enum.SortOrder.LayoutOrder }) },
+		[New.Children] = { New("UIListLayout", { Padding = UDim.new(0, 8), HorizontalAlignment = Enum.HorizontalAlignment.Center, SortOrder = Enum.SortOrder.LayoutOrder }) },
 	})
 	return gui
 end

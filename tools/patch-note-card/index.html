@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura Fishing - Field Journal Patch Notes</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dock-container">
+    <!-- Top Game Control Bar -->
+    <header class="game-topbar">
+      <div class="bar-left">
+        <span class="game-logo">AURA FISHING</span>
+        <span class="bar-title">Field Journal Generator</span>
+      </div>
+
+      <div class="bar-center">
+        <button id="btnReroll" class="btn-cozy btn-coral" title="สุ่มสติกเกอร์และเลย์เอาต์ใหม่ (Space / R)">
+          <span>สุ่มสติกเกอร์ใหม่ (Space)</span>
+        </button>
+
+        <div class="seed-input-wrap">
+          <label for="inputSeed">SEED</label>
+          <input type="number" id="inputSeed" step="1">
+        </div>
+
+        <div class="pill-group">
+          <button class="pill-btn active" data-ratio="portrait">Portrait 4:5</button>
+          <button class="pill-btn" data-ratio="landscape">Banner 16:9</button>
+          <button class="pill-btn" data-ratio="square">Square 1:1</button>
+        </div>
+      </div>
+
+      <div class="bar-right">
+        <button id="btnToggleEditor" class="btn-cozy btn-sand" title="แก้ไขข้อความในสมุดจด">
+          <span>แก้ไขเนื้อหา</span>
+        </button>
+
+        <button id="btnCopyImage" class="btn-cozy btn-sand" title="คัดลอกภาพ PNG (2x) ไปยังคลิปบอร์ด">
+          <span>คัดลอกรูป</span>
+        </button>
+
+        <button id="btnDownloadPng" class="btn-cozy btn-save" title="ดาวน์โหลดภาพ PNG คุณภาพสูง">
+          <span>บันทึกภาพ PNG (2x)</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Viewport -->
+    <main class="viewport">
+      <div class="canvas-shadow-wrap" id="boardWrap">
+        <canvas id="boardCanvas"></canvas>
+      </div>
+    </main>
+
+    <!-- Slide-out Text Content Editor -->
+    <aside class="content-drawer" id="contentDrawer">
+      <div class="drawer-header">
+        <h3>แก้ไขข้อมูล Patch Note</h3>
+        <button id="btnCloseDrawer" class="btn-close-circle" aria-label="ปิด">X</button>
+      </div>
+      
+      <div class="drawer-body">
+        <div class="field-row">
+          <label for="fldTitle">หัวข้อประกาศ</label>
+          <input type="text" id="fldTitle" value="PATCH HIGHLIGHTS">
+        </div>
+        
+        <div class="field-cols">
+          <div class="field-row">
+            <label for="fldDate">ช่วงวันที่</label>
+            <input type="text" id="fldDate" value="22-23 พ.ย. 2026">
+          </div>
+          <div class="field-row">
+            <label for="fldBuild">เวอร์ชัน Build</label>
+            <input type="text" id="fldBuild" value="BUILD v6.0">
+          </div>
+        </div>
+
+        <div class="drawer-divider"></div>
+        <div class="sections-list" id="drawerSections"></div>
+        
+        <div class="drawer-footer">
+          <button id="btnResetData" class="btn-cozy btn-sand btn-full">รีเซ็ตเป็นค่าเริ่มต้น</button>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="toast-bubble" id="toast" role="status"></div>
+
+  <script src="assets/sticker-art.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

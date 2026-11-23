@@ -10,6 +10,7 @@ local T = New.Theme
 local Screen = { Name = "MainMenu" }
 local CODEX_TILE = { Id = "StatsCodex", Label = "Stats Codex", Tint = T.OnAccent }
 local DAILY_TILE = { Id = "DailyLogin", Label = "Daily", Tint = T.TintButter, Icon = "ui/icons/daily_login" }
+local TRADE_TILE = { Id = "Trade", Tint = T.TintMint, Icon = "ui/icons/trade_license" }
 
 -- Tile order = Figma grid order (Economy 7 "Main Menu hub": 13 tiles, 4 per row). Tint = icon circle
 -- colour; Icon overrides the default key ui/icons/<id lowercased>.
@@ -29,6 +30,7 @@ Screen.Tiles = {
 	{ Id = "Settings", Tint = T.TintSand },
 	CODEX_TILE,
 	DAILY_TILE,
+	TRADE_TILE,
 }
 local COLS = 4
 local TILE_W, TILE_H = 84, 94 -- 4 x 84 = 336 (grid width), 4 rows x 94 = 376 (fits the 379 grid)
@@ -131,6 +133,19 @@ end
 function Screen.EnsureDailyTile(grid: ScrollingFrame)
 	if not grid:FindFirstChild(DAILY_TILE.Id) then
 		tile(grid, table.find(Screen.Tiles, DAILY_TILE) :: number, DAILY_TILE)
+	end
+end
+
+function Screen.EnsureTradeTile(grid: ScrollingFrame)
+	local existing = grid:FindFirstChild(TRADE_TILE.Id)
+	if not existing then
+		tile(grid, table.find(Screen.Tiles, TRADE_TILE) :: number, TRADE_TILE)
+	else
+		local circle = existing:FindFirstChild("Circle")
+		local icon = circle and circle:FindFirstChild("Icon")
+		if icon and icon:IsA("ImageLabel") then
+			New.SetImageKey(icon, TRADE_TILE.Icon or "ui/icons/trade_license", TRADE_TILE.Tint)
+		end
 	end
 end
 

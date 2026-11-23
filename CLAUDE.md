@@ -59,6 +59,7 @@ Talk to the user in Thai; code, identifiers and comments in English.
   Chip component icons: `--root 3487:4313 --set "Type=Coins/Icon=ui/status/coin" ...`. Art Library section lives at x=7100 on page Out Space.
 
 ## Handoff / assets
+- **Sound system (BGM + SFX): `docs/HANDOFF_SOUND.md`** (`Config/Sounds` + `Controllers/SoundController`, placeholders until audio is uploaded).
 - **Items, Modifiers, Rod Fusion (latest, start here): `docs/HANDOFF_ITEMS_MODS_FUSION.md`**.
 - **Item rework + Bag Upgrade handoff: `docs/HANDOFF_ITEM_REWORK.md`** (UUID items, save v6, open tasks).
 - **Latest full handoff (any agent): `docs/HANDOFF_ANTIGRAVITY.md`** — state after C3–C19, rules (Figma first, rates per second), next tasks, Figma node ids.

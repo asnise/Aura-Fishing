@@ -14,6 +14,7 @@ local Registry = require(Shared.Registry)
 local Remotes = require(Shared.Remotes)
 local Roll = require(Shared.Roll)
 local Inventory = require(Shared.Inventory)
+local BaitBinding = require(Shared.Items.BaitBinding)
 
 local DataService = require(script.Parent.DataService)
 local ProgressionService = require(script.Parent.ProgressionService)
@@ -78,6 +79,7 @@ COMMANDS.give = {
 	Usage = "give gems|coins|pearls <n> | give rods <id> [profile] | give bait <id> <n> | give chest <id> <n> | give fish <id> <n> [mutation] | give aura <id> [n]",
 	Run = function(player, data, a)
 		local kind = string.lower(a[1] or "")
+		local boundGift = not RunService:IsStudio()
 		if kind == "gems" or kind == "coins" or kind == "pearls" then
 			local n = num(a[2], 1000)
 			local key = if kind == "gems" then "Gems" elseif kind == "pearls" then "Pearls" else "Coins"
@@ -89,7 +91,7 @@ COMMANDS.give = {
 				return "unknown bait"
 			end
 			local n = num(a[3], 10)
-			data.Consumables.Baits[id] = (data.Consumables.Baits[id] or 0) + n
+			BaitBinding.Add(data, id, n, boundGift)
 			return `+{n} {id}`
 		elseif kind == "chest" or kind == "treasure" then
 			local id = findId(Registry.Treasures, a[2] or "TreasureChest")
@@ -98,7 +100,7 @@ COMMANDS.give = {
 			end
 			local n, given = num(a[3], 1), 0
 			for _ = 1, n do
-				if Inventory.AddTreasure(data, id) then
+				if Inventory.AddTreasure(data, id, boundGift) then
 					given += 1
 				end
 			end
@@ -112,6 +114,9 @@ COMMANDS.give = {
 				return "unknown item"
 			end
 			local rod = Inventory.NewGear(gearCat, id, profile)
+			if boundGift then
+				rod.Bound = "Bound"
+			end
 			Inventory.Add(data, rod, true)
 			local parts = {}
 			local function describe(list: { any }?)
@@ -134,7 +139,11 @@ COMMANDS.give = {
 			local rng = Random.new()
 			for _ = 1, n do
 				local entry = { Uid = "dev", Fish = id, Weight = Roll.Weight(id, rng), Mutation = mut, Mult = 1 }
-				if Inventory.AddFish(data, id, mut, entry.Weight, Roll.Value(entry, 1), { "Manual" }) then
+				local fish = Inventory.AddFish(data, id, mut, entry.Weight, Roll.Value(entry, 1), { "Manual" })
+				if fish then
+					if boundGift then
+						fish.Bound = "Bound"
+					end
 					given += 1
 					local dex = data.Fishdex[id] or { Count = 0, Best = 0 }
 					dex.Count += 1

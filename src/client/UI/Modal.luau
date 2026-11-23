@@ -1,7 +1,7 @@
 --!nonstrict
 -- Generic confirm modal (Figma 14). Screen is baked in StarterGui ("Modal"); this module only binds it.
 --   Modal.Confirm({ Title = "Sell all 18 fish?", Message = "...", ConfirmText = "Sell", ConfirmColor = New.Theme.Gold,
---                   Icon = "ui/status/sell_bag" }, function() ... end)
+--                   Icon = "ui/status/sell_bag", CancelText?, OnCancel? }, function() ... end)
 
 local New = require(script.Parent.New)
 local Baked = require(script.Parent.Baked)
@@ -13,6 +13,7 @@ local Modal = {}
 local gui: any = nil
 local refs: any = nil
 local pending: (() -> ())? = nil
+local pendingCancel: (() -> ())? = nil
 
 local function ensure()
 	if gui then
@@ -29,10 +30,17 @@ local function ensure()
 		Confirm = Baked.Find(g, "Window/Footer/Confirm"),
 	}
 	New.FitWindow(refs.Window, Vector2.new(600, 349))
-	refs.Cancel.Activated:Connect(Modal.Close)
+	refs.Cancel.Activated:Connect(function()
+		local cb = pendingCancel
+		Modal.Close()
+		if cb then
+			cb()
+		end
+	end)
 	refs.Confirm.Activated:Connect(function()
 		local cb = pending
 		Modal.Close()
+		New.Sfx("ui_confirm")
 		if cb then
 			cb()
 		end
@@ -41,6 +49,7 @@ end
 
 function Modal.Close()
 	pending = nil
+	pendingCancel = nil
 	if gui then
 		gui.Enabled = false
 	end
@@ -64,6 +73,7 @@ function Modal.Confirm(opts: { [string]: any }, onConfirm: () -> ())
 	if type(opts.Icon) == "string" then
 		New.SetImageKey(refs.Icon, opts.Icon, opts.IconColor, opts.IconText)
 	end
+	pendingCancel = opts.OnCancel -- optional: runs when Cancel is pressed
 	pending = onConfirm;
 	(gui :: any).Enabled = true
 end

@@ -41,6 +41,29 @@ local anchor: BasePart? = nil
 local talkIndex: { [string]: number } = {}
 local typing = 0 -- token of the running typewriter
 local busy = false
+local controls: any = nil -- Roblox PlayerModule controls: disabled while talking so the player cannot move
+
+-- Frozen while a dialogue is open (walk away no longer closes it: use the X or pick a choice)
+local function setMoveEnabled(on: boolean)
+	if not controls then
+		local module = Players.LocalPlayer:FindFirstChild("PlayerScripts") and Players.LocalPlayer.PlayerScripts:FindFirstChild("PlayerModule")
+		if not module then
+			return
+		end
+		local ok, result = pcall(function()
+			return require(module):GetControls()
+		end)
+		if not ok then
+			return
+		end
+		controls = result
+	end
+	if on then
+		controls:Enable()
+	else
+		controls:Disable()
+	end
+end
 
 local function sellPreview(): (number, number, number)
 	local profile = DataController.Profile
@@ -244,6 +267,7 @@ function DialogueController.Open(id: string)
 	local _, fish = sellPreview()
 	local pool = if npc.Busy and fish > 0 then npc.Busy else npc.Greetings
 	gui.Enabled = true
+	setMoveEnabled(false)
 	say(fill(pool[math.random(1, #pool)]))
 end
 
@@ -254,6 +278,7 @@ function DialogueController.Close()
 	npcId = nil
 	anchor = nil
 	typing += 1
+	setMoveEnabled(true)
 	if gui then
 		gui.Enabled = false
 	end

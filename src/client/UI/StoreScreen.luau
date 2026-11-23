@@ -3,7 +3,7 @@
 -- 760x610 cream window, r24:
 --   Header: Title "Store" (Fredoka 26) + red close button
 --   Tabs: Passes / Gems / Boosts / Packs (4 tabs, 173x57 each)
---   Passes: 2x2 grid of 352x196 cards (Infinite Bag, Auto-Fish Pro, VIP, Extra Cast)
+--   Passes: 88 px rows with a pager when they exceed the content area.
 --   Gems: List (25, 110 POPULAR, 300 BEST VALUE) + drop rates link
 --   Boosts: List of 2x Coins and 2x Pearls (2h)
 --   Packs: Starter Pack and Coin Chest (coming later)
@@ -144,7 +144,9 @@ function StoreScreen.Create(opts: { OnGachaRates: (() -> ())? }?): any
 
 
 	-- shell (ScreenGui in PlayerGui, panel, title, X, open/close/register) = Window core
-	local shell = Window.Shell({ Name = "Store", Title = "Store", WindowName = "Window Store", Size = if Window.IsShortScreen() then Vector2.new(760, 440) else nil })
+	local shortScreen = Window.IsShortScreen()
+	local windowHeight = if shortScreen then 440 else 610
+	local shell = Window.Shell({ Name = "Store", Title = "Store", WindowName = "Window Store", Size = Vector2.new(760, windowHeight) })
 	local gui, win = shell.Gui, shell.Frame
 	screen.Gui = gui
 
@@ -207,7 +209,7 @@ function StoreScreen.Create(opts: { OnGachaRates: (() -> ())? }?): any
 		end
 	end
 
-	-- Render Passes Tab (2x2 grid of 352x196)
+	-- Render Passes Tab: a list of 88 high rows (Figma C6b)
 	local function renderPasses()
 		local grid = New("Frame", {
 			Name = "Grid",
@@ -215,14 +217,15 @@ function StoreScreen.Create(opts: { OnGachaRates: (() -> ())? }?): any
 			BackgroundTransparency = 1,
 			Parent = content,
 			[New.Children] = {
-				New("UIGridLayout", {
-					CellSize = UDim2.fromOffset(352, 196),
-					CellPadding = UDim2.fromOffset(12, 12),
+				New("UIListLayout", {
+					FillDirection = Enum.FillDirection.Vertical,
+					Padding = UDim.new(0, 10),
 					SortOrder = Enum.SortOrder.LayoutOrder,
 				}),
 			},
 		})
 
+		local tradeLicense = Products.Passes.TradeLicense
 		local passCards = {
 			{
 				Key = "InfiniteBag",
@@ -257,6 +260,15 @@ function StoreScreen.Create(opts: { OnGachaRates: (() -> ())? }?): any
 				ComingSoon = true,
 				Order = 4,
 			},
+			{
+				Key = "TradeLicense",
+				Name = tradeLicense.Name,
+				Icon = "ui/icons/trade_license",
+				Benefits = { tradeLicense.Description },
+				DefaultPrice = tradeLicense.Price,
+				ComingSoon = tradeLicense.PassId <= 0,
+				Order = tradeLicense.Order,
+			},
 		}
 
 		for _, item in passCards do
@@ -266,113 +278,81 @@ function StoreScreen.Create(opts: { OnGachaRates: (() -> ())? }?): any
 
 			local card = New("Frame", {
 				Name = "Pass " .. item.Name,
+				Size = UDim2.new(1, 0, 0, 88),
 				BackgroundColor3 = T.PanelLight,
 				LayoutOrder = item.Order,
 				Parent = grid,
-				[New.Children] = {
-					New.Corner(20),
-					New.Padding(14),
-					New("UIListLayout", {
-						FillDirection = Enum.FillDirection.Horizontal,
-						VerticalAlignment = Enum.VerticalAlignment.Center,
-						Padding = UDim.new(0, 14),
-						SortOrder = Enum.SortOrder.LayoutOrder,
-					}),
-				},
+				[New.Children] = { New.Corner(20) },
 			})
 
-			-- Art tile (96x96)
-			local _artTile = New("Frame", {
+			-- Art tile (64x64)
+			New("Frame", {
 				Name = "Art",
-				Size = UDim2.fromOffset(96, 96),
+				Position = UDim2.fromOffset(14, 12),
+				Size = UDim2.fromOffset(64, 64),
 				BackgroundColor3 = WHITE,
-				LayoutOrder = 1,
 				Parent = card,
 				[New.Children] = {
-					New.Corner(20),
+					New.Corner(16),
 					New.Stroke(T.Track, 1.5),
 					New.Image({
 						Name = "Img",
 						Key = item.Icon,
-						Size = UDim2.fromOffset(84, 84),
+						Size = UDim2.fromOffset(56, 56),
 						AnchorPoint = Vector2.new(0.5, 0.5),
 						Position = UDim2.fromScale(0.5, 0.5),
 					}),
 				},
 			})
 
-			-- Text & Action info
-			local info = New("Frame", {
-				Name = "Info",
-				Size = UDim2.new(1, -110, 1, 0),
-				BackgroundTransparency = 1,
-				LayoutOrder = 2,
-				Parent = card,
-				[New.Children] = {
-					New("UIListLayout", {
-						FillDirection = Enum.FillDirection.Vertical,
-						VerticalAlignment = Enum.VerticalAlignment.Center,
-						Padding = UDim.new(0, 4),
-						SortOrder = Enum.SortOrder.LayoutOrder,
-					}),
-				},
-			})
-
 			New("TextLabel", {
 				Name = "Name",
-				Size = UDim2.new(1, 0, 0, 28),
+				Position = UDim2.fromOffset(92, 13),
+				Size = UDim2.new(1, -(92 + 150), 0, 30),
 				BackgroundTransparency = 1,
 				Text = item.Name,
 				TextColor3 = T.Text,
 				FontFace = T.Font,
 				TextSize = New.FigmaSize(T.Font, 24),
 				TextXAlignment = Enum.TextXAlignment.Left,
-				LayoutOrder = 1,
-				Parent = info,
+				Parent = card,
+			})
+			New("TextLabel", {
+				Name = "Benefits",
+				Position = UDim2.fromOffset(92, 47),
+				Size = UDim2.new(1, -(92 + 150), 0, 20),
+				BackgroundTransparency = 1,
+				Text = table.concat(item.Benefits, "  /  "),
+				TextColor3 = T.SubText,
+				FontFace = T.FontBody,
+				TextSize = New.FigmaSize(T.FontBody, 14),
+				TextXAlignment = Enum.TextXAlignment.Left,
+				TextTruncate = Enum.TextTruncate.AtEnd,
+				Parent = card,
 			})
 
-			for bIdx, bText in item.Benefits do
-				New("TextLabel", {
-					Name = "Benefit" .. bIdx,
-					Size = UDim2.new(1, 0, 0, 18),
-					BackgroundTransparency = 1,
-					Text = bText,
-					TextColor3 = T.SubText,
-					FontFace = T.FontBody,
-					TextSize = New.FigmaSize(T.FontBody, 14),
-					TextXAlignment = Enum.TextXAlignment.Left,
-					LayoutOrder = 1 + bIdx,
-					Parent = info,
-				})
-			end
-
-			-- Action / Button
+			-- Action: price button / OWNED / COMING SOON, right-aligned
 			local actionRow = New("Frame", {
 				Name = "ActionRow",
-				Size = UDim2.new(1, 0, 0, 46),
+				AnchorPoint = Vector2.new(1, 0.5),
+				Position = UDim2.new(1, -14, 0.5, 0),
+				Size = UDim2.fromOffset(130, 46),
 				BackgroundTransparency = 1,
-				LayoutOrder = 5,
-				Parent = info,
+				Parent = card,
 			})
-
+			local btn
 			if item.ComingSoon then
-				local btn = comingSoonButton()
-				btn.AnchorPoint = Vector2.new(0, 0.5)
-				btn.Position = UDim2.new(0, 0, 0.5, 0)
-				btn.Parent = actionRow
+				btn = comingSoonButton()
 			elseif isOwned then
-				local btn = ownedButton()
-				btn.AnchorPoint = Vector2.new(0, 0.5)
-				btn.Position = UDim2.new(0, 0, 0.5, 0)
-				btn.Parent = actionRow
+				btn = ownedButton()
 			else
-				local btn = buyButton("Pass", passId, pDef and pDef.Price or item.DefaultPrice, function()
+				btn = buyButton("Pass", passId, pDef and pDef.Price or item.DefaultPrice, function()
 					Remotes.Event("PromptPass"):FireServer(item.Key)
 				end)
-				btn.AnchorPoint = Vector2.new(0, 0.5)
-				btn.Position = UDim2.new(0, 0, 0.5, 0)
-				btn.Parent = actionRow
 			end
+			btn.AnchorPoint = Vector2.new(1, 0.5)
+			btn.Position = UDim2.new(1, 0, 0.5, 0)
+			btn.Parent = actionRow
 		end
 	end
 
@@ -623,10 +603,10 @@ function StoreScreen.Create(opts: { OnGachaRates: (() -> ())? }?): any
 		}))
 	end
 
-	-- Short screens: the Store never scrolls. Cards are split into pages with < and > buttons instead.
+	-- Keep the existing pager whenever a tab has more cards than the window can show.
 	local storePage = 1
 	local function paginate()
-		if not Window.IsShortScreen() then
+		if not shortScreen and currentTab ~= "Passes" then
 			return
 		end
 		local container = content:FindFirstChild("Grid") or content:FindFirstChild("Product List")
@@ -643,11 +623,14 @@ function StoreScreen.Create(opts: { OnGachaRates: (() -> ())? }?): any
 			return a.LayoutOrder < b.LayoutOrder
 		end)
 		local columns = if container:FindFirstChildOfClass("UIGridLayout") then 2 else 1
-		local rowH, gap = 0, if columns > 1 then 12 else 0
+		local rowH, gap = 0, if container.Name == "Grid" then 10 else 0
 		for _, k in kids do
 			rowH = math.max(rowH, k.Size.Y.Offset)
 		end
-		local contentH = 440 - 44 - 142 -- design height - window padding - header and tabs
+		local contentH = windowHeight - 44 - content.Position.Y.Offset
+		if not shortScreen and math.ceil(#kids / columns) * (rowH + gap) - gap <= contentH then
+			return
+		end
 		local rowsFit = math.max(1, math.floor((contentH - 52 + gap) / (rowH + gap)))
 		local perPage = rowsFit * columns
 		local pages = math.max(1, math.ceil(#kids / perPage))

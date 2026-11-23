@@ -45,8 +45,8 @@ function RebirthService.Rebirth(player: Player): (boolean, string)
 	data.Coins = GameConfig.StartingCoins
 	local keep = {}
 	for _, s in data.Bag do
-		if s.Kind ~= "Fish" then
-			table.insert(keep, s) -- treasure chests stay
+		if s.Kind ~= "Fish" or s.Bound == "RebirthProtected" then
+			table.insert(keep, s)
 		end
 	end
 	data.Bag = keep

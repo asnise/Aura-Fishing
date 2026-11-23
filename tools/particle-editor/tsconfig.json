@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true,
+    "noEmitOnError": true,
+    "rootDir": "src",
+    "outDir": "../../build/aura-particle-editor/app",
+    "types": ["node"]
+  },
+  "include": ["src/**/*.ts"]
+}

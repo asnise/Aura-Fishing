@@ -581,6 +581,7 @@ function GachaPage.Pull(count: number)
 	end
 	state.busy = true
 	fillButtons(b, ctx.profile())
+	New.Sfx("gacha_charge")
 	local ok, results, equippedId = ctx.invoke("PullAura", state.bannerId, count)
 	state.busy = false
 	if ok and type(results) == "table" and #results > 0 then

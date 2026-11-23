@@ -441,29 +441,6 @@ local function ensure()
 		},
 	})
 
-	-- "N more" strip under the table: shown only while rows are hidden below, so players know it scrolls
-	local moreHint = New.Text({
-		Name = "MoreHint",
-		Size = UDim2.new(1, 0, 0, 22),
-		BackgroundTransparency = 0,
-		BackgroundColor3 = T.PanelLight,
-		Text = "",
-		TextSize = 13,
-		TextColor3 = T.SubText,
-		LayoutOrder = 4,
-		Visible = false,
-		Parent = tableCard,
-	})
-	moreHint.TextScaled = false
-	local function updateHint()
-		local more = tableBody.AbsoluteCanvasSize.Y - tableBody.CanvasPosition.Y - tableBody.AbsoluteWindowSize.Y
-		local rowsLeft = math.ceil(more / math.max(1, tableBody.AbsoluteCanvasSize.Y / math.max(1, #tableBody:GetChildren() - 1)) - 0.2)
-		moreHint.Visible = more > 2
-		moreHint.Text = `v  scroll for {math.max(1, rowsLeft)} more`
-	end
-	tableBody:GetPropertyChangedSignal("CanvasPosition"):Connect(updateHint)
-	tableBody:GetPropertyChangedSignal("AbsoluteCanvasSize"):Connect(updateHint)
-
 	-- Bottom Footer
 	local footer = New("Frame", {
 		Name = "Footer",
@@ -563,7 +540,6 @@ local function ensure()
 		TableBody = tableBody,
 		Price = price,
 		Table = tableCard,
-		UpdateHint = updateHint,
 		HeaderList = header:FindFirstChildOfClass("UIListLayout"),
 		Body = body,
 		BodyPad = body:FindFirstChildOfClass("UIPadding"),
@@ -777,7 +753,7 @@ function EnhancePopup.Open(info: { [string]: any }, onConfirm: () -> ())
 	end
 
 	-- Phones / short screens: a wide two-column window (item on the left, table on the right) so it needs no
-	-- shrinking. The table scrolls after a few rows and a "scroll for N more" strip tells the player so.
+	-- shrinking. The table scrolls after a few rows.
 	local camera = workspace.CurrentCamera
 	local viewport = if camera then camera.ViewportSize else Vector2.new(1280, 720)
 	local compact = viewport.Y < 560
@@ -842,7 +818,6 @@ function EnhancePopup.Open(info: { [string]: any }, onConfirm: () -> ())
 	refs.Cancel.Size = UDim2.new(1, -134, 0, if compact then 46 else 52)
 	refs.Buy.Size = UDim2.fromOffset(118, if compact then 44 else 48)
 
-	task.defer(refs.UpdateHint)
 	refs.Price.Text = short(state.Coins)
 	pending = onConfirm
 	shell.Open()

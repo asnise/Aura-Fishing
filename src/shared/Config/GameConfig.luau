@@ -84,6 +84,15 @@ local GameConfig = {
 		ModSellBonus = { Common = 0, Uncommon = 0.05, Rare = 0.15, Epic = 0.4, Legendary = 0.9, Mythic = 2 } :: { [string]: number },
 	},
 
+	Trade = {
+		MaxPerSide = 2, -- Items (or bait units) each player may offer.
+		InviteSeconds = 30,
+		OfferSeconds = 120,
+		TaxRate = 0.05,
+		TaxFreeValue = 100,
+		TradableBaits = { Worm = true, Shrimp = true } :: { [string]: boolean },
+	},
+
 	-- Rods found while fishing (Items/RodDrop): chance per catch, raised by Luck; Auto catches roll AutoTreasureMultiplier
 	-- of it. Deep water (DeepDepth m) or a hotspot uses the DeepSea mod table, otherwise Fishing.
 	RodDrop = {

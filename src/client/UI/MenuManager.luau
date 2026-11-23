@@ -49,6 +49,8 @@ local defs: { [string]: Def } = {}
 local opened: { string } = {} -- every open managed screen, oldest first
 local closing: { [string]: boolean } = {}
 local blockThisTurn = false
+local openedAt: { [string]: number } = {} -- WillOpen time: a screen enables its gui just AFTER WillOpen
+local GUI_GRACE = 0.6 -- seconds a freshly opened screen keeps the backdrop even while its gui is still hidden
 
 local function coverInputTurn()
 	if blockThisTurn then
@@ -89,8 +91,13 @@ local function updateBackdrop()
 		local d = defs[name]
 		if d and (d.Layer == "Main" or d.Layer == "Hub") then
 			local gui = d.Gui and d.Gui()
-			local order = if gui and gui:IsA("ScreenGui") then gui.DisplayOrder else (if d.Layer == "Hub" then 20 else 10)
-			low = if low then math.min(low, order) else order
+			-- a menu whose gui is already hidden must not keep the backdrop up (but one that is just opening may
+			-- not have enabled its gui yet: without the grace the backdrop flashed off and on, or never showed)
+			local fresh = os.clock() - (openedAt[name] or 0) < GUI_GRACE
+			if fresh or not (gui and gui:IsA("ScreenGui") and not gui.Enabled) then
+				local order = if gui and gui:IsA("ScreenGui") then gui.DisplayOrder else (if d.Layer == "Hub" then 20 else 10)
+				low = if low then math.min(low, order) else order
+			end
 		end
 	end
 	if not low then
@@ -233,6 +240,7 @@ function MenuManager.WillOpen(name: string)
 	-- Modal: closes nothing
 
 	table.insert(opened, name)
+	openedAt[name] = os.clock()
 	restack()
 	MenuManager.Changed:Fire(name, true)
 end
@@ -366,5 +374,14 @@ function MenuManager.Describe(): string
 	end
 	return if #parts > 0 then table.concat(parts, " | ") else "(none)"
 end
+
+-- Keeps the backdrop in step with what is really on screen: a screen may be enabled just after WillOpen, or closed
+-- without telling the manager (the page was left open and hidden, leaving a black screen).
+task.spawn(function()
+	while true do
+		task.wait(0.1)
+		updateBackdrop() -- never prune() here: a screen is not "open" yet between WillOpen and its own Open finishing
+	end
+end)
 
 return MenuManager

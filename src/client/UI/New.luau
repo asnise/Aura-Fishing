@@ -5,6 +5,15 @@
 -- Change colours/fonts ONLY in THEME below; controllers read New.Theme.
 
 local New = {}
+New.ClickHook = nil :: (() -> ())? -- set by Controllers/SoundController: plays ui_click on every button
+New.PlaySound = nil :: ((string) -> ())? -- set by Controllers/SoundController (UI modules cannot require controllers)
+
+-- Play a Config/Sounds id from UI code; silent until SoundController is running.
+function New.Sfx(id: string)
+	if New.PlaySound then
+		New.PlaySound(id)
+	end
+end
 New.Children = newproxy(false)
 
 local rgb = Color3.fromRGB
@@ -13,6 +22,7 @@ local THEME = {
 	-- surfaces
 	Scene = rgb(191, 232, 224), -- mint backdrop
 	Panel = rgb(255, 248, 236), -- cream card
+	PanelPale = rgb(255, 253, 247), -- daily reward card
 	PanelLight = rgb(243, 233, 216), -- sand rows / secondary buttons
 	Track = rgb(230, 220, 203), -- bar tracks, panel edge
 	-- buttons you can't use yet (can't afford / level lock): muted grey-sand, darker than list rows (white reads as clickable)
@@ -376,6 +386,11 @@ function New.HookButton(button: TextButton)
 		return
 	end
 	hooked[button] = true
+	button.Activated:Connect(function()
+		if New.ClickHook then
+			New.ClickHook() -- set by SoundController: ui_click for every button
+		end
+	end)
 	local face = button:FindFirstChild("Face") :: Frame
 	paintButton(button)
 	syncLabel(button)

@@ -1,0 +1,17 @@
+# key,rbxassetid  -> paste the id after each comma, then: python -I tools/art/sync_ui_assets.py assets/upload/2026-11-20_gacha/ids.csv
+# 8 new images (gacha page + roll window). Roblox shrinks uploads to 1024px max.
+ui/gacha_bg_celestial,
+ui/gacha_bg_cosmic,
+auras_Art/AbyssalShadow,
+auras_Art/CelestialLeviathan,
+auras_Art/DragonEmperor,
+auras_Art/LotusNaga,
+auras_Art/NebulaKoi,
+auras_Art/SerpentOfTheVoid,
+# ONLY if these orbs show the big illustration in game (they were overwritten once, then restored): re-upload check_orbs/* and fill:
+# auras/AbyssalShadow,
+# auras/CelestialLeviathan,
+# auras/DragonEmperor,
+# auras/LotusNaga,
+# auras/NebulaKoi,
+# auras/SerpentOfTheVoid,

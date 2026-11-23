@@ -1,0 +1,7 @@
+{
+  "name": "AuraParticleImporter",
+  "tree": {
+    "$path": "src",
+    "Playback": { "$path": "../../../src/client/Controllers/AuraProjectPlayback.luau" }
+  }
+}

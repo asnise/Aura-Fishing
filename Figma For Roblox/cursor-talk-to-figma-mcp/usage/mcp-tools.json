@@ -1,17 +1,17 @@
 {
   "schema": 1,
   "kind": "mcp-tools",
-  "updatedAt": "2026-11-22T19:04:43.365Z",
+  "updatedAt": "2026-11-23T17:40:06.603Z",
   "totals": {
-    "calls": 127,
-    "ok": 123,
-    "errors": 4
+    "calls": 253,
+    "ok": 241,
+    "errors": 12
   },
   "byAgent": {
     "mcp:codex-motion-verification": 1,
     "mcp:codex-live-figma": 3,
-    "mcp:claude-code": 70,
-    "mcp:codex-mcp-client": 53
+    "mcp:claude-code": 79,
+    "mcp:codex-mcp-client": 170
   },
   "items": {
     "motion_keyframes": {
@@ -29,31 +29,32 @@
       }
     },
     "join_channel": {
-      "calls": 10,
-      "ok": 10,
+      "calls": 16,
+      "ok": 16,
       "errors": 0,
-      "totalMs": 53,
-      "avgMs": 5,
-      "maxMs": 14,
+      "totalMs": 150,
+      "avgMs": 9,
+      "maxMs": 39,
       "firstUsed": "2026-11-20T18:11:48.690Z",
-      "lastUsed": "2026-11-22T19:01:49.339Z",
+      "lastUsed": "2026-11-23T17:38:32.534Z",
       "byAgent": {
         "mcp:codex-live-figma": 1,
-        "mcp:claude-code": 6,
-        "mcp:codex-mcp-client": 3
+        "mcp:claude-code": 8,
+        "mcp:codex-mcp-client": 7
       }
     },
     "get_node_info": {
-      "calls": 7,
-      "ok": 7,
+      "calls": 8,
+      "ok": 8,
       "errors": 0,
-      "totalMs": 304,
-      "avgMs": 43,
+      "totalMs": 316,
+      "avgMs": 40,
       "maxMs": 104,
       "firstUsed": "2026-11-22T14:18:17.570Z",
-      "lastUsed": "2026-11-22T14:52:27.243Z",
+      "lastUsed": "2026-11-22T19:34:40.637Z",
       "byAgent": {
-        "mcp:claude-code": 7
+        "mcp:claude-code": 7,
+        "mcp:codex-mcp-client": 1
       }
     },
     "set_multiple_text_contents": {
@@ -70,45 +71,45 @@
       }
     },
     "export_node_as_image": {
-      "calls": 19,
-      "ok": 19,
+      "calls": 20,
+      "ok": 20,
       "errors": 0,
-      "totalMs": 1726,
-      "avgMs": 91,
+      "totalMs": 1890,
+      "avgMs": 95,
       "maxMs": 184,
       "firstUsed": "2026-11-22T14:21:24.353Z",
-      "lastUsed": "2026-11-22T15:29:52.224Z",
+      "lastUsed": "2026-11-23T15:44:38.588Z",
       "byAgent": {
-        "mcp:claude-code": 19
+        "mcp:claude-code": 20
       }
     },
     "batch_commands": {
-      "calls": 32,
-      "ok": 30,
-      "errors": 2,
-      "totalMs": 56183,
-      "avgMs": 1873,
-      "maxMs": 37685,
+      "calls": 65,
+      "ok": 60,
+      "errors": 5,
+      "totalMs": 295042,
+      "avgMs": 4917,
+      "maxMs": 113216,
       "firstUsed": "2026-11-22T14:37:19.939Z",
-      "lastUsed": "2026-11-22T19:04:43.365Z",
+      "lastUsed": "2026-11-23T14:57:29.041Z",
       "byAgent": {
         "mcp:claude-code": 20,
-        "mcp:codex-mcp-client": 12
+        "mcp:codex-mcp-client": 45
       },
       "lastError": "[{\"type\":\"text\",\"text\":\"Error running batch: Request to Figma timed out\"}]"
     },
     "find_nodes": {
-      "calls": 21,
-      "ok": 20,
+      "calls": 32,
+      "ok": 31,
       "errors": 1,
-      "totalMs": 5138,
-      "avgMs": 257,
+      "totalMs": 8197,
+      "avgMs": 264,
       "maxMs": 916,
       "firstUsed": "2026-11-22T14:48:20.405Z",
-      "lastUsed": "2026-11-22T19:02:26.171Z",
+      "lastUsed": "2026-11-23T14:54:02.459Z",
       "byAgent": {
         "mcp:claude-code": 11,
-        "mcp:codex-mcp-client": 10
+        "mcp:codex-mcp-client": 21
       },
       "lastError": "[{\"type\":\"text\",\"text\":\"Error finding nodes: find_nodes needs at least one of: name, type, text\"}]"
     },
@@ -126,32 +127,34 @@
       }
     },
     "get_nodes_info": {
-      "calls": 24,
-      "ok": 23,
-      "errors": 1,
-      "totalMs": 2369,
-      "avgMs": 103,
+      "calls": 83,
+      "ok": 81,
+      "errors": 2,
+      "totalMs": 6216,
+      "avgMs": 77,
       "maxMs": 577,
       "firstUsed": "2026-11-22T14:51:15.251Z",
-      "lastUsed": "2026-11-22T19:04:15.420Z",
+      "lastUsed": "2026-11-23T15:44:38.391Z",
       "byAgent": {
-        "mcp:claude-code": 1,
-        "mcp:codex-mcp-client": 23
+        "mcp:claude-code": 3,
+        "mcp:codex-mcp-client": 80
       },
-      "lastError": "[{\"type\":\"text\",\"text\":\"Error getting nodes info: Error executing command\"}]"
+      "lastError": "[{\"type\":\"text\",\"text\":\"Error getting nodes info: Must join a channel before sending commands\"}]"
     },
     "list_plugin_commands": {
-      "calls": 1,
-      "ok": 1,
-      "errors": 0,
-      "totalMs": 5,
-      "avgMs": 5,
-      "maxMs": 5,
+      "calls": 3,
+      "ok": 2,
+      "errors": 1,
+      "totalMs": 11,
+      "avgMs": 6,
+      "maxMs": 6,
       "firstUsed": "2026-11-22T14:51:19.016Z",
-      "lastUsed": "2026-11-22T14:51:19.016Z",
+      "lastUsed": "2026-11-23T17:39:34.604Z",
       "byAgent": {
-        "mcp:claude-code": 1
-      }
+        "mcp:claude-code": 2,
+        "mcp:codex-mcp-client": 1
+      },
+      "lastError": "[{\"type\":\"text\",\"text\":\"Error listing commands: Request to Figma timed out\"}]"
     },
     "delete_node": {
       "calls": 2,
@@ -180,30 +183,34 @@
       }
     },
     "get_selection": {
-      "calls": 1,
-      "ok": 1,
-      "errors": 0,
-      "totalMs": 7,
-      "avgMs": 7,
-      "maxMs": 7,
+      "calls": 5,
+      "ok": 4,
+      "errors": 1,
+      "totalMs": 56,
+      "avgMs": 14,
+      "maxMs": 23,
       "firstUsed": "2026-11-22T15:34:14.915Z",
-      "lastUsed": "2026-11-22T15:34:14.915Z",
+      "lastUsed": "2026-11-23T17:40:06.603Z",
       "byAgent": {
-        "mcp:codex-mcp-client": 1
-      }
+        "mcp:codex-mcp-client": 4,
+        "mcp:claude-code": 1
+      },
+      "lastError": "[{\"type\":\"text\",\"text\":\"Error getting selection: Request to Figma timed out\"}]"
     },
     "get_document_info": {
-      "calls": 3,
+      "calls": 5,
       "ok": 3,
-      "errors": 0,
+      "errors": 2,
       "totalMs": 80,
       "avgMs": 27,
       "maxMs": 54,
       "firstUsed": "2026-11-22T15:39:12.357Z",
-      "lastUsed": "2026-11-22T19:02:28.646Z",
+      "lastUsed": "2026-11-23T17:39:04.575Z",
       "byAgent": {
-        "mcp:codex-mcp-client": 3
-      }
+        "mcp:codex-mcp-client": 3,
+        "mcp:claude-code": 2
+      },
+      "lastError": "[{\"type\":\"text\",\"text\":\"Error getting document info: Request to Figma timed out\"}]"
     },
     "get_reactions": {
       "calls": 1,
@@ -216,6 +223,45 @@
       "lastUsed": "2026-11-22T15:42:36.148Z",
       "byAgent": {
         "mcp:codex-mcp-client": 1
+      }
+    },
+    "get_roblox_tree": {
+      "calls": 3,
+      "ok": 3,
+      "errors": 0,
+      "totalMs": 65,
+      "avgMs": 22,
+      "maxMs": 26,
+      "firstUsed": "2026-11-22T19:15:39.832Z",
+      "lastUsed": "2026-11-22T19:17:35.365Z",
+      "byAgent": {
+        "mcp:codex-mcp-client": 3
+      }
+    },
+    "set_selections": {
+      "calls": 1,
+      "ok": 1,
+      "errors": 0,
+      "totalMs": 26,
+      "avgMs": 26,
+      "maxMs": 26,
+      "firstUsed": "2026-11-22T19:35:06.448Z",
+      "lastUsed": "2026-11-22T19:35:06.448Z",
+      "byAgent": {
+        "mcp:codex-mcp-client": 1
+      }
+    },
+    "set_focus": {
+      "calls": 3,
+      "ok": 3,
+      "errors": 0,
+      "totalMs": 942,
+      "avgMs": 314,
+      "maxMs": 422,
+      "firstUsed": "2026-11-23T14:08:46.381Z",
+      "lastUsed": "2026-11-23T14:58:39.305Z",
+      "byAgent": {
+        "mcp:codex-mcp-client": 3
       }
     }
   }

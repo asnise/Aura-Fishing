@@ -67,6 +67,13 @@ local Products: { Passes: { [string]: Pass }, Products: { [string]: Product } } 
 			Order = 4,
 			Description = "Fish with two lines at once.",
 		},
+		TradeLicense = {
+			Name = "Trade License",
+			PassId = 2092411225,
+			Price = 75,
+			Order = 5,
+			Description = "Send trade requests to other players.",
+		},
 	},
 	Products = {
 		GemsSmall = {

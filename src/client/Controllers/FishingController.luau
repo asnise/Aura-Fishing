@@ -18,6 +18,7 @@ local Baked = require(script.Parent.Parent.UI.Baked)
 local MenuManager = require(script.Parent.Parent.UI.MenuManager)
 local HUD = require(script.Parent.HUDController)
 local DataController = require(script.Parent.DataController)
+local SoundController = require(script.Parent.SoundController)
 
 local T = New.Theme
 local MG = Registry.GameConfig.Minigame
@@ -125,6 +126,7 @@ local function runMinigame(token: string, p: any)
 	local fishTarget = fishPos
 	local barPos, barVel = math.clamp(fishPos - barSize / 2, 0, 1 - barSize), 0
 	local burstTime = 0
+	local tickIn = 0 -- seconds until the next reel tick
 	local progress = MG.StartProgress
 	local perfect = true
 	local elapsed = 0
@@ -146,6 +148,15 @@ local function runMinigame(token: string, p: any)
 		minigameActive = false
 		conn:Disconnect()
 		gui.Enabled = false -- baked panel is reused next time
+		if success then
+			if perfect then
+				if not SoundController.Play("cast_perfect") then
+					SoundController.Play("catch_rare")
+				end
+			end
+		else
+			SoundController.Play("fish_escape")
+		end
 		Remotes.Event("ReelResult"):FireServer(token, success, success and perfect)
 	end
 
@@ -189,6 +200,17 @@ local function runMinigame(token: string, p: any)
 		end
 
 		local pc = math.clamp(progress, 0, 1)
+		-- reel ticks while you hold: quicker and brighter as the meter fills and the fish is in the bar, slow and low
+		-- when it pulls away (the struggle)
+		if holding then
+			tickIn -= dt
+			if tickIn <= 0 then
+				tickIn = if inside then 0.16 else 0.3
+				SoundController.Play("reel_tick", { Pitch = 0.85 + 0.5 * pc, Volume = if inside then 1 else 0.7 })
+			end
+		else
+			tickIn = 0
+		end
 		bar.Position = UDim2.new(0, -3, 1 - barPos, 0)
 		bar.BackgroundTransparency = if inside then 0.15 else 0.45
 		fishIcon.Position = UDim2.fromScale(0.5, 1 - fishPos)
@@ -218,6 +240,7 @@ local chargeStart = 0
 local chargeInput: InputObject? = nil
 local chargeConn: RBXScriptConnection? = nil
 local marker: Part? = nil
+local chargeSound: Sound? = nil
 
 local function rootPart(): BasePart?
 	local char = player.Character
@@ -336,6 +359,7 @@ local function flyBobber(from: Vector3, to: Vector3, miss: boolean)
 		conn:Disconnect()
 		if not miss then
 			ball:Destroy() -- the server's bobber appears here now
+			SoundController.Play("splash", { At = to })
 			return
 		end
 		task.delay(0.4, function()
@@ -360,6 +384,10 @@ local function stopCharge()
 	if chargeConn then
 		chargeConn:Disconnect()
 		chargeConn = nil
+	end
+	if chargeSound then
+		SoundController.Stop(chargeSound)
+		chargeSound = nil
 	end
 	if HUD.CastCharge then
 		HUD.CastCharge.Visible = false
@@ -407,6 +435,11 @@ local function releaseCast()
 	end
 	if perfect then
 		showPerfect()
+		if not SoundController.Play("cast_perfect") then
+			SoundController.Play("cast", { Pitch = 1.15 })
+		end
+	else
+		SoundController.Play("cast")
 	end
 	Remotes.Event("Cast"):FireServer(HUD.TargetDepth, dir, power, perfect)
 end
@@ -431,6 +464,9 @@ local function startCharge(input: InputObject)
 		local root, dir = rootPart(), aimDir()
 		if held < CAST.TapTime or not root or not dir then
 			return -- a tap shows no bar
+		end
+		if not chargeSound then
+			chargeSound = SoundController.Play("cast_charge")
 		end
 		local power = powerAt(held)
 		root.CFrame = CFrame.lookAt(root.Position, root.Position + dir)

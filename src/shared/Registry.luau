@@ -27,6 +27,7 @@ local SkillsCfg = require(Config.Skills)
 local TideEventsCfg = require(Config.TideEvents)
 local Credits = require(Config.Credits)
 local Dialogues = require(Config.Dialogues)
+local SoundsCfg = require(Config.Sounds)
 local DailyLoginCfg = require(Config.DailyLogin)
 local ModifierDefs = require(Config.ModifierDefs)
 
@@ -54,6 +55,7 @@ local Registry = {
 	TideEvents = TideEventsCfg,
 	Credits = Credits,
 	Dialogues = Dialogues,
+	Sounds = SoundsCfg,
 	DailyLogin = DailyLoginCfg,
 	ModifierDefs = ModifierDefs,
 }
@@ -196,6 +198,20 @@ for i, d in DailyLoginCfg.Days do
 		end
 	end
 end
+
+-- Sounds (Config/Sounds)
+for bus, def in SoundsCfg.Buses do
+	check(type(def.Default) == "number" and def.Default >= 0 and def.Default <= 1, `Sounds.Buses.{bus}: Default must be 0..1`)
+end
+for id, s in SoundsCfg.List do
+	local w = `Sounds.List.{id}`
+	check(SoundsCfg.Buses[s.Bus] ~= nil, `{w}: Bus must be one of Sounds.Buses`)
+	check(s.Ids ~= nil or type(s.Id) == "string", `{w}: needs Id (rbxassetid://...) or Ids`)
+	check(s.Volume == nil or (s.Volume >= 0 and s.Volume <= 1), `{w}: Volume must be 0..1`)
+	check(s.Pitch == nil or (#s.Pitch == 2 and s.Pitch[1] > 0 and s.Pitch[1] <= s.Pitch[2]), `{w}: Pitch needs two numbers (min, max) with 0 < min <= max`)
+	check(s.Cooldown == nil or s.Cooldown >= 0, `{w}: Cooldown must be >= 0`)
+end
+check(SoundsCfg.Music.DefaultTrack == nil or (SoundsCfg.List[SoundsCfg.Music.DefaultTrack] ~= nil and SoundsCfg.List[SoundsCfg.Music.DefaultTrack].Bus == "Music"), "Sounds.Music.DefaultTrack must be a Music sound")
 
 -- B7 NPC dialogue
 local DIALOGUE_KINDS = { SellAll = true, HotFish = true, Banner = true, Menu = true, Fusion = true, Say = true, Talk = true }
@@ -416,7 +432,11 @@ for id, f in Fish do
 	addDef({ Id = id, Name = f.Name, Description = "", Category = "Fish", Rarity = f.Rarity, Icon = `fish/{id}`, BasePrice = f.BaseValue, IsStackable = false, MaxStack = 1, IsTradable = true, IsSellable = true, Bound = "Unbound" })
 end
 for id, t in Treasures do
-	addDef({ Id = id, Name = t.Name, Description = "", Category = "Treasure", Rarity = t.Rarity, Icon = t.Icon, BasePrice = 0, IsStackable = true, MaxStack = GameConfig.Inventory.TreasureStackMax, IsTradable = true, IsSellable = false, Bound = "Unbound" })
+	addDef({ Id = id, Name = t.Name, Description = "", Category = "Treasure", Rarity = t.Rarity, Icon = t.Icon, BasePrice = 0, IsStackable = true, MaxStack = GameConfig.Inventory.TreasureStackMax, IsTradable = false, IsSellable = false, Bound = "Unbound" })
+end
+for id in GameConfig.Trade.TradableBaits do
+	local bait = Equipment.Baits.Items[id]
+	check(bait and bait.Currency == "Coins" and not bait.Exclusive, `Trade.TradableBaits: '{id}' must be sold for Coins`)
 end
 for catId, cat in Equipment do
 	for id, item in cat.Items do
@@ -432,7 +452,10 @@ for catId, cat in Equipment do
 			BasePrice = item.Price,
 			IsStackable = cat.Kind == "Consumable",
 			MaxStack = if cat.Kind == "Consumable" then 9999 else 1,
-			IsTradable = not gift,
+			IsTradable = not gift and (
+				(catId == "Rods" and item.Price > 0 and item.Currency == "Coins")
+				or (catId == "Baits" and GameConfig.Trade.TradableBaits[id] == true)
+			),
 			IsSellable = sellable and not gift and item.Currency == "Coins",
 			Bound = if gift then "Bound" else "Unbound",
 			Equipment = catId,

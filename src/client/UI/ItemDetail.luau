@@ -21,6 +21,7 @@ local Shared = ReplicatedStorage:WaitForChild("Shared")
 local Registry = require(Shared.Registry)
 local Remotes = require(Shared.Remotes)
 local Inventory = require(Shared.Inventory)
+local BaitBinding = require(Shared.Items.BaitBinding)
 local Enhance = require(Shared.Enhance)
 local AuraStars = require(Shared.AuraStars)
 local HotFish = require(Shared.HotFish)
@@ -40,7 +41,9 @@ local ItemDetail = {}
 ItemDetail.Hidden = Signal.new() -- () card closed (any window that opened it clears its selection)
 
 -- Info = true: opened from a catalogue (Shop / Fishdex), so a bait you have none of still shows (Get from).
-export type Item = { Kind: string, Id: string, UUID: string?, Info: boolean? }
+-- Trade (Trade window): { Action = { Text, Color, Run? }?, Foreign = partner's item? } replaces the owner actions;
+-- Foreign makes the card read-only (no Action).
+export type Item = { Kind: string, Id: string, UUID: string?, Info: boolean?, Trade: any? }
 
 local Screen_INNER = 248 -- card width 280 minus padding
 local CATEGORY = { Rod = "Rods", Line = "Lines", Bait = "Baits" }
@@ -144,6 +147,7 @@ local function simple(name: string, ...: any)
 		deps.Notify(msg, if ok then T.Good else T.Bad)
 	end
 	deps.Changed()
+	return ok == true
 end
 
 -- Card model per kind --------------------------------------------------------------------------------
@@ -225,7 +229,7 @@ local function gearModel(profile: any, item: Item): any
 				else { Text = `MAX +{lv}`, Color = T.Disabled })
 		end
 		local value = Inventory.SellValue(gear, 1)
-		if not equipped and (value > 0 or def.Price == 0) then
+		if not Inventory.SellBlock(profile, gear) and (value > 0 or def.Price == 0) then
 			table.insert(m.Actions, { Text = "SELL", CostIcon = "ui/status/coin", Cost = short(value), Color = T.Gold, Run = function()
 				local invested = Inventory.Investment(gear)
 				if not invested then
@@ -355,7 +359,9 @@ local function auraModel(profile: any, item: Item): any
 		local cost = AuraStars.Cost(item.Id, stars)
 		local starUp: any = if cost
 			then { Text = "STAR UP", CostIcon = "ui/status/star_token", Cost = tostring(cost), Color = T.Sky, Run = function()
-				simple("StarUpAura", item.Id)
+				if simple("StarUpAura", item.Id) then
+					New.Sfx("star_up")
+				end
 			end }
 			else { Text = "MAX STARS", Color = T.Disabled }
 		table.insert(m.Actions, starUp)
@@ -392,6 +398,16 @@ local function fishModel(profile: any, item: Item): any
 		table.insert(meta, { Text = "Bound", TextColor = T.SubText })
 	end
 	local uuid = s.UUID
+	local actions: { any } = {}
+	if not Inventory.SellBlock(profile, s) then
+		table.insert(actions, { Text = "SELL", CostIcon = "ui/status/coin", Cost = short(value), Color = T.Gold, Run = function()
+			simple("SellItem", uuid)
+		end })
+	end
+	table.insert(actions, { Text = "TANK", Color = T.Sky, Run = function()
+		ItemDetail.Hide()
+		deps.OpenTankPicker(s.Id, s.Mutation)
+	end })
 	return {
 		Icon = `fish/{s.Id}`,
 		Rarity = rarity,
@@ -401,15 +417,7 @@ local function fishModel(profile: any, item: Item): any
 		Desc = f and f.Description,
 		Meta = meta,
 		Owned = true,
-		Actions = {
-			{ Text = "SELL", CostIcon = "ui/status/coin", Cost = short(value), Color = T.Gold, Run = function()
-				simple("SellItem", uuid)
-			end },
-			{ Text = "TANK", Color = T.Sky, Run = function()
-				ItemDetail.Hide()
-				deps.OpenTankPicker(s.Id, s.Mutation)
-			end },
-		},
+		Actions = actions,
 	}
 end
 
@@ -422,6 +430,15 @@ local function baitModel(profile: any, item: Item): any
 	local owned = count > 0
 	local equipped = profile.Equipped.Baits == item.Id
 	local meta = if owned then { { Text = `x{count}` } } else {}
+	if owned and profile.BoundBaits then
+		local free = BaitBinding.Free(profile, item.Id)
+		if free < count then
+			table.insert(meta, { Text = `Bound x{count - free}`, Color = T.SubText })
+		end
+		if free > 0 and Registry.GameConfig.Trade.TradableBaits[item.Id] then
+			table.insert(meta, { Text = "Equipping binds this stack", Color = T.SubText })
+		end
+	end
 	if equipped then
 		table.insert(meta, { Text = "Equipped", Color = T.Good })
 	end
@@ -473,6 +490,9 @@ local function treasureModel(profile: any, item: Item): any
 				Color = T.Accent,
 				Run = function()
 					local ok, msg = call("OpenTreasure", uuid)
+					if ok then
+						New.Sfx("chest_open")
+					end
 					if msg then
 						deps.Notify(tostring(msg), if ok then T.Gold else T.Bad)
 					end
@@ -484,6 +504,9 @@ local function treasureModel(profile: any, item: Item): any
 				Color = T.Accent,
 				Run = function()
 					local ok, msg = call("OpenAllTreasure", uuid)
+					if ok then
+						New.Sfx("chest_open")
+					end
 					if msg then
 						deps.Notify(tostring(msg), if ok then T.Gold else T.Bad)
 					end
@@ -806,8 +829,19 @@ function ItemDetail.Refresh()
 		return
 	end
 	local profile = deps.Profile()
+	local trade = current.Trade
+	local source = profile
+	if trade and trade.Foreign and profile then
+		-- the partner's item: build the card from a throwaway profile holding only that item
+		local item = trade.Foreign
+		source = { Bag = { item }, Equipped = {}, BoundBaits = {}, Consumables = { Baits = { [item.Id] = 1 } } }
+	end
 	local build = MODELS[current.Kind]
-	local m = profile and build and build(profile, current)
+	local m = source and build and build(source, current)
+	if m and trade then
+		m.Owned = true
+		m.Actions = if trade.Action then { trade.Action } else {}
+	end
 	if not m then
 		ItemDetail.Hide()
 		return

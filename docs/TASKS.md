@@ -1,4 +1,4 @@
-# Aura Fishing — Task list & test guide
+﻿# Aura Fishing — Task list & test guide
 
 วิธีใช้: ใช้ checkbox แบบ GitHub Markdown — `- [ ]` = ยังไม่เสร็จ, `- [x]` = เสร็จ (แก้ตัว `x` ในไฟล์ หรือคลิกใน viewer ที่รองรับ)
 แต่ละงานมี **สถานะ** (โค้ดเสร็จ / ทดสอบผ่าน), **Done when** = เกณฑ์ว่าเสร็จจริง, **ทดสอบ** = ขั้นตอนเป็น checkbox ให้ติ๊กทีละข้อ
@@ -61,7 +61,7 @@
 - [ ] C5 — อีเวนต์ Naga Tide (จุดสุ่มในทะเล ตกในวง = ลุ้นปลาพิเศษ, คนแห่มา = โอกาสสูงขึ้น)  `โค้ด HUD Cozy Lake เสร็จแล้ว รอทดสอบใน Play`
 - [ ] C6 — Gamepasses (Infinite Bag 349, Auto-Fish Pro 249, VIP 149, Extra Cast)  `โค้ดเสร็จ + ป้ายชื่อ VIP เหนือหัว + ร้าน Store แล้ว รอทดสอบ — Extra Cast รอสร้าง pass บนเว็บ`
 - [ ] C7 — เควสต์รายวัน  `โค้ดเสร็จ + หน้าต่างเควสต์แล้ว รอทดสอบ`
-- [ ] C8 — เสียง (SFX) ตามจุดที่ระบุใน storyboard gacha/มินิเกม  `ยังไม่เริ่ม`
+- [ ] C8 — เสียง (SFX) และระบบเสียงในเกม  `โค้ดเสร็จ + อัปโหลดเสียงแล้ว (25/25 ไฟล์) พร้อม Hook ตกปลา มินิเกม Gacha และ UI รอทดสอบใน Studio`
 - [ ] C9 — แมพจริง + โมเดลปลา/คันเบ็ด  `ยังไม่เริ่ม`
 - [ ] C10 — เครดิต Font Awesome (FaLock, CC BY 4.0)  `โค้ดเสร็จ รอทดสอบ`
 - [ ] C11 — ทดสอบมือถือจริง + ปรับขนาดปุ่ม  `ยังไม่เริ่ม`
@@ -94,6 +94,8 @@
 - [x] C37 — พรีวิว Aura VFX รอบตัวละคร 3 ออร่า  `ทดสอบใน Chrome แล้ว`
 - [x] C38 — ทิศทางภาพและพรีวิว Aura VFX ก่อนเจนชีต  `จัดพรอมป์และพรีวิว 15 ออร่า`
 - [x] C39 — Aura Particle Editor และ Studio Importer สำหรับโปรเจกต์ 3 ออร่า  `ทดสอบนำเข้าใน Studio`
+- [x] C40 — Patch Note Card แบบโพยกระดาษโทนอุ่น  `ทดสอบพรีวิวและ PNG ใน Chrome`
+- [ ] C41 — Trade ระหว่างผู้เล่นและไอเทม Bound  `ตั้ง PassId แล้ว รอทดสอบ Play สองผู้เล่น`
 
 ---
 
@@ -765,7 +767,20 @@
     - [ ] 2. ทำตามข้อใดข้อหนึ่ง (เช่น ตกปลา / ขาย / สุ่มออร่า) → `quests list` ตัวเลขขึ้น + มีข้อความ "Quest done" เมื่อครบ
     - [ ] 3. (หน้าต่าง UI) กดรับรางวัล → Gems +5; กดซ้ำไม่ได้; จุดแดงบนปุ่ม Quests หายเมื่อรับครบ
     - [ ] 4. หลัง 07:00 (เวลาไทย) วันถัดไป เข้าเกม → ได้ 3 ข้อใหม่ ความคืบหน้าเริ่ม 0
-- [ ] **C8.** เสียง (SFX) ตามจุดที่ระบุใน storyboard gacha/มินิเกม — *Done when:* มีเสียง cast, bite, reel tick, ka-ching, fanfare • *ใครทำ:* คุณหา/อัปโหลดเสียง + Claude ต่อโค้ด
+- [ ] **C8.** เสียง (SFX) และระบบเสียงในเกม — *Done when:* มีเสียง cast, cast_charge, bite, reel tick, perfect hit, catch, gacha altar charge & reveal, coin (ซื้อ/ขาย), ui clicks • *ใครทำ:* คุณเจนเสียง + Antigravity ต่อระบบโค้ด
+  - **สถานะ: โค้ดเสร็จ (2026-11-24)** — โค้ดระบบเสียงหลัก `SoundController.luau`, `Sounds.luau`, `SoundAssets.luau`, สคริปต์อัปโหลด `tools/audio/upload_sfx.py`, คู่มือ `docs/ELEVENLABS_SFX_PROMPTS.md` และ [HANDOFF_SOUND.md](file:///d:/Roblox%20Project/Aura%20Fishing/docs/HANDOFF_SOUND.md); ผูกจุดเล่นเสียงครบถ้วน: UI clicks, เมนูเปิด/ปิด, สลับแท็บ Inventory, ซื้อของ/ใช้ตังและขายปลา (coin), ง้างคันเบ็ดลูป (cast_charge), เหวี่ยงเบ็ด (cast), ทุ่นตกน้ำ (splash), ปลากิน (bite), หมุนรอกสู้ปลา (reel_tick), จบมินิเกมและเหวี่ยงเบ็ด Perfect (cast_perfect), ปลาหลุด (fish_escape), และการ์ดผลปลา (ui_open + catch/catch_rare)
+  - type check สะอาด 100% ผ่าน tools/check.mjs
+  - ทดสอบ:
+    - [ ] 1. Play → เปิด/ปิด เมนูต่างๆ (Inventory, Shop, Menu) ต้องมีเสียง ui_open และ ui_close นุ่มนวล
+    - [ ] 2. กดสลับแท็บใน Inventory (All, Fish, Rods, Lines...) ต้องมีเสียง ui_click
+    - [ ] 3. ซื้อของใน Shop หรืออัปเกรดกระเป๋า หรือตีบวก Enhance (เสีย Coins) ต้องมีเสียงเหรียญ coin ดังขึ้น
+    - [ ] 4. ขายปลาที่ Old Marlin หรือ Sell All ในกระเป๋า (ได้ Coins) ต้องมีเสียง coin
+    - [ ] 5. กดคลิกค้างเตรียมเหวี่ยงเบ็ด (ง้างเบ็ด) ต้องมีเสียงรอกหมุนดังกริ๊กๆ cast_charge วนลูปต่อเนื่อง
+    - [ ] 6. ปล่อยคันเบ็ดลงล็อกแถบ Perfect ต้องมีเสียงกริ๊ง cast_perfect และทุ่นตกน้ำมีเสียง splash
+    - [ ] 7. ปลากินเบ็ด มีเครื่องหมาย (!) ขึ้น ต้องมีเสียง bite
+    - [ ] 8. เข้ามินิเกมสู้ปลา กดค้างดึงปลาต้องมีเสียงหมุนรอก reel_tick ถี่ๆ รัวๆ
+    - [ ] 9. สู้ปลาจนจบโดยแถบไม่หลุด (PERFECT) ต้องมีเสียง cast_perfect; ถ้าหลุดต้องมีเสียง fish_escape
+    - [ ] 10. หน้าต่างสรุปปลา Catch Result เด้งขึ้นมา ต้องมีเสียง ui_open + เสียงดึงปลา catch (หรือ catch_rare หากเป็นปลา Rare+)
 - [ ] **C9.** แมพจริง + โมเดลปลา/คันเบ็ด — *Done when:* แมพใน `places/AuraFishing.rbxlx` มี FishingZone ครบ • *ใครทำ:* คุณ (+ Claude ช่วยผ่าน StudioBridge)
 - [ ] **C10.** เครดิต Font Awesome (FaLock, CC BY 4.0) — *Done when:* มีหน้า Credits/ข้อความเครดิตในเกม • *ใครทำ:* Claude
   - **สถานะ: โค้ดเสร็จ (2026-11-17)** — `Config/Credits.luau` (รายการเครดิต; เพิ่มแถวเมื่อใช้ของที่ต้องให้เครดิต), `UI/Credits.luau` (หน้าต่าง "Settings & Credits" สร้างด้วย New), ปุ่ม **Settings** ใน Main Menu เปิดหน้าต่างนี้ (`Features.Settings.Enabled = true` จนกว่าจะมีหน้า Settings จริง — บอกในหน้าต่างว่า Low FX อยู่ในหน้า Auras), ไฟล์ `CREDITS.md` ที่ root ของ repo
@@ -1277,6 +1292,39 @@
   - [ ] 9. กด Import aura ตรวจโมเดลใน ReplicatedStorage.AuraVFX แล้วสวมออร่าใน Play ดู Core, Flipbook รอบพื้น และ Ribbon
   - [ ] 10. กลับโหมด Edit แล้วนำเข้า Aura ID เดิม ตรวจว่าอัปเดตโมเดลใบเดิมและ Undo ได้
 
+### C40. Patch Note Card แบบโพยกระดาษโทนอุ่น
+
+- สถานะ: ทดสอบใน Chrome แล้ว
+- Done when: หัวเรื่องเว้นระยะจากเนื้อหา โพยแต่ละหมวดติดเทปใสและใช้วงกลมโปร่งหน้ารายการ เลือกสี Tag จากชุดสำเร็จรูปได้รายหมวด สุ่มสติกเกอร์โดยเว้นเนื้อหา และบันทึกหรือคัดลอก PNG 2x ได้เมื่อเปิด HTML โดยตรง
+- ทดสอบ:
+  - [ ] 1. เปิด `tools/patch-note-card/index.html` แล้วดูหัวเรื่องบนหน้ากระดาษ โพยติดเทปใส และวงกลมโปร่งหน้ารายการ
+  - [ ] 2. กดแก้ไขเนื้อหา เลือกสีจากชุดสี Tag ของ `C29 / SAVE V6` แล้วตรวจว่าเปลี่ยนเฉพาะหมวดนั้น
+  - [ ] 3. ลองสุ่มใน Portrait, Banner และ Square ดูว่าสติกเกอร์เปลี่ยนขนาดและตำแหน่งโดยไม่บังข้อความ แล้วใส่ Seed เดิมเพื่อเรียกแบบเดิม
+  - [ ] 4. กดบันทึก PNG (2x) แล้วกดคัดลอกรูปเพื่อนำไปวางในแอปที่รับภาพ ตรวจว่าสี Tag และสติกเกอร์ตรงกับพรีวิว
+
+### C41. Trade ระหว่างผู้เล่นและ Bound — 2026-11-23  `โค้ดเสร็จ รอทดสอบ Play สองผู้เล่น`
+- [แบบล่าสุด C41 Trade Grid ใน Figma](https://www.figma.com/design/givb0hmQYmmaOy7p7DGtb2/Ro-Offline?node-id=3807-1398) มี 6 เฟรม ใช้ Your inventory พื้นครีม 4 คอลัมน์ × 3 แถวที่มองเห็น และ Offer พื้นทรายอ่อน 2 ช่องต่อฝั่ง ใช้ช่องว่าง Bubbles และถอดป้าย Total ออกจากแบบแล้ว
+- Item Card เดิมแสดง Add to Trade สีฟ้าสำหรับของที่เพิ่มได้ ของที่สวมมีรูปล็อกและปุ่มเทา การ์ดของอีกฝ่ายเปิดอ่านรายละเอียดอย่างเดียว ปุ่ม Confirm อยู่ท้ายหน้าต่าง Trade และ X อยู่มุมบน
+- ข้อกำหนดตอนนำแบบลง Roblox ใช้ UI/VirtualGrid กับ ScrollingFrame แนวตั้ง 4 คอลัมน์ แสดง 3 แถวพร้อมแถวเผื่อหนึ่งแถวและใช้เซลล์ซ้ำ เติมช่องว่างให้ครบพื้นที่ที่เห็นหรือแถวสุดท้าย อ่านไอเทมของเซลล์ผ่าน ItemOf และให้เซิร์ฟเวอร์ตรวจเพดาน 2 ชิ้นต่อฝั่งตอนรับ Add
+- [บอร์ด Figma Trade 4 แบบใน Out Space](https://www.figma.com/design/givb0hmQYmmaOy7p7DGtb2/Ro-Offline?node-id=3805-1143) มี A Two Offers, B Bag Sidebar, C Four Shared Slots และ D Review Sheet ใช้ดีลตัวอย่างเดียวกัน 3 จาก 4 ชิ้นรวมและค่าธรรมเนียม 269 Coins ต่อคน ใช้เทียบแนวทางเริ่มต้น
+- หน้าต่าง Trade ใน Main Menu ใช้ Window kit โทน Cozy Lake เชิญและแลกของในเซิร์ฟเวอร์เดียวกัน ผู้ส่งคำขอต้องมี Trade License ทั้งสองคนยืนยันข้อเสนอชุดเดียวกัน และการแก้ข้อเสนอจะล้างการยืนยัน
+- (อัปเดต 2026-11-23) หน้าต่าง Trade ในเกมเปลี่ยนเป็น Trade Grid ตาม Figma: Inventory 4 คอลัมน์ x 3 แถวเลื่อนได้ (VirtualGrid) + Offer 2 ช่องต่อฝั่ง กดช่องเปิด Item Card เดิม (Add to Trade / Remove / ดูของอีกฝ่ายแบบอ่านอย่างเดียว) ของที่สวมล็อก จำกัด 2 ชิ้นต่อฝั่ง (GameConfig.Trade.MaxPerSide)
+  ทดสอบ: เปิด Play 2 ผู้เล่น > Trade > เชิญและรับ > กดไอเทมใน Inventory > Add to Trade > ช่อง Offer เติมและค่าธรรมเนียมอัปเดต > กดช่อง Offer ของตัวเองเห็นปุ่ม Remove ของอีกฝ่ายเห็นการ์ดไม่มีปุ่ม > คันเบ็ดที่สวมอยู่ปุ่มเทา > เพิ่มเกิน 2 ชิ้นไม่ได้ > Confirm ทั้งสองฝั่งแล้วของสลับกัน
+- จำกัด 4 ชิ้นรวมทั้งสองฝั่ง (เดิม) รายการเริ่มต้นคือปลา คันเบ็ดที่อนุญาต และเหยื่อ Worm / Shrimp ที่ยังไม่ Bound ภาษีเริ่มต้น 5% ของมูลค่าส่วนที่เกิน 100 Coins ต่อคน มูลค่าอิงความหายาก ราคา และการลงทุนในคันเบ็ด ค่าปรับอยู่ใน GameConfig.Trade
+- เซฟ v7 เพิ่มจำนวนเหยื่อ Bound เซฟเก่าคงจำนวนเหยื่อและหีบทั้งหมดพร้อมติด Bound เพราะกองเก่าอาจปนของแจก การสวมหรือใช้เหยื่อติด Bound ของรางวัลจากหีบ Bound รับสถานะต่อ และของ Bound ถูกตัดทั้งจากการเทรดและขายให้ NPC เหยื่อ Worm / Shrimp ที่ซื้อขณะไม่ได้สวมจะอยู่ในกระเป๋าให้เลือกว่าจะเก็บไว้เทรดหรือสวม
+- DataService ให้เซิร์ฟเวอร์ที่ถือสิทธิ์เท่านั้นเขียนเซฟ ทุกการโอนบันทึกผลเดียวไว้ใน DataStore สำหรับกู้คืนทั้งสองฝั่ง การนำผลไปใช้และล้างรายการค้างเกิดในเซฟเดียวกัน
+- **Done when** แลกของได้ด้วย UUID เดิมและเสียภาษีคนละหนึ่งครั้ง เซฟล้มเหลวหรือผู้เล่นหลุดแล้วกู้ต่อได้โดยไม่มีของหายหรือซ้ำ และผู้เล่นเสนอของ Bound หรือเหยื่อเกินจำนวนที่เทรดได้ไม่ได้
+- ทดสอบ:
+  - [x] รัน `luau tools/test-trade.luau` จำลองเซฟสำเร็จฝั่งเดียว ACK หาย การเข้าใหม่ และการหลุดระหว่างเซฟ ตรวจ UUID จำนวนเหยื่อ และภาษี
+  - [x] ตรวจใน Studio Edit ว่าเลือกของ Bound ไม่ได้ ใบอนุญาต ภาษี และความจุกระเป๋าถูกตรวจ และ Main Menu มีปุ่ม Trade จากนั้นเรียก TradeAction และ DataService กับ DataStore จำลอง ให้ผู้รับเซฟไม่สำเร็จแล้วเข้าใหม่สองครั้ง ตรวจว่าของและภาษีถูกบันทึกครั้งเดียว
+  - [ ] ในสำเนาเกมทดสอบ เปิด Studio แบบ Server & Clients จำนวน 2 คน ให้คนแรกใช้ `grant pass TradeLicense` จาก Dev Panel และให้ทั้งสองคนมีปลาและ Coins สำหรับทดสอบ
+  - [ ] คนแรกเปิด Main Menu > Trade > INVITE คนที่สองกด ACCEPT ใส่ของรวมกัน 4 ชิ้น ลองใส่ชิ้นที่ 5 ยืนยันหนึ่งฝั่งแล้วเปลี่ยนข้อเสนอ ตรวจว่าทั้งคู่ต้องยืนยันใหม่
+  - [ ] ยืนยันทั้งสองฝั่ง ตรวจ UUID / Mod / Mutation และ Coins จากทั้งคู่ แล้วออกเข้าใหม่ ตรวจว่าของอยู่กับผู้รับและภาษีถูกหักครั้งเดียว
+  - [ ] ซื้อ Worm หรือ Shrimp ตอนยังไม่ได้สวม ตรวจว่าเพิ่มเข้า Trade ได้ จากนั้นสวมแล้วถอด ตรวจว่ากองเดิมขึ้น Bound และเสนอไม่ได้ ลองซ้ำกับเหยื่อ Daily Login และคันเบ็ดของ Starter Pack
+  - [x] ตรวจใน Studio Edit ว่าการ์ด Trade License อยู่หน้าท้ายของ Store > Passes ทั้งเดสก์ท็อปและจอสั้น แสดงราคาจาก Marketplace จำลอง ส่งคีย์ซื้อถูกต้อง และแสดง OWNED เมื่อมีพาส
+- ผูก Trade License กับ PassId 2092411225 แล้ว Roblox แสดงสถานะเปิดขาย และ Studio อ่านราคา 75 Robux ก่อนเปิดให้ใช้ Trade ในเกมจริง ให้ Publish โค้ดล่าสุดและปิดเซิร์ฟเวอร์รุ่นเก่าที่อาจเขียนเซฟทับรายการเทรด
+
+
 ## เว็บ QA (`qa/`)
 
 **สถานะ** ◐ โค้ดเสร็จ ทดสอบ UI โหมดในเครื่องแล้ว รอตั้งค่า Firebase + เปิด GitHub Pages
@@ -1296,6 +1344,22 @@
 - [x] ทดสอบโหมดในเครื่อง (ไม่มี config): ตาราง 69 งาน, เปิดงานเห็นขั้นตอน, ผ่าน/ไม่ผ่าน, สร้าง/ปิด Ticket, หน้าระบบเกมและประวัติ
 
 ## บันทึกการอัปเดต
+- 2026-11-24T02:15:00+07:00 — C8 ระบบเสียงและ SFX: ออกแบบและเชื่อมต่อระบบเสียงครบวงจร (1) จัดทำคู่มือ Prompt สำหรับ ElevenLabs SFX ใน docs/ELEVENLABS_SFX_PROMPTS.md พร้อมสคริปต์อัปโหลด tools/audio/upload_sfx.py รองรับทั้ง .wav/.mp3 อัปโหลดผ่าน Open Cloud อัตโนมัติ (2) ปรับแต่งเสียง Gacha เป็น Altar Charge & Eclipse Reveal ตามระบบใหม่ (3) เชื่อมต่อเสียงง้างคันเบ็ดวนลูป cast_charge และเสียงจังหวะ Perfect (cast_perfect) สำหรับการเหวี่ยงเบ็ดและมินิเกม (4) ผูกเสียง UI ตอนเปิดการ์ดผลลัพธ์ปลา (ui_open + catch/catch_rare) และตอนสลับแท็บ Category ใน Inventory (ui_click) (5) ผูกเสียง coin ให้เล่นครอบคลุมทั้งตอนเสียตังซื้อของ/อัปเกรด/ตีบวก และตอนขายปลา ตรวจสอบผ่าน tools/check.mjs เรียบร้อย
+- 2026-11-24 — เพิ่มหน้าโหลดก่อนเข้าเกม (src/first/Loading.client.luau, ReplicatedFirst): หลอด progress + ข้อความขั้นตอน (images, sounds, music, save) ดีไซน์ชั่วคราว ออกแบบใน Figma ทีหลัง ทดสอบ: restart scripts\serve.bat แล้วกด Play ต้องเห็นหน้าโหลดจนหลอดเต็มแล้วเฟดหาย ผ่าน tools/check.mjs ยังไม่ได้ทดสอบใน Studio
+- 2026-11-23T23:32:00+07:00 — ออกแบบทำนอง BGM เพลงที่ 7 Boardwalk Cafe Lofi สไตล์เดินเข้าคาเฟ่ตกปลาสายๆ ชิลล์ๆ ไม่ต้องคิดอะไร บันทึกใน docs/bgm/07_boardwalk_cafe_lofi.md, BGM_MASTER_PROMPTS.md และเพิ่มคีย์ bgm_cafe ใน Config/Sounds.luau ผ่าน tools/check.mjs เรียบร้อย
+- 2026-11-23T23:22:00+07:00 — ออกแบบทำนอง BGM เพิ่มอีก 2 เพลงตามสไตล์ Rivers in the Desert (Persona 5) และ Back to the Drawing Board (FFXIV Arcadion M2) บันทึกใน docs/bgm/05_abyssal_desperado.md, 06_honey_buzz_fever.md, BGM_MASTER_PROMPTS.md และเพิ่มคีย์ bgm_boss_abyss, bgm_frenzy_fever ใน Config/Sounds.luau ผ่าน type check และ tools/check.mjs เรียบร้อย
+- 2026-11-23T23:15:00+07:00 — ออกแบบทำนอง BGM 4 เพลง (Cozy/Lofi 2 เพลง, ตื่นเต้น/สนุก 2 เพลง) พร้อมเขียน Master Prompt และเอกสารแยกรายเพลงใน docs/bgm/ และ docs/BGM_MASTER_PROMPTS.md และเพิ่มคีย์ bgm_aquarium, bgm_tide, bgm_battle ใน Config/Sounds.luau ผ่าน type check และ tools/check.mjs เรียบร้อย
+- 2026-11-23 — C41 ทำหน้าต่าง Trade เป็นกริดตาม Figma (TradeController, ItemDetail Trade mode, MaxPerSide=2) ผ่าน tools/check.mjs ยังไม่ได้ทดสอบใน Play
+- 2026-11-23T21:58:01+07:00 — C41 ขยาย Your inventory ใน Figma เป็น 4 คอลัมน์ × 3 แถว ลดความกว้าง Offer และจัดสองช่องต่อฝั่ง ถอดป้าย Total และตรวจครบ 6 เฟรม
+- 2026-11-23T21:49:47+07:00 — C41 ปรับ Figma Trade เป็นกริดและ Item Card เดิม เพิ่มช่องว่าง Bubbles ใช้สีทรายอ่อนใน Offer และทำตัวอย่างมุมมองตอนเลื่อน Inventory ตรวจครบ 6 เฟรมและบันทึกข้อกำหนด VirtualGrid สำหรับ Roblox
+- 2026-11-23T21:27:30+07:00 — C41 ปรับไอคอนปุ่ม Trade ใน MainMenuScreen ให้ใช้ ui/icons/trade_license และตั้งค่าอัปเดตอัตโนมัติใน EnsureTradeTile พร้อม Bake ลง StarterGui.MainMenu ใน Studio เรียบร้อย
+- 2026-11-23T21:18:40+07:00 — C41 ไดคัตไอคอน Trade License จากภาพ cell 3 ทำพื้นหลังโปร่งใส 512x512 บันทึกเข้า assets/art/ui/icons/trade_license.png ลงทะเบียนใน catalog.json ผูกเข้ากับการ์ด Trade License ใน StoreScreen และตั้งค่าเตรียมอัปโหลด Roblox Open Cloud
+- 2026-11-23T21:09:29+07:00 — C41 ทำบอร์ด Trade 4 แบบใน Figma Out Space ใช้ภาพและคอมโพเนนต์ Cozy Lake เดิม ตรวจครบทั้งสี่หน้าต่างและภาพ 15 ช่อง รอเลือกแบบ
+- 2026-11-23T20:45:33+07:00 — C41 เพิ่ม Trade License หน้า Passes ของ Store ใช้ปุ่มซื้อและสถานะ OWNED เดิม เพิ่มการแบ่งหน้าเมื่อการ์ดเกินพื้นที่ ตรวจเดสก์ท็อปและจอสั้นใน Studio Edit แล้ว
+- 2026-11-23T20:31:04+07:00 — C41 ผูก Trade License กับ Game Pass 2092411225 ตรวจชื่อ เจ้าของ และสถานะเปิดขายผ่าน Roblox Studio แล้ว ใช้ราคาที่อ่านได้ 75 Robux เป็นราคาสำรอง
+- 2026-11-23T20:15:32+07:00 — C41 เพิ่มหน้าต่าง Trade และกติกา Bound ใช้รายการเทรดถาวรและสิทธิ์เขียนเซฟรายเซิร์ฟเวอร์เพื่อกู้คืนกรณีเซฟไม่ครบ ผ่านเทสต์จำลองและตรวจสิทธิ์ใน Studio Edit รอทดสอบ Play สองผู้เล่นและตั้ง PassId
+- 2026-11-23T19:32:47+07:00 — ตรวจความพร้อมระบบเทรดจากโค้ด พบฐานไอเทม UUID และตัวตรวจ Inventory.CanTrade แล้ว ส่วนหน้าต่างและขั้นตอนยืนยันเทรด Trade License ภาษี Coins และการโอนที่กู้คืนได้เมื่อเซฟไม่ครบยังต้องพัฒนา
+- 2026-11-23T18:57:23+07:00 — C40 ปรับ Patch Note Card เป็นโพยกระดาษโทนอุ่นติดเทปใส เพิ่มชุดสี Tag รายหมวดและวงกลมโปร่งหน้ารายการ ทดสอบสุ่มสติกเกอร์ 90 แบบในสามสัดส่วน รวมถึงบันทึกและส่งข้อมูล PNG 2x ให้ Clipboard API เมื่อเปิด HTML โดยตรง
 - 2026-11-23T14:51:33+07:00 — C39 เพิ่ม Local Plugin Aura Particle Importer รับ project.json จับคู่ PNG แปลง Luma เป็น Alpha อัปโหลดและจำ ID ตามเจ้าของภาพ วางโมเดลใน ReplicatedStorage.AuraVFX แล้วเล่น Sprite, Emitter และ Ribbon จากค่าที่นำเข้า
 - 2026-11-23T14:26:01+07:00 — C39 เพิ่มขั้นตอนนำงานจาก Particle Editor ไป Roblox Studio ในคู่มือ ตั้งแต่ PNG โปร่งใสและ Asset ID จนถึงตำแหน่ง Model ใน ReplicatedStorage.AuraVFX ตามการโหลดของ AuraService
 - 2026-11-23T13:43:29+07:00 — C39 เพิ่ม Aura Particle Editor แบบ Node.js และ TypeScript พร้อมตัวเปิด Windows, JSON Schema, CLI และโหลดการแก้ไฟล์จากภายนอก แปลง Tidal Bloom, Moonlit Ripple และ Nebula Koi เป็น project.json ทดสอบ Duplicate ปรับความเร็ว เซฟ และส่งออกเฟรมใน Chrome แล้ว

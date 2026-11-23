@@ -7,7 +7,9 @@ local RunService = game:GetService("RunService")
 
 local EVENTS = {
 	-- server -> client
+	"TradeUpdate", -- (state?, notice?) private session snapshot for each participant
 	"DataSync", -- (profileSnapshot)
+	"PlaySound", -- (soundId, position?) server asks this client to play a Config/Sounds entry (SoundController)
 	"Bite", -- (token, { Rarity })
 	"FishingState", -- (state: "Idle" | "Waiting" | "Bite" | "Reeling", info)
 	"StartMinigame", -- (token, params)
@@ -33,6 +35,7 @@ local EVENTS = {
 }
 
 local FUNCTIONS = {
+	"TradeAction", -- (action, request) -> ok, message
 	"Buy", -- (categoryId, itemId) -> ok, message
 	"Equip", -- (categoryId, itemId | uuid for Rods/Lines) -> ok, message
 	"SellAll", -- () -> ok, message   (fish only; chests, rods and lines stay)

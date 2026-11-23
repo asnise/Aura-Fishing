@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Particle Editor | Aura Fishing</title>
+  <link rel="stylesheet" href="/ui/style.css">
+</head>
+<body>
+  <div id="editor" class="editor">
+    <header class="app-bar">
+      <div class="app-identity">
+        <span class="app-name">Particle Editor</span>
+        <span class="game-name">Aura Fishing</span>
+      </div>
+      <nav class="file-actions" aria-label="File actions">
+        <button id="new-file" type="button" title="New project (Ctrl+N)">New</button>
+        <button id="open-file" type="button" title="Open project (Ctrl+O)">Open</button>
+        <button id="save-file" type="button" class="primary" title="Save project (Ctrl+S)">Save</button>
+        <button id="save-as" type="button" title="Save a copy (Ctrl+Shift+S)">Save As</button>
+        <button id="open-samples" type="button">Examples</button>
+      </nav>
+      <div class="document-title">
+        <span id="file-name">Particle project</span>
+        <span id="file-status" class="file-status">Loading</span>
+      </div>
+    </header>
+
+    <div id="notice" class="notice" role="status" hidden>
+      <span id="notice-message"></span>
+      <div class="notice-actions">
+        <button id="reload-file" type="button" hidden>Reload from disk</button>
+        <button id="copy-file" type="button" hidden>Save As</button>
+        <button id="dismiss-notice" type="button">Dismiss</button>
+      </div>
+    </div>
+
+    <main id="workspace" class="workspace" inert>
+      <aside class="library" aria-label="Layers and assets">
+        <div class="panel-tabs" role="group" aria-label="Library tabs">
+          <button id="layers-tab" type="button" aria-pressed="true" aria-controls="layers-panel">Layers</button>
+          <button id="assets-tab" type="button" aria-pressed="false" aria-controls="assets-panel">Assets</button>
+        </div>
+
+        <section id="layers-panel" class="library-panel" aria-label="Layers">
+          <div class="library-actions">
+            <select id="add-layer" aria-label="Add layer" title="Add layer">
+              <option value="">Add layer</option>
+              <option value="sprite">Sprite</option>
+              <option value="emitter">Emitter</option>
+              <option value="ribbon">Ribbon</option>
+            </select>
+            <span id="layer-count" class="count"></span>
+          </div>
+          <ul id="layer-list" class="item-list"></ul>
+          <div id="layer-actions" class="layer-actions" aria-label="Selected layer actions">
+            <button id="raise-layer" type="button" title="Move layer up">Up</button>
+            <button id="lower-layer" type="button" title="Move layer down">Down</button>
+            <button id="duplicate-layer" type="button" title="Duplicate layer (Ctrl+D)">Duplicate</button>
+            <button id="delete-layer" type="button" title="Delete layer (Delete)">Delete</button>
+          </div>
+        </section>
+
+        <section id="assets-panel" class="library-panel" aria-label="Assets" hidden>
+          <div class="library-actions">
+            <button id="import-png" type="button">Import PNG</button>
+            <span id="asset-count" class="count"></span>
+          </div>
+          <ul id="asset-list" class="item-list"></ul>
+        </section>
+      </aside>
+
+      <div class="center-workspace">
+        <section class="viewport" aria-label="Preview">
+          <header class="panel-header viewport-header">
+            <h2>Preview</h2>
+            <div class="panel-tools">
+              <button id="grid-toggle" type="button" aria-pressed="true" title="Show reference grid">Grid</button>
+              <button id="model-toggle" type="button" aria-pressed="true" title="Show reference mannequin">Mannequin</button>
+              <button id="reset-camera" type="button">Reset view</button>
+            </div>
+          </header>
+          <div class="preview-stage">
+            <canvas id="preview" aria-label="Particle preview"></canvas>
+            <div id="empty-preview" class="empty-preview" hidden>
+              <strong>No layers yet</strong>
+              <div class="empty-actions">
+                <button id="first-layer" class="primary" type="button">Add sprite</button>
+                <button id="first-sample" type="button">Open an example</button>
+              </div>
+            </div>
+            <span class="preview-hint" aria-hidden="true">Drag to orbit / Scroll to zoom</span>
+          </div>
+        </section>
+
+        <section class="timeline" aria-label="Timeline">
+          <header class="panel-header timeline-header">
+            <h2>Timeline</h2>
+            <div class="panel-tools transport">
+              <button id="rewind" type="button" title="Go to start (Home)">Start</button>
+              <button id="play" type="button" class="play-button" title="Play or pause (Space)">Play</button>
+              <button id="loop" type="button" aria-pressed="true">Loop</button>
+              <output id="playback-time" aria-label="Playback time">0.00 / 0.00 s</output>
+            </div>
+            <div class="panel-tools timeline-settings">
+              <label><span>Speed</span>
+                <select id="playback-speed" aria-label="Playback speed">
+                  <option value="0.25">0.25x</option>
+                  <option value="0.5">0.5x</option>
+                  <option value="1" selected>1x</option>
+                  <option value="2">2x</option>
+                </select>
+              </label>
+              <label><span>Zoom</span>
+                <select id="timeline-zoom" aria-label="Timeline zoom">
+                  <option value="1">Fit</option>
+                  <option value="2">2x</option>
+                  <option value="4">4x</option>
+                  <option value="8">8x</option>
+                </select>
+              </label>
+              <label><span>Tier</span>
+                <select id="preview-tier" aria-label="Preview quality tier">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3" selected>3</option>
+                </select>
+              </label>
+            </div>
+          </header>
+          <div id="timeline-scroll" class="timeline-scroll">
+            <div id="timeline-content" class="timeline-content">
+              <div class="timeline-row timeline-ruler">
+                <span class="track-label">Layer</span>
+                <div id="ruler" class="ruler" role="slider" tabindex="0" aria-label="Playhead" aria-valuemin="0" aria-valuemax="1" aria-valuenow="0"></div>
+              </div>
+              <div id="tracks"></div>
+              <div id="playhead" class="playhead" aria-hidden="true"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <aside class="inspector" aria-label="Inspector">
+        <div class="panel-tabs" role="group" aria-label="Inspector tabs">
+          <button id="properties-tab" type="button" aria-pressed="true" aria-controls="inspector-body">Properties</button>
+          <button id="sheet-tab" type="button" aria-pressed="false" aria-controls="inspector-body" disabled>Sheet</button>
+          <button id="scene-tab" type="button" aria-pressed="false" aria-controls="inspector-body">Scene</button>
+        </div>
+        <div id="inspector-body" class="inspector-body"></div>
+      </aside>
+    </main>
+
+    <footer class="status-bar">
+      <span id="file-path" class="file-path">Untitled project</span>
+      <span id="live-status" class="live-status" data-live="false">Connecting</span>
+    </footer>
+  </div>
+
+  <dialog id="samples-dialog" aria-labelledby="examples-heading">
+    <header class="dialog-header">
+      <h2 id="examples-heading">Open an example</h2>
+      <form method="dialog"><button type="submit">Close</button></form>
+    </header>
+    <div id="sample-list" class="sample-list"></div>
+  </dialog>
+
+  <script type="module" src="/ui/app.js"></script>
+</body>
+</html>

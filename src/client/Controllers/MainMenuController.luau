@@ -85,6 +85,9 @@ local ACTIONS: { [string]: () -> () } = {
 	DailyLogin = function()
 		HUD.DailyLoginRequested:Fire()
 	end,
+	Trade = function()
+		MenuManager.Open("Trade")
+	end,
 	Friends = invite,
 	Events = function()
 		HUD.EventsRequested:Fire()
@@ -107,7 +110,7 @@ local ACTIONS: { [string]: () -> () } = {
 		local title = Rebirth.Title(nextCount)
 		Modal.Confirm({
 			Title = `Rebirth {nextCount}?`,
-			Message = `Level, coins and the fish in your bag reset. You keep gear, auras, Fishdex, Mastery, Aquarium and Gems.`
+			Message = `Level, coins and unprotected fish in your bag reset. You keep gear, auras, Fishdex, Mastery, Aquarium and Gems.`
 				.. ` Coins and Pearls become {New.Highlight("x" .. tostring(1 + Rebirth.Bonus(nextCount)))}`
 				.. (if title then `, title {New.Highlight(title)}.` else "."),
 			ConfirmText = "Rebirth",
@@ -236,6 +239,7 @@ local function ensure()
 	local grid = Baked.Find(hub, "Glass/Phone/Grid")
 	MainMenuScreen.EnsureCodexTile(grid)
 	MainMenuScreen.EnsureDailyTile(grid)
+	MainMenuScreen.EnsureTradeTile(grid)
 	if not grid:FindFirstChild("Mastery") then
 		local quests = grid:FindFirstChild("Quests")
 		if quests and quests:IsA("GuiButton") then

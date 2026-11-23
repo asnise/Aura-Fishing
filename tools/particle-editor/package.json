@@ -1,0 +1,19 @@
+{
+  "name": "aura-particle-editor",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test",
+    "start": "node scripts/start.mjs",
+    "project": "node scripts/project.mjs",
+    "studio": "node scripts/studio.mjs",
+    "exe": "node scripts/build.mjs && powershell.exe -NoProfile -ExecutionPolicy Bypass -File pack/build-launcher.ps1 -OutputDirectory ../../build/aura-particle-editor"
+  },
+  "devDependencies": {
+    "@types/node": "22.13.10",
+    "typescript": "5.8.2"
+  }
+}

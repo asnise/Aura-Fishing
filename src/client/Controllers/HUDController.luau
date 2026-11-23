@@ -29,6 +29,7 @@ local Modal = require(script.Parent.Parent.UI.Modal)
 local MakeTile = (require(script.Parent.Parent.UI.Screens:WaitForChild("Components")) :: any).Make.MenuTile
 local CastPopup = require(script.Parent.Parent.UI.CastPopup) -- Depth popup
 local DataController = require(script.Parent.DataController)
+local SoundController = require(script.Parent.SoundController)
 
 local T = New.Theme
 local player = Players.LocalPlayer
@@ -69,15 +70,32 @@ function HUD.Notify(text: string, color: Color3?)
 	if not notifyHolder then
 		return
 	end
+	if color and color.R > 0.75 and color.G < 0.5 and color.B < 0.55 then
+		New.Sfx("ui_error") -- red notices (full bag, not enough coins, ...)
+	end
 	local label = Components.Clone("NotifyPill")
 	label.Text = text
 	label.TextColor3 = color or T.Text
 	label.Parent = notifyHolder
 	New.Pop(label)
 	task.delay(3, function()
-		TweenService:Create(label, TweenInfo.new(0.5), { TextTransparency = 1, BackgroundTransparency = 1 }):Play()
+		local fadeInfo = TweenInfo.new(0.5)
+		TweenService:Create(label, fadeInfo, { TextTransparency = 1, BackgroundTransparency = 1 }):Play()
+		for _, desc in label:GetDescendants() do
+			if desc:IsA("UIStroke") then
+				TweenService:Create(desc, fadeInfo, { Transparency = 1 }):Play()
+			elseif desc:IsA("TextLabel") or desc:IsA("TextButton") then
+				TweenService:Create(desc, fadeInfo, { TextTransparency = 1, BackgroundTransparency = 1 }):Play()
+			elseif desc:IsA("ImageLabel") or desc:IsA("ImageButton") then
+				TweenService:Create(desc, fadeInfo, { ImageTransparency = 1, BackgroundTransparency = 1 }):Play()
+			elseif desc:IsA("GuiObject") then
+				TweenService:Create(desc, fadeInfo, { BackgroundTransparency = 1 }):Play()
+			end
+		end
 		task.wait(0.5)
-		label:Destroy()
+		if label.Parent then
+			label:Destroy()
+		end
 	end)
 end
 
@@ -105,6 +123,13 @@ function HUD.ShowCatch(result: any)
 	New.FitToScreen(card)
 	New.Pop(card) -- built already shown: no Enabled/Visible change to trigger it
 	New.ApplyImages(card)
+
+	SoundController.Play("ui_open")
+	if rarity.Tier >= 3 then
+		SoundController.Play("catch_rare")
+	else
+		SoundController.Play("catch")
+	end
 	local tags = card.Tags
 	tags.Rarity.Text = string.upper(rarity.Name)
 	tags.Rarity.BackgroundColor3 = rarity.Color
@@ -430,7 +455,17 @@ function HUD.Init()
 	-- toasts draw above every window (Modal 50, DevPanel 60): own ScreenGui on top (Figma 10 Notifications)
 	New("ScreenGui", { Name = "Notifications", DisplayOrder = 100, ResetOnSpawn = false, IgnoreGuiInset = false, Parent = gui.Parent })
 	notifyHolder.Parent = gui.Parent:FindFirstChild("Notifications")
+	local notifLayout = notifyHolder:FindFirstChildOfClass("UIListLayout")
+	if notifLayout then
+		notifLayout.Padding = UDim.new(0, 8)
+	end
 	refs.Status = find("Status")
+	if not refs.Status:FindFirstChildOfClass("UIPadding") then
+		local padding = New.Padding(6)
+		padding.PaddingLeft = UDim.new(0, 16)
+		padding.PaddingRight = padding.PaddingLeft
+		padding.Parent = refs.Status
+	end
 
 	refs.Cast = find("CastMobile")
 	HUDScreen.StyleCastButton(refs.Cast)
@@ -687,9 +722,15 @@ function HUD.Init()
 			menu.Size = UDim2.fromOffset(count * 80 + (count - 1) * 10, 88)
 		else
 			menuList.FillDirection = Enum.FillDirection.Vertical
-			menu.AnchorPoint = Vector2.new(0, 0)
-			menu.Position = UDim2.new(0, 12, 0, math.floor(234 * scale)) -- below the desktop chat window
-			menu.Size = UDim2.fromOffset(80, count * 88 + (count - 1) * 10)
+			-- left side, centred in the free space under the level / currency chips (about 160 design px tall) and
+			-- shrunk to fit it, so on short screens (720p) it neither runs off the bottom nor covers the chips
+			local menuHeight = count * 88 + (count - 1) * 10
+			local freeTop = math.floor(165 * scale)
+			local freeHeight = math.max(120, size.Y - freeTop - 12)
+			menu.AnchorPoint = Vector2.new(0, 0.5)
+			menu.Position = UDim2.new(0, 12, 0, freeTop + math.floor(freeHeight / 2))
+			menu.Size = UDim2.fromOffset(80, menuHeight)
+			scales[menu].Scale = math.min(scale, freeHeight / math.max(1, menuHeight))
 		end
 		HUDScreen.LayoutFishingDock(right, size, UserInputService.TouchEnabled, scale)
 		-- bottom centre, bottom to top: boost chips, hot streak tag, status pill

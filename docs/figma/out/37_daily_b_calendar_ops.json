@@ -1,0 +1,753 @@
+[
+ {
+  "replaceId": "3794:1773",
+  "tree": {
+   "name": "Day 1 reward",
+   "w": 134,
+   "h": 148,
+   "radius": 18,
+   "clip": true,
+   "fill": "FFFDF7",
+   "stroke": "E6DCCB",
+   "strokeW": 2,
+   "children": [
+    {
+     "name": "HeaderTab",
+     "w": 134,
+     "h": 34,
+     "x": 0,
+     "y": 0,
+     "fill": "6BB3DE",
+     "children": [
+      {
+       "name": "Peg 1",
+       "w": 16,
+       "h": 7,
+       "x": 37,
+       "y": 4,
+       "radius": 999,
+       "fill": "FFFDF7",
+       "stroke": {
+        "hex": "3D4B5C",
+        "opacity": 0.35
+       },
+       "strokeW": 1
+      },
+      {
+       "name": "Peg 2",
+       "w": 16,
+       "h": 7,
+       "x": 81,
+       "y": 4,
+       "radius": 999,
+       "fill": "FFFDF7",
+       "stroke": {
+        "hex": "3D4B5C",
+        "opacity": 0.35
+       },
+       "strokeW": 1
+      },
+      {
+       "type": "TEXT",
+       "text": "Day 1",
+       "font": {
+        "family": "Fredoka One",
+        "style": "Regular"
+       },
+       "size": 16,
+       "color": "FFFFFF",
+       "name": "DayLabel",
+       "x": 0,
+       "y": 10,
+       "w": 134,
+       "align": "CENTER"
+      }
+     ]
+    },
+    {
+     "type": "RECT",
+     "name": "Img ui/status/coin",
+     "w": 52,
+     "h": 52,
+     "x": 41,
+     "y": 46
+    },
+    {
+     "type": "TEXT",
+     "text": "1,000 Coins",
+     "font": {
+      "family": "Fredoka One",
+      "style": "Regular"
+     },
+     "size": 13,
+     "color": "3D4B5C",
+     "name": "Amount",
+     "x": 0,
+     "y": 104,
+     "w": 134,
+     "align": "CENTER"
+    },
+    {
+     "type": "RECT",
+     "name": "ClaimedOverlay",
+     "w": 134,
+     "h": 148,
+     "x": 0,
+     "y": 0,
+     "radius": 18,
+     "fill": {
+      "hex": "3D4B5C",
+      "opacity": 0.5
+     }
+    },
+    {
+     "type": "SVG",
+     "name": "ClaimedCheck",
+     "svg": "<svg width=\"46\" height=\"46\" viewBox=\"0 0 46 46\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"23\" cy=\"23\" r=\"21\" fill=\"#7FD3B0\" stroke=\"#4FB58C\" stroke-width=\"3\"/><path d=\"M13 23.5l6.5 6.5L33 16\" stroke=\"#FFFFFF\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+     "w": 46,
+     "h": 46,
+     "x": 44,
+     "y": 53
+    }
+   ]
+  }
+ },
+ {
+  "replaceId": "3794:1784",
+  "tree": {
+   "name": "Day 2 reward",
+   "w": 134,
+   "h": 148,
+   "radius": 18,
+   "clip": true,
+   "fill": "FFFDF7",
+   "stroke": "E6DCCB",
+   "strokeW": 2,
+   "children": [
+    {
+     "name": "HeaderTab",
+     "w": 134,
+     "h": 34,
+     "x": 0,
+     "y": 0,
+     "fill": "6BB3DE",
+     "children": [
+      {
+       "name": "Peg 1",
+       "w": 16,
+       "h": 7,
+       "x": 37,
+       "y": 4,
+       "radius": 999,
+       "fill": "FFFDF7",
+       "stroke": {
+        "hex": "3D4B5C",
+        "opacity": 0.35
+       },
+       "strokeW": 1
+      },
+      {
+       "name": "Peg 2",
+       "w": 16,
+       "h": 7,
+       "x": 81,
+       "y": 4,
+       "radius": 999,
+       "fill": "FFFDF7",
+       "stroke": {
+        "hex": "3D4B5C",
+        "opacity": 0.35
+       },
+       "strokeW": 1
+      },
+      {
+       "type": "TEXT",
+       "text": "Day 2",
+       "font": {
+        "family": "Fredoka One",
+        "style": "Regular"
+       },
+       "size": 16,
+       "color": "FFFFFF",
+       "name": "DayLabel",
+       "x": 0,
+       "y": 10,
+       "w": 134,
+       "align": "CENTER"
+      }
+     ]
+    },
+    {
+     "type": "RECT",
+     "name": "Img equipment/Worm",
+     "w": 52,
+     "h": 52,
+     "x": 41,
+     "y": 46
+    },
+    {
+     "type": "TEXT",
+     "text": "15 Worms",
+     "font": {
+      "family": "Fredoka One",
+      "style": "Regular"
+     },
+     "size": 13,
+     "color": "3D4B5C",
+     "name": "Amount",
+     "x": 0,
+     "y": 104,
+     "w": 134,
+     "align": "CENTER"
+    },
+    {
+     "type": "RECT",
+     "name": "ClaimedOverlay",
+     "w": 134,
+     "h": 148,
+     "x": 0,
+     "y": 0,
+     "radius": 18,
+     "fill": {
+      "hex": "3D4B5C",
+      "opacity": 0.5
+     }
+    },
+    {
+     "type": "SVG",
+     "name": "ClaimedCheck",
+     "svg": "<svg width=\"46\" height=\"46\" viewBox=\"0 0 46 46\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"23\" cy=\"23\" r=\"21\" fill=\"#7FD3B0\" stroke=\"#4FB58C\" stroke-width=\"3\"/><path d=\"M13 23.5l6.5 6.5L33 16\" stroke=\"#FFFFFF\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+     "w": 46,
+     "h": 46,
+     "x": 44,
+     "y": 53
+    }
+   ]
+  }
+ },
+ {
+  "replaceId": "3794:1795",
+  "tree": {
+   "name": "Day 3 reward",
+   "w": 134,
+   "h": 148,
+   "radius": 18,
+   "clip": true,
+   "fill": "FFFDF7",
+   "stroke": "FF9E80",
+   "strokeW": 3,
+   "children": [
+    {
+     "name": "HeaderTab",
+     "w": 134,
+     "h": 34,
+     "x": 0,
+     "y": 0,
+     "fill": "FF9E80",
+     "children": [
+      {
+       "name": "Peg 1",
+       "w": 16,
+       "h": 7,
+       "x": 37,
+       "y": 4,
+       "radius": 999,
+       "fill": "FFFDF7",
+       "stroke": {
+        "hex": "3D4B5C",
+        "opacity": 0.35
+       },
+       "strokeW": 1
+      },
+      {
+       "name": "Peg 2",
+       "w": 16,
+       "h": 7,
+       "x": 81,
+       "y": 4,
+       "radius": 999,
+       "fill": "FFFDF7",
+       "stroke": {
+        "hex": "3D4B5C",
+        "opacity": 0.35
+       },
+       "strokeW": 1
+      },
+      {
+       "type": "TEXT",
+       "text": "Day 3",
+       "font": {
+        "family": "Fredoka One",
+        "style": "Regular"
+       },
+       "size": 16,
+       "color": "FFFFFF",
+       "name": "DayLabel",
+       "x": 0,
+       "y": 10,
+       "w": 134,
+       "align": "CENTER"
+      }
+     ]
+    },
+    {
+     "type": "RECT",
+     "name": "Img ui/status/gem",
+     "w": 52,
+     "h": 52,
+     "x": 41,
+     "y": 46
+    },
+    {
+     "type": "TEXT",
+     "text": "15 Gems",
+     "font": {
+      "family": "Fredoka One",
+      "style": "Regular"
+     },
+     "size": 13,
+     "color": "3D4B5C",
+     "name": "Amount",
+     "x": 0,
+     "y": 104,
+     "w": 134,
+     "align": "CENTER"
+    },
+    {
+     "name": "ReadyBadge",
+     "layout": "H",
+     "pad": [
+      2,
+      10,
+      3,
+      10
+     ],
+     "radius": 999,
+     "fill": "FF9E80",
+     "x": 39,
+     "y": 124,
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "READY",
+       "font": {
+        "family": "Nunito",
+        "style": "Bold"
+       },
+       "size": 11,
+       "color": "FFFFFF",
+       "name": "TagText"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "replaceId": "3794:1806",
+  "tree": {
+   "name": "Day 4 reward",
+   "w": 134,
+   "h": 148,
+   "radius": 18,
+   "clip": true,
+   "fill": "FFFDF7",
+   "stroke": "E6DCCB",
+   "strokeW": 2,
+   "children": [
+    {
+     "name": "HeaderTab",
+     "w": 134,
+     "h": 34,
+     "x": 0,
+     "y": 0,
+     "fill": "6BB3DE",
+     "children": [
+      {
+       "name": "Peg 1",
+       "w": 16,
+       "h": 7,
+       "x": 37,
+       "y": 4,
+       "radius": 999,
+       "fill": "FFFDF7",
+       "stroke": {
+        "hex": "3D4B5C",
+        "opacity": 0.35
+       },
+       "strokeW": 1
+      },
+      {
+       "name": "Peg 2",
+       "w": 16,
+       "h": 7,
+       "x": 81,
+       "y": 4,
+       "radius": 999,
+       "fill": "FFFDF7",
+       "stroke": {
+        "hex": "3D4B5C",
+        "opacity": 0.35
+       },
+       "strokeW": 1
+      },
+      {
+       "type": "TEXT",
+       "text": "Day 4",
+       "font": {
+        "family": "Fredoka One",
+        "style": "Regular"
+       },
+       "size": 16,
+       "color": "FFFFFF",
+       "name": "DayLabel",
+       "x": 0,
+       "y": 10,
+       "w": 134,
+       "align": "CENTER"
+      }
+     ]
+    },
+    {
+     "type": "RECT",
+     "name": "Img equipment/GlowGrub",
+     "w": 52,
+     "h": 52,
+     "x": 41,
+     "y": 46
+    },
+    {
+     "type": "TEXT",
+     "text": "10 Glow Grubs",
+     "font": {
+      "family": "Fredoka One",
+      "style": "Regular"
+     },
+     "size": 13,
+     "color": "3D4B5C",
+     "name": "Amount",
+     "x": 0,
+     "y": 104,
+     "w": 134,
+     "align": "CENTER"
+    }
+   ]
+  }
+ },
+ {
+  "replaceId": "3794:1816",
+  "tree": {
+   "name": "Day 5 reward",
+   "w": 134,
+   "h": 148,
+   "radius": 18,
+   "clip": true,
+   "fill": "FFFDF7",
+   "stroke": "E6DCCB",
+   "strokeW": 2,
+   "children": [
+    {
+     "name": "HeaderTab",
+     "w": 134,
+     "h": 34,
+     "x": 0,
+     "y": 0,
+     "fill": "6BB3DE",
+     "children": [
+      {
+       "name": "Peg 1",
+       "w": 16,
+       "h": 7,
+       "x": 37,
+       "y": 4,
+       "radius": 999,
+       "fill": "FFFDF7",
+       "stroke": {
+        "hex": "3D4B5C",
+        "opacity": 0.35
+       },
+       "strokeW": 1
+      },
+      {
+       "name": "Peg 2",
+       "w": 16,
+       "h": 7,
+       "x": 81,
+       "y": 4,
+       "radius": 999,
+       "fill": "FFFDF7",
+       "stroke": {
+        "hex": "3D4B5C",
+        "opacity": 0.35
+       },
+       "strokeW": 1
+      },
+      {
+       "type": "TEXT",
+       "text": "Day 5",
+       "font": {
+        "family": "Fredoka One",
+        "style": "Regular"
+       },
+       "size": 16,
+       "color": "FFFFFF",
+       "name": "DayLabel",
+       "x": 0,
+       "y": 10,
+       "w": 134,
+       "align": "CENTER"
+      }
+     ]
+    },
+    {
+     "type": "RECT",
+     "name": "Img ui/status/pearl",
+     "w": 52,
+     "h": 52,
+     "x": 41,
+     "y": 46
+    },
+    {
+     "type": "TEXT",
+     "text": "500 Pearls",
+     "font": {
+      "family": "Fredoka One",
+      "style": "Regular"
+     },
+     "size": 13,
+     "color": "3D4B5C",
+     "name": "Amount",
+     "x": 0,
+     "y": 104,
+     "w": 134,
+     "align": "CENTER"
+    }
+   ]
+  }
+ },
+ {
+  "replaceId": "3794:1826",
+  "tree": {
+   "name": "Day 6 reward",
+   "w": 134,
+   "h": 148,
+   "radius": 18,
+   "clip": true,
+   "fill": "FFFDF7",
+   "stroke": "E6DCCB",
+   "strokeW": 2,
+   "children": [
+    {
+     "name": "HeaderTab",
+     "w": 134,
+     "h": 34,
+     "x": 0,
+     "y": 0,
+     "fill": "6BB3DE",
+     "children": [
+      {
+       "name": "Peg 1",
+       "w": 16,
+       "h": 7,
+       "x": 37,
+       "y": 4,
+       "radius": 999,
+       "fill": "FFFDF7",
+       "stroke": {
+        "hex": "3D4B5C",
+        "opacity": 0.35
+       },
+       "strokeW": 1
+      },
+      {
+       "name": "Peg 2",
+       "w": 16,
+       "h": 7,
+       "x": 81,
+       "y": 4,
+       "radius": 999,
+       "fill": "FFFDF7",
+       "stroke": {
+        "hex": "3D4B5C",
+        "opacity": 0.35
+       },
+       "strokeW": 1
+      },
+      {
+       "type": "TEXT",
+       "text": "Day 6",
+       "font": {
+        "family": "Fredoka One",
+        "style": "Regular"
+       },
+       "size": 16,
+       "color": "FFFFFF",
+       "name": "DayLabel",
+       "x": 0,
+       "y": 10,
+       "w": 134,
+       "align": "CENTER"
+      }
+     ]
+    },
+    {
+     "type": "RECT",
+     "name": "Img equipment/SquidBait",
+     "w": 52,
+     "h": 52,
+     "x": 41,
+     "y": 46
+    },
+    {
+     "type": "TEXT",
+     "text": "10 Squid Baits",
+     "font": {
+      "family": "Fredoka One",
+      "style": "Regular"
+     },
+     "size": 13,
+     "color": "3D4B5C",
+     "name": "Amount",
+     "x": 0,
+     "y": 104,
+     "w": 134,
+     "align": "CENTER"
+    }
+   ]
+  }
+ },
+ {
+  "replaceId": "3794:1836",
+  "tree": {
+   "name": "Day 7 reward",
+   "w": 270,
+   "h": 306,
+   "radius": 18,
+   "clip": true,
+   "fill": "FFFDF7",
+   "stroke": "F2B544",
+   "strokeW": 2,
+   "children": [
+    {
+     "name": "HeaderTab",
+     "w": 270,
+     "h": 40,
+     "x": 0,
+     "y": 0,
+     "fill": "F2B544",
+     "children": [
+      {
+       "name": "Peg 1",
+       "w": 16,
+       "h": 7,
+       "x": 60,
+       "y": 4,
+       "radius": 999,
+       "fill": "FFFDF7",
+       "stroke": {
+        "hex": "3D4B5C",
+        "opacity": 0.35
+       },
+       "strokeW": 1
+      },
+      {
+       "name": "Peg 2",
+       "w": 16,
+       "h": 7,
+       "x": 127,
+       "y": 4,
+       "radius": 999,
+       "fill": "FFFDF7",
+       "stroke": {
+        "hex": "3D4B5C",
+        "opacity": 0.35
+       },
+       "strokeW": 1
+      },
+      {
+       "name": "Peg 3",
+       "w": 16,
+       "h": 7,
+       "x": 194,
+       "y": 4,
+       "radius": 999,
+       "fill": "FFFDF7",
+       "stroke": {
+        "hex": "3D4B5C",
+        "opacity": 0.35
+       },
+       "strokeW": 1
+      },
+      {
+       "type": "TEXT",
+       "text": "Day 7",
+       "font": {
+        "family": "Fredoka One",
+        "style": "Regular"
+       },
+       "size": 18,
+       "color": "FFFFFF",
+       "name": "DayLabel",
+       "x": 0,
+       "y": 12,
+       "w": 270,
+       "align": "CENTER"
+      }
+     ]
+    },
+    {
+     "name": "GrandPill",
+     "layout": "H",
+     "pad": [
+      3,
+      12,
+      4,
+      12
+     ],
+     "radius": 999,
+     "fill": "FBEAB8",
+     "stroke": "C98B1E",
+     "strokeW": 1.5,
+     "x": 77,
+     "y": 60,
+     "children": [
+      {
+       "type": "TEXT",
+       "text": "GRAND REWARD",
+       "font": {
+        "family": "Nunito",
+        "style": "Bold"
+       },
+       "size": 11,
+       "color": "C98B1E",
+       "name": "GrandText"
+      }
+     ]
+    },
+    {
+     "type": "RECT",
+     "name": "Img ui/status/gem",
+     "w": 96,
+     "h": 96,
+     "x": 87,
+     "y": 104
+    },
+    {
+     "type": "TEXT",
+     "text": "50 Gems",
+     "font": {
+      "family": "Fredoka One",
+      "style": "Regular"
+     },
+     "size": 26,
+     "color": "C98B1E",
+     "name": "Reward amount",
+     "x": 0,
+     "y": 214,
+     "w": 270,
+     "align": "CENTER"
+    }
+   ]
+  }
+ }
+]
