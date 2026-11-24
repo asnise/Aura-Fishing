@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T10:01:48.225Z",
+ "generated": "2026-11-24T12:42:08.435Z",
  "stage": {
   "name": "ต้นแบบ Vertical Slice",
   "summary": "ระบบหลักสมบูรณ์ (วงจรตกปลา, Item Rework v6, Mod เบ็ดและสาย, Rod Fusion, Menu Manager, Daily Login B และ Stats Codex) อยู่ในรอบทดสอบ QA และ Mobile Responsive"
@@ -1514,6 +1514,10 @@
   },
   {
    "at": "2026-11-24",
+   "text": "A17 รอบ 3 (ทดสอบ Play บนจอ 568x320): ผ่านพอดีจอ: popup Offline Reward, HUD, มินิเกม, การ์ดปลา (Catch Card), Dialogue Old Marlin, Rod Fusion ทั้ง 4 ขั้น. ข้อสังเกต (ไม่ได้แก้): (1) Fusion ขั้น Compare ย่อเหลือประมาณ 0.58 เท่า ข้อความ mod ถูกตัด (\"+4% Fish Stabili...\") และปุ่ม Back/FUSE สูง ~19px ต่ำกว่า 44px (2) ตัวเลือก Dialogue ซ้อนทับแถวเมนูด้านบนขวา (3) มินิเกมซ้อนทับปุ่ม Bag ในแถวเมนู. ถ้าจะแก้ ให้ดูใน Figma แล้วปรับทีละหน้า ไม่บังคับขนาดทั้งระบบ"
+  },
+  {
+   "at": "2026-11-24",
    "text": "A17 ทดสอบใน Studio (Device Simulator): iPhone 17 Pro แนวนอน 749x381 และ 568x320 ผ่าน (Inventory, Character, Main Menu, Shop, Trade, Quests, HUD อยู่ในจอ). แก้ (1) ปุ่ม HUD เล็กกว่า 44px: เพิ่ม New.TouchHit (ปุ่มโปร่งใสตามตำแหน่งจริง ขั้นต่ำ 44px) ใช้กับ Daily, ปุ่มลูกศร More และ Hit_ ของชิปเงิน/เจม (EconomyController) (2) จอเตี้ย: ชิป Bag 21/50 ทับแถวเมนูมุมขวาบน ย้ายไปซ้ายของปุ่ม Depth (UI/Screens/HUD.luau). เกมตั้ง ScreenOrientation = LandscapeSensor จึงไม่ทดสอบแนวตั้ง. ยังไม่ได้ทดสอบ: Daily Login, Store, Mastery, Aquarium, Events/Gacha, Fusion, CAST popup, มินิเกม, การ์ดปลา บนจอเล็ก. ผ่าน tools/check.mjs"
   },
   {
@@ -1895,10 +1899,6 @@
   {
    "at": "2026-11-21",
    "text": "MCP local เปลี่ยนไปใช้ตัวเปิด stdio ที่สลับ server worker หลัง TypeScript rebuild ผ่าน รอคำสั่งที่กำลังทำงานและแจ้ง client ให้โหลดรายการเครื่องมือใหม่"
-  },
-  {
-   "at": "2026-11-21",
-   "text": "Figma Option 5: ทำ [Aura Reveal Motion](https://www.figma.com/design/givb0hmQYmmaOy7p7DGtb2/Ro-Offline?node-id=3713-622) สำหรับ Solar Flare (Epic) ที่ 3.2 วินาที ตรวจจาก MP4 ที่ Figma export แล้ว เพิ่มคำสั่ง Motion และ watch mode ใน MCP local ทดสอบโดยเพิ่มคำสั่งชั่วคราวแล้วเรียกได้ผ่าน relay เดิม"
   }
  ],
  "fixes": {}
