@@ -10,6 +10,8 @@
 -- Order               : sort order in the shop; first item (Price = 0) is the starter item.
 -- Stats               : additive stat bonuses (see StatDefs).
 
+local BagCapacity = require(script.Parent.BagCapacity)
+
 export type Item = {
 	Name: string,
 	Price: number,
@@ -62,11 +64,11 @@ local Equipment: { [string]: Category } = {
 		DisplayName = "Bags",
 		Kind = "Permanent",
 		Items = {
-			StarterPouch = { Name = "Starter Pouch", Price = 0, Currency = "Coins", Order = 1, Capacity = 10, Stats = {} },
-			WovenBasket = { Name = "Woven Basket", Price = 800, Currency = "Coins", Order = 2, Capacity = 16, Stats = {} },
-			Crate = { Name = "Fish Crate", Price = 6000, Currency = "Coins", Order = 3, Capacity = 24, Stats = {} },
-			Coolbox = { Name = "Ice Coolbox", Price = 40000, Currency = "Coins", Order = 4, Capacity = 36, Stats = {} },
-			Hold = { Name = "Ship's Hold", Price = 250000, Currency = "Coins", Order = 5, Capacity = 50, Stats = {} },
+			StarterPouch = { Name = "Starter Pouch", Price = 0, Currency = "Coins", Order = 1, Capacity = BagCapacity.Slots.StarterPouch, Stats = {} },
+			WovenBasket = { Name = "Woven Basket", Price = 800, Currency = "Coins", Order = 2, Capacity = BagCapacity.Slots.WovenBasket, Stats = {} },
+			Crate = { Name = "Fish Crate", Price = 6000, Currency = "Coins", Order = 3, Capacity = BagCapacity.Slots.Crate, Stats = {} },
+			Coolbox = { Name = "Ice Coolbox", Price = 40000, Currency = "Coins", Order = 4, Capacity = BagCapacity.Slots.Coolbox, Stats = {} },
+			Hold = { Name = "Ship's Hold", Price = 250000, Currency = "Coins", Order = 5, Capacity = BagCapacity.Slots.Hold, Stats = {} },
 		},
 	},
 	Baits = {

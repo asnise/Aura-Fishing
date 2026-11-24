@@ -55,7 +55,7 @@
 
 **C. Backlog**
 - [x] C1 — อัปโหลดรูปขึ้น Roblox  `ทดสอบผ่าน`
-- [ ] C2 — ตัดสินใจ data model ของ Inventory  `QA ยังไม่สรุป (รอเปลี่ยนแปลงระบบ Item ทั้งหมด)`
+- [x] C2 — ตัดสินใจ data model ของ Inventory  `สรุปแล้ว (2026-11-24) ตาม C29 Item rework`
 - [ ] C3 — Rebirth + ฉายา (GDD 7.2) — ย้ายไป Lv.50  `โค้ดเสร็จ รอทดสอบ`
 - [ ] C4 — สกิล Keen Eye / Quick Hands / Multi-Cast (GDD 7.1)  `โค้ดเสร็จ + หน้าต่าง Skills แล้ว (ปุ่ม SKILLS ในหน้าต่าง Character) รอทดสอบ`
 - [ ] C5 — อีเวนต์ Naga Tide (จุดสุ่มในทะเล ตกในวง = ลุ้นปลาพิเศษ, คนแห่มา = โอกาสสูงขึ้น)  `โค้ด HUD Cozy Lake เสร็จแล้ว รอทดสอบใน Play`
@@ -708,13 +708,14 @@
 งานค้างทั้งหมด (ติ๊กเมื่อเสร็จ) — รูปแบบ: **รหัส. งาน** — Done when • ใครทำ
 
 - [x] **C1.** **อัปโหลดรูปขึ้น Roblox** — 99/99 อัปโหลดแล้ว (2026-11-16) และแปลงเป็น Image id ใน `UIAssets.luau` แล้ว — *Done when:* เปิดเกมแล้วเห็นรูปจริงแทนกรอบสี + เงาใต้หน้าต่าง • *ใครทำ:* รูปใหม่ภายหลัง: ใส่ใน `assets/` + catalog → `python -I tools/art/upload_assets.py` (อัปเฉพาะที่ยังไม่มี id) → `node tools/ui/resolve_decals.mjs`
-- [ ] **C2.** ตัดสินใจ data model ของ Inventory — *QA ยังไม่สรุป (Traveler Nise 2026-11-22: "อันนี้ยังไม่แน่ใจเพราะเดียวจะมีการเปลี่ยนแปลงระบบ item ทั้งหมดอยู่")* — *Done when:* มีรายการประเภทไอเท็ม + กติกา stack/ขาย • *ใครทำ:* คุณ + Claude
-  - กระเป๋า = **ช่อง** (Bags.Capacity: Starter 6 / Woven 10 / Crate 15 / Coolbox 20 / Hold 30); 1 ช่อง = 1 กอง
-  - ปลา: ชนิด + mutation เดียวกันรวมกอง สูงสุด 10/ช่อง; กองเก็บ "มูลค่ารวม" (น้ำหนักรายตัวคิดเงินไว้แล้ว) + ตัวหนักสุด → ขายได้เงินเท่าเดิม
-  - กล่องสมบัติ (Treasure): ดรอปโบนัสตอนตกปลา 3% (+Luck), กินช่อง, กองละ 5, กด Open สุ่มรางวัล (เหรียญ/เพชร/เหยื่อ) — ตั้งค่าใน `Config/Treasures.luau`
-  - เหยื่อ: ไม่กินช่อง (อยู่ Consumables เหมือนเดิม) แสดงในแท็บ Bait
-  - ไม่มีระบบล็อก; SELL ALL ขายเฉพาะปลา กล่องยังอยู่
-  - ตัวเลขทั้งหมดแก้ได้ใน `GameConfig.Inventory` + `Equipment.Bags`; เซฟเก่าแปลงอัตโนมัติ (schema 2)
+- [x] **C2.** ตัดสินใจ data model ของ Inventory — *สรุปแล้ว 2026-11-24 (ระบบ Item เปลี่ยนเสร็จใน C29 จึงปิดข้อที่ QA รอ: Traveler Nise 2026-11-22)* — *Done when:* มีรายการประเภทไอเท็ม + กติกา stack/ขาย • *ใครทำ:* คุณ + Claude
+  - **โมเดลสุดท้าย (แทนกติกาเก่าที่เคยเขียนไว้ เช่น ปลารวมกอง 10/ช่อง และความจุ 6/10/15/20/30 ซึ่งเลิกใช้แล้ว)** รายละเอียดเต็ม: `docs/HANDOFF_ITEM_REWORK.md`, ตัวทดสอบ: C29
+  - ที่เก็บ: `profile.Bag` = รายการเรคคอร์ด plain มี `UUID` (ห้าม metatable เพราะเซฟ DataStore และส่งไป client ทั้งก้อน); `Equipped.Rods/Lines` = UUID
+  - ประเภท: Fish, Rod, Line, Treasure (ใน Bag) / Bag (บันไดอัปเกรดถาวร ไม่กินช่อง) / Aura (ไม่กินช่อง) / Bait (1 ช่องต่อชนิด จำนวนเก็บใน Consumables)
+  - Stack: ปลา/คัน/สาย 1 ชิ้น = 1 ช่อง ไม่รวมกอง; หีบรวมได้สูงสุด 5 (`Inventory.TreasureStackMax`)
+  - ความจุ: 10 / 16 / 24 / 36 / 50 (ปรับที่ `Config/BagCapacity.luau`), Infinite Bag pass = 999; คัน/สายที่สวมอยู่กินช่องด้วย
+  - ขาย: ปลาขายตามมูลค่าของตัวเอง; คัน/สาย = 40% x (ราคาซื้อ + เหรียญ Enhance + โบนัส Mod); ของที่สวม, ราคา 0, Exclusive/Bound, ราคาเป็น Gems ขายไม่ได้; SELL ALL ขายเฉพาะปลา
+  - ยังเปิดอยู่: ข้อ 5 ใน `HANDOFF_ITEM_REWORK.md` (เซฟ v6 ล้างไอเทมผู้เล่นเดิมแบบไม่คืนเงิน ต้องตัดสินก่อน publish ถ้ามีผู้เล่นจริง) และ DataSync ส่งทั้งโปรไฟล์ อาจหนักเมื่อใช้ Infinite Bag
 - [ ] **C3.** Rebirth + ฉายา (GDD 7.2) — *Done when:* Rebirth แล้ว reset เลเวล/เงิน, ได้ multiplier +0.25x, ฉายาเหนือหัว • *ใครทำ:* Claude
   - 2026-11-17: ย้ายเลเวลที่ต้องถึงจาก Lv.100 → **Lv.50** (Lv.100 ต้องใช้ ~1.9M XP ≈ 270 ชม.); Rebirth เพิ่มตัวคูณ Pearls ด้วย; Mastery/ดาวออร่า/Fishdex ไม่ถูกล้าง (ดู `docs/BALANCE_PLAN.md`)
   - **สถานะ: โค้ดเสร็จ (2026-11-17)** — `Features.Rebirth` (เปิดแล้ว): ครั้งแรก Lv.50, ครั้งถัดไป +10 เลเวล (50 → 60 → 70 … สูงสุด Lv.100), +0.25 ต่อครั้งให้ **Sell Mult + Pearl Rate** (1 ครั้ง = ×1.25 ตาม GDD), ฉายา: 1 Novice Angler · 2 Tide Walker · 3 Abyssal Conqueror · 5 Naga Whisperer · 10 Fisher of Gods; `Shared/Rebirth.luau`, `Services/RebirthService.luau` (remote `Rebirth`), `Stats.Collect` (stat source), เซฟ `Rebirths`
@@ -1344,6 +1345,8 @@
 - [x] ทดสอบโหมดในเครื่อง (ไม่มี config): ตาราง 69 งาน, เปิดงานเห็นขั้นตอน, ผ่าน/ไม่ผ่าน, สร้าง/ปิด Ticket, หน้าระบบเกมและประวัติ
 
 ## บันทึกการอัปเดต
+- 2026-11-24 — ย้ายความจุกระเป๋าไปไฟล์เดียว `Config/BagCapacity.luau` (Slots ต่อกระเป๋า, InfiniteBagSlots, Fallback) ให้ปรับบาลานซ์ได้ที่เดียว; Equipment/GameConfig/ItemContainer อ่านจากไฟล์นี้ ค่าเดิม 10/16/24/36/50 ไม่เปลี่ยน ผ่าน tools/check.mjs ยังไม่ได้ทดสอบใน Studio
+- 2026-11-24 — C2 ปิดแล้ว: สรุป data model Inventory ตามระบบ UUID ใน C29 (ประเภทไอเทม, stack, ความจุ 10/16/24/36/50, กติกาขาย) แทนกติกาเก่า ไม่มีการแก้โค้ด
 - 2026-11-24T02:15:00+07:00 — C8 ระบบเสียงและ SFX: ออกแบบและเชื่อมต่อระบบเสียงครบวงจร (1) จัดทำคู่มือ Prompt สำหรับ ElevenLabs SFX ใน docs/ELEVENLABS_SFX_PROMPTS.md พร้อมสคริปต์อัปโหลด tools/audio/upload_sfx.py รองรับทั้ง .wav/.mp3 อัปโหลดผ่าน Open Cloud อัตโนมัติ (2) ปรับแต่งเสียง Gacha เป็น Altar Charge & Eclipse Reveal ตามระบบใหม่ (3) เชื่อมต่อเสียงง้างคันเบ็ดวนลูป cast_charge และเสียงจังหวะ Perfect (cast_perfect) สำหรับการเหวี่ยงเบ็ดและมินิเกม (4) ผูกเสียง UI ตอนเปิดการ์ดผลลัพธ์ปลา (ui_open + catch/catch_rare) และตอนสลับแท็บ Category ใน Inventory (ui_click) (5) ผูกเสียง coin ให้เล่นครอบคลุมทั้งตอนเสียตังซื้อของ/อัปเกรด/ตีบวก และตอนขายปลา ตรวจสอบผ่าน tools/check.mjs เรียบร้อย
 - 2026-11-24 — เพิ่มหน้าโหลดก่อนเข้าเกม (src/first/Loading.client.luau, ReplicatedFirst): หลอด progress + ข้อความขั้นตอน (images, sounds, music, save) ดีไซน์ชั่วคราว ออกแบบใน Figma ทีหลัง ทดสอบ: restart scripts\serve.bat แล้วกด Play ต้องเห็นหน้าโหลดจนหลอดเต็มแล้วเฟดหาย ผ่าน tools/check.mjs ยังไม่ได้ทดสอบใน Studio
 - 2026-11-23T23:32:00+07:00 — ออกแบบทำนอง BGM เพลงที่ 7 Boardwalk Cafe Lofi สไตล์เดินเข้าคาเฟ่ตกปลาสายๆ ชิลล์ๆ ไม่ต้องคิดอะไร บันทึกใน docs/bgm/07_boardwalk_cafe_lofi.md, BGM_MASTER_PROMPTS.md และเพิ่มคีย์ bgm_cafe ใน Config/Sounds.luau ผ่าน tools/check.mjs เรียบร้อย

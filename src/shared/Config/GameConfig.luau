@@ -1,6 +1,8 @@
 --!strict
 -- Global tuning numbers. Balance the game from here.
 
+local BagCapacity = require(script.Parent.BagCapacity)
+
 local GameConfig = {
 	-- Data
 	DataStoreName = "AuraFishing_Player_v1",
@@ -76,7 +78,7 @@ local GameConfig = {
 	Inventory = {
 		TreasureStackMax = 5,
 		TreasureLuckScale = 0.5, -- drop chance *= 1 + Luck * this
-		InfiniteBagSlots = 999, -- capacity with the Infinite Bag pass (C6); UI shows it as "Inf"
+		InfiniteBagSlots = BagCapacity.InfiniteBagSlots, -- (edit in Config/BagCapacity) capacity with the Infinite Bag pass (C6); UI shows it as "Inf"
 		GearSellFraction = 0.4, -- selling a Rod/Line pays this share of (buy price + coins spent on Enhance)
 		MaxPrefixes = 2, -- Rod mods
 		MaxSuffixes = 2,

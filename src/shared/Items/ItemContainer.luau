@@ -19,6 +19,7 @@ local HotFish = require(script.Parent.Parent.HotFish)
 local Enhance = require(script.Parent.Parent.Enhance)
 local ItemTypes = require(script.Parent.ItemTypes)
 local ModifierRoll = require(script.Parent.ModifierRoll)
+local BagCapacity = require(script.Parent.Parent.Config.BagCapacity)
 
 export type Item = ItemTypes.Item
 
@@ -120,7 +121,7 @@ function Inventory.Capacity(profile: any): number
 		return CFG.InfiniteBagSlots
 	end
 	local bag = Registry.Equipment.Bags.Items[profile.Equipped.Bags]
-	return bag and bag.Capacity or 10
+	return bag and bag.Capacity or BagCapacity.Fallback
 end
 
 -- Bags are upgrades (B21): the ladder is every shop bag by Capacity (exclusive bags excluded); the
