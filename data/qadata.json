@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T05:28:15.306Z",
+ "generated": "2026-11-24T10:01:48.225Z",
  "stage": {
   "name": "ต้นแบบ Vertical Slice",
   "summary": "ระบบหลักสมบูรณ์ (วงจรตกปลา, Item Rework v6, Mod เบ็ดและสาย, Rod Fusion, Menu Manager, Daily Login B และ Stats Codex) อยู่ในรอบทดสอบ QA และ Mobile Responsive"
@@ -1011,10 +1011,10 @@
    "group": "C",
    "title": "แมพจริง + โมเดลปลา/คันเบ็ด",
    "titleEn": "Final map and models",
-   "status": "planned",
-   "note": "ยังไม่เริ่ม",
+   "status": "progress",
+   "note": "ลำดับท้ายสุด: ทีมกำลังทำแมพส่งมาให้ รอรับแมพ",
    "steps": [],
-   "rev": "19a1047e"
+   "rev": "0b49053f"
   },
   {
    "id": "C10",
@@ -1506,6 +1506,22 @@
   },
   {
    "at": "2026-11-24",
+   "text": "A17 รอบ 2: ลองบังคับปุ่ม X ให้ 44px จริงบนจอ (GrowToTouch) แต่ทำให้ปุ่มยื่นเกินหน้าต่างและไม่สวย จึง ย้อนกลับแล้ว ปุ่ม X กลับเป็นขนาดดีไซน์เดิมที่ย่อตามหน้าต่าง (ถ้าจะทำใหม่ต้องดูใน Figma และปรับให้เข้ากับแต่ละเมนู). คงไว้: Window ScrollOnShort คำนวณความสูงตามสเกลความกว้างจริง. ทดสอบจอ 568x320 ผ่าน: Inventory, Quests, Daily Login, Store, Mastery, Aquarium, Events, Gacha. ยังไม่ได้ทดสอบ: Fusion, CAST popup, มินิเกม, การ์ดปลา"
+  },
+  {
+   "at": "2026-11-24",
+   "text": "แก้บั๊กจอดำค้าง (MenuManager backdrop): เดิมอัปเดตเฉพาะตอนมี event ถ้าเมนูเปิดไม่สำเร็จหรือซ่อน gui เงียบ ๆ หลังหมด grace 0.6s backdrop ค้าง. ตอนนี้ตรวจซ้ำทุก 0.5s ขณะ backdrop เปิด และไม่นับเมนูที่ Gui() เป็น nil. ทดสอบ: เปิด/ปิดเมนูซ้ำ ๆ (B, C, M, Daily Login, Gacha) แล้วจอต้องสว่างภายใน ~0.5s หลังปิดเมนูสุดท้าย. ยังไม่ได้ทดสอบใน Studio"
+  },
+  {
+   "at": "2026-11-24",
+   "text": "A17 ทดสอบใน Studio (Device Simulator): iPhone 17 Pro แนวนอน 749x381 และ 568x320 ผ่าน (Inventory, Character, Main Menu, Shop, Trade, Quests, HUD อยู่ในจอ). แก้ (1) ปุ่ม HUD เล็กกว่า 44px: เพิ่ม New.TouchHit (ปุ่มโปร่งใสตามตำแหน่งจริง ขั้นต่ำ 44px) ใช้กับ Daily, ปุ่มลูกศร More และ Hit_ ของชิปเงิน/เจม (EconomyController) (2) จอเตี้ย: ชิป Bag 21/50 ทับแถวเมนูมุมขวาบน ย้ายไปซ้ายของปุ่ม Depth (UI/Screens/HUD.luau). เกมตั้ง ScreenOrientation = LandscapeSensor จึงไม่ทดสอบแนวตั้ง. ยังไม่ได้ทดสอบ: Daily Login, Store, Mastery, Aquarium, Events/Gacha, Fusion, CAST popup, มินิเกม, การ์ดปลา บนจอเล็ก. ผ่าน tools/check.mjs"
+  },
+  {
+   "at": "2026-11-24",
+   "text": "C9 แมพจริง: จัดเป็นลำดับท้ายสุด เพราะมีทีมทำแมพส่งมาให้ ยังไม่ต้องทำฝั่งเรา (เมื่อได้แมพ: ต้องมี Workspace.Map และ Part ติด tag FishingZone พร้อม attribute LocationId)"
+  },
+  {
+   "at": "2026-11-24",
    "text": "ย้ายความจุกระเป๋าไปไฟล์เดียว Config/BagCapacity.luau (Slots ต่อกระเป๋า, InfiniteBagSlots, Fallback) ให้ปรับบาลานซ์ได้ที่เดียว; Equipment/GameConfig/ItemContainer อ่านจากไฟล์นี้ ค่าเดิม 10/16/24/36/50 ไม่เปลี่ยน ผ่าน tools/check.mjs ยังไม่ได้ทดสอบใน Studio"
   },
   {
@@ -1883,22 +1899,6 @@
   {
    "at": "2026-11-21",
    "text": "Figma Option 5: ทำ [Aura Reveal Motion](https://www.figma.com/design/givb0hmQYmmaOy7p7DGtb2/Ro-Offline?node-id=3713-622) สำหรับ Solar Flare (Epic) ที่ 3.2 วินาที ตรวจจาก MP4 ที่ Figma export แล้ว เพิ่มคำสั่ง Motion และ watch mode ใน MCP local ทดสอบโดยเพิ่มคำสั่งชั่วคราวแล้วเรียกได้ผ่าน relay เดิม"
-  },
-  {
-   "at": "2026-11-20",
-   "text": "มุมโค้งไม่ mask: ClipsDescendants ตัดแค่สี่เหลี่ยม ไม่ตามมุมโค้ง → เปลี่ยนเป็น CanvasGroup (New.Panel({ Clip = true }), Window.Shell({ Clip = true })): แถบพลังเหวี่ยงเบ็ด (HUD, bake แล้ว), popup Pearl ตอนเข้าเกม (Offline reward), Enhance popup, Quests, Starter Pack (bake แล้ว), กรอบรูปการ์ด Events (bake แล้ว); กฎใน docs/UI_STYLE.md. ทดสอบ: Ctrl+S → Play → กดค้างเหวี่ยง: สีส้มในหลอดโค้งตามหลอดทั้งบนล่าง; เข้าเกมใหม่ (มี Pearl ออฟไลน์): แถบล่างสีทรายโค้งตามมุมหน้าต่าง; Enhance / Starter Pack / Events ก็เช่นกัน"
-  },
-  {
-   "at": "2026-11-20",
-   "text": "ปรับ pop: เปลี่ยนจาก Elastic (เด้งหลายทีเหมือนค้าง) เป็น Back Out 0.25 วิ เริ่มที่ 70% = ป๊อปทีเดียวจบ (New.luau POP_INFO / POP_FROM)"
-  },
-  {
-   "at": "2026-11-20",
-   "text": "Transition elastic pop ทุกอย่างที่แสดง: New.Pop (ขยาย 0.5 → 1 แบบเด้ง 0.55 วิ); หน้าต่าง/ป๊อปอัปที่ใช้ FitToScreen/FitWindow/Window.Shell เด้งเองเมื่อเปิด (Store, Aquarium, Mastery, Quests, Credits, Enhance, Inventory, Character, Events, Main Menu, Shop/Fishdex/Aura Index, Modal, Starter Pack, Dialogue, Minigame, Offline reward); เรียกเองที่ Gacha, Daily Login, Item Card, การ์ดปลา, toast แจ้งเตือน; กฎใน docs/UI_STYLE.md. ทดสอบ: Ctrl+S → Play → เปิดหน้าต่าง/ป๊อปอัปต่าง ๆ ทุกอันเด้งตอนโผล่ ไม่ค้างขนาดผิด และย่อขยายตามจอยังถูกหลังเด้งจบ (ลองย่อหน้าต่าง Studio)"
-  },
-  {
-   "at": "2026-11-20",
-   "text": "Pager อยู่มุมซ้ายล่างทุกหน้าต่าง: Fishdex เดิมอยู่กลาง → ย้ายซ้าย (เกม Screens/Menus.luau bake แล้ว + Figma 09 Fishdex); Shop และ Aura Index อยู่ซ้ายอยู่แล้ว; กฎเขียนไว้ใน docs/UI_STYLE.md. ทดสอบ: Ctrl+S → Play → Fishdex: ปุ่ม < 1 / N > อยู่มุมซ้ายล่างตรงกับ Shop"
   }
  ],
  "fixes": {}
