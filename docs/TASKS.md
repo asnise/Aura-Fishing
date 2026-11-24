@@ -17,7 +17,7 @@
 - [x] A6 — มินิเกม Pond Card  `ทดสอบผ่าน`
 - [x] A7 — การ์ดปลาที่ตกได้แบบ Badge  `ทดสอบผ่าน`
 - [x] A8 — Aura Gacha — Reel Slot  `ทดสอบผ่าน`
-- [ ] A9 — หน้าต่างเมนูขนาดคงที่  `รอทดสอบขนาด Upgrade Bag บนมือถือ ผล QA เดิมอยู่ในรายละเอียด`
+- [x] A9 — หน้าต่างเมนูขนาดคงที่  `ทดสอบผ่าน`
 - [x] A10 — ออร่า VFX + Low FX  `ทดสอบผ่าน`
 - [x] A11 — เซฟข้อมูล (DataStore)  `ทดสอบผ่าน`
 - [x] A12 — StudioBridge MCP (Claude สั่งงาน Studio ได้)  `ทดสอบผ่าน`
@@ -25,8 +25,8 @@
 - [x] A14 — Figma → Roblox export (FigmaRoblox MCP)  `ทดสอบผ่าน`
 - [x] A16 — แผง "Aura UI" ใน Studio (เปิด/แก้หน้าจอได้ง่าย)  `ทดสอบผ่าน`
 - [x] A18 — Figma plugin แยกโมดูล + ตัวนับการใช้งาน (usage counter)  `ทดสอบผ่าน (QA)`
-- [ ] A17 — Responsive มือถือแนวนอน (HUD + popup ทุกอัน)  `เลื่อนไปทีหลัง — ใช้ได้แต่ยังไม่สวย; ตอนนี้โฟกัส desktop`
-- [ ] A15 — Figma ดีไซน์ทั้งหมด (Style guide, Components, 17 หน้าจอ, Gacha FINAL, Asset section)  `QA ให้ปรับปรุง (รออัปเดต Figma ให้ตรงกับในเกม)`
+- [x] A17 — Responsive มือถือแนวนอน (HUD + popup ทุกอัน)  `ทดสอบผ่าน`
+- [ ] A15 — Figma ดีไซน์ทั้งหมด (Style guide, Components, 17 หน้าจอ, Gacha FINAL, Asset section)  `QA ให้ปรับปรุง (รออัปเดต Figma ให้ตรงกับในเกม) — เลือกทำต่อ`
 
 **B. กำลังทำ (UI จาก Figma)**
 - [x] B0 — ปุ่มแบบ Figma (Face + Lip 5px ซ้อนกัน) + ไฮไลต์ราคาใน Modal + การ์ด Equipped สีต่าง  `ทดสอบผ่าน`
@@ -56,46 +56,46 @@
 **C. Backlog**
 - [x] C1 — อัปโหลดรูปขึ้น Roblox  `ทดสอบผ่าน`
 - [x] C2 — ตัดสินใจ data model ของ Inventory  `สรุปแล้ว (2026-11-24) ตาม C29 Item rework`
-- [ ] C3 — Rebirth + ฉายา (GDD 7.2) — ย้ายไป Lv.50  `โค้ดเสร็จ รอทดสอบ`
-- [ ] C4 — สกิล Keen Eye / Quick Hands / Multi-Cast (GDD 7.1)  `โค้ดเสร็จ + หน้าต่าง Skills แล้ว (ปุ่ม SKILLS ในหน้าต่าง Character) รอทดสอบ`
-- [ ] C5 — อีเวนต์ Naga Tide (จุดสุ่มในทะเล ตกในวง = ลุ้นปลาพิเศษ, คนแห่มา = โอกาสสูงขึ้น)  `โค้ด HUD Cozy Lake เสร็จแล้ว รอทดสอบใน Play`
-- [ ] C6 — Gamepasses (Infinite Bag 349, Auto-Fish Pro 249, VIP 149, Extra Cast)  `โค้ดเสร็จ + ป้ายชื่อ VIP เหนือหัว + ร้าน Store แล้ว รอทดสอบ — Extra Cast รอสร้าง pass บนเว็บ`
-- [ ] C7 — เควสต์รายวัน  `โค้ดเสร็จ + หน้าต่างเควสต์แล้ว รอทดสอบ`
-- [ ] C8 — เสียง (SFX) และระบบเสียงในเกม  `โค้ดเสร็จ + อัปโหลดเสียงแล้ว (25/25 ไฟล์) พร้อม Hook ตกปลา มินิเกม Gacha และ UI รอทดสอบใน Studio`
-- [ ] C9 — แมพจริง + โมเดลปลา/คันเบ็ด  `ลำดับท้ายสุด: ทีมกำลังทำแมพส่งมาให้ รอรับแมพ`
-- [ ] C10 — เครดิต Font Awesome (FaLock, CC BY 4.0)  `โค้ดเสร็จ รอทดสอบ`
-- [ ] C11 — ทดสอบมือถือจริง + ปรับขนาดปุ่ม  `ยังไม่เริ่ม`
-- [ ] C12 — Balance Pass 1 (ราคา ×10, Auto 14 วิ, Hot Streak, XP, โซนลึก, ย้ายเซฟ)  `โค้ดเสร็จ + ป้าย Streak บนปุ่ม CAST แล้ว รอทดสอบ`
-- [ ] C13 — ระบบรับเงิน Robux (ProcessReceipt, ใบเสร็จ, เช็ค Gamepass)  `โค้ดเสร็จ รอทดสอบ + รอ ID จากเว็บ Roblox`
-- [ ] C14 — บ่อปลา (Aquarium) + Pearls + ออฟไลน์  `โค้ดเสร็จ + หน้าจอ Aquarium/Put in Tank/popup ออฟไลน์แล้ว รอทดสอบ`
-- [ ] C15 — Mastery (อัปถาวรด้วย Pearls)  `โค้ดเสร็จ + หน้าต่างตาม Figma แล้ว รอคุณทดสอบ (ใช้ไอคอนชุดใหม่แล้ว)`
-- [ ] C16 — Gear Enhance +1…+10  `โค้ดเสร็จ + ENHANCE ในการ์ดไอเท็ม + ป้าย +N บนช่อง/รูป Shop แล้ว รอทดสอบ`
-- [ ] C17 — ดาวออร่า 1–5 stars + Star Token + pity ใหม่ + หน้าต่าง Aura Dex (C17 Figma) + แสดง Star Token (HUD, Aura Index, Altar, ItemDetail)  `โค้ดเสร็จ + bake ใน StarterGui แล้ว รอทดสอบใน Play`
-- [ ] C18 — ปลาขายดีประจำชั่วโมงที่ร้าน  `โค้ดเสร็จ + ป้าย HOT บนกองปลา, บรรทัด Hot fish bonus ใน Sell All, ป้าย HOT FISH ที่ Merchant แล้ว รอทดสอบ`
-- [ ] C19 — Dev Products (Starter Pack, Gems, Boost 2x) + Modal เสนอขาย Starter Pack (Figma 3546:36782)  `Gems, Boosts และ Packs เป็นรายการใน Store แล้ว กด Buy ที่ Starter Pack เพื่อเปิด Modal พรีวิวของแถมก่อนซื้อ ปุ่มราคาใช้ไอคอน Robux ใหม่ รอทดสอบซื้อจริงใน Play`
-- [ ] C20 — มินิเกม: Catch Bar เริ่มตรงตำแหน่งปลา + ช่วงพักตอนเริ่ม  `โค้ดเสร็จ รอทดสอบ`
-- [ ] C21 — คอนเทนต์ใหม่จากรูปที่อัปโหลดแล้ว (ปลา 8, ออร่า 10, คันเบ็ด 2, สาย 2, เหยื่อ 4)  `โค้ดเสร็จ รอทดสอบ`
-- [ ] C22 — FishingZone / PlayArea ใช้เฉพาะใน Workspace (แมพสำรองใน ServerStorage ไม่นับ)  `โค้ดเสร็จ ตรวจ logic ใน Studio แล้ว รอทดสอบ Play ใหม่`
-- [ ] C23 — Daily Login ปฏิทินของขวัญ 7 วัน (HUD และ Main Menu)  `เลือก B Grand Shelf และ bake แล้ว รอทดสอบรับรางวัลใน Play`
-- [ ] C24 — Core Menu Manager (แบ่งชั้นหน้าต่าง ไม่เปิดซ้อนมั่ว, ซ้อนได้เฉพาะที่กำหนด)  `โค้ดเสร็จ ทดสอบใน Play บางส่วนผ่าน — M2-M4 โค้ดเสร็จ รอทดสอบ — งานต่อ M1, M5, M6 ใน docs/MENU_MANAGER.md`
-- [ ] C25 — เหวี่ยงเบ็ดใหม่: กดค้าง + Perfect Cast + ระยะเหวี่ยงตามคัน + ตัวปรับความลึกบน HUD  `โค้ดเสร็จ + bake + Figma แล้ว รอทดสอบใน Play`
+- [ ] C3 — Rebirth + ฉายา (GDD 7.2) — ย้ายไป Lv.50  `โค้ดเสร็จ รอทดสอบ — เลือกทำต่อ`
+- [ ] C4 — สกิล Keen Eye / Quick Hands / Multi-Cast (GDD 7.1)  `โค้ดเสร็จ + หน้าต่าง Skills แล้ว (ปุ่ม SKILLS ในหน้าต่าง Character) รอทดสอบ — เลือกทำต่อ`
+- [x] C5 — อีเวนต์ Naga Tide (จุดสุ่มในทะเล ตกในวง = ลุ้นปลาพิเศษ, คนแห่มา = โอกาสสูงขึ้น)  `ทดสอบผ่าน`
+- [x] C6 — Gamepasses (Infinite Bag 349, Auto-Fish Pro 249, VIP 149, Extra Cast)  `ทดสอบผ่าน (Extra Cast รอสร้าง pass บนเว็บ — เลือกทำต่อ)`
+- [x] C7 — เควสต์รายวัน  `ทดสอบผ่าน`
+- [x] C8 — เสียง (SFX) และระบบเสียงในเกม  `ทดสอบผ่าน`
+- [ ] C9 — แมพจริง + โมเดลปลา/คันเบ็ด  `ลำดับท้ายสุด: ทีมกำลังทำแมพส่งมาให้ รอรับแมพ — เลือกทำต่อ`
+- [x] C10 — เครดิต Font Awesome (FaLock, CC BY 4.0)  `ทดสอบผ่าน`
+- [x] C11 — ทดสอบมือถือจริง + ปรับขนาดปุ่ม  `ทดสอบผ่าน`
+- [x] C12 — Balance Pass 1 (ราคา ×10, Auto 14 วิ, Hot Streak, XP, โซนลึก, ย้ายเซฟ)  `ทดสอบผ่าน`
+- [x] C13 — ระบบรับเงิน Robux (ProcessReceipt, ใบเสร็จ, เช็ค Gamepass)  `ทดสอบผ่าน`
+- [x] C14 — บ่อปลา (Aquarium) + Pearls + ออฟไลน์  `ทดสอบผ่าน`
+- [ ] C15 — Mastery (อัปถาวรด้วย Pearls)  `โค้ดเสร็จ + หน้าต่างตาม Figma แล้ว รอคุณทดสอบ — เลือกทำต่อ`
+- [x] C16 — Gear Enhance +1…+10  `ทดสอบผ่าน`
+- [x] C17 — ดาวออร่า 1–5 stars + Star Token + pity ใหม่ + หน้าต่าง Aura Dex (C17 Figma) + แสดง Star Token (HUD, Aura Index, Altar, ItemDetail)  `ทดสอบผ่าน`
+- [x] C18 — ปลาขายดีประจำชั่วโมงที่ร้าน  `ทดสอบผ่าน`
+- [x] C19 — Dev Products (Starter Pack, Gems, Boost 2x) + Modal เสนอขาย Starter Pack (Figma 3546:36782)  `ทดสอบผ่าน`
+- [x] C20 — มินิเกม: Catch Bar เริ่มตรงตำแหน่งปลา + ช่วงพักตอนเริ่ม  `ทดสอบผ่าน`
+- [x] C21 — คอนเทนต์ใหม่จากรูปที่อัปโหลดแล้ว (ปลา 8, ออร่า 10, คันเบ็ด 2, สาย 2, เหยื่อ 4)  `ทดสอบผ่าน`
+- [x] C22 — FishingZone / PlayArea ใช้เฉพาะใน Workspace (แมพสำรองใน ServerStorage ไม่นับ)  `ทดสอบผ่าน`
+- [x] C23 — Daily Login ปฏิทินของขวัญ 7 วัน (HUD และ Main Menu)  `ทดสอบผ่าน`
+- [x] C24 — Core Menu Manager (แบ่งชั้นหน้าต่าง ไม่เปิดซ้อนมั่ว, ซ้อนได้เฉพาะที่กำหนด)  `ทดสอบผ่าน (M1-M6 เสร็จแล้ว)`
+- [x] C25 — เหวี่ยงเบ็ดใหม่: กดค้าง + Perfect Cast + ระยะเหวี่ยงตามคัน + ตัวปรับความลึกบน HUD  `ทดสอบผ่าน`
 - [x] C26 — จุดฟองปลา (Hotspot): เหวี่ยงลงวงฟองได้ Luck +50%  `ทดสอบผ่าน (QA)`
-- [ ] C27 — Store ไม่มีรายการ + spinner โหลด + แจ้งเตือนอยู่บนสุด + Enhance popup + Figma ตรงกับเกม  `โค้ดเสร็จ รอทดสอบใน Play`
+- [x] C27 — Store ไม่มีรายการ + spinner โหลด + แจ้งเตือนอยู่บนสุด + Enhance popup + Figma ตรงกับเกม  `ทดสอบผ่าน`
 - [x] C28 — Window core (`Window.Shell`) + "!" ปลากินเบ็ดบนหัวตัวละคร  `ทดสอบผ่าน (QA)`
-- [ ] C29 — Item rework: ไอเทมแบบ UUID (ปลาไม่รวมกอง, คันเบ็ด/สายซื้อซ้ำและขายคืนได้, เซฟ v6)  `โค้ดเสร็จ รอทดสอบด้วยเซฟทดสอบ v5 และเซฟใหม่ รวมถึงราคาขายคืน`
-- [ ] C30 — ระบบ Modifier เบ็ด (Prefix/Suffix) สุ่มค่า -N~+N, Stat Max Cap Breaker และ Rarity  `โค้ดเสร็จ รอทดสอบการสุ่ม สเตตัส และการดรอปคันเบ็ดใน Play`
-- [ ] C31 — Rod Fusion (หลอม mod ข้ามคันเบ็ดรุ่นเดียวกัน, เปิดที่ Old Marlin)  `โค้ดเสร็จ type check ผ่าน รอทดสอบใน Play`
-- [ ] C32 — Responsive menu และการค้นหาไอเทมใหม่ใน Inventory  `โค้ดเสร็จ รอทดสอบปุ่ม NEW และ Item Detail บนมือถือ เฟส 4 ยังไม่ได้ตรวจ`
-- [ ] C33 — Bake UI ทั้ง 18 หน้าลง Studio + ตรวจ responsive มือถือ  `รอทดสอบใน Device Emulator รวมขนาด Upgrade Bag และระยะขอบป้ายสถานะตกปลา`
-- [ ] C34 — ปรับ UI รอบ 23 พ.ย. (Daily บน HUD/Main Menu, Store แบ่งหน้า, Item Card ไม่ scroll, Enhance มือถือ, พื้นดำเต็มจอ, Gacha Close, Line Modifier, ของฟรีขายได้ 0 โคอิน)  `โค้ดเสร็จ check.mjs ผ่าน รอทดสอบใน Play`
-- [ ] C35 — Stats Codex (Main Menu)  `โค้ดเสร็จ รอทดสอบการค้นหาและการอ่านคำอธิบายบนจอแนวตั้ง`
+- [x] C29 — Item rework: ไอเทมแบบ UUID (ปลาไม่รวมกอง, คันเบ็ด/สายซื้อซ้ำและขายคืนได้, เซฟ v6)  `ทดสอบผ่าน`
+- [x] C30 — ระบบ Modifier เบ็ด (Prefix/Suffix) สุ่มค่า -N~+N, Stat Max Cap Breaker และ Rarity  `ทดสอบผ่าน`
+- [x] C31 — Rod Fusion (หลอม mod ข้ามคันเบ็ดรุ่นเดียวกัน, เปิดที่ Old Marlin)  `ทดสอบผ่าน`
+- [x] C32 — Responsive menu และการค้นหาไอเทมใหม่ใน Inventory  `ทดสอบผ่าน`
+- [ ] C33 — Bake UI ทั้ง 18 หน้าลง Studio + ตรวจ responsive มือถือ  `ไม่ผ่าน / ต้องแก้`
+- [x] C34 — ปรับ UI รอบ 23 พ.ย. (Daily บน HUD/Main Menu, Store แบ่งหน้า, Item Card ไม่ scroll, Enhance มือถือ, พื้นดำเต็มจอ, Gacha Close, Line Modifier, ของฟรีขายได้ 0 โคอิน)  `ทดสอบผ่าน`
+- [x] C35 — Stats Codex (Main Menu)  `ทดสอบผ่าน`
 
 - [x] C36 — ภาพต้นทาง Aura VFX ชุดแรก  `ตรวจ PNG ครบ 5 ชีตต่อออร่า`
 - [x] C37 — พรีวิว Aura VFX รอบตัวละคร 3 ออร่า  `ทดสอบใน Chrome แล้ว`
 - [x] C38 — ทิศทางภาพและพรีวิว Aura VFX ก่อนเจนชีต  `จัดพรอมป์และพรีวิว 15 ออร่า`
 - [x] C39 — Aura Particle Editor และ Studio Importer สำหรับโปรเจกต์ 3 ออร่า  `ทดสอบนำเข้าใน Studio`
 - [x] C40 — Patch Note Card แบบโพยกระดาษโทนอุ่น  `ทดสอบพรีวิวและ PNG ใน Chrome`
-- [ ] C41 — Trade ระหว่างผู้เล่นและไอเทม Bound  `ตั้ง PassId แล้ว รอทดสอบ Play สองผู้เล่น`
+- [x] C41 — Trade ระหว่างผู้เล่นและไอเทม Bound  `ทดสอบผ่าน`
 
 ---
 
@@ -143,7 +143,7 @@
 - Done when: ไม่มีปุ่ม/ข้อความของเราโดน Top bar, Leaderboard, Chat, Thumbstick, Jump บัง
 - ทดสอบ:
   - [x] 1. Play (คอม): Leaderboard มุมขวาบนต้องไม่ทับปุ่มใด ๆ; กดเปิด Chat (มุมซ้ายบน) → บังได้แค่ Stats เท่านั้น
-  - [ ] 2. Test → Device → เลือกมือถือ → Play: จอยซ้ายล่างกับปุ่มกระโดดขวาล่างต้องไม่ทับปุ่ม Bag/Auto/Sell (ปุ่มเหล่านี้ต้องยกขึ้นเหนือปุ่ม Jump)
+  - [x] 2. Test → Device → เลือกมือถือ → Play: จอยซ้ายล่างกับปุ่มกระโดดขวาล่างต้องไม่ทับปุ่ม Bag/Auto/Sell (ปุ่มเหล่านี้ต้องยกขึ้นเหนือปุ่ม Jump)
   - [x] 3. เทียบกับ Figma section "00 · Roblox Safe Areas"
   - หมายเหตุ 2026-11-16: ข้อ 2 บนมือถือแนวนอน**ไม่ผ่าน** (เมนูซ้ายล้นจอ/ทับ thumbstick) → แก้ใน A17 แล้ว ทดสอบใหม่ที่ A17
 
@@ -199,20 +199,19 @@
   - [x] 3. ระหว่างหมุน แตะจอ → ต้องข้ามไปผลทันที
   - [x] 4. กด **ROLL AGAIN** → สุ่มต่อ; **EQUIP** → ออร่าเปลี่ยน (เห็นพาร์ติเคิลรอบตัว)
   - [x] 5. เดินไป **Aura Altar** (วงกลมม่วง) → ProximityPrompt → ต้องเล่นวงล้อแบบเดียวกัน
-  - [ ] 6. ทดสอบ Legendary: Command bar ในโหมด Play (Server) ใส่ gems เยอะ ๆ หรือแก้ `Roll.Aura` ชั่วคราว → ได้ Legendary → ~3.5 วิ ทุกคนเห็นข้อความ "X rolled …"
+  - [x] 6. ทดสอบ Legendary: Command bar ในโหมด Play (Server) ใส่ gems เยอะ ๆ หรือแก้ `Roll.Aura` ชั่วคราว → ได้ Legendary → ~3.5 วิ ทุกคนเห็นข้อความ "X rolled …"
   - [x] 7. Gems ไม่พอ → ขึ้นข้อความ Need 5 Gems
 
 ### A9. หน้าต่างเมนูขนาดคงที่
 - สถานะ:
   - [x] (2026-11-16 เปลี่ยนเป็นขนาด Figma 760×610 + pager แทนการเลื่อน — ดู B2–B4)
-  - [ ] QA ไม่ผ่าน (Traveler Nise 2026-11-22: "มีหน้า Daily Login และ Quest ที่ยังไม่มี responsive มือถอืหรืออาจจะมีอื่นๆที่ยังไม่เห็น")
-  - [ ] รอ QA ตรวจขนาด Upgrade Bag หลังปรับให้ย่อตามพื้นที่จอ
+  - [x] ทดสอบผ่าน (อัปเดต 2026-11-25)
 - Done when: บนมือถือแนวนอน Shop, Aura Dex และ Fishdex ย่อตามจอ และเห็นกรอบ Upgrade Bag พร้อมปุ่มด้านล่างครบ
 - ทดสอบ:
-  - [ ] 1. ใน Roblox Studio เปิด Test → Device Emulator เลือกมือถือแนวนอน 844×390 แล้วกด Play
-  - [ ] 2. กดไอคอนกระเป๋าเพื่อเปิด Inventory แล้วแตะปุ่ม UPGRADE ข้างตัวเลขความจุด้านบน: เห็นกรอบ Upgrade Bag ครบทั้งกรอบพร้อมปุ่ม Cancel และ UPGRADE หรือ MAX แตะ Cancel แล้วกลับไปที่ Inventory
-  - [ ] 3. เปิด Shop จาก HUD, Aura Dex จาก Inventory → Auras และ Fishdex จาก Menu: แต่ละหน้าต่างอยู่ในจอและกดปิดได้
-  - [ ] 4. กลับไปโหมดคอม (Device: None) แล้วเปิด Upgrade Bag ซ้ำ: หน้าต่างใช้ขนาดเต็มตามปกติและกด Cancel ได้
+  - [x] 1. ใน Roblox Studio เปิด Test → Device Emulator เลือกมือถือแนวนอน 844×390 แล้วกด Play
+  - [x] 2. กดไอคอนกระเป๋าเพื่อเปิด Inventory แล้วแตะปุ่ม UPGRADE ข้างตัวเลขความจุด้านบน: เห็นกรอบ Upgrade Bag ครบทั้งกรอบพร้อมปุ่ม Cancel และ UPGRADE หรือ MAX แตะ Cancel แล้วกลับไปที่ Inventory
+  - [x] 3. เปิด Shop จาก HUD, Aura Dex จาก Inventory → Auras และ Fishdex จาก Menu: แต่ละหน้าต่างอยู่ในจอและกดปิดได้
+  - [x] 4. กลับไปโหมดคอม (Device: None) แล้วเปิด Upgrade Bag ซ้ำ: หน้าต่างใช้ขนาดเต็มตามปกติและกด Cancel ได้
 
 ### A10. ออร่า VFX + Low FX
 - สถานะ:
@@ -259,7 +258,7 @@
   - [x] ทดสอบนอก Figma: `bun run test:plugin` ผ่าน, relay ทดสอบ + MCP stdio นับถูก
   - [x] ทดสอบใน Figma จริง (2026-11-18: get_selection ได้ "Window Aquarium" 3569:40700 + path/size ใน 0.2 วิ; batch โน้ต 4 คำสั่งรอบเดียวผ่าน; เวลาเทียบ baseline: get_node_info 426→348ms, get_roblox_tree 835→662ms, export รูป 1918→1627ms; ตัวนับนับแยก agent + คำสั่งใน batch)
   - [x] เฟส 1 (2026-11-18): อ่านแบบกระชับ (`depth`/`fields`/`maxNodes`) เล็กลง ~10 เท่า (54KB → 5.6KB), `find_nodes` ค้นตามชื่อ/ชนิด/ข้อความ, batch อ้างผลข้อก่อน `"$0.id"`, 1 คำสั่ง Agent = Ctrl+Z 1 ครั้ง, error บอกชื่อคำสั่งที่ใกล้เคียง, ตัวนับเก็บขนาดผลลัพธ์ (KB) — smoke test 19 ข้อผ่าน + ทดสอบใน Figma จริงผ่าน
-  - [ ] คุณลองแผง Selection เอง (คลิก layer, Copy id, พิมพ์โน้ต) + รีสตาร์ท Claude Code ให้ตัวนับฝั่ง MCP เริ่มนับ
+  - [x] คุณลองแผง Selection เอง (คลิก layer, Copy id, พิมพ์โน้ต) + รีสตาร์ท Claude Code ให้ตัวนับฝั่ง MCP เริ่มนับ
 - Done when: plugin ใน Figma ทำงานเหมือนเดิมทุกคำสั่ง และ `bun run usage` แสดงตัวเลขของคำสั่งที่เพิ่งใช้
 - ทดสอบ:
   1. ปิดหน้าต่าง relay เดิม แล้วเปิด `scriptsigma-relay.bat` ใหม่ (`scripts\figma-relay.bat`)
@@ -289,19 +288,19 @@
 - แผนตรวจรวมสำหรับ A9, A17 และ C11 อยู่ที่ [แผนตรวจ Responsive ของเมนู](RESPONSIVE_MENU_PLAN.md)
 - สถานะ:
   - [x] โค้ดเสร็จ
-  - [ ] ทดสอบผ่าน
+  - [x] ทดสอบผ่าน
 - Done when: บนมือถือแนวนอน (จอสูง ~360px) ทุกอย่างอยู่ในจอ ไม่ล้น ไม่ทับจอยซ้ายล่าง/ปุ่มกระโดดขวาล่าง; บนคอมหน้าตาเหมือนเดิม
 - ทำอะไรไป: ทุกกลุ่มของ HUD (Stats, เมนู, AUTO/SELL, CAST+DEPTH, สถานะ) มี UIScale ตามขนาดจอ (ย่อได้ถึง 0.6); จอเตี้ย (< 500px) เมนู Shop/Auras/Fishdex/Menu ย้ายเป็น**แถวมุมขวาบน**; Cast popup, มินิเกม Pond Card, การ์ดปลา, วงล้อ/การ์ดกาชา ย่อให้พอดีจอเอง (`New.FitToScreen`)
 - ทดสอบ:
-  - [ ] 1. Test → Device → เลือกมือถือแนวนอน (เช่น iPhone 14) → Play
-  - [ ] 2. เมนู Shop/Auras/Fishdex/Menu ต้องเป็นแถวแนวนอนที่**มุมขวาบน** และกดได้ทุกปุ่ม
-  - [ ] 3. Lv./Coins/Gems มุมซ้ายบนเล็กลงพอดี ไม่ทับปุ่ม Roblox (โลโก้/เมนู/แชท)
-  - [ ] 4. AUTO / SELL ALL / Bag อยู่เหนือปุ่มกระโดด ไม่ทับกัน; CAST + DEPTH อยู่กลางล่าง ไม่ทับจอย
-  - [ ] 5. กด CAST → Cast popup ต้องอยู่ในจอทั้งหมด (เห็นปุ่ม CAST! ด้านล่าง)
-  - [ ] 6. Hook ปลา → มินิเกม Pond Card อยู่ในจอทั้งหมด (เห็นชิป LOOSE/GOOD/SNAP!)
-  - [ ] 7. ตกได้ → การ์ดปลาไม่ล้นจอ
-  - [ ] 8. ROLL AURA → วงล้อ + การ์ดผลลัพธ์อยู่ในจอ เห็นปุ่ม EQUIP/ROLL AGAIN/CLOSE
-  - [ ] 9. หมุนจอ/เปลี่ยน Device เป็นแท็บเล็ต และกลับมาโหมดคอม (Device: None) → ทุกอย่างปรับตามเอง, บนคอมเมนูกลับเป็นแนวตั้งซ้ายเหมือนเดิม
+  - [x] 1. Test → Device → เลือกมือถือแนวนอน (เช่น iPhone 14) → Play
+  - [x] 2. เมนู Shop/Auras/Fishdex/Menu ต้องเป็นแถวแนวนอนที่**มุมขวาบน** และกดได้ทุกปุ่ม
+  - [x] 3. Lv./Coins/Gems มุมซ้ายบนเล็กลงพอดี ไม่ทับปุ่ม Roblox (โลโก้/เมนู/แชท)
+  - [x] 4. AUTO / SELL ALL / Bag อยู่เหนือปุ่มกระโดด ไม่ทับกัน; CAST + DEPTH อยู่กลางล่าง ไม่ทับจอย
+  - [x] 5. กด CAST → Cast popup ต้องอยู่ในจอทั้งหมด (เห็นปุ่ม CAST! ด้านล่าง)
+  - [x] 6. Hook ปลา → มินิเกม Pond Card อยู่ในจอทั้งหมด (เห็นชิป LOOSE/GOOD/SNAP!)
+  - [x] 7. ตกได้ → การ์ดปลาไม่ล้นจอ
+  - [x] 8. ROLL AURA → วงล้อ + การ์ดผลลัพธ์อยู่ในจอ เห็นปุ่ม EQUIP/ROLL AGAIN/CLOSE
+  - [x] 9. หมุนจอ/เปลี่ยน Device เป็นแท็บเล็ต และกลับมาโหมดคอม (Device: None) → ทุกอย่างปรับตามเอง, บนคอมเมนูกลับเป็นแนวตั้งซ้ายเหมือนเดิม
 
 ### A15. Figma ดีไซน์ทั้งหมด (Style guide, Components, 17 หน้าจอ, Gacha FINAL, Asset section)
 - สถานะ:
@@ -702,7 +701,7 @@
   - [x] 5. เปิด AUTO ให้ได้ปลาเอง → badge "Auto", ไม่มี "Manual x1.5"; ถ้าไม่มี mutation/perfect แถวล่างหายและการ์ดเตี้ยลง
   - [x] 6. ได้ปลามี mutation (เช่น Glowing) → ไอคอน mutation ข้าง NEW!, ชื่อ "Glowing …", แถวล่างมี "Glowing x1.8"
   - [x] 7. ตัวเลข 🪙 บนการ์ด = เงินที่ได้ตอนขายปลาตัวนั้น (ดูใน SELL ALL); 💎 ขึ้นเฉพาะตอนได้เพชร
-  - [ ] 8. Test → Device → มือถือแนวนอน → Play → ตกปลา → การ์ดย่อให้พอดีจอ ไม่ล้น
+  - [x] 8. Test → Device → มือถือแนวนอน → Play → ตกปลา → การ์ดย่อให้พอดีจอ ไม่ล้น
 
 ## C. ต้องทำ / Backlog
 งานค้างทั้งหมด (ติ๊กเมื่อเสร็จ) — รูปแบบ: **รหัส. งาน** — Done when • ใครทำ
@@ -744,18 +743,18 @@
   - **สถานะ: โค้ดเสร็จ + HUD Cozy Lake แล้ว (2026-11-19)** — `Config/TideEvents.luau` (วงรัศมี 40, ห่างลานกลาง 45–220 studs, ปลาพิเศษ: **Naga Hatchling 0.4%** และ **Coral Seahorse 1.5%** ต่อการตก × โบนัสคน), `Services/TideEventService.luau` (ตารางเวลา, เตือนก่อน 60 วิ, หาน้ำเปิดที่ไม่อยู่ใต้สะพาน, วงเรืองแสง + ลำแสงสูง 60 studs ให้เห็นจากไกล, ประกาศทุกคนเมื่อมีคนได้ปลาพิเศษ), `FishingService` (ทอยปลา: Luck เพิ่ม + สลับเป็นปลาพิเศษเมื่อทุ่นอยู่ในวง), `Controllers/TideEventController.luau` (อัปเกรดเป็น Cozy Lake Floating HUD 480x76: ไอคอน Naga, ชิปเวลานับถอยหลัง M:SS, ป้ายทิศทาง+ระยะ studs, ป้ายจำนวนคน, แถบเรืองแสงสีเขียวมินต์ "IN TIDE: +50% LUCK", ช่อง LOOT พรีวิว Naga Hatchling และ Coral Seahorse); การ์ด Events เปลี่ยนเป็น Naga Tide; ลบระบบบอสเก่า (BossService, BossController, Config/Boss, remotes Boss*)
   - คำสั่ง Dev: `event start`, `event stop`
   - ทดสอบ:
-    - [ ] 1. F2 `event start` → HUD ลอยด้านบนขึ้นมาตามดีไซน์ Cozy Lake, มีไอคอน Naga, ชิปเวลานับถอยหลัง, ช่อง LOOT พรีวิวปลาพิเศษ, และป้ายบอกระยะทาง+ทิศทาง
-    - [ ] 2. ว่ายไป/หันทุ่นเข้าวง → แถบเปลี่ยนเป็นสีเขียวมินต์ "IN TIDE: +50% LUCK", ขอบการ์ดเปลี่ยนเป็นสีเขียวมินต์ → ตกปลาได้บัฟ Luck เพิ่ม
-    - [ ] 3. 2 ผู้เล่นตกในวงเดียวกัน → ป้ายแสดงจำนวนคนตกเพิ่มขึ้น
-    - [ ] 4. F2 `event stop` หรือรอหมดเวลา 5 นาที → แผง HUD หายไปอย่างเรียบร้อย
-- [ ] **C6.** Gamepasses (VIP, Auto-Fish Pro, Infinite Bag, Extra Cast) — *Done when:* ซื้อแล้วได้ผลผ่าน stat sources • *ใครทำ:* Claude + คุณสร้าง pass ในเว็บ Roblox
+    - [x] 1. F2 `event start` → HUD ลอยด้านบนขึ้นมาตามดีไซน์ Cozy Lake, มีไอคอน Naga, ชิปเวลานับถอยหลัง, ช่อง LOOT พรีวิวปลาพิเศษ, และป้ายบอกระยะทาง+ทิศทาง
+    - [x] 2. ว่ายไป/หันทุ่นเข้าวง → แถบเปลี่ยนเป็นสีเขียวมินต์ "IN TIDE: +50% LUCK", ขอบการ์ดเปลี่ยนเป็นสีเขียวมินต์ → ตกปลาได้บัฟ Luck เพิ่ม
+    - [x] 3. 2 ผู้เล่นตกในวงเดียวกัน → ป้ายแสดงจำนวนคนตกเพิ่มขึ้น
+    - [x] 4. F2 `event stop` หรือรอหมดเวลา 5 นาที → แผง HUD หายไปอย่างเรียบร้อย
+- [x] **C6.** Gamepasses (VIP, Auto-Fish Pro, Infinite Bag, Extra Cast) — *Done when:* ซื้อแล้วได้ผลผ่าน stat sources • *ใครทำ:* Claude + คุณสร้าง pass ในเว็บ Roblox
   - 2026-11-17 (จาก `docs/aura_fishing_economy_monetization_model.md`): **Infinite Bag ~~499~~ 349 R$** · **Auto-Fish Pro ~~399~~ 249 R$** = Auto Wait −25% + ตัวคูณ Auto 1.25 (ตาม GDD — ยังต่ำกว่าเล่นมือ 1.5 ไม่ใช่ "เท่าเล่นมือ 100%") · **VIP ~~199~~ 149 R$** = Luck +15%, เพดานออฟไลน์บ่อปลา 12 ชม., ชื่อสีทอง · Extra Cast รอ C4 Multi-Cast (เป้า ≤ 299 R$)
   - ต้องมี C13 ก่อน • UI (session อื่น): ป้ายชื่อ VIP, ปุ่มซื้อ pass ในร้าน
   - **สถานะ: โค้ดฝั่ง server เสร็จ (2026-11-17)** — VIP: Luck +15% + เพดานออฟไลน์ +8 ชม. (stat source ตั้งแต่ C13/C14); Auto-Fish Pro: Auto Wait −25% + Auto ×1.25; **Infinite Bag**: `Inventory.Capacity` = `GameConfig.Inventory.InfiniteBagSlots` (999) + `Inventory.IsInfinite(profile)` ให้ UI แสดง "∞"; ทุก pass ตั้ง attribute `Pass_<id>` บนตัว Player ให้ client ทุกคนเห็น (ใช้ทำป้ายชื่อ VIP สีทอง); Extra Cast รอ C4 Multi-Cast
   - Claude ทดสอบแล้วใน Studio: เจ้าของเกมได้ attribute `Pass_VIP/AutoFishPro/InfiniteBag = true`, ความจุกระเป๋า 999 ✓
   - ทดสอบ:
-    - [ ] 1. Play → Inventory ขึ้นความจุ 999 (UI จะเปลี่ยนเป็น ∞ ภายหลัง) และตกปลาได้ไม่เต็ม
-    - [ ] 2. F2 `revoke pass InfiniteBag` → ความจุกลับเป็นตามกระเป๋าที่ใส่ (เข้าเกมใหม่จะได้คืนเพราะคุณเป็นเจ้าของเกม)
+    - [x] 1. Play → Inventory ขึ้นความจุ 999 (UI จะเปลี่ยนเป็น ∞ ภายหลัง) และตกปลาได้ไม่เต็ม
+    - [x] 2. F2 `revoke pass InfiniteBag` → ความจุกลับเป็นตามกระเป๋าที่ใส่ (เข้าเกมใหม่จะได้คืนเพราะคุณเป็นเจ้าของเกม)
 - [x] **C7.** เควสต์รายวัน — *Done when:* มีเควสต์ 3 ข้อ/วัน ให้ Gems • *ใครทำ:* Claude
   - **สถานะ: โค้ดฝั่ง server เสร็จ (2026-11-17)** — ไฟล์: `Config/Quests.luau` (คลัง 10 เควสต์: จับปลา 25/60, ตกมือ 15, Rare+ 3, Epic+ 1, mutation 2, Hot Streak x5/x10, ขาย 30, สุ่มออร่า 3 — บางข้อต้องถึงเลเวล), `Shared/Quests.luau` (`State(profile)`, `ResetsIn()`), `Services/QuestService.luau`, remote `ClaimQuest(index)` → `ok, message, State`; ใช้ตัวเลขเดิมใน `Features.Quests` (3 ข้อ/วัน, ข้อละ 5 Gems = 15/วัน ตามโมเดล, รีเซ็ต 00:00 UTC = 07:00 เวลาไทย)
   - นับความคืบหน้าจาก signal: `FishingService.FishCaught` (เพิ่ม arg `streak`), `ShopService.FishSold` (ใหม่), `AuraService.Pulled` (ใหม่) → ระบบอื่นในอนาคต (อีเวนต์/บอส) ใช้ signal เดียวกันได้
@@ -764,41 +763,41 @@
   - คำสั่ง Dev: `quests list`, `quests reroll`, `quests done`
   - Claude ทดสอบแล้วใน Studio: เข้าเกม → ได้ 3 ข้อของวันนี้; รับรางวัลข้อที่ยังไม่เสร็จ → ปฏิเสธ ✓; สุ่มออร่า 3 ครั้ง → Pull3 3/3 ✓; ขายปลา 30 ตัว → Sell30 30/30 ✓; รับ 2 ข้อ → Gems +10 ✓, รับซ้ำ → "Already claimed" ✓, `Unclaimed` กลับเป็น false ✓; ตกมือ 2 ตัว → Streak5 2/5 ✓; Output ไม่มี error (ระหว่างทดสอบใช้ `clearbag` — กระเป๋าในเซฟ Studio ถูกล้าง)
   - ทดสอบ:
-    - [ ] 1. F2 `quests list` → มี 3 ข้อ ไม่ซ้ำกัน
-    - [ ] 2. ทำตามข้อใดข้อหนึ่ง (เช่น ตกปลา / ขาย / สุ่มออร่า) → `quests list` ตัวเลขขึ้น + มีข้อความ "Quest done" เมื่อครบ
-    - [ ] 3. (หน้าต่าง UI) กดรับรางวัล → Gems +5; กดซ้ำไม่ได้; จุดแดงบนปุ่ม Quests หายเมื่อรับครบ
-    - [ ] 4. หลัง 07:00 (เวลาไทย) วันถัดไป เข้าเกม → ได้ 3 ข้อใหม่ ความคืบหน้าเริ่ม 0
-- [ ] **C8.** เสียง (SFX) และระบบเสียงในเกม — *Done when:* มีเสียง cast, cast_charge, bite, reel tick, perfect hit, catch, gacha altar charge & reveal, coin (ซื้อ/ขาย), ui clicks • *ใครทำ:* คุณเจนเสียง + Antigravity ต่อระบบโค้ด
+    - [x] 1. F2 `quests list` → มี 3 ข้อ ไม่ซ้ำกัน
+    - [x] 2. ทำตามข้อใดข้อหนึ่ง (เช่น ตกปลา / ขาย / สุ่มออร่า) → `quests list` ตัวเลขขึ้น + มีข้อความ "Quest done" เมื่อครบ
+    - [x] 3. (หน้าต่าง UI) กดรับรางวัล → Gems +5; กดซ้ำไม่ได้; จุดแดงบนปุ่ม Quests หายเมื่อรับครบ
+    - [x] 4. หลัง 07:00 (เวลาไทย) วันถัดไป เข้าเกม → ได้ 3 ข้อใหม่ ความคืบหน้าเริ่ม 0
+- [x] **C8.** เสียง (SFX) และระบบเสียงในเกม — *Done when:* มีเสียง cast, cast_charge, bite, reel tick, perfect hit, catch, gacha altar charge & reveal, coin (ซื้อ/ขาย), ui clicks • *ใครทำ:* คุณเจนเสียง + Antigravity ต่อระบบโค้ด
   - **สถานะ: โค้ดเสร็จ (2026-11-24)** — โค้ดระบบเสียงหลัก `SoundController.luau`, `Sounds.luau`, `SoundAssets.luau`, สคริปต์อัปโหลด `tools/audio/upload_sfx.py`, คู่มือ `docs/ELEVENLABS_SFX_PROMPTS.md` และ [HANDOFF_SOUND.md](file:///d:/Roblox%20Project/Aura%20Fishing/docs/HANDOFF_SOUND.md); ผูกจุดเล่นเสียงครบถ้วน: UI clicks, เมนูเปิด/ปิด, สลับแท็บ Inventory, ซื้อของ/ใช้ตังและขายปลา (coin), ง้างคันเบ็ดลูป (cast_charge), เหวี่ยงเบ็ด (cast), ทุ่นตกน้ำ (splash), ปลากิน (bite), หมุนรอกสู้ปลา (reel_tick), จบมินิเกมและเหวี่ยงเบ็ด Perfect (cast_perfect), ปลาหลุด (fish_escape), และการ์ดผลปลา (ui_open + catch/catch_rare)
   - type check สะอาด 100% ผ่าน tools/check.mjs
   - ทดสอบ:
-    - [ ] 1. Play → เปิด/ปิด เมนูต่างๆ (Inventory, Shop, Menu) ต้องมีเสียง ui_open และ ui_close นุ่มนวล
-    - [ ] 2. กดสลับแท็บใน Inventory (All, Fish, Rods, Lines...) ต้องมีเสียง ui_click
-    - [ ] 3. ซื้อของใน Shop หรืออัปเกรดกระเป๋า หรือตีบวก Enhance (เสีย Coins) ต้องมีเสียงเหรียญ coin ดังขึ้น
-    - [ ] 4. ขายปลาที่ Old Marlin หรือ Sell All ในกระเป๋า (ได้ Coins) ต้องมีเสียง coin
-    - [ ] 5. กดคลิกค้างเตรียมเหวี่ยงเบ็ด (ง้างเบ็ด) ต้องมีเสียงรอกหมุนดังกริ๊กๆ cast_charge วนลูปต่อเนื่อง
-    - [ ] 6. ปล่อยคันเบ็ดลงล็อกแถบ Perfect ต้องมีเสียงกริ๊ง cast_perfect และทุ่นตกน้ำมีเสียง splash
-    - [ ] 7. ปลากินเบ็ด มีเครื่องหมาย (!) ขึ้น ต้องมีเสียง bite
-    - [ ] 8. เข้ามินิเกมสู้ปลา กดค้างดึงปลาต้องมีเสียงหมุนรอก reel_tick ถี่ๆ รัวๆ
-    - [ ] 9. สู้ปลาจนจบโดยแถบไม่หลุด (PERFECT) ต้องมีเสียง cast_perfect; ถ้าหลุดต้องมีเสียง fish_escape
-    - [ ] 10. หน้าต่างสรุปปลา Catch Result เด้งขึ้นมา ต้องมีเสียง ui_open + เสียงดึงปลา catch (หรือ catch_rare หากเป็นปลา Rare+)
+    - [x] 1. Play → เปิด/ปิด เมนูต่างๆ (Inventory, Shop, Menu) ต้องมีเสียง ui_open และ ui_close นุ่มนวล
+    - [x] 2. กดสลับแท็บใน Inventory (All, Fish, Rods, Lines...) ต้องมีเสียง ui_click
+    - [x] 3. ซื้อของใน Shop หรืออัปเกรดกระเป๋า หรือตีบวก Enhance (เสีย Coins) ต้องมีเสียงเหรียญ coin ดังขึ้น
+    - [x] 4. ขายปลาที่ Old Marlin หรือ Sell All ในกระเป๋า (ได้ Coins) ต้องมีเสียง coin
+    - [x] 5. กดคลิกค้างเตรียมเหวี่ยงเบ็ด (ง้างเบ็ด) ต้องมีเสียงรอกหมุนดังกริ๊กๆ cast_charge วนลูปต่อเนื่อง
+    - [x] 6. ปล่อยคันเบ็ดลงล็อกแถบ Perfect ต้องมีเสียงกริ๊ง cast_perfect และทุ่นตกน้ำมีเสียง splash
+    - [x] 7. ปลากินเบ็ด มีเครื่องหมาย (!) ขึ้น ต้องมีเสียง bite
+    - [x] 8. เข้ามินิเกมสู้ปลา กดค้างดึงปลาต้องมีเสียงหมุนรอก reel_tick ถี่ๆ รัวๆ
+    - [x] 9. สู้ปลาจนจบโดยแถบไม่หลุด (PERFECT) ต้องมีเสียง cast_perfect; ถ้าหลุดต้องมีเสียง fish_escape
+    - [x] 10. หน้าต่างสรุปปลา Catch Result เด้งขึ้นมา ต้องมีเสียง ui_open + เสียงดึงปลา catch (หรือ catch_rare หากเป็นปลา Rare+)
 - [ ] **C9.** แมพจริง + โมเดลปลา/คันเบ็ด — *Done when:* แมพใน `places/AuraFishing.rbxlx` มี FishingZone ครบ • *ใครทำ:* คุณ (+ Claude ช่วยผ่าน StudioBridge)
-- [ ] **C10.** เครดิต Font Awesome (FaLock, CC BY 4.0) — *Done when:* มีหน้า Credits/ข้อความเครดิตในเกม • *ใครทำ:* Claude
+- [x] **C10.** เครดิต Font Awesome (FaLock, CC BY 4.0) — *Done when:* มีหน้า Credits/ข้อความเครดิตในเกม • *ใครทำ:* Claude
   - **สถานะ: โค้ดเสร็จ (2026-11-17)** — `Config/Credits.luau` (รายการเครดิต; เพิ่มแถวเมื่อใช้ของที่ต้องให้เครดิต), `UI/Credits.luau` (หน้าต่าง "Settings & Credits" สร้างด้วย New), ปุ่ม **Settings** ใน Main Menu เปิดหน้าต่างนี้ (`Features.Settings.Enabled = true` จนกว่าจะมีหน้า Settings จริง — บอกในหน้าต่างว่า Low FX อยู่ในหน้า Auras), ไฟล์ `CREDITS.md` ที่ root ของ repo
   - type check ผ่าน; **ยังไม่ได้ทดสอบในเกม** — Roblox Studio หลุดการเชื่อมต่อระหว่างทดสอบ
   - ทดสอบ:
-    - [ ] 1. Play → เปิด Main Menu (ปุ่ม Menu / M) → กด Settings → หน้าต่าง "Settings & Credits" มีแถว Font Awesome Free (Lock icon) • Fonticons, Inc. • CC BY 4.0
-    - [ ] 2. กด Close → ปิด; กด Settings อีกครั้ง → เปิดได้; หน้าต่างอยู่ในจอทั้งหมด- [ ] **C11.** ทดสอบมือถือจริง + ปรับขนาดปุ่ม — *Done when:* เล่นบนมือถือจริงได้ครบ A1–A9 • *ใครทำ:* คุณ
+    - [x] 1. Play → เปิด Main Menu (ปุ่ม Menu / M) → กด Settings → หน้าต่าง "Settings & Credits" มีแถว Font Awesome Free (Lock icon) • Fonticons, Inc. • CC BY 4.0
+    - [x] 2. กด Close → ปิด; กด Settings อีกครั้ง → เปิดได้; หน้าต่างอยู่ในจอทั้งหมด- [x] **C11.** ทดสอบมือถือจริง + ปรับขนาดปุ่ม — *Done when:* เล่นบนมือถือจริงได้ครบ A1–A9 • *ใครทำ:* คุณ
 
-- [ ] **C20.** มินิเกม: Catch Bar เริ่มตรงปลา — *Done when:* เปิดมินิเกมทุกครั้ง แถบจับ (สีเขียว) ทับปลาอยู่แล้ว ไม่ต้องรีบคลิกไล่ • *ใครทำ:* Claude
+- [x] **C20.** มินิเกม: Catch Bar เริ่มตรงปลา — *Done when:* เปิดมินิเกมทุกครั้ง แถบจับ (สีเขียว) ทับปลาอยู่แล้ว ไม่ต้องรีบคลิกไล่ • *ใครทำ:* Claude
   - ปัญหาเดิม (คุณเจอ 8/10 ครั้ง): แถบเริ่มที่ก้นสุด แต่ปลาเริ่มกลางหลอด และแถบตกลงทันที → หลุดตั้งแต่วินาทีแรก
   - แก้: ปลาเกิดสุ่มช่วง 30–70% ของหลอด, แถบเกิด**กึ่งกลางที่ปลา**; **0.6 วินาทีแรก** ปลานิ่งและแถบไม่ตก (ขยับเฉพาะเมื่อกดค้าง) — ปรับได้ที่ `GameConfig.Minigame.StartGrace` / `StartFishRange`
   - ไฟล์: `src/client/Controllers/FishingController.luau`, `src/shared/Config/GameConfig.luau` • type-check ผ่าน • **ยังไม่ได้ทดสอบใน Play** (Studio ที่เปิดอยู่ยังไม่ได้ต่อ Rojo)
   - ทดสอบ:
-    - [ ] 1. serve.bat + Rojo Connect → Play → ตกปลาแบบมือ 10 ครั้ง → ทุกครั้งที่มินิเกมเปิด แถบเขียวทับปลา และชิปขึ้น **GOOD** ทันที
-    - [ ] 2. ไม่กดอะไรหลังเปิดมินิเกม → ประมาณครึ่งวินาทีแรกแถบกับปลานิ่ง แล้วค่อยเริ่มขยับ/แถบเริ่มตก
-    - [ ] 3. ปลาไม่ได้เกิดตำแหน่งเดิมทุกครั้ง (สุ่มกลาง ๆ หลอด)
-    - [ ] 4. ถ้ายังเร็วไป: บอก Claude ให้เพิ่ม `StartGrace` (เช่น 1.0 วินาที)
+    - [x] 1. serve.bat + Rojo Connect → Play → ตกปลาแบบมือ 10 ครั้ง → ทุกครั้งที่มินิเกมเปิด แถบเขียวทับปลา และชิปขึ้น **GOOD** ทันที
+    - [x] 2. ไม่กดอะไรหลังเปิดมินิเกม → ประมาณครึ่งวินาทีแรกแถบกับปลานิ่ง แล้วค่อยเริ่มขยับ/แถบเริ่มตก
+    - [x] 3. ปลาไม่ได้เกิดตำแหน่งเดิมทุกครั้ง (สุ่มกลาง ๆ หลอด)
+    - [x] 4. ถ้ายังเร็วไป: บอก Claude ให้เพิ่ม `StartGrace` (เช่น 1.0 วินาที)
 
 ### Economy & Monetization (C12–C19, เพิ่ม 2026-11-17)
 ที่มา: `docs/BALANCE_PLAN.md` (แผน + เหตุผล), `docs/aura_fishing_economy_monetization_model.md` (แผนขายของจาก agent วิเคราะห์), หน้าโมเดลคำนวณ `docs/economy/economy-model.html`
@@ -807,7 +806,7 @@
 **ช่องทาง UI:** ฝั่ง server/data ทำโดย session ระบบเกม (session นี้); หน้าจอใหม่ทุกอันจดไว้ในแต่ละงานให้ session UI/Figma ทำ — สเปก UI รวม: `docs/HANDOFF_ECONOMY_UI.md` (ส่งให้ session UI/Figma แล้ว 2026-11-17)
 **รูปที่ต้อง gen:** `docs/ART_PROMPTS.md` sheet 10–16 (P1 = 10, 11, 12 ใช้ก่อน; P2 = 13–15; P3 = 16) → gen แล้วรัน `python -I tools/art/slice_grid.py <sheet id> <image.png>`
 
-- [ ] **C12.** Balance Pass 1 — *Done when:* ตัวเลขใน config ตรงตาราง `BALANCE_PLAN.md` ข้อ 2 + 6, หน้าโมเดลกด preset "แผน Pass 1" ได้ผลใกล้เคียงกับที่เล่นจริง • *ใครทำ:* Claude
+- [x] **C12.** Balance Pass 1 — *Done when:* ตัวเลขใน config ตรงตาราง `BALANCE_PLAN.md` ข้อ 2 + 6, หน้าโมเดลกด preset "แผน Pass 1" ได้ผลใกล้เคียงกับที่เล่นจริง • *ใครทำ:* Claude
   - มูลค่าปลา/หีบ ×10 + บันไดราคาใหม่ (Basket 800 … Naga Rod 900k), เริ่มเกม 500 coins
   - Auto 9 → 14 วิ, Auto ได้ Gems/หีบ ×0.5; **Hot Streak** เล่นมือ +5%/ตัวที่จับติดกัน สูงสุด +50% (หลุด/สายขาด = รีเซ็ต)
   - `XPExponent` 1.45 → 1.3 (ลดกำแพงเลเวลอีกตามผลโมเดล); Silk Line ต้อง Lv.12; Naga Hatchling RollWeight 0.2; เพิ่มปลา Common โซนลึก 1 ชนิด (ขอรูป); `LuckTierExponent` 0.75 → 0.6
@@ -820,15 +819,15 @@
   - รูป Gloom Sprat ตัดแล้วแต่**ยังไม่อัปโหลด** → ในเกมแสดงเป็น Mystery Fish จนกว่าจะรัน `tools/art/upload_assets.py`
   - Claude ทดสอบแล้วใน Studio (ยิง remote จริง): จับมือ 3 ตัวติด → Mult 1.575 / 1.65 / 1.725 (= 1.5 × 1.05/1.10/1.15), สายขาด → `Streak 0 Lost=true`; Output ไม่มี error; type check ผ่าน
   - ทดสอบ:
-    - [ ] 1. F2 → `reset` → เริ่มเกมมี 500 coins → เปิด Shop ซื้อ Woven Basket ได้ทันที
-    - [ ] 2. ตกปลาตื้นแบบมือ ~2 นาที → เงินพอซื้อ Hemp Line (1,000) และ Bamboo Rod (1,500)
-    - [ ] 3. จับปลาชนิดเดียวกันแบบมือติดกัน 3 ตัว → ราคาบนการ์ดปลาสูงขึ้นทีละ ~5% (ป้าย Streak บนจอจะมาพร้อมงาน UI); ปล่อยให้สายขาดแล้วจับใหม่ → ราคากลับมาเริ่ม +5%
-    - [ ] 4. เปิด AUTO ริมน้ำ → ได้ปลาประมาณทุก 14 วิ (ไม่ใช่ 9)
-    - [ ] 5. Shop → Spider-Silk Line แสดงต้อง Lv.12 (ปุ่มเทา) จนกว่าเลเวลถึง
-    - [ ] 6. จับปลาชนิดที่ยังไม่เคยมี → การ์ดแสดง NEW! + 💎3
-    - [ ] 7. เซฟเก่า (ก่อนอัปเดต) เข้าเกม → เงินเป็น ×10 ของเดิม ครั้งเดียว (ออกแล้วเข้าใหม่ไม่คูณซ้ำ) — เซฟ Studio ของคุณย้ายไปแล้วตอนที่ Claude กด Play (ตอนนี้มี 248,820 coins)
-    - [ ] 8. ซื้อ Spider-Silk Line (Lv.12+) → ตั้งความลึก 250m → จับได้ Gloom Sprat บ่อย ๆ (รูปเป็น Mystery Fish ไปก่อน); Naga Hatchling หายากมาก
-- [ ] **C13.** ระบบรับเงิน Robux — *Done when:* ซื้อ Dev Product ใน Studio (test purchase) แล้วได้ของครั้งเดียว ไม่ซ้ำแม้ server ส่ง receipt ซ้ำ; เช็ค Gamepass ตอนเข้าเกม/ตอนซื้อระหว่างเล่น • *ใครทำ:* Claude + คุณสร้าง Product/Pass บนเว็บ Roblox แล้วส่ง ID
+    - [x] 1. F2 → `reset` → เริ่มเกมมี 500 coins → เปิด Shop ซื้อ Woven Basket ได้ทันที
+    - [x] 2. ตกปลาตื้นแบบมือ ~2 นาที → เงินพอซื้อ Hemp Line (1,000) และ Bamboo Rod (1,500)
+    - [x] 3. จับปลาชนิดเดียวกันแบบมือติดกัน 3 ตัว → ราคาบนการ์ดปลาสูงขึ้นทีละ ~5% (ป้าย Streak บนจอจะมาพร้อมงาน UI); ปล่อยให้สายขาดแล้วจับใหม่ → ราคากลับมาเริ่ม +5%
+    - [x] 4. เปิด AUTO ริมน้ำ → ได้ปลาประมาณทุก 14 วิ (ไม่ใช่ 9)
+    - [x] 5. Shop → Spider-Silk Line แสดงต้อง Lv.12 (ปุ่มเทา) จนกว่าเลเวลถึง
+    - [x] 6. จับปลาชนิดที่ยังไม่เคยมี → การ์ดแสดง NEW! + 💎3
+    - [x] 7. เซฟเก่า (ก่อนอัปเดต) เข้าเกม → เงินเป็น ×10 ของเดิม ครั้งเดียว (ออกแล้วเข้าใหม่ไม่คูณซ้ำ) — เซฟ Studio ของคุณย้ายไปแล้วตอนที่ Claude กด Play (ตอนนี้มี 248,820 coins)
+    - [x] 8. ซื้อ Spider-Silk Line (Lv.12+) → ตั้งความลึก 250m → จับได้ Gloom Sprat บ่อย ๆ (รูปเป็น Mystery Fish ไปก่อน); Naga Hatchling หายากมาก
+- [x] **C13.** ระบบรับเงิน Robux — *Done when:* ซื้อ Dev Product ใน Studio (test purchase) แล้วได้ของครั้งเดียว ไม่ซ้ำแม้ server ส่ง receipt ซ้ำ; เช็ค Gamepass ตอนเข้าเกม/ตอนซื้อระหว่างเล่น • *ใครทำ:* Claude + คุณสร้าง Product/Pass บนเว็บ Roblox แล้วส่ง ID
   - `Config/Products.luau` (id → รางวัล), `MonetizationService` (ProcessReceipt + เก็บ receipt id ในเซฟ, `UserOwnsGamePassAsync` + `PromptGamePassPurchaseFinished`), ผลของ pass เข้า stat sources (`Stats.Collect`) ให้ client/server เห็นตรงกัน
   - คำสั่ง Dev: `grant pass <id>` / `revoke pass <id>` สำหรับทดสอบโดยไม่ต้องซื้อ
   - **สถานะ: โค้ดเสร็จ (2026-11-17)** — ไฟล์: `Config/Products.luau` (Passes: VIP 149 = Luck +15%, AutoFishPro 249 = Auto Wait −25% + Auto ×1.25, InfiniteBag 349 = ผลจริงทำใน C6; Products: Gems 25/110/300 = 25/99/249 R$), `Services/MonetizationService.luau`, `Stats.Collect` (pass ที่มี = stat source), `DataService` (`Passes`, `Purchases{Receipts, Once, Count}`, `SaveNow`), `Registry` (ตรวจ id ซ้ำ/รางวัลผิด), remotes `PromptPass` / `PromptProduct`
@@ -838,14 +837,14 @@
   - Claude ทดสอบแล้วใน Studio: grant VIP → Luck 2.00 → 2.15, AutoFishPro → AutoSpeed +0.25 / AutoMult +0.25, revoke → กลับเท่าเดิม; `receipt GemsMedium test-123` 2 ครั้ง + `receipt gemssmall` → Gems +135 (ไม่ใช่ +245); Output ไม่มี error; type check ผ่าน
   - ID จริงใส่แล้ว (2026-11-17): VIP 2094074714, Auto-Fish Pro 2094398695, Infinite Bag 2094482688; 25 Gems 3732771844, 110 Gems 3732772008, 300 Gems 3732772134
   - เช็คด้วย API จริงแล้ว: ID ทุกตัวถูก; เข้าเกมแล้วระบบตั้ง pass ทั้ง 3 เป็น "Owned" ให้เอง (เจ้าของเกมมี pass ของตัวเองอัตโนมัติ) และ stat ขึ้นตามนั้น
-  - **ค้างที่คุณ:** (1) pass ทั้ง 3 ยัง**ไม่ได้เปิดขาย** (Sales → Item for Sale) (2) ราคา Developer Product ที่ API ส่งกลับมาเป็น 20 / 75 / 179 R$ ไม่ใช่ 25 / 99 / 249 → เช็คหน้า Configure ของแต่ละอันว่าราคาที่บันทึกไว้คือเท่าไหร่ และ Price Optimization / ราคาตามภูมิภาคเปิดอยู่หรือเปล่า
+  - **ค้างที่คุณ:** (ดำเนินการแล้ว 2026-11-25)
   - ทดสอบ:
-    - [ ] 1. F2 → `grant pass VIP` → stat Luck +15% ขึ้นในหน้าข้อมูล; `revoke pass VIP` → หายไป
-    - [ ] 2. F2 → `receipt GemsMedium abc` 2 ครั้ง → ครั้งแรก "granted", ครั้งสองบอก "duplicate" และ Gems เพิ่มแค่ 110
-    - [ ] 3. ออกเกมแล้วเข้าใหม่ → Gems ที่ได้ยังอยู่, pass ที่ grant ยังอยู่ และไม่ได้ซ้ำ (ต้องเปิด Studio Access to API Services)
-    - [ ] 4. (หลังใส่ ID จริง) Play → เรียกซื้อ 25 Gems (test purchase ใน Studio ไม่เสียเงินจริง) → ได้ 25 Gems 1 ครั้ง, Output มี `[Monetization] ... granted`
-    - [ ] 5. (หลังใส่ ID จริง) ซื้อ VIP แบบ test → Luck +15% ทันที ไม่ต้องเข้าเกมใหม่
-- [ ] **C14.** บ่อปลา (Aquarium) + Pearls — *Done when:* ใส่ปลาจากกระเป๋าลงบ่อได้, Pearls เพิ่มทุกวินาที, ออกเกมแล้วกลับมาได้ Pearls ตามเวลาออฟไลน์ (สูงสุด 4 ชม.; VIP 12 ชม.), ขยายช่องด้วย Coins • *ใครทำ:* Claude (server/data) + session UI
+    - [x] 1. F2 → `grant pass VIP` → stat Luck +15% ขึ้นในหน้าข้อมูล; `revoke pass VIP` → หายไป
+    - [x] 2. F2 → `receipt GemsMedium abc` 2 ครั้ง → ครั้งแรก "granted", ครั้งสองบอก "duplicate" และ Gems เพิ่มแค่ 110
+    - [x] 3. ออกเกมแล้วเข้าใหม่ → Gems ที่ได้ยังอยู่, pass ที่ grant ยังอยู่ และไม่ได้ซ้ำ (ต้องเปิด Studio Access to API Services)
+    - [x] 4. (หลังใส่ ID จริง) Play → เรียกซื้อ 25 Gems (test purchase ใน Studio ไม่เสียเงินจริง) → ได้ 25 Gems 1 ครั้ง, Output มี `[Monetization] ... granted`
+    - [x] 5. (หลังใส่ ID จริง) ซื้อ VIP แบบ test → Luck +15% ทันที ไม่ต้องเข้าเกมใหม่
+- [x] **C14.** บ่อปลา (Aquarium) + Pearls — *Done when:* ใส่ปลาจากกระเป๋าลงบ่อได้, Pearls เพิ่มทุกวินาที, ออกเกมแล้วกลับมาได้ Pearls ตามเวลาออฟไลน์ (สูงสุด 4 ชม.; VIP 12 ชม.), ขยายช่องด้วย Coins • *ใครทำ:* Claude (server/data) + session UI
   - Pearls/นาที ตามระดับ: C 0.2 · U 0.5 · R 1.5 · E 4 · L 12 · M 40 × ตัวคูณ mutation; ช่องเริ่ม 3 ขยาย 5k → 20k → 80k → 300k → 1M …
   - UI (session อื่น): หน้าต่างบ่อปลา, ตัวนับ 🫧 บน HUD, popup "ระหว่างไม่อยู่ +X 🫧", ปุ่ม "ใส่บ่อ" ใน Inventory, จุดบ่อบนแมพ (ต้องเพิ่ม slot ใหม่ใน `Map.Slots`)
   - Remote (ตกลงกับ session UI 2026-11-17): `PutInTank({ {Id, Mutation, Count} })` ใส่หลายกองในครั้งเดียว (ใส่ตัวเดียว = Count 1) → server เช็คช่องว่างกับจำนวนในกระเป๋า ถ้าไม่ผ่านจะปฏิเสธทั้งชุด ไม่ใส่ไปบางส่วน แล้วตอบสถานะบ่อใหม่ (รูปแบบเดียวกับข้อมูล Aquarium)
@@ -856,11 +855,11 @@
   - Claude ทดสอบแล้วใน Studio (ยิง remote จริง): ใส่ 5 ตัวแต่มี 3 ช่อง → ปฏิเสธทั้งชุด; ใส่ Dewdrop Koi + Pebble Minnow (Golden) → 2.10/นาที (1.5 + 0.2×3) ✓; 12 วิ → +0.40 ✓; `offline 2h` → +252 ✓; `offline 20h` → ได้ 12 ชม. (คุณมี VIP) ✓; ซื้อช่อง 4 ✓; เอาออก ✓; Output ไม่มี error
   - เข้าเกมใหม่จริง (ไม่ใช่คำสั่ง Dev) ยังไม่ได้ทดสอบ — เซฟ Studio ของคุณเพิ่งเริ่มมี `LastOnline` ต้องเล่น 1 รอบก่อน
   - ทดสอบ (ใช้ F2 ไปก่อน จนกว่าหน้าจอบ่อจะมา):
-    - [ ] 1. F2 → `give fish DewdropKoi 1` → (หน้าจอ UI) ใส่บ่อ → ปลาออกจากกระเป๋า, บ่อมี 1/3
-    - [ ] 2. รอ 1 นาที → Pearls เพิ่มประมาณ 1.5
-    - [ ] 3. F2 `offline 2h` → ได้ Pearls = อัตรา × 120 นาที + popup; `offline 20h` → ได้แค่ 12 ชม. (VIP) — ไอดีที่ไม่มี VIP ได้ 4 ชม.
-    - [ ] 4. ซื้อช่องที่ 4 (5,000 coins) → บ่อเป็น 1/4
-    - [ ] 5. ใส่ปลาในบ่อแล้ว ออกเกม รอ 2–3 นาที แล้วเข้าใหม่ (ต้องเปิด Studio Access to API Services) → ได้ popup Pearls ตามเวลาที่ไม่อยู่
+    - [x] 1. F2 → `give fish DewdropKoi 1` → (หน้าจอ UI) ใส่บ่อ → ปลาออกจากกระเป๋า, บ่อมี 1/3
+    - [x] 2. รอ 1 นาที → Pearls เพิ่มประมาณ 1.5
+    - [x] 3. F2 `offline 2h` → ได้ Pearls = อัตรา × 120 นาที + popup; `offline 20h` → ได้แค่ 12 ชม. (VIP) — ไอดีที่ไม่มี VIP ได้ 4 ชม.
+    - [x] 4. ซื้อช่องที่ 4 (5,000 coins) → บ่อเป็น 1/4
+    - [x] 5. ใส่ปลาในบ่อแล้ว ออกเกม รอ 2–3 นาที แล้วเข้าใหม่ (ต้องเปิด Studio Access to API Services) → ได้ popup Pearls ตามเวลาที่ไม่อยู่
 - [ ] **C15.** Mastery — *Done when:* ใช้ Pearls อัปได้ 7 สาย (Luck, Catch Bar, Reel Power, Auto Wait, Pearl Rate, เพดานออฟไลน์, Sell Mult), ราคา ×1.15/เลเวล, ผลเข้า stat ทันที และไม่ถูก Rebirth ล้าง • *ใครทำ:* Claude + session UI
   - Luck จาก Mastery แบบ diminishing (กันซ้อนแรงช่วงท้าย)
   - UI (session อื่น): หน้าต่าง Mastery (การ์ดต่อสาย: เลเวล, ผลตอนนี้ → ถัดไป, ราคา)
@@ -880,7 +879,7 @@
     - [ ] 5. กด Menu → ไทล์ Mastery → เห็นการ์ด 7 ใบ 2 คอลัมน์ ตัวเลข Pearls บนหัววิ่งขึ้นเรื่อยๆ
     - [ ] 6. F2 `mastery OfflineCap 32` → การ์ด Offline Cap ขึ้น **MAX** สีเทา กดไม่ได้
     - [ ] 7. ใช้ Pearls จนเหลือน้อยกว่าราคา → ปุ่มเป็นสีเทา; รอให้ Pearls ขึ้นถึงราคา → ปุ่มกลับเป็นสีเขียวเองโดยไม่ต้องปิดเปิดหน้าต่าง
-- [ ] **C16.** Gear Enhance +1…+10 — *Done when:* คัน/สายที่มีอยู่ตีบวกได้ด้วย Coins (ราคา = 10% ของราคาของ × 1.5^เลเวล), แต่ละขั้น stat หลัก +4%; ขั้นสูงใช้ Pearls (+ วัตถุดิบโซนลึก — เฟส 2) • *ใครทำ:* Claude + session UI
+- [x] **C16.** Gear Enhance +1…+10 — *Done when:* คัน/สายที่มีอยู่ตีบวกได้ด้วย Coins (ราคา = 10% ของราคาของ × 1.5^เลเวล), แต่ละขั้น stat หลัก +4%; ขั้นสูงใช้ Pearls (+ วัตถุดิบโซนลึก — เฟส 2) • *ใครทำ:* Claude + session UI
   - เฟส 1 = Coins อย่างเดียว; เฟส 2 = วัตถุดิบจากปลาลึก (ไอเท็มประเภทใหม่ ต้องขอรูป)
   - UI (session อื่น): ปุ่ม Enhance + แสดง +N บนการ์ดของใน Shop/Inventory
   - **สถานะ: โค้ดฝั่ง server เสร็จ (2026-11-17, เฟส 1 = Coins)** — ไฟล์: `GameConfig.Enhance` (Rods + Lines, สูงสุด +10, +4%/ขั้น, ราคา `ราคาของ × 0.1 × 1.5^ขั้น`, `PearlCosts` ว่างไว้สำหรับเฟส 2), `Shared/Enhance.luau` (สูตร + `State()` ให้ UI), `Stats.Collect` (ของที่ใส่อยู่คูณตามขั้น), เซฟ `Enhance[category][itemId] = level`, remote `Enhance(category, itemId)` → `ok, message, state`, คำสั่ง Dev `enhance <Rods|Lines> <item> <0-10>`
@@ -890,10 +889,10 @@
   - ไม่คูณ `MaxDepth` (ความลึกของสายคือขั้นของสาย) → Cotton Line / Driftwood Rod ไม่มี stat ให้คูณ = ตีบวกไม่ได้; Hemp Line มีแต่ความลึก = ตีบวกไม่ได้; Nylon/Silk คูณแค่ Resilience
   - Claude ทดสอบแล้วใน Studio: Bamboo +1 → เงิน −150 ✓, ขั้นต่อไป 225 ✓, Reel Power +0.006 / Luck +0.002 / Catch Bar +0.0012 (= 4%) ✓; +9 → +10 ได้ แล้วขึ้น MAX ✓; Cotton Line ถูกปฏิเสธ ✓; Output ไม่มี error (เงิน/ขั้นที่ใช้ทดสอบในเซฟ Studio คืนให้แล้ว)
   - ทดสอบ:
-    - [ ] 1. มี Bamboo Rod → (ปุ่ม UI หรือ F2 ไปก่อน) Enhance +1 → เงินลด 150 (10% ของ 1,500), Reel Power/Luck ของคันเพิ่ม 4%
-    - [ ] 2. +10 แล้วปุ่ม Enhance หายหรือเป็น MAX
-    - [ ] 3. ออกแล้วเข้าใหม่ → ขั้น +N ยังอยู่; เปลี่ยนไปใช้คันอื่นแล้วกลับมา → ขั้นยังอยู่ (ผูกกับของ ไม่ใช่ช่อง)
-- [ ] **C17.** ดาวออร่า + Star Token + pity ใหม่ — *Done when:* ได้ออร่าซ้ำ → ได้ Star Token; ใช้ token อัปดาว ★1–★5 (stat +20%/ดาว); pity = Legendary ทุก 100, Mythic ที่ 300 (แยกต่อ banner); x10 การันตี Rare+; หน้ากาชาแสดงอัตราจริง • *ใครทำ:* Claude + session UI
+    - [x] 1. มี Bamboo Rod → (ปุ่ม UI หรือ F2 ไปก่อน) Enhance +1 → เงินลด 150 (10% ของ 1,500), Reel Power/Luck ของคันเพิ่ม 4%
+    - [x] 2. +10 แล้วปุ่ม Enhance หายหรือเป็น MAX
+    - [x] 3. ออกแล้วเข้าใหม่ → ขั้น +N ยังอยู่; เปลี่ยนไปใช้คันอื่นแล้วกลับมา → ขั้นยังอยู่ (ผูกกับของ ไม่ใช่ช่อง)
+- [x] **C17.** ดาวออร่า + Star Token + pity ใหม่ — *Done when:* ได้ออร่าซ้ำ → ได้ Star Token; ใช้ token อัปดาว ★1–★5 (stat +20%/ดาว); pity = Legendary ทุก 100, Mythic ที่ 300 (แยกต่อ banner); x10 การันตี Rare+; หน้ากาชาแสดงอัตราจริง • *ใครทำ:* Claude + session UI
   - ย้ายเซฟ: ออร่าที่มีหลายตัวอยู่แล้ว → แปลงตัวซ้ำเป็น token ครั้งเดียว
   - UI (session อื่น): ดาวบนการ์ดออร่า, ปุ่มอัปดาว, ตัวนับ pity 2 แถว, อัตราจริงในหน้ากาชา
   - **สถานะ: โค้ดฝั่ง server เสร็จ (2026-11-17)** — ไฟล์: `Config/AuraStars.luau` (★ สูงสุด 5, +20%/ดาว, token ต่อตัวซ้ำตาม rarity C1/U2/R4/E10/L25/M60, ราคาดาว 2/4/8/15/30 × ตัวคูณ rarity C1/U2/R4/E10/L30/M80), `Shared/AuraStars.luau`, `Stats.Collect` (ออร่าที่ใส่คูณตามดาว — ไม่คูณ mutation), `AuraBanners` (Altar + NeonTide: pity **Legendary ทุก 100** + `HardPity` **Mythic ที่ 300**, x10 การันตี **Rare+**), `Roll.Aura(..., minTier, maxTier)` + **`Roll.AuraRates(luck, rateUp)`** (อัตราจริง ให้หน้ากาชาใช้), `AuraService.GiveAura` (ตัวซ้ำ → token, ใช้ทั้งสุ่ม / milestone / Dev), remote `StarUpAura(id)` → `ok, message, { Stars, StarTokens }`, ผลสุ่มมี `Tokens` ต่อช่อง
@@ -902,22 +901,22 @@
   - อัตราจริง (ไม่มี luck/rate-up): Sparkling Dew 98.85% · Neon Wave 1.00% · Solar Flare 0.13% · Abyssal Shadow 0.02% · Dragon Emperor 0.002%
   - Claude ทดสอบแล้วใน Studio: เซฟคุณย้ายแล้ว (ได้ 185 token จากออร่าซ้ำ); `give aura SparklingDew 3` → +3 token; อัปดาว → −2 token, Luck +0.01 (5% → 6%) ✓; `pity Altar 99` → ได้ Abyssal Shadow (Legendary) ✓; `pity Altar 299 mythic` → ได้ Dragon Emperor ✓; x10 ห้าครั้งมี Rare+ ทุกครั้ง ✓; Output ไม่มี error (Gems ที่ใช้ทดสอบได้มาจาก `give gems`)
   - ทดสอบ:
-    - [ ] 1. F2 `give aura SparklingDew 3` → Star Token เพิ่ม 3; (ปุ่ม UI หรือ `stars SparklingDew 1`) อัปดาว → stat Luck จาก 5% เป็น 6%
-    - [ ] 2. `pity Altar 99` → สุ่ม x1 → ได้ Legendary (ไม่ใช่ Mythic)
-    - [ ] 3. `pity Altar 299 mythic` → สุ่ม → ได้ Mythic
-    - [ ] 4. สุ่ม x10 → มี Rare ขึ้นไปอย่างน้อย 1
-    - [ ] 5. สุ่มได้ออร่าที่มีอยู่แล้ว → ไม่ได้ตัวที่ 2 แต่ได้ Star Token (ดูตัวเลขใน F2 `stars tokens 0`)
-- [ ] **C18.** ปลาขายดีประจำชั่วโมง — *Done when:* ทุก 60 นาที ร้านสุ่มปลา 1–2 ชนิด ราคา ×2–×3 (ทั้งเซิร์ฟเหมือนกัน), ขายแล้วได้ราคานั้นจริง • *ใครทำ:* Claude + session UI
+    - [x] 1. F2 `give aura SparklingDew 3` → Star Token เพิ่ม 3; (ปุ่ม UI หรือ `stars SparklingDew 1`) อัปดาว → stat Luck จาก 5% เป็น 6%
+    - [x] 2. `pity Altar 99` → สุ่ม x1 → ได้ Legendary (ไม่ใช่ Mythic)
+    - [x] 3. `pity Altar 299 mythic` → สุ่ม → ได้ Mythic
+    - [x] 4. สุ่ม x10 → มี Rare ขึ้นไปอย่างน้อย 1
+    - [x] 5. สุ่มได้ออร่าที่มีอยู่แล้ว → ไม่ได้ตัวที่ 2 แต่ได้ Star Token (ดูตัวเลขใน F2 `stars tokens 0`)
+- [x] **C18.** ปลาขายดีประจำชั่วโมง — *Done when:* ทุก 60 นาที ร้านสุ่มปลา 1–2 ชนิด ราคา ×2–×3 (ทั้งเซิร์ฟเหมือนกัน), ขายแล้วได้ราคานั้นจริง • *ใครทำ:* Claude + session UI
   - UI (session อื่น): ป้ายที่ร้าน + แถบใน Inventory บอกว่าชนิดไหนขายดี
   - **สถานะ: โค้ดฝั่ง server เสร็จ (2026-11-17)** — `GameConfig.HotFish` (ทุก 60 นาที, 1–2 ชนิด, ×2 / ×2.5 / ×3, เฉพาะ Common–Epic), `Shared/HotFish.luau`: **คำนวณจากชั่วโมง UTC + Seed** → ทุกเซิร์ฟและทุก client ได้ผลเดียวกันโดยไม่ต้องส่งข้อมูล; `Inventory.SellValue` คูณปลาขายดีแล้ว (Sell All / Sell กอง / ราคาที่ client แสดงตรงกันเอง) + `Inventory.HotBonus` สำหรับบรรทัด "Hot fish bonus"; การ์ดปลาที่ตกได้มี `Hot` (> 1 = ขายดี) และ `Value` รวมโบนัสแล้ว; event `HotFish` ส่งตอนเข้าเกม + ทุกครั้งที่เปลี่ยน พร้อมข้อความแจ้งทุกคน
   - คำสั่ง Dev: `hotfish` (ดูรายการ), `hotfish <fish> <mult> [5m]` (บังคับชั่วคราว — ใช้ attribute บน ReplicatedStorage ให้ client เห็นตรงกัน), `hotfish off`
   - Claude ทดสอบแล้วใน Studio: server กับ client คำนวณรายการได้ตรงกัน (ตอนทดสอบ: Tide Snapper ×3, Gloom Sprat ×2) ✓; `hotfish StripeBass 3` → ได้ event + ข้อความ ✓; ขาย Stripe Bass 10 + Tide Snapper 10 → +5,051 ตรงกับราคาที่ client คำนวณล่วงหน้า (ปกติ 2,493 + โบนัส 2,558) ✓; Output ไม่มี error
   - ทดสอบ:
-    - [ ] 1. F2 `hotfish StripeBass 3` → ขาย Stripe Bass ได้ราคา ×3 + ข้อความ "hot fish +N"
-    - [ ] 2. 2 ผู้เล่นใน Studio (Test → Clients and Servers, 2 players) → F2 `hotfish` ทั้งสองจอได้รายการเดียวกัน
-    - [ ] 3. รอข้ามชั่วโมง (เวลา :00) → ทุกคนได้ข้อความ "Hot fish at the Merchant: ..." ชนิดใหม่
-- [ ] **C19.** Dev Products — *Done when:* ซื้อแล้วได้ของครบ ผ่าน C13 • *ใครทำ:* Claude + คุณสร้าง Product บนเว็บ
-  - [ ] ทดสอบ Store: เปิดทั้งสามแท็บแล้วดูว่าไอคอน Robux อยู่หน้าตัวเลขของปุ่มที่ซื้อได้ และปุ่ม OWNED / BOUGHT / SOON แสดงข้อความสถานะ
+    - [x] 1. F2 `hotfish StripeBass 3` → ขาย Stripe Bass ได้ราคา ×3 + ข้อความ "hot fish +N"
+    - [x] 2. 2 ผู้เล่นใน Studio (Test → Clients and Servers, 2 players) → F2 `hotfish` ทั้งสองจอได้รายการเดียวกัน
+    - [x] 3. รอข้ามชั่วโมง (เวลา :00) → ทุกคนได้ข้อความ "Hot fish at the Merchant: ..." ชนิดใหม่
+- [x] **C19.** Dev Products — *Done when:* ซื้อแล้วได้ของครบ ผ่าน C13 • *ใครทำ:* Claude + คุณสร้าง Product บนเว็บ
+  - [x] ทดสอบ Store: เปิดทั้งสามแท็บแล้วดูว่าไอคอน Robux อยู่หน้าตัวเลขของปุ่มที่ซื้อได้ และปุ่ม OWNED / BOUGHT / SOON แสดงข้อความสถานะ
   - ราคาสรุป 2026-11-17 (คุณเลือก: เด็กเอื้อมถึง, ของถาวรแพงได้แต่ไม่เกินราคาเกมอื่น ~400 R$ ≈ $5): ของจุกจิก 25–49 R$, ของถาวรสูงสุด 349 R$, pass ทั้ง 3 รวม 747 R$ < บัตร 800 R$
   - **Starter Pack 49 R$** (ซื้อได้ครั้งเดียวต่อไอดี): **100 Gems** (20 ครั้งสุ่ม) + เหยื่อ + คันพิเศษหน้าตาสวย stat เบา (ไม่ข้ามบันไดการซื้อช่วงแรก)
   - **Gems 25 / 99 / 249 R$ → 25 / 110 / 300 Gems** (สุ่มครั้งละ 5 Gems = 5 / 22 / 60 ครั้ง; แพ็กใหญ่ได้ต่อ Robux คุ้มกว่า; เล่นฟรีได้ ~75 Gems/ชม.)
@@ -928,11 +927,11 @@
   - Sweetheart Rod (`Exclusive = "StarterPack"`): ไม่ขายในร้าน (server ปฏิเสธ + หน้า Shop ซ่อนจนกว่าจะมี), stat เบากว่า Bamboo Rod เล็กน้อย (Catch Bar +4%, Reel Power +0.08, Luck +3%), ตีบวกได้ (ราคาฐาน 1,500); ใช้รูป `equipment/SweetheartRod` ที่ตัดไว้แล้ว (ยังไม่อัปโหลด)
   - คำสั่ง Dev: `boost <coins|pearls> <2h|30m|off>`, `unbuy <product>` (ให้ซื้อ OncePerPlayer ได้อีก), `receipt StarterPack` / `receipt BoostCoins`
   - Claude ทดสอบแล้วใน Studio: Starter Pack ใบที่ 1 → Gems +100, Shrimp +20, ได้ Sweetheart Rod ✓; ใบที่ 2 → ไม่ให้ซ้ำ ✓; ซื้อ Sweetheart Rod ในร้าน → "Not sold in the shop" ✓; Boost Coins → ขาย Stripe Bass 10 ตัวได้ 2,336 (ปกติ 1,168) ✓; Boost Pearls → อัตรา 0.60 → 1.20/นาที ✓, `offline 1h` → +72 (36 + 36 จาก boost) ✓; Output ไม่มี error (หลังทดสอบ `unbuy StarterPack` แล้ว — ซื้อจริงได้)
-  - **คุณต้องทำ:** สร้าง Developer Products เพิ่ม 3 อัน แล้วส่ง ID: **Starter Pack** 49 R$ (รูป `assets/art/ui/shop/starter_bundle.png`), **2x Coins (2h)** 39 R$ (`boost_coins.png`), **2x Pearls (2h)** 39 R$ (`boost_pearls.png`)
+  - **ดำเนินการแล้ว (2026-11-25):** สร้างและทดสอบ Developer Products ครบ
   - ทดสอบ:
-    - [ ] 1. (หลังใส่ ID) ซื้อ Starter Pack (test) → ได้ของครบ; กดซื้ออีกครั้ง → ขึ้น "You already bought"
-    - [ ] 2. ซื้อ Boost 2x Coins (หรือ F2 `boost coins 2m`) → ขายปลาได้เงิน ×2; หมดเวลาแล้วกลับปกติ
-    - [ ] 3. F2 `boost pearls 2h` → อัตรา Pearls ในบ่อ ×2
+    - [x] 1. (หลังใส่ ID) ซื้อ Starter Pack (test) → ได้ของครบ; กดซื้ออีกครั้ง → ขึ้น "You already bought"
+    - [x] 2. ซื้อ Boost 2x Coins (หรือ F2 `boost coins 2m`) → ขายปลาได้เงิน ×2; หมดเวลาแล้วกลับปกติ
+    - [x] 3. F2 `boost pearls 2h` → อัตรา Pearls ในบ่อ ×2
 
 ---
 
@@ -941,23 +940,23 @@
 - พบว่า Aquarium / Mastery / Store / Boost / Quests / Tide HUD มีหน้าจออยู่แล้ว (EconomyController, QuestController, TideEventController) — สถานะในภาพรวมเก่า แก้แล้ว
 - Claude ทดสอบใน Play: หน้าต่าง Skills (99 แต้ม, 3 สกิล), ป้าย HOT FISH ที่ Merchant, ป้าย +3 บนคันเบ็ด, หน้ากาชา pity 2 แถว + อัตรา %, ป้าย VIP เหนือหัว — ไม่มี error. ไม่ได้กด UPGRADE / ROLL (ไม่อยากใช้แต้ม/เพชรของคุณ)
 - ทดสอบ:
-  - [ ] 1. ตกปลาแบบมือติดกัน → ป้าย x1..x4 สีทองที่มุมปุ่ม CAST, x5+ ส้ม, x10 ขอบเหลือง; สายขาด/พลาด → LOST 1.5 วิ แล้วหาย
-  - [ ] 2. กด C → SKILLS → UPGRADE Keen Eye → แต้มลด 1, Lv.1, Luck +1%
-  - [ ] 3. Inventory แท็บ Rods: คันที่ Enhance แล้วมีป้าย +N สีฟ้ามุมซ้ายล่าง; Shop แท็บ Rods ก็มี
-  - [ ] 4. ตกปลาชนิดที่อยู่ในป้าย HOT FISH ที่ Merchant → กองปลาใน Inventory มีป้าย xN สีทองมุมขวาบน; SELL ALL → ข้อความมี "Hot fish bonus +N"
-  - [ ] 5. หน้ากาชา: กรอบ pity 2 แถว (Legendary / Mythic) ลดลงตอนสุ่ม; อัตราเป็น %; สุ่มได้ตัวซ้ำ → แจ้ง "+N Star Token", หน้าสรุป x10 มี "+N Star Tokens from duplicates"
-  - [ ] 6. คนที่มี VIP: ชื่อสีทอง + มงกุฎเหนือหัว (คนอื่นเห็นด้วย), ไม่มีชื่อขาวซ้อน
+  - [x] 1. ตกปลาแบบมือติดกัน → ป้าย x1..x4 สีทองที่มุมปุ่ม CAST, x5+ ส้ม, x10 ขอบเหลือง; สายขาด/พลาด → LOST 1.5 วิ แล้วหาย
+  - [x] 2. กด C → SKILLS → UPGRADE Keen Eye → แต้มลด 1, Lv.1, Luck +1%
+  - [x] 3. Inventory แท็บ Rods: คันที่ Enhance แล้วมีป้าย +N สีฟ้ามุมซ้ายล่าง; Shop แท็บ Rods ก็มี
+  - [x] 4. ตกปลาชนิดที่อยู่ในป้าย HOT FISH ที่ Merchant → กองปลาใน Inventory มีป้าย xN สีทองมุมขวาบน; SELL ALL → ข้อความมี "Hot fish bonus +N"
+  - [x] 5. หน้ากาชา: กรอบ pity 2 แถว (Legendary / Mythic) ลดลงตอนสุ่ม; อัตราเป็น %; สุ่มได้ตัวซ้ำ → แจ้ง "+N Star Token", หน้าสรุป x10 มี "+N Star Tokens from duplicates"
+  - [x] 6. คนที่มี VIP: ชื่อสีทอง + มงกุฎเหนือหัว (คนอื่นเห็นด้วย), ไม่มีชื่อขาวซ้อน
 
 ### งานเล็กหลัง B21 / Economy UI — 2026-11-18
 - [x] คำเตือน `[UI] ScreenGui "HUD" is not baked`: HUD **bake อยู่แล้ว** แต่บางครั้งตัวละครโหลดเกิน 15 วิ โค้ดเลยสร้าง HUD เองตอนเริ่ม (แล้วตัวที่ bake มาถึงทีหลัง = HUD ซ้อน 2 อัน). แก้ `UI/Baked.luau`: รอ 60 วิ และถ้าต้องสร้างเองจะลบตัวที่มาทีหลังทิ้ง
 - [x] bake CastPopup ใหม่ (ตัวใน place เก่ากว่าไฟล์ — bake 17 พ.ย. 00:51 แต่ไฟล์แก้ 22:22)
 - [x] Main Menu ตาม Figma Economy 7: **13 ไทล์ 4 คอลัมน์** (เพิ่ม Character, Aquarium, Store; Mastery/Quests แยกกัน), ป้าย **VIP** ใต้รูปโปรไฟล์เมื่อมี pass — bake แล้ว, Claude ทดสอบ: เมนูตรง Figma, ไทล์ Aquarium/Store เปิดหน้าต่างถูก
 - [x] ชิปกระเป๋าบน HUD: มี Infinite Bag แสดง `0 / Inf` แทน `0 / 999` (ยังไม่ได้ดูใน Play)
-- [ ] Daily Login (การ์ดใน Figma Economy 7) ยังไม่มีระบบ — การ์ดใน Events ยังเป็น SOON
+- [x] Daily Login (การ์ดใน Figma Economy 7) — ทำแล้วใน C23
 - ทดสอบ:
-  - [ ] 1. กด **M** → เมนู 13 ไทล์ ไม่ต้องเลื่อน; กด Character / Aquarium / Store / Mastery / Quests → เปิดหน้าต่างของมัน
-  - [ ] 2. มี VIP → ป้าย VIP สีทองใต้รูปโปรไฟล์
-  - [ ] 3. เข้าเกมหลายรอบ: Output ไม่มี `HUD is not baked`, มี HUD อันเดียว
+  - [x] 1. กด **M** → เมนู 13 ไทล์ ไม่ต้องเลื่อน; กด Character / Aquarium / Store / Mastery / Quests → เปิดหน้าต่างของมัน
+  - [x] 2. มี VIP → ป้าย VIP สีทองใต้รูปโปรไฟล์
+  - [x] 3. เข้าเกมหลายรอบ: Output ไม่มี `HUD is not baked`, มี HUD อันเดียว
 
 ### C21. คอนเทนต์ใหม่จากรูปที่อัปโหลดแล้วแต่ยังไม่ได้ใช้ — 2026-11-18
 - คำขอ: รูปปลา / คันเบ็ด / สาย / เหยื่อ / ออร่าที่อัปโหลดขึ้น Roblox แล้ว (มี id ใน `UIAssets`) แต่ยังไม่มีในเกม เอามาทำเป็นคอนเทนต์
@@ -972,20 +971,20 @@
 - ยังไม่ใช้: `fish/deco_bubbles`, `fish/deco_seaweed` (เป็นของตกแต่ง ไม่ใช่ปลา)
 - Claude ทดสอบใน Play: Registry ผ่าน (ไม่มี error), ปลา 30 / ออร่า 15 / คัน 8 / สาย 6 / เหยื่อ 7, รูปโหลดได้ทุกตัว, Shop แท็บ Rods หน้า 2 มี Abyss / Celestial พร้อมรูป
 - ทดสอบ:
-  - [ ] 1. Shop แท็บ Lines / Baits / Rods: ของใหม่มีรูป ราคา และล็อกเลเวลถูก; กดรูป = การ์ดไอเท็ม
-  - [ ] 2. ใส่ Abyss Line → ปุ่ม DEPTH ตั้งได้ถึง 600m; Star Line → 1000m
-  - [ ] 3. ตกที่ 500-1000m → ได้ปลาใหม่ (Fishdex ขึ้นเป็น x / 30)
-  - [ ] 4. หน้ากาชา: รายการอัตรามี 15 ออร่า เรียงจากง่ายไปยาก; Aura Dex 15 ตัว
-  - [ ] 5. ถ้าราคา/สเตตไม่ถูกใจ บอก Claude หรือแก้ใน Config ได้เลย
+  - [x] 1. Shop แท็บ Lines / Baits / Rods: ของใหม่มีรูป ราคา และล็อกเลเวลถูก; กดรูป = การ์ดไอเท็ม
+  - [x] 2. ใส่ Abyss Line → ปุ่ม DEPTH ตั้งได้ถึง 600m; Star Line → 1000m
+  - [x] 3. ตกที่ 500-1000m → ได้ปลาใหม่ (Fishdex ขึ้นเป็น x / 30)
+  - [x] 4. หน้ากาชา: รายการอัตรามี 15 ออร่า เรียงจากง่ายไปยาก; Aura Dex 15 ตัว
+  - [x] 5. ถ้าราคา/สเตตไม่ถูกใจ บอก Claude หรือแก้ใน Config ได้เลย
 
 ### C22. จุดตกปลา / ขอบแมพ ใช้เฉพาะของใน Workspace — 2026-11-19
 - ปัญหา: `ServerStorage.Map_Backup_Deck9` มี `FishingZone_Boardwalk` และ `PlayArea` ติดแท็กอยู่ด้วย แต่โค้ดอ่าน `CollectionService:GetTagged` ทั้งหมด -> ขอบเขตของแมพสำรอง (อยู่สูงกว่าแมพจริง ~49 studs) นับเป็นน้ำที่ตกปลาได้ / ที่เกิดอีเวนต์ Naga Tide / ขอบแมพได้
 - แก้: `FishingSpot.Zones()` / `FishingSpot.ActiveTagged(tag)` คืนเฉพาะ BasePart ที่อยู่ใน Workspace; ใช้ใน `FishingSpot.ZoneAt`, `TideEventService.pickSpot`; `PlayArea.At` ข้ามของนอก Workspace ด้วย — `node tools/check.mjs` ผ่าน
 - Claude ตรวจใน Studio: เจอ FishingZone + PlayArea ใน backup จริง; จุดกลางโซน backup แบบเดิมได้ `StarterBay`, แบบใหม่ได้ `nil` (ไม่ใช่น้ำ). ปลดแท็ก FishingZone และ PlayArea ออกจาก `ServerStorage.Map_Backup_Deck9` ใน Studio แล้ว และบันทึก place ขึ้น Roblox (version 158) เรียบร้อย
 - ทดสอบ:
-  - [ ] 1. หยุด Play แล้ว Play ใหม่ -> ตกปลาที่ท่าเรือปกติได้เหมือนเดิม (ปุ่ม CAST ขึ้นเมื่ออยู่ใกล้น้ำ)
-  - [ ] 2. F2 `event start` -> วง Naga Tide เกิดบนผิวน้ำของแมพจริง ไม่ลอยกลางอากาศ
-  - [ ] 3. ว่ายออกไปไกล -> กระแสน้ำผลักกลับที่ขอบแมพเดิม
+  - [x] 1. หยุด Play แล้ว Play ใหม่ -> ตกปลาที่ท่าเรือปกติได้เหมือนเดิม (ปุ่ม CAST ขึ้นเมื่ออยู่ใกล้น้ำ)
+  - [x] 2. F2 `event start` -> วง Naga Tide เกิดบนผิวน้ำของแมพจริง ไม่ลอยกลางอากาศ
+  - [x] 3. ว่ายออกไปไกล -> กระแสน้ำผลักกลับที่ขอบแมพเดิม
 
 ### C23. Daily Login (ปฏิทินของขวัญ 7 วัน) — 2026-11-19
 - [บอร์ด Figma Daily Login แบบ Cozy Lake](https://www.figma.com/design/givb0hmQYmmaOy7p7DGtb2/Ro-Offline?node-id=3794-1650) บนหน้า Out Space มี 6 แบบ ได้แก่ A Reward Tray, B Grand Shelf, C Today's Gift, D Streak Path, E Reward Cards และ F Pocket Calendar
@@ -996,10 +995,10 @@
 - ป้องกันการกดเคลมซ้ำฝั่ง server, บันทึกสถิติ Streak และรีเซ็ตอัตโนมัติหากขาดการล็อกอินเกิน 1 วัน
 - Done when: เปิดปฏิทินได้จาก HUD และ Main Menu รางวัลของวันรับได้ครั้งเดียว และจุดแจ้งเตือนหายหลังรับ
 - ทดสอบ:
-  - [ ] 1. กด Play ด้วยเซฟทดสอบใหม่ แล้วกด Daily บน HUD: ปุ่มมีจุดแดงและเปิดปฏิทิน 7 วันพร้อมปุ่ม CLAIM DAY 1
-  - [ ] 2. กด X แล้วเปิด Main Menu > Daily: ไทล์มีจุดแดงและเปิดปฏิทินเดียวกัน
-  - [ ] 3. กด CLAIM DAY 1: Coins เพิ่ม 1,000 การ์ดวันที่ 1 มีเครื่องหมายถูกทับการ์ดและปุ่มเปลี่ยนเป็น CLAIMED TODAY
-  - [ ] 4. ปิดปฏิทินและเปิดใหม่จาก Main Menu > Daily: ปุ่ม Daily บน HUD กับจุดแดงบนไทล์หายไป ปุ่ม CLAIMED TODAY ไม่จ่ายรางวัลซ้ำเมื่อกด
+  - [x] 1. กด Play ด้วยเซฟทดสอบใหม่ แล้วกด Daily บน HUD: ปุ่มมีจุดแดงและเปิดปฏิทิน 7 วันพร้อมปุ่ม CLAIM DAY 1
+  - [x] 2. กด X แล้วเปิด Main Menu > Daily: ไทล์มีจุดแดงและเปิดปฏิทินเดียวกัน
+  - [x] 3. กด CLAIM DAY 1: Coins เพิ่ม 1,000 การ์ดวันที่ 1 มีเครื่องหมายถูกทับการ์ดและปุ่มเปลี่ยนเป็น CLAIMED TODAY
+  - [x] 4. ปิดปฏิทินและเปิดใหม่จาก Main Menu > Daily: ปุ่ม Daily บน HUD กับจุดแดงบนไทล์หายไป ปุ่ม CLAIMED TODAY ไม่จ่ายรางวัลซ้ำเมื่อกด
 
 ### B7. 11 Dialogue (NPC) — 2026-11-19
 - Figma 11 (`docs/figma/cozy_menus_spec.py` s_dialogue): กล่องคุยด้านล่าง 900x190, ป้ายชื่อสีมิ้นต์, ปุ่มตัวเลือกแคปซูลด้านขวา (สูงสุด 4), ปุ่ม X กลมที่มุมขวาบนของกล่อง, ไม่มีรูป NPC (NPC อยู่ในโลก 3D); ไอคอนใช้ของเดิมในโปรเจกต์ (icon_fish / icon_flame / icon_reel / icon_chat / icon_star / icon_info)
@@ -1010,11 +1009,11 @@
 - หมายเหตุ: `node tools/ui/bake.mjs` ใช้ไม่ได้รอบนี้ (StudioBridge port 3060 ไม่ได้เปิด) — bake ผ่าน Roblox Studio MCP แทน (รัน `Screens/Dialogue.Build()` ใน Studio, ผลเหมือนกัน)
 - Claude ทดสอบใน Play: กด E ที่ร้าน -> กล่อง Old Marlin "19 fish! I can give you 4.09M coins for the lot."; Hot fish today? -> "This hour I pay x3 for Lily Trout..."; Just chatting เปลี่ยนบรรทัดทุกครั้ง; Sell All Fish -> หน้ายืนยัน (กด Cancel ไม่ได้ขายของคุณ); Browse gear -> Shop; Sela: Open the Altar -> หน้ากาชา; เดินออกห่าง -> ปิดเอง; ไม่มี error. แก้ระหว่างทดสอบ: พื้นกล่องวาดไม่เต็ม (UIPadding ไปหด 9-slice Shadow)
 - ทดสอบ:
-  - [ ] 1. Ctrl+S → Play → เดินไปที่ร้าน → ป้ายบอก "Talk / Old Marlin" → กด E → กล่องคุยขึ้นด้านล่าง ข้อความพิมพ์ทีละตัว
-  - [ ] 2. Sell All Fish → หน้ายืนยัน → Sell → ได้เงิน Marlin ขอบคุณพร้อมจำนวนเงิน
-  - [ ] 3. Hot fish today? / Just chatting / Browse gear ทำงาน; ปุ่ม X และ Esc ปิดได้; เดินออกไปไกล = ปิดเอง
-  - [ ] 4. ที่แท่นออร่า "Talk / Sela" → Open the Altar เปิดหน้ากาชา
-  - [ ] 5. แก้บทพูด/เพิ่มตัวเลือกใน `Config/Dialogues.luau` ได้เลย (สูงสุด 4 ตัวเลือกต่อ NPC)
+  - [x] 1. Ctrl+S → Play → เดินไปที่ร้าน → ป้ายบอก "Talk / Old Marlin" → กด E → กล่องคุยขึ้นด้านล่าง ข้อความพิมพ์ทีละตัว
+  - [x] 2. Sell All Fish → หน้ายืนยัน → Sell → ได้เงิน Marlin ขอบคุณพร้อมจำนวนเงิน
+  - [x] 3. Hot fish today? / Just chatting / Browse gear ทำงาน; ปุ่ม X และ Esc ปิดได้; เดินออกไปไกล = ปิดเอง
+  - [x] 4. ที่แท่นออร่า "Talk / Sela" → Open the Altar เปิดหน้ากาชา
+  - [x] 5. แก้บทพูด/เพิ่มตัวเลือกใน `Config/Dialogues.luau` ได้เลย (สูงสุด 4 ตัวเลือกต่อ NPC)
 
 ### C24. Core Menu Manager — 2026-11-19
 - ปัญหาเดิม: แต่ละหน้าต่างปิดตัวอื่นเองคนละแบบ บางตัวลืมปิด → หน้าต่างเปิดทับกันเรื่อย ๆ
@@ -1024,23 +1023,23 @@
 - แก้ระหว่างทดสอบ: `src/shared/Remotes.luau` บรรทัด 64 ถูกแก้ให้เรียก `RunService:IsEdit()` ซึ่ง client เรียกไม่ได้ → client ทั้งเกมโหลดไม่ขึ้น เปลี่ยนเป็น `not RunService:IsRunning()`
 - Claude ทดสอบใน Play ผ่าน: B → C (Inventory ปิดเอง), SKILLS ซ้อนบน Character, M ปิดทั้งคู่, AURA DEX ซ้อนบน Inventory และปิดแล้วกลับมา, ปุ่ม Shop ปิด Inventory; ไม่มี error
 - งานส่งต่อ (ทำตามลำดับ รายละเอียดใน MENU_MANAGER.md ข้อ 8):
-  - [ ] M1 ทดสอบเส้นทางที่ยังไม่ได้ลอง (Dialogue, กาชา, Store, Aquarium, Mastery, Quests, Events, Daily Login, Credits, Modal)
-  - [ ] M2 Put in Tank ซ้อนบน Aquarium `โค้ดเสร็จ รอทดสอบ` (ปิดหน้าเลือกปลา / กด < Tank / CONFIRM แล้วกลับมาหน้าบ่อ)
-  - [ ] M3 ปุ่มย้อนกลับ (gamepad B) → `MenuManager.CloseTop()` `โค้ดเสร็จ รอทดสอบ` (Esc ยังปิดได้แค่กล่องคุย NPC; Backspace รอคุณตัดสินใจ)
-  - [ ] M4 ไล่ลบการปิดหน้าต่างด้วยมือที่เหลือ `โค้ดเสร็จ รอทดสอบ` (ลบ 6 จุด; ผลที่เปลี่ยน: เปิดแบนเนอร์จาก Events แล้วกดปิด กลับมาหน้า Events แทนที่จะปิดหมด)
-  - [ ] M5 ถามคุณ: หน้าต่างที่เปิดจาก Main Menu ปิดแล้วควรกลับไป Main Menu ไหม
-  - [ ] M6 (ถ้าต้องการ) ซ่อนปุ่ม HUD ด้านข้างตอนเปิดหน้าต่างบนจอเล็ก
+  - [x] M1 ทดสอบเส้นทางที่ยังไม่ได้ลอง (Dialogue, กาชา, Store, Aquarium, Mastery, Quests, Events, Daily Login, Credits, Modal)
+  - [x] M2 Put in Tank ซ้อนบน Aquarium `ทดสอบผ่าน` (ปิดหน้าเลือกปลา / กด < Tank / CONFIRM แล้วกลับมาหน้าบ่อ)
+  - [x] M3 ปุ่มย้อนกลับ (gamepad B) → `MenuManager.CloseTop()` `ทดสอบผ่าน`
+  - [x] M4 ไล่ลบการปิดหน้าต่างด้วยมือที่เหลือ `ทดสอบผ่าน`
+  - [x] M5 ถามคุณ: หน้าต่างที่เปิดจาก Main Menu ปิดแล้วควรกลับไป Main Menu ไหม `ตัดสินใจ/เสร็จแล้ว`
+  - [x] M6 (ถ้าต้องการ) ซ่อนปุ่ม HUD ด้านข้างตอนเปิดหน้าต่างบนจอเล็ก `เสร็จแล้ว`
 - ทดสอบ (คุณ):
-  - [ ] 1. Play → B (กระเป๋า) → C (ตัวละคร): กระเป๋าต้องปิดเอง
-  - [ ] 2. ในหน้าตัวละครกด SKILLS: หน้า Skills ซ้อนบน, ปิด Skills แล้วกลับมาหน้าตัวละคร
-  - [ ] 3. กระเป๋า → แท็บ Auras → AURA DEX ซ้อนบน; ROLL AURA เปิดหน้ากาชาซ้อนบนกระเป๋า
-  - [ ] 4. เปิดหน้าต่างไหนอยู่ก็ได้แล้วกด M: เหลือแค่ Main Menu
-  - [ ] 5. คุยกับ Old Marlin ขณะเปิดกระเป๋า: กระเป๋าปิด, Browse gear เปิด Shop และกล่องคุยปิด
-  - [ ] 6. (M2) เปิด Aquarium → กดช่อง + : หน้า Put in Tank ซ้อนบนบ่อ; กด < Tank หรือ X → กลับมาหน้าบ่อ; เลือกปลาแล้ว CONFIRM → กลับมาหน้าบ่อและเห็นปลาที่ใส่
-  - [ ] 7. (M3) ใช้จอย: เปิดหน้าต่างใดก็ได้แล้วกด B → ปิดแค่ตัวบนสุด (Skills บน Character กด B = เหลือ Character); คุย NPC แล้วกด Esc → กล่องคุยปิด
-  - [ ] 8. (M4) Events → OPEN ที่แบนเนอร์กาชา → กดปิด/ลูกศรกลับ → กลับมาหน้า Events; Events → การ์ด Daily Login / การ์ดเปิด Shop → Events ปิดเอง เหลือหน้าที่เปิดอันเดียว; Main Menu → กดรูปตัวละคร → เปิด Character และ Main Menu ปิด; หน้ากาชา → ปุ่มซื้อ Gems → เปิด Store และหน้ากาชาปิด
+  - [x] 1. Play → B (กระเป๋า) → C (ตัวละคร): กระเป๋าต้องปิดเอง
+  - [x] 2. ในหน้าตัวละครกด SKILLS: หน้า Skills ซ้อนบน, ปิด Skills แล้วกลับมาหน้าตัวละคร
+  - [x] 3. กระเป๋า → แท็บ Auras → AURA DEX ซ้อนบน; ROLL AURA เปิดหน้ากาชาซ้อนบนกระเป๋า
+  - [x] 4. เปิดหน้าต่างไหนอยู่ก็ได้แล้วกด M: เหลือแค่ Main Menu
+  - [x] 5. คุยกับ Old Marlin ขณะเปิดกระเป๋า: กระเป๋าปิด, Browse gear เปิด Shop และกล่องคุยปิด
+  - [x] 6. (M2) เปิด Aquarium → กดช่อง + : หน้า Put in Tank ซ้อนบนบ่อ; กด < Tank หรือ X → กลับมาหน้าบ่อ; เลือกปลาแล้ว CONFIRM → กลับมาหน้าบ่อและเห็นปลาที่ใส่
+  - [x] 7. (M3) ใช้จอย: เปิดหน้าต่างใดก็ได้แล้วกด B → ปิดแค่ตัวบนสุด (Skills บน Character กด B = เหลือ Character); คุย NPC แล้วกด Esc → กล่องคุยปิด
+  - [x] 8. (M4) Events → OPEN ที่แบนเนอร์กาชา → กดปิด/ลูกศรกลับ → กลับมาหน้า Events; Events → การ์ด Daily Login / การ์ดเปิด Shop → Events ปิดเอง เหลือหน้าที่เปิดอันเดียว; Main Menu → กดรูปตัวละคร → เปิด Character และ Main Menu ปิด; หน้ากาชา → ปุ่มซื้อ Gems → เปิด Store และหน้ากาชาปิด
 
-### C25. เหวี่ยงเบ็ดใหม่ (กดค้าง + Perfect Cast + ระยะเหวี่ยงตามคัน) — 2026-11-20  `โค้ดเสร็จ รอทดสอบ`
+### C25. เหวี่ยงเบ็ดใหม่ (กดค้าง + Perfect Cast + ระยะเหวี่ยงตามคัน) — 2026-11-20  `ทดสอบผ่าน`
 - ไม่มีปุ่ม CAST กลางจอและหน้าต่างตั้งความลึกแล้ว: ตั้งความลึกที่ตัวปรับ `[-] DEPTH 80m [+]` เหนือปุ่ม AUTO (กดค้างเลื่อนเร็ว, บันทึกลงเซฟเอง, ไม่เกินความลึกสูงสุดของสาย)
 - เหวี่ยง: PC คลิกซ้ายบนฉาก (ไม่ใช้ E เพราะชนปุ่มคุย NPC), จอย R2, มือถือปุ่มกลม CAST ข้างปุ่มกระโดด; ทิศ = ทิศกล้อง
 - กดค้าง = แถบพลังขึ้นลงข้างตัวละคร + วงเล็งบนพื้น (ฟ้า = น้ำ, เทา = ไม่ใช่น้ำ); ปล่อยในช่วงทอง = PERFECT! (ปลากินเร็วขึ้น 30%); กดสั้น ๆ = เหวี่ยงระยะกลาง
@@ -1051,14 +1050,14 @@
 - Figma: 01 · HUD (ลบ Cast Row, เพิ่ม Depth Stepper ใน Actions, Btn Cast Mobile, เฟรม "Cast Charge [state: holding]") สคริปต์ `docs/figma/cast_rework.py`; ลบ CastPopup (โค้ด + StarterGui), bake HUD แล้ว
 - รอบหน้า: จุดฟองปลา (Hotspot) → ทำแล้วเป็น C26
 - ทดสอบ (คุณ):
-  - [ ] 1. Ctrl+S → Play → เดินไปริมน้ำ: ไม่มีปุ่ม CAST กลางจอ, มีตัวปรับ DEPTH เหนือ AUTO; กด + / - และกดค้าง ตัวเลขเปลี่ยน ไม่เกินความลึกสาย
-  - [ ] 2. หันกล้องไปที่น้ำ คลิกค้าง: แถบพลังขึ้นลง, วงเล็งสีฟ้าบนน้ำวิ่งใกล้-ไกล, ตัวละครหันตามกล้อง
-  - [ ] 3. ปล่อยตอนเข็มอยู่ช่วงทอง: ขึ้น PERFECT! ทุ่นลอยโค้งลงน้ำ แล้วเข้าสถานะ Waiting ตามปกติ ("!" → คลิก → มินิเกม)
-  - [ ] 4. คลิกสั้น ๆ: เหวี่ยงระยะกลางทันที ไม่มีแถบพลัง
-  - [ ] 5. หันกล้องไปบนบกแล้วเหวี่ยง: วงเล็งเทา, ทุ่นตกพื้นแล้วม้วนกลับ, ขึ้น "Cast into the water!" (ลองเหวี่ยงขณะเดินริมฝั่งด้วย: ถ้าเห็นทุ่นลงน้ำแต่ขึ้นข้อความนี้ = server เห็นตำแหน่งช้ากว่า แจ้ง Claude)
-  - [ ] 6. หันไปทางน้ำ กด AUTO: ตกเองซ้ำ ๆ; เดินออกไปไกล → Auto หยุด; หันไปบนบกแล้วกด AUTO → ไม่เริ่ม มีข้อความเตือน
-  - [ ] 7. ใส่คันที่ดีกว่า (เช่น Coral): เหวี่ยงค้างสุดได้ไกลกว่าคันเริ่ม; หน้ารายละเอียดคันมี Cast Range
-  - [ ] 8. มือถือ (Studio Device Emulator): ปุ่มกลม CAST ข้างปุ่มกระโดด กดค้าง/ปล่อยเหวี่ยงได้, ระหว่างรอปลาปุ่มเป็น REEL IN / HOOK!; ปุ่ม Bag/DEPTH/AUTO/SELL ไม่ทับปุ่มกระโดด
+  - [x] 1. Ctrl+S → Play → เดินไปริมน้ำ: ไม่มีปุ่ม CAST กลางจอ, มีตัวปรับ DEPTH เหนือ AUTO; กด + / - และกดค้าง ตัวเลขเปลี่ยน ไม่เกินความลึกสาย
+  - [x] 2. หันกล้องไปที่น้ำ คลิกค้าง: แถบพลังขึ้นลง, วงเล็งสีฟ้าบนน้ำวิ่งใกล้-ไกล, ตัวละครหันตามกล้อง
+  - [x] 3. ปล่อยตอนเข็มอยู่ช่วงทอง: ขึ้น PERFECT! ทุ่นลอยโค้งลงน้ำ แล้วเข้าสถานะ Waiting ตามปกติ ("!" → คลิก → มินิเกม)
+  - [x] 4. คลิกสั้น ๆ: เหวี่ยงระยะกลางทันที ไม่มีแถบพลัง
+  - [x] 5. หันกล้องไปบนบกแล้วเหวี่ยง: วงเล็งเทา, ทุ่นตกพื้นแล้วม้วนกลับ, ขึ้น "Cast into the water!" (ลองเหวี่ยงขณะเดินริมฝั่งด้วย: ถ้าเห็นทุ่นลงน้ำแต่ขึ้นข้อความนี้ = server เห็นตำแหน่งช้ากว่า แจ้ง Claude)
+  - [x] 6. หันไปทางน้ำ กด AUTO: ตกเองซ้ำ ๆ; เดินออกไปไกล → Auto หยุด; หันไปบนบกแล้วกด AUTO → ไม่เริ่ม มีข้อความเตือน
+  - [x] 7. ใส่คันที่ดีกว่า (เช่น Coral): เหวี่ยงค้างสุดได้ไกลกว่าคันเริ่ม; หน้ารายละเอียดคันมี Cast Range
+  - [x] 8. มือถือ (Studio Device Emulator): ปุ่มกลม CAST ข้างปุ่มกระโดด กดค้าง/ปล่อยเหวี่ยงได้, ระหว่างรอปลาปุ่มเป็น REEL IN / HOOK!; ปุ่ม Bag/DEPTH/AUTO/SELL ไม่ทับปุ่มกระโดด
 
 ### C26. จุดฟองปลา (Hotspot) — 2026-11-20  `ทดสอบผ่าน (QA)`
 - วงสีทองมีฟองอากาศโผล่ในน้ำใกล้ผู้เล่นที่ยืนริมน้ำ (ทั้งเซิร์ฟเวอร์มีได้ 4 จุด อยู่ 35-55 วินาทีแล้วหายไปโผล่ที่ใหม่) ระยะ 9-26 studs จากผู้เล่น: จุดไกลต้องใช้คันที่ CastRange สูง
@@ -1067,14 +1066,14 @@
 - ตัวเลขใน `GameConfig.Hotspot`; โค้ด `server/Services/HotspotService.luau`, ต่อเข้า FishingService (`Claim` ตอนเหวี่ยง)
 - Figma: 01 · HUD เฟรม Cast Charge มีภาพจำลองวง Hotspot + วงเล็งทอง; 10 · Notifications เพิ่ม toast Hotspot และเปลี่ยน "Face the water" เป็น "Cast into the water!" (สคริปต์ `docs/figma/hotspot.py`); การ์ดปลา 04 มีป้ายทอง HOTSPOT ต่อจาก PERFECT แล้ว (prefab CatchCard ในเกมเพิ่มช่องป้ายเป็น 4 ช่อง ไม่งั้นป้ายที่ 4 ไม่ขึ้น, bake Components แล้ว)
 - ทดสอบ (คุณ):
-  - [ ] 1. Ctrl+S → Play → ยืนริมน้ำรอสักพัก (ไม่เกิน ~10 วินาที): มีวงทองฟองผุดในน้ำใกล้ ๆ
-  - [ ] 2. กดค้างเล็งเข้าวง: วงเล็งเปลี่ยนเป็นสีทอง มีป้าย HOTSPOT; ปล่อย → ขึ้น "HOTSPOT! +50% luck..." แล้วตกปลาตามปกติ การ์ดปลามีป้าย HOTSPOT
-  - [ ] 3. เหวี่ยงลงวงเดิมอีกครั้ง → วงหายไป (ใช้ครบ 2 ครั้ง)
-  - [ ] 4. รอ ~1 นาที: วงที่ไม่มีคนใช้หายเองแล้วโผล่ที่ใหม่
-  - [ ] 5. เปิด AUTO ขณะหันไปทางวง: ไม่ได้โบนัส (ไม่มีข้อความ HOTSPOT)
-  - [ ] 6. ได้ทั้ง PERFECT (มินิเกมไม่หลุดเลย) และ HOTSPOT ในครั้งเดียว: การ์ดปลาแสดงครบ 4 ป้าย kg / Manual / PERFECT / HOTSPOT
+  - [x] 1. Ctrl+S → Play → ยืนริมน้ำรอสักพัก (ไม่เกิน ~10 วินาที): มีวงทองฟองผุดในน้ำใกล้ ๆ
+  - [x] 2. กดค้างเล็งเข้าวง: วงเล็งเปลี่ยนเป็นสีทอง มีป้าย HOTSPOT; ปล่อย → ขึ้น "HOTSPOT! +50% luck..." แล้วตกปลาตามปกติ การ์ดปลามีป้าย HOTSPOT
+  - [x] 3. เหวี่ยงลงวงเดิมอีกครั้ง → วงหายไป (ใช้ครบ 2 ครั้ง)
+  - [x] 4. รอ ~1 นาที: วงที่ไม่มีคนใช้หายเองแล้วโผล่ที่ใหม่
+  - [x] 5. เปิด AUTO ขณะหันไปทางวง: ไม่ได้โบนัส (ไม่มีข้อความ HOTSPOT)
+  - [x] 6. ได้ทั้ง PERFECT (มินิเกมไม่หลุดเลย) และ HOTSPOT ในครั้งเดียว: การ์ดปลาแสดงครบ 4 ป้าย kg / Manual / PERFECT / HOTSPOT
 
-### C27. Store ว่าง, spinner โหลด, แจ้งเตือนบนสุด, Enhance popup, Figma ให้ตรงเกม — 2026-11-20  `โค้ดเสร็จ รอทดสอบ`
+### C27. Store ว่าง, spinner โหลด, แจ้งเตือนบนสุด, Enhance popup, Figma ให้ตรงเกม — 2026-11-20  `ทดสอบผ่าน`
 - Store ว่าง: เจอ ScreenGui "Store" (และ "QuestsGui") ค้างอยู่ใน StarterGui จากการทดสอบในโหมดแก้ไข (โค้ดเดิม fallback ไป StarterGui เมื่อไม่มี PlayerGui) → ลบแล้ว + StoreScreen/QuestsScreen สร้างใน PlayerGui เท่านั้น; Render แต่ละแท็บอยู่ใน pcall ถ้าพังจะขึ้นข้อความ + warn `[Store]` ใน Output แทนหน้าว่าง
 - Store: เอาฉากดำด้านหลังออก
 - Spinner โหลด (`New.Spinner`): Store ตอนยังไม่มีข้อมูลเซฟ, ปุ่ม Robux หมุนจนได้ราคาจริงจาก Roblox, รูปที่ยังโหลดไม่เสร็จ (skeleton) มี spinner เทาตรงกลาง
@@ -1083,17 +1082,17 @@
 - Aquarium: ปุ่มยืนยัน "Return to Bag" เดิมเป็นสีเขียวเพราะ `T.Coral` ไม่มีใน Theme → เปลี่ยนเป็นสีส้ม (Accent)
 - Figma: Aquarium ลบปุ่ม X บนการ์ดปลา + เพิ่มจอ "แตะปลา → Modal Return to Bag" + ปุ่ม Expand ขนาดตามเกม; ลบ "Screen C14/C18 · Inventory: put in tank + hot fish" และ "07 · Auras"; Enhance popup ลบแถว Materials (ยังไม่มีในเกม); 10 Notifications ระบุว่าอยู่บนสุด; Store section เพิ่ม "Loading states (spinner)" (สคริปต์ `docs/figma/aquarium_sync.py`, `loading_spinner.py`, ops 28-31)
 - Figma (ตรวจทั้งไฟล์เทียบกับเกม): ลบจอที่เกมแทนที่ไปแล้ว 08 Aura Roll Result, 12 Main Menu (3x3 เก่า), 13 Inventory (เก่า), Reel Slot G1-G5 (เก็บเฟรม Components ไว้), E1 หน้ากาชาเก่า (เก็บ E1b Milestones), C17 Auras with stars; แก้ของค้างจาก C25 ใน 00/03/04/Economy 1 (ไม่มี CAST/DEPTH กลางจอ, Actions มี Depth Stepper, เมนูข้าง 4 ปุ่ม, ป้าย Streak กลางล่าง) — `docs/figma/c25_leftovers.py`
-- Figma ที่ยังไม่ได้แก้ (รอคุณตัดสินใจ / งานต่อ):
+- Figma ที่อัปเดตและสรุปแล้ว:
   - [x] ดีไซน์ที่เกมยังไม่มี → ลบจาก Figma แล้ว (คุณเลือก): แท็บ Materials x3 + การ์ด Material, ปุ่ม Lock ปลา x2, ช่อง "Get More" x3, Boost ใต้เหรียญ + แผ่น countdown rings, การ์ดปลาแบบ economy, Sell All แบบแยกรายการ, popup Enhance MAX, จอ Shop with Enhance (ops 34); ไอคอนกุญแจบนช่อง Modifier ของคันเบ็ดและออร่าที่ยังไม่มี ยังเก็บไว้เพราะเกมมี
-  - [ ] อัปเดตให้ตรงเกม: E0 Events (Naga Tide 30 MIN เปิดแล้ว, Daily Login DAILY เปิดแล้ว, ข้อความ Altar "Legendary every 100, Mythic at 300"), 17 Character (ปุ่ม SKILLS + สเตตัส 5 แถว), 18 Inventory (ปุ่ม AURA DEX), Economy 1 (ชิป Star Tokens, อัตรา Pearls เป็น /s), Economy 2 Put in Tank (แถบบน "< Tank" + CONFIRM(N), MAX/CLR ต่อการ์ด, ไม่มี Quantity modal), ข้อความโน้ต G6 / In-Game Workspace ที่ล้าสมัย
-- [ ] จอที่ยังรอแบบสุดท้าย: Daily Login ปฏิทิน (มี 6 แบบให้เลือกใน C23), Skills, Settings/Credits, Tide Event HUD
+  - [x] อัปเดตให้ตรงเกม: E0 Events (Naga Tide 30 MIN เปิดแล้ว, Daily Login DAILY เปิดแล้ว, ข้อความ Altar "Legendary every 100, Mythic at 300"), 17 Character (ปุ่ม SKILLS + สเตตัส 5 แถว), 18 Inventory (ปุ่ม AURA DEX), Economy 1 (ชิป Star Tokens, อัตรา Pearls เป็น /s), Economy 2 Put in Tank (แถบบน "< Tank" + CONFIRM(N), MAX/CLR ต่อการ์ด, ไม่มี Quantity modal), ข้อความโน้ต G6 / In-Game Workspace ที่ล้าสมัย
+- [x] จอที่สรุปแบบแล้ว: Daily Login ปฏิทิน (มี 6 แบบให้เลือกใน C23), Skills, Settings/Credits, Tide Event HUD
 - ทดสอบ (คุณ):
-  - [ ] 1. Ctrl+S → Play → Main Menu → Store: เห็นการ์ด Passes 4 ใบ, ไม่มีฉากดำด้านหลัง; สลับแท็บ Gems/Boosts/Packs มีรายการครบ; ปุ่มราคาอาจหมุนแวบหนึ่งก่อนขึ้นราคา
-  - [ ] 2. ถ้า Store ยังว่าง: ดู Output หาบรรทัด `[Store] ... tab failed:` แล้วส่งมา
-  - [ ] 3. เปิด Store หรือหน้าต่างใดก็ได้ แล้วกด SELL ALL / ทำอะไรที่มีแจ้งเตือน: ข้อความแจ้งเตือนอยู่เหนือหน้าต่าง ไม่โดนบัง
-  - [ ] 4. กระเป๋า → คันเบ็ดที่มี → ENHANCE: ขึ้น popup Enhance (รูป, +N > +N+1, สเตตัสก่อน/หลัง, ราคา); Cancel = ไม่เสียเงิน; กดปุ่มราคา = อัปเลเวล
-  - [ ] 5. Aquarium → แตะปลาในบ่อ: Modal "Return to Bag" ปุ่มเป็นสีส้ม
-  - [ ] 6. รูปที่โหลดช้า (เช่นเปิด Fishdex ครั้งแรก): เห็นวงหมุนเทาบนช่องรูประหว่างโหลด
+  - [x] 1. Ctrl+S → Play → Main Menu → Store: เห็นการ์ด Passes 4 ใบ, ไม่มีฉากดำด้านหลัง; สลับแท็บ Gems/Boosts/Packs มีรายการครบ; ปุ่มราคาอาจหมุนแวบหนึ่งก่อนขึ้นราคา
+  - [x] 2. ถ้า Store ยังว่าง: ดู Output หาบรรทัด `[Store] ... tab failed:` แล้วส่งมา
+  - [x] 3. เปิด Store หรือหน้าต่างใดก็ได้ แล้วกด SELL ALL / ทำอะไรที่มีแจ้งเตือน: ข้อความแจ้งเตือนอยู่เหนือหน้าต่าง ไม่โดนบัง
+  - [x] 4. กระเป๋า → คันเบ็ดที่มี → ENHANCE: ขึ้น popup Enhance (รูป, +N > +N+1, สเตตัสก่อน/หลัง, ราคา); Cancel = ไม่เสียเงิน; กดปุ่มราคา = อัปเลเวล
+  - [x] 5. Aquarium → แตะปลาในบ่อ: Modal "Return to Bag" ปุ่มเป็นสีส้ม
+  - [x] 6. รูปที่โหลดช้า (เช่นเปิด Fishdex ครั้งแรก): เห็นวงหมุนเทาบนช่องรูประหว่างโหลด
 
 ### C28. Window core + "!" บนหัว — 2026-11-20  `ทดสอบผ่าน (QA)`
 - `UI/Window.luau` มี `Window.Shell` = แกนกลางของหน้าต่างที่สร้างด้วยโค้ด: ScreenGui ใน PlayerGui เท่านั้น, กรอบ + หัวข้อ + ปุ่ม X มาตรฐาน, ย่อขยายตามจอ, เปิด/ปิด/ลงทะเบียน MenuManager, `SetLoading` (วงหมุน) — วิธีใช้ใน `docs/MENU_MANAGER.md`
@@ -1101,12 +1100,12 @@
 - เปลี่ยนหน้าตาเล็กน้อย: Credits ใช้ปุ่ม X มุมขวาบนแทนปุ่ม Close ด้านล่าง; Put in Tank/Skills ใช้หัวข้อ + ปุ่ม X ขนาดมาตรฐาน (หัวข้อย่อยเลื่อนลงนิดหน่อย); Quests ชื่อ ScreenGui เป็น "Quests"
 - ปลากินเบ็ด: "!" (รูป bite_alert + วงสีตามความหายาก) เด้งขึ้นเหนือหัวตัวละคร ไม่อยู่ในแถบกลางล่างแล้ว; Figma 02 HUD States อัปเดตโน้ต
 - ทดสอบ (คุณ):
-  - [ ] 1. Ctrl+S → Play → ตกปลาจนขึ้น "!": เห็น "!" เด้งเหนือหัว (มีวงสีตามความหายาก) ไม่มีแถบ "!" กลางล่าง; คลิกแล้วหายไปเข้ามินิเกม
-  - [ ] 2. เปิด Store / Aquarium / Mastery / Quests / Settings (Credits) ทีละอัน: หน้าต่างขึ้นถูก, ปุ่ม X ปิดได้, เปิดอันใหม่แล้วอันเก่าปิดเอง
-  - [ ] 3. Aquarium → + → Put in Tank ซ้อนบนบ่อ ปิดแล้วกลับบ่อ; Character → SKILLS เปิดได้
-  - [ ] 4. กระเป๋า → คันเบ็ด → ENHANCE: popup ขึ้นเหนือการ์ด, Cancel ปิดได้
+  - [x] 1. Ctrl+S → Play → ตกปลาจนขึ้น "!": เห็น "!" เด้งเหนือหัว (มีวงสีตามความหายาก) ไม่มีแถบ "!" กลางล่าง; คลิกแล้วหายไปเข้ามินิเกม
+  - [x] 2. เปิด Store / Aquarium / Mastery / Quests / Settings (Credits) ทีละอัน: หน้าต่างขึ้นถูก, ปุ่ม X ปิดได้, เปิดอันใหม่แล้วอันเก่าปิดเอง
+  - [x] 3. Aquarium → + → Put in Tank ซ้อนบนบ่อ ปิดแล้วกลับบ่อ; Character → SKILLS เปิดได้
+  - [x] 4. กระเป๋า → คันเบ็ด → ENHANCE: popup ขึ้นเหนือการ์ด, Cancel ปิดได้
 
-### C29. Item rework — ไอเทมแบบ UUID — 2026-11-22  `โค้ดเสร็จ รอทดสอบใน Play`
+### C29. Item rework — ไอเทมแบบ UUID — 2026-11-22  `ทดสอบผ่าน`
 แผน: `docs/ITEM_REWORK_PLAN.md`. ทุกอย่างอยู่ใน `profile.Bag` เป็นเรคคอร์ดธรรมดา (ไม่มี metatable) ที่มี `UUID`.
 - ปลา 1 ตัว = 1 ช่อง มีน้ำหนัก, Mutation, Tags (Manual/Auto/Perfect/Hotspot), มูลค่าของตัวเอง. หีบสมบัติยังรวมกองได้ (สูงสุด 5).
 - คันเบ็ดและสายเบ็ดเป็นไอเทมใน Bag มีระดับ Enhance รายชิ้นและใส่ Prefix กับ Suffix ได้ตาม C30/C34. ซื้อซ้ำได้ยกเว้นของเริ่มต้นที่ถือได้ชนิดละชิ้น คันและสายที่สวมอยู่กินช่องเหมือนชิ้นอื่น. Aura ไม่กินช่องและเหยื่อนับ 1 ช่องต่อชนิด
@@ -1117,31 +1116,31 @@
 - ระบบ Modifier และ Rod Fusion ดู C30/C31. การตรวจสิทธิ์เทรดอยู่ใน `Inventory.CanTrade` และสถานะ Bound. โปรไฟล์ใช้ตาราง plain เพื่อเซฟลง DataStore และส่งไป client
 - Done when: ปลาอยู่แยกช่อง อุปกรณ์รุ่นเดียวกันสวม ตีบวก และขายคืนแยกรายชิ้นได้ และการย้ายเซฟทดสอบ v5 ไป v6 เก็บ Coins กับ Level ตามกติกา
 - ทดสอบ (คุณ):
-  - [ ] 1. เข้าเกมด้วยสำเนาเซฟทดสอบ v5: ได้ Driftwood Rod และ Cotton Line ติดตัว ปลาเก่าถูกล้าง Coins กับ Level คงเดิม และ Output ไม่มี error จาก DataService/Registry
-  - [ ] 2. ตกปลา 3 ตัวชนิดเดียวกัน: Inventory ขึ้น 3 ช่อง (ไม่มีเลข x3), กดแต่ละช่องเห็นน้ำหนัก/ป้าย Manual/Perfect/Hotspot/Mutation ไม่เหมือนกัน
-  - [ ] 3. HUD ตัวนับกระเป๋า: นับทุกอย่าง ปลา คันเบ็ด สายเบ็ด (รวมที่สวมอยู่) หีบ และเหยื่อ (1 ช่องต่อชนิด); Aura ไม่นับ. เริ่มเกมใหม่ใช้ 2 ช่อง (คัน+สาย). กระเป๋าเริ่มต้นจุ 10
-  - [ ] 4. Shop > Rods: ซื้อ Bamboo Rod สองครั้ง: ครั้งแรกสวมให้เลย ครั้งที่สองเป็นของสำรองใน Bag (ชื่อแถวขึ้น x2) ไม่ขึ้น "Already owned"
-  - [ ] 5. เปิด Inventory > Rods แล้วขาย Bamboo Rod สำรอง: Coins เพิ่มตามราคาที่แสดงรวมโบนัส Mod และคันที่สวมอยู่ไม่มีปุ่ม SELL. เลือก Driftwood ที่ไม่ได้สวมแล้วตรวจราคาขาย 0 Coins
-  - [ ] 6. กด EQUIP คันสำรอง: คันเดิมกลับไปอยู่ใน Bag, Stats ใน HUD เปลี่ยนตามคัน; ENHANCE คันหนึ่ง +1 อีกคันต้องยังเป็น +0; ขายคัน +N ได้เงินเพิ่มตามที่ลงไป
-  - [ ] 7. Bag เต็ม: ซื้อคัน/สายเพิ่มต้องขึ้น "Bag full - sell something first"; Auto fishing หยุดเมื่อเต็ม; ปลาที่ตกตอนเต็มถูกปล่อย (Kept = false)
-  - [ ] 8. SELL ALL: ขายเฉพาะปลา คันเบ็ด/สาย/หีบยังอยู่; ขายปลาทีละตัวจากการ์ดได้ราคาตามตัวนั้น
-  - [ ] 9. Aquarium: PUT IN TANK 2 ตัว แล้ว Return to Bag: ปลากลับมาพร้อมน้ำหนัก/ป้ายเดิม (กดการ์ดดู), Pearls/วินาทีเท่าเดิม
-  - [ ] 10. เปิดหีบ OPEN / OPEN ALL ได้, หีบรวมกองได้สูงสุด 5 ต่อกอง
-  - [ ] 11. ออกเกมแล้วเข้าใหม่ (ต้องเปิด Studio Access to API Services): Bag, คันเบ็ดที่สวม, ระดับ Enhance, ปลาในตู้ยังอยู่ครบ
-  - [ ] 12. Dev: `give fish <ชื่อ> 3`, `equip Rods CoralRod`, `enhance Rods CoralRod 5`, `clearbag` ทำงาน (clearbag ไม่ลบของที่สวมอยู่)
-  - [ ] 15. Shop > Rods: Driftwood Rod ที่มีอยู่แล้วแสดง "x1 (worn)" และปุ่มเป็น Owned สีเทากดไม่ได้; Shop > Lines: Cotton Line เช่นกัน; ลอง Dev `give` ซ้ำ/ส่ง Buy ตรงๆ เซิร์ฟเวอร์ตอบ "You already have it"
-  - [ ] 16. ซื้อเหยื่อชนิดใหม่เมื่อกระเป๋าเต็ม: ขึ้น "Bag full - sell something first"; ซื้อเหยื่อชนิดที่มีอยู่แล้วเพิ่มได้ (ไม่เพิ่มช่อง). ตัวนับ HUD/Inventory เพิ่มขึ้น 1 ต่อเหยื่อ 1 ชนิด
-  - [ ] 17. Dev `revoke pass InfiniteBag` (มี pass จริง): ความจุกลับเป็นตามกระเป๋า, ออกแล้วเข้าใหม่ยังปิดอยู่; `grant pass InfiniteBag` เปิดกลับ
-  - [ ] 18. ขายคันเบ็ดที่ Enhance แล้ว (+N) หรือมี mod: ขึ้น Modal ถามก่อน บอก "+N" และ/หรือจำนวน mod กด Cancel ไม่ขาย กด Sell แล้วขายได้; คันเปล่า (ไม่มี +N ไม่มี mod) ขายได้เลยไม่ถาม; ส่ง remote SellItem โดยไม่ยืนยันเซิร์ฟเวอร์ปฏิเสธ "Confirm to sell"
-  - [ ] 19. Rod Fusion: ถ้าคัน Material มี +N หรือมี mod มากกว่า 1 บรรทัด กด FUSE แล้วขึ้น Modal ถามก่อนทำลายคัน Material
-  - [ ] 20. Enhance popup ตรง Figma C16 (3788:26967): ตัวอักษรในตารางขนาดเท่ากันทุกแถว (15), เครื่องหมาย > ธรรมดาระหว่างระดับ, หัวตาราง Before/After มีสีฟ้า/เขียว; มือถือแนวนอน: หน้าต่างย่อให้พอดีจอ ตารางเลื่อนได้เมื่อเกิน 3 แถว ปุ่ม Cancel/ราคากดง่าย
-  - [ ] 13. Shop ไม่มีแท็บ Bags แล้ว; Inventory > ปุ่ม UPGRADE ข้างตัวนับช่อง: popup แสดงไอคอนกระเป๋าใบถัดไป, "10 slots -> 16 slots", ladder 10/16/24/36/50, ปุ่ม UPGRADE ซื้อแล้วความจุเพิ่ม (ถ้าเหรียญไม่พอ/เลเวลไม่ถึง ปุ่มเป็นสีเทา)
-  - [ ] 14. HUD ฝั่งซ้ายมี 5 ทางลัด: Bag, Shop, Auras, Quests, Menu (Fishdex ย้ายไปอยู่ใน Menu). จุดแดง: Bag = มีของใหม่/กระเป๋าเต็ม, Auras = เจมพอสุ่ม, Quests = มีรางวัลรอรับ, Menu = Daily Login รับได้ (ถ้า Features.Quests ปิด ปุ่ม Quests ซ่อน). ทดสอบจอเล็ก/มือถือแนวนอน: แถวทางลัดต้องไม่ล้นจอ
-  - [ ] 15. popup Bag Upgrade มีแค่ 2 ปุ่ม (Cancel, Upgrade). สุดบันไดเหรียญหรือมี Infinite Bag pass: ปุ่มเป็นสีเทา MAX กดไม่ได้. Infinite Bag ซื้อที่ Store เท่านั้น
-  - [ ] 16. การ์ดไอเทม: ปุ่ม action ไม่เบียดกัน (1 ปุ่ม เต็มแถว, 2 ปุ่ม คู่กัน, 3 ปุ่ม สองปุ่มบน หนึ่งปุ่มเต็มแถวล่าง) ลองคันเบ็ด (Equip, Enhance, Sell) และปลา (Sell, Tank)
-  - [ ] 17. เปิดการ์ดคันเบ็ดและสายเบ็ด Uncommon ที่มี Mod: เห็นชิป Prefix และ Suffix ของชิ้นที่เลือก. เปิดการ์ดปลาแล้วตรวจว่าส่วน Mod ของอุปกรณ์ไม่แสดง
+  - [x] 1. เข้าเกมด้วยสำเนาเซฟทดสอบ v5: ได้ Driftwood Rod และ Cotton Line ติดตัว ปลาเก่าถูกล้าง Coins กับ Level คงเดิม และ Output ไม่มี error จาก DataService/Registry
+  - [x] 2. ตกปลา 3 ตัวชนิดเดียวกัน: Inventory ขึ้น 3 ช่อง (ไม่มีเลข x3), กดแต่ละช่องเห็นน้ำหนัก/ป้าย Manual/Perfect/Hotspot/Mutation ไม่เหมือนกัน
+  - [x] 3. HUD ตัวนับกระเป๋า: นับทุกอย่าง ปลา คันเบ็ด สายเบ็ด (รวมที่สวมอยู่) หีบ และเหยื่อ (1 ช่องต่อชนิด); Aura ไม่นับ. เริ่มเกมใหม่ใช้ 2 ช่อง (คัน+สาย). กระเป๋าเริ่มต้นจุ 10
+  - [x] 4. Shop > Rods: ซื้อ Bamboo Rod สองครั้ง: ครั้งแรกสวมให้เลย ครั้งที่สองเป็นของสำรองใน Bag (ชื่อแถวขึ้น x2) ไม่ขึ้น "Already owned"
+  - [x] 5. เปิด Inventory > Rods แล้วขาย Bamboo Rod สำรอง: Coins เพิ่มตามราคาที่แสดงรวมโบนัส Mod และคันที่สวมอยู่ไม่มีปุ่ม SELL. เลือก Driftwood ที่ไม่ได้สวมแล้วตรวจราคาขาย 0 Coins
+  - [x] 6. กด EQUIP คันสำรอง: คันเดิมกลับไปอยู่ใน Bag, Stats ใน HUD เปลี่ยนตามคัน; ENHANCE คันหนึ่ง +1 อีกคันต้องยังเป็น +0; ขายคัน +N ได้เงินเพิ่มตามที่ลงไป
+  - [x] 7. Bag เต็ม: ซื้อคัน/สายเพิ่มต้องขึ้น "Bag full - sell something first"; Auto fishing หยุดเมื่อเต็ม; ปลาที่ตกตอนเต็มถูกปล่อย (Kept = false)
+  - [x] 8. SELL ALL: ขายเฉพาะปลา คันเบ็ด/สาย/หีบยังอยู่; ขายปลาทีละตัวจากการ์ดได้ราคาตามตัวนั้น
+  - [x] 9. Aquarium: PUT IN TANK 2 ตัว แล้ว Return to Bag: ปลากลับมาพร้อมน้ำหนัก/ป้ายเดิม (กดการ์ดดู), Pearls/วินาทีเท่าเดิม
+  - [x] 10. เปิดหีบ OPEN / OPEN ALL ได้, หีบรวมกองได้สูงสุด 5 ต่อกอง
+  - [x] 11. ออกเกมแล้วเข้าใหม่ (ต้องเปิด Studio Access to API Services): Bag, คันเบ็ดที่สวม, ระดับ Enhance, ปลาในตู้ยังอยู่ครบ
+  - [x] 12. Dev: `give fish <ชื่อ> 3`, `equip Rods CoralRod`, `enhance Rods CoralRod 5`, `clearbag` ทำงาน (clearbag ไม่ลบของที่สวมอยู่)
+  - [x] 15. Shop > Rods: Driftwood Rod ที่มีอยู่แล้วแสดง "x1 (worn)" และปุ่มเป็น Owned สีเทากดไม่ได้; Shop > Lines: Cotton Line เช่นกัน; ลอง Dev `give` ซ้ำ/ส่ง Buy ตรงๆ เซิร์ฟเวอร์ตอบ "You already have it"
+  - [x] 16. ซื้อเหยื่อชนิดใหม่เมื่อกระเป๋าเต็ม: ขึ้น "Bag full - sell something first"; ซื้อเหยื่อชนิดที่มีอยู่แล้วเพิ่มได้ (ไม่เพิ่มช่อง). ตัวนับ HUD/Inventory เพิ่มขึ้น 1 ต่อเหยื่อ 1 ชนิด
+  - [x] 17. Dev `revoke pass InfiniteBag` (มี pass จริง): ความจุกลับเป็นตามกระเป๋า, ออกแล้วเข้าใหม่ยังปิดอยู่; `grant pass InfiniteBag` เปิดกลับ
+  - [x] 18. ขายคันเบ็ดที่ Enhance แล้ว (+N) หรือมี mod: ขึ้น Modal ถามก่อน บอก "+N" และ/หรือจำนวน mod กด Cancel ไม่ขาย กด Sell แล้วขายได้; คันเปล่า (ไม่มี +N ไม่มี mod) ขายได้เลยไม่ถาม; ส่ง remote SellItem โดยไม่ยืนยันเซิร์ฟเวอร์ปฏิเสธ "Confirm to sell"
+  - [x] 19. Rod Fusion: ถ้าคัน Material มี +N หรือมี mod มากกว่า 1 บรรทัด กด FUSE แล้วขึ้น Modal ถามก่อนทำลายคัน Material
+  - [x] 20. Enhance popup ตรง Figma C16 (3788:26967): ตัวอักษรในตารางขนาดเท่ากันทุกแถว (15), เครื่องหมาย > ธรรมดาระหว่างระดับ, หัวตาราง Before/After มีสีฟ้า/เขียว; มือถือแนวนอน: หน้าต่างย่อให้พอดีจอ ตารางเลื่อนได้เมื่อเกิน 3 แถว ปุ่ม Cancel/ราคากดง่าย
+  - [x] 13. Shop ไม่มีแท็บ Bags แล้ว; Inventory > ปุ่ม UPGRADE ข้างตัวนับช่อง: popup แสดงไอคอนกระเป๋าใบถัดไป, "10 slots -> 16 slots", ladder 10/16/24/36/50, ปุ่ม UPGRADE ซื้อแล้วความจุเพิ่ม (ถ้าเหรียญไม่พอ/เลเวลไม่ถึง ปุ่มเป็นสีเทา)
+  - [x] 14. HUD ฝั่งซ้ายมี 5 ทางลัด: Bag, Shop, Auras, Quests, Menu (Fishdex ย้ายไปอยู่ใน Menu). จุดแดง: Bag = มีของใหม่/กระเป๋าเต็ม, Auras = เจมพอสุ่ม, Quests = มีรางวัลรอรับ, Menu = Daily Login รับได้ (ถ้า Features.Quests ปิด ปุ่ม Quests ซ่อน). ทดสอบจอเล็ก/มือถือแนวนอน: แถวทางลัดต้องไม่ล้นจอ
+  - [x] 15. popup Bag Upgrade มีแค่ 2 ปุ่ม (Cancel, Upgrade). สุดบันไดเหรียญหรือมี Infinite Bag pass: ปุ่มเป็นสีเทา MAX กดไม่ได้. Infinite Bag ซื้อที่ Store เท่านั้น
+  - [x] 16. การ์ดไอเทม: ปุ่ม action ไม่เบียดกัน (1 ปุ่ม เต็มแถว, 2 ปุ่ม คู่กัน, 3 ปุ่ม สองปุ่มบน หนึ่งปุ่มเต็มแถวล่าง) ลองคันเบ็ด (Equip, Enhance, Sell) และปลา (Sell, Tank)
+  - [x] 17. เปิดการ์ดคันเบ็ดและสายเบ็ด Uncommon ที่มี Mod: เห็นชิป Prefix และ Suffix ของชิ้นที่เลือก. เปิดการ์ดปลาแล้วตรวจว่าส่วน Mod ของอุปกรณ์ไม่แสดง
 
-### C30. ระบบ Modifier เบ็ด (Prefix / Suffix) — 2026-11-22  `โค้ดเสร็จ รอทดสอบใน Play`
+### C30. ระบบ Modifier เบ็ด (Prefix / Suffix) — 2026-11-22  `ทดสอบผ่าน`
 สเปก: `docs/MODIFIER_SYSTEM_SPEC.md`, handoff: `docs/HANDOFF_MODIFIERS.md`.
 - `Config/ModifierDefs.luau` (แคตตาล็อก Prefix/Suffix + 5 Drop Profiles), `Items/ModifierRoll.luau` (สุ่มจำนวนช่อง, สุ่ม mod ตาม Rarity weight, ค่า -N ถึง +N), `Inventory.NewGear(cat, id, profile)` สุ่ม mod ให้เบ็ด Uncommon ขึ้นไป (ไม่สุ่มให้ของเริ่มต้นและของแจก), ร้านค้าใช้โปรไฟล์ Shop.
 - Cap Breaker: mod ที่ Stat ชื่อ `Max<Stat>` ขยายเพดานสเตตัส (`Stats.Compute`), เพดานเด็ดขาด Resilience 0.95, AutoSpeed 0.85, CatchBarSize 0.75.
@@ -1156,33 +1155,33 @@
   - [x] 3. ดู Base pick cleared ว่าคันหลักเลือกได้ทั้งสองช่อง วัตถุดิบยังเลือก Lucky อยู่ และ FUSE เป็นสีจาง ดู No picks และ Suffix selected ประกอบ
   - [x] 4. ตรวจพรีวิว ค่าใช้จ่ายตัวอย่าง และคำเตือนว่าคันวัตถุดิบจะสลายก่อนปุ่ม FUSE
 - ทดสอบ (คุณ):
-  - [ ] 1. Studio Play, Dev: `give rods BambooRod BossRaid` ซ้ำหลายครั้ง: ข้อความตอบกลับบอก mod ที่สุ่มได้, Boss ต้องได้ Prefix 1-2 และ Suffix 1-2 ช่อง
-  - [ ] 2. เปิด Inventory > Rods > คันที่ได้: การ์ดแสดงชิป mod ถูกต้อง ค่าติดลบเป็นสีแดง ชื่อ Cap Breaker แสดงเช่น "+3% Max Catch Bar"
-  - [ ] 3. `give rods BambooRod QuestPure`: ได้ครบ 4 ช่อง ไม่มีค่าติดลบ และมี Cap Breaker อย่างน้อย 1 ช่อง
-  - [ ] 4. สวมคันที่มี Cap Breaker (เช่น Max Catch Bar) แล้วดู Stats ใน HUD/Character: เพดานสเตตัสขยายเกินเดิม (CatchBarSize เกิน 60% ได้ แต่ไม่เกิน 75%)
-  - [ ] 5. ซื้อ Bamboo Rod ใน Shop หลายครั้ง: บางคันมี mod บางคันไม่มี (Shop 50% ต่อช่อง) ไม่มีคันไหนเกิน 2 + 2 ช่อง
-  - [ ] 6. คันเริ่มต้น (Driftwood) และ Sweetheart Rod ไม่มี mod
-  - [ ] 7. ดรอปคันเบ็ดจากการตกปลา (ทดสอบโดยตั้ง `GameConfig.RodDrop.Chance = 1` ชั่วคราว): ตกปลาแล้วขึ้นข้อความ "You found a ... with N mods!" คันอยู่ใน Bag พร้อม mod; น้ำลึก 200m ขึ้นไปหรือจุดฟองใช้ตาราง DeepSea; Bag เต็มไม่ดรอป
-  - [ ] 8. เปิดหีบสมบัติหลายครั้ง (หรือ OPEN ALL): บางครั้งได้คันเบ็ดพร้อม mod; Bag เต็มจะถูกขายเป็น Coins และแจ้งในข้อความ
-  - [ ] 9. ขายคืนคันที่มี mod Rare ขึ้นไป: ได้มากกว่าคันเดียวกันที่ไม่มี mod (`GameConfig.Inventory.ModSellBonus`)
+  - [x] 1. Studio Play, Dev: `give rods BambooRod BossRaid` ซ้ำหลายครั้ง: ข้อความตอบกลับบอก mod ที่สุ่มได้, Boss ต้องได้ Prefix 1-2 และ Suffix 1-2 ช่อง
+  - [x] 2. เปิด Inventory > Rods > คันที่ได้: การ์ดแสดงชิป mod ถูกต้อง ค่าติดลบเป็นสีแดง ชื่อ Cap Breaker แสดงเช่น "+3% Max Catch Bar"
+  - [x] 3. `give rods BambooRod QuestPure`: ได้ครบ 4 ช่อง ไม่มีค่าติดลบ และมี Cap Breaker อย่างน้อย 1 ช่อง
+  - [x] 4. สวมคันที่มี Cap Breaker (เช่น Max Catch Bar) แล้วดู Stats ใน HUD/Character: เพดานสเตตัสขยายเกินเดิม (CatchBarSize เกิน 60% ได้ แต่ไม่เกิน 75%)
+  - [x] 5. ซื้อ Bamboo Rod ใน Shop หลายครั้ง: บางคันมี mod บางคันไม่มี (Shop 50% ต่อช่อง) ไม่มีคันไหนเกิน 2 + 2 ช่อง
+  - [x] 6. คันเริ่มต้น (Driftwood) และ Sweetheart Rod ไม่มี mod
+  - [x] 7. ดรอปคันเบ็ดจากการตกปลา (ทดสอบโดยตั้ง `GameConfig.RodDrop.Chance = 1` ชั่วคราว): ตกปลาแล้วขึ้นข้อความ "You found a ... with N mods!" คันอยู่ใน Bag พร้อม mod; น้ำลึก 200m ขึ้นไปหรือจุดฟองใช้ตาราง DeepSea; Bag เต็มไม่ดรอป
+  - [x] 8. เปิดหีบสมบัติหลายครั้ง (หรือ OPEN ALL): บางครั้งได้คันเบ็ดพร้อม mod; Bag เต็มจะถูกขายเป็น Coins และแจ้งในข้อความ
+  - [x] 9. ขายคืนคันที่มี mod Rare ขึ้นไป: ได้มากกว่าคันเดียวกันที่ไม่มี mod (`GameConfig.Inventory.ModSellBonus`)
 
-### C31. Rod Fusion — 2026-11-22  `โค้ดเสร็จ รอทดสอบใน Play`
+### C31. Rod Fusion — 2026-11-22  `ทดสอบผ่าน`
 ดีไซน์: Figma 3782:24507, ค่าใช้จ่าย: `docs/ROD_FUSION_COST.md`.
 - เปิดจากบทสนทนา Old Marlin ปุ่ม "Fuse rods" (แทน "Just chatting"). หน้าต่าง 4 ขั้น: Base, Material, Type, Compare แล้วหน้าผลลัพธ์.
 - ย้าย mod 1 บรรทัดจากคัน Material (รุ่นเดียวกัน ไม่ได้สวม) ไปยังช่องของคัน Base. คัน Material หายเสมอ.
 - ค่าใช้จ่าย Coins และ Pearls ตาม `GameConfig.Fusion`. ล้มเหลว 5%: หายแค่คัน Material ไม่หักเงิน. เซิร์ฟเวอร์สุ่มและหักเอง (`FusionService`, remote `FuseRods`).
-- Guard ด้วย Gems (ติ๊กในขั้น Compare, การันตีสำเร็จ) และเซิร์ฟเวอร์ตรวจระยะจาก Old Marlin ทำแล้ว. ยังไม่ทำ: เทียบหน้าตาในเกมกับ Figma จริงใน Studio.
+- Guard ด้วย Gems (ติ๊กในขั้น Compare, การันตีสำเร็จ) และเซิร์ฟเวอร์ตรวจระยะจาก Old Marlin ทำแล้ว. เทียบหน้าตาในเกมกับ Figma จริงใน Studio แล้ว.
 - ทดสอบ (คุณ):
-  - [ ] 1. Studio Play: Dev `give rods BambooRod BossRaid` สองครั้ง, `give coins 1000000`, `give pearls 5000`
-  - [ ] 2. คุยกับ Old Marlin > Fuse rods: เห็นหน้าต่าง Rod Fusion มีปุ่ม X มาตรฐาน
-  - [ ] 3. ขั้น 1 เลือกคัน Base (ขอบเขียว) > NEXT. ขั้น 2 เห็นเฉพาะคันรุ่นเดียวกันที่ไม่ได้สวม (ขอบแดง) > NEXT
-  - [ ] 4. ขั้น 3 เลือก Prefix หรือ Suffix (ปุ่มจะเทาถ้าคัน Material ไม่มีชนิดนั้น)
-  - [ ] 5. ขั้น 4 เลือกช่อง Base 1 ช่อง และ mod Material 1 บรรทัด: ตัวเลือกอื่นฝั่งเดียวกันถูกล็อก กดซ้ำเพื่อยกเลิก; เห็น preview, Cost, กล่อง 5% FAIL; ปุ่ม FUSE เทาถ้าเงินไม่พอหรือเลือกไม่ครบ
-  - [ ] 6. กด FUSE: ส่วนใหญ่ขึ้น FUSED, mod ใหม่อยู่บนคัน Base, Coins/Pearls ลดตามที่แสดง, คัน Material หายจาก Bag
-  - [ ] 7. ทดลองหลายครั้ง (หรือแก้ `FailChance` เป็น 1 ชั่วคราว): ขึ้น FUSION FAILED, ไม่หักเงิน, คัน Base ไม่เปลี่ยน, คัน Material หาย
-  - [ ] 8. ลองหลอม mod ที่ Base มี stat เดียวกันอยู่แล้วในอีกช่อง: preview แจ้งสีแดงและ FUSE กดไม่ได้
-  - [ ] 9. Mod Rare ขึ้นไป: มีกล่อง Guard (ไอคอนเจม + ราคา). ติ๊กแล้ว FUSE: สำเร็จเสมอ หักเจม, กล่อง 5% FAIL หายไป. เจมไม่พอ: ติ๊กไม่ได้
-  - [ ] 10. เดินออกไปไกลจาก Old Marlin (เกิน 40 studs) ขณะหน้าต่างเปิด แล้วกด FUSE: ขึ้นข้อความให้กลับไปหา Old Marlin
+  - [x] 1. Studio Play: Dev `give rods BambooRod BossRaid` สองครั้ง, `give coins 1000000`, `give pearls 5000`
+  - [x] 2. คุยกับ Old Marlin > Fuse rods: เห็นหน้าต่าง Rod Fusion มีปุ่ม X มาตรฐาน
+  - [x] 3. ขั้น 1 เลือกคัน Base (ขอบเขียว) > NEXT. ขั้น 2 เห็นเฉพาะคันรุ่นเดียวกันที่ไม่ได้สวม (ขอบแดง) > NEXT
+  - [x] 4. ขั้น 3 เลือก Prefix หรือ Suffix (ปุ่มจะเทาถ้าคัน Material ไม่มีชนิดนั้น)
+  - [x] 5. ขั้น 4 เลือกช่อง Base 1 ช่อง และ mod Material 1 บรรทัด: ตัวเลือกอื่นฝั่งเดียวกันถูกล็อก กดซ้ำเพื่อยกเลิก; เห็น preview, Cost, กล่อง 5% FAIL; ปุ่ม FUSE เทาถ้าเงินไม่พอหรือเลือกไม่ครบ
+  - [x] 6. กด FUSE: ส่วนใหญ่ขึ้น FUSED, mod ใหม่อยู่บนคัน Base, Coins/Pearls ลดตามที่แสดง, คัน Material หายจาก Bag
+  - [x] 7. ทดลองหลายครั้ง (หรือแก้ `FailChance` เป็น 1 ชั่วคราว): ขึ้น FUSION FAILED, ไม่หักเงิน, คัน Base ไม่เปลี่ยน, คัน Material หาย
+  - [x] 8. ลองหลอม mod ที่ Base มี stat เดียวกันอยู่แล้วในอีกช่อง: preview แจ้งสีแดงและ FUSE กดไม่ได้
+  - [x] 9. Mod Rare ขึ้นไป: มีกล่อง Guard (ไอคอนเจม + ราคา). ติ๊กแล้ว FUSE: สำเร็จเสมอ หักเจม, กล่อง 5% FAIL หายไป. เจมไม่พอ: ติ๊กไม่ได้
+  - [x] 10. เดินออกไปไกลจาก Old Marlin (เกิน 40 studs) ขณะหน้าต่างเปิด แล้วกด FUSE: ขึ้นข้อความให้กลับไปหา Old Marlin
 
 ### C35. Stats Codex — 2026-11-22
 
@@ -1197,22 +1196,22 @@
   - [x] 1. เปิด Main Menu แล้วกด Stats Codex หน้าหลักปิดและหน้าต่าง Codex เปิด
   - [x] 2. ค้น `Auto Wait` ตรวจว่าเจอ Stat และ Cap Breaker จากนั้นเข้า Rod Mods แล้วค้น `Brisk` ตรวจว่าคำอธิบายตรงกับรายการ
   - [x] 3. ค้น `Golden` ตรวจตัวคูณ 3x พิมพ์คำที่ไม่มีผลแล้วตรวจข้อความ และล้างคำค้นเพื่อให้รายการกลับมา
-  - [ ] 4. เปิด Codex ใน Device Emulator แนวตั้งแล้วเลือกผลค้นหา: เห็นคำอธิบายเต็มและกด Back กลับมายังผลค้นหาเดิมได้
+  - [x] 4. เปิด Codex ใน Device Emulator แนวตั้งแล้วเลือกผลค้นหา: เห็นคำอธิบายเต็มและกด Back กลับมายังผลค้นหาเดิมได้
   - [x] 5. ตรวจขนาดและตำแหน่งของ X แล้วเลื่อนรายการและคำอธิบายถึงท้ายสุดใน Studio ทดสอบคำอธิบายยาวด้วยหน้าต่างที่ลดความสูง
 
-### C32. Responsive menu และการค้นหาไอเทมใหม่ใน Inventory — 2026-11-23  `โค้ดเสร็จ รอทดสอบใน Play`
+### C32. Responsive menu และการค้นหาไอเทมใหม่ใน Inventory — 2026-11-23  `ทดสอบผ่าน`
 แผน: `docs/RESPONSIVE_MENU_PLAN.md`. ตรวจ Safe Area รายหน้าตามเฟส 4 ด้วย Device Emulator.
 - Inventory: Sort เริ่มต้นเป็น Newest (ของใหม่ขึ้นก่อน), ปุ่ม "NEW n" ลอยบนกริด กดแล้วเลื่อนไปไอเทมใหม่ชิ้นแรก.
 - ItemDetail: จอกว้างน้อยกว่า 900 หรือสูงน้อยกว่า 480 (มือถือ) การ์ดอยู่กลางจอและแตะนอกการ์ดเพื่อปิด; จอใหญ่ยังวางข้างสล็อตเหมือนเดิม.
 - Done when: เปิดเมนูครั้งแรกพอดีจอ ปุ่ม NEW พาไปยังไอเทมใหม่ และ Item Detail มีปุ่มที่กดได้บนจอเล็ก
 - ทดสอบ (คุณ):
-  - [ ] 1. ตกปลาแล้วเปิด Inventory ด้วย Sort Newest: ปลาที่เพิ่งตกอยู่บนสุดและปุ่ม NEW n แสดงเมื่อยังมีไอเทมที่ไม่ได้เปิดดู
-  - [ ] 2. เปลี่ยน Sort เป็น Value แล้วกด NEW n: กริดเลื่อนไปยังไอเทมใหม่ชิ้นแรก
-  - [ ] 3. เปิดการ์ดคันเบ็ดใน Device Emulator 844x390: การ์ดอยู่กลางจอ ปุ่มที่ใช้ได้กดได้ และการแตะด้านนอกปิดการ์ด. จอคอมแสดงการ์ดข้างสล็อต
-  - [ ] 4. เปิด Inventory, Daily Login, Enhance และ Rod Fusion ครั้งแรกบนมือถือ: หน้าต่างขึ้นพอดีจอทันทีและปุ่มปิดอยู่ในพื้นที่ที่กดได้
-  - [ ] 5. เลื่อน Inventory ที่มีอย่างน้อย 100 ชิ้นด้วยเซฟทดสอบ: เลื่อนได้ต่อเนื่องและรายการแสดงครบ
+  - [x] 1. ตกปลาแล้วเปิด Inventory ด้วย Sort Newest: ปลาที่เพิ่งตกอยู่บนสุดและปุ่ม NEW n แสดงเมื่อยังมีไอเทมที่ไม่ได้เปิดดู
+  - [x] 2. เปลี่ยน Sort เป็น Value แล้วกด NEW n: กริดเลื่อนไปยังไอเทมใหม่ชิ้นแรก
+  - [x] 3. เปิดการ์ดคันเบ็ดใน Device Emulator 844x390: การ์ดอยู่กลางจอ ปุ่มที่ใช้ได้กดได้ และการแตะด้านนอกปิดการ์ด. จอคอมแสดงการ์ดข้างสล็อต
+  - [x] 4. เปิด Inventory, Daily Login, Enhance และ Rod Fusion ครั้งแรกบนมือถือ: หน้าต่างขึ้นพอดีจอทันทีและปุ่มปิดอยู่ในพื้นที่ที่กดได้
+  - [x] 5. เลื่อน Inventory ที่มีอย่างน้อย 100 ชิ้นด้วยเซฟทดสอบ: เลื่อนได้ต่อเนื่องและรายการแสดงครบ
 
-### C33. Bake UI ทั้งหมด + ตรวจ responsive — 2026-11-23  `รอทดสอบ Upgrade Bag และป้ายสถานะตกปลาใน Device Emulator`
+### C33. Bake UI ทั้งหมด + ตรวจ responsive — 2026-11-23  `ไม่ผ่าน / ต้องแก้`
 - Bake หน้าจอทั้ง 18 หน้าลง StarterGui ด้วย `node tools/ui/bake.mjs <ชื่อ>` ทีละหน้า (ทั้งชุดเกินขีดจำกัด 200,000 ตัวอักษรของ Studio): AuraReel, CastPopup (ใหม่), Character, Components, DailyLogin, DevPanel, Dialogue, Events, GachaPage, HUD, Inventory, ItemDetail, MainMenu, Menus, Minigame, Modal, StarterPackModal, TideEvent. ไม่มีหน้าไหนถูก Locked.
 - ผลของ bake: หน้าเหล่านี้ตรงกับซอร์สล่าสุดแล้ว เช่น ปุ่มปิดและ overlay ของ Daily Login/Bag Upgrade, ขอบ popup Depth, ItemDetail (ไม่มี 3 socket ล็อก). ต้อง Save place (Ctrl+S) เพื่อเก็บ.
 - ข้อจำกัด: ผมดู Daily Login ใน Edit viewport ได้เฉพาะเลย์เอาต์ที่ bake (ขนาดเต็ม 680x480). การปรับตามจอ (3 โหมด) และ FitToScreen ทำงานตอนรันเท่านั้น จึงต้องตรวจใน Play หรือ Device Emulator.
@@ -1228,7 +1227,7 @@
 - วัดจริงใน Studio Play ที่จอ 749x323 (เทียบมือถือแนวนอน): เดิม Store/Aquarium/Mastery/Quests ถูกย่อเหลือ 0.45 อ่านไม่ออก. แก้แล้ว: `Window.Shell` บนจอเตี้ย (สูงใช้งานน้อยกว่า 520) ให้หน้าต่างสูงเท่าจอ หัวข้อและปุ่มปิดอยู่กับที่ เนื้อหาเลื่อนได้ ผลคือ scale ประมาณ 0.78 (เห็นภาพจริงแล้ว: Store อ่านง่าย), Quests ลดความสูงเป็น 500 (scale 0.55), Daily Login แก้การ์ดล้นแถวที่ 2 และป้ายทับข้อความ. ตรวจด้วยภาพแล้วผ่าน: Inventory (มี Highlights, TOP, UP), Store, Quests, Shop, Daily Login. ยังไม่ได้ดูภาพ: Character, Events, Fishdex, Auras, Skills, Mastery, Aquarium, Hub, Gacha, มินิเกม.
 - ตัวช่วยทดสอบ (เฉพาะใน Studio): `ReplicatedStorage.UITest` (BindableFunction) เรียก `:Invoke("Inventory")` เพื่อเปิดเมนูให้สคริปต์ทดสอบวัดขนาด (ชื่อที่รองรับ: Inventory, Character, Shop, Fishdex, Auras, Store, Aquarium, Mastery, Quests, Events, DailyLogin, Skills, Hub, Altar).
 
-### C34. ปรับ UI และระบบ รอบ 23 พ.ย. — 2026-11-23  `โค้ดเสร็จ รอทดสอบใน Play`
+### C34. ปรับ UI และระบบ รอบ 23 พ.ย. — 2026-11-23  `ทดสอบผ่าน`
 - Daily Login: ปุ่ม Daily บน HUD (`BtnDaily` ใต้ Stats) แสดงเฉพาะตอนยังไม่รับ check-in วันนี้ มีจุดแดง, รับแล้วซ่อน. Main Menu มี tile Daily (จุดแดงตอนยังไม่รับ). เอาการ์ด Daily ออกจากหน้า Events.
 - Store: ห้ามเป็น scroller. จอสั้นใช้หน้าต่างสูง 440 แล้วแบ่งหน้าด้วยปุ่ม < > (`StoreScreen paginate`). `Window.Shell` โหมดเลื่อนบนจอสั้นเปิดเฉพาะ `ScrollOnShort = true` (Aquarium, Mastery).
 - Item Card: ไม่ scroll แล้ว ย่อทั้งการ์ดให้พอดี (ไม่ต่ำกว่า 0.5) ถ้าต่ำกว่า 0.7 ซ่อน Desc และ Meta ก่อน. ส่วน Body เป็น Frame ธรรมดา (เดิม ScrollingFrame ตัดมุมช่องรูป).
@@ -1241,69 +1240,69 @@
 - Store Passes เป็นรายการ (Figma C6b node `3796:2876`): แถวสูง 88 (รูป ชื่อ สรรพคุณบรรทัดเดียว ปุ่มราคา/OWNED/COMING SOON ชิดขวา).
 - แก้บั๊กหน้าดำค้างหลังเปิดแล้วปิด Gacha ทันที: `GachaPageController.ensure` สร้างหน้าซ้ำ 2 ชุด (Init กับ Open เรียกพร้อมกัน) และ `MenuManager` เช็กพื้นดำตามสถานะจริงทุก 0.15 วินาที.
 - ทดสอบ (คุณ):
-  - [ ] 1. Daily: ยังไม่รับ: HUD มีปุ่ม Daily จุดแดง และ Main Menu มี tile Daily จุดแดง. กดรับแล้ว ปุ่มบน HUD หาย จุดใน Main Menu หาย.
-  - [ ] 2. จอมือถือแนวนอน: เปิด Store ทุกแท็บ ไม่มีแถบเลื่อน มีปุ่ม < > เปลี่ยนหน้าได้.
-  - [ ] 3. เปิด Item Card ของ Rod ที่มี mod ครบบนมือถือ: ไม่มีแถบเลื่อน อ่านออก ขอบช่องรูปมุมซ้ายบนไม่โดนตัด.
-  - [ ] 4. Enhance บนมือถือ: เป็น 2 คอลัมน์ ตารางเลื่อนได้และมีแถบ scroll for N more เมื่อมีหลายแถว.
-  - [ ] 5. เปิดเมนูเต็มหน้าต่างใดก็ได้: มีพื้นดำเต็มจอ ไม่เว้นขอบ/แถบบน.
-  - [ ] 6. Gacha: ปุ่ม X แดงมุมขวาบน กดแล้วกลับ ชิป Gems ไม่ชนปุ่ม.
-  - [ ] 7. ขาย Driftwood Rod ที่ไม่ได้สวม: ได้ 0 โคอิน ของหาย ในร้านปุ่มเป็น Owned ตอนมีอยู่.
-  - [ ] 8. `give Lines HempLine Shop` แล้วดูการ์ด: มีชิป Prefix/Suffix. สวมแล้วสเตตัสเพิ่ม. ขายแล้วได้เงินตามโบนัส mod.
+  - [x] 1. Daily: ยังไม่รับ: HUD มีปุ่ม Daily จุดแดง และ Main Menu มี tile Daily จุดแดง. กดรับแล้ว ปุ่มบน HUD หาย จุดใน Main Menu หาย.
+  - [x] 2. จอมือถือแนวนอน: เปิด Store ทุกแท็บ ไม่มีแถบเลื่อน มีปุ่ม < > เปลี่ยนหน้าได้.
+  - [x] 3. เปิด Item Card ของ Rod ที่มี mod ครบบนมือถือ: ไม่มีแถบเลื่อน อ่านออก ขอบช่องรูปมุมซ้ายบนไม่โดนตัด.
+  - [x] 4. Enhance บนมือถือ: เป็น 2 คอลัมน์ ตารางเลื่อนได้และมีแถบ scroll for N more เมื่อมีหลายแถว.
+  - [x] 5. เปิดเมนูเต็มหน้าต่างใดก็ได้: มีพื้นดำเต็มจอ ไม่เว้นขอบ/แถบบน.
+  - [x] 6. Gacha: ปุ่ม X แดงมุมขวาบน กดแล้วกลับ ชิป Gems ไม่ชนปุ่ม.
+  - [x] 7. ขาย Driftwood Rod ที่ไม่ได้สวม: ได้ 0 โคอิน ของหาย ในร้านปุ่มเป็น Owned ตอนมีอยู่.
+  - [x] 8. `give Lines HempLine Shop` แล้วดูการ์ด: มีชิป Prefix/Suffix. สวมแล้วสเตตัสเพิ่ม. ขายแล้วได้เงินตามโบนัส mod.
 
 ### C36. ภาพต้นทาง Aura VFX ชุดแรก
 
 - **สถานะ** ตรวจภาพต้นทางครบ 15 ชีต
 - **Done when** Tidal Bloom, Moonlit Ripple และ Nebula Koi มี PNG ขาวบนดำ 5 ชีตตามชื่อในพรอมป์ของแต่ละโฟลเดอร์
 - ทดสอบ:
-  - [ ] 1. เปิดไฟล์ `01` ถึง `05` ในแต่ละโฟลเดอร์ใต้ `assets/vfx/aura` แล้วเทียบชื่อกับพรอมป์ประจำออร่า
-  - [ ] 2. เปิด `01`, `02` และ `04` ตรวจว่ามี 16 เฟรมเรียงเป็น 4x4 และเปิด `05` ตรวจว่ามีรูปทรงครบ 4 ช่อง
-  - [ ] 3. วางภาพ `03` ต่อกันแนวนอนสองครั้งเพื่อตรวจว่าปลายแถบวนเข้าหากัน
+  - [x] 1. เปิดไฟล์ `01` ถึง `05` ในแต่ละโฟลเดอร์ใต้ `assets/vfx/aura` แล้วเทียบชื่อกับพรอมป์ประจำออร่า
+  - [x] 2. เปิด `01`, `02` และ `04` ตรวจว่ามี 16 เฟรมเรียงเป็น 4x4 และเปิด `05` ตรวจว่ามีรูปทรงครบ 4 ช่อง
+  - [x] 3. วางภาพ `03` ต่อกันแนวนอนสองครั้งเพื่อตรวจว่าปลายแถบวนเข้าหากัน
 
 ### C37. พรีวิว Aura VFX รอบตัวละคร
 
 - **สถานะ** เปิดไฟล์ HTML โดยตรงและทดสอบ Tier 1–3 ใน Chrome แล้ว
 - **Done when** Tidal Bloom, Moonlit Ripple และ Nebula Koi ใช้ภาพจากโฟลเดอร์ของตนเพื่อแสดงระลอกน้ำบนพื้น แกนหมอกหนึ่งอันลอยจากกลางเท้าและอนุภาครอบหุ่น และแถบออร่าครบวงรอบเอวที่ Tier 3
 - ทดสอบ:
-  - [ ] 1. เปิด `preview.html` ในแต่ละโฟลเดอร์ใต้ `assets/vfx/aura` แล้วสลับ Tier 1, 2 และ 3 ดูว่าแกนหมอกจาก `01_core` เต้นเป็นจังหวะและขึ้นตรงกลางหุ่นหนึ่งอันในทุก Tier
-  - [ ] 2. ที่ Tier 3 หมุนมุมกล้องให้เห็นแถบโคจรผ่านหน้าและหลังหุ่น โดย Nebula Koi เห็นปลาคาร์ปเคลื่อนไปตามสายน้ำ
-  - [ ] 3. ลากหรือกดปุ่มลูกศรเพื่อเปลี่ยนมุมมอง จากนั้นกดพักภาพและเล่นต่อ
+  - [x] 1. เปิด `preview.html` ในแต่ละโฟลเดอร์ใต้ `assets/vfx/aura` แล้วสลับ Tier 1, 2 และ 3 ดูว่าแกนหมอกจาก `01_core` เต้นเป็นจังหวะและขึ้นตรงกลางหุ่นหนึ่งอันในทุก Tier
+  - [x] 2. ที่ Tier 3 หมุนมุมกล้องให้เห็นแถบโคจรผ่านหน้าและหลังหุ่น โดย Nebula Koi เห็นปลาคาร์ปเคลื่อนไปตามสายน้ำ
+  - [x] 3. ลากหรือกดปุ่มลูกศรเพื่อเปลี่ยนมุมมอง จากนั้นกดพักภาพและเล่นต่อ
 
 ### C38. ทิศทางภาพและพรีวิว Aura VFX ก่อนเจนชีต
 
 - **สถานะ** ปรับพรอมป์ 75 ชีตและพรีวิวทั้ง 15 ออร่า
 - **Done when** แกน 01 นิ่งด้านขนาดและเฟดในลูป ระลอก 02 กับอนุภาค 05 แผ่จากกลางเท้า และ Tier 3 มีริ้วตามโคจรเพิ่มจากสายหลัก
 - ทดสอบ:
-  - [ ] 1. เปิด [พรีวิวรวม](../assets/vfx/aura/preview.html) และสลับจาก Sparkling Dew ไป Nebula Koi และ Celestial Leviathan เทียบขนาดระลอกและจำนวนริ้วใน Tier 3
-  - [ ] 2. เล่น Tidal Bloom, Moonlit Ripple และ Nebula Koi จนครบรอบ ดูแกน 01 เฟดและระลอกน้ำแผ่จนถึงขอบวง
-  - [ ] 3. เปิดลิงก์พรอมป์ของออร่าที่เลือก ตรวจบทบาทและชื่อไฟล์ของชีต 01–05 ตามทิศทางภาพก่อนเจน
+  - [x] 1. เปิด [พรีวิวรวม](../assets/vfx/aura/preview.html) และสลับจาก Sparkling Dew ไป Nebula Koi และ Celestial Leviathan เทียบขนาดระลอกและจำนวนริ้วใน Tier 3
+  - [x] 2. เล่น Tidal Bloom, Moonlit Ripple และ Nebula Koi จนครบรอบ ดูแกน 01 เฟดและระลอกน้ำแผ่จนถึงขอบวง
+  - [x] 3. เปิดลิงก์พรอมป์ของออร่าที่เลือก ตรวจบทบาทและชื่อไฟล์ของชีต 01–05 ตามทิศทางภาพก่อนเจน
 
 ### C39. Aura Particle Editor
 
 - **สถานะ** ใช้งานผ่าน Windows launcher และพรีวิวใน Chrome
 - **Done when** เปิดและเซฟ JSON ได้ แก้หรือทำสำเนาเลเยอร์ เปลี่ยนชีตจากแท็บ Sheet ปรับ Flipbook ส่งออกเฟรม กลับทิศลากกล้องแนวตั้ง เห็นการแก้ไฟล์ที่เปิดอยู่จากภายนอก และนำเลเยอร์พร้อม Asset ID เข้า Studio
 - ทดสอบ:
-  - [ ] 1. เปิด `build/aura-particle-editor/AuraParticleEditor.exe` แล้วเลือก Tidal Bloom ใน Examples
-  - [ ] 2. เลือก Fixed core plume กด Duplicate ปรับ Speed แล้วใช้ Save As บันทึกเป็นไฟล์ทดสอบ เปิดไฟล์นั้นแล้วตรวจว่าค่าที่แก้ยังอยู่
-  - [ ] 3. เปิด Sheet เลือกเฟรมและกด Export frame PNG ตรวจว่าภาพที่ส่งออกตรงกับช่องที่เลือก
-  - [ ] 4. รันคำสั่ง project add ตามคู่มือกับ JSON ทดสอบที่เปิดอยู่ ตรวจว่าเลเยอร์ใหม่ปรากฏในแอป
-  - [ ] 5. เลือก Core ที่ทำสำเนา เปิด Sheet แล้วกด Change sheet เลือก PNG ใหม่ ตรวจที่ Frame preview และดูว่า Rows, Columns และ FPS ตรงกับค่าก่อนเปลี่ยน
-  - [ ] 6. ลากบนฉากพรีวิวขึ้นและลง ตรวจว่ามุมกล้องหมุนสวนทิศกับบิลด์ก่อนหน้า จากนั้นกด Reset view
-  - [ ] 7. เปิด Local Plugin Aura Importer ในเพลสที่เชื่อม Rojo เลือก project.json ของ Tidal Bloom แล้วดูว่ารายการภาพกับ Aura ID ถูกต้อง
-  - [ ] 8. เลือก PNG ที่อ้างในรายการ เลือกเจ้าของภาพ แล้วกด Upload PNGs ดูสถานะ Linked และตรวจด้วยการเลือกไฟล์เดิมซ้ำ
-  - [ ] 9. กด Import aura ตรวจโมเดลใน ReplicatedStorage.AuraVFX แล้วสวมออร่าใน Play ดู Core, Flipbook รอบพื้น และ Ribbon
-  - [ ] 10. กลับโหมด Edit แล้วนำเข้า Aura ID เดิม ตรวจว่าอัปเดตโมเดลใบเดิมและ Undo ได้
+  - [x] 1. เปิด `build/aura-particle-editor/AuraParticleEditor.exe` แล้วเลือก Tidal Bloom ใน Examples
+  - [x] 2. เลือก Fixed core plume กด Duplicate ปรับ Speed แล้วใช้ Save As บันทึกเป็นไฟล์ทดสอบ เปิดไฟล์นั้นแล้วตรวจว่าค่าที่แก้ยังอยู่
+  - [x] 3. เปิด Sheet เลือกเฟรมและกด Export frame PNG ตรวจว่าภาพที่ส่งออกตรงกับช่องที่เลือก
+  - [x] 4. รันคำสั่ง project add ตามคู่มือกับ JSON ทดสอบที่เปิดอยู่ ตรวจว่าเลเยอร์ใหม่ปรากฏในแอป
+  - [x] 5. เลือก Core ที่ทำสำเนา เปิด Sheet แล้วกด Change sheet เลือก PNG ใหม่ ตรวจที่ Frame preview และดูว่า Rows, Columns และ FPS ตรงกับค่าก่อนเปลี่ยน
+  - [x] 6. ลากบนฉากพรีวิวขึ้นและลง ตรวจว่ามุมกล้องหมุนสวนทิศกับบิลด์ก่อนหน้า จากนั้นกด Reset view
+  - [x] 7. เปิด Local Plugin Aura Importer ในเพลสที่เชื่อม Rojo เลือก project.json ของ Tidal Bloom แล้วดูว่ารายการภาพกับ Aura ID ถูกต้อง
+  - [x] 8. เลือก PNG ที่อ้างในรายการ เลือกเจ้าของภาพ แล้วกด Upload PNGs ดูสถานะ Linked และตรวจด้วยการเลือกไฟล์เดิมซ้ำ
+  - [x] 9. กด Import aura ตรวจโมเดลใน ReplicatedStorage.AuraVFX แล้วสวมออร่าใน Play ดู Core, Flipbook รอบพื้น และ Ribbon
+  - [x] 10. กลับโหมด Edit แล้วนำเข้า Aura ID เดิม ตรวจว่าอัปเดตโมเดลใบเดิมและ Undo ได้
 
 ### C40. Patch Note Card แบบโพยกระดาษโทนอุ่น
 
 - สถานะ: ทดสอบใน Chrome แล้ว
 - Done when: หัวเรื่องเว้นระยะจากเนื้อหา โพยแต่ละหมวดติดเทปใสและใช้วงกลมโปร่งหน้ารายการ เลือกสี Tag จากชุดสำเร็จรูปได้รายหมวด สุ่มสติกเกอร์โดยเว้นเนื้อหา และบันทึกหรือคัดลอก PNG 2x ได้เมื่อเปิด HTML โดยตรง
 - ทดสอบ:
-  - [ ] 1. เปิด `tools/patch-note-card/index.html` แล้วดูหัวเรื่องบนหน้ากระดาษ โพยติดเทปใส และวงกลมโปร่งหน้ารายการ
-  - [ ] 2. กดแก้ไขเนื้อหา เลือกสีจากชุดสี Tag ของ `C29 / SAVE V6` แล้วตรวจว่าเปลี่ยนเฉพาะหมวดนั้น
-  - [ ] 3. ลองสุ่มใน Portrait, Banner และ Square ดูว่าสติกเกอร์เปลี่ยนขนาดและตำแหน่งโดยไม่บังข้อความ แล้วใส่ Seed เดิมเพื่อเรียกแบบเดิม
-  - [ ] 4. กดบันทึก PNG (2x) แล้วกดคัดลอกรูปเพื่อนำไปวางในแอปที่รับภาพ ตรวจว่าสี Tag และสติกเกอร์ตรงกับพรีวิว
+  - [x] 1. เปิด `tools/patch-note-card/index.html` แล้วดูหัวเรื่องบนหน้ากระดาษ โพยติดเทปใส และวงกลมโปร่งหน้ารายการ
+  - [x] 2. กดแก้ไขเนื้อหา เลือกสีจากชุดสี Tag ของ `C29 / SAVE V6` แล้วตรวจว่าเปลี่ยนเฉพาะหมวดนั้น
+  - [x] 3. ลองสุ่มใน Portrait, Banner และ Square ดูว่าสติกเกอร์เปลี่ยนขนาดและตำแหน่งโดยไม่บังข้อความ แล้วใส่ Seed เดิมเพื่อเรียกแบบเดิม
+  - [x] 4. กดบันทึก PNG (2x) แล้วกดคัดลอกรูปเพื่อนำไปวางในแอปที่รับภาพ ตรวจว่าสี Tag และสติกเกอร์ตรงกับพรีวิว
 
-### C41. Trade ระหว่างผู้เล่นและ Bound — 2026-11-23  `โค้ดเสร็จ รอทดสอบ Play สองผู้เล่น`
+### C41. Trade ระหว่างผู้เล่นและ Bound — 2026-11-23  `ทดสอบผ่าน`
 - [แบบล่าสุด C41 Trade Grid ใน Figma](https://www.figma.com/design/givb0hmQYmmaOy7p7DGtb2/Ro-Offline?node-id=3807-1398) มี 6 เฟรม ใช้ Your inventory พื้นครีม 4 คอลัมน์ × 3 แถวที่มองเห็น และ Offer พื้นทรายอ่อน 2 ช่องต่อฝั่ง ใช้ช่องว่าง Bubbles และถอดป้าย Total ออกจากแบบแล้ว
 - Item Card เดิมแสดง Add to Trade สีฟ้าสำหรับของที่เพิ่มได้ ของที่สวมมีรูปล็อกและปุ่มเทา การ์ดของอีกฝ่ายเปิดอ่านรายละเอียดอย่างเดียว ปุ่ม Confirm อยู่ท้ายหน้าต่าง Trade และ X อยู่มุมบน
 - ข้อกำหนดตอนนำแบบลง Roblox ใช้ UI/VirtualGrid กับ ScrollingFrame แนวตั้ง 4 คอลัมน์ แสดง 3 แถวพร้อมแถวเผื่อหนึ่งแถวและใช้เซลล์ซ้ำ เติมช่องว่างให้ครบพื้นที่ที่เห็นหรือแถวสุดท้าย อ่านไอเทมของเซลล์ผ่าน ItemOf และให้เซิร์ฟเวอร์ตรวจเพดาน 2 ชิ้นต่อฝั่งตอนรับ Add
@@ -1318,36 +1317,40 @@
 - ทดสอบ:
   - [x] รัน `luau tools/test-trade.luau` จำลองเซฟสำเร็จฝั่งเดียว ACK หาย การเข้าใหม่ และการหลุดระหว่างเซฟ ตรวจ UUID จำนวนเหยื่อ และภาษี
   - [x] ตรวจใน Studio Edit ว่าเลือกของ Bound ไม่ได้ ใบอนุญาต ภาษี และความจุกระเป๋าถูกตรวจ และ Main Menu มีปุ่ม Trade จากนั้นเรียก TradeAction และ DataService กับ DataStore จำลอง ให้ผู้รับเซฟไม่สำเร็จแล้วเข้าใหม่สองครั้ง ตรวจว่าของและภาษีถูกบันทึกครั้งเดียว
-  - [ ] ในสำเนาเกมทดสอบ เปิด Studio แบบ Server & Clients จำนวน 2 คน ให้คนแรกใช้ `grant pass TradeLicense` จาก Dev Panel และให้ทั้งสองคนมีปลาและ Coins สำหรับทดสอบ
-  - [ ] คนแรกเปิด Main Menu > Trade > INVITE คนที่สองกด ACCEPT ใส่ของรวมกัน 4 ชิ้น ลองใส่ชิ้นที่ 5 ยืนยันหนึ่งฝั่งแล้วเปลี่ยนข้อเสนอ ตรวจว่าทั้งคู่ต้องยืนยันใหม่
-  - [ ] ยืนยันทั้งสองฝั่ง ตรวจ UUID / Mod / Mutation และ Coins จากทั้งคู่ แล้วออกเข้าใหม่ ตรวจว่าของอยู่กับผู้รับและภาษีถูกหักครั้งเดียว
-  - [ ] ซื้อ Worm หรือ Shrimp ตอนยังไม่ได้สวม ตรวจว่าเพิ่มเข้า Trade ได้ จากนั้นสวมแล้วถอด ตรวจว่ากองเดิมขึ้น Bound และเสนอไม่ได้ ลองซ้ำกับเหยื่อ Daily Login และคันเบ็ดของ Starter Pack
+  - [x] ในสำเนาเกมทดสอบ เปิด Studio แบบ Server & Clients จำนวน 2 คน ให้คนแรกใช้ `grant pass TradeLicense` จาก Dev Panel และให้ทั้งสองคนมีปลาและ Coins สำหรับทดสอบ
+  - [x] คนแรกเปิด Main Menu > Trade > INVITE คนที่สองกด ACCEPT ใส่ของรวมกัน 4 ชิ้น ลองใส่ชิ้นที่ 5 ยืนยันหนึ่งฝั่งแล้วเปลี่ยนข้อเสนอ ตรวจว่าทั้งคู่ต้องยืนยันใหม่
+  - [x] ยืนยันทั้งสองฝั่ง ตรวจ UUID / Mod / Mutation และ Coins จากทั้งคู่ แล้วออกเข้าใหม่ ตรวจว่าของอยู่กับผู้รับและภาษีถูกหักครั้งเดียว
+  - [x] ซื้อ Worm หรือ Shrimp ตอนยังไม่ได้สวม ตรวจว่าเพิ่มเข้า Trade ได้ จากนั้นสวมแล้วถอด ตรวจว่ากองเดิมขึ้น Bound และเสนอไม่ได้ ลองซ้ำกับเหยื่อ Daily Login และคันเบ็ดของ Starter Pack
   - [x] ตรวจใน Studio Edit ว่าการ์ด Trade License อยู่หน้าท้ายของ Store > Passes ทั้งเดสก์ท็อปและจอสั้น แสดงราคาจาก Marketplace จำลอง ส่งคีย์ซื้อถูกต้อง และแสดง OWNED เมื่อมีพาส
 - ผูก Trade License กับ PassId 2092411225 แล้ว Roblox แสดงสถานะเปิดขาย และ Studio อ่านราคา 75 Robux ก่อนเปิดให้ใช้ Trade ในเกมจริง ให้ Publish โค้ดล่าสุดและปิดเซิร์ฟเวอร์รุ่นเก่าที่อาจเขียนเซฟทับรายการเทรด
 
 
 ## เว็บ QA (`qa/`)
 
-**สถานะ** ◐ โค้ดเสร็จ ทดสอบ UI โหมดในเครื่องแล้ว รอตั้งค่า Firebase + เปิด GitHub Pages
+**สถานะ** เสร็จสิ้นแล้ว (อัปเดต 2026-11-25)
 
 **Done when** ทีม QA เปิดเว็บบน GitHub Pages, เข้าสู่ระบบด้วย Google, ตรวจงานตามขั้นตอนใน "วิธีตรวจ", กดผ่าน/ไม่ผ่าน, แจ้ง Ticket ได้ และ agent ดึงผลด้วย `node qa/tools/pull.mjs`
 
 **ทดสอบ**
 
-- [ ] 1. ทำตาม `qa/README.md` หัวข้อ "ตั้งค่าครั้งแรก" (Firebase, rules, config.json, Pages)
-- [ ] 2. เปิดเว็บ > เข้าสู่ระบบด้วยอีเมลที่อยู่ใน rules > เปิดงานใดก็ได้ > กด "ผ่าน" > รีเฟรชหน้า ผลยังอยู่
-- [ ] 3. ลองกด "ไม่ผ่าน" โดยไม่เขียนความเห็น ต้องมีข้อความเตือน
-- [ ] 4. แจ้ง Ticket หนึ่งอัน > `node qa/tools/pull.mjs` ต้องเห็น Ticket นั้น
-- [ ] 5. `node qa/tools/fix.mjs <ticketId> "แก้แล้ว"` > commit/push > เว็บต้องขึ้น "dev แก้แล้ว รอตรวจซ้ำ"
-- [ ] 6. แก้ข้อความ `ทดสอบ` ของงานที่ QA ผ่านแล้วใน TASKS.md > `node qa/tools/build.mjs` > งานนั้นต้องมีป้าย "แก้หลังตรวจ"
-- [ ] 7. Publish `qa/firestore.rules` ใหม่ (มี `ideas`) > ล็อกอิน > ไปหน้า "ข้อเสนอ / ไอเดีย" > โพสต์ไอเดีย > โหวต, คอมเมนต์, เปลี่ยนสถานะ, แก้ไข ทุกอย่างต้องขึ้นเวลาในประวัติ > รีเฟรชหน้าแล้วข้อมูลยังอยู่
-- [ ] 8. สร้าง service account key ของ agent ตาม `qa/README.md` > `node qa/tools/post.mjs --title "ทดสอบ" --body "ทดสอบโพสต์จาก agent"` > โพสต์ต้องขึ้นในเว็บ และ `node qa/tools/pull.mjs` ต้องเห็นในสรุปไอเดีย
+- [x] 1. ทำตาม `qa/README.md` หัวข้อ "ตั้งค่าครั้งแรก" (Firebase, rules, config.json, Pages)
+- [x] 2. เปิดเว็บ > เข้าสู่ระบบด้วยอีเมลที่อยู่ใน rules > เปิดงานใดก็ได้ > กด "ผ่าน" > รีเฟรชหน้า ผลยังอยู่
+- [x] 3. ลองกด "ไม่ผ่าน" โดยไม่เขียนความเห็น ต้องมีข้อความเตือน
+- [x] 4. แจ้ง Ticket หนึ่งอัน > `node qa/tools/pull.mjs` ต้องเห็น Ticket นั้น
+- [x] 5. `node qa/tools/fix.mjs <ticketId> "แก้แล้ว"` > commit/push > เว็บต้องขึ้น "dev แก้แล้ว รอตรวจซ้ำ"
+- [x] 6. แก้ข้อความ `ทดสอบ` ของงานที่ QA ผ่านแล้วใน TASKS.md > `node qa/tools/build.mjs` > งานนั้นต้องมีป้าย "แก้หลังตรวจ"
+- [x] 7. Publish `qa/firestore.rules` ใหม่ (มี `ideas`) > ล็อกอิน > ไปหน้า "ข้อเสนอ / ไอเดีย" > โพสต์ไอเดีย > โหวต, คอมเมนต์, เปลี่ยนสถานะ, แก้ไข ทุกอย่างต้องขึ้นเวลาในประวัติ > รีเฟรชหน้าแล้วข้อมูลยังอยู่
+- [x] 8. สร้าง service account key ของ agent ตาม `qa/README.md` > `node qa/tools/post.mjs --title "ทดสอบ" --body "ทดสอบโพสต์จาก agent"` > โพสต์ต้องขึ้นในเว็บ และ `node qa/tools/pull.mjs` ต้องเห็นในสรุปไอเดีย
 - [x] ทดสอบโหมดในเครื่อง (ไม่มี config): ตาราง 69 งาน, เปิดงานเห็นขั้นตอน, ผ่าน/ไม่ผ่าน, สร้าง/ปิด Ticket, หน้าระบบเกมและประวัติ
 
 ## บันทึกการอัปเดต
+- 2026-11-25T02:15:07+07:00 — อัปเดตสถานะใน `docs/TASKS.md` ตามผลการตรวจจากผู้ใช้: ติ๊กผ่าน/เสร็จแล้ว (A9, A17, C5, C6 ส่วนหลัก, C8, C10, C11, C12, C13, C14, C16, C17, C18, C19, C20, C21, C22, C23, C24 M1-M6, C25, C27, C29, C30, C31, C32, C34, C35, C41, เว็บ QA และข้อย่อย A3/A8/A18/B7/B11/C7/C36-C40/Economy UI); บันทึกว่า `C33` ไม่ผ่าน/ต้องแก้; คิวงานที่เลือกทำต่อคือ `A15`, `C6-Web (Extra Cast)`, `C9`, `UPD-24`, `C3`, `C4`, `C15`
 - 2026-11-24 — A17 รอบ 2: ลองบังคับปุ่ม X ให้ 44px จริงบนจอ (GrowToTouch) แต่ทำให้ปุ่มยื่นเกินหน้าต่างและไม่สวย จึง **ย้อนกลับแล้ว** ปุ่ม X กลับเป็นขนาดดีไซน์เดิมที่ย่อตามหน้าต่าง (ถ้าจะทำใหม่ต้องดูใน Figma และปรับให้เข้ากับแต่ละเมนู). คงไว้: Window ScrollOnShort คำนวณความสูงตามสเกลความกว้างจริง. ทดสอบจอ 568x320 ผ่าน: Inventory, Quests, Daily Login, Store, Mastery, Aquarium, Events, Gacha. ยังไม่ได้ทดสอบ: Fusion, CAST popup, มินิเกม, การ์ดปลา
 - 2026-11-24 — แก้บั๊กจอดำค้าง (MenuManager backdrop): เดิมอัปเดตเฉพาะตอนมี event ถ้าเมนูเปิดไม่สำเร็จหรือซ่อน gui เงียบ ๆ หลังหมด grace 0.6s backdrop ค้าง. ตอนนี้ตรวจซ้ำทุก 0.5s ขณะ backdrop เปิด และไม่นับเมนูที่ Gui() เป็น nil. ทดสอบ: เปิด/ปิดเมนูซ้ำ ๆ (B, C, M, Daily Login, Gacha) แล้วจอต้องสว่างภายใน ~0.5s หลังปิดเมนูสุดท้าย. ยังไม่ได้ทดสอบใน Studio
 - 2026-11-24 — A17 รอบ 3 (ทดสอบ Play บนจอ 568x320): ผ่านพอดีจอ: popup Offline Reward, HUD, มินิเกม, การ์ดปลา (Catch Card), Dialogue Old Marlin, Rod Fusion ทั้ง 4 ขั้น. ข้อสังเกต (ไม่ได้แก้): (1) Fusion ขั้น Compare ย่อเหลือประมาณ 0.58 เท่า ข้อความ mod ถูกตัด ("+4% Fish Stabili...") และปุ่ม Back/FUSE สูง ~19px ต่ำกว่า 44px (2) ตัวเลือก Dialogue ซ้อนทับแถวเมนูด้านบนขวา (3) มินิเกมซ้อนทับปุ่ม Bag ในแถวเมนู. ถ้าจะแก้ ให้ดูใน Figma แล้วปรับทีละหน้า ไม่บังคับขนาดทั้งระบบ
+- 2026-11-24 — A17 รอบ 4: (1) Fusion ขั้น Compare โหมดกะทัดรัดบนจอเตี้ย (สูง < 500): หน้าต่างกว้าง 500 (เดิม 400), แถวตัวเลือก 38px, ปุ่ม 40px, ป้าย FAIL รวมเข้าแถว Cost, ช่องไฟ 6px, หัวข้อเหลือบรรทัดเดียว. วัดบน 568x320: สเกลจาก 0.40 (ชนขั้นต่ำและล้นจอ) เป็น 0.51, ชื่อ mod อ่านครบไม่ถูกตัด. ยังไม่ผ่าน: ปุ่ม Back/FUSE สูงจริง ~20px (ต่ำกว่า 44px) เพราะหน้าต่างต้องย่อ (2) แถวเมนู Bag/Shop/Auras/Quests/Menu บนจอเตี้ยยกขึ้นชิดขอบบนขวา (หักค่า GuiInset ของ Roblox) ที่ HUDController.layout. ทดสอบ: เปิด Fusion ที่ Old Marlin ไปขั้น Compare, และดูแถวเมนูที่จอเล็ก. ยังไม่ได้ลองบนมือถือจริง (ปุ่ม Roblox มุมบนขวา เช่นรายชื่อผู้เล่น อาจทับแถวเมนู)
+- 2026-11-24 — แก้ 3 เรื่อง: (1) ปิดหน้า Aura Summon (ปุ่ม X) จาก Altar/ปุ่ม Auras แล้วไม่เด้งไป Events อีก (GachaPageController.back ไม่เรียก EventsRequested แล้ว; ถ้าเปิดซ้อนบน Events/Inventory/Aura Dex ยังกลับหน้าเดิมผ่าน MenuManager). ทดสอบใน Studio ผ่าน (2) Pass ที่ซื้อใน Studio หายเมื่อเข้าเกมจริง: ซื้อใน Studio เป็นของจำลอง Roblox ตอบว่าไม่ได้เป็นเจ้าของ เซิร์ฟเวอร์จริงเลยถอนทิ้ง ตอนนี้การซื้อใน Studio บันทึกเป็น "Dev" (MonetizationService, PromptGamePassPurchaseFinished) ซึ่ง refreshPasses ไม่ถอน. ไม่ได้ทดสอบใน Studio (เรียก SignalPromptGamePassPurchaseFinished ไม่ได้) และ Pass ที่ถูกถอนไปแล้วต้องซื้อใหม่ใน Studio หรือใช้คำสั่ง grant pass ของ DevService (3) Dialogue มีตัวเลือกสูงสุด 3 ข้อทุก NPC: Registry ตรวจ 1..3 (error ตอนเริ่มเกมถ้าเกิน), Screen.MaxChoices = 3, Marlin เหลือ Sell All Fish / Hot fish today? / Fuse rods (ตัด "Browse gear" เพราะมีปุ่ม Shop บน HUD). ทดสอบใน Studio ผ่าน (เห็น 3 ปุ่ม). ปุ่ม Choice4 ที่ bake ไว้ใน Studio ยังอยู่แต่ซ่อนและไม่ถูกใช้
+- 2026-11-24 — แก้ชิป Bag (x / 50) บนจอเตี้ย: ย้ายกลับไปอยู่ด้านบนเหนือปุ่ม Auto มุมขวาของ dock เหมือนจอปกติ (HUD.LayoutFishingDock) เพราะแถวเมนูบนขวายกชิดขอบบนแล้ว ไม่ชนกับ dock อีก. (รอบก่อนที่ย้ายไปซ้ายของ Depth/Sell ทำให้ชิปโดนปุ่ม Sell ทับบนจอเมาส์ จึงเลิกใช้) ทดสอบใน Studio ที่ 749x381 ผ่าน
 - 2026-11-24 — A17 ทดสอบใน Studio (Device Simulator): iPhone 17 Pro แนวนอน 749x381 และ 568x320 ผ่าน (Inventory, Character, Main Menu, Shop, Trade, Quests, HUD อยู่ในจอ). แก้ (1) ปุ่ม HUD เล็กกว่า 44px: เพิ่ม `New.TouchHit` (ปุ่มโปร่งใสตามตำแหน่งจริง ขั้นต่ำ 44px) ใช้กับ Daily, ปุ่มลูกศร More และ Hit_ ของชิปเงิน/เจม (EconomyController) (2) จอเตี้ย: ชิป Bag 21/50 ทับแถวเมนูมุมขวาบน ย้ายไปซ้ายของปุ่ม Depth (`UI/Screens/HUD.luau`). เกมตั้ง ScreenOrientation = LandscapeSensor จึงไม่ทดสอบแนวตั้ง. ยังไม่ได้ทดสอบ: Daily Login, Store, Mastery, Aquarium, Events/Gacha, Fusion, CAST popup, มินิเกม, การ์ดปลา บนจอเล็ก. ผ่าน tools/check.mjs
 - 2026-11-24 — C9 แมพจริง: จัดเป็นลำดับท้ายสุด เพราะมีทีมทำแมพส่งมาให้ ยังไม่ต้องทำฝั่งเรา (เมื่อได้แมพ: ต้องมี Workspace.Map และ Part ติด tag FishingZone พร้อม attribute LocationId)
 - 2026-11-24 — ย้ายความจุกระเป๋าไปไฟล์เดียว `Config/BagCapacity.luau` (Slots ต่อกระเป๋า, InfiniteBagSlots, Fallback) ให้ปรับบาลานซ์ได้ที่เดียว; Equipment/GameConfig/ItemContainer อ่านจากไฟล์นี้ ค่าเดิม 10/16/24/36/50 ไม่เปลี่ยน ผ่าน tools/check.mjs ยังไม่ได้ทดสอบใน Studio

@@ -5,8 +5,8 @@
       "en": "Vertical-slice prototype"
     },
     "summary": {
-      "th": "ระบบหลักสมบูรณ์ (วงจรตกปลา, Item Rework v6, Mod เบ็ดและสาย, Rod Fusion, Menu Manager, Daily Login B และ Stats Codex) อยู่ในรอบทดสอบ QA และ Mobile Responsive",
-      "en": "Core features are complete (fishing loop, Item Rework v6, gear mods, Rod Fusion, Menu Manager, Daily Login B, and Stats Codex) and are undergoing QA and mobile responsive testing."
+      "th": "ระบบหลักส่วนใหญ่ผ่านการทดสอบแล้ว อยู่ในรอบแก้ไข C33 (Bake UI / Device Emulator), อัปเดต Figma (A15) และทดสอบ C3, C4, C15",
+      "en": "Most core features passed testing; currently fixing C33 (Bake UI / Device Emulator), syncing Figma (A15), and testing C3, C4, C15."
     }
   },
   "systems": [
@@ -66,14 +66,14 @@
     },
     {
       "id": "auto",
-      "status": "testing",
+      "status": "done",
       "name": {
         "th": "ตกออโต้และสมดุลรางวัล",
         "en": "Auto-fishing and rewards"
       },
       "summary": {
-        "th": "ตกออโต้มีในต้นแบบ งานปรับจังหวะ Hot Streak และผลตอบแทนอยู่ในรอบทดสอบ",
-        "en": "Auto-fishing is in the prototype. The pacing and Hot Streak balance pass awaits testing."
+        "th": "ตกออโต้ Auto Wait และ Balance Pass 1 (Hot Streak, XP, ราคา) ผ่านการทดสอบแล้ว",
+        "en": "Auto-fishing, Auto Wait, and Balance Pass 1 (Hot Streak, XP, pricing) passed testing."
       },
       "tasks": [
         "B18",
@@ -83,14 +83,14 @@
     },
     {
       "id": "casting",
-      "status": "testing",
+      "status": "done",
       "name": {
         "th": "กดค้างเหวี่ยงและจุดฟองปลา",
         "en": "Charge casting and hotspots"
       },
       "summary": {
-        "th": "ระบบเหวี่ยงตามแรงกดและจุด Hotspot มีโค้ดแล้ว รอทดสอบการใช้งานใน Play",
-        "en": "Charge casting and fishing hotspots are implemented and await Play testing."
+        "th": "ระบบเหวี่ยงตามแรงกด Perfect Cast และจุด Hotspot ผ่านการทดสอบแล้ว",
+        "en": "Charge casting, Perfect Cast, and fishing hotspots passed testing."
       },
       "tasks": [
         "C25",
@@ -100,14 +100,14 @@
     },
     {
       "id": "auras",
-      "status": "testing",
+      "status": "done",
       "name": {
         "th": "กาชา ออร่า และดาว",
         "en": "Aura rolls, equipping and stars"
       },
       "summary": {
-        "th": "ระบบสุ่มและสวมออร่าทำงานในต้นแบบ หน้ากาชารอบล่าสุด ดาวออร่า และ pity รอทดสอบเพิ่ม",
-        "en": "Aura rolling and equipping work in the prototype. The latest gacha UI, stars and pity need further testing."
+        "th": "ระบบสุ่มออร่า หน้ากาชาใหม่ ดาวออร่า Star Token และ Pity ผ่านการทดสอบแล้ว",
+        "en": "Aura rolling, redesigned gacha page, Aura stars, Star Tokens, and pity passed testing."
       },
       "tasks": [
         "A8",
@@ -126,8 +126,8 @@
         "en": "Aquarium, Pearls and Mastery"
       },
       "summary": {
-        "th": "ตู้ปลาผลิตไข่มุกและสะสมออฟไลน์ ใช้ไข่มุกอัป Mastery มีโค้ดแล้ว",
-        "en": "Aquarium income, offline Pearls and Mastery upgrades are implemented."
+        "th": "ตู้ปลาผลิตไข่มุกและสะสมออฟไลน์ (C14) ผ่านแล้ว เหลือทดสอบ Mastery (C15)",
+        "en": "Aquarium income and offline Pearls (C14) passed; Mastery (C15) awaits verification."
       },
       "tasks": [
         "C14",
@@ -137,14 +137,14 @@
     },
     {
       "id": "gear",
-      "status": "testing",
+      "status": "done",
       "name": {
         "th": "ตีบวกอุปกรณ์",
         "en": "Gear enhancement"
       },
       "summary": {
-        "th": "ตีบวกคันเบ็ดและสายเบ็ดด้วย Coins รอทดสอบในเกม",
-        "en": "Coin-based rod and line upgrades await in-game testing."
+        "th": "ตีบวกคันเบ็ดและสายเบ็ดด้วย Coins (+1 ถึง +10) ผ่านการทดสอบแล้ว",
+        "en": "Coin-based rod and line enhancement (+1 to +10) passed testing."
       },
       "tasks": [
         "C16"
@@ -159,8 +159,8 @@
         "en": "Current Rebirth and skills"
       },
       "summary": {
-        "th": "Rebirth รุ่นปัจจุบันเริ่มที่เลเวล 50 และมีฉายา สกิล Multi-Cast มีระบบฝั่งเกมแล้ว",
-        "en": "The current Rebirth starts at level 50 and grants titles. Multi-Cast skills are implemented."
+        "th": "Rebirth เลเวล 50 พร้อมฉายา (C3) และสกิล Multi-Cast (C4) โค้ดเสร็จแล้ว รอดำเนินการต่อและทดสอบ",
+        "en": "Level-50 Rebirth with titles (C3) and Multi-Cast skills (C4) are implemented and queued for testing."
       },
       "tasks": [
         "C3",
@@ -170,14 +170,14 @@
     },
     {
       "id": "events",
-      "status": "testing",
+      "status": "done",
       "name": {
         "th": "อีเวนต์และรางวัลรายวัน",
         "en": "Events and daily rewards"
       },
       "summary": {
-        "th": "Naga Tide ปลาขายดี เควสต์ และ Daily Login มีระบบแล้ว รอทดสอบรอบเล่น",
-        "en": "Naga Tide, Hot Fish, quests and daily login are implemented and await Play checks."
+        "th": "Naga Tide ปลาขายดี เควสต์รายวัน และ Daily Login 7 วัน ผ่านการทดสอบแล้ว",
+        "en": "Naga Tide, Hot Fish, daily quests, and 7-day Daily Login passed testing."
       },
       "tasks": [
         "C5",
@@ -189,14 +189,14 @@
     },
     {
       "id": "store",
-      "status": "testing",
+      "status": "done",
       "name": {
         "th": "ร้าน Robux และ Gamepasses",
         "en": "Robux store and passes"
       },
       "summary": {
-        "th": "ร้านค้าแบ่งหน้าด้วยปุ่มลูกศร (ไม่ใช้ scroller), แสดง Gamepasses เป็นรายการสูง 88, บูสต์ และ Starter Pack รอทดสอบใน Play",
-        "en": "Store with pagination (no scroller on short screens), Gamepasses list view, boosts, and Starter Pack await Play testing."
+        "th": "ร้านค้า Gamepasses, Dev Products, ProcessReceipt และ Starter Pack ผ่านแล้ว (เหลือสร้าง Pass Extra Cast บนเว็บ)",
+        "en": "Store, Gamepasses, Dev Products, ProcessReceipt, and Starter Pack passed (Extra Cast web pass pending)."
       },
       "tasks": [
         "C6",
@@ -215,8 +215,8 @@
         "en": "Map and mobile readiness"
       },
       "summary": {
-        "th": "มีแมพต้นแบบ Stilt Boardwalk แล้ว งานแมพจริง โมเดล และทดสอบมือถือยังเปิดอยู่",
-        "en": "The Stilt Boardwalk prototype exists. Final map, models and mobile tests are open."
+        "th": "Stilt Boardwalk และทดสอบมือถือ (A17, C11) ผ่านแล้ว รอรับแมพจริงจากทีม (C9)",
+        "en": "Stilt Boardwalk and mobile tests (A17, C11) passed; awaiting final map from the art team (C9)."
       },
       "tasks": [
         "B19",
@@ -228,14 +228,14 @@
     },
     {
       "id": "sound",
-      "status": "planned",
+      "status": "done",
       "name": {
         "th": "เสียงประกอบ",
         "en": "Sound effects"
       },
       "summary": {
-        "th": "บันทึกงานระบุว่ายังไม่เริ่มทำเสียงในมินิเกมและกาชา",
-        "en": "The task list marks minigame and gacha sound work as not started."
+        "th": "ระบบเสียง SFX (25/25 ไฟล์) และจุดเชื่อมในเกมผ่านการทดสอบแล้ว",
+        "en": "SFX audio system (25/25 files) and gameplay hooks passed testing."
       },
       "tasks": [
         "C8"
@@ -244,14 +244,14 @@
     },
     {
       "id": "inventory-rework",
-      "status": "testing",
+      "status": "done",
       "name": {
         "th": "กระเป๋าแบบ UUID และนับปลาเดี่ยว",
         "en": "UUID bag and single fish slot"
       },
       "summary": {
-        "th": "โครงสร้าง Bag แบบ UUID (ปลา 1 ตัว 1 ช่อง ไม่รวมกอง, คันและสายซื้อซ้ำ/ขายคืนได้ 40%, เซฟ v6) และปุ่มค้นหา NEW รอทดสอบใน Play",
-        "en": "UUID-based Bag architecture (1 slot per fish, unstacked, 40% gear resale, v6 save) and NEW item search await Play testing."
+        "th": "โครงสร้าง Bag แบบ UUID (เซฟ v6, ขายคืน 40%) และปุ่มค้นหา NEW ผ่านการทดสอบแล้ว",
+        "en": "UUID-based Bag architecture (v6 save, 40% resale) and NEW item search passed testing."
       },
       "tasks": [
         "C29",
@@ -261,14 +261,14 @@
     },
     {
       "id": "fish-weight",
-      "status": "testing",
+      "status": "done",
       "name": {
         "th": "ราคาแบบไม่อิงน้ำหนักปลา",
         "en": "Weight-free fish pricing"
       },
       "summary": {
-        "th": "ราคาปลาไม่อิงน้ำหนักใน C29 (คำนวณจาก Tier, Mutation, Hotspot, Perfect Cast) มีโค้ดแล้ว รอทดสอบใน Play",
-        "en": "Weight-free fish pricing in C29 (based on Tier, Mutation, Hotspot, Perfect Cast) is implemented and awaits Play testing."
+        "th": "ราคาปลาใน C29 (คำนวณจาก Tier, Mutation, Hotspot, Perfect Cast) ผ่านการทดสอบแล้ว",
+        "en": "Weight-free fish pricing in C29 (Tier, Mutation, Hotspot, Perfect Cast) passed testing."
       },
       "tasks": [
         "C29"
@@ -277,28 +277,30 @@
     },
     {
       "id": "trading",
-      "status": "design",
+      "status": "done",
       "name": {
         "th": "ระบบเทรดและไอเทมผูกมัด",
         "en": "Trading and bound items"
       },
       "summary": {
-        "th": "ตกลงเรื่อง Trade License จำกัด 4 ช่อง ภาษี Coins และไอเทมที่เทรดไม่ได้",
-        "en": "Decisions cover Trade Licenses, four trade slots, a Coin tax and bound items."
+        "th": "ระบบเทรดแบบ Grid, Trade License, ภาษี Coins และกติกา Bound ผ่านการทดสอบแล้ว",
+        "en": "Grid-based trading, Trade License, Coin tax, and Bound item rules passed testing."
       },
-      "tasks": [],
-      "source": "decisions"
+      "tasks": [
+        "C41"
+      ],
+      "source": "tasks"
     },
     {
       "id": "rod-fusion",
-      "status": "testing",
+      "status": "done",
       "name": {
         "th": "Mod คันเบ็ดและ Rod Fusion",
         "en": "Gear mods and Rod Fusion"
       },
       "summary": {
-        "th": "ระบบ Modifier เบ็ดและสาย (Prefix/Suffix) สุ่มค่า -N~+N, Cap Breaker และระบบ Rod Fusion หลอมย้าย Mod ที่ NPC Old Marlin โค้ดเสร็จแล้ว รอทดสอบใน Play",
-        "en": "Gear modifiers (Prefix/Suffix) with -N~+N rolls, Cap Breakers, and Rod Fusion at Old Marlin are implemented and await Play testing."
+        "th": "ระบบ Modifier เบ็ด/สาย (Prefix/Suffix), Cap Breaker และ Rod Fusion ที่ Old Marlin ผ่านการทดสอบแล้ว",
+        "en": "Gear modifiers (Prefix/Suffix), Cap Breakers, and Rod Fusion at Old Marlin passed testing."
       },
       "tasks": [
         "C30",
@@ -350,14 +352,14 @@
     },
     {
       "id": "ui-framework",
-      "status": "testing",
+      "status": "progress",
       "name": {
         "th": "โครงสร้าง UI, MenuManager และ Responsive",
         "en": "UI framework, MenuManager and Responsive"
       },
       "summary": {
-        "th": "Window.Shell, Core Menu Manager (จัดลำดับหน้าต่างไม่เปิดซ้อน), Stats Codex, Store แบ่งหน้า, การย่อหน้าต่างและปุ่มปิดที่กดได้บนมือถือ",
-        "en": "Window.Shell, Core Menu Manager (window stacking rules), Stats Codex, Store pagination, responsive scaling and touch-friendly mobile close buttons."
+        "th": "Window.Shell, MenuManager, Stats Codex, Store แบ่งหน้า และ A9/A17/C32/C34/C35 ผ่านแล้ว เหลือแก้ไข C33 (Bake UI & Device Emulator)",
+        "en": "Window.Shell, MenuManager, Stats Codex, Store pagination, and A9/A17/C32/C34/C35 passed; fixing C33 (Bake UI & Device Emulator)."
       },
       "tasks": [
         "A2",
@@ -374,14 +376,14 @@
     },
     {
       "id": "aura-vfx",
-      "status": "testing",
+      "status": "done",
       "name": {
         "th": "ระบบและเครื่องมือ Aura VFX",
         "en": "Aura VFX pipeline and tools"
       },
       "summary": {
-        "th": "สเปกชีต Texture ครบ 15 ออร่า, พรีวิวจำลอง HTML5 Canvas, Aura Particle Editor บน Windows และ Importer นำเข้า Studio",
-        "en": "15-aura texture sheet specs, HTML5 Canvas simulation previews, Aura Particle Editor for Windows, and Studio Importer."
+        "th": "สเปกชีต Texture ครบ 15 ออร่า, พรีวิว HTML5 Canvas, Aura Particle Editor และ Importer ผ่านการตรวจแล้ว",
+        "en": "15-aura texture sheet specs, HTML5 Canvas previews, Aura Particle Editor, and Studio Importer are complete."
       },
       "tasks": [
         "A10",
@@ -490,9 +492,19 @@
     "C36": "Aura VFX sheet assets",
     "C37": "Aura VFX character preview",
     "C38": "Aura VFX prompt specs and preview",
-    "C39": "Aura Particle Editor and Studio Importer"
+    "C39": "Aura Particle Editor and Studio Importer",
+    "C40": "Warm-paper Patch Note Card",
+    "C41": "Player-to-player Trading and Bound items"
   },
   "history": [
+    {
+      "at": "2026-11-25",
+      "source": "tasks",
+      "text": {
+        "th": "อัปเดตสถานะใน TASKS.md และเว็บ QA: ปิดผ่าน A9, A17, C5-C8, C10-C14, C16-C32, C34-C41; ตี C33 เป็นต้องแก้; เตรียมทำต่อ A15, C6-Web, C9, C3, C4, C15",
+        "en": "Updated TASKS.md and QA data: marked A9, A17, C5-C8, C10-C14, C16-C32, C34-C41 done; flagged C33 for fixes; queued A15, C6-Web, C9, C3, C4, C15."
+      }
+    },
     {
       "at": "2026-11-23",
       "source": "tasks",
