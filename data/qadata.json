@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-24T12:42:08.435Z",
+ "generated": "2026-11-24T19:22:55.257Z",
  "stage": {
   "name": "ต้นแบบ Vertical Slice",
-  "summary": "ระบบหลักสมบูรณ์ (วงจรตกปลา, Item Rework v6, Mod เบ็ดและสาย, Rod Fusion, Menu Manager, Daily Login B และ Stats Codex) อยู่ในรอบทดสอบ QA และ Mobile Responsive"
+  "summary": "ระบบหลักส่วนใหญ่ผ่านการทดสอบแล้ว อยู่ในรอบแก้ไข C33 (Bake UI / Device Emulator), อัปเดต Figma (A15) และทดสอบ C3, C4, C15"
  },
  "systems": [
   {
@@ -43,10 +43,10 @@
   },
   {
    "id": "auto",
-   "status": "testing",
+   "status": "done",
    "name": "ตกออโต้และสมดุลรางวัล",
    "nameEn": "Auto-fishing and rewards",
-   "summary": "ตกออโต้มีในต้นแบบ งานปรับจังหวะ Hot Streak และผลตอบแทนอยู่ในรอบทดสอบ",
+   "summary": "ตกออโต้ Auto Wait และ Balance Pass 1 (Hot Streak, XP, ราคา) ผ่านการทดสอบแล้ว",
    "tasks": [
     "B18",
     "C12"
@@ -54,10 +54,10 @@
   },
   {
    "id": "casting",
-   "status": "testing",
+   "status": "done",
    "name": "กดค้างเหวี่ยงและจุดฟองปลา",
    "nameEn": "Charge casting and hotspots",
-   "summary": "ระบบเหวี่ยงตามแรงกดและจุด Hotspot มีโค้ดแล้ว รอทดสอบการใช้งานใน Play",
+   "summary": "ระบบเหวี่ยงตามแรงกด Perfect Cast และจุด Hotspot ผ่านการทดสอบแล้ว",
    "tasks": [
     "C25",
     "C26"
@@ -65,10 +65,10 @@
   },
   {
    "id": "auras",
-   "status": "testing",
+   "status": "done",
    "name": "กาชา ออร่า และดาว",
    "nameEn": "Aura rolls, equipping and stars",
-   "summary": "ระบบสุ่มและสวมออร่าทำงานในต้นแบบ หน้ากาชารอบล่าสุด ดาวออร่า และ pity รอทดสอบเพิ่ม",
+   "summary": "ระบบสุ่มออร่า หน้ากาชาใหม่ ดาวออร่า Star Token และ Pity ผ่านการทดสอบแล้ว",
    "tasks": [
     "A8",
     "A10",
@@ -82,7 +82,7 @@
    "status": "testing",
    "name": "ตู้ปลา ไข่มุก และ Mastery",
    "nameEn": "Aquarium, Pearls and Mastery",
-   "summary": "ตู้ปลาผลิตไข่มุกและสะสมออฟไลน์ ใช้ไข่มุกอัป Mastery มีโค้ดแล้ว",
+   "summary": "ตู้ปลาผลิตไข่มุกและสะสมออฟไลน์ (C14) ผ่านแล้ว เหลือทดสอบ Mastery (C15)",
    "tasks": [
     "C14",
     "C15"
@@ -90,10 +90,10 @@
   },
   {
    "id": "gear",
-   "status": "testing",
+   "status": "done",
    "name": "ตีบวกอุปกรณ์",
    "nameEn": "Gear enhancement",
-   "summary": "ตีบวกคันเบ็ดและสายเบ็ดด้วย Coins รอทดสอบในเกม",
+   "summary": "ตีบวกคันเบ็ดและสายเบ็ดด้วย Coins (+1 ถึง +10) ผ่านการทดสอบแล้ว",
    "tasks": [
     "C16"
    ]
@@ -103,7 +103,7 @@
    "status": "testing",
    "name": "Rebirth และสกิลรุ่นปัจจุบัน",
    "nameEn": "Current Rebirth and skills",
-   "summary": "Rebirth รุ่นปัจจุบันเริ่มที่เลเวล 50 และมีฉายา สกิล Multi-Cast มีระบบฝั่งเกมแล้ว",
+   "summary": "Rebirth เลเวล 50 พร้อมฉายา (C3) และสกิล Multi-Cast (C4) โค้ดเสร็จแล้ว รอดำเนินการต่อและทดสอบ",
    "tasks": [
     "C3",
     "C4"
@@ -111,10 +111,10 @@
   },
   {
    "id": "events",
-   "status": "testing",
+   "status": "done",
    "name": "อีเวนต์และรางวัลรายวัน",
    "nameEn": "Events and daily rewards",
-   "summary": "Naga Tide ปลาขายดี เควสต์ และ Daily Login มีระบบแล้ว รอทดสอบรอบเล่น",
+   "summary": "Naga Tide ปลาขายดี เควสต์รายวัน และ Daily Login 7 วัน ผ่านการทดสอบแล้ว",
    "tasks": [
     "C5",
     "C7",
@@ -124,10 +124,10 @@
   },
   {
    "id": "store",
-   "status": "testing",
+   "status": "done",
    "name": "ร้าน Robux และ Gamepasses",
    "nameEn": "Robux store and passes",
-   "summary": "ร้านค้าแบ่งหน้าด้วยปุ่มลูกศร (ไม่ใช้ scroller), แสดง Gamepasses เป็นรายการสูง 88, บูสต์ และ Starter Pack รอทดสอบใน Play",
+   "summary": "ร้านค้า Gamepasses, Dev Products, ProcessReceipt และ Starter Pack ผ่านแล้ว (เหลือสร้าง Pass Extra Cast บนเว็บ)",
    "tasks": [
     "C6",
     "C13",
@@ -141,7 +141,7 @@
    "status": "progress",
    "name": "แมพและความพร้อมบนมือถือ",
    "nameEn": "Map and mobile readiness",
-   "summary": "มีแมพต้นแบบ Stilt Boardwalk แล้ว งานแมพจริง โมเดล และทดสอบมือถือยังเปิดอยู่",
+   "summary": "Stilt Boardwalk และทดสอบมือถือ (A17, C11) ผ่านแล้ว รอรับแมพจริงจากทีม (C9)",
    "tasks": [
     "B19",
     "A17",
@@ -151,20 +151,20 @@
   },
   {
    "id": "sound",
-   "status": "planned",
+   "status": "done",
    "name": "เสียงประกอบ",
    "nameEn": "Sound effects",
-   "summary": "บันทึกงานระบุว่ายังไม่เริ่มทำเสียงในมินิเกมและกาชา",
+   "summary": "ระบบเสียง SFX (25/25 ไฟล์) และจุดเชื่อมในเกมผ่านการทดสอบแล้ว",
    "tasks": [
     "C8"
    ]
   },
   {
    "id": "inventory-rework",
-   "status": "testing",
+   "status": "done",
    "name": "กระเป๋าแบบ UUID และนับปลาเดี่ยว",
    "nameEn": "UUID bag and single fish slot",
-   "summary": "โครงสร้าง Bag แบบ UUID (ปลา 1 ตัว 1 ช่อง ไม่รวมกอง, คันและสายซื้อซ้ำ/ขายคืนได้ 40%, เซฟ v6) และปุ่มค้นหา NEW รอทดสอบใน Play",
+   "summary": "โครงสร้าง Bag แบบ UUID (เซฟ v6, ขายคืน 40%) และปุ่มค้นหา NEW ผ่านการทดสอบแล้ว",
    "tasks": [
     "C29",
     "C32"
@@ -172,28 +172,30 @@
   },
   {
    "id": "fish-weight",
-   "status": "testing",
+   "status": "done",
    "name": "ราคาแบบไม่อิงน้ำหนักปลา",
    "nameEn": "Weight-free fish pricing",
-   "summary": "ราคาปลาไม่อิงน้ำหนักใน C29 (คำนวณจาก Tier, Mutation, Hotspot, Perfect Cast) มีโค้ดแล้ว รอทดสอบใน Play",
+   "summary": "ราคาปลาใน C29 (คำนวณจาก Tier, Mutation, Hotspot, Perfect Cast) ผ่านการทดสอบแล้ว",
    "tasks": [
     "C29"
    ]
   },
   {
    "id": "trading",
-   "status": "design",
+   "status": "done",
    "name": "ระบบเทรดและไอเทมผูกมัด",
    "nameEn": "Trading and bound items",
-   "summary": "ตกลงเรื่อง Trade License จำกัด 4 ช่อง ภาษี Coins และไอเทมที่เทรดไม่ได้",
-   "tasks": []
+   "summary": "ระบบเทรดแบบ Grid, Trade License, ภาษี Coins และกติกา Bound ผ่านการทดสอบแล้ว",
+   "tasks": [
+    "C41"
+   ]
   },
   {
    "id": "rod-fusion",
-   "status": "testing",
+   "status": "done",
    "name": "Mod คันเบ็ดและ Rod Fusion",
    "nameEn": "Gear mods and Rod Fusion",
-   "summary": "ระบบ Modifier เบ็ดและสาย (Prefix/Suffix) สุ่มค่า -N~+N, Cap Breaker และระบบ Rod Fusion หลอมย้าย Mod ที่ NPC Old Marlin โค้ดเสร็จแล้ว รอทดสอบใน Play",
+   "summary": "ระบบ Modifier เบ็ด/สาย (Prefix/Suffix), Cap Breaker และ Rod Fusion ที่ Old Marlin ผ่านการทดสอบแล้ว",
    "tasks": [
     "C30",
     "C31"
@@ -225,10 +227,10 @@
   },
   {
    "id": "ui-framework",
-   "status": "testing",
+   "status": "progress",
    "name": "โครงสร้าง UI, MenuManager และ Responsive",
    "nameEn": "UI framework, MenuManager and Responsive",
-   "summary": "Window.Shell, Core Menu Manager (จัดลำดับหน้าต่างไม่เปิดซ้อน), Stats Codex, Store แบ่งหน้า, การย่อหน้าต่างและปุ่มปิดที่กดได้บนมือถือ",
+   "summary": "Window.Shell, MenuManager, Stats Codex, Store แบ่งหน้า และ A9/A17/C32/C34/C35 ผ่านแล้ว เหลือแก้ไข C33 (Bake UI & Device Emulator)",
    "tasks": [
     "A2",
     "A9",
@@ -243,10 +245,10 @@
   },
   {
    "id": "aura-vfx",
-   "status": "testing",
+   "status": "done",
    "name": "ระบบและเครื่องมือ Aura VFX",
    "nameEn": "Aura VFX pipeline and tools",
-   "summary": "สเปกชีต Texture ครบ 15 ออร่า, พรีวิวจำลอง HTML5 Canvas, Aura Particle Editor บน Windows และ Importer นำเข้า Studio",
+   "summary": "สเปกชีต Texture ครบ 15 ออร่า, พรีวิว HTML5 Canvas, Aura Particle Editor และ Importer ผ่านการตรวจแล้ว",
    "tasks": [
     "A10",
     "C36",
@@ -396,15 +398,15 @@
    "group": "A",
    "title": "หน้าต่างเมนูขนาดคงที่",
    "titleEn": "Fixed-size menus",
-   "status": "testing",
-   "note": "รอทดสอบขนาด Upgrade Bag บนมือถือ ผล QA เดิมอยู่ในรายละเอียด",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
    "steps": [
     "ใน Roblox Studio เปิด Test → Device Emulator เลือกมือถือแนวนอน 844×390 แล้วกด Play",
     "กดไอคอนกระเป๋าเพื่อเปิด Inventory แล้วแตะปุ่ม UPGRADE ข้างตัวเลขความจุด้านบน: เห็นกรอบ Upgrade Bag ครบทั้งกรอบพร้อมปุ่ม Cancel และ UPGRADE หรือ MAX แตะ Cancel แล้วกลับไปที่ Inventory",
     "เปิด Shop จาก HUD, Aura Dex จาก Inventory → Auras และ Fishdex จาก Menu: แต่ละหน้าต่างอยู่ในจอและกดปิดได้",
     "กลับไปโหมดคอม (Device: None) แล้วเปิด Upgrade Bag ซ้ำ: หน้าต่างใช้ขนาดเต็มตามปกติและกด Cancel ได้"
    ],
-   "rev": "8ea86c9f"
+   "rev": "208b204a"
   },
   {
    "id": "A10",
@@ -500,8 +502,8 @@
    "group": "A",
    "title": "Responsive มือถือแนวนอน (HUD + popup ทุกอัน)",
    "titleEn": "Landscape mobile layout",
-   "status": "planned",
-   "note": "เลื่อนไปทีหลัง — ใช้ได้แต่ยังไม่สวย; ตอนนี้โฟกัส desktop",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
    "steps": [
     "Test → Device → เลือกมือถือแนวนอน (เช่น iPhone 14) → Play",
     "เมนู Shop/Auras/Fishdex/Menu ต้องเป็นแถวแนวนอนที่มุมขวาบน และกดได้ทุกปุ่ม",
@@ -513,7 +515,7 @@
     "ROLL AURA → วงล้อ + การ์ดผลลัพธ์อยู่ในจอ เห็นปุ่ม EQUIP/ROLL AGAIN/CLOSE",
     "หมุนจอ/เปลี่ยน Device เป็นแท็บเล็ต และกลับมาโหมดคอม (Device: None) → ทุกอย่างปรับตามเอง, บนคอมเมนูกลับเป็นแนวตั้งซ้ายเหมือนเดิม"
    ],
-   "rev": "081d28d5"
+   "rev": "bdc39a08"
   },
   {
    "id": "A15",
@@ -521,11 +523,11 @@
    "title": "Figma ดีไซน์ทั้งหมด (Style guide, Components, 17 หน้าจอ, Gacha FINAL, Asset section)",
    "titleEn": "Figma style guide and screens",
    "status": "progress",
-   "note": "QA ให้ปรับปรุง (รออัปเดต Figma ให้ตรงกับในเกม)",
+   "note": "QA ให้ปรับปรุง (รออัปเดต Figma ให้ตรงกับในเกม) — เลือกทำต่อ",
    "steps": [
     "เปิด Figma หน้า Out Space → ไล่ดูทีละ section → แก้เองได้ (session อื่นจะ patch เฉพาะ node ไม่ทับงานคุณ)"
    ],
-   "rev": "a9e7f1ef"
+   "rev": "e0a83f74"
   },
   {
    "id": "B0",
@@ -952,9 +954,9 @@
    "title": "Rebirth + ฉายา (GDD 7.2) — ย้ายไป Lv.50",
    "titleEn": "Rebirth and titles",
    "status": "testing",
-   "note": "โค้ดเสร็จ รอทดสอบ",
+   "note": "โค้ดเสร็จ รอทดสอบ — เลือกทำต่อ",
    "steps": [],
-   "rev": "0b215329"
+   "rev": "6bc547f0"
   },
   {
    "id": "C4",
@@ -962,49 +964,49 @@
    "title": "สกิล Keen Eye / Quick Hands / Multi-Cast (GDD 7.1)",
    "titleEn": "Skills and Multi-Cast",
    "status": "testing",
-   "note": "โค้ดเสร็จ + หน้าต่าง Skills แล้ว (ปุ่ม SKILLS ในหน้าต่าง Character) รอทดสอบ",
+   "note": "โค้ดเสร็จ + หน้าต่าง Skills แล้ว (ปุ่ม SKILLS ในหน้าต่าง Character) รอทดสอบ — เลือกทำต่อ",
    "steps": [],
-   "rev": "b2a6bfba"
+   "rev": "404c97e2"
   },
   {
    "id": "C5",
    "group": "C",
    "title": "อีเวนต์ Naga Tide (จุดสุ่มในทะเล ตกในวง = ลุ้นปลาพิเศษ, คนแห่มา = โอกาสสูงขึ้น)",
    "titleEn": "Naga Tide event",
-   "status": "testing",
-   "note": "โค้ด HUD Cozy Lake เสร็จแล้ว รอทดสอบใน Play",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
    "steps": [],
-   "rev": "ca38a5f0"
+   "rev": "7611f7cd"
   },
   {
    "id": "C6",
    "group": "C",
    "title": "Gamepasses (Infinite Bag 349, Auto-Fish Pro 249, VIP 149, Extra Cast)",
    "titleEn": "Gamepasses",
-   "status": "testing",
-   "note": "โค้ดเสร็จ + ป้ายชื่อ VIP เหนือหัว + ร้าน Store แล้ว รอทดสอบ — Extra Cast รอสร้าง pass บนเว็บ",
+   "status": "done",
+   "note": "ทดสอบผ่าน (Extra Cast รอสร้าง pass บนเว็บ — เลือกทำต่อ)",
    "steps": [],
-   "rev": "3c79080d"
+   "rev": "019674ea"
   },
   {
    "id": "C7",
    "group": "C",
    "title": "เควสต์รายวัน",
    "titleEn": "Daily quests",
-   "status": "testing",
-   "note": "โค้ดเสร็จ + หน้าต่างเควสต์แล้ว รอทดสอบ",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
    "steps": [],
-   "rev": "07ae3f53"
+   "rev": "7611f7cd"
   },
   {
    "id": "C8",
    "group": "C",
    "title": "เสียง (SFX) และระบบเสียงในเกม",
    "titleEn": "Minigame and gacha sound effects",
-   "status": "testing",
-   "note": "โค้ดเสร็จ + อัปโหลดเสียงแล้ว (25/25 ไฟล์) พร้อม Hook ตกปลา มินิเกม Gacha และ UI รอทดสอบใน Studio",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
    "steps": [],
-   "rev": "281da6a3"
+   "rev": "7611f7cd"
   },
   {
    "id": "C9",
@@ -1012,59 +1014,59 @@
    "title": "แมพจริง + โมเดลปลา/คันเบ็ด",
    "titleEn": "Final map and models",
    "status": "progress",
-   "note": "ลำดับท้ายสุด: ทีมกำลังทำแมพส่งมาให้ รอรับแมพ",
+   "note": "ลำดับท้ายสุด: ทีมกำลังทำแมพส่งมาให้ รอรับแมพ — เลือกทำต่อ",
    "steps": [],
-   "rev": "0b49053f"
+   "rev": "989b552d"
   },
   {
    "id": "C10",
    "group": "C",
    "title": "เครดิต Font Awesome (FaLock, CC BY 4.0)",
    "titleEn": "Font Awesome credits",
-   "status": "testing",
-   "note": "โค้ดเสร็จ รอทดสอบ",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
    "steps": [],
-   "rev": "0b215329"
+   "rev": "7611f7cd"
   },
   {
    "id": "C11",
    "group": "C",
    "title": "ทดสอบมือถือจริง + ปรับขนาดปุ่ม",
    "titleEn": "Mobile device checks",
-   "status": "planned",
-   "note": "ยังไม่เริ่ม",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
    "steps": [],
-   "rev": "19a1047e"
+   "rev": "7611f7cd"
   },
   {
    "id": "C12",
    "group": "C",
    "title": "Balance Pass 1 (ราคา ×10, Auto 14 วิ, Hot Streak, XP, โซนลึก, ย้ายเซฟ)",
    "titleEn": "Balance pass 1",
-   "status": "testing",
-   "note": "โค้ดเสร็จ + ป้าย Streak บนปุ่ม CAST แล้ว รอทดสอบ",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
    "steps": [],
-   "rev": "d28d7a8b"
+   "rev": "7611f7cd"
   },
   {
    "id": "C13",
    "group": "C",
    "title": "ระบบรับเงิน Robux (ProcessReceipt, ใบเสร็จ, เช็ค Gamepass)",
    "titleEn": "Robux receipts and pass checks",
-   "status": "testing",
-   "note": "โค้ดเสร็จ รอทดสอบ + รอ ID จากเว็บ Roblox",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
    "steps": [],
-   "rev": "be61b1e1"
+   "rev": "7611f7cd"
   },
   {
    "id": "C14",
    "group": "C",
    "title": "บ่อปลา (Aquarium) + Pearls + ออฟไลน์",
    "titleEn": "Aquarium and offline Pearls",
-   "status": "testing",
-   "note": "โค้ดเสร็จ + หน้าจอ Aquarium/Put in Tank/popup ออฟไลน์แล้ว รอทดสอบ",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
    "steps": [],
-   "rev": "6a1a52fb"
+   "rev": "7611f7cd"
   },
   {
    "id": "C15",
@@ -1072,67 +1074,67 @@
    "title": "Mastery (อัปถาวรด้วย Pearls)",
    "titleEn": "Pearl-funded Mastery",
    "status": "testing",
-   "note": "โค้ดเสร็จ + หน้าต่างตาม Figma แล้ว รอคุณทดสอบ (ใช้ไอคอนชุดใหม่แล้ว)",
+   "note": "โค้ดเสร็จ + หน้าต่างตาม Figma แล้ว รอคุณทดสอบ — เลือกทำต่อ",
    "steps": [],
-   "rev": "378756a0"
+   "rev": "dd69f98a"
   },
   {
    "id": "C16",
    "group": "C",
    "title": "Gear Enhance +1…+10",
    "titleEn": "Gear enhancement",
-   "status": "testing",
-   "note": "โค้ดเสร็จ + ENHANCE ในการ์ดไอเท็ม + ป้าย +N บนช่อง/รูป Shop แล้ว รอทดสอบ",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
    "steps": [],
-   "rev": "05316d7d"
+   "rev": "7611f7cd"
   },
   {
    "id": "C17",
    "group": "C",
    "title": "ดาวออร่า 1–5 stars + Star Token + pity ใหม่ + หน้าต่าง Aura Dex (C17 Figma) + แสดง Star Token (HUD, Aura Index, Altar, ItemDetail)",
    "titleEn": "Aura stars, tokens and pity",
-   "status": "testing",
-   "note": "โค้ดเสร็จ + bake ใน StarterGui แล้ว รอทดสอบใน Play",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
    "steps": [],
-   "rev": "4660ed17"
+   "rev": "7611f7cd"
   },
   {
    "id": "C18",
    "group": "C",
    "title": "ปลาขายดีประจำชั่วโมงที่ร้าน",
    "titleEn": "Hourly Hot Fish",
-   "status": "testing",
-   "note": "โค้ดเสร็จ + ป้าย HOT บนกองปลา, บรรทัด Hot fish bonus ใน Sell All, ป้าย HOT FISH ที่ Merchant แล้ว รอทดสอบ",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
    "steps": [],
-   "rev": "8c3c5596"
+   "rev": "7611f7cd"
   },
   {
    "id": "C19",
    "group": "C",
    "title": "Dev Products (Starter Pack, Gems, Boost 2x) + Modal เสนอขาย Starter Pack (Figma 3546:36782)",
    "titleEn": "Developer products and Starter Pack",
-   "status": "testing",
-   "note": "Gems, Boosts และ Packs เป็นรายการใน Store แล้ว กด Buy ที่ Starter Pack เพื่อเปิด Modal พรีวิวของแถมก่อนซื้อ ปุ่มราคาใช้ไอคอน Robux ใหม่ รอทดสอบซื้อจริงใน Play",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
    "steps": [],
-   "rev": "acbfeca8"
+   "rev": "7611f7cd"
   },
   {
    "id": "C20",
    "group": "C",
    "title": "มินิเกม: Catch Bar เริ่มตรงตำแหน่งปลา + ช่วงพักตอนเริ่ม",
    "titleEn": "Minigame start behavior",
-   "status": "testing",
-   "note": "โค้ดเสร็จ รอทดสอบ",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
    "steps": [],
-   "rev": "0b215329"
+   "rev": "7611f7cd"
   },
   {
    "id": "C21",
    "group": "C",
    "title": "คอนเทนต์ใหม่จากรูปที่อัปโหลดแล้ว (ปลา 8, ออร่า 10, คันเบ็ด 2, สาย 2, เหยื่อ 4)",
    "titleEn": "New fish, auras and equipment",
-   "status": "testing",
-   "note": "โค้ดเสร็จ รอทดสอบ",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
    "steps": [
     "Shop แท็บ Lines / Baits / Rods: ของใหม่มีรูป ราคา และล็อกเลเวลถูก; กดรูป = การ์ดไอเท็ม",
     "ใส่ Abyss Line → ปุ่ม DEPTH ตั้งได้ถึง 600m; Star Line → 1000m",
@@ -1140,44 +1142,44 @@
     "หน้ากาชา: รายการอัตรามี 15 ออร่า เรียงจากง่ายไปยาก; Aura Dex 15 ตัว",
     "ถ้าราคา/สเตตไม่ถูกใจ บอก Claude หรือแก้ใน Config ได้เลย"
    ],
-   "rev": "c63f5d7b"
+   "rev": "824282ef"
   },
   {
    "id": "C22",
    "group": "C",
    "title": "FishingZone / PlayArea ใช้เฉพาะใน Workspace (แมพสำรองใน ServerStorage ไม่นับ)",
    "titleEn": "Fishing zones and map boundaries",
-   "status": "testing",
-   "note": "โค้ดเสร็จ ตรวจ logic ใน Studio แล้ว รอทดสอบ Play ใหม่",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
    "steps": [
     "หยุด Play แล้ว Play ใหม่ -> ตกปลาที่ท่าเรือปกติได้เหมือนเดิม (ปุ่ม CAST ขึ้นเมื่ออยู่ใกล้น้ำ)",
     "F2 event start -> วง Naga Tide เกิดบนผิวน้ำของแมพจริง ไม่ลอยกลางอากาศ",
     "ว่ายออกไปไกล -> กระแสน้ำผลักกลับที่ขอบแมพเดิม"
    ],
-   "rev": "81645b82"
+   "rev": "1507737c"
   },
   {
    "id": "C23",
    "group": "C",
    "title": "Daily Login ปฏิทินของขวัญ 7 วัน (HUD และ Main Menu)",
    "titleEn": "Daily login rewards",
-   "status": "testing",
-   "note": "เลือก B Grand Shelf และ bake แล้ว รอทดสอบรับรางวัลใน Play",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
    "steps": [
     "กด Play ด้วยเซฟทดสอบใหม่ แล้วกด Daily บน HUD: ปุ่มมีจุดแดงและเปิดปฏิทิน 7 วันพร้อมปุ่ม CLAIM DAY 1",
     "กด X แล้วเปิด Main Menu > Daily: ไทล์มีจุดแดงและเปิดปฏิทินเดียวกัน",
     "กด CLAIM DAY 1: Coins เพิ่ม 1,000 การ์ดวันที่ 1 มีเครื่องหมายถูกทับการ์ดและปุ่มเปลี่ยนเป็น CLAIMED TODAY",
     "ปิดปฏิทินและเปิดใหม่จาก Main Menu > Daily: ปุ่ม Daily บน HUD กับจุดแดงบนไทล์หายไป ปุ่ม CLAIMED TODAY ไม่จ่ายรางวัลซ้ำเมื่อกด"
    ],
-   "rev": "d7e5c367"
+   "rev": "840cbc8e"
   },
   {
    "id": "C24",
    "group": "C",
    "title": "Core Menu Manager (แบ่งชั้นหน้าต่าง ไม่เปิดซ้อนมั่ว, ซ้อนได้เฉพาะที่กำหนด)",
    "titleEn": "Core menu manager",
-   "status": "testing",
-   "note": "โค้ดเสร็จ ทดสอบใน Play บางส่วนผ่าน — M2-M4 โค้ดเสร็จ รอทดสอบ — งานต่อ M1, M5, M6 ใน docs/MENU_MANAGER.md",
+   "status": "done",
+   "note": "ทดสอบผ่าน (M1-M6 เสร็จแล้ว)",
    "steps": [
     "Play → B (กระเป๋า) → C (ตัวละคร): กระเป๋าต้องปิดเอง",
     "ในหน้าตัวละครกด SKILLS: หน้า Skills ซ้อนบน, ปิด Skills แล้วกลับมาหน้าตัวละคร",
@@ -1188,15 +1190,15 @@
     "(M3) ใช้จอย: เปิดหน้าต่างใดก็ได้แล้วกด B → ปิดแค่ตัวบนสุด (Skills บน Character กด B = เหลือ Character); คุย NPC แล้วกด Esc → กล่องคุยปิด",
     "(M4) Events → OPEN ที่แบนเนอร์กาชา → กดปิด/ลูกศรกลับ → กลับมาหน้า Events; Events → การ์ด Daily Login / การ์ดเปิด Shop → Events ปิดเอง เหลือหน้าที่เปิดอันเดียว; Main Menu → กดรูปตัวละคร → เปิด Character และ Main Menu ปิด; หน้ากาชา → ปุ่มซื้อ Gems → เปิด Store และหน้ากาชาปิด"
    ],
-   "rev": "b76095a2"
+   "rev": "f3d5f88e"
   },
   {
    "id": "C25",
    "group": "C",
    "title": "เหวี่ยงเบ็ดใหม่: กดค้าง + Perfect Cast + ระยะเหวี่ยงตามคัน + ตัวปรับความลึกบน HUD",
    "titleEn": "Charge casting and Perfect Cast",
-   "status": "testing",
-   "note": "โค้ดเสร็จ + bake + Figma แล้ว รอทดสอบใน Play",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
    "steps": [
     "Ctrl+S → Play → เดินไปริมน้ำ: ไม่มีปุ่ม CAST กลางจอ, มีตัวปรับ DEPTH เหนือ AUTO; กด + / - และกดค้าง ตัวเลขเปลี่ยน ไม่เกินความลึกสาย",
     "หันกล้องไปที่น้ำ คลิกค้าง: แถบพลังขึ้นลง, วงเล็งสีฟ้าบนน้ำวิ่งใกล้-ไกล, ตัวละครหันตามกล้อง",
@@ -1207,7 +1209,7 @@
     "ใส่คันที่ดีกว่า (เช่น Coral): เหวี่ยงค้างสุดได้ไกลกว่าคันเริ่ม; หน้ารายละเอียดคันมี Cast Range",
     "มือถือ (Studio Device Emulator): ปุ่มกลม CAST ข้างปุ่มกระโดด กดค้าง/ปล่อยเหวี่ยงได้, ระหว่างรอปลาปุ่มเป็น REEL IN / HOOK!; ปุ่ม Bag/DEPTH/AUTO/SELL ไม่ทับปุ่มกระโดด"
    ],
-   "rev": "4bfee68b"
+   "rev": "f17238c9"
   },
   {
    "id": "C26",
@@ -1231,8 +1233,8 @@
    "group": "C",
    "title": "Store ไม่มีรายการ + spinner โหลด + แจ้งเตือนอยู่บนสุด + Enhance popup + Figma ตรงกับเกม",
    "titleEn": "Store loading and notification fixes",
-   "status": "testing",
-   "note": "โค้ดเสร็จ รอทดสอบใน Play",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
    "steps": [
     "Ctrl+S → Play → Main Menu → Store: เห็นการ์ด Passes 4 ใบ, ไม่มีฉากดำด้านหลัง; สลับแท็บ Gems/Boosts/Packs มีรายการครบ; ปุ่มราคาอาจหมุนแวบหนึ่งก่อนขึ้นราคา",
     "ถ้า Store ยังว่าง: ดู Output หาบรรทัด [Store] ... tab failed: แล้วส่งมา",
@@ -1241,7 +1243,7 @@
     "Aquarium → แตะปลาในบ่อ: Modal \"Return to Bag\" ปุ่มเป็นสีส้ม",
     "รูปที่โหลดช้า (เช่นเปิด Fishdex ครั้งแรก): เห็นวงหมุนเทาบนช่องรูประหว่างโหลด"
    ],
-   "rev": "32f9c16f"
+   "rev": "706f20ef"
   },
   {
    "id": "C28",
@@ -1263,8 +1265,8 @@
    "group": "C",
    "title": "Item rework: ไอเทมแบบ UUID (ปลาไม่รวมกอง, คันเบ็ด/สายซื้อซ้ำและขายคืนได้, เซฟ v6)",
    "titleEn": "Item rework and UUID bag",
-   "status": "testing",
-   "note": "โค้ดเสร็จ รอทดสอบด้วยเซฟทดสอบ v5 และเซฟใหม่ รวมถึงราคาขายคืน",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
    "steps": [
     "เข้าเกมด้วยสำเนาเซฟทดสอบ v5: ได้ Driftwood Rod และ Cotton Line ติดตัว ปลาเก่าถูกล้าง Coins กับ Level คงเดิม และ Output ไม่มี error จาก DataService/Registry",
     "ตกปลา 3 ตัวชนิดเดียวกัน: Inventory ขึ้น 3 ช่อง (ไม่มีเลข x3), กดแต่ละช่องเห็นน้ำหนัก/ป้าย Manual/Perfect/Hotspot/Mutation ไม่เหมือนกัน",
@@ -1290,15 +1292,15 @@
     "การ์ดไอเทม: ปุ่ม action ไม่เบียดกัน (1 ปุ่ม เต็มแถว, 2 ปุ่ม คู่กัน, 3 ปุ่ม สองปุ่มบน หนึ่งปุ่มเต็มแถวล่าง) ลองคันเบ็ด (Equip, Enhance, Sell) และปลา (Sell, Tank)",
     "เปิดการ์ดคันเบ็ดและสายเบ็ด Uncommon ที่มี Mod: เห็นชิป Prefix และ Suffix ของชิ้นที่เลือก. เปิดการ์ดปลาแล้วตรวจว่าส่วน Mod ของอุปกรณ์ไม่แสดง"
    ],
-   "rev": "6e433291"
+   "rev": "c72712b4"
   },
   {
    "id": "C30",
    "group": "C",
    "title": "ระบบ Modifier เบ็ด (Prefix/Suffix) สุ่มค่า -N~+N, Stat Max Cap Breaker และ Rarity",
    "titleEn": "Rod modifiers and Cap Breakers",
-   "status": "testing",
-   "note": "โค้ดเสร็จ รอทดสอบการสุ่ม สเตตัส และการดรอปคันเบ็ดใน Play",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
    "steps": [
     "Studio Play, Dev: give rods BambooRod BossRaid ซ้ำหลายครั้ง: ข้อความตอบกลับบอก mod ที่สุ่มได้, Boss ต้องได้ Prefix 1-2 และ Suffix 1-2 ช่อง",
     "เปิด Inventory > Rods > คันที่ได้: การ์ดแสดงชิป mod ถูกต้อง ค่าติดลบเป็นสีแดง ชื่อ Cap Breaker แสดงเช่น \"+3% Max Catch Bar\"",
@@ -1310,15 +1312,15 @@
     "เปิดหีบสมบัติหลายครั้ง (หรือ OPEN ALL): บางครั้งได้คันเบ็ดพร้อม mod; Bag เต็มจะถูกขายเป็น Coins และแจ้งในข้อความ",
     "ขายคืนคันที่มี mod Rare ขึ้นไป: ได้มากกว่าคันเดียวกันที่ไม่มี mod (GameConfig.Inventory.ModSellBonus)"
    ],
-   "rev": "f779dd87"
+   "rev": "ab5a2636"
   },
   {
    "id": "C31",
    "group": "C",
    "title": "Rod Fusion (หลอม mod ข้ามคันเบ็ดรุ่นเดียวกัน, เปิดที่ Old Marlin)",
    "titleEn": "Rod Fusion at Old Marlin",
-   "status": "testing",
-   "note": "โค้ดเสร็จ type check ผ่าน รอทดสอบใน Play",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
    "steps": [
     "Studio Play: Dev give rods BambooRod BossRaid สองครั้ง, give coins 1000000, give pearls 5000",
     "คุยกับ Old Marlin > Fuse rods: เห็นหน้าต่าง Rod Fusion มีปุ่ม X มาตรฐาน",
@@ -1331,15 +1333,15 @@
     "Mod Rare ขึ้นไป: มีกล่อง Guard (ไอคอนเจม + ราคา). ติ๊กแล้ว FUSE: สำเร็จเสมอ หักเจม, กล่อง 5% FAIL หายไป. เจมไม่พอ: ติ๊กไม่ได้",
     "เดินออกไปไกลจาก Old Marlin (เกิน 40 studs) ขณะหน้าต่างเปิด แล้วกด FUSE: ขึ้นข้อความให้กลับไปหา Old Marlin"
    ],
-   "rev": "8da13297"
+   "rev": "a38e1f23"
   },
   {
    "id": "C32",
    "group": "C",
    "title": "Responsive menu และการค้นหาไอเทมใหม่ใน Inventory",
    "titleEn": "Responsive menus and new item search",
-   "status": "testing",
-   "note": "โค้ดเสร็จ รอทดสอบปุ่ม NEW และ Item Detail บนมือถือ เฟส 4 ยังไม่ได้ตรวจ",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
    "steps": [
     "ตกปลาแล้วเปิด Inventory ด้วย Sort Newest: ปลาที่เพิ่งตกอยู่บนสุดและปุ่ม NEW n แสดงเมื่อยังมีไอเทมที่ไม่ได้เปิดดู",
     "เปลี่ยน Sort เป็น Value แล้วกด NEW n: กริดเลื่อนไปยังไอเทมใหม่ชิ้นแรก",
@@ -1347,15 +1349,15 @@
     "เปิด Inventory, Daily Login, Enhance และ Rod Fusion ครั้งแรกบนมือถือ: หน้าต่างขึ้นพอดีจอทันทีและปุ่มปิดอยู่ในพื้นที่ที่กดได้",
     "เลื่อน Inventory ที่มีอย่างน้อย 100 ชิ้นด้วยเซฟทดสอบ: เลื่อนได้ต่อเนื่องและรายการแสดงครบ"
    ],
-   "rev": "3379d201"
+   "rev": "5546dc42"
   },
   {
    "id": "C33",
    "group": "C",
    "title": "Bake UI ทั้ง 18 หน้าลง Studio + ตรวจ responsive มือถือ",
    "titleEn": "18-screen UI baking and mobile audit",
-   "status": "testing",
-   "note": "รอทดสอบใน Device Emulator รวมขนาด Upgrade Bag และระยะขอบป้ายสถานะตกปลา",
+   "status": "progress",
+   "note": "ไม่ผ่าน / ต้องแก้",
    "steps": [
     "กด Ctrl+S ใน Studio แล้วกด Play: HUD, Inventory, Shop, Character, Daily Login, Dialogue เปิดได้ ไม่มี error ใน Output (ดู [UI] ... is not baked ต้องไม่เหลือ)",
     "Device Emulator 844x390 (มือถือแนวนอน): เปิดทีละหน้า Inventory, Character, Shop, Store, Daily Login, Quests, Fishdex, Mastery, Enhance, Rod Fusion: หน้าต่างพอดีจอ ปุ่มปิดกดได้ ไม่ตกขอบ ไม่เด้งใหญ่เกินจอก่อนหด",
@@ -1365,15 +1367,15 @@
     "ยืนริมน้ำ แตะ AUTO แล้วดูป้าย Auto fishing... กลางจอด้านล่าง: เห็นข้อความครบและมีช่องว่างทุกด้าน ปิด AUTO แล้วเหวี่ยงเบ็ดด้วย CAST เพื่อดูว่าป้าย Waiting... มีช่องว่างเช่นกัน",
     "หากพบหน้าที่มีปัญหา ให้สร้าง Ticket ในเว็บ QA: ระบุหน้าที่เปิด ขนาดจอ และอาการที่เห็นให้ทีมทำซ้ำได้"
    ],
-   "rev": "1fac2418"
+   "rev": "07b7edc5"
   },
   {
    "id": "C34",
    "group": "C",
    "title": "ปรับ UI รอบ 23 พ.ย. (Daily บน HUD/Main Menu, Store แบ่งหน้า, Item Card ไม่ scroll, Enhance มือถือ, พื้นดำเต็มจอ, Gacha Close, Line Modifier, ของฟรีขายได้ 0 โคอิน)",
    "titleEn": "Nov 23 UI and system refinements",
-   "status": "testing",
-   "note": "โค้ดเสร็จ check.mjs ผ่าน รอทดสอบใน Play",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
    "steps": [
     "Daily: ยังไม่รับ: HUD มีปุ่ม Daily จุดแดง และ Main Menu มี tile Daily จุดแดง. กดรับแล้ว ปุ่มบน HUD หาย จุดใน Main Menu หาย.",
     "จอมือถือแนวนอน: เปิด Store ทุกแท็บ ไม่มีแถบเลื่อน มีปุ่ม < > เปลี่ยนหน้าได้.",
@@ -1384,15 +1386,15 @@
     "ขาย Driftwood Rod ที่ไม่ได้สวม: ได้ 0 โคอิน ของหาย ในร้านปุ่มเป็น Owned ตอนมีอยู่.",
     "give Lines HempLine Shop แล้วดูการ์ด: มีชิป Prefix/Suffix. สวมแล้วสเตตัสเพิ่ม. ขายแล้วได้เงินตามโบนัส mod."
    ],
-   "rev": "9eef2ba4"
+   "rev": "6e0a7389"
   },
   {
    "id": "C35",
    "group": "C",
    "title": "Stats Codex (Main Menu)",
    "titleEn": "Stats Codex",
-   "status": "testing",
-   "note": "โค้ดเสร็จ รอทดสอบการค้นหาและการอ่านคำอธิบายบนจอแนวตั้ง",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
    "steps": [
     "เปิด Main Menu แล้วกด Stats Codex หน้าหลักปิดและหน้าต่าง Codex เปิด",
     "ค้น Auto Wait ตรวจว่าเจอ Stat และ Cap Breaker จากนั้นเข้า Rod Mods แล้วค้น Brisk ตรวจว่าคำอธิบายตรงกับรายการ",
@@ -1400,7 +1402,7 @@
     "เปิด Codex ใน Device Emulator แนวตั้งแล้วเลือกผลค้นหา: เห็นคำอธิบายเต็มและกด Back กลับมายังผลค้นหาเดิมได้",
     "ตรวจขนาดและตำแหน่งของ X แล้วเลื่อนรายการและคำอธิบายถึงท้ายสุดใน Studio ทดสอบคำอธิบายยาวด้วยหน้าต่างที่ลดความสูง"
    ],
-   "rev": "f242c0c2"
+   "rev": "d95a6807"
   },
   {
    "id": "C36",
@@ -1469,7 +1471,7 @@
    "id": "C40",
    "group": "C",
    "title": "Patch Note Card แบบโพยกระดาษโทนอุ่น",
-   "titleEn": "",
+   "titleEn": "Warm-paper Patch Note Card",
    "status": "done",
    "note": "ทดสอบพรีวิวและ PNG ใน Chrome",
    "steps": [
@@ -1484,9 +1486,9 @@
    "id": "C41",
    "group": "C",
    "title": "Trade ระหว่างผู้เล่นและไอเทม Bound",
-   "titleEn": "",
-   "status": "testing",
-   "note": "ตั้ง PassId แล้ว รอทดสอบ Play สองผู้เล่น",
+   "titleEn": "Player-to-player Trading and Bound items",
+   "status": "done",
+   "note": "ทดสอบผ่าน",
    "steps": [
     "รัน luau tools/test-trade.luau จำลองเซฟสำเร็จฝั่งเดียว ACK หาย การเข้าใหม่ และการหลุดระหว่างเซฟ ตรวจ UUID จำนวนเหยื่อ และภาษี",
     "ตรวจใน Studio Edit ว่าเลือกของ Bound ไม่ได้ ใบอนุญาต ภาษี และความจุกระเป๋าถูกตรวจ และ Main Menu มีปุ่ม Trade จากนั้นเรียก TradeAction และ DataService กับ DataStore จำลอง ให้ผู้รับเซฟไม่สำเร็จแล้วเข้าใหม่สองครั้ง ตรวจว่าของและภาษีถูกบันทึกครั้งเดียว",
@@ -1496,10 +1498,18 @@
     "ซื้อ Worm หรือ Shrimp ตอนยังไม่ได้สวม ตรวจว่าเพิ่มเข้า Trade ได้ จากนั้นสวมแล้วถอด ตรวจว่ากองเดิมขึ้น Bound และเสนอไม่ได้ ลองซ้ำกับเหยื่อ Daily Login และคันเบ็ดของ Starter Pack",
     "ตรวจใน Studio Edit ว่าการ์ด Trade License อยู่หน้าท้ายของ Store > Passes ทั้งเดสก์ท็อปและจอสั้น แสดงราคาจาก Marketplace จำลอง ส่งคีย์ซื้อถูกต้อง และแสดง OWNED เมื่อมีพาส"
    ],
-   "rev": "0201c034"
+   "rev": "22aafe68"
   }
  ],
  "history": [
+  {
+   "at": "2026-11-25T02:15:07+07:00",
+   "text": "อัปเดตสถานะใน docs/TASKS.md ตามผลการตรวจจากผู้ใช้: ติ๊กผ่าน/เสร็จแล้ว (A9, A17, C5, C6 ส่วนหลัก, C8, C10, C11, C12, C13, C14, C16, C17, C18, C19, C20, C21, C22, C23, C24 M1-M6, C25, C27, C29, C30, C31, C32, C34, C35, C41, เว็บ QA และข้อย่อย A3/A8/A18/B7/B11/C7/C36-C40/Economy UI); บันทึกว่า C33 ไม่ผ่าน/ต้องแก้; คิวงานที่เลือกทำต่อคือ A15, C6-Web (Extra Cast), C9, UPD-24, C3, C4, C15"
+  },
+  {
+   "at": "2026-11-25",
+   "text": "อัปเดตสถานะใน TASKS.md และเว็บ QA: ปิดผ่าน A9, A17, C5-C8, C10-C14, C16-C32, C34-C41; ตี C33 เป็นต้องแก้; เตรียมทำต่อ A15, C6-Web, C9, C3, C4, C15"
+  },
   {
    "at": "2026-11-24T02:15:00+07:00",
    "text": "C8 ระบบเสียงและ SFX: ออกแบบและเชื่อมต่อระบบเสียงครบวงจร (1) จัดทำคู่มือ Prompt สำหรับ ElevenLabs SFX ใน docs/ELEVENLABS_SFX_PROMPTS.md พร้อมสคริปต์อัปโหลด tools/audio/upload_sfx.py รองรับทั้ง .wav/.mp3 อัปโหลดผ่าน Open Cloud อัตโนมัติ (2) ปรับแต่งเสียง Gacha เป็น Altar Charge & Eclipse Reveal ตามระบบใหม่ (3) เชื่อมต่อเสียงง้างคันเบ็ดวนลูป cast_charge และเสียงจังหวะ Perfect (cast_perfect) สำหรับการเหวี่ยงเบ็ดและมินิเกม (4) ผูกเสียง UI ตอนเปิดการ์ดผลลัพธ์ปลา (ui_open + catch/catch_rare) และตอนสลับแท็บ Category ใน Inventory (ui_click) (5) ผูกเสียง coin ให้เล่นครอบคลุมทั้งตอนเสียตังซื้อของ/อัปเกรด/ตีบวก และตอนขายปลา ตรวจสอบผ่าน tools/check.mjs เรียบร้อย"
@@ -1515,6 +1525,18 @@
   {
    "at": "2026-11-24",
    "text": "A17 รอบ 3 (ทดสอบ Play บนจอ 568x320): ผ่านพอดีจอ: popup Offline Reward, HUD, มินิเกม, การ์ดปลา (Catch Card), Dialogue Old Marlin, Rod Fusion ทั้ง 4 ขั้น. ข้อสังเกต (ไม่ได้แก้): (1) Fusion ขั้น Compare ย่อเหลือประมาณ 0.58 เท่า ข้อความ mod ถูกตัด (\"+4% Fish Stabili...\") และปุ่ม Back/FUSE สูง ~19px ต่ำกว่า 44px (2) ตัวเลือก Dialogue ซ้อนทับแถวเมนูด้านบนขวา (3) มินิเกมซ้อนทับปุ่ม Bag ในแถวเมนู. ถ้าจะแก้ ให้ดูใน Figma แล้วปรับทีละหน้า ไม่บังคับขนาดทั้งระบบ"
+  },
+  {
+   "at": "2026-11-24",
+   "text": "A17 รอบ 4: (1) Fusion ขั้น Compare โหมดกะทัดรัดบนจอเตี้ย (สูง < 500): หน้าต่างกว้าง 500 (เดิม 400), แถวตัวเลือก 38px, ปุ่ม 40px, ป้าย FAIL รวมเข้าแถว Cost, ช่องไฟ 6px, หัวข้อเหลือบรรทัดเดียว. วัดบน 568x320: สเกลจาก 0.40 (ชนขั้นต่ำและล้นจอ) เป็น 0.51, ชื่อ mod อ่านครบไม่ถูกตัด. ยังไม่ผ่าน: ปุ่ม Back/FUSE สูงจริง ~20px (ต่ำกว่า 44px) เพราะหน้าต่างต้องย่อ (2) แถวเมนู Bag/Shop/Auras/Quests/Menu บนจอเตี้ยยกขึ้นชิดขอบบนขวา (หักค่า GuiInset ของ Roblox) ที่ HUDController.layout. ทดสอบ: เปิด Fusion ที่ Old Marlin ไปขั้น Compare, และดูแถวเมนูที่จอเล็ก. ยังไม่ได้ลองบนมือถือจริง (ปุ่ม Roblox มุมบนขวา เช่นรายชื่อผู้เล่น อาจทับแถวเมนู)"
+  },
+  {
+   "at": "2026-11-24",
+   "text": "แก้ 3 เรื่อง: (1) ปิดหน้า Aura Summon (ปุ่ม X) จาก Altar/ปุ่ม Auras แล้วไม่เด้งไป Events อีก (GachaPageController.back ไม่เรียก EventsRequested แล้ว; ถ้าเปิดซ้อนบน Events/Inventory/Aura Dex ยังกลับหน้าเดิมผ่าน MenuManager). ทดสอบใน Studio ผ่าน (2) Pass ที่ซื้อใน Studio หายเมื่อเข้าเกมจริง: ซื้อใน Studio เป็นของจำลอง Roblox ตอบว่าไม่ได้เป็นเจ้าของ เซิร์ฟเวอร์จริงเลยถอนทิ้ง ตอนนี้การซื้อใน Studio บันทึกเป็น \"Dev\" (MonetizationService, PromptGamePassPurchaseFinished) ซึ่ง refreshPasses ไม่ถอน. ไม่ได้ทดสอบใน Studio (เรียก SignalPromptGamePassPurchaseFinished ไม่ได้) และ Pass ที่ถูกถอนไปแล้วต้องซื้อใหม่ใน Studio หรือใช้คำสั่ง grant pass ของ DevService (3) Dialogue มีตัวเลือกสูงสุด 3 ข้อทุก NPC: Registry ตรวจ 1..3 (error ตอนเริ่มเกมถ้าเกิน), Screen.MaxChoices = 3, Marlin เหลือ Sell All Fish / Hot fish today? / Fuse rods (ตัด \"Browse gear\" เพราะมีปุ่ม Shop บน HUD). ทดสอบใน Studio ผ่าน (เห็น 3 ปุ่ม). ปุ่ม Choice4 ที่ bake ไว้ใน Studio ยังอยู่แต่ซ่อนและไม่ถูกใช้"
+  },
+  {
+   "at": "2026-11-24",
+   "text": "แก้ชิป Bag (x / 50) บนจอเตี้ย: ย้ายกลับไปอยู่ด้านบนเหนือปุ่ม Auto มุมขวาของ dock เหมือนจอปกติ (HUD.LayoutFishingDock) เพราะแถวเมนูบนขวายกชิดขอบบนแล้ว ไม่ชนกับ dock อีก. (รอบก่อนที่ย้ายไปซ้ายของ Depth/Sell ทำให้ชิปโดนปุ่ม Sell ทับบนจอเมาส์ จึงเลิกใช้) ทดสอบใน Studio ที่ 749x381 ผ่าน"
   },
   {
    "at": "2026-11-24",
@@ -1879,26 +1901,6 @@
   {
    "at": "2026-11-21",
    "text": "ใช้ Eclipse จาก Figma ใน Aura Reveal, bake AuraReel และตรวจ Legendary / Mythic ใน Studio Play ด้วยโปรไฟล์จำลอง จังหวะพื้นดำ Sparkle สี rarity และ Item Card ตรง flow ทดสอบต่อด้วย ROLL x10 แล้วกด SEE ALL 10 เพื่อดูผลครบเมื่อโปรไฟล์โหลดตามปกติ"
-  },
-  {
-   "at": "2026-11-21",
-   "text": "รวมหน้าต่างที่ออกแบบไว้ใน [Designed Game Menus](https://www.figma.com/design/givb0hmQYmmaOy7p7DGtb2/Ro-Offline?node-id=3752-5142) และผูก CoreGui Guide ทั้ง 36 จุดกับ [component set สองขนาด](https://www.figma.com/design/givb0hmQYmmaOy7p7DGtb2/Ro-Offline?node-id=3752-5168)"
-  },
-  {
-   "at": "2026-11-21",
-   "text": "เปลี่ยนฉากของ [บอร์ด Aura Reveal Motion](https://www.figma.com/design/givb0hmQYmmaOy7p7DGtb2/Ro-Offline?node-id=3717-1180) ทั้ง 8 เฟรมเป็นพื้นดำ fade in จากโปร่งใสที่ 0.36 วินาที"
-  },
-  {
-   "at": "2026-11-21",
-   "text": "แก้ [บอร์ด Aura Reveal Motion](https://www.figma.com/design/givb0hmQYmmaOy7p7DGtb2/Ro-Offline?node-id=3717-1180) ทั้ง 8 เฟรมให้ใช้ Sparkle และ rarity Overlay จาก Option 5 เอา shape ดาวและภาพ Aura Art ออก เปลี่ยนแบบที่ 4 เป็น Afterglow Pulse"
-  },
-  {
-   "at": "2026-11-21",
-   "text": "เพิ่ม [บอร์ด Aura Reveal Motion](https://www.figma.com/design/givb0hmQYmmaOy7p7DGtb2/Ro-Offline?node-id=3717-1180) เทียบ Halo Burst, Eclipse, Ten Sparks และ Hero Silhouette ทั้ง Legendary/Mythic และเพิ่มแท็บ Workbench กับ Agent Handoff ในปลั๊กอิน Figma local"
-  },
-  {
-   "at": "2026-11-21",
-   "text": "MCP local เปลี่ยนไปใช้ตัวเปิด stdio ที่สลับ server worker หลัง TypeScript rebuild ผ่าน รอคำสั่งที่กำลังทำงานและแจ้ง client ให้โหลดรายการเครื่องมือใหม่"
   }
  ],
  "fixes": {}
