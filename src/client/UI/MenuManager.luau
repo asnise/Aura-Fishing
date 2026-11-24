@@ -85,6 +85,7 @@ end
 -- Full-screen black backdrop behind every full menu (Main / Hub layers). It ignores the top bar and the device
 -- safe area, so it always covers the whole screen. Sits just under the lowest open menu.
 local backdrop: ScreenGui? = nil
+local recheckRunning = false
 local function updateBackdrop()
 	local low: number? = nil
 	for _, name in opened do
@@ -94,7 +95,8 @@ local function updateBackdrop()
 			-- a menu whose gui is already hidden must not keep the backdrop up (but one that is just opening may
 			-- not have enabled its gui yet: without the grace the backdrop flashed off and on, or never showed)
 			local fresh = os.clock() - (openedAt[name] or 0) < GUI_GRACE
-			if fresh or not (gui and gui:IsA("ScreenGui") and not gui.Enabled) then
+			local hidden = if gui then gui:IsA("ScreenGui") and not gui.Enabled else d.Gui ~= nil -- Gui() gave nil: nothing on screen
+			if fresh or not hidden then
 				local order = if gui and gui:IsA("ScreenGui") then gui.DisplayOrder else (if d.Layer == "Hub" then 20 else 10)
 				low = if low then math.min(low, order) else order
 			end
@@ -133,6 +135,18 @@ local function updateBackdrop()
 	local bd = backdrop :: ScreenGui
 	bd.DisplayOrder = math.max(1, low - 1)
 	bd.Enabled = true
+	-- Self-heal: events alone left the backdrop stuck on when a menu failed to show or hid itself silently,
+	-- so re-check twice a second until the backdrop turns itself off.
+	if not recheckRunning then
+		recheckRunning = true
+		task.spawn(function()
+			while bd.Enabled do
+				task.wait(0.5)
+				updateBackdrop()
+			end
+			recheckRunning = false
+		end)
+	end
 end
 
 local function restack()

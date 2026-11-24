@@ -89,7 +89,9 @@ function Window.Shell(opts: { [string]: any }): any
 	if vp.Y < 520 and opts.ScrollOnShort == true and not opts.AutoHeight and opts.Close ~= false and size.Y > 380 then
 		local HEADER = 64
 		local designInner = size.Y - pad * 2
-		frame.Size = UDim2.fromOffset(size.X, math.min(size.Y, math.floor((vp.Y - 48) / 0.78)))
+		-- FitToScreen scales a wide window by width (not a fixed 0.78): give it the height that scale leaves free
+		local fit = math.clamp((vp.X - 48) / size.X, 0.4, 1)
+		frame.Size = UDim2.fromOffset(size.X, math.min(size.Y, math.floor((vp.Y - 48) / fit)))
 		local scroller = New("ScrollingFrame", {
 			Name = "Scroller",
 			Position = UDim2.fromOffset(0, HEADER),

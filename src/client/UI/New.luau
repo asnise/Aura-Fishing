@@ -1045,6 +1045,40 @@ function New.FitWindow(window: GuiObject, _designSize: Vector2?)
 	New.FitToScreen(window)
 end
 
+-- Invisible button that follows `host` on screen and is never smaller than minPx REAL pixels (default 44, the touch
+-- guideline), however much a UIScale shrinks the host on a phone. It lives at ScreenGui level (a child of a host with a
+-- UIListLayout would be laid out as an item). Connect Activated on the returned button instead of on host.
+function New.TouchHit(host: GuiObject, minPx: number?): TextButton
+	local minSize = minPx or 44
+	local hit = create("TextButton", {
+		Name = "Hit_" .. host.Name,
+		BackgroundTransparency = 1,
+		Text = "",
+		ZIndex = 50,
+		Visible = false,
+	}) :: TextButton
+	local function follow()
+		local s, p = host.AbsoluteSize, host.AbsolutePosition
+		local w, h = math.max(s.X, minSize), math.max(s.Y, minSize)
+		hit.Position = UDim2.fromOffset(p.X + (s.X - w) / 2, p.Y + (s.Y - h) / 2)
+		hit.Size = UDim2.fromOffset(w, h)
+		hit.Visible = host.Visible and s.X > 0
+	end
+	local function attach()
+		local gui = host:FindFirstAncestorWhichIsA("ScreenGui")
+		if gui then
+			hit.Parent = gui
+			follow()
+		end
+	end
+	host:GetPropertyChangedSignal("AbsoluteSize"):Connect(follow)
+	host:GetPropertyChangedSignal("AbsolutePosition"):Connect(follow)
+	host:GetPropertyChangedSignal("Visible"):Connect(follow)
+	host.AncestryChanged:Connect(attach)
+	attach()
+	return hit
+end
+
 -- Pop transition (2026-11-20): everything that appears scales 0.7 -> 1 with one small overshoot (Back Out 0.25 s).
 -- Windows/popups using FitToScreen pop by themselves whenever their ScreenGui is enabled or they turn visible;
 -- anything else calls New.Pop(obj) when it shows (Gacha page, Daily Login, Item Card, toasts, ...).

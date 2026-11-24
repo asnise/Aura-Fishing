@@ -345,7 +345,7 @@ function HUD.Init()
 		label.TextScaled = false
 		New("Frame", { Name = "Dot", AnchorPoint = Vector2.new(0.5, 0.5), Position = UDim2.new(1, -2, 0, 4), Size = UDim2.fromOffset(14, 14), BackgroundColor3 = T.Bad, Visible = false, ZIndex = 10, Parent = daily, [New.Children] = { New.Pill(), New("UIStroke", { Color = Color3.new(1, 1, 1), Thickness = 2 }) } })
 		New.ApplyImages(daily)
-		daily.Activated:Connect(function()
+		New.TouchHit(daily).Activated:Connect(function()
 			HUD.DailyLoginRequested:Fire()
 		end)
 		refs.DotDaily = daily.Dot
@@ -431,7 +431,7 @@ function HUD.Init()
 		}) :: Frame
 		local chevron = New.Image({ Name = "Chevron", Key = "icon_chevron_right", Tint = T.Text, Fallback = T.PanelLight, AnchorPoint = Vector2.new(0.5, 0.5), Position = UDim2.fromScale(0.5, 0.5), Size = UDim2.fromOffset(18, 18), Rotation = 90, Parent = more })
 		New.ApplyImage(chevron)
-		local hit = New("TextButton", { Name = "Hit", Size = UDim2.fromScale(1, 1), BackgroundTransparency = 1, Text = "", ZIndex = 4, Parent = more })
+		local hit = New.TouchHit(more)
 
 		local token = 0
 		local function setOpen(open: boolean)

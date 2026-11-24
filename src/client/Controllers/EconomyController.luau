@@ -86,8 +86,10 @@ local function clickable(chip: GuiObject, onClick: () -> ())
 	hit.Activated:Connect(onClick)
 	local function follow()
 		-- AbsolutePosition is in the same space as the ScreenGui's own children
-		hit.Position = UDim2.fromOffset(chip.AbsolutePosition.X, chip.AbsolutePosition.Y)
-		hit.Size = UDim2.fromOffset(chip.AbsoluteSize.X, chip.AbsoluteSize.Y)
+		-- never smaller than 44 real pixels (touch), grown around the chip's centre
+		local w, h = math.max(chip.AbsoluteSize.X, 44), math.max(chip.AbsoluteSize.Y, 44)
+		hit.Position = UDim2.fromOffset(chip.AbsolutePosition.X + (chip.AbsoluteSize.X - w) / 2, chip.AbsolutePosition.Y + (chip.AbsoluteSize.Y - h) / 2)
+		hit.Size = UDim2.fromOffset(w, h)
 		hit.Visible = chip.Visible
 	end
 	chip:GetPropertyChangedSignal("AbsolutePosition"):Connect(follow)

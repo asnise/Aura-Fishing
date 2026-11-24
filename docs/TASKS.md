@@ -62,7 +62,7 @@
 - [ ] C6 — Gamepasses (Infinite Bag 349, Auto-Fish Pro 249, VIP 149, Extra Cast)  `โค้ดเสร็จ + ป้ายชื่อ VIP เหนือหัว + ร้าน Store แล้ว รอทดสอบ — Extra Cast รอสร้าง pass บนเว็บ`
 - [ ] C7 — เควสต์รายวัน  `โค้ดเสร็จ + หน้าต่างเควสต์แล้ว รอทดสอบ`
 - [ ] C8 — เสียง (SFX) และระบบเสียงในเกม  `โค้ดเสร็จ + อัปโหลดเสียงแล้ว (25/25 ไฟล์) พร้อม Hook ตกปลา มินิเกม Gacha และ UI รอทดสอบใน Studio`
-- [ ] C9 — แมพจริง + โมเดลปลา/คันเบ็ด  `ยังไม่เริ่ม`
+- [ ] C9 — แมพจริง + โมเดลปลา/คันเบ็ด  `ลำดับท้ายสุด: ทีมกำลังทำแมพส่งมาให้ รอรับแมพ`
 - [ ] C10 — เครดิต Font Awesome (FaLock, CC BY 4.0)  `โค้ดเสร็จ รอทดสอบ`
 - [ ] C11 — ทดสอบมือถือจริง + ปรับขนาดปุ่ม  `ยังไม่เริ่ม`
 - [ ] C12 — Balance Pass 1 (ราคา ×10, Auto 14 วิ, Hot Streak, XP, โซนลึก, ย้ายเซฟ)  `โค้ดเสร็จ + ป้าย Streak บนปุ่ม CAST แล้ว รอทดสอบ`
@@ -1345,6 +1345,10 @@
 - [x] ทดสอบโหมดในเครื่อง (ไม่มี config): ตาราง 69 งาน, เปิดงานเห็นขั้นตอน, ผ่าน/ไม่ผ่าน, สร้าง/ปิด Ticket, หน้าระบบเกมและประวัติ
 
 ## บันทึกการอัปเดต
+- 2026-11-24 — A17 รอบ 2: ลองบังคับปุ่ม X ให้ 44px จริงบนจอ (GrowToTouch) แต่ทำให้ปุ่มยื่นเกินหน้าต่างและไม่สวย จึง **ย้อนกลับแล้ว** ปุ่ม X กลับเป็นขนาดดีไซน์เดิมที่ย่อตามหน้าต่าง (ถ้าจะทำใหม่ต้องดูใน Figma และปรับให้เข้ากับแต่ละเมนู). คงไว้: Window ScrollOnShort คำนวณความสูงตามสเกลความกว้างจริง. ทดสอบจอ 568x320 ผ่าน: Inventory, Quests, Daily Login, Store, Mastery, Aquarium, Events, Gacha. ยังไม่ได้ทดสอบ: Fusion, CAST popup, มินิเกม, การ์ดปลา
+- 2026-11-24 — แก้บั๊กจอดำค้าง (MenuManager backdrop): เดิมอัปเดตเฉพาะตอนมี event ถ้าเมนูเปิดไม่สำเร็จหรือซ่อน gui เงียบ ๆ หลังหมด grace 0.6s backdrop ค้าง. ตอนนี้ตรวจซ้ำทุก 0.5s ขณะ backdrop เปิด และไม่นับเมนูที่ Gui() เป็น nil. ทดสอบ: เปิด/ปิดเมนูซ้ำ ๆ (B, C, M, Daily Login, Gacha) แล้วจอต้องสว่างภายใน ~0.5s หลังปิดเมนูสุดท้าย. ยังไม่ได้ทดสอบใน Studio
+- 2026-11-24 — A17 ทดสอบใน Studio (Device Simulator): iPhone 17 Pro แนวนอน 749x381 และ 568x320 ผ่าน (Inventory, Character, Main Menu, Shop, Trade, Quests, HUD อยู่ในจอ). แก้ (1) ปุ่ม HUD เล็กกว่า 44px: เพิ่ม `New.TouchHit` (ปุ่มโปร่งใสตามตำแหน่งจริง ขั้นต่ำ 44px) ใช้กับ Daily, ปุ่มลูกศร More และ Hit_ ของชิปเงิน/เจม (EconomyController) (2) จอเตี้ย: ชิป Bag 21/50 ทับแถวเมนูมุมขวาบน ย้ายไปซ้ายของปุ่ม Depth (`UI/Screens/HUD.luau`). เกมตั้ง ScreenOrientation = LandscapeSensor จึงไม่ทดสอบแนวตั้ง. ยังไม่ได้ทดสอบ: Daily Login, Store, Mastery, Aquarium, Events/Gacha, Fusion, CAST popup, มินิเกม, การ์ดปลา บนจอเล็ก. ผ่าน tools/check.mjs
+- 2026-11-24 — C9 แมพจริง: จัดเป็นลำดับท้ายสุด เพราะมีทีมทำแมพส่งมาให้ ยังไม่ต้องทำฝั่งเรา (เมื่อได้แมพ: ต้องมี Workspace.Map และ Part ติด tag FishingZone พร้อม attribute LocationId)
 - 2026-11-24 — ย้ายความจุกระเป๋าไปไฟล์เดียว `Config/BagCapacity.luau` (Slots ต่อกระเป๋า, InfiniteBagSlots, Fallback) ให้ปรับบาลานซ์ได้ที่เดียว; Equipment/GameConfig/ItemContainer อ่านจากไฟล์นี้ ค่าเดิม 10/16/24/36/50 ไม่เปลี่ยน ผ่าน tools/check.mjs ยังไม่ได้ทดสอบใน Studio
 - 2026-11-24 — C2 ปิดแล้ว: สรุป data model Inventory ตามระบบ UUID ใน C29 (ประเภทไอเทม, stack, ความจุ 10/16/24/36/50, กติกาขาย) แทนกติกาเก่า ไม่มีการแก้โค้ด
 - 2026-11-24T02:15:00+07:00 — C8 ระบบเสียงและ SFX: ออกแบบและเชื่อมต่อระบบเสียงครบวงจร (1) จัดทำคู่มือ Prompt สำหรับ ElevenLabs SFX ใน docs/ELEVENLABS_SFX_PROMPTS.md พร้อมสคริปต์อัปโหลด tools/audio/upload_sfx.py รองรับทั้ง .wav/.mp3 อัปโหลดผ่าน Open Cloud อัตโนมัติ (2) ปรับแต่งเสียง Gacha เป็น Altar Charge & Eclipse Reveal ตามระบบใหม่ (3) เชื่อมต่อเสียงง้างคันเบ็ดวนลูป cast_charge และเสียงจังหวะ Perfect (cast_perfect) สำหรับการเหวี่ยงเบ็ดและมินิเกม (4) ผูกเสียง UI ตอนเปิดการ์ดผลลัพธ์ปลา (ui_open + catch/catch_rare) และตอนสลับแท็บ Category ใน Inventory (ui_click) (5) ผูกเสียง coin ให้เล่นครอบคลุมทั้งตอนเสียตังซื้อของ/อัปเกรด/ตีบวก และตอนขายปลา ตรวจสอบผ่าน tools/check.mjs เรียบร้อย

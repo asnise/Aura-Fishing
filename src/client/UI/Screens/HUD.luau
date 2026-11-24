@@ -179,7 +179,8 @@ function Screen.LayoutFishingDock(dock: any, size: Vector2, touch: boolean, uiSc
 	dock.Position = UDim2.new(1, -12, 1, if touch then -math.floor(180 * factor) else -12)
 
 	dock.Bag.AnchorPoint = Vector2.new(1, 0)
-	dock.Bag.Position = UDim2.fromOffset(350, 0)
+	-- landscape phone (short): the top-right menu row reaches the dock's top, so the Bag chip moves left of Depth
+	dock.Bag.Position = if size.Y < 500 then UDim2.fromOffset(136, 100) else UDim2.fromOffset(350, 0)
 	dock.Bag.Size = UDim2.fromOffset(0, 40)
 
 	-- Sell = round bag icon button (Figma 3762:5764): bottom-left of CAST on touch, left of Depth on PC.
